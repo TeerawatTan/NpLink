@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="a0d45b8d318249b596ae420253951eba" Name="Diagram1" ZoomLevel="97">
+        <EntityTypeShape EntityType="EndoscopicModel.Doctor" PointX="14.75" PointY="14.75" Width="1.5" />
+        <EntityTypeShape EntityType="EndoscopicModel.EndoscopicImage" PointX="4.75" PointY="15.75" Width="1.5" />
+        <EntityTypeShape EntityType="EndoscopicModel.EndoscopicVideo" PointX="6.75" PointY="15.75" Width="1.5" />
+        <EntityTypeShape EntityType="EndoscopicModel.Hospital" PointX="16.75" PointY="0.75" Width="1.5" />
+        <EntityTypeShape EntityType="EndoscopicModel.Nurse" PointX="16.75" PointY="5.75" Width="1.5" />
+        <EntityTypeShape EntityType="EndoscopicModel.Room" PointX="16.75" PointY="9.75" Width="1.5" />
+        <EntityTypeShape EntityType="EndoscopicModel.AmpullaOfVater" PointX="18.75" PointY="0.75" Width="1.5" />
+        <EntityTypeShape EntityType="EndoscopicModel.AnalCanal" PointX="18.75" PointY="3.75" Width="1.5" />
+        <EntityTypeShape EntityType="EndoscopicModel.Anesthesia" PointX="14.75" PointY="7.75" Width="1.5" />
+        <EntityTypeShape EntityType="EndoscopicModel.Antrum" PointX="18.75" PointY="6.75" Width="1.5" />
+        <EntityTypeShape EntityType="EndoscopicModel.AscendingColon" PointX="14.75" PointY="4.75" Width="1.5" />
+        <EntityTypeShape EntityType="EndoscopicModel.Body" PointX="18.75" PointY="12.75" Width="1.5" />
+        <EntityTypeShape EntityType="EndoscopicModel.Cardia" PointX="12.75" PointY="18.75" Width="1.5" />
+        <EntityTypeShape EntityType="EndoscopicModel.Cecum" PointX="18.75" PointY="15.75" Width="1.5" />
+        <EntityTypeShape EntityType="EndoscopicModel.Cholangiogram" PointX="18.75" PointY="18.75" Width="1.5" />
+        <EntityTypeShape EntityType="EndoscopicModel.DescendingColon" PointX="4.75" PointY="19.75" Width="1.5" />
+        <EntityTypeShape EntityType="EndoscopicModel.DuodenalBulb" PointX="6.75" PointY="19.75" Width="1.5" />
+        <EntityTypeShape EntityType="EndoscopicModel.Duodenum" PointX="8.75" PointY="19.75" Width="1.5" />
+        <EntityTypeShape EntityType="EndoscopicModel.EGJunction" PointX="14.75" PointY="19.75" Width="1.5" />
+        <EntityTypeShape EntityType="EndoscopicModel.ERCPEsophagu" PointX="20.75" PointY="0.75" Width="1.5" />
+        <EntityTypeShape EntityType="EndoscopicModel.Esophagu" PointX="0.75" PointY="20.75" Width="1.5" />
+        <EntityTypeShape EntityType="EndoscopicModel.Fundu" PointX="18.75" PointY="9.75" Width="1.5" />
+        <EntityTypeShape EntityType="EndoscopicModel.HepaticFlexure" PointX="20.75" PointY="3.75" Width="1.5" />
+        <EntityTypeShape EntityType="EndoscopicModel.IleocecalValve" PointX="12.75" PointY="4.75" Width="1.5" />
+        <EntityTypeShape EntityType="EndoscopicModel.IndicationDropdown" PointX="6.75" PointY="6.75" Width="1.5" />
+        <EntityTypeShape EntityType="EndoscopicModel.Medication" PointX="0.75" PointY="0.75" Width="1.5" />
+        <EntityTypeShape EntityType="EndoscopicModel.Oropharynx" PointX="4.75" PointY="6.75" Width="1.5" />
+        <EntityTypeShape EntityType="EndoscopicModel.Pancreatogram" PointX="0.75" PointY="3.75" Width="1.5" />
+        <EntityTypeShape EntityType="EndoscopicModel.Pyloru" PointX="2.75" PointY="3.75" Width="1.5" />
+        <EntityTypeShape EntityType="EndoscopicModel.Rectum" PointX="4.75" PointY="0.75" Width="1.5" />
+        <EntityTypeShape EntityType="EndoscopicModel.SecondPart" PointX="4.75" PointY="3.75" Width="1.5" />
+        <EntityTypeShape EntityType="EndoscopicModel.SigmoidColon" PointX="6.75" PointY="0.75" Width="1.5" />
+        <EntityTypeShape EntityType="EndoscopicModel.SplenicFlexure" PointX="0.75" PointY="6.75" Width="1.5" />
+        <EntityTypeShape EntityType="EndoscopicModel.Stomach" PointX="2.75" PointY="6.75" Width="1.5" />
+        <EntityTypeShape EntityType="EndoscopicModel.TerminalIleum" PointX="6.75" PointY="3.75" Width="1.5" />
+        <EntityTypeShape EntityType="EndoscopicModel.TransverseColon" PointX="2.75" PointY="0.75" Width="1.5" />
+        <EntityTypeShape EntityType="EndoscopicModel.ProcedureList" PointX="8.75" PointY="0.75" Width="1.5" />
+        <EntityTypeShape EntityType="EndoscopicModel.Indication" PointX="12.75" PointY="11.75" Width="1.5" />
+        <EntityTypeShape EntityType="EndoscopicModel.Intervention" PointX="4.75" PointY="9.75" Width="1.5" />
+        <EntityTypeShape EntityType="EndoscopicModel.Speciman" PointX="10.75" PointY="8.75" Width="1.5" />
+        <EntityTypeShape EntityType="EndoscopicModel.History" PointX="6.75" PointY="11.75" Width="1.5" />
+        <EntityTypeShape EntityType="EndoscopicModel.EndoscopicAllImage" PointX="14.75" PointY="0.75" Width="1.5" />
+        <EntityTypeShape EntityType="EndoscopicModel.Carina" Width="1.5" PointX="21.375" PointY="6.75" />
+        <EntityTypeShape EntityType="EndoscopicModel.LeftMain" Width="1.5" PointX="21.375" PointY="9.75" />
+        <EntityTypeShape EntityType="EndoscopicModel.Lingular" Width="1.5" PointX="11.375" PointY="21.75" />
+        <EntityTypeShape EntityType="EndoscopicModel.LLL" Width="1.5" PointX="21.375" PointY="12.75" />
+        <EntityTypeShape EntityType="EndoscopicModel.LUL" Width="1.5" PointX="21.375" PointY="15.75" />
+        <EntityTypeShape EntityType="EndoscopicModel.RightIntermideate" Width="1.5" PointX="17.375" PointY="21.75" />
+        <EntityTypeShape EntityType="EndoscopicModel.RightMain" Width="1.5" PointX="21.375" PointY="18.75" />
+        <EntityTypeShape EntityType="EndoscopicModel.RLL" Width="1.5" PointX="19.375" PointY="21.75" />
+        <EntityTypeShape EntityType="EndoscopicModel.RML" Width="1.5" PointX="21.375" PointY="21.75" />
+        <EntityTypeShape EntityType="EndoscopicModel.RUL" Width="1.5" PointX="3.375" PointY="22.75" />
+        <EntityTypeShape EntityType="EndoscopicModel.Trachea" Width="1.5" PointX="5.375" PointY="22.75" />
+        <EntityTypeShape EntityType="EndoscopicModel.VocalCord" Width="1.5" PointX="7.375" PointY="22.75" />
+        <EntityTypeShape EntityType="EndoscopicModel.Endoscopic" Width="1.5" PointX="0.75" PointY="23.75" />
+        <EntityTypeShape EntityType="EndoscopicModel.v_HistoryEndoscopic" Width="1.5" PointX="11.375" PointY="0.75" />
+        <EntityTypeShape EntityType="EndoscopicModel.v_PatientList" Width="1.5" PointX="23.375" PointY="0.75" />
+        <EntityTypeShape EntityType="EndoscopicModel.Endoscopic_Log" Width="1.5" PointX="23.375" PointY="11.75" />
+        <EntityTypeShape EntityType="EndoscopicModel.Appointment" Width="1.5" PointX="0.75" PointY="9.75" />
+        <EntityTypeShape EntityType="EndoscopicModel.Patient" Width="1.5" PointX="23.375" PointY="4.75" />
+        <EntityTypeShape EntityType="EndoscopicModel.v_AppointmentDetails" Width="1.5" PointX="23.375" PointY="20.75" />
+        <EntityTypeShape EntityType="EndoscopicModel.User" Width="1.5" PointX="9.375" PointY="24.75" />
+        <EntityTypeShape EntityType="EndoscopicModel.BaseOfTongue" Width="1.5" PointX="9.75" PointY="4.75" />
+        <EntityTypeShape EntityType="EndoscopicModel.EustachianTubeOrifice" Width="1.5" PointX="0.75" PointY="17.75" />
+        <EntityTypeShape EntityType="EndoscopicModel.Glottic" Width="1.5" PointX="15.75" PointY="24.75" />
+        <EntityTypeShape EntityType="EndoscopicModel.LE" Width="1.5" PointX="17.75" PointY="24.75" />
+        <EntityTypeShape EntityType="EndoscopicModel.NasalCavity" Width="1.5" PointX="19.75" PointY="24.75" />
+        <EntityTypeShape EntityType="EndoscopicModel.Nasopharynx" Width="1.5" PointX="25.75" PointY="0.75" />
+        <EntityTypeShape EntityType="EndoscopicModel.Postcricoid" Width="1.5" PointX="25.75" PointY="3.75" />
+        <EntityTypeShape EntityType="EndoscopicModel.PosteriorPharyngealWall" Width="1.5" PointX="3.75" PointY="25.75" />
+        <EntityTypeShape EntityType="EndoscopicModel.PosteriorWall" Width="1.5" PointX="5.75" PointY="25.75" />
+        <EntityTypeShape EntityType="EndoscopicModel.PyriformSinu" Width="1.5" PointX="25.75" PointY="6.75" />
+        <EntityTypeShape EntityType="EndoscopicModel.Roof" Width="1.5" PointX="25.75" PointY="9.75" />
+        <EntityTypeShape EntityType="EndoscopicModel.RosenmullerFossa" Width="1.5" PointX="25.75" PointY="12.75" />
+        <EntityTypeShape EntityType="EndoscopicModel.Septum" Width="1.5" PointX="25.75" PointY="15.75" />
+        <EntityTypeShape EntityType="EndoscopicModel.SoftPalate" Width="1.5" PointX="25.75" PointY="18.75" />
+        <EntityTypeShape EntityType="EndoscopicModel.Subglottic" Width="1.5" PointX="25.75" PointY="21.75" />
+        <EntityTypeShape EntityType="EndoscopicModel.Supraglottic" Width="1.5" PointX="21.75" PointY="25.75" />
+        <EntityTypeShape EntityType="EndoscopicModel.Tonsil" Width="1.5" PointX="23.75" PointY="25.75" />
+        <EntityTypeShape EntityType="EndoscopicModel.UE" Width="1.5" PointX="25.75" PointY="24.75" />
+        <EntityTypeShape EntityType="EndoscopicModel.Uvula" Width="1.5" PointX="27.75" PointY="0.75" />
+        <EntityTypeShape EntityType="EndoscopicModel.Vallecula" Width="1.5" PointX="27.75" PointY="3.75" />
+        <EntityTypeShape EntityType="EndoscopicModel.Finding" Width="1.5" PointX="11.375" PointY="24.75" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

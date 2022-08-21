@@ -1,0 +1,642 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="..\packages\EntityFramework.6.4.4\build\EntityFramework.props" Condition="Exists('..\packages\EntityFramework.6.4.4\build\EntityFramework.props')" />
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{01450DAB-7FC7-44C0-9449-D36817752095}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>EndoscopicSystem</RootNamespace>
+    <AssemblyName>EndoscopicSystem</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <PublishUrl>C:\Users\sent_\Desktop\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>2</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <PublishWizardCompleted>true</PublishWizardCompleted>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ManifestCertificateThumbprint>AD158E4B4D2862038E27C3B7B211B68A10D76D94</ManifestCertificateThumbprint>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ManifestKeyFile>EndoscopicSystem_TemporaryKey.pfx</ManifestKeyFile>
+  </PropertyGroup>
+  <PropertyGroup>
+    <GenerateManifests>true</GenerateManifests>
+  </PropertyGroup>
+  <PropertyGroup>
+    <SignManifests>false</SignManifests>
+  </PropertyGroup>
+  <PropertyGroup>
+    <SignAssembly>false</SignAssembly>
+  </PropertyGroup>
+  <PropertyGroup>
+    <AssemblyOriginatorKeyFile>
+    </AssemblyOriginatorKeyFile>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Accord, Version=3.8.0.0, Culture=neutral, PublicKeyToken=fa1a88e29555ccf7, processorArchitecture=MSIL">
+      <HintPath>..\packages\Accord.3.8.0\lib\net462\Accord.dll</HintPath>
+    </Reference>
+    <Reference Include="Accord.Video, Version=3.8.0.0, Culture=neutral, PublicKeyToken=fa1a88e29555ccf7, processorArchitecture=MSIL">
+      <HintPath>..\packages\Accord.Video.3.8.0\lib\net462\Accord.Video.dll</HintPath>
+    </Reference>
+    <Reference Include="Accord.Video.FFMPEG, Version=3.8.0.0, Culture=neutral, PublicKeyToken=fa1a88e29555ccf7, processorArchitecture=x86">
+      <HintPath>..\packages\Accord.Video.FFMPEG.3.8.0\lib\net462\Accord.Video.FFMPEG.dll</HintPath>
+    </Reference>
+    <Reference Include="AForge, Version=2.2.5.0, Culture=neutral, PublicKeyToken=c1db6ff4eaa06aeb, processorArchitecture=MSIL">
+      <HintPath>..\packages\AForge.2.2.5\lib\AForge.dll</HintPath>
+      <SpecificVersion>False</SpecificVersion>
+    </Reference>
+    <Reference Include="AForge.Controls, Version=2.2.5.0, Culture=neutral, PublicKeyToken=a8ac264d1dc6b9d9, processorArchitecture=MSIL">
+      <HintPath>..\packages\AForge.Controls.2.2.5\lib\AForge.Controls.dll</HintPath>
+      <SpecificVersion>False</SpecificVersion>
+    </Reference>
+    <Reference Include="AForge.Imaging, Version=2.2.5.0, Culture=neutral, PublicKeyToken=ba8ddea9676ca48b, processorArchitecture=MSIL">
+      <HintPath>..\packages\AForge.Imaging.2.2.5\lib\AForge.Imaging.dll</HintPath>
+    </Reference>
+    <Reference Include="AForge.Math, Version=2.2.5.0, Culture=neutral, PublicKeyToken=abba2e25397ee8c9, processorArchitecture=MSIL">
+      <HintPath>..\packages\AForge.Math.2.2.5\lib\AForge.Math.dll</HintPath>
+    </Reference>
+    <Reference Include="AForge.Video, Version=2.2.5.0, Culture=neutral, PublicKeyToken=cbfb6e07d173c401, processorArchitecture=MSIL">
+      <HintPath>..\packages\AForge.Video.2.2.5\lib\AForge.Video.dll</HintPath>
+      <SpecificVersion>False</SpecificVersion>
+      <EmbedInteropTypes>False</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="AForge.Video.DirectShow, Version=2.2.5.0, Culture=neutral, PublicKeyToken=61ea4348d43881b7, processorArchitecture=MSIL">
+      <HintPath>..\packages\AForge.Video.DirectShow.2.2.5\lib\AForge.Video.DirectShow.dll</HintPath>
+      <SpecificVersion>False</SpecificVersion>
+      <EmbedInteropTypes>False</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="AxShockwaveFlashObjects, Version=1.0.0.0, Culture=neutral, PublicKeyToken=692fbea5521e1304" />
+    <Reference Include="CrystalDecisions.CrystalReports.Engine, Version=13.0.4000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="CrystalDecisions.ReportSource, Version=13.0.4000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="CrystalDecisions.Shared, Version=13.0.4000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="CrystalDecisions.Windows.Forms, Version=13.0.4000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.4.4\lib\net45\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.4.4\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.WinForms, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ReportViewer.WinForms.10.0.40219.1\lib\Microsoft.ReportViewer.WinForms.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.Linq" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Security" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.Windows.Forms.DataVisualization" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Constants\Constant.cs" />
+    <Compile Include="Constants\Helper.cs" />
+    <Compile Include="EndoscopicDbDataSet.cs">
+      <DependentUpon>EndoscopicDbDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="EndoscopicDbDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>EndoscopicDbDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Entities\AmpullaOfVater.cs">
+      <DependentUpon>DBEndoscopic.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Entities\AnalCanal.cs">
+      <DependentUpon>DBEndoscopic.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Entities\Anesthesia.cs">
+      <DependentUpon>DBEndoscopic.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Entities\Antrum.cs">
+      <DependentUpon>DBEndoscopic.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Entities\Appointment.cs">
+      <DependentUpon>DBEndoscopic.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Entities\AscendingColon.cs">
+      <DependentUpon>DBEndoscopic.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Entities\Body.cs">
+      <DependentUpon>DBEndoscopic.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Entities\Cardia.cs">
+      <DependentUpon>DBEndoscopic.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Entities\Cecum.cs">
+      <DependentUpon>DBEndoscopic.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Entities\Chart_Result.cs">
+      <DependentUpon>DBEndoscopic.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Entities\Cholangiogram.cs">
+      <DependentUpon>DBEndoscopic.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Entities\DBEndoscopic.Context.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DBEndoscopic.Context.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Entities\DBEndoscopic.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DBEndoscopic.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Entities\DBEndoscopic.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DBEndoscopic.edmx</DependentUpon>
+    </Compile>
+    <Compile Include="Entities\DescendingColon.cs">
+      <DependentUpon>DBEndoscopic.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Entities\Doctor.cs">
+      <DependentUpon>DBEndoscopic.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Entities\DuodenalBulb.cs">
+      <DependentUpon>DBEndoscopic.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Entities\Duodenum.cs">
+      <DependentUpon>DBEndoscopic.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Entities\EGJunction.cs">
+      <DependentUpon>DBEndoscopic.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Entities\Endoscopic.cs">
+      <DependentUpon>DBEndoscopic.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Entities\EndoscopicImage.cs">
+      <DependentUpon>DBEndoscopic.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Entities\EndoscopicVideo.cs">
+      <DependentUpon>DBEndoscopic.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Entities\ERCPEsophagu.cs">
+      <DependentUpon>DBEndoscopic.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Entities\Esophagu.cs">
+      <DependentUpon>DBEndoscopic.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Entities\Finding.cs">
+      <DependentUpon>DBEndoscopic.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Entities\Fundu.cs">
+      <DependentUpon>DBEndoscopic.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Entities\HepaticFlexure.cs">
+      <DependentUpon>DBEndoscopic.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Entities\History.cs">
+      <DependentUpon>DBEndoscopic.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Entities\Hospital.cs">
+      <DependentUpon>DBEndoscopic.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Entities\IleocecalValve.cs">
+      <DependentUpon>DBEndoscopic.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Entities\Indication.cs">
+      <DependentUpon>DBEndoscopic.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Entities\IndicationDropdown.cs">
+      <DependentUpon>DBEndoscopic.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Entities\Intervention.cs">
+      <DependentUpon>DBEndoscopic.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Entities\Medication.cs">
+      <DependentUpon>DBEndoscopic.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Entities\Nurse.cs">
+      <DependentUpon>DBEndoscopic.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Entities\Oropharynx.cs">
+      <DependentUpon>DBEndoscopic.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Entities\Pancreatogram.cs">
+      <DependentUpon>DBEndoscopic.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Entities\Patient.cs">
+      <DependentUpon>DBEndoscopic.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Entities\PatientList.cs">
+      <DependentUpon>DBEndoscopic.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Entities\ProcedureList.cs">
+      <DependentUpon>DBEndoscopic.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Entities\Pyloru.cs">
+      <DependentUpon>DBEndoscopic.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Entities\Rectum.cs">
+      <DependentUpon>DBEndoscopic.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Entities\Room.cs">
+      <DependentUpon>DBEndoscopic.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Entities\SecondPart.cs">
+      <DependentUpon>DBEndoscopic.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Entities\SigmoidColon.cs">
+      <DependentUpon>DBEndoscopic.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Entities\Speciman.cs">
+      <DependentUpon>DBEndoscopic.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Entities\SplenicFlexure.cs">
+      <DependentUpon>DBEndoscopic.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Entities\Stomach.cs">
+      <DependentUpon>DBEndoscopic.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Entities\TerminalIleum.cs">
+      <DependentUpon>DBEndoscopic.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Entities\TransverseColon.cs">
+      <DependentUpon>DBEndoscopic.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Entities\User.cs">
+      <DependentUpon>DBEndoscopic.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Entities\v_AppointmentDetails.cs">
+      <DependentUpon>DBEndoscopic.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Entities\v_HistoryEndoscopic.cs">
+      <DependentUpon>DBEndoscopic.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Dashboard.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Dashboard.Designer.cs">
+      <DependentUpon>Dashboard.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Doctor.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Doctor.Designer.cs">
+      <DependentUpon>Doctor.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\EndoscopicForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\EndoscopicForm.Designer.cs">
+      <DependentUpon>EndoscopicForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\EndoscopyRoom.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\EndoscopyRoom.Designer.cs">
+      <DependentUpon>EndoscopyRoom.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\LoginForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\LoginForm.Designer.cs">
+      <DependentUpon>LoginForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Nurse.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Nurse.Designer.cs">
+      <DependentUpon>Nurse.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\ReportEndoscopic.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\ReportEndoscopic.Designer.cs">
+      <DependentUpon>ReportEndoscopic.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\SearchEndoscopic.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\SearchEndoscopic.Designer.cs">
+      <DependentUpon>SearchEndoscopic.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\SearchPatient.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\SearchPatient.Designer.cs">
+      <DependentUpon>SearchPatient.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\SettingPicForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\SettingPicForm.Designer.cs">
+      <DependentUpon>SettingPicForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\SnapshotForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\SnapshotForm.Designer.cs">
+      <DependentUpon>SnapshotForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Report\BronchoscopyReport1.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>BronchoscopyReport.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Report\EndoscopicReport.cs">
+      <DependentUpon>EndoscopicReport.rpt</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <SubType>Component</SubType>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="Report\ColonoscopyReport.cs">
+      <DependentUpon>ColonoscopyReport.rpt</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <SubType>Component</SubType>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="Report\GastroscoryReport.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>GastroscoryReport.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Repository\EndoscopicRepository.cs" />
+    <Compile Include="Repository\PatientRepository.cs" />
+    <Compile Include="Repository\GetDropdownList.cs" />
+    <Compile Include="Repository\ProcedureListRepository.cs" />
+    <Compile Include="Repository\UserRepository.cs" />
+    <Compile Include="Forms\PatientForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\PatientForm.Designer.cs">
+      <DependentUpon>PatientForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Home.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Home.Designer.cs">
+      <DependentUpon>Home.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Forms\Setting.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Setting.Designer.cs">
+      <DependentUpon>Setting.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\UserManage.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\UserManage.Designer.cs">
+      <DependentUpon>UserManage.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="Forms\Dashboard.resx">
+      <DependentUpon>Dashboard.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Doctor.resx">
+      <DependentUpon>Doctor.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\EndoscopicForm.resx">
+      <DependentUpon>EndoscopicForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\EndoscopyRoom.resx">
+      <DependentUpon>EndoscopyRoom.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\LoginForm.resx">
+      <DependentUpon>LoginForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Nurse.resx">
+      <DependentUpon>Nurse.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\PatientForm.resx">
+      <DependentUpon>PatientForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Home.resx">
+      <DependentUpon>Home.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\ReportEndoscopic.resx">
+      <DependentUpon>ReportEndoscopic.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\SearchEndoscopic.resx">
+      <DependentUpon>SearchEndoscopic.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\SearchPatient.resx">
+      <DependentUpon>SearchPatient.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\SettingPicForm.resx">
+      <DependentUpon>SettingPicForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\SnapshotForm.resx">
+      <DependentUpon>SnapshotForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <SubType>Designer</SubType>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Setting.resx">
+      <DependentUpon>Setting.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\UserManage.resx">
+      <DependentUpon>UserManage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Report\BronchoscopyReport.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>BronchoscopyReport1.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Report\EndoscopicReport.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>EndoscopicReport.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Report\ColonoscopyReport.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>ColonoscopyReport.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Report\GastroscoryReport.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>GastroscoryReport.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EntityDeploy Include="Entities\DBEndoscopic.edmx">
+      <Generator>EntityModelCodeGenerator</Generator>
+      <LastGenOutput>DBEndoscopic.Designer.cs</LastGenOutput>
+    </EntityDeploy>
+    <None Include="EndoscopicDbDataSet.xsc">
+      <DependentUpon>EndoscopicDbDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="EndoscopicDbDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>EndoscopicDbDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="EndoscopicDbDataSet.xss">
+      <DependentUpon>EndoscopicDbDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="Entities\DBEndoscopic.edmx.diagram">
+      <DependentUpon>DBEndoscopic.edmx</DependentUpon>
+    </None>
+    <None Include="packages.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Connected Services\" />
+    <Folder Include="ImageCapture\" />
+    <Folder Include="Upload\Files\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
+    <Service Include="{C0C07587-41A7-46C8-8FBD-3F9C8EBE2DDC}" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Entities\DBEndoscopic.Context.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>DBEndoscopic.edmx</DependentUpon>
+      <LastGenOutput>DBEndoscopic.Context.cs</LastGenOutput>
+    </Content>
+    <Content Include="Entities\DBEndoscopic.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>DBEndoscopic.edmx</DependentUpon>
+      <LastGenOutput>DBEndoscopic.cs</LastGenOutput>
+    </Content>
+    <Content Include="Images\092017_0551_Ileum1.jpg" />
+    <Content Include="Images\0LbKR2uhpS.jpg" />
+    <Content Include="Images\1.jpg" />
+    <Content Include="Images\1.png" />
+    <Content Include="Images\2.png" />
+    <Content Include="Images\3.png" />
+    <Content Include="Images\4.png" />
+    <Content Include="Images\5.png" />
+    <Content Include="Images\6.png" />
+    <Content Include="Images\7.png" />
+    <Content Include="Images\8.png" />
+    <Content Include="Images\9.png" />
+    <Content Include="Images\Edit_icon.png" />
+    <Content Include="Images\IMD_endoscope_EN.jpg" />
+    <Content Include="Images\Logo\logo-080920201118.png" />
+    <Content Include="Images\Logo\logo-080925631359.png" />
+    <Content Include="Images\nplink-03.ico" />
+    <Content Include="Images\nplink-05.png" />
+    <Content Include="Images\Patient\logo-080925632140.png" />
+    <Content Include="Images\Patient\logo-080925632200.png" />
+    <Content Include="Images\Patient\logo-080925632228.png" />
+    <Content Include="Images\Patient\logo-090925630003.png" />
+    <Content Include="Images\Patient\logo-090925630011.png" />
+    <Content Include="Images\Patient\logo-090925630050.png" />
+    <Content Include="Images\Patient\logo-090925630058.png" />
+    <Content Include="Images\Patient\logo-090925630113.png" />
+    <Content Include="Images\Upload.png" />
+    <None Include="Resources\editBtn.png" />
+    <Content Include="Sounds\capture.wav" />
+    <Content Include="Sounds\capture1.wav" />
+    <Content Include="Sounds\connect.wav" />
+    <Content Include="Sounds\disconnect.wav" />
+    <Content Include="Sounds\record.wav" />
+    <Content Include="Sounds\stop.WAV" />
+    <Content Include="VideoRecord\21-33-00.mp4" />
+    <Content Include="VideoRecord\21-34-44.mp4" />
+    <Content Include="VideoRecord\21-52-21.avi" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include=".NETFramework,Version=v4.7.2">
+      <Visible>False</Visible>
+      <ProductName>Microsoft .NET Framework 4.7.2 %28x86 and x64%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <COMReference Include="AxWMPLib">
+      <Guid>{6BF52A50-394A-11D3-B153-00C04F79FAA6}</Guid>
+      <VersionMajor>1</VersionMajor>
+      <VersionMinor>0</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>aximp</WrapperTool>
+      <Isolated>False</Isolated>
+    </COMReference>
+    <COMReference Include="WMPLib">
+      <Guid>{6BF52A50-394A-11D3-B153-00C04F79FAA6}</Guid>
+      <VersionMajor>1</VersionMajor>
+      <VersionMinor>0</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>tlbimp</WrapperTool>
+      <Isolated>False</Isolated>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </COMReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>This project references NuGet package(s) that are missing on this computer. Use NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=322105. The missing file is {0}.</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('..\packages\EntityFramework.6.4.4\build\EntityFramework.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\EntityFramework.6.4.4\build\EntityFramework.props'))" />
+    <Error Condition="!Exists('..\packages\EntityFramework.6.4.4\build\EntityFramework.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\EntityFramework.6.4.4\build\EntityFramework.targets'))" />
+    <Error Condition="!Exists('..\packages\Accord.3.8.0\build\Accord.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\Accord.3.8.0\build\Accord.targets'))" />
+    <Error Condition="!Exists('..\packages\Accord.Video.FFMPEG.3.8.0\build\Accord.Video.FFMPEG.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\Accord.Video.FFMPEG.3.8.0\build\Accord.Video.FFMPEG.targets'))" />
+  </Target>
+  <Import Project="..\packages\EntityFramework.6.4.4\build\EntityFramework.targets" Condition="Exists('..\packages\EntityFramework.6.4.4\build\EntityFramework.targets')" />
+  <Import Project="..\packages\Accord.3.8.0\build\Accord.targets" Condition="Exists('..\packages\Accord.3.8.0\build\Accord.targets')" />
+  <Import Project="..\packages\Accord.Video.FFMPEG.3.8.0\build\Accord.Video.FFMPEG.targets" Condition="Exists('..\packages\Accord.Video.FFMPEG.3.8.0\build\Accord.Video.FFMPEG.targets')" />
+</Project>
