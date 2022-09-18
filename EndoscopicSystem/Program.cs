@@ -1,4 +1,4 @@
-﻿using EndoscopicSystem.Forms;
+﻿using EndoscopicSystem.V2.Forms;
 using System;
 using System.Windows.Forms;
 
@@ -14,7 +14,7 @@ namespace EndoscopicSystem
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new LoginForm());
+            Application.Run(new FormLogin());
         }
     }
 }

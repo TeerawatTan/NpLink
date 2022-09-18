@@ -12,7 +12,7 @@ namespace EndoscopicSystem.Properties {
     
     
     [global::System.Runtime.CompilerServices.CompilerGeneratedAttribute()]
-    [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.VisualStudio.Editors.SettingsDesigner.SettingsSingleFileGenerator", "16.7.0.0")]
+    [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.VisualStudio.Editors.SettingsDesigner.SettingsSingleFileGenerator", "16.8.1.0")]
     internal sealed partial class Settings : global::System.Configuration.ApplicationSettingsBase {
         
         private static Settings defaultInstance = ((Settings)(global::System.Configuration.ApplicationSettingsBase.Synchronized(new Settings())));
@@ -31,16 +31,6 @@ namespace EndoscopicSystem.Properties {
         public string EndoscopicDbConnectionString {
             get {
                 return ((string)(this["EndoscopicDbConnectionString"]));
-            }
-        }
-        
-        [global::System.Configuration.ApplicationScopedSettingAttribute()]
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.SpecialSettingAttribute(global::System.Configuration.SpecialSetting.ConnectionString)]
-        [global::System.Configuration.DefaultSettingValueAttribute(@"metadata=res://*/Entities.DBEndoscopic.csdl|res://*/Entities.DBEndoscopic.ssdl|res://*/Entities.DBEndoscopic.msl;provider=System.Data.SqlClient;provider connection string=""data source=(LocalDB)\MSSQLLocalDB;attachdbfilename=|DataDirectory|\Data\godsv_EndoscopicDb_9ef9846ffbb64efc9bf741ae19d693b5.mdf;integrated security=True;MultipleActiveResultSets=True;App=EntityFramework""")]
-        public string godsv_EndoscopicDbConnectionString {
-            get {
-                return ((string)(this["godsv_EndoscopicDbConnectionString"]));
             }
         }
     }

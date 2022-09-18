@@ -51,7 +51,7 @@
             this.cbbDoctor.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
             this.cbbDoctor.FormattingEnabled = true;
             this.cbbDoctor.Location = new System.Drawing.Point(503, 51);
-            this.cbbDoctor.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.cbbDoctor.Margin = new System.Windows.Forms.Padding(2);
             this.cbbDoctor.Name = "cbbDoctor";
             this.cbbDoctor.Size = new System.Drawing.Size(343, 24);
             this.cbbDoctor.TabIndex = 6;
@@ -62,7 +62,7 @@
             this.cbbStation.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
             this.cbbStation.FormattingEnabled = true;
             this.cbbStation.Location = new System.Drawing.Point(80, 50);
-            this.cbbStation.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.cbbStation.Margin = new System.Windows.Forms.Padding(2);
             this.cbbStation.Name = "cbbStation";
             this.cbbStation.Size = new System.Drawing.Size(240, 24);
             this.cbbStation.TabIndex = 5;
@@ -73,7 +73,7 @@
             this.dtEndDate.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
             this.dtEndDate.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
             this.dtEndDate.Location = new System.Drawing.Point(681, 20);
-            this.dtEndDate.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.dtEndDate.Margin = new System.Windows.Forms.Padding(2);
             this.dtEndDate.Name = "dtEndDate";
             this.dtEndDate.Size = new System.Drawing.Size(165, 23);
             this.dtEndDate.TabIndex = 4;
@@ -84,7 +84,7 @@
             this.dtStartDate.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
             this.dtStartDate.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
             this.dtStartDate.Location = new System.Drawing.Point(503, 20);
-            this.dtStartDate.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.dtStartDate.Margin = new System.Windows.Forms.Padding(2);
             this.dtStartDate.Name = "dtStartDate";
             this.dtStartDate.Size = new System.Drawing.Size(165, 23);
             this.dtStartDate.TabIndex = 4;
@@ -93,7 +93,7 @@
             // 
             this.btnSearch.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
             this.btnSearch.Location = new System.Drawing.Point(871, 48);
-            this.btnSearch.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnSearch.Margin = new System.Windows.Forms.Padding(2);
             this.btnSearch.Name = "btnSearch";
             this.btnSearch.Size = new System.Drawing.Size(87, 28);
             this.btnSearch.TabIndex = 3;
@@ -138,7 +138,7 @@
             // 
             this.txtHN.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
             this.txtHN.Location = new System.Drawing.Point(80, 20);
-            this.txtHN.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtHN.Margin = new System.Windows.Forms.Padding(2);
             this.txtHN.Name = "txtHN";
             this.txtHN.Size = new System.Drawing.Size(240, 23);
             this.txtHN.TabIndex = 1;
@@ -175,7 +175,7 @@
             this.gridPatient.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.gridPatient.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.gridPatient.Location = new System.Drawing.Point(9, 151);
-            this.gridPatient.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.gridPatient.Margin = new System.Windows.Forms.Padding(2);
             this.gridPatient.Name = "gridPatient";
             this.gridPatient.ReadOnly = true;
             this.gridPatient.RowHeadersWidth = 51;
@@ -201,7 +201,7 @@
             this.panel1.Controls.Add(this.label4);
             this.panel1.Controls.Add(this.label5);
             this.panel1.Location = new System.Drawing.Point(9, 45);
-            this.panel1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.panel1.Margin = new System.Windows.Forms.Padding(2);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(982, 91);
             this.panel1.TabIndex = 6;
@@ -215,10 +215,11 @@
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.gridPatient);
             this.Controls.Add(this.label2);
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "SearchPatientForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
+            this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.SearchPatientForm_FormClosed);
             this.Load += new System.EventHandler(this.SearchPatientForm_Load);
             ((System.ComponentModel.ISupportInitialize)(this.gridPatient)).EndInit();
             this.panel1.ResumeLayout(false);

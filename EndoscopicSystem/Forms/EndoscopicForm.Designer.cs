@@ -6937,6 +6937,7 @@
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.EndoscopicForm_FormClosing);
+            this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.EndoscopicForm_FormClosed);
             this.Load += new System.EventHandler(this.EndoscopicForm_Load);
             this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.EndoscopicForm_KeyDown);
             this.tabControl1.ResumeLayout(false);

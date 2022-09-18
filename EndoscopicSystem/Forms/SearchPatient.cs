@@ -112,5 +112,11 @@ namespace EndoscopicSystem
                 MessageBox.Show(ex.Message);
             }
         }
+
+        private void SearchPatientForm_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            V2.Forms.FormHome formHome = new V2.Forms.FormHome(UserID);
+            formHome.Show();
+        }
     }
 }

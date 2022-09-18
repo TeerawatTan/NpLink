@@ -93,7 +93,7 @@
             "Male",
             "FeMale"});
             this.cbbSex.Location = new System.Drawing.Point(75, 76);
-            this.cbbSex.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.cbbSex.Margin = new System.Windows.Forms.Padding(2);
             this.cbbSex.Name = "cbbSex";
             this.cbbSex.Size = new System.Drawing.Size(221, 24);
             this.cbbSex.TabIndex = 5;
@@ -103,7 +103,7 @@
             this.txtCID.CausesValidation = false;
             this.txtCID.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
             this.txtCID.Location = new System.Drawing.Point(386, 50);
-            this.txtCID.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtCID.Margin = new System.Windows.Forms.Padding(2);
             this.txtCID.MaxLength = 13;
             this.txtCID.Name = "txtCID";
             this.txtCID.Size = new System.Drawing.Size(273, 23);
@@ -115,7 +115,7 @@
             this.txtFullName.CausesValidation = false;
             this.txtFullName.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
             this.txtFullName.Location = new System.Drawing.Point(386, 20);
-            this.txtFullName.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtFullName.Margin = new System.Windows.Forms.Padding(2);
             this.txtFullName.MaxLength = 255;
             this.txtFullName.Name = "txtFullName";
             this.txtFullName.Size = new System.Drawing.Size(273, 23);
@@ -159,7 +159,7 @@
             this.txtAge.CausesValidation = false;
             this.txtAge.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
             this.txtAge.Location = new System.Drawing.Point(75, 47);
-            this.txtAge.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtAge.Margin = new System.Windows.Forms.Padding(2);
             this.txtAge.MaxLength = 3;
             this.txtAge.Name = "txtAge";
             this.txtAge.Size = new System.Drawing.Size(221, 23);
@@ -181,7 +181,7 @@
             // 
             this.txtHN.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
             this.txtHN.Location = new System.Drawing.Point(75, 17);
-            this.txtHN.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtHN.Margin = new System.Windows.Forms.Padding(2);
             this.txtHN.MaxLength = 10;
             this.txtHN.Name = "txtHN";
             this.txtHN.Size = new System.Drawing.Size(221, 23);
@@ -205,7 +205,7 @@
             this.cbbDoctorName.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
             this.cbbDoctorName.FormattingEnabled = true;
             this.cbbDoctorName.Location = new System.Drawing.Point(570, 110);
-            this.cbbDoctorName.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.cbbDoctorName.Margin = new System.Windows.Forms.Padding(2);
             this.cbbDoctorName.Name = "cbbDoctorName";
             this.cbbDoctorName.Size = new System.Drawing.Size(287, 24);
             this.cbbDoctorName.TabIndex = 15;
@@ -216,7 +216,7 @@
             this.cbbStation.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
             this.cbbStation.FormattingEnabled = true;
             this.cbbStation.Location = new System.Drawing.Point(152, 110);
-            this.cbbStation.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.cbbStation.Margin = new System.Windows.Forms.Padding(2);
             this.cbbStation.Name = "cbbStation";
             this.cbbStation.Size = new System.Drawing.Size(268, 24);
             this.cbbStation.TabIndex = 14;
@@ -227,7 +227,7 @@
             this.cbbNurseName3.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
             this.cbbNurseName3.FormattingEnabled = true;
             this.cbbNurseName3.Location = new System.Drawing.Point(152, 197);
-            this.cbbNurseName3.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.cbbNurseName3.Margin = new System.Windows.Forms.Padding(2);
             this.cbbNurseName3.Name = "cbbNurseName3";
             this.cbbNurseName3.Size = new System.Drawing.Size(268, 24);
             this.cbbNurseName3.TabIndex = 18;
@@ -238,7 +238,7 @@
             this.cbbNurseName2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
             this.cbbNurseName2.FormattingEnabled = true;
             this.cbbNurseName2.Location = new System.Drawing.Point(152, 170);
-            this.cbbNurseName2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.cbbNurseName2.Margin = new System.Windows.Forms.Padding(2);
             this.cbbNurseName2.Name = "cbbNurseName2";
             this.cbbNurseName2.Size = new System.Drawing.Size(268, 24);
             this.cbbNurseName2.TabIndex = 17;
@@ -249,7 +249,7 @@
             this.cbbNurseName1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
             this.cbbNurseName1.FormattingEnabled = true;
             this.cbbNurseName1.Location = new System.Drawing.Point(152, 142);
-            this.cbbNurseName1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.cbbNurseName1.Margin = new System.Windows.Forms.Padding(2);
             this.cbbNurseName1.Name = "cbbNurseName1";
             this.cbbNurseName1.Size = new System.Drawing.Size(268, 24);
             this.cbbNurseName1.TabIndex = 16;
@@ -259,7 +259,7 @@
             this.txtStaffName.CausesValidation = false;
             this.txtStaffName.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
             this.txtStaffName.Location = new System.Drawing.Point(570, 142);
-            this.txtStaffName.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtStaffName.Margin = new System.Windows.Forms.Padding(2);
             this.txtStaffName.MaxLength = 255;
             this.txtStaffName.Name = "txtStaffName";
             this.txtStaffName.Size = new System.Drawing.Size(287, 23);
@@ -272,7 +272,7 @@
             this.dtOperatingDate.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
             this.dtOperatingDate.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
             this.dtOperatingDate.Location = new System.Drawing.Point(152, 47);
-            this.dtOperatingDate.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.dtOperatingDate.Margin = new System.Windows.Forms.Padding(2);
             this.dtOperatingDate.MinDate = new System.DateTime(2020, 1, 1, 0, 0, 0, 0);
             this.dtOperatingDate.Name = "dtOperatingDate";
             this.dtOperatingDate.Size = new System.Drawing.Size(230, 26);
@@ -286,7 +286,7 @@
             this.dtOperatingTime.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
             this.dtOperatingTime.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
             this.dtOperatingTime.Location = new System.Drawing.Point(394, 47);
-            this.dtOperatingTime.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.dtOperatingTime.Margin = new System.Windows.Forms.Padding(2);
             this.dtOperatingTime.MinDate = new System.DateTime(2020, 1, 1, 0, 0, 0, 0);
             this.dtOperatingTime.Name = "dtOperatingTime";
             this.dtOperatingTime.ShowUpDown = true;
@@ -301,7 +301,7 @@
             this.dtAppointmentTime.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
             this.dtAppointmentTime.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
             this.dtAppointmentTime.Location = new System.Drawing.Point(394, 13);
-            this.dtAppointmentTime.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.dtAppointmentTime.Margin = new System.Windows.Forms.Padding(2);
             this.dtAppointmentTime.MinDate = new System.DateTime(2020, 1, 1, 0, 0, 0, 0);
             this.dtAppointmentTime.Name = "dtAppointmentTime";
             this.dtAppointmentTime.ShowUpDown = true;
@@ -316,7 +316,7 @@
             this.dtAppointmentDate.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
             this.dtAppointmentDate.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
             this.dtAppointmentDate.Location = new System.Drawing.Point(152, 13);
-            this.dtAppointmentDate.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.dtAppointmentDate.Margin = new System.Windows.Forms.Padding(2);
             this.dtAppointmentDate.MinDate = new System.DateTime(2020, 1, 1, 0, 0, 0, 0);
             this.dtAppointmentDate.Name = "dtAppointmentDate";
             this.dtAppointmentDate.Size = new System.Drawing.Size(230, 26);
@@ -372,7 +372,7 @@
             this.txtSymptom.CausesValidation = false;
             this.txtSymptom.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
             this.txtSymptom.Location = new System.Drawing.Point(152, 81);
-            this.txtSymptom.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtSymptom.Margin = new System.Windows.Forms.Padding(2);
             this.txtSymptom.MaxLength = 250;
             this.txtSymptom.Name = "txtSymptom";
             this.txtSymptom.Size = new System.Drawing.Size(268, 23);
@@ -427,7 +427,7 @@
             this.btnDelete.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.btnDelete.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
             this.btnDelete.Location = new System.Drawing.Point(344, 639);
-            this.btnDelete.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnDelete.Margin = new System.Windows.Forms.Padding(2);
             this.btnDelete.Name = "btnDelete";
             this.btnDelete.Size = new System.Drawing.Size(84, 46);
             this.btnDelete.TabIndex = 20;
@@ -440,7 +440,7 @@
             this.btnSave.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.btnSave.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
             this.btnSave.Location = new System.Drawing.Point(518, 639);
-            this.btnSave.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnSave.Margin = new System.Windows.Forms.Padding(2);
             this.btnSave.Name = "btnSave";
             this.btnSave.Size = new System.Drawing.Size(84, 46);
             this.btnSave.TabIndex = 18;
@@ -453,7 +453,7 @@
             this.btnReset.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.btnReset.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
             this.btnReset.Location = new System.Drawing.Point(245, 639);
-            this.btnReset.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnReset.Margin = new System.Windows.Forms.Padding(2);
             this.btnReset.Name = "btnReset";
             this.btnReset.Size = new System.Drawing.Size(84, 46);
             this.btnReset.TabIndex = 19;
@@ -487,7 +487,7 @@
             dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
             this.gridPatient.DefaultCellStyle = dataGridViewCellStyle2;
             this.gridPatient.Location = new System.Drawing.Point(9, 431);
-            this.gridPatient.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.gridPatient.Margin = new System.Windows.Forms.Padding(2);
             this.gridPatient.Name = "gridPatient";
             this.gridPatient.ReadOnly = true;
             dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
@@ -508,7 +508,7 @@
             // 
             this.pictureBox1.Image = null;
             this.pictureBox1.Location = new System.Drawing.Point(741, 11);
-            this.pictureBox1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.pictureBox1.Margin = new System.Windows.Forms.Padding(2);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(158, 145);
             this.pictureBox1.TabIndex = 21;
@@ -517,7 +517,7 @@
             // btnBrowse
             // 
             this.btnBrowse.Location = new System.Drawing.Point(782, 160);
-            this.btnBrowse.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnBrowse.Margin = new System.Windows.Forms.Padding(2);
             this.btnBrowse.Name = "btnBrowse";
             this.btnBrowse.Size = new System.Drawing.Size(78, 27);
             this.btnBrowse.TabIndex = 20;
@@ -544,7 +544,7 @@
             this.panel1.Controls.Add(this.label2);
             this.panel1.Controls.Add(this.label4);
             this.panel1.Location = new System.Drawing.Point(9, 39);
-            this.panel1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.panel1.Margin = new System.Windows.Forms.Padding(2);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(695, 128);
             this.panel1.TabIndex = 22;
@@ -583,7 +583,7 @@
             this.panel2.Controls.Add(this.label6);
             this.panel2.Cursor = System.Windows.Forms.Cursors.Default;
             this.panel2.Location = new System.Drawing.Point(9, 191);
-            this.panel2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.panel2.Margin = new System.Windows.Forms.Padding(2);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(910, 236);
             this.panel2.TabIndex = 8;
@@ -593,7 +593,7 @@
             this.chkIPD.AutoSize = true;
             this.chkIPD.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
             this.chkIPD.Location = new System.Drawing.Point(675, 201);
-            this.chkIPD.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.chkIPD.Margin = new System.Windows.Forms.Padding(2);
             this.chkIPD.Name = "chkIPD";
             this.chkIPD.Size = new System.Drawing.Size(49, 21);
             this.chkIPD.TabIndex = 89;
@@ -605,7 +605,7 @@
             this.chkOPD.AutoSize = true;
             this.chkOPD.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
             this.chkOPD.Location = new System.Drawing.Point(570, 199);
-            this.chkOPD.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.chkOPD.Margin = new System.Windows.Forms.Padding(2);
             this.chkOPD.Name = "chkOPD";
             this.chkOPD.Size = new System.Drawing.Size(57, 21);
             this.chkOPD.TabIndex = 87;
@@ -618,7 +618,7 @@
             this.cbbProcedureList.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
             this.cbbProcedureList.FormattingEnabled = true;
             this.cbbProcedureList.Location = new System.Drawing.Point(570, 80);
-            this.cbbProcedureList.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.cbbProcedureList.Margin = new System.Windows.Forms.Padding(2);
             this.cbbProcedureList.Name = "cbbProcedureList";
             this.cbbProcedureList.Size = new System.Drawing.Size(287, 24);
             this.cbbProcedureList.TabIndex = 85;
@@ -651,7 +651,7 @@
             this.chkFollowUpCase.AutoSize = true;
             this.chkFollowUpCase.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
             this.chkFollowUpCase.Location = new System.Drawing.Point(675, 170);
-            this.chkFollowUpCase.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.chkFollowUpCase.Margin = new System.Windows.Forms.Padding(2);
             this.chkFollowUpCase.Name = "chkFollowUpCase";
             this.chkFollowUpCase.Size = new System.Drawing.Size(122, 21);
             this.chkFollowUpCase.TabIndex = 82;
@@ -663,7 +663,7 @@
             this.chkNewCase.AutoSize = true;
             this.chkNewCase.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
             this.chkNewCase.Location = new System.Drawing.Point(570, 169);
-            this.chkNewCase.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.chkNewCase.Margin = new System.Windows.Forms.Padding(2);
             this.chkNewCase.Name = "chkNewCase";
             this.chkNewCase.Size = new System.Drawing.Size(90, 21);
             this.chkNewCase.TabIndex = 83;
@@ -698,11 +698,12 @@
             this.Controls.Add(this.gridPatient);
             this.Controls.Add(this.label16);
             this.Controls.Add(this.btnBrowse);
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "PatientForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "admin";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
+            this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.PatientForm_FormClosed);
             this.Load += new System.EventHandler(this.PatientForm_Load);
             ((System.ComponentModel.ISupportInitialize)(this.gridPatient)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
