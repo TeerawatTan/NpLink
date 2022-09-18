@@ -164,5 +164,9 @@ namespace EndoscopicSystem
                 }
             }
         }
+
+        private void SettingHospitalForm_FormClosed(object sender, FormClosedEventArgs e)
+        {
+        }
     }
 }

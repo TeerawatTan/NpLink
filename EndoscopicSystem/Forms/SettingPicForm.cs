@@ -189,6 +189,10 @@ namespace EndoscopicSystem.Forms
             }
         }
 
+        private void SettingPicForm_FormClosed(object sender, FormClosedEventArgs e)
+        {
+        }
+
         private void pictureBox1_MouseEnter(object sender, EventArgs e)
         {
             base.OnMouseEnter(e);

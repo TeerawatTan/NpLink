@@ -28,10 +28,10 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea1 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-            System.Windows.Forms.DataVisualization.Charting.Legend legend1 = new System.Windows.Forms.DataVisualization.Charting.Legend();
-            System.Windows.Forms.DataVisualization.Charting.Series series1 = new System.Windows.Forms.DataVisualization.Charting.Series();
-            System.Windows.Forms.DataVisualization.Charting.Title title1 = new System.Windows.Forms.DataVisualization.Charting.Title();
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea2 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend2 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataVisualization.Charting.Series series2 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.Title title2 = new System.Windows.Forms.DataVisualization.Charting.Title();
             this.chart1 = new System.Windows.Forms.DataVisualization.Charting.Chart();
             this.gridQueue = new System.Windows.Forms.DataGridView();
             this.label16 = new System.Windows.Forms.Label();
@@ -61,14 +61,14 @@
             this.chart1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.chart1.BackColor = System.Drawing.Color.WhiteSmoke;
-            chartArea1.Name = "ChartArea1";
-            this.chart1.ChartAreas.Add(chartArea1);
+            chartArea2.Name = "ChartArea1";
+            this.chart1.ChartAreas.Add(chartArea2);
             this.chart1.Cursor = System.Windows.Forms.Cursors.Default;
-            legend1.BackColor = System.Drawing.Color.White;
-            legend1.BorderDashStyle = System.Windows.Forms.DataVisualization.Charting.ChartDashStyle.NotSet;
-            legend1.Enabled = false;
-            legend1.Name = "Legend1";
-            this.chart1.Legends.Add(legend1);
+            legend2.BackColor = System.Drawing.Color.White;
+            legend2.BorderDashStyle = System.Windows.Forms.DataVisualization.Charting.ChartDashStyle.NotSet;
+            legend2.Enabled = false;
+            legend2.Name = "Legend1";
+            this.chart1.Legends.Add(legend2);
             this.chart1.Location = new System.Drawing.Point(51, 60);
             this.chart1.Margin = new System.Windows.Forms.Padding(2);
             this.chart1.Name = "chart1";
@@ -79,32 +79,32 @@
         System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0))))),
         System.Drawing.Color.PaleTurquoise,
         System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))))};
-            series1.BackImageTransparentColor = System.Drawing.Color.White;
-            series1.BorderDashStyle = System.Windows.Forms.DataVisualization.Charting.ChartDashStyle.NotSet;
-            series1.BorderWidth = 2;
-            series1.ChartArea = "ChartArea1";
-            series1.Font = new System.Drawing.Font("Microsoft Sans Serif", 5F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Millimeter);
-            series1.IsXValueIndexed = true;
-            series1.Label = "#VAL{D}";
-            series1.LabelBackColor = System.Drawing.Color.White;
-            series1.LabelBorderColor = System.Drawing.Color.White;
-            series1.LabelBorderDashStyle = System.Windows.Forms.DataVisualization.Charting.ChartDashStyle.NotSet;
-            series1.Legend = "Legend1";
-            series1.Name = "Patient";
-            series1.Palette = System.Windows.Forms.DataVisualization.Charting.ChartColorPalette.BrightPastel;
-            series1.ShadowOffset = 5;
-            series1.SmartLabelStyle.AllowOutsidePlotArea = System.Windows.Forms.DataVisualization.Charting.LabelOutsidePlotAreaStyle.Yes;
-            series1.XValueType = System.Windows.Forms.DataVisualization.Charting.ChartValueType.Int32;
-            series1.YValuesPerPoint = 20;
-            series1.YValueType = System.Windows.Forms.DataVisualization.Charting.ChartValueType.Int32;
-            this.chart1.Series.Add(series1);
-            this.chart1.Size = new System.Drawing.Size(1111, 303);
+            series2.BackImageTransparentColor = System.Drawing.Color.White;
+            series2.BorderDashStyle = System.Windows.Forms.DataVisualization.Charting.ChartDashStyle.NotSet;
+            series2.BorderWidth = 2;
+            series2.ChartArea = "ChartArea1";
+            series2.Font = new System.Drawing.Font("Microsoft Sans Serif", 5F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Millimeter);
+            series2.IsXValueIndexed = true;
+            series2.Label = "#VAL{D}";
+            series2.LabelBackColor = System.Drawing.Color.White;
+            series2.LabelBorderColor = System.Drawing.Color.White;
+            series2.LabelBorderDashStyle = System.Windows.Forms.DataVisualization.Charting.ChartDashStyle.NotSet;
+            series2.Legend = "Legend1";
+            series2.Name = "Patient";
+            series2.Palette = System.Windows.Forms.DataVisualization.Charting.ChartColorPalette.BrightPastel;
+            series2.ShadowOffset = 5;
+            series2.SmartLabelStyle.AllowOutsidePlotArea = System.Windows.Forms.DataVisualization.Charting.LabelOutsidePlotAreaStyle.Yes;
+            series2.XValueType = System.Windows.Forms.DataVisualization.Charting.ChartValueType.Int32;
+            series2.YValuesPerPoint = 20;
+            series2.YValueType = System.Windows.Forms.DataVisualization.Charting.ChartValueType.Int32;
+            this.chart1.Series.Add(series2);
+            this.chart1.Size = new System.Drawing.Size(1273, 303);
             this.chart1.TabIndex = 0;
             this.chart1.Text = "chart1";
-            title1.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Bold);
-            title1.Name = "Title1";
-            title1.Text = "ยอดผู้ป่วยแยกตามหัตถการ ประจำเดือน";
-            this.chart1.Titles.Add(title1);
+            title2.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Bold);
+            title2.Name = "Title1";
+            title2.Text = "ยอดผู้ป่วยแยกตามหัตถการ ประจำเดือน";
+            this.chart1.Titles.Add(title2);
             // 
             // gridQueue
             // 
@@ -121,7 +121,7 @@
             this.gridQueue.ReadOnly = true;
             this.gridQueue.RowHeadersWidth = 51;
             this.gridQueue.RowTemplate.Height = 24;
-            this.gridQueue.Size = new System.Drawing.Size(1189, 263);
+            this.gridQueue.Size = new System.Drawing.Size(1351, 360);
             this.gridQueue.TabIndex = 4;
             this.gridQueue.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.gridQueue_CellClick);
             // 
@@ -138,11 +138,11 @@
             // 
             // btnSearch
             // 
-            this.btnSearch.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
+            this.btnSearch.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
             this.btnSearch.Location = new System.Drawing.Point(438, 398);
             this.btnSearch.Margin = new System.Windows.Forms.Padding(2);
             this.btnSearch.Name = "btnSearch";
-            this.btnSearch.Size = new System.Drawing.Size(82, 40);
+            this.btnSearch.Size = new System.Drawing.Size(111, 40);
             this.btnSearch.TabIndex = 3;
             this.btnSearch.Text = "Search";
             this.btnSearch.UseVisualStyleBackColor = true;
@@ -172,13 +172,13 @@
             // txtHNNo
             // 
             this.txtHNNo.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.txtHNNo.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
-            this.txtHNNo.Location = new System.Drawing.Point(795, 404);
+            this.txtHNNo.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
+            this.txtHNNo.Location = new System.Drawing.Point(911, 398);
             this.txtHNNo.Margin = new System.Windows.Forms.Padding(2);
             this.txtHNNo.MaxLength = 255;
             this.txtHNNo.Name = "txtHNNo";
             this.txtHNNo.ReadOnly = true;
-            this.txtHNNo.Size = new System.Drawing.Size(118, 26);
+            this.txtHNNo.Size = new System.Drawing.Size(164, 29);
             this.txtHNNo.TabIndex = 28;
             // 
             // txtFullName
@@ -206,7 +206,7 @@
             // 
             this.btnGotoEndoscope.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.btnGotoEndoscope.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
-            this.btnGotoEndoscope.Location = new System.Drawing.Point(919, 394);
+            this.btnGotoEndoscope.Location = new System.Drawing.Point(1081, 394);
             this.btnGotoEndoscope.Margin = new System.Windows.Forms.Padding(2);
             this.btnGotoEndoscope.Name = "btnGotoEndoscope";
             this.btnGotoEndoscope.Size = new System.Drawing.Size(163, 41);
@@ -220,7 +220,7 @@
             this.label4.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
-            this.label4.Location = new System.Drawing.Point(657, 406);
+            this.label4.Location = new System.Drawing.Point(773, 401);
             this.label4.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label4.Name = "label4";
             this.label4.RightToLeft = System.Windows.Forms.RightToLeft.No;
@@ -233,7 +233,7 @@
             // 
             this.btnShowChart.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.btnShowChart.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
-            this.btnShowChart.Location = new System.Drawing.Point(1083, 17);
+            this.btnShowChart.Location = new System.Drawing.Point(1245, 17);
             this.btnShowChart.Margin = new System.Windows.Forms.Padding(2);
             this.btnShowChart.Name = "btnShowChart";
             this.btnShowChart.Size = new System.Drawing.Size(79, 34);
@@ -247,7 +247,7 @@
             this.cbbYear.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.cbbYear.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cbbYear.FormattingEnabled = true;
-            this.cbbYear.Location = new System.Drawing.Point(810, 25);
+            this.cbbYear.Location = new System.Drawing.Point(972, 25);
             this.cbbYear.Margin = new System.Windows.Forms.Padding(2);
             this.cbbYear.Name = "cbbYear";
             this.cbbYear.Size = new System.Drawing.Size(94, 21);
@@ -271,7 +271,7 @@
             "ตุลาคม",
             "พฤศจิกายน",
             "ธันวาคม"});
-            this.cbbMonth.Location = new System.Drawing.Point(587, 25);
+            this.cbbMonth.Location = new System.Drawing.Point(749, 25);
             this.cbbMonth.Margin = new System.Windows.Forms.Padding(2);
             this.cbbMonth.Name = "cbbMonth";
             this.cbbMonth.Size = new System.Drawing.Size(158, 21);
@@ -282,7 +282,7 @@
             this.label2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
-            this.label2.Location = new System.Drawing.Point(759, 27);
+            this.label2.Location = new System.Drawing.Point(921, 27);
             this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(45, 17);
@@ -294,7 +294,7 @@
             this.label5.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
-            this.label5.Location = new System.Drawing.Point(542, 27);
+            this.label5.Location = new System.Drawing.Point(704, 27);
             this.label5.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(36, 17);
@@ -305,7 +305,7 @@
             // 
             this.txtProcedureId.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.txtProcedureId.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
-            this.txtProcedureId.Location = new System.Drawing.Point(1153, 367);
+            this.txtProcedureId.Location = new System.Drawing.Point(1315, 367);
             this.txtProcedureId.Margin = new System.Windows.Forms.Padding(2);
             this.txtProcedureId.MaxLength = 255;
             this.txtProcedureId.Name = "txtProcedureId";
@@ -319,7 +319,7 @@
             this.btnDeleteHn.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.btnDeleteHn.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
             this.btnDeleteHn.ForeColor = System.Drawing.Color.Red;
-            this.btnDeleteHn.Location = new System.Drawing.Point(1095, 394);
+            this.btnDeleteHn.Location = new System.Drawing.Point(1257, 394);
             this.btnDeleteHn.Margin = new System.Windows.Forms.Padding(2);
             this.btnDeleteHn.Name = "btnDeleteHn";
             this.btnDeleteHn.Size = new System.Drawing.Size(90, 41);
@@ -333,7 +333,7 @@
             this.cbbOrder.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.cbbOrder.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cbbOrder.FormattingEnabled = true;
-            this.cbbOrder.Location = new System.Drawing.Point(919, 25);
+            this.cbbOrder.Location = new System.Drawing.Point(1081, 25);
             this.cbbOrder.Margin = new System.Windows.Forms.Padding(2);
             this.cbbOrder.Name = "cbbOrder";
             this.cbbOrder.Size = new System.Drawing.Size(158, 21);
@@ -359,7 +359,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(233)))), ((int)(((byte)(242)))));
-            this.ClientSize = new System.Drawing.Size(1207, 721);
+            this.ClientSize = new System.Drawing.Size(1369, 818);
             this.Controls.Add(this.btnClearDataForSuperAdmin);
             this.Controls.Add(this.cbbOrder);
             this.Controls.Add(this.btnDeleteHn);
@@ -382,6 +382,7 @@
             this.Controls.Add(this.chart1);
             this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "DashboardForm";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.DashboardForm_FormClosed);
             this.Load += new System.EventHandler(this.DashboardForm_Load);
             ((System.ComponentModel.ISupportInitialize)(this.chart1)).EndInit();

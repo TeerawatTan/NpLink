@@ -1,4 +1,5 @@
 ﻿using EndoscopicSystem.Entities;
+using EndoscopicSystem.Forms;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -28,8 +29,8 @@ namespace EndoscopicSystem.V2.Forms
             {
                 try
                 {
-                    pictureBox_Dashboard.ImageLocation = logo.HospitalLogoPath;
-                    pictureBox_Dashboard.SizeMode = PictureBoxSizeMode.StretchImage;
+                    pictureBox_logo.ImageLocation = logo.HospitalLogoPath;
+                    pictureBox_logo.SizeMode = PictureBoxSizeMode.StretchImage;
                 }
                 catch (Exception)
                 {
@@ -59,9 +60,6 @@ namespace EndoscopicSystem.V2.Forms
         private void pictureBox11_Click(object sender, EventArgs e)
         {
             this.Close();
-
-            FormLogin formLogin = new FormLogin();
-            formLogin.Show();
         }
 
         private void pictureBox_Dashboard_Click(object sender, EventArgs e)
@@ -69,8 +67,6 @@ namespace EndoscopicSystem.V2.Forms
             DashboardForm dashboardForm  = new DashboardForm(_id);
             dashboardForm.Show();
             ActiveMenuLabel(lb_Dashboard);
-
-            this.Hide();
         }
 
         private void pictureBox_Patient_Click(object sender, EventArgs e)
@@ -78,8 +74,6 @@ namespace EndoscopicSystem.V2.Forms
             PatientForm patientForm = new PatientForm(_id);
             patientForm.Show();
             ActiveMenuLabel(lb_Patient);
-
-            this.Hide();
         }
 
         private void pictureBox_EndoscopyRoom_Click(object sender, EventArgs e)
@@ -87,8 +81,6 @@ namespace EndoscopicSystem.V2.Forms
             EndoscopicForm endoscopicForm = new EndoscopicForm(_id);
             endoscopicForm.Show();
             ActiveMenuLabel(lb_EndoscopyRoom);
-
-            this.Hide();
         }
 
         private void pictureBox_SeaarchPatient_Click(object sender, EventArgs e)
@@ -96,22 +88,48 @@ namespace EndoscopicSystem.V2.Forms
             SearchPatientForm searchPatientForm = new SearchPatientForm(_id);
             searchPatientForm.Show();
             ActiveMenuLabel(lb_SearchPatient);
-
-            this.Hide();
         }
 
         private void pictureBox_Setting_Click(object sender, EventArgs e)
         {
             FormSetting formSetting = new FormSetting(_id);
             formSetting.Show();
-
-            this.Hide();
+            ActiveMenuLabel(lb_Setting);
         }
 
         private void FormHome_FormClosed(object sender, FormClosedEventArgs e)
         {
             FormLogin formLogin = new FormLogin();
             formLogin.Show();
+        }
+
+        private void pictureBox_CameraSetting_Click(object sender, EventArgs e)
+        {
+            SettingPicForm settingPicForm = new SettingPicForm(_id);
+            settingPicForm.Show();
+            ActiveMenuLabel(lb_CameraSetting);
+        }
+
+        private void pictureBox_HospitalSetting_Click(object sender, EventArgs e)
+        {
+            SettingHospitalForm settingHospitalForm = new SettingHospitalForm(_id);
+            settingHospitalForm.Show();
+            ActiveMenuLabel(lb_HospitalSetting);
+        }
+
+        private void pictureBox_PhysicainList_Click(object sender, EventArgs e)
+        {
+            ActiveMenuLabel(lb_PhysicainList);
+        }
+
+        private void pictureBox_Statistic_Click(object sender, EventArgs e)
+        {
+            ActiveMenuLabel(lb_Statistic);
+        }
+
+        private void pictureBox_PACSSetting_Click(object sender, EventArgs e)
+        {
+            ActiveMenuLabel(lb_PACSSetting);
         }
     }
 }

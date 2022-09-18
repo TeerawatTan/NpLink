@@ -150,7 +150,7 @@ namespace EndoscopicSystem
                     endo.Show();
                 }
             }
-            catch (NullReferenceException ne)
+            catch (Exception)
             {
 
             }
@@ -244,8 +244,6 @@ namespace EndoscopicSystem
 
         private void DashboardForm_FormClosed(object sender, FormClosedEventArgs e)
         {
-            V2.Forms.FormHome formHome = new V2.Forms.FormHome(UserID);
-            formHome.Show();
         }
     }
 

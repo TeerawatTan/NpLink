@@ -69,13 +69,15 @@
             // 
             // btnSave
             // 
+            this.btnSave.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
             this.btnSave.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
-            this.btnSave.Location = new System.Drawing.Point(982, 533);
+            this.btnSave.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.btnSave.Location = new System.Drawing.Point(982, 530);
             this.btnSave.Name = "btnSave";
-            this.btnSave.Size = new System.Drawing.Size(96, 46);
+            this.btnSave.Size = new System.Drawing.Size(96, 52);
             this.btnSave.TabIndex = 19;
             this.btnSave.Text = "Save";
-            this.btnSave.UseVisualStyleBackColor = true;
+            this.btnSave.UseVisualStyleBackColor = false;
             this.btnSave.Click += new System.EventHandler(this.btnSave_Click);
             // 
             // label3
@@ -98,10 +100,10 @@
             // 
             // btnSimulate
             // 
-            this.btnSimulate.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
-            this.btnSimulate.Location = new System.Drawing.Point(461, 88);
+            this.btnSimulate.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
+            this.btnSimulate.Location = new System.Drawing.Point(461, 74);
             this.btnSimulate.Name = "btnSimulate";
-            this.btnSimulate.Size = new System.Drawing.Size(96, 34);
+            this.btnSimulate.Size = new System.Drawing.Size(96, 48);
             this.btnSimulate.TabIndex = 24;
             this.btnSimulate.Text = "Crop";
             this.btnSimulate.UseVisualStyleBackColor = true;
@@ -119,6 +121,7 @@
             this.txtY.ReadOnly = true;
             this.txtY.Size = new System.Drawing.Size(62, 20);
             this.txtY.TabIndex = 25;
+            this.txtY.Visible = false;
             // 
             // txtX
             // 
@@ -128,6 +131,7 @@
             this.txtX.ReadOnly = true;
             this.txtX.Size = new System.Drawing.Size(62, 20);
             this.txtX.TabIndex = 26;
+            this.txtX.Visible = false;
             // 
             // labelX
             // 
@@ -138,6 +142,7 @@
             this.labelX.Size = new System.Drawing.Size(23, 13);
             this.labelX.TabIndex = 27;
             this.labelX.Text = "X : ";
+            this.labelX.Visible = false;
             // 
             // labelY
             // 
@@ -148,13 +153,14 @@
             this.labelY.Size = new System.Drawing.Size(23, 13);
             this.labelY.TabIndex = 28;
             this.labelY.Text = "Y : ";
+            this.labelY.Visible = false;
             // 
             // btnSelect
             // 
-            this.btnSelect.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
-            this.btnSelect.Location = new System.Drawing.Point(359, 88);
+            this.btnSelect.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
+            this.btnSelect.Location = new System.Drawing.Point(359, 74);
             this.btnSelect.Name = "btnSelect";
-            this.btnSelect.Size = new System.Drawing.Size(96, 34);
+            this.btnSelect.Size = new System.Drawing.Size(96, 48);
             this.btnSelect.TabIndex = 31;
             this.btnSelect.Text = "Select";
             this.btnSelect.UseVisualStyleBackColor = true;
@@ -162,10 +168,10 @@
             // 
             // button1
             // 
-            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
-            this.button1.Location = new System.Drawing.Point(34, 88);
+            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
+            this.button1.Location = new System.Drawing.Point(34, 74);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(110, 34);
+            this.button1.Size = new System.Drawing.Size(137, 48);
             this.button1.TabIndex = 33;
             this.button1.Text = "Browse File ...";
             this.button1.UseVisualStyleBackColor = true;
@@ -173,13 +179,15 @@
             // 
             // btnReset
             // 
+            this.btnReset.BackColor = System.Drawing.Color.White;
             this.btnReset.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
-            this.btnReset.Location = new System.Drawing.Point(880, 534);
+            this.btnReset.ForeColor = System.Drawing.Color.Black;
+            this.btnReset.Location = new System.Drawing.Point(880, 531);
             this.btnReset.Name = "btnReset";
-            this.btnReset.Size = new System.Drawing.Size(96, 46);
+            this.btnReset.Size = new System.Drawing.Size(96, 52);
             this.btnReset.TabIndex = 34;
             this.btnReset.Text = "Reset";
-            this.btnReset.UseVisualStyleBackColor = true;
+            this.btnReset.UseVisualStyleBackColor = false;
             this.btnReset.Click += new System.EventHandler(this.btnReset_Click);
             // 
             // txtPosition
@@ -251,6 +259,7 @@
             this.label1.Size = new System.Drawing.Size(47, 13);
             this.label1.TabIndex = 42;
             this.label1.Text = "Height : ";
+            this.label1.Visible = false;
             // 
             // label5
             // 
@@ -261,6 +270,7 @@
             this.label5.Size = new System.Drawing.Size(44, 13);
             this.label5.TabIndex = 41;
             this.label5.Text = "Width : ";
+            this.label5.Visible = false;
             // 
             // txbW
             // 
@@ -270,6 +280,7 @@
             this.txbW.ReadOnly = true;
             this.txbW.Size = new System.Drawing.Size(62, 20);
             this.txbW.TabIndex = 40;
+            this.txbW.Visible = false;
             // 
             // txbH
             // 
@@ -279,13 +290,14 @@
             this.txbH.ReadOnly = true;
             this.txbH.Size = new System.Drawing.Size(62, 20);
             this.txbH.TabIndex = 39;
+            this.txbH.Visible = false;
             // 
             // SettingPicForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(233)))), ((int)(((byte)(242)))));
-            this.ClientSize = new System.Drawing.Size(1212, 739);
+            this.ClientSize = new System.Drawing.Size(1212, 663);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.txbW);
@@ -310,7 +322,8 @@
             this.Controls.Add(this.label2);
             this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "SettingPicForm";
-            this.Text = "SettingPicForm";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
+            this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.SettingPicForm_FormClosed);
             this.Load += new System.EventHandler(this.SettingPicForm_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();

@@ -52,7 +52,7 @@ namespace EndoscopicSystem.V2.Forms
             this.lb_Dashboard = new System.Windows.Forms.Label();
             this.pictureBox_Dashboard = new System.Windows.Forms.PictureBox();
             this.pictureBox11 = new System.Windows.Forms.PictureBox();
-            this.pictureBox12 = new System.Windows.Forms.PictureBox();
+            this.pictureBox_logo = new System.Windows.Forms.PictureBox();
             this.pictureBox7 = new System.Windows.Forms.PictureBox();
             this.label7 = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
@@ -67,7 +67,7 @@ namespace EndoscopicSystem.V2.Forms
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox_Patient)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox_Dashboard)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox11)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox12)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox_logo)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).BeginInit();
             this.SuspendLayout();
             // 
@@ -113,6 +113,7 @@ namespace EndoscopicSystem.V2.Forms
             this.pictureBox_PACSSetting.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox_PACSSetting.TabIndex = 22;
             this.pictureBox_PACSSetting.TabStop = false;
+            this.pictureBox_PACSSetting.Click += new System.EventHandler(this.pictureBox_PACSSetting_Click);
             // 
             // pictureBox_Statistic
             // 
@@ -125,6 +126,7 @@ namespace EndoscopicSystem.V2.Forms
             this.pictureBox_Statistic.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox_Statistic.TabIndex = 21;
             this.pictureBox_Statistic.TabStop = false;
+            this.pictureBox_Statistic.Click += new System.EventHandler(this.pictureBox_Statistic_Click);
             // 
             // lb_PACSSetting
             // 
@@ -167,6 +169,7 @@ namespace EndoscopicSystem.V2.Forms
             this.pictureBox_HospitalSetting.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox_HospitalSetting.TabIndex = 15;
             this.pictureBox_HospitalSetting.TabStop = false;
+            this.pictureBox_HospitalSetting.Click += new System.EventHandler(this.pictureBox_HospitalSetting_Click);
             // 
             // lb_CameraSetting
             // 
@@ -189,6 +192,7 @@ namespace EndoscopicSystem.V2.Forms
             this.pictureBox_CameraSetting.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox_CameraSetting.TabIndex = 13;
             this.pictureBox_CameraSetting.TabStop = false;
+            this.pictureBox_CameraSetting.Click += new System.EventHandler(this.pictureBox_CameraSetting_Click);
             // 
             // lb_PhysicainList
             // 
@@ -211,6 +215,7 @@ namespace EndoscopicSystem.V2.Forms
             this.pictureBox_PhysicainList.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox_PhysicainList.TabIndex = 11;
             this.pictureBox_PhysicainList.TabStop = false;
+            this.pictureBox_PhysicainList.Click += new System.EventHandler(this.pictureBox_PhysicainList_Click);
             // 
             // lb_Setting
             // 
@@ -340,16 +345,16 @@ namespace EndoscopicSystem.V2.Forms
             this.pictureBox11.TabStop = false;
             this.pictureBox11.Click += new System.EventHandler(this.pictureBox11_Click);
             // 
-            // pictureBox12
+            // pictureBox_logo
             // 
-            this.pictureBox12.BackColor = System.Drawing.Color.Transparent;
-            this.pictureBox12.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox12.Image")));
-            this.pictureBox12.Location = new System.Drawing.Point(1, 0);
-            this.pictureBox12.Name = "pictureBox12";
-            this.pictureBox12.Size = new System.Drawing.Size(237, 186);
-            this.pictureBox12.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox12.TabIndex = 2;
-            this.pictureBox12.TabStop = false;
+            this.pictureBox_logo.BackColor = System.Drawing.Color.Transparent;
+            this.pictureBox_logo.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox_logo.Image")));
+            this.pictureBox_logo.Location = new System.Drawing.Point(1, 0);
+            this.pictureBox_logo.Name = "pictureBox_logo";
+            this.pictureBox_logo.Size = new System.Drawing.Size(237, 186);
+            this.pictureBox_logo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox_logo.TabIndex = 2;
+            this.pictureBox_logo.TabStop = false;
             // 
             // pictureBox7
             // 
@@ -381,7 +386,7 @@ namespace EndoscopicSystem.V2.Forms
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(1116, 701);
-            this.Controls.Add(this.pictureBox12);
+            this.Controls.Add(this.pictureBox_logo);
             this.Controls.Add(this.pictureBox11);
             this.Controls.Add(this.panel1);
             this.MaximizeBox = false;
@@ -403,7 +408,7 @@ namespace EndoscopicSystem.V2.Forms
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox_Patient)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox_Dashboard)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox11)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox12)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox_logo)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).EndInit();
             this.ResumeLayout(false);
 
@@ -433,7 +438,7 @@ namespace EndoscopicSystem.V2.Forms
         private System.Windows.Forms.PictureBox pictureBox_Statistic;
         private System.Windows.Forms.PictureBox pictureBox_PACSSetting;
         private System.Windows.Forms.PictureBox pictureBox11;
-        private System.Windows.Forms.PictureBox pictureBox12;
+        private System.Windows.Forms.PictureBox pictureBox_logo;
         private System.Windows.Forms.PictureBox pictureBox7;
         private System.Windows.Forms.Label label7;
     }

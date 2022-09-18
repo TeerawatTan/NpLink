@@ -53,9 +53,9 @@ namespace EndoscopicSystem.V2.Forms
             this.panel1.Controls.Add(this.txbUsername);
             this.panel1.Controls.Add(this.label2);
             this.panel1.Controls.Add(this.label1);
-            this.panel1.Location = new System.Drawing.Point(12, 30);
+            this.panel1.Location = new System.Drawing.Point(50, 21);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(331, 404);
+            this.panel1.Size = new System.Drawing.Size(331, 413);
             this.panel1.TabIndex = 0;
             // 
             // pictureBox1
@@ -137,7 +137,7 @@ namespace EndoscopicSystem.V2.Forms
             this.label3.BackColor = System.Drawing.Color.Transparent;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
             this.label3.ForeColor = System.Drawing.Color.DarkGray;
-            this.label3.Location = new System.Drawing.Point(569, 479);
+            this.label3.Location = new System.Drawing.Point(847, 681);
             this.label3.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(295, 17);
@@ -150,7 +150,7 @@ namespace EndoscopicSystem.V2.Forms
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.ClientSize = new System.Drawing.Size(873, 505);
+            this.ClientSize = new System.Drawing.Size(1151, 707);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.panel1);
             this.MaximizeBox = false;
