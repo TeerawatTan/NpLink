@@ -544,11 +544,29 @@
     <Compile Include="V2\Forms\FormHome.Designer.cs">
       <DependentUpon>FormHome.cs</DependentUpon>
     </Compile>
+    <Compile Include="V2\Forms\FormLive.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="V2\Forms\FormLive.Designer.cs">
+      <DependentUpon>FormLive.cs</DependentUpon>
+    </Compile>
     <Compile Include="V2\Forms\FormLogin.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="V2\Forms\FormLogin.Designer.cs">
       <DependentUpon>FormLogin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="V2\Forms\FormPatientConfirm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="V2\Forms\FormPatientConfirm.Designer.cs">
+      <DependentUpon>FormPatientConfirm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="V2\Forms\FormPreviewReport.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="V2\Forms\FormPreviewReport.Designer.cs">
+      <DependentUpon>FormPreviewReport.cs</DependentUpon>
     </Compile>
     <Compile Include="V2\Forms\FormSetting.cs">
       <SubType>Form</SubType>
@@ -670,8 +688,17 @@
     <EmbeddedResource Include="V2\Forms\FormHome.resx">
       <DependentUpon>FormHome.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="V2\Forms\FormLive.resx">
+      <DependentUpon>FormLive.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="V2\Forms\FormLogin.resx">
       <DependentUpon>FormLogin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="V2\Forms\FormPatientConfirm.resx">
+      <DependentUpon>FormPatientConfirm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="V2\Forms\FormPreviewReport.resx">
+      <DependentUpon>FormPreviewReport.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="V2\Forms\FormSetting.resx">
       <DependentUpon>FormSetting.cs</DependentUpon>

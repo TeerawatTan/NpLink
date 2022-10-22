@@ -3311,9 +3311,5 @@ namespace EndoscopicSystem
             cbbFiLES.SelectedIndex = 0;
         }
         #endregion
-
-        private void EndoscopicForm_FormClosed(object sender, FormClosedEventArgs e)
-        {
-        }
     }
 }

@@ -72,11 +72,5 @@ namespace EndoscopicSystem.V2.Forms
             OpenChildForm(new NurseForm(_id));
             ActiveMenuButton(sender);
         }
-
-        private void FormSetting_FormClosed(object sender, FormClosedEventArgs e)
-        {
-            FormHome formHome = new FormHome(_id);
-            formHome.Show();
-        }
     }
 }

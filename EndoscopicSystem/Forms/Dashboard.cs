@@ -146,8 +146,11 @@ namespace EndoscopicSystem
                     hnNo = txtHNNo.Text;
                     procedureId = Convert.ToInt32(txtProcedureId.Text);
 
-                    EndoscopicForm endo = new EndoscopicForm(UserID, hnNo, procedureId, endoscopicId, appointmentId);
-                    endo.Show();
+                    //EndoscopicForm endo = new EndoscopicForm(UserID, hnNo, procedureId, endoscopicId, appointmentId);
+                    //endo.Show();
+
+                    V2.Forms.FormPatientConfirm formPatientConfirm = new V2.Forms.FormPatientConfirm(UserID, hnNo, procedureId, endoscopicId, appointmentId);
+                    formPatientConfirm.ShowDialog();
                 }
             }
             catch (Exception)

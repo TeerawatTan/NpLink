@@ -72,7 +72,7 @@
             this.btnSave.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
             this.btnSave.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
             this.btnSave.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.btnSave.Location = new System.Drawing.Point(982, 530);
+            this.btnSave.Location = new System.Drawing.Point(985, 646);
             this.btnSave.Name = "btnSave";
             this.btnSave.Size = new System.Drawing.Size(96, 52);
             this.btnSave.TabIndex = 19;
@@ -115,7 +115,7 @@
             // 
             // txtY
             // 
-            this.txtY.Location = new System.Drawing.Point(497, 531);
+            this.txtY.Location = new System.Drawing.Point(500, 647);
             this.txtY.Margin = new System.Windows.Forms.Padding(2);
             this.txtY.Name = "txtY";
             this.txtY.ReadOnly = true;
@@ -125,7 +125,7 @@
             // 
             // txtX
             // 
-            this.txtX.Location = new System.Drawing.Point(405, 531);
+            this.txtX.Location = new System.Drawing.Point(408, 647);
             this.txtX.Margin = new System.Windows.Forms.Padding(2);
             this.txtX.Name = "txtX";
             this.txtX.ReadOnly = true;
@@ -136,7 +136,7 @@
             // labelX
             // 
             this.labelX.AutoSize = true;
-            this.labelX.Location = new System.Drawing.Point(379, 534);
+            this.labelX.Location = new System.Drawing.Point(382, 650);
             this.labelX.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.labelX.Name = "labelX";
             this.labelX.Size = new System.Drawing.Size(23, 13);
@@ -147,7 +147,7 @@
             // labelY
             // 
             this.labelY.AutoSize = true;
-            this.labelY.Location = new System.Drawing.Point(471, 534);
+            this.labelY.Location = new System.Drawing.Point(474, 650);
             this.labelY.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.labelY.Name = "labelY";
             this.labelY.Size = new System.Drawing.Size(23, 13);
@@ -182,7 +182,7 @@
             this.btnReset.BackColor = System.Drawing.Color.White;
             this.btnReset.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
             this.btnReset.ForeColor = System.Drawing.Color.Black;
-            this.btnReset.Location = new System.Drawing.Point(880, 531);
+            this.btnReset.Location = new System.Drawing.Point(883, 647);
             this.btnReset.Name = "btnReset";
             this.btnReset.Size = new System.Drawing.Size(96, 52);
             this.btnReset.TabIndex = 34;
@@ -192,7 +192,7 @@
             // 
             // txtPosition
             // 
-            this.txtPosition.Location = new System.Drawing.Point(572, 532);
+            this.txtPosition.Location = new System.Drawing.Point(575, 648);
             this.txtPosition.Margin = new System.Windows.Forms.Padding(2);
             this.txtPosition.Name = "txtPosition";
             this.txtPosition.ReadOnly = true;
@@ -202,7 +202,7 @@
             // 
             // txtAspectRatio
             // 
-            this.txtAspectRatio.Location = new System.Drawing.Point(595, 532);
+            this.txtAspectRatio.Location = new System.Drawing.Point(598, 648);
             this.txtAspectRatio.Margin = new System.Windows.Forms.Padding(2);
             this.txtAspectRatio.Name = "txtAspectRatio";
             this.txtAspectRatio.ReadOnly = true;
@@ -212,7 +212,7 @@
             // 
             // txtCrpY
             // 
-            this.txtCrpY.Location = new System.Drawing.Point(686, 531);
+            this.txtCrpY.Location = new System.Drawing.Point(689, 647);
             this.txtCrpY.Margin = new System.Windows.Forms.Padding(2);
             this.txtCrpY.Name = "txtCrpY";
             this.txtCrpY.ReadOnly = true;
@@ -222,7 +222,7 @@
             // 
             // txtCrpX
             // 
-            this.txtCrpX.Location = new System.Drawing.Point(653, 531);
+            this.txtCrpX.Location = new System.Drawing.Point(656, 647);
             this.txtCrpX.Margin = new System.Windows.Forms.Padding(2);
             this.txtCrpX.Name = "txtCrpX";
             this.txtCrpX.ReadOnly = true;
@@ -253,7 +253,7 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(355, 597);
+            this.label1.Location = new System.Drawing.Point(358, 713);
             this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(47, 13);
@@ -264,7 +264,7 @@
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(358, 566);
+            this.label5.Location = new System.Drawing.Point(361, 682);
             this.label5.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(44, 13);
@@ -274,7 +274,7 @@
             // 
             // txbW
             // 
-            this.txbW.Location = new System.Drawing.Point(405, 563);
+            this.txbW.Location = new System.Drawing.Point(408, 679);
             this.txbW.Margin = new System.Windows.Forms.Padding(2);
             this.txbW.Name = "txbW";
             this.txbW.ReadOnly = true;
@@ -284,7 +284,7 @@
             // 
             // txbH
             // 
-            this.txbH.Location = new System.Drawing.Point(405, 594);
+            this.txbH.Location = new System.Drawing.Point(408, 710);
             this.txbH.Margin = new System.Windows.Forms.Padding(2);
             this.txbH.Name = "txbH";
             this.txbH.ReadOnly = true;
@@ -297,7 +297,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(233)))), ((int)(((byte)(242)))));
-            this.ClientSize = new System.Drawing.Size(1212, 663);
+            this.ClientSize = new System.Drawing.Size(1312, 744);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.txbW);

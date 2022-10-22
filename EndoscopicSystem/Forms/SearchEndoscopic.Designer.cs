@@ -45,36 +45,39 @@
             this.cbbProcedureList.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cbbProcedureList.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
             this.cbbProcedureList.FormattingEnabled = true;
-            this.cbbProcedureList.Location = new System.Drawing.Point(585, 31);
+            this.cbbProcedureList.Location = new System.Drawing.Point(439, 25);
+            this.cbbProcedureList.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.cbbProcedureList.Name = "cbbProcedureList";
-            this.cbbProcedureList.Size = new System.Drawing.Size(441, 28);
+            this.cbbProcedureList.Size = new System.Drawing.Size(332, 24);
             this.cbbProcedureList.TabIndex = 6;
             // 
             // label1
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
-            this.label1.Location = new System.Drawing.Point(41, 36);
+            this.label1.Location = new System.Drawing.Point(31, 29);
+            this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(44, 20);
+            this.label1.Size = new System.Drawing.Size(36, 17);
             this.label1.TabIndex = 0;
             this.label1.Text = "HN :";
             // 
             // txtHN
             // 
             this.txtHN.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
-            this.txtHN.Location = new System.Drawing.Point(107, 33);
-            this.txtHN.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.txtHN.Location = new System.Drawing.Point(80, 27);
+            this.txtHN.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.txtHN.Name = "txtHN";
-            this.txtHN.Size = new System.Drawing.Size(319, 26);
+            this.txtHN.Size = new System.Drawing.Size(240, 23);
             this.txtHN.TabIndex = 1;
             // 
             // btnSearch
             // 
             this.btnSearch.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
-            this.btnSearch.Location = new System.Drawing.Point(1088, 29);
+            this.btnSearch.Location = new System.Drawing.Point(816, 24);
+            this.btnSearch.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btnSearch.Name = "btnSearch";
-            this.btnSearch.Size = new System.Drawing.Size(116, 34);
+            this.btnSearch.Size = new System.Drawing.Size(87, 28);
             this.btnSearch.TabIndex = 3;
             this.btnSearch.Text = "Search";
             this.btnSearch.UseVisualStyleBackColor = true;
@@ -84,9 +87,10 @@
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
-            this.label4.Location = new System.Drawing.Point(468, 36);
+            this.label4.Location = new System.Drawing.Point(351, 29);
+            this.label4.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(96, 20);
+            this.label4.Size = new System.Drawing.Size(82, 17);
             this.label4.TabIndex = 0;
             this.label4.Text = "Procedure :";
             // 
@@ -101,9 +105,10 @@
             this.panel1.Controls.Add(this.txtHN);
             this.panel1.Controls.Add(this.btnSearch);
             this.panel1.Controls.Add(this.label4);
-            this.panel1.Location = new System.Drawing.Point(12, 57);
+            this.panel1.Location = new System.Drawing.Point(9, 46);
+            this.panel1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1249, 95);
+            this.panel1.Size = new System.Drawing.Size(969, 78);
             this.panel1.TabIndex = 9;
             // 
             // gridEndoscopicList
@@ -115,12 +120,13 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.gridEndoscopicList.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.gridEndoscopicList.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.gridEndoscopicList.Location = new System.Drawing.Point(12, 188);
+            this.gridEndoscopicList.Location = new System.Drawing.Point(9, 153);
+            this.gridEndoscopicList.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.gridEndoscopicList.Name = "gridEndoscopicList";
             this.gridEndoscopicList.ReadOnly = true;
             this.gridEndoscopicList.RowHeadersWidth = 51;
             this.gridEndoscopicList.RowTemplate.Height = 24;
-            this.gridEndoscopicList.Size = new System.Drawing.Size(1249, 458);
+            this.gridEndoscopicList.Size = new System.Drawing.Size(969, 583);
             this.gridEndoscopicList.TabIndex = 7;
             this.gridEndoscopicList.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.gridEndoscopicList_CellDoubleClick);
             // 
@@ -128,22 +134,25 @@
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
-            this.label2.Location = new System.Drawing.Point(12, 11);
+            this.label2.Location = new System.Drawing.Point(9, 9);
+            this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(265, 31);
+            this.label2.Size = new System.Drawing.Size(217, 26);
             this.label2.TabIndex = 8;
             this.label2.Text = "Search Endoscopic";
             // 
             // SearchEndoscopic
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(233)))), ((int)(((byte)(242)))));
-            this.ClientSize = new System.Drawing.Size(1273, 656);
+            this.ClientSize = new System.Drawing.Size(987, 744);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.gridEndoscopicList);
             this.Controls.Add(this.label2);
+            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.Name = "SearchEndoscopic";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Load += new System.EventHandler(this.SearchEndoscopic_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();

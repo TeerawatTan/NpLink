@@ -42,10 +42,10 @@ namespace EndoscopicSystem.V2.Forms
             this.label7 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.label9 = new System.Windows.Forms.Label();
-            this.label10 = new System.Windows.Forms.Label();
-            this.label11 = new System.Windows.Forms.Label();
-            this.label12 = new System.Windows.Forms.Label();
+            this.lbNurseList = new System.Windows.Forms.Label();
+            this.lbDoctorList = new System.Windows.Forms.Label();
+            this.lbHn = new System.Windows.Forms.Label();
+            this.lbName = new System.Windows.Forms.Label();
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -93,7 +93,7 @@ namespace EndoscopicSystem.V2.Forms
             // 
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
-            this.label5.Location = new System.Drawing.Point(20, 207);
+            this.label5.Location = new System.Drawing.Point(20, 205);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(88, 25);
             this.label5.TabIndex = 4;
@@ -120,6 +120,7 @@ namespace EndoscopicSystem.V2.Forms
             this.btnOk.TabIndex = 6;
             this.btnOk.Text = "OK";
             this.btnOk.UseVisualStyleBackColor = false;
+            this.btnOk.Click += new System.EventHandler(this.btnOk_Click);
             // 
             // button1
             // 
@@ -132,6 +133,7 @@ namespace EndoscopicSystem.V2.Forms
             this.button1.TabIndex = 7;
             this.button1.Text = "Cancel";
             this.button1.UseVisualStyleBackColor = false;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // textBox1
             // 
@@ -173,10 +175,10 @@ namespace EndoscopicSystem.V2.Forms
             // 
             // groupBox1
             // 
-            this.groupBox1.Controls.Add(this.label12);
-            this.groupBox1.Controls.Add(this.label11);
-            this.groupBox1.Controls.Add(this.label10);
-            this.groupBox1.Controls.Add(this.label9);
+            this.groupBox1.Controls.Add(this.lbNurseList);
+            this.groupBox1.Controls.Add(this.lbDoctorList);
+            this.groupBox1.Controls.Add(this.lbHn);
+            this.groupBox1.Controls.Add(this.lbName);
             this.groupBox1.Controls.Add(this.label5);
             this.groupBox1.Controls.Add(this.label4);
             this.groupBox1.Controls.Add(this.label3);
@@ -187,45 +189,45 @@ namespace EndoscopicSystem.V2.Forms
             this.groupBox1.TabIndex = 12;
             this.groupBox1.TabStop = false;
             // 
-            // label9
+            // lbNurseList
             // 
-            this.label9.AutoSize = true;
-            this.label9.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
-            this.label9.Location = new System.Drawing.Point(133, 50);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(48, 25);
-            this.label9.TabIndex = 5;
-            this.label9.Text = "......";
+            this.lbNurseList.AutoSize = true;
+            this.lbNurseList.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
+            this.lbNurseList.Location = new System.Drawing.Point(133, 205);
+            this.lbNurseList.Name = "lbNurseList";
+            this.lbNurseList.Size = new System.Drawing.Size(48, 25);
+            this.lbNurseList.TabIndex = 8;
+            this.lbNurseList.Text = "......";
             // 
-            // label10
+            // lbDoctorList
             // 
-            this.label10.AutoSize = true;
-            this.label10.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
-            this.label10.Location = new System.Drawing.Point(133, 98);
-            this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(48, 25);
-            this.label10.TabIndex = 6;
-            this.label10.Text = "......";
+            this.lbDoctorList.AutoSize = true;
+            this.lbDoctorList.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
+            this.lbDoctorList.Location = new System.Drawing.Point(133, 154);
+            this.lbDoctorList.Name = "lbDoctorList";
+            this.lbDoctorList.Size = new System.Drawing.Size(48, 25);
+            this.lbDoctorList.TabIndex = 7;
+            this.lbDoctorList.Text = "......";
             // 
-            // label11
+            // lbHn
             // 
-            this.label11.AutoSize = true;
-            this.label11.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
-            this.label11.Location = new System.Drawing.Point(133, 154);
-            this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(48, 25);
-            this.label11.TabIndex = 7;
-            this.label11.Text = "......";
+            this.lbHn.AutoSize = true;
+            this.lbHn.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
+            this.lbHn.Location = new System.Drawing.Point(133, 98);
+            this.lbHn.Name = "lbHn";
+            this.lbHn.Size = new System.Drawing.Size(48, 25);
+            this.lbHn.TabIndex = 6;
+            this.lbHn.Text = "......";
             // 
-            // label12
+            // lbName
             // 
-            this.label12.AutoSize = true;
-            this.label12.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
-            this.label12.Location = new System.Drawing.Point(133, 207);
-            this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(48, 25);
-            this.label12.TabIndex = 8;
-            this.label12.Text = "......";
+            this.lbName.AutoSize = true;
+            this.lbName.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
+            this.lbName.Location = new System.Drawing.Point(133, 50);
+            this.lbName.Name = "lbName";
+            this.lbName.Size = new System.Drawing.Size(48, 25);
+            this.lbName.TabIndex = 5;
+            this.lbName.Text = "......";
             // 
             // FormPatientConfirm
             // 
@@ -245,6 +247,7 @@ namespace EndoscopicSystem.V2.Forms
             this.MinimizeBox = false;
             this.Name = "FormPatientConfirm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
+            this.Load += new System.EventHandler(this.FormPatientConfirm_Load);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             this.ResumeLayout(false);
@@ -267,9 +270,9 @@ namespace EndoscopicSystem.V2.Forms
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.GroupBox groupBox1;
-        private System.Windows.Forms.Label label12;
-        private System.Windows.Forms.Label label11;
-        private System.Windows.Forms.Label label10;
-        private System.Windows.Forms.Label label9;
+        private System.Windows.Forms.Label lbNurseList;
+        private System.Windows.Forms.Label lbDoctorList;
+        private System.Windows.Forms.Label lbHn;
+        private System.Windows.Forms.Label lbName;
     }
 }

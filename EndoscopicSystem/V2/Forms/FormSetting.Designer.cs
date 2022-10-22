@@ -45,7 +45,7 @@ namespace EndoscopicSystem.V2.Forms
             this.panelChild.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panelChild.Location = new System.Drawing.Point(258, 0);
             this.panelChild.Name = "panelChild";
-            this.panelChild.Size = new System.Drawing.Size(958, 810);
+            this.panelChild.Size = new System.Drawing.Size(1167, 810);
             this.panelChild.TabIndex = 10;
             // 
             // panel1
@@ -119,13 +119,12 @@ namespace EndoscopicSystem.V2.Forms
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1216, 810);
+            this.ClientSize = new System.Drawing.Size(1425, 810);
             this.Controls.Add(this.panelChild);
             this.Controls.Add(this.panelSidebar);
             this.Name = "FormSetting";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "FormSetting";
-            this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
-            this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.FormSetting_FormClosed);
             this.Load += new System.EventHandler(this.FormSetting_Load);
             this.panel1.ResumeLayout(false);
             this.panelSidebar.ResumeLayout(false);

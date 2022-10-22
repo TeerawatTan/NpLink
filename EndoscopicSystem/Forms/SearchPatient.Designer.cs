@@ -41,8 +41,8 @@
             this.label2 = new System.Windows.Forms.Label();
             this.gridPatient = new System.Windows.Forms.DataGridView();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.label6 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
+            this.label6 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.gridPatient)).BeginInit();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
@@ -183,7 +183,7 @@
             this.gridPatient.ReadOnly = true;
             this.gridPatient.RowHeadersWidth = 51;
             this.gridPatient.RowTemplate.Height = 24;
-            this.gridPatient.Size = new System.Drawing.Size(1146, 277);
+            this.gridPatient.Size = new System.Drawing.Size(1146, 561);
             this.gridPatient.TabIndex = 0;
             this.gridPatient.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.gridPatient_CellDoubleClick);
             // 
@@ -211,17 +211,6 @@
             this.panel1.Size = new System.Drawing.Size(1147, 183);
             this.panel1.TabIndex = 6;
             // 
-            // label6
-            // 
-            this.label6.AutoSize = true;
-            this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
-            this.label6.Location = new System.Drawing.Point(603, 23);
-            this.label6.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(44, 20);
-            this.label6.TabIndex = 7;
-            this.label6.Text = "Start";
-            // 
             // label7
             // 
             this.label7.AutoSize = true;
@@ -233,19 +222,29 @@
             this.label7.TabIndex = 8;
             this.label7.Text = "End";
             // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
+            this.label6.Location = new System.Drawing.Point(603, 23);
+            this.label6.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(44, 20);
+            this.label6.TabIndex = 7;
+            this.label6.Text = "Start";
+            // 
             // SearchPatientForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(233)))), ((int)(((byte)(242)))));
-            this.ClientSize = new System.Drawing.Size(1164, 533);
+            this.ClientSize = new System.Drawing.Size(1164, 817);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.gridPatient);
             this.Controls.Add(this.label2);
             this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "SearchPatientForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.SearchPatientForm_FormClosed);
             this.Load += new System.EventHandler(this.SearchPatientForm_Load);
             ((System.ComponentModel.ISupportInitialize)(this.gridPatient)).EndInit();

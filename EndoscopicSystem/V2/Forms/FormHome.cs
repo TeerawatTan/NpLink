@@ -65,35 +65,35 @@ namespace EndoscopicSystem.V2.Forms
         private void pictureBox_Dashboard_Click(object sender, EventArgs e)
         {
             DashboardForm dashboardForm  = new DashboardForm(_id);
-            dashboardForm.Show();
+            dashboardForm.ShowDialog();
             ActiveMenuLabel(lb_Dashboard);
         }
 
         private void pictureBox_Patient_Click(object sender, EventArgs e)
         {
             PatientForm patientForm = new PatientForm(_id);
-            patientForm.Show();
+            patientForm.ShowDialog();
             ActiveMenuLabel(lb_Patient);
         }
 
         private void pictureBox_EndoscopyRoom_Click(object sender, EventArgs e)
         {
-            EndoscopicForm endoscopicForm = new EndoscopicForm(_id);
-            endoscopicForm.Show();
+            FormLive formLive = new FormLive(_id);
+            formLive.ShowDialog();
             ActiveMenuLabel(lb_EndoscopyRoom);
         }
 
         private void pictureBox_SeaarchPatient_Click(object sender, EventArgs e)
         {
             SearchPatientForm searchPatientForm = new SearchPatientForm(_id);
-            searchPatientForm.Show();
+            searchPatientForm.ShowDialog();
             ActiveMenuLabel(lb_SearchPatient);
         }
 
         private void pictureBox_Setting_Click(object sender, EventArgs e)
         {
             FormSetting formSetting = new FormSetting(_id);
-            formSetting.Show();
+            formSetting.ShowDialog();
             ActiveMenuLabel(lb_Setting);
         }
 
@@ -106,14 +106,14 @@ namespace EndoscopicSystem.V2.Forms
         private void pictureBox_CameraSetting_Click(object sender, EventArgs e)
         {
             SettingPicForm settingPicForm = new SettingPicForm(_id);
-            settingPicForm.Show();
+            settingPicForm.ShowDialog();
             ActiveMenuLabel(lb_CameraSetting);
         }
 
         private void pictureBox_HospitalSetting_Click(object sender, EventArgs e)
         {
             SettingHospitalForm settingHospitalForm = new SettingHospitalForm(_id);
-            settingHospitalForm.Show();
+            settingHospitalForm.ShowDialog();
             ActiveMenuLabel(lb_HospitalSetting);
         }
 
