@@ -81,6 +81,15 @@ namespace EndoscopicSystem.V2.Forms
 
         private void FormLive_Load(object sender, EventArgs e)
         {
+            if (procedureId > 0 && appointmentId > 0)
+            {
+                btnNext.Visible = true;
+            }
+            else
+            {
+                btnNext.Visible = false;
+            }
+
             t = new System.Timers.Timer();
 
             var v = db.Users.Where(x => x.Id == UserID).Select(x => new { x.AspectRatioID, x.PositionCrop }).FirstOrDefault();
@@ -128,20 +137,27 @@ namespace EndoscopicSystem.V2.Forms
                 }
             }
         }
-        
+
         private void btnNext_Click(object sender, EventArgs e)
         {
-            FormPreviewReport formPreviewReport = new FormPreviewReport();
-            formPreviewReport.ShowDialog();
+            if (procedureId > 0 && appointmentId > 0)
+            {
+                FormPreviewReport formPreviewReport = new FormPreviewReport(UserID, hnNo, procedureId.Value, appointmentId);
+                formPreviewReport.ShowDialog();
+            }
+            else
+            {
+                return;
+            }
         }
-        
+
         private void EnableConnectionControls(bool enable)
         {
             devicesCombo.Enabled = enable;
             connectButton.Enabled = enable;
             disconnectButton.Enabled = !enable;
         }
-        
+
         private void connectButton_Click(object sender, EventArgs e)
         {
             try
@@ -167,7 +183,7 @@ namespace EndoscopicSystem.V2.Forms
                 return;
             }
         }
-        
+
         private void disconnectButton_Click(object sender, EventArgs e)
         {
             btnStop_Click(sender, e);
@@ -177,7 +193,7 @@ namespace EndoscopicSystem.V2.Forms
             btnStop.Enabled = false;
             btnPause.Enabled = false;
         }
-        
+
         private void Disconnect()
         {
             if (videoSourcePlayer.VideoSource != null)
@@ -198,7 +214,7 @@ namespace EndoscopicSystem.V2.Forms
                 recordEndDate = DateTime.Now;
             }
         }
-        
+
         private void CaptureButton_Click(object sender, EventArgs e)
         {
             if ((_videoCaptureDevice != null) && (_videoCaptureDevice.ProvideSnapshots))
@@ -209,9 +225,9 @@ namespace EndoscopicSystem.V2.Forms
                 soundCapture.Play();
             }
         }
-        
+
         public delegate void CaptureSnapshotManifast(Bitmap image);
-        
+
         public async void CaptureSnapshot(Bitmap image)
         {
             try
@@ -276,7 +292,7 @@ namespace EndoscopicSystem.V2.Forms
                 throw;
             }
         }
-        
+
         private async Task<Image> resizeImg(Image img, int x, int y, int width, int height, bool isFullScreen)
         {
             Bitmap reImg = await ResizeImgToPictureBox(img, pictureBoxSnapshot.Width, pictureBoxSnapshot.Height);
@@ -299,7 +315,7 @@ namespace EndoscopicSystem.V2.Forms
 
             return (Image)crpImg;
         }
-        
+
         private async Task<Bitmap> ResizeImgToPictureBox(Image image, int width, int height)
         {
             var destRect = new Rectangle(0, 0, width, height);
@@ -331,7 +347,7 @@ namespace EndoscopicSystem.V2.Forms
             }
             return await Task.FromResult(destImage);
         }
-        
+
         private void btn_EnabledChanged(object sender, EventArgs e)
         {
             Button btn = (Button)sender;
@@ -339,7 +355,7 @@ namespace EndoscopicSystem.V2.Forms
             btn.BackColor = Color.Gainsboro;
 
         }
-        
+
         private void btnPause_Click(object sender, EventArgs e)
         {
             _isPause = !_isPause;
@@ -358,7 +374,7 @@ namespace EndoscopicSystem.V2.Forms
                 btnPause.Text = "Pause";
             }
         }
-        
+
         private void btnRecord_Click(object sender, EventArgs e)
         {
             _captureDeviceForm = new VideoCaptureDeviceForm();

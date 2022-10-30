@@ -568,6 +568,12 @@
     <Compile Include="V2\Forms\FormPreviewReport.Designer.cs">
       <DependentUpon>FormPreviewReport.cs</DependentUpon>
     </Compile>
+    <Compile Include="V2\Forms\FormProcedure.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="V2\Forms\FormProcedure.Designer.cs">
+      <DependentUpon>FormProcedure.cs</DependentUpon>
+    </Compile>
     <Compile Include="V2\Forms\FormSetting.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -699,6 +705,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="V2\Forms\FormPreviewReport.resx">
       <DependentUpon>FormPreviewReport.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="V2\Forms\FormProcedure.resx">
+      <DependentUpon>FormProcedure.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="V2\Forms\FormSetting.resx">
       <DependentUpon>FormSetting.cs</DependentUpon>

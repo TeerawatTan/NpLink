@@ -46,6 +46,7 @@ namespace EndoscopicSystem.V2.Forms
             this.connectButton = new System.Windows.Forms.Button();
             this.devicesCombo = new System.Windows.Forms.ComboBox();
             this.listView1 = new System.Windows.Forms.ListView();
+            this.ImageName = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.label1 = new System.Windows.Forms.Label();
             this.lbTime = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
@@ -56,7 +57,6 @@ namespace EndoscopicSystem.V2.Forms
             this.btnRecord = new System.Windows.Forms.Button();
             this.btnPause = new System.Windows.Forms.Button();
             this.pictureBoxSnapshot = new System.Windows.Forms.PictureBox();
-            this.ImageName = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxRecording)).BeginInit();
@@ -270,6 +270,10 @@ namespace EndoscopicSystem.V2.Forms
             this.listView1.UseCompatibleStateImageBehavior = false;
             this.listView1.View = System.Windows.Forms.View.List;
             // 
+            // ImageName
+            // 
+            this.ImageName.Width = 200;
+            // 
             // label1
             // 
             this.label1.AutoSize = true;
@@ -406,16 +410,11 @@ namespace EndoscopicSystem.V2.Forms
             this.pictureBoxSnapshot.TabStop = false;
             this.pictureBoxSnapshot.Visible = false;
             // 
-            // ImageName
-            // 
-            this.ImageName.Width = 200;
-            // 
             // FormLive
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1373, 860);
-            this.Controls.Add(this.pictureBoxSnapshot);
             this.Controls.Add(this.btnPause);
             this.Controls.Add(this.btnStop);
             this.Controls.Add(this.btnRecord);
@@ -429,6 +428,7 @@ namespace EndoscopicSystem.V2.Forms
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.videoSourcePlayer);
+            this.Controls.Add(this.pictureBoxSnapshot);
             this.Name = "FormLive";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.FormLive_FormClosing);

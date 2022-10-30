@@ -44,29 +44,28 @@ namespace EndoscopicSystem.V2.Forms
             // 
             // panel1
             // 
-            this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(80)))), ((int)(((byte)(139)))));
+            this.panel1.BackColor = System.Drawing.Color.Transparent;
             this.panel1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.panel1.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.panel1.Controls.Add(this.pictureBox1);
             this.panel1.Controls.Add(this.btnLogin);
             this.panel1.Controls.Add(this.txbPassword);
             this.panel1.Controls.Add(this.txbUsername);
             this.panel1.Controls.Add(this.label2);
             this.panel1.Controls.Add(this.label1);
-            this.panel1.Location = new System.Drawing.Point(50, 21);
+            this.panel1.Location = new System.Drawing.Point(51, 56);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(331, 413);
             this.panel1.TabIndex = 0;
             // 
             // pictureBox1
             // 
-            this.pictureBox1.BackColor = System.Drawing.Color.White;
+            this.pictureBox1.BackColor = System.Drawing.Color.Transparent;
             this.pictureBox1.Image = global::EndoscopicSystem.Properties.Resources.nplink_05;
             this.pictureBox1.InitialImage = null;
-            this.pictureBox1.Location = new System.Drawing.Point(66, 37);
+            this.pictureBox1.Location = new System.Drawing.Point(24, 14);
             this.pictureBox1.Margin = new System.Windows.Forms.Padding(2);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(187, 168);
+            this.pictureBox1.Size = new System.Drawing.Size(283, 231);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox1.TabIndex = 1;
             this.pictureBox1.TabStop = false;
@@ -87,11 +86,11 @@ namespace EndoscopicSystem.V2.Forms
             // txbPassword
             // 
             this.txbPassword.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
-            this.txbPassword.ForeColor = System.Drawing.Color.Red;
-            this.txbPassword.Location = new System.Drawing.Point(126, 295);
+            this.txbPassword.ForeColor = System.Drawing.Color.Black;
+            this.txbPassword.Location = new System.Drawing.Point(130, 295);
             this.txbPassword.Name = "txbPassword";
             this.txbPassword.PasswordChar = '*';
-            this.txbPassword.Size = new System.Drawing.Size(179, 29);
+            this.txbPassword.Size = new System.Drawing.Size(175, 29);
             this.txbPassword.TabIndex = 2;
             this.txbPassword.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.txbPassword.UseSystemPasswordChar = true;
@@ -100,10 +99,10 @@ namespace EndoscopicSystem.V2.Forms
             // txbUsername
             // 
             this.txbUsername.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
-            this.txbUsername.ForeColor = System.Drawing.Color.Red;
-            this.txbUsername.Location = new System.Drawing.Point(126, 250);
+            this.txbUsername.ForeColor = System.Drawing.Color.Black;
+            this.txbUsername.Location = new System.Drawing.Point(130, 250);
             this.txbUsername.Name = "txbUsername";
-            this.txbUsername.Size = new System.Drawing.Size(179, 29);
+            this.txbUsername.Size = new System.Drawing.Size(175, 29);
             this.txbUsername.TabIndex = 1;
             this.txbUsername.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.txbUsername.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txbUsername_KeyDown);
@@ -111,22 +110,22 @@ namespace EndoscopicSystem.V2.Forms
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
-            this.label2.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
+            this.label2.ForeColor = System.Drawing.SystemColors.ControlText;
             this.label2.Location = new System.Drawing.Point(18, 295);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(102, 24);
+            this.label2.Size = new System.Drawing.Size(112, 24);
             this.label2.TabIndex = 99;
             this.label2.Text = "Password :";
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
-            this.label1.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
+            this.label1.ForeColor = System.Drawing.SystemColors.ControlText;
             this.label1.Location = new System.Drawing.Point(13, 252);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(107, 24);
+            this.label1.Size = new System.Drawing.Size(117, 24);
             this.label1.TabIndex = 98;
             this.label1.Text = "Username :";
             // 

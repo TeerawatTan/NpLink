@@ -31,98 +31,94 @@ namespace EndoscopicSystem.V2.Forms
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormPreviewReport));
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.listBox1 = new System.Windows.Forms.ListBox();
             this.panel3 = new System.Windows.Forms.Panel();
             this.groupBox18 = new System.Windows.Forms.GroupBox();
+            this.btnPictureBoxSaved1 = new System.Windows.Forms.Button();
             this.btnDeletePictureBoxSaved1 = new System.Windows.Forms.Button();
             this.txtPictureBoxSaved1 = new System.Windows.Forms.TextBox();
-            this.groupBox17 = new System.Windows.Forms.GroupBox();
-            this.btnDeletePictureBoxSaved2 = new System.Windows.Forms.Button();
-            this.txtPictureBoxSaved2 = new System.Windows.Forms.TextBox();
-            this.groupBox16 = new System.Windows.Forms.GroupBox();
-            this.txtPictureBoxSaved3 = new System.Windows.Forms.TextBox();
-            this.btnDeletePictureBoxSaved3 = new System.Windows.Forms.Button();
-            this.groupBox15 = new System.Windows.Forms.GroupBox();
-            this.btnDeletePictureBoxSaved4 = new System.Windows.Forms.Button();
-            this.txtPictureBoxSaved4 = new System.Windows.Forms.TextBox();
-            this.groupBox13 = new System.Windows.Forms.GroupBox();
-            this.txtPictureBoxSaved5 = new System.Windows.Forms.TextBox();
-            this.btnDeletePictureBoxSaved5 = new System.Windows.Forms.Button();
-            this.groupBox12 = new System.Windows.Forms.GroupBox();
-            this.txtPictureBoxSaved7 = new System.Windows.Forms.TextBox();
-            this.btnDeletePictureBoxSaved7 = new System.Windows.Forms.Button();
-            this.groupBox11 = new System.Windows.Forms.GroupBox();
-            this.txtPictureBoxSaved8 = new System.Windows.Forms.TextBox();
-            this.btnDeletePictureBoxSaved8 = new System.Windows.Forms.Button();
-            this.groupBox10 = new System.Windows.Forms.GroupBox();
-            this.txtPictureBoxSaved9 = new System.Windows.Forms.TextBox();
-            this.btnDeletePictureBoxSaved9 = new System.Windows.Forms.Button();
-            this.btnPictureBoxSaved1 = new System.Windows.Forms.Button();
             this.btnEditPic1 = new System.Windows.Forms.Button();
             this.pictureBoxSaved1 = new System.Windows.Forms.PictureBox();
+            this.groupBox17 = new System.Windows.Forms.GroupBox();
             this.btnPictureBoxSaved2 = new System.Windows.Forms.Button();
+            this.btnDeletePictureBoxSaved2 = new System.Windows.Forms.Button();
+            this.txtPictureBoxSaved2 = new System.Windows.Forms.TextBox();
             this.btnEditPic2 = new System.Windows.Forms.Button();
             this.pictureBoxSaved2 = new System.Windows.Forms.PictureBox();
+            this.groupBox16 = new System.Windows.Forms.GroupBox();
             this.btnPictureBoxSaved3 = new System.Windows.Forms.Button();
+            this.txtPictureBoxSaved3 = new System.Windows.Forms.TextBox();
+            this.btnDeletePictureBoxSaved3 = new System.Windows.Forms.Button();
             this.btnEditPic3 = new System.Windows.Forms.Button();
             this.pictureBoxSaved3 = new System.Windows.Forms.PictureBox();
+            this.groupBox15 = new System.Windows.Forms.GroupBox();
             this.btnPictureBoxSaved4 = new System.Windows.Forms.Button();
+            this.btnDeletePictureBoxSaved4 = new System.Windows.Forms.Button();
+            this.txtPictureBoxSaved4 = new System.Windows.Forms.TextBox();
             this.btnEditPic4 = new System.Windows.Forms.Button();
             this.pictureBoxSaved4 = new System.Windows.Forms.PictureBox();
+            this.groupBox13 = new System.Windows.Forms.GroupBox();
             this.btnPictureBoxSaved5 = new System.Windows.Forms.Button();
+            this.txtPictureBoxSaved5 = new System.Windows.Forms.TextBox();
+            this.btnDeletePictureBoxSaved5 = new System.Windows.Forms.Button();
             this.btnEditPic5 = new System.Windows.Forms.Button();
             this.pictureBoxSaved5 = new System.Windows.Forms.PictureBox();
+            this.groupBox12 = new System.Windows.Forms.GroupBox();
             this.btnPictureBoxSaved7 = new System.Windows.Forms.Button();
+            this.txtPictureBoxSaved7 = new System.Windows.Forms.TextBox();
+            this.btnDeletePictureBoxSaved7 = new System.Windows.Forms.Button();
             this.btnEditPic7 = new System.Windows.Forms.Button();
             this.pictureBoxSaved7 = new System.Windows.Forms.PictureBox();
+            this.groupBox11 = new System.Windows.Forms.GroupBox();
             this.btnPictureBoxSaved8 = new System.Windows.Forms.Button();
+            this.txtPictureBoxSaved8 = new System.Windows.Forms.TextBox();
+            this.btnDeletePictureBoxSaved8 = new System.Windows.Forms.Button();
             this.btnEditPic8 = new System.Windows.Forms.Button();
             this.pictureBoxSaved8 = new System.Windows.Forms.PictureBox();
+            this.groupBox10 = new System.Windows.Forms.GroupBox();
             this.btnPictureBoxSaved9 = new System.Windows.Forms.Button();
+            this.txtPictureBoxSaved9 = new System.Windows.Forms.TextBox();
+            this.btnDeletePictureBoxSaved9 = new System.Windows.Forms.Button();
             this.btnEditPic9 = new System.Windows.Forms.Button();
             this.pictureBoxSaved9 = new System.Windows.Forms.PictureBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.btnSave = new System.Windows.Forms.Button();
             this.btnDelete = new System.Windows.Forms.Button();
-            this.btnReport = new System.Windows.Forms.Button();
             this.btnReset = new System.Windows.Forms.Button();
+            this.btnNext = new System.Windows.Forms.Button();
+            this.listView1 = new System.Windows.Forms.ListView();
+            this.ImageName = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.label1 = new System.Windows.Forms.Label();
+            this.groupBox1.SuspendLayout();
             this.panel3.SuspendLayout();
             this.groupBox18.SuspendLayout();
-            this.groupBox17.SuspendLayout();
-            this.groupBox16.SuspendLayout();
-            this.groupBox15.SuspendLayout();
-            this.groupBox13.SuspendLayout();
-            this.groupBox12.SuspendLayout();
-            this.groupBox11.SuspendLayout();
-            this.groupBox10.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxSaved1)).BeginInit();
+            this.groupBox17.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxSaved2)).BeginInit();
+            this.groupBox16.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxSaved3)).BeginInit();
+            this.groupBox15.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxSaved4)).BeginInit();
+            this.groupBox13.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxSaved5)).BeginInit();
+            this.groupBox12.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxSaved7)).BeginInit();
+            this.groupBox11.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxSaved8)).BeginInit();
+            this.groupBox10.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxSaved9)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // groupBox1
             // 
+            this.groupBox1.Controls.Add(this.label1);
             this.groupBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
             this.groupBox1.Location = new System.Drawing.Point(12, 12);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Size = new System.Drawing.Size(1349, 100);
             this.groupBox1.TabIndex = 88;
             this.groupBox1.TabStop = false;
-            this.groupBox1.Text = "Patient Information";
-            // 
-            // listBox1
-            // 
-            this.listBox1.FormattingEnabled = true;
-            this.listBox1.Location = new System.Drawing.Point(833, 122);
-            this.listBox1.Name = "listBox1";
-            this.listBox1.Size = new System.Drawing.Size(274, 602);
-            this.listBox1.TabIndex = 89;
+            this.groupBox1.Text = "Patient Information ";
             // 
             // panel3
             // 
@@ -155,6 +151,18 @@ namespace EndoscopicSystem.V2.Forms
             this.groupBox18.TabIndex = 67;
             this.groupBox18.TabStop = false;
             // 
+            // btnPictureBoxSaved1
+            // 
+            this.btnPictureBoxSaved1.BackgroundImage = global::EndoscopicSystem.Properties.Resources.Upload;
+            this.btnPictureBoxSaved1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.btnPictureBoxSaved1.Font = new System.Drawing.Font("Microsoft Sans Serif", 6F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnPictureBoxSaved1.Location = new System.Drawing.Point(159, 152);
+            this.btnPictureBoxSaved1.Margin = new System.Windows.Forms.Padding(2);
+            this.btnPictureBoxSaved1.Name = "btnPictureBoxSaved1";
+            this.btnPictureBoxSaved1.Size = new System.Drawing.Size(18, 20);
+            this.btnPictureBoxSaved1.TabIndex = 10;
+            this.btnPictureBoxSaved1.UseVisualStyleBackColor = true;
+            // 
             // btnDeletePictureBoxSaved1
             // 
             this.btnDeletePictureBoxSaved1.BackColor = System.Drawing.Color.Red;
@@ -176,263 +184,6 @@ namespace EndoscopicSystem.V2.Forms
             this.txtPictureBoxSaved1.Name = "txtPictureBoxSaved1";
             this.txtPictureBoxSaved1.Size = new System.Drawing.Size(152, 20);
             this.txtPictureBoxSaved1.TabIndex = 1;
-            // 
-            // groupBox17
-            // 
-            this.groupBox17.Controls.Add(this.btnPictureBoxSaved2);
-            this.groupBox17.Controls.Add(this.btnDeletePictureBoxSaved2);
-            this.groupBox17.Controls.Add(this.txtPictureBoxSaved2);
-            this.groupBox17.Controls.Add(this.btnEditPic2);
-            this.groupBox17.Controls.Add(this.pictureBoxSaved2);
-            this.groupBox17.Location = new System.Drawing.Point(6, 184);
-            this.groupBox17.Name = "groupBox17";
-            this.groupBox17.Size = new System.Drawing.Size(201, 175);
-            this.groupBox17.TabIndex = 67;
-            this.groupBox17.TabStop = false;
-            // 
-            // btnDeletePictureBoxSaved2
-            // 
-            this.btnDeletePictureBoxSaved2.BackColor = System.Drawing.Color.Red;
-            this.btnDeletePictureBoxSaved2.Font = new System.Drawing.Font("Microsoft Sans Serif", 7F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnDeletePictureBoxSaved2.Location = new System.Drawing.Point(175, 7);
-            this.btnDeletePictureBoxSaved2.Margin = new System.Windows.Forms.Padding(2);
-            this.btnDeletePictureBoxSaved2.Name = "btnDeletePictureBoxSaved2";
-            this.btnDeletePictureBoxSaved2.Size = new System.Drawing.Size(19, 20);
-            this.btnDeletePictureBoxSaved2.TabIndex = 7;
-            this.btnDeletePictureBoxSaved2.Text = "X";
-            this.btnDeletePictureBoxSaved2.UseVisualStyleBackColor = false;
-            this.btnDeletePictureBoxSaved2.Visible = false;
-            // 
-            // txtPictureBoxSaved2
-            // 
-            this.txtPictureBoxSaved2.Location = new System.Drawing.Point(2, 152);
-            this.txtPictureBoxSaved2.Margin = new System.Windows.Forms.Padding(2);
-            this.txtPictureBoxSaved2.MaxLength = 25;
-            this.txtPictureBoxSaved2.Name = "txtPictureBoxSaved2";
-            this.txtPictureBoxSaved2.Size = new System.Drawing.Size(152, 20);
-            this.txtPictureBoxSaved2.TabIndex = 1;
-            // 
-            // groupBox16
-            // 
-            this.groupBox16.Controls.Add(this.btnPictureBoxSaved3);
-            this.groupBox16.Controls.Add(this.txtPictureBoxSaved3);
-            this.groupBox16.Controls.Add(this.btnDeletePictureBoxSaved3);
-            this.groupBox16.Controls.Add(this.btnEditPic3);
-            this.groupBox16.Controls.Add(this.pictureBoxSaved3);
-            this.groupBox16.Location = new System.Drawing.Point(8, 365);
-            this.groupBox16.Name = "groupBox16";
-            this.groupBox16.Size = new System.Drawing.Size(199, 175);
-            this.groupBox16.TabIndex = 67;
-            this.groupBox16.TabStop = false;
-            // 
-            // txtPictureBoxSaved3
-            // 
-            this.txtPictureBoxSaved3.Location = new System.Drawing.Point(4, 152);
-            this.txtPictureBoxSaved3.Margin = new System.Windows.Forms.Padding(2);
-            this.txtPictureBoxSaved3.MaxLength = 25;
-            this.txtPictureBoxSaved3.Name = "txtPictureBoxSaved3";
-            this.txtPictureBoxSaved3.Size = new System.Drawing.Size(152, 20);
-            this.txtPictureBoxSaved3.TabIndex = 1;
-            // 
-            // btnDeletePictureBoxSaved3
-            // 
-            this.btnDeletePictureBoxSaved3.BackColor = System.Drawing.Color.Red;
-            this.btnDeletePictureBoxSaved3.Font = new System.Drawing.Font("Microsoft Sans Serif", 7F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnDeletePictureBoxSaved3.Location = new System.Drawing.Point(177, 8);
-            this.btnDeletePictureBoxSaved3.Margin = new System.Windows.Forms.Padding(2);
-            this.btnDeletePictureBoxSaved3.Name = "btnDeletePictureBoxSaved3";
-            this.btnDeletePictureBoxSaved3.Size = new System.Drawing.Size(19, 20);
-            this.btnDeletePictureBoxSaved3.TabIndex = 7;
-            this.btnDeletePictureBoxSaved3.Text = "X";
-            this.btnDeletePictureBoxSaved3.UseVisualStyleBackColor = false;
-            this.btnDeletePictureBoxSaved3.Visible = false;
-            // 
-            // groupBox15
-            // 
-            this.groupBox15.Controls.Add(this.btnPictureBoxSaved4);
-            this.groupBox15.Controls.Add(this.btnDeletePictureBoxSaved4);
-            this.groupBox15.Controls.Add(this.txtPictureBoxSaved4);
-            this.groupBox15.Controls.Add(this.btnEditPic4);
-            this.groupBox15.Controls.Add(this.pictureBoxSaved4);
-            this.groupBox15.Location = new System.Drawing.Point(6, 551);
-            this.groupBox15.Name = "groupBox15";
-            this.groupBox15.Size = new System.Drawing.Size(204, 175);
-            this.groupBox15.TabIndex = 67;
-            this.groupBox15.TabStop = false;
-            // 
-            // btnDeletePictureBoxSaved4
-            // 
-            this.btnDeletePictureBoxSaved4.BackColor = System.Drawing.Color.Red;
-            this.btnDeletePictureBoxSaved4.Font = new System.Drawing.Font("Microsoft Sans Serif", 7F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnDeletePictureBoxSaved4.Location = new System.Drawing.Point(178, 8);
-            this.btnDeletePictureBoxSaved4.Margin = new System.Windows.Forms.Padding(2);
-            this.btnDeletePictureBoxSaved4.Name = "btnDeletePictureBoxSaved4";
-            this.btnDeletePictureBoxSaved4.Size = new System.Drawing.Size(19, 20);
-            this.btnDeletePictureBoxSaved4.TabIndex = 7;
-            this.btnDeletePictureBoxSaved4.Text = "X";
-            this.btnDeletePictureBoxSaved4.UseVisualStyleBackColor = false;
-            this.btnDeletePictureBoxSaved4.Visible = false;
-            // 
-            // txtPictureBoxSaved4
-            // 
-            this.txtPictureBoxSaved4.Location = new System.Drawing.Point(5, 151);
-            this.txtPictureBoxSaved4.Margin = new System.Windows.Forms.Padding(2);
-            this.txtPictureBoxSaved4.MaxLength = 25;
-            this.txtPictureBoxSaved4.Name = "txtPictureBoxSaved4";
-            this.txtPictureBoxSaved4.Size = new System.Drawing.Size(152, 20);
-            this.txtPictureBoxSaved4.TabIndex = 1;
-            // 
-            // groupBox13
-            // 
-            this.groupBox13.Controls.Add(this.btnPictureBoxSaved5);
-            this.groupBox13.Controls.Add(this.txtPictureBoxSaved5);
-            this.groupBox13.Controls.Add(this.btnDeletePictureBoxSaved5);
-            this.groupBox13.Controls.Add(this.btnEditPic5);
-            this.groupBox13.Controls.Add(this.pictureBoxSaved5);
-            this.groupBox13.Location = new System.Drawing.Point(6, 732);
-            this.groupBox13.Name = "groupBox13";
-            this.groupBox13.Size = new System.Drawing.Size(201, 175);
-            this.groupBox13.TabIndex = 79;
-            this.groupBox13.TabStop = false;
-            // 
-            // txtPictureBoxSaved5
-            // 
-            this.txtPictureBoxSaved5.Location = new System.Drawing.Point(6, 152);
-            this.txtPictureBoxSaved5.Margin = new System.Windows.Forms.Padding(2);
-            this.txtPictureBoxSaved5.MaxLength = 25;
-            this.txtPictureBoxSaved5.Name = "txtPictureBoxSaved5";
-            this.txtPictureBoxSaved5.Size = new System.Drawing.Size(152, 20);
-            this.txtPictureBoxSaved5.TabIndex = 1;
-            // 
-            // btnDeletePictureBoxSaved5
-            // 
-            this.btnDeletePictureBoxSaved5.BackColor = System.Drawing.Color.Red;
-            this.btnDeletePictureBoxSaved5.Font = new System.Drawing.Font("Microsoft Sans Serif", 7F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnDeletePictureBoxSaved5.Location = new System.Drawing.Point(177, 7);
-            this.btnDeletePictureBoxSaved5.Margin = new System.Windows.Forms.Padding(2);
-            this.btnDeletePictureBoxSaved5.Name = "btnDeletePictureBoxSaved5";
-            this.btnDeletePictureBoxSaved5.Size = new System.Drawing.Size(19, 20);
-            this.btnDeletePictureBoxSaved5.TabIndex = 7;
-            this.btnDeletePictureBoxSaved5.Text = "X";
-            this.btnDeletePictureBoxSaved5.UseVisualStyleBackColor = false;
-            this.btnDeletePictureBoxSaved5.Visible = false;
-            // 
-            // groupBox12
-            // 
-            this.groupBox12.Controls.Add(this.btnPictureBoxSaved7);
-            this.groupBox12.Controls.Add(this.txtPictureBoxSaved7);
-            this.groupBox12.Controls.Add(this.btnDeletePictureBoxSaved7);
-            this.groupBox12.Controls.Add(this.btnEditPic7);
-            this.groupBox12.Controls.Add(this.pictureBoxSaved7);
-            this.groupBox12.Location = new System.Drawing.Point(6, 913);
-            this.groupBox12.Name = "groupBox12";
-            this.groupBox12.Size = new System.Drawing.Size(201, 175);
-            this.groupBox12.TabIndex = 78;
-            this.groupBox12.TabStop = false;
-            // 
-            // txtPictureBoxSaved7
-            // 
-            this.txtPictureBoxSaved7.Location = new System.Drawing.Point(6, 152);
-            this.txtPictureBoxSaved7.Margin = new System.Windows.Forms.Padding(2);
-            this.txtPictureBoxSaved7.MaxLength = 25;
-            this.txtPictureBoxSaved7.Name = "txtPictureBoxSaved7";
-            this.txtPictureBoxSaved7.Size = new System.Drawing.Size(152, 20);
-            this.txtPictureBoxSaved7.TabIndex = 1;
-            // 
-            // btnDeletePictureBoxSaved7
-            // 
-            this.btnDeletePictureBoxSaved7.BackColor = System.Drawing.Color.Red;
-            this.btnDeletePictureBoxSaved7.Font = new System.Drawing.Font("Microsoft Sans Serif", 7F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnDeletePictureBoxSaved7.Location = new System.Drawing.Point(178, 9);
-            this.btnDeletePictureBoxSaved7.Margin = new System.Windows.Forms.Padding(2);
-            this.btnDeletePictureBoxSaved7.Name = "btnDeletePictureBoxSaved7";
-            this.btnDeletePictureBoxSaved7.Size = new System.Drawing.Size(19, 20);
-            this.btnDeletePictureBoxSaved7.TabIndex = 7;
-            this.btnDeletePictureBoxSaved7.Text = "X";
-            this.btnDeletePictureBoxSaved7.UseVisualStyleBackColor = false;
-            this.btnDeletePictureBoxSaved7.Visible = false;
-            // 
-            // groupBox11
-            // 
-            this.groupBox11.Controls.Add(this.btnPictureBoxSaved8);
-            this.groupBox11.Controls.Add(this.txtPictureBoxSaved8);
-            this.groupBox11.Controls.Add(this.btnDeletePictureBoxSaved8);
-            this.groupBox11.Controls.Add(this.btnEditPic8);
-            this.groupBox11.Controls.Add(this.pictureBoxSaved8);
-            this.groupBox11.Location = new System.Drawing.Point(8, 1094);
-            this.groupBox11.Name = "groupBox11";
-            this.groupBox11.Size = new System.Drawing.Size(202, 175);
-            this.groupBox11.TabIndex = 77;
-            this.groupBox11.TabStop = false;
-            // 
-            // txtPictureBoxSaved8
-            // 
-            this.txtPictureBoxSaved8.Location = new System.Drawing.Point(5, 151);
-            this.txtPictureBoxSaved8.Margin = new System.Windows.Forms.Padding(2);
-            this.txtPictureBoxSaved8.MaxLength = 25;
-            this.txtPictureBoxSaved8.Name = "txtPictureBoxSaved8";
-            this.txtPictureBoxSaved8.Size = new System.Drawing.Size(152, 20);
-            this.txtPictureBoxSaved8.TabIndex = 1;
-            // 
-            // btnDeletePictureBoxSaved8
-            // 
-            this.btnDeletePictureBoxSaved8.BackColor = System.Drawing.Color.Red;
-            this.btnDeletePictureBoxSaved8.Font = new System.Drawing.Font("Microsoft Sans Serif", 7F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnDeletePictureBoxSaved8.Location = new System.Drawing.Point(177, 8);
-            this.btnDeletePictureBoxSaved8.Margin = new System.Windows.Forms.Padding(2);
-            this.btnDeletePictureBoxSaved8.Name = "btnDeletePictureBoxSaved8";
-            this.btnDeletePictureBoxSaved8.Size = new System.Drawing.Size(19, 20);
-            this.btnDeletePictureBoxSaved8.TabIndex = 7;
-            this.btnDeletePictureBoxSaved8.Text = "X";
-            this.btnDeletePictureBoxSaved8.UseVisualStyleBackColor = false;
-            this.btnDeletePictureBoxSaved8.Visible = false;
-            // 
-            // groupBox10
-            // 
-            this.groupBox10.Controls.Add(this.btnPictureBoxSaved9);
-            this.groupBox10.Controls.Add(this.txtPictureBoxSaved9);
-            this.groupBox10.Controls.Add(this.btnDeletePictureBoxSaved9);
-            this.groupBox10.Controls.Add(this.btnEditPic9);
-            this.groupBox10.Controls.Add(this.pictureBoxSaved9);
-            this.groupBox10.Location = new System.Drawing.Point(7, 1275);
-            this.groupBox10.Name = "groupBox10";
-            this.groupBox10.Size = new System.Drawing.Size(200, 175);
-            this.groupBox10.TabIndex = 76;
-            this.groupBox10.TabStop = false;
-            // 
-            // txtPictureBoxSaved9
-            // 
-            this.txtPictureBoxSaved9.Location = new System.Drawing.Point(5, 152);
-            this.txtPictureBoxSaved9.Margin = new System.Windows.Forms.Padding(2);
-            this.txtPictureBoxSaved9.MaxLength = 25;
-            this.txtPictureBoxSaved9.Name = "txtPictureBoxSaved9";
-            this.txtPictureBoxSaved9.Size = new System.Drawing.Size(152, 20);
-            this.txtPictureBoxSaved9.TabIndex = 1;
-            // 
-            // btnDeletePictureBoxSaved9
-            // 
-            this.btnDeletePictureBoxSaved9.BackColor = System.Drawing.Color.Red;
-            this.btnDeletePictureBoxSaved9.Font = new System.Drawing.Font("Microsoft Sans Serif", 7F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnDeletePictureBoxSaved9.Location = new System.Drawing.Point(176, 9);
-            this.btnDeletePictureBoxSaved9.Margin = new System.Windows.Forms.Padding(2);
-            this.btnDeletePictureBoxSaved9.Name = "btnDeletePictureBoxSaved9";
-            this.btnDeletePictureBoxSaved9.Size = new System.Drawing.Size(19, 20);
-            this.btnDeletePictureBoxSaved9.TabIndex = 7;
-            this.btnDeletePictureBoxSaved9.Text = "X";
-            this.btnDeletePictureBoxSaved9.UseVisualStyleBackColor = false;
-            this.btnDeletePictureBoxSaved9.Visible = false;
-            // 
-            // btnPictureBoxSaved1
-            // 
-            this.btnPictureBoxSaved1.BackgroundImage = global::EndoscopicSystem.Properties.Resources.Upload;
-            this.btnPictureBoxSaved1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.btnPictureBoxSaved1.Font = new System.Drawing.Font("Microsoft Sans Serif", 6F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnPictureBoxSaved1.Location = new System.Drawing.Point(159, 152);
-            this.btnPictureBoxSaved1.Margin = new System.Windows.Forms.Padding(2);
-            this.btnPictureBoxSaved1.Name = "btnPictureBoxSaved1";
-            this.btnPictureBoxSaved1.Size = new System.Drawing.Size(18, 20);
-            this.btnPictureBoxSaved1.TabIndex = 10;
-            this.btnPictureBoxSaved1.UseVisualStyleBackColor = true;
             // 
             // btnEditPic1
             // 
@@ -459,6 +210,19 @@ namespace EndoscopicSystem.V2.Forms
             this.pictureBoxSaved1.TabIndex = 0;
             this.pictureBoxSaved1.TabStop = false;
             // 
+            // groupBox17
+            // 
+            this.groupBox17.Controls.Add(this.btnPictureBoxSaved2);
+            this.groupBox17.Controls.Add(this.btnDeletePictureBoxSaved2);
+            this.groupBox17.Controls.Add(this.txtPictureBoxSaved2);
+            this.groupBox17.Controls.Add(this.btnEditPic2);
+            this.groupBox17.Controls.Add(this.pictureBoxSaved2);
+            this.groupBox17.Location = new System.Drawing.Point(6, 184);
+            this.groupBox17.Name = "groupBox17";
+            this.groupBox17.Size = new System.Drawing.Size(201, 175);
+            this.groupBox17.TabIndex = 67;
+            this.groupBox17.TabStop = false;
+            // 
             // btnPictureBoxSaved2
             // 
             this.btnPictureBoxSaved2.BackgroundImage = global::EndoscopicSystem.Properties.Resources.Upload;
@@ -470,6 +234,28 @@ namespace EndoscopicSystem.V2.Forms
             this.btnPictureBoxSaved2.Size = new System.Drawing.Size(18, 20);
             this.btnPictureBoxSaved2.TabIndex = 10;
             this.btnPictureBoxSaved2.UseVisualStyleBackColor = true;
+            // 
+            // btnDeletePictureBoxSaved2
+            // 
+            this.btnDeletePictureBoxSaved2.BackColor = System.Drawing.Color.Red;
+            this.btnDeletePictureBoxSaved2.Font = new System.Drawing.Font("Microsoft Sans Serif", 7F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnDeletePictureBoxSaved2.Location = new System.Drawing.Point(175, 7);
+            this.btnDeletePictureBoxSaved2.Margin = new System.Windows.Forms.Padding(2);
+            this.btnDeletePictureBoxSaved2.Name = "btnDeletePictureBoxSaved2";
+            this.btnDeletePictureBoxSaved2.Size = new System.Drawing.Size(19, 20);
+            this.btnDeletePictureBoxSaved2.TabIndex = 7;
+            this.btnDeletePictureBoxSaved2.Text = "X";
+            this.btnDeletePictureBoxSaved2.UseVisualStyleBackColor = false;
+            this.btnDeletePictureBoxSaved2.Visible = false;
+            // 
+            // txtPictureBoxSaved2
+            // 
+            this.txtPictureBoxSaved2.Location = new System.Drawing.Point(2, 152);
+            this.txtPictureBoxSaved2.Margin = new System.Windows.Forms.Padding(2);
+            this.txtPictureBoxSaved2.MaxLength = 25;
+            this.txtPictureBoxSaved2.Name = "txtPictureBoxSaved2";
+            this.txtPictureBoxSaved2.Size = new System.Drawing.Size(152, 20);
+            this.txtPictureBoxSaved2.TabIndex = 1;
             // 
             // btnEditPic2
             // 
@@ -496,6 +282,19 @@ namespace EndoscopicSystem.V2.Forms
             this.pictureBoxSaved2.TabIndex = 0;
             this.pictureBoxSaved2.TabStop = false;
             // 
+            // groupBox16
+            // 
+            this.groupBox16.Controls.Add(this.btnPictureBoxSaved3);
+            this.groupBox16.Controls.Add(this.txtPictureBoxSaved3);
+            this.groupBox16.Controls.Add(this.btnDeletePictureBoxSaved3);
+            this.groupBox16.Controls.Add(this.btnEditPic3);
+            this.groupBox16.Controls.Add(this.pictureBoxSaved3);
+            this.groupBox16.Location = new System.Drawing.Point(8, 365);
+            this.groupBox16.Name = "groupBox16";
+            this.groupBox16.Size = new System.Drawing.Size(199, 175);
+            this.groupBox16.TabIndex = 67;
+            this.groupBox16.TabStop = false;
+            // 
             // btnPictureBoxSaved3
             // 
             this.btnPictureBoxSaved3.BackgroundImage = global::EndoscopicSystem.Properties.Resources.Upload;
@@ -507,6 +306,28 @@ namespace EndoscopicSystem.V2.Forms
             this.btnPictureBoxSaved3.Size = new System.Drawing.Size(18, 20);
             this.btnPictureBoxSaved3.TabIndex = 10;
             this.btnPictureBoxSaved3.UseVisualStyleBackColor = true;
+            // 
+            // txtPictureBoxSaved3
+            // 
+            this.txtPictureBoxSaved3.Location = new System.Drawing.Point(4, 152);
+            this.txtPictureBoxSaved3.Margin = new System.Windows.Forms.Padding(2);
+            this.txtPictureBoxSaved3.MaxLength = 25;
+            this.txtPictureBoxSaved3.Name = "txtPictureBoxSaved3";
+            this.txtPictureBoxSaved3.Size = new System.Drawing.Size(152, 20);
+            this.txtPictureBoxSaved3.TabIndex = 1;
+            // 
+            // btnDeletePictureBoxSaved3
+            // 
+            this.btnDeletePictureBoxSaved3.BackColor = System.Drawing.Color.Red;
+            this.btnDeletePictureBoxSaved3.Font = new System.Drawing.Font("Microsoft Sans Serif", 7F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnDeletePictureBoxSaved3.Location = new System.Drawing.Point(177, 8);
+            this.btnDeletePictureBoxSaved3.Margin = new System.Windows.Forms.Padding(2);
+            this.btnDeletePictureBoxSaved3.Name = "btnDeletePictureBoxSaved3";
+            this.btnDeletePictureBoxSaved3.Size = new System.Drawing.Size(19, 20);
+            this.btnDeletePictureBoxSaved3.TabIndex = 7;
+            this.btnDeletePictureBoxSaved3.Text = "X";
+            this.btnDeletePictureBoxSaved3.UseVisualStyleBackColor = false;
+            this.btnDeletePictureBoxSaved3.Visible = false;
             // 
             // btnEditPic3
             // 
@@ -533,6 +354,19 @@ namespace EndoscopicSystem.V2.Forms
             this.pictureBoxSaved3.TabIndex = 0;
             this.pictureBoxSaved3.TabStop = false;
             // 
+            // groupBox15
+            // 
+            this.groupBox15.Controls.Add(this.btnPictureBoxSaved4);
+            this.groupBox15.Controls.Add(this.btnDeletePictureBoxSaved4);
+            this.groupBox15.Controls.Add(this.txtPictureBoxSaved4);
+            this.groupBox15.Controls.Add(this.btnEditPic4);
+            this.groupBox15.Controls.Add(this.pictureBoxSaved4);
+            this.groupBox15.Location = new System.Drawing.Point(6, 551);
+            this.groupBox15.Name = "groupBox15";
+            this.groupBox15.Size = new System.Drawing.Size(204, 175);
+            this.groupBox15.TabIndex = 67;
+            this.groupBox15.TabStop = false;
+            // 
             // btnPictureBoxSaved4
             // 
             this.btnPictureBoxSaved4.BackgroundImage = global::EndoscopicSystem.Properties.Resources.Upload;
@@ -544,6 +378,28 @@ namespace EndoscopicSystem.V2.Forms
             this.btnPictureBoxSaved4.Size = new System.Drawing.Size(18, 20);
             this.btnPictureBoxSaved4.TabIndex = 10;
             this.btnPictureBoxSaved4.UseVisualStyleBackColor = true;
+            // 
+            // btnDeletePictureBoxSaved4
+            // 
+            this.btnDeletePictureBoxSaved4.BackColor = System.Drawing.Color.Red;
+            this.btnDeletePictureBoxSaved4.Font = new System.Drawing.Font("Microsoft Sans Serif", 7F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnDeletePictureBoxSaved4.Location = new System.Drawing.Point(178, 8);
+            this.btnDeletePictureBoxSaved4.Margin = new System.Windows.Forms.Padding(2);
+            this.btnDeletePictureBoxSaved4.Name = "btnDeletePictureBoxSaved4";
+            this.btnDeletePictureBoxSaved4.Size = new System.Drawing.Size(19, 20);
+            this.btnDeletePictureBoxSaved4.TabIndex = 7;
+            this.btnDeletePictureBoxSaved4.Text = "X";
+            this.btnDeletePictureBoxSaved4.UseVisualStyleBackColor = false;
+            this.btnDeletePictureBoxSaved4.Visible = false;
+            // 
+            // txtPictureBoxSaved4
+            // 
+            this.txtPictureBoxSaved4.Location = new System.Drawing.Point(5, 151);
+            this.txtPictureBoxSaved4.Margin = new System.Windows.Forms.Padding(2);
+            this.txtPictureBoxSaved4.MaxLength = 25;
+            this.txtPictureBoxSaved4.Name = "txtPictureBoxSaved4";
+            this.txtPictureBoxSaved4.Size = new System.Drawing.Size(152, 20);
+            this.txtPictureBoxSaved4.TabIndex = 1;
             // 
             // btnEditPic4
             // 
@@ -570,6 +426,19 @@ namespace EndoscopicSystem.V2.Forms
             this.pictureBoxSaved4.TabIndex = 0;
             this.pictureBoxSaved4.TabStop = false;
             // 
+            // groupBox13
+            // 
+            this.groupBox13.Controls.Add(this.btnPictureBoxSaved5);
+            this.groupBox13.Controls.Add(this.txtPictureBoxSaved5);
+            this.groupBox13.Controls.Add(this.btnDeletePictureBoxSaved5);
+            this.groupBox13.Controls.Add(this.btnEditPic5);
+            this.groupBox13.Controls.Add(this.pictureBoxSaved5);
+            this.groupBox13.Location = new System.Drawing.Point(6, 732);
+            this.groupBox13.Name = "groupBox13";
+            this.groupBox13.Size = new System.Drawing.Size(201, 175);
+            this.groupBox13.TabIndex = 79;
+            this.groupBox13.TabStop = false;
+            // 
             // btnPictureBoxSaved5
             // 
             this.btnPictureBoxSaved5.BackgroundImage = global::EndoscopicSystem.Properties.Resources.Upload;
@@ -581,6 +450,28 @@ namespace EndoscopicSystem.V2.Forms
             this.btnPictureBoxSaved5.Size = new System.Drawing.Size(18, 20);
             this.btnPictureBoxSaved5.TabIndex = 10;
             this.btnPictureBoxSaved5.UseVisualStyleBackColor = true;
+            // 
+            // txtPictureBoxSaved5
+            // 
+            this.txtPictureBoxSaved5.Location = new System.Drawing.Point(6, 152);
+            this.txtPictureBoxSaved5.Margin = new System.Windows.Forms.Padding(2);
+            this.txtPictureBoxSaved5.MaxLength = 25;
+            this.txtPictureBoxSaved5.Name = "txtPictureBoxSaved5";
+            this.txtPictureBoxSaved5.Size = new System.Drawing.Size(152, 20);
+            this.txtPictureBoxSaved5.TabIndex = 1;
+            // 
+            // btnDeletePictureBoxSaved5
+            // 
+            this.btnDeletePictureBoxSaved5.BackColor = System.Drawing.Color.Red;
+            this.btnDeletePictureBoxSaved5.Font = new System.Drawing.Font("Microsoft Sans Serif", 7F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnDeletePictureBoxSaved5.Location = new System.Drawing.Point(177, 7);
+            this.btnDeletePictureBoxSaved5.Margin = new System.Windows.Forms.Padding(2);
+            this.btnDeletePictureBoxSaved5.Name = "btnDeletePictureBoxSaved5";
+            this.btnDeletePictureBoxSaved5.Size = new System.Drawing.Size(19, 20);
+            this.btnDeletePictureBoxSaved5.TabIndex = 7;
+            this.btnDeletePictureBoxSaved5.Text = "X";
+            this.btnDeletePictureBoxSaved5.UseVisualStyleBackColor = false;
+            this.btnDeletePictureBoxSaved5.Visible = false;
             // 
             // btnEditPic5
             // 
@@ -607,6 +498,19 @@ namespace EndoscopicSystem.V2.Forms
             this.pictureBoxSaved5.TabIndex = 0;
             this.pictureBoxSaved5.TabStop = false;
             // 
+            // groupBox12
+            // 
+            this.groupBox12.Controls.Add(this.btnPictureBoxSaved7);
+            this.groupBox12.Controls.Add(this.txtPictureBoxSaved7);
+            this.groupBox12.Controls.Add(this.btnDeletePictureBoxSaved7);
+            this.groupBox12.Controls.Add(this.btnEditPic7);
+            this.groupBox12.Controls.Add(this.pictureBoxSaved7);
+            this.groupBox12.Location = new System.Drawing.Point(6, 913);
+            this.groupBox12.Name = "groupBox12";
+            this.groupBox12.Size = new System.Drawing.Size(201, 175);
+            this.groupBox12.TabIndex = 78;
+            this.groupBox12.TabStop = false;
+            // 
             // btnPictureBoxSaved7
             // 
             this.btnPictureBoxSaved7.BackgroundImage = global::EndoscopicSystem.Properties.Resources.Upload;
@@ -618,6 +522,28 @@ namespace EndoscopicSystem.V2.Forms
             this.btnPictureBoxSaved7.Size = new System.Drawing.Size(18, 20);
             this.btnPictureBoxSaved7.TabIndex = 10;
             this.btnPictureBoxSaved7.UseVisualStyleBackColor = true;
+            // 
+            // txtPictureBoxSaved7
+            // 
+            this.txtPictureBoxSaved7.Location = new System.Drawing.Point(6, 152);
+            this.txtPictureBoxSaved7.Margin = new System.Windows.Forms.Padding(2);
+            this.txtPictureBoxSaved7.MaxLength = 25;
+            this.txtPictureBoxSaved7.Name = "txtPictureBoxSaved7";
+            this.txtPictureBoxSaved7.Size = new System.Drawing.Size(152, 20);
+            this.txtPictureBoxSaved7.TabIndex = 1;
+            // 
+            // btnDeletePictureBoxSaved7
+            // 
+            this.btnDeletePictureBoxSaved7.BackColor = System.Drawing.Color.Red;
+            this.btnDeletePictureBoxSaved7.Font = new System.Drawing.Font("Microsoft Sans Serif", 7F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnDeletePictureBoxSaved7.Location = new System.Drawing.Point(178, 9);
+            this.btnDeletePictureBoxSaved7.Margin = new System.Windows.Forms.Padding(2);
+            this.btnDeletePictureBoxSaved7.Name = "btnDeletePictureBoxSaved7";
+            this.btnDeletePictureBoxSaved7.Size = new System.Drawing.Size(19, 20);
+            this.btnDeletePictureBoxSaved7.TabIndex = 7;
+            this.btnDeletePictureBoxSaved7.Text = "X";
+            this.btnDeletePictureBoxSaved7.UseVisualStyleBackColor = false;
+            this.btnDeletePictureBoxSaved7.Visible = false;
             // 
             // btnEditPic7
             // 
@@ -644,6 +570,19 @@ namespace EndoscopicSystem.V2.Forms
             this.pictureBoxSaved7.TabIndex = 0;
             this.pictureBoxSaved7.TabStop = false;
             // 
+            // groupBox11
+            // 
+            this.groupBox11.Controls.Add(this.btnPictureBoxSaved8);
+            this.groupBox11.Controls.Add(this.txtPictureBoxSaved8);
+            this.groupBox11.Controls.Add(this.btnDeletePictureBoxSaved8);
+            this.groupBox11.Controls.Add(this.btnEditPic8);
+            this.groupBox11.Controls.Add(this.pictureBoxSaved8);
+            this.groupBox11.Location = new System.Drawing.Point(8, 1094);
+            this.groupBox11.Name = "groupBox11";
+            this.groupBox11.Size = new System.Drawing.Size(202, 175);
+            this.groupBox11.TabIndex = 77;
+            this.groupBox11.TabStop = false;
+            // 
             // btnPictureBoxSaved8
             // 
             this.btnPictureBoxSaved8.BackgroundImage = global::EndoscopicSystem.Properties.Resources.Upload;
@@ -655,6 +594,28 @@ namespace EndoscopicSystem.V2.Forms
             this.btnPictureBoxSaved8.Size = new System.Drawing.Size(18, 20);
             this.btnPictureBoxSaved8.TabIndex = 10;
             this.btnPictureBoxSaved8.UseVisualStyleBackColor = true;
+            // 
+            // txtPictureBoxSaved8
+            // 
+            this.txtPictureBoxSaved8.Location = new System.Drawing.Point(5, 151);
+            this.txtPictureBoxSaved8.Margin = new System.Windows.Forms.Padding(2);
+            this.txtPictureBoxSaved8.MaxLength = 25;
+            this.txtPictureBoxSaved8.Name = "txtPictureBoxSaved8";
+            this.txtPictureBoxSaved8.Size = new System.Drawing.Size(152, 20);
+            this.txtPictureBoxSaved8.TabIndex = 1;
+            // 
+            // btnDeletePictureBoxSaved8
+            // 
+            this.btnDeletePictureBoxSaved8.BackColor = System.Drawing.Color.Red;
+            this.btnDeletePictureBoxSaved8.Font = new System.Drawing.Font("Microsoft Sans Serif", 7F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnDeletePictureBoxSaved8.Location = new System.Drawing.Point(177, 8);
+            this.btnDeletePictureBoxSaved8.Margin = new System.Windows.Forms.Padding(2);
+            this.btnDeletePictureBoxSaved8.Name = "btnDeletePictureBoxSaved8";
+            this.btnDeletePictureBoxSaved8.Size = new System.Drawing.Size(19, 20);
+            this.btnDeletePictureBoxSaved8.TabIndex = 7;
+            this.btnDeletePictureBoxSaved8.Text = "X";
+            this.btnDeletePictureBoxSaved8.UseVisualStyleBackColor = false;
+            this.btnDeletePictureBoxSaved8.Visible = false;
             // 
             // btnEditPic8
             // 
@@ -681,6 +642,19 @@ namespace EndoscopicSystem.V2.Forms
             this.pictureBoxSaved8.TabIndex = 0;
             this.pictureBoxSaved8.TabStop = false;
             // 
+            // groupBox10
+            // 
+            this.groupBox10.Controls.Add(this.btnPictureBoxSaved9);
+            this.groupBox10.Controls.Add(this.txtPictureBoxSaved9);
+            this.groupBox10.Controls.Add(this.btnDeletePictureBoxSaved9);
+            this.groupBox10.Controls.Add(this.btnEditPic9);
+            this.groupBox10.Controls.Add(this.pictureBoxSaved9);
+            this.groupBox10.Location = new System.Drawing.Point(7, 1275);
+            this.groupBox10.Name = "groupBox10";
+            this.groupBox10.Size = new System.Drawing.Size(200, 175);
+            this.groupBox10.TabIndex = 76;
+            this.groupBox10.TabStop = false;
+            // 
             // btnPictureBoxSaved9
             // 
             this.btnPictureBoxSaved9.BackgroundImage = global::EndoscopicSystem.Properties.Resources.Upload;
@@ -692,6 +666,28 @@ namespace EndoscopicSystem.V2.Forms
             this.btnPictureBoxSaved9.Size = new System.Drawing.Size(18, 20);
             this.btnPictureBoxSaved9.TabIndex = 10;
             this.btnPictureBoxSaved9.UseVisualStyleBackColor = true;
+            // 
+            // txtPictureBoxSaved9
+            // 
+            this.txtPictureBoxSaved9.Location = new System.Drawing.Point(5, 152);
+            this.txtPictureBoxSaved9.Margin = new System.Windows.Forms.Padding(2);
+            this.txtPictureBoxSaved9.MaxLength = 25;
+            this.txtPictureBoxSaved9.Name = "txtPictureBoxSaved9";
+            this.txtPictureBoxSaved9.Size = new System.Drawing.Size(152, 20);
+            this.txtPictureBoxSaved9.TabIndex = 1;
+            // 
+            // btnDeletePictureBoxSaved9
+            // 
+            this.btnDeletePictureBoxSaved9.BackColor = System.Drawing.Color.Red;
+            this.btnDeletePictureBoxSaved9.Font = new System.Drawing.Font("Microsoft Sans Serif", 7F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnDeletePictureBoxSaved9.Location = new System.Drawing.Point(176, 9);
+            this.btnDeletePictureBoxSaved9.Margin = new System.Windows.Forms.Padding(2);
+            this.btnDeletePictureBoxSaved9.Name = "btnDeletePictureBoxSaved9";
+            this.btnDeletePictureBoxSaved9.Size = new System.Drawing.Size(19, 20);
+            this.btnDeletePictureBoxSaved9.TabIndex = 7;
+            this.btnDeletePictureBoxSaved9.Text = "X";
+            this.btnDeletePictureBoxSaved9.UseVisualStyleBackColor = false;
+            this.btnDeletePictureBoxSaved9.Visible = false;
             // 
             // btnEditPic9
             // 
@@ -738,6 +734,7 @@ namespace EndoscopicSystem.V2.Forms
             this.btnSave.TabIndex = 113;
             this.btnSave.Text = "Save";
             this.btnSave.UseVisualStyleBackColor = false;
+            this.btnSave.Click += new System.EventHandler(this.btnSave_Click);
             // 
             // btnDelete
             // 
@@ -752,20 +749,6 @@ namespace EndoscopicSystem.V2.Forms
             this.btnDelete.Text = "Delete";
             this.btnDelete.UseVisualStyleBackColor = false;
             // 
-            // btnReport
-            // 
-            this.btnReport.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(128)))));
-            this.btnReport.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
-            this.btnReport.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.btnReport.Location = new System.Drawing.Point(1223, 728);
-            this.btnReport.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.btnReport.Name = "btnReport";
-            this.btnReport.Size = new System.Drawing.Size(124, 78);
-            this.btnReport.TabIndex = 111;
-            this.btnReport.Text = "Report";
-            this.btnReport.UseVisualStyleBackColor = false;
-            this.btnReport.Visible = false;
-            // 
             // btnReset
             // 
             this.btnReset.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
@@ -777,46 +760,90 @@ namespace EndoscopicSystem.V2.Forms
             this.btnReset.Text = "Reset";
             this.btnReset.UseVisualStyleBackColor = true;
             // 
+            // btnNext
+            // 
+            this.btnNext.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
+            this.btnNext.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
+            this.btnNext.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.btnNext.Location = new System.Drawing.Point(1223, 728);
+            this.btnNext.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btnNext.Name = "btnNext";
+            this.btnNext.Size = new System.Drawing.Size(124, 78);
+            this.btnNext.TabIndex = 114;
+            this.btnNext.Text = "Next";
+            this.btnNext.UseVisualStyleBackColor = false;
+            this.btnNext.Click += new System.EventHandler(this.btnNext_Click);
+            // 
+            // listView1
+            // 
+            this.listView1.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
+            this.ImageName});
+            this.listView1.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
+            this.listView1.HideSelection = false;
+            this.listView1.Location = new System.Drawing.Point(833, 118);
+            this.listView1.Name = "listView1";
+            this.listView1.Size = new System.Drawing.Size(274, 606);
+            this.listView1.TabIndex = 115;
+            this.listView1.UseCompatibleStateImageBehavior = false;
+            this.listView1.View = System.Windows.Forms.View.List;
+            this.listView1.Click += new System.EventHandler(this.listView1_Click);
+            // 
+            // ImageName
+            // 
+            this.ImageName.Width = 200;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(6, 81);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(56, 16);
+            this.label1.TabIndex = 0;
+            this.label1.Text = "Preview";
+            // 
             // FormPreviewReport
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1373, 860);
+            this.Controls.Add(this.listView1);
+            this.Controls.Add(this.btnNext);
             this.Controls.Add(this.btnSave);
             this.Controls.Add(this.btnDelete);
-            this.Controls.Add(this.btnReport);
             this.Controls.Add(this.btnReset);
             this.Controls.Add(this.panel3);
-            this.Controls.Add(this.listBox1);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.pictureBox1);
             this.Name = "FormPreviewReport";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "FormPreviewReport";
+            this.Load += new System.EventHandler(this.FormPreviewReport_Load);
+            this.groupBox1.ResumeLayout(false);
+            this.groupBox1.PerformLayout();
             this.panel3.ResumeLayout(false);
             this.groupBox18.ResumeLayout(false);
             this.groupBox18.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxSaved1)).EndInit();
             this.groupBox17.ResumeLayout(false);
             this.groupBox17.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxSaved2)).EndInit();
             this.groupBox16.ResumeLayout(false);
             this.groupBox16.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxSaved3)).EndInit();
             this.groupBox15.ResumeLayout(false);
             this.groupBox15.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxSaved4)).EndInit();
             this.groupBox13.ResumeLayout(false);
             this.groupBox13.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxSaved5)).EndInit();
             this.groupBox12.ResumeLayout(false);
             this.groupBox12.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxSaved7)).EndInit();
             this.groupBox11.ResumeLayout(false);
             this.groupBox11.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxSaved8)).EndInit();
             this.groupBox10.ResumeLayout(false);
             this.groupBox10.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxSaved1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxSaved2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxSaved3)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxSaved4)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxSaved5)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxSaved7)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxSaved8)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxSaved9)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
@@ -827,7 +854,6 @@ namespace EndoscopicSystem.V2.Forms
 
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.GroupBox groupBox1;
-        private System.Windows.Forms.ListBox listBox1;
         private System.Windows.Forms.Panel panel3;
         private System.Windows.Forms.GroupBox groupBox18;
         private System.Windows.Forms.Button btnPictureBoxSaved1;
@@ -879,7 +905,10 @@ namespace EndoscopicSystem.V2.Forms
         private System.Windows.Forms.PictureBox pictureBoxSaved9;
         private System.Windows.Forms.Button btnSave;
         private System.Windows.Forms.Button btnDelete;
-        private System.Windows.Forms.Button btnReport;
         private System.Windows.Forms.Button btnReset;
+        private System.Windows.Forms.Button btnNext;
+        private System.Windows.Forms.ListView listView1;
+        private System.Windows.Forms.ColumnHeader ImageName;
+        private System.Windows.Forms.Label label1;
     }
 }
