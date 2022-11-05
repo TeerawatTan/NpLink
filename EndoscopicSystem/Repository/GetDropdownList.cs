@@ -32,120 +32,6 @@ namespace EndoscopicSystem.Repository
             list.Insert(0, new IndicationDropdown() { IndicationID = 0, IndicationName = "" });
             return list;
         }
-        public List<AnalCanal> GetAnalCanalList()
-        {
-            var list = db.AnalCanals.ToList();
-            //list.Insert(0, new AnalCanal() { AnalCanalID = 0, AnalCanalName = "N/A" });
-            return list;
-        }
-        public List<Rectum> GetRectumList()
-        {
-            var list = db.Rectums.ToList();
-            //list.Insert(0, new Rectum() { RectumID = 0, RectumName = "N/A" });
-            return list;
-        }
-        public List<SigmoidColon> GetSigmoidColonList()
-        {
-            var list = db.SigmoidColons.ToList();
-            //list.Insert(0, new SigmoidColon() { SigmoidColonID = 0, SigmoidColonName = "N/A" });
-            return list;
-        }
-        public List<DescendingColon> GetDescendingColonList()
-        {
-            var list = db.DescendingColons.ToList();
-            //list.Insert(0, new DescendingColon() { DescendingColonID = 0, DescendingColonName = "N/A" });
-            return list;
-        }
-        public List<SplenicFlexure> GetSplenicFlexureList()
-        {
-            var list = db.SplenicFlexures.ToList();
-            //list.Insert(0, new SplenicFlexure() { SplenicFlexureID = 0, SplenicFlexureName = "N/A" });
-            return list;
-        }
-
-        public List<TransverseColon> GetTransverseColonList()
-        {
-            var list = db.TransverseColons.ToList();
-            //list.Insert(0, new TransverseColon() { TransverseColonID = 0, TransverseColonName = "N/A" });
-            return list;
-        }
-
-        public List<HepaticFlexure> GetHepaticFlexureList()
-        {
-            var list = db.HepaticFlexures.ToList();
-            //list.Insert(0, new HepaticFlexure() { HepaticFlexureID = 0, HepaticFlexureName = "N/A" });
-            return list;
-        }
-
-        public List<AscendingColon> GetAscendingColonList()
-        {
-            var list = db.AscendingColons.ToList();
-            //list.Insert(0, new AscendingColon() { AscendingColonID = 0, AscendingColonName = "N/A" });
-            return list;
-        }
-
-        public List<IleocecalValve> GetIleocecalValveList()
-        {
-            var list = db.IleocecalValves.ToList();
-            //list.Insert(0, new IleocecalValve() { IleocecalValveID = 0, IleocecalValveName = "N/A" });
-            return list;
-        }
-        public List<Cecum> GetCecumList()
-        {
-            var list = db.Cecums.ToList();
-            //list.Insert(0, new Cecum() { CecumID = 0, CecumName = "N/A" });
-            return list;
-        }
-
-        public List<TerminalIleum> GetTerminalIleumList()
-        {
-            var list = db.TerminalIleums.ToList();
-            //list.Insert(0, new TerminalIleum() { TerminalIleumID = 0, TerminalIleumName = "N/A" });
-            return list;
-        }
-
-        public List<Esophagu> GetEsophagusList()
-        {
-            var list = db.Esophagus.ToList();
-            //list.Insert(0, new Esophagu() { EsophagusID = 0, EsophagusName = "N/A" });
-            return list;
-        }
-
-        public List<Stomach> GetStomachList()
-        {
-            var list = db.Stomaches.ToList();
-            //list.Insert(0, new Stomach() { StomachID = 0, StomachName = "N/A" });
-            return list;
-        }
-
-        public List<Duodenum> GetDuodenumList()
-        {
-            var list = db.Duodenums.ToList();
-            //list.Insert(0, new Duodenum() { DuodenumID = 0, DuodenumName = "N/A" });
-            return list;
-        }
-
-        public List<AmpullaOfVater> GetAmpullaList()
-        {
-            var list = db.AmpullaOfVaters.ToList();
-            //list.Insert(0, new AmpullaOfVater() { AmpullaOfVaterID = 0, AmpullaOfVaterName = "N/A" });
-            return list;
-        }
-
-        public List<Cholangiogram> GetCholangiogramList()
-        {
-            var list = db.Cholangiograms.ToList();
-            //list.Insert(0, new Cholangiogram() { CholangiogramID = 0, CholangiogramName = "N/A" });
-            return list;
-        }
-
-        public List<Pancreatogram> GetPancreatogramList()
-        {
-            var list = db.Pancreatograms.ToList();
-            //list.Insert(0, new Pancreatogram() { PancreatogramID = 0, PancreatogramName = "N/A" });
-            return list;
-        }
-
         public List<Room> GetRoomList()
         {
             var list = db.Rooms.Where(x => x.IsActive.Value).ToList();
@@ -158,143 +44,80 @@ namespace EndoscopicSystem.Repository
             list.Insert(0, new Nurse() { NurseID = 0, NameTH = "", NameEN = "" });
             return list;
         }
-
-        public List<Oropharynx> GetOropharynxList()
+        public List<OpdList> GetOpdLists()
         {
-            var list = db.Oropharynges.ToList();
-            //list.Insert(0, new Oropharynx() { OropharynxID = 0, OropharynxName = "N/A" });
+            var list = db.OpdLists.ToList();
+            list.Insert(0, new OpdList() { OpdID = 0, OpdName = "" });
             return list;
         }
-
-        public List<EGJunction> GetEGJunctionList()
+        public List<WardList> GetWardLists()
         {
-            var list = db.EGJunctions.ToList();
-            //list.Insert(0, new EGJunction() { EGJunctionID = 0, EGJunctionName = "N/A" });
+            var list = db.WardLists.ToList();
+            list.Insert(0, new WardList() { WardID = 0, WardName = "" });
             return list;
         }
-
-        public List<Cardia> GetCardiaList()
+        public List<AnesthesistMethod> GetAnesthesistMethods()
         {
-            var list = db.Cardias.ToList();
-            //list.Insert(0, new Cardia() { CardiaID = 0, CardiaName = "N/A" });
+            var list = db.AnesthesistMethods.ToList();
+            list.Insert(0, new AnesthesistMethod() { ID = 0, Name = "" });
             return list;
         }
-
-        public List<Fundu> GetFundusList()
+        public List<ICD9> GetICD9s()
         {
-            var list = db.Fundus.ToList();
-            //list.Insert(0, new Fundu() { FundusID = 0, FundusName = "N/A" });
+            var list = db.ICD9.ToList();
+            list.Insert(0, new ICD9() { ID = 0, Name = "" });
             return list;
         }
-
-        public List<Body> GetBodyList()
+        public List<ICD10> GetICD10s()
         {
-            var list = db.Bodies.ToList();
-            //list.Insert(0, new Body() { BodyID = 0, BodyName = "N/A" });
+            var list = db.ICD10.ToList();
+            list.Insert(0, new ICD10() { ID = 0, Name = "" });
             return list;
         }
-
-        public List<Antrum> GetAntrumList()
+        public List<Anesthesist> GetAnesthesists()
         {
-            var list = db.Antrums.ToList();
-            //list.Insert(0, new Antrum() { AntrumID = 0, AntrumName = "N/A" });
+            var list = db.Anesthesists.ToList();
+            list.Insert(0, new Anesthesist() { AnesthesistID = 0, NameTH = "" });
             return list;
         }
-
-        public List<Pyloru> GetPylorusList()
-        {
-            var list = db.Pylorus.ToList();
-            //list.Insert(0, new Pyloru() { PylorusID = 0, PylorusName = "N/A" });
-            return list;
-        }
-
-        public List<DuodenalBulb> GetDuodenalBulbList()
-        {
-            var list = db.DuodenalBulbs.ToList();
-            //list.Insert(0, new DuodenalBulb() { DuodenalBulbID = 0, DuodenalBulbName = "N/A" });
-            return list;
-        }
-
-        public List<SecondPart> GetSecondPartList()
-        {
-            var list = db.SecondParts.ToList();
-            //list.Insert(0, new SecondPart() { SecondPartID = 0, SecondPartName = "N/A" });
-            return list;
-        }
-
-        public List<VocalCord> GetVocalCordList()
-        {
-            var list = db.VocalCords.ToList();
-            //list.Insert(0, new VocalCord() { VocalCordID = 0, VocalCordName = "N/A" });
-            return list;
-        }
-        public List<Trachea> GetTracheaList()
-        {
-            var list = db.Tracheas.ToList();
-            //list.Insert(0, new Trachea() { TracheaID = 0, TracheaName = "N/A" });
-            return list;
-        }
-        public List<Carina> GetCarinaList()
-        {
-            var list = db.Carinas.ToList();
-            //list.Insert(0, new Carina() { CarinaID = 0, CarinaName = "N/A" });
-            return list;
-        }
-        public List<RightMain> GetRightMainList()
-        {
-            var list = db.RightMains.ToList();
-            //list.Insert(0, new RightMain() { RightMainID = 0, RightMainName = "N/A" });
-            return list;
-        }
-        public List<RightIntermideate> GetRightIntermideateList()
-        {
-            var list = db.RightIntermideates.ToList();
-            //list.Insert(0, new RightIntermideate() { RightIntermideateID = 0, RightIntermideateName = "N/A" });
-            return list;
-        }
-        public List<RUL> GetRULList()
-        {
-            var list = db.RULs.ToList();
-            //list.Insert(0, new RUL() { RULID = 0, RULName = "N/A" });
-            return list;
-        }
-        public List<RML> GetRMLList()
-        {
-            var list = db.RMLs.ToList();
-            //list.Insert(0, new RML() { RMLID = 0, RMLName = "N/A" });
-            return list;
-        }
-        public List<RLL> GetRLLList()
-        {
-            var list = db.RLLs.ToList();
-            //list.Insert(0, new RLL() { RLLID = 0, RLLName = "N/A" });
-            return list;
-        }
-        public List<LeftMain> GetLeftMainList()
-        {
-            var list = db.LeftMains.ToList();
-            //list.Insert(0, new LeftMain() { LeftMainID = 0, LeftMainName = "N/A" });
-            return list;
-        }
-        public List<LUL> GetLULList()
-        {
-            var list = db.LULs.ToList();
-            //list.Insert(0, new LUL() { LULID = 0, LULName = "N/A" });
-            return list;
-        }
-        public List<Lingular> GetLingularList()
-        {
-            var list = db.Lingulars.ToList();
-            //list.Insert(0, new Lingular() { LingularID = 0, LingularName = "N/A" });
-            return list;
-        }
-        public List<LLL> GetLLLList()
-        {
-            var list = db.LLLs.ToList();
-            //list.Insert(0, new LLL() { LLLID = 0, LLLName = "N/A" });
-            return list;
-        }
-
+        public List<AnalCanal> GetAnalCanalList() => db.AnalCanals.ToList();
+        public List<Rectum> GetRectumList() => db.Rectums.ToList();
+        public List<SigmoidColon> GetSigmoidColonList() => db.SigmoidColons.ToList();
+        public List<DescendingColon> GetDescendingColonList() => db.DescendingColons.ToList();
+        public List<SplenicFlexure> GetSplenicFlexureList() => db.SplenicFlexures.ToList();
+        public List<TransverseColon> GetTransverseColonList() => db.TransverseColons.ToList();
+        public List<HepaticFlexure> GetHepaticFlexureList() => db.HepaticFlexures.ToList();
+        public List<AscendingColon> GetAscendingColonList() => db.AscendingColons.ToList();
+        public List<IleocecalValve> GetIleocecalValveList() => db.IleocecalValves.ToList();
+        public List<Cecum> GetCecumList() => db.Cecums.ToList();
+        public List<TerminalIleum> GetTerminalIleumList() => db.TerminalIleums.ToList();
+        public List<Esophagu> GetEsophagusList() => db.Esophagus.ToList();
+        public List<Stomach> GetStomachList() => db.Stomaches.ToList();
+        public List<Duodenum> GetDuodenumList() => db.Duodenums.ToList();
+        public List<AmpullaOfVater> GetAmpullaList() => db.AmpullaOfVaters.ToList();
+        public List<Cholangiogram> GetCholangiogramList() => db.Cholangiograms.ToList();
+        public List<Pancreatogram> GetPancreatogramList() => db.Pancreatograms.ToList();
+        public List<Oropharynx> GetOropharynxList() => db.Oropharynges.ToList();
+        public List<EGJunction> GetEGJunctionList() => db.EGJunctions.ToList();
+        public List<Cardia> GetCardiaList() => db.Cardias.ToList();
+        public List<Fundu> GetFundusList() => db.Fundus.ToList();
+        public List<Body> GetBodyList() => db.Bodies.ToList();
+        public List<Antrum> GetAntrumList() => db.Antrums.ToList();
+        public List<Pyloru> GetPylorusList() => db.Pylorus.ToList();
+        public List<DuodenalBulb> GetDuodenalBulbList() => db.DuodenalBulbs.ToList();
+        public List<SecondPart> GetSecondPartList() => db.SecondParts.ToList();
+        public List<VocalCord> GetVocalCordList() => db.VocalCords.ToList();
+        public List<Trachea> GetTracheaList() => db.Tracheas.ToList();
+        public List<Carina> GetCarinaList() => db.Carinas.ToList();
+        public List<RightMain> GetRightMainList() => db.RightMains.ToList();
+        public List<RightIntermideate> GetRightIntermideateList() => db.RightIntermideates.ToList();
+        public List<RUL> GetRULList() => db.RULs.ToList();
+        public List<RML> GetRMLList() => db.RMLs.ToList();
+        public List<RLL> GetRLLList() => db.RLLs.ToList();
+        public List<LeftMain> GetLeftMainList() => db.LeftMains.ToList();
+        public List<LUL> GetLULList() => db.LULs.ToList();
+        public List<Lingular> GetLingularList() => db.Lingulars.ToList();
+        public List<LLL> GetLLLList() => db.LLLs.ToList();
         public List<NasalCavity> GetNasalCavities() => db.NasalCavities.ToList();
         public List<Septum> GetSeptums() => db.Septums.ToList();
         public List<Nasopharynx> GetNasopharynxes() => db.Nasopharynges.ToList();

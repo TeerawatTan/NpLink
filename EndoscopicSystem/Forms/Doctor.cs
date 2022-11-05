@@ -42,14 +42,17 @@ namespace EndoscopicSystem
                         data.NameTH = txtNameTH.Text;
                         data.NameEN = txtNameEN.Text;
                         data.IsActive = chkEnable.Checked;
+                        data.UpdateBy = UserID;
+                        data.UpdateDate = DateTime.Now;
                     }
                     else
                     {
                         Doctor doctor = new Doctor();
                         doctor.NameEN = txtNameEN.Text;
                         doctor.NameTH = txtNameTH.Text;
-                        doctor.CreateDate = DateTime.Now;
                         doctor.IsActive = chkEnable.Checked;
+                        doctor.CreateBy = UserID;
+                        doctor.CreateDate = DateTime.Now;
 
                         db.Doctors.Add(doctor);
                     }

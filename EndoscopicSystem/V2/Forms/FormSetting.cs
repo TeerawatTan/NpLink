@@ -72,5 +72,29 @@ namespace EndoscopicSystem.V2.Forms
             OpenChildForm(new NurseForm(_id));
             ActiveMenuButton(sender);
         }
+
+        private void menuOPD_Click(object sender, EventArgs e)
+        {
+            OpenChildForm(new FormOpdSetting());
+            ActiveMenuButton(sender);
+        }
+
+        private void menuWard_Click(object sender, EventArgs e)
+        {
+            OpenChildForm(new FormWardSetting());
+            ActiveMenuButton(sender);
+        }
+
+        private void menuAnesthesist_Click(object sender, EventArgs e)
+        {
+            OpenChildForm(new FormAnesthesistSetting(_id));
+            ActiveMenuButton(sender);
+        }
+
+        private void menuAnesthesistMethod_Click(object sender, EventArgs e)
+        {
+            OpenChildForm(new FormAnesthesistMethodSetting(_id));
+            ActiveMenuButton(sender);
+        }
     }
 }

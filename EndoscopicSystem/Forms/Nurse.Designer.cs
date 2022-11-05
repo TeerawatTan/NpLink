@@ -43,8 +43,8 @@
             this.label1 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
             this.panel2 = new System.Windows.Forms.Panel();
-            this.label4 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
+            this.label4 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.gridNurse)).BeginInit();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
@@ -60,7 +60,7 @@
             this.gridNurse.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.gridNurse.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.gridNurse.Location = new System.Drawing.Point(9, 320);
-            this.gridNurse.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.gridNurse.Margin = new System.Windows.Forms.Padding(2);
             this.gridNurse.Name = "gridNurse";
             this.gridNurse.ReadOnly = true;
             this.gridNurse.RowHeadersWidth = 51;
@@ -85,7 +85,7 @@
             this.btnSearch.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(128)))));
             this.btnSearch.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
             this.btnSearch.Location = new System.Drawing.Point(570, 16);
-            this.btnSearch.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnSearch.Margin = new System.Windows.Forms.Padding(2);
             this.btnSearch.Name = "btnSearch";
             this.btnSearch.Size = new System.Drawing.Size(74, 28);
             this.btnSearch.TabIndex = 7;
@@ -97,7 +97,7 @@
             // 
             this.txtFullname.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
             this.txtFullname.Location = new System.Drawing.Point(81, 19);
-            this.txtFullname.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtFullname.Margin = new System.Windows.Forms.Padding(2);
             this.txtFullname.Name = "txtFullname";
             this.txtFullname.Size = new System.Drawing.Size(480, 23);
             this.txtFullname.TabIndex = 6;
@@ -117,7 +117,7 @@
             // 
             this.btnReset.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
             this.btnReset.Location = new System.Drawing.Point(492, 96);
-            this.btnReset.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnReset.Margin = new System.Windows.Forms.Padding(2);
             this.btnReset.Name = "btnReset";
             this.btnReset.Size = new System.Drawing.Size(70, 43);
             this.btnReset.TabIndex = 5;
@@ -129,7 +129,7 @@
             // 
             this.txtNurseID.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
             this.txtNurseID.Location = new System.Drawing.Point(11, 106);
-            this.txtNurseID.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtNurseID.Margin = new System.Windows.Forms.Padding(2);
             this.txtNurseID.Name = "txtNurseID";
             this.txtNurseID.ReadOnly = true;
             this.txtNurseID.Size = new System.Drawing.Size(50, 23);
@@ -140,7 +140,7 @@
             // 
             this.txtNameEN.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
             this.txtNameEN.Location = new System.Drawing.Point(135, 8);
-            this.txtNameEN.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtNameEN.Margin = new System.Windows.Forms.Padding(2);
             this.txtNameEN.Name = "txtNameEN";
             this.txtNameEN.Size = new System.Drawing.Size(509, 26);
             this.txtNameEN.TabIndex = 1;
@@ -148,10 +148,12 @@
             // chkEnable
             // 
             this.chkEnable.AutoSize = true;
+            this.chkEnable.Checked = true;
+            this.chkEnable.CheckState = System.Windows.Forms.CheckState.Checked;
             this.chkEnable.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
             this.chkEnable.ForeColor = System.Drawing.Color.Red;
             this.chkEnable.Location = new System.Drawing.Point(135, 96);
-            this.chkEnable.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.chkEnable.Margin = new System.Windows.Forms.Padding(2);
             this.chkEnable.Name = "chkEnable";
             this.chkEnable.Size = new System.Drawing.Size(78, 24);
             this.chkEnable.TabIndex = 3;
@@ -163,7 +165,7 @@
             this.btnSave.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
             this.btnSave.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
             this.btnSave.Location = new System.Drawing.Point(575, 96);
-            this.btnSave.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnSave.Margin = new System.Windows.Forms.Padding(2);
             this.btnSave.Name = "btnSave";
             this.btnSave.Size = new System.Drawing.Size(70, 43);
             this.btnSave.TabIndex = 4;
@@ -186,7 +188,7 @@
             // 
             this.txtNameTH.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
             this.txtNameTH.Location = new System.Drawing.Point(135, 47);
-            this.txtNameTH.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtNameTH.Margin = new System.Windows.Forms.Padding(2);
             this.txtNameTH.Name = "txtNameTH";
             this.txtNameTH.Size = new System.Drawing.Size(509, 26);
             this.txtNameTH.TabIndex = 2;
@@ -215,7 +217,7 @@
             this.panel1.Controls.Add(this.btnSave);
             this.panel1.Controls.Add(this.chkEnable);
             this.panel1.Location = new System.Drawing.Point(10, 69);
-            this.panel1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.panel1.Margin = new System.Windows.Forms.Padding(2);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(700, 143);
             this.panel1.TabIndex = 25;
@@ -233,17 +235,6 @@
             this.panel2.Size = new System.Drawing.Size(700, 64);
             this.panel2.TabIndex = 26;
             // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
-            this.label4.Location = new System.Drawing.Point(11, 214);
-            this.label4.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(53, 17);
-            this.label4.TabIndex = 27;
-            this.label4.Text = "Search";
-            // 
             // label3
             // 
             this.label3.AutoSize = true;
@@ -254,6 +245,17 @@
             this.label3.Size = new System.Drawing.Size(45, 17);
             this.label3.TabIndex = 24;
             this.label3.Text = "Name";
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
+            this.label4.Location = new System.Drawing.Point(11, 214);
+            this.label4.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(53, 17);
+            this.label4.TabIndex = 27;
+            this.label4.Text = "Search";
             // 
             // NurseForm
             // 
@@ -267,7 +269,7 @@
             this.Controls.Add(this.label6);
             this.Controls.Add(this.gridNurse);
             this.Controls.Add(this.label2);
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "NurseForm";
             this.Load += new System.EventHandler(this.NurseForm_Load);
             ((System.ComponentModel.ISupportInitialize)(this.gridNurse)).EndInit();

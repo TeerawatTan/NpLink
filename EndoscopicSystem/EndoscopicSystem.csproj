@@ -135,6 +135,12 @@
     <Compile Include="Entities\Anesthesia.cs">
       <DependentUpon>DBEndoscopic.tt</DependentUpon>
     </Compile>
+    <Compile Include="Entities\Anesthesist.cs">
+      <DependentUpon>DBEndoscopic.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Entities\AnesthesistMethod.cs">
+      <DependentUpon>DBEndoscopic.tt</DependentUpon>
+    </Compile>
     <Compile Include="Entities\Antrum.cs">
       <DependentUpon>DBEndoscopic.tt</DependentUpon>
     </Compile>
@@ -249,6 +255,12 @@
     <Compile Include="Entities\Hospital.cs">
       <DependentUpon>DBEndoscopic.tt</DependentUpon>
     </Compile>
+    <Compile Include="Entities\ICD10.cs">
+      <DependentUpon>DBEndoscopic.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Entities\ICD9.cs">
+      <DependentUpon>DBEndoscopic.tt</DependentUpon>
+    </Compile>
     <Compile Include="Entities\IleocecalValve.cs">
       <DependentUpon>DBEndoscopic.tt</DependentUpon>
     </Compile>
@@ -286,6 +298,9 @@
       <DependentUpon>DBEndoscopic.tt</DependentUpon>
     </Compile>
     <Compile Include="Entities\Nurse.cs">
+      <DependentUpon>DBEndoscopic.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Entities\OpdList.cs">
       <DependentUpon>DBEndoscopic.tt</DependentUpon>
     </Compile>
     <Compile Include="Entities\Oropharynx.cs">
@@ -403,6 +418,9 @@
       <DependentUpon>DBEndoscopic.tt</DependentUpon>
     </Compile>
     <Compile Include="Entities\v_PatientList.cs">
+      <DependentUpon>DBEndoscopic.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Entities\WardList.cs">
       <DependentUpon>DBEndoscopic.tt</DependentUpon>
     </Compile>
     <Compile Include="Forms\Dashboard.cs">
@@ -538,6 +556,18 @@
     <Compile Include="Repository\ProcedureListRepository.cs" />
     <Compile Include="Repository\UserRepository.cs" />
     <Compile Include="Settings.cs" />
+    <Compile Include="V2\Forms\FormAnesthesistMethodSetting.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="V2\Forms\FormAnesthesistMethodSetting.Designer.cs">
+      <DependentUpon>FormAnesthesistMethodSetting.cs</DependentUpon>
+    </Compile>
+    <Compile Include="V2\Forms\FormAnesthesistSetting.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="V2\Forms\FormAnesthesistSetting.Designer.cs">
+      <DependentUpon>FormAnesthesistSetting.cs</DependentUpon>
+    </Compile>
     <Compile Include="V2\Forms\FormHome.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -555,6 +585,12 @@
     </Compile>
     <Compile Include="V2\Forms\FormLogin.Designer.cs">
       <DependentUpon>FormLogin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="V2\Forms\FormOpdSetting.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="V2\Forms\FormOpdSetting.Designer.cs">
+      <DependentUpon>FormOpdSetting.cs</DependentUpon>
     </Compile>
     <Compile Include="V2\Forms\FormPatientConfirm.cs">
       <SubType>Form</SubType>
@@ -579,6 +615,12 @@
     </Compile>
     <Compile Include="V2\Forms\FormSetting.Designer.cs">
       <DependentUpon>FormSetting.cs</DependentUpon>
+    </Compile>
+    <Compile Include="V2\Forms\FormWardSetting.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="V2\Forms\FormWardSetting.Designer.cs">
+      <DependentUpon>FormWardSetting.cs</DependentUpon>
     </Compile>
     <Content Include="Images\V2\iStock-1089688016.jpg" />
     <Content Include="Images\V2\iStock-1136980060.jpg" />
@@ -691,6 +733,12 @@
       <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
       <LastGenOutput>EntReport.cs</LastGenOutput>
     </Content>
+    <EmbeddedResource Include="V2\Forms\FormAnesthesistMethodSetting.resx">
+      <DependentUpon>FormAnesthesistMethodSetting.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="V2\Forms\FormAnesthesistSetting.resx">
+      <DependentUpon>FormAnesthesistSetting.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="V2\Forms\FormHome.resx">
       <DependentUpon>FormHome.cs</DependentUpon>
     </EmbeddedResource>
@@ -699,6 +747,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="V2\Forms\FormLogin.resx">
       <DependentUpon>FormLogin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="V2\Forms\FormOpdSetting.resx">
+      <DependentUpon>FormOpdSetting.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="V2\Forms\FormPatientConfirm.resx">
       <DependentUpon>FormPatientConfirm.cs</DependentUpon>
@@ -711,6 +762,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="V2\Forms\FormSetting.resx">
       <DependentUpon>FormSetting.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="V2\Forms\FormWardSetting.resx">
+      <DependentUpon>FormWardSetting.cs</DependentUpon>
     </EmbeddedResource>
     <EntityDeploy Include="Entities\DBEndoscopic.edmx">
       <Generator>EntityModelCodeGenerator</Generator>

@@ -60,7 +60,7 @@
             this.gridDoctor.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.gridDoctor.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.gridDoctor.Location = new System.Drawing.Point(9, 320);
-            this.gridDoctor.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.gridDoctor.Margin = new System.Windows.Forms.Padding(2);
             this.gridDoctor.Name = "gridDoctor";
             this.gridDoctor.ReadOnly = true;
             this.gridDoctor.RowHeadersWidth = 51;
@@ -74,7 +74,7 @@
             this.btnSearch.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(128)))));
             this.btnSearch.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
             this.btnSearch.Location = new System.Drawing.Point(546, 16);
-            this.btnSearch.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnSearch.Margin = new System.Windows.Forms.Padding(2);
             this.btnSearch.Name = "btnSearch";
             this.btnSearch.Size = new System.Drawing.Size(77, 28);
             this.btnSearch.TabIndex = 7;
@@ -86,7 +86,7 @@
             // 
             this.txtFullname.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
             this.txtFullname.Location = new System.Drawing.Point(76, 18);
-            this.txtFullname.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtFullname.Margin = new System.Windows.Forms.Padding(2);
             this.txtFullname.MaxLength = 255;
             this.txtFullname.Name = "txtFullname";
             this.txtFullname.Size = new System.Drawing.Size(457, 23);
@@ -106,10 +106,12 @@
             // chkEnable
             // 
             this.chkEnable.AutoSize = true;
+            this.chkEnable.Checked = true;
+            this.chkEnable.CheckState = System.Windows.Forms.CheckState.Checked;
             this.chkEnable.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
             this.chkEnable.ForeColor = System.Drawing.Color.Red;
             this.chkEnable.Location = new System.Drawing.Point(138, 98);
-            this.chkEnable.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.chkEnable.Margin = new System.Windows.Forms.Padding(2);
             this.chkEnable.Name = "chkEnable";
             this.chkEnable.Size = new System.Drawing.Size(78, 24);
             this.chkEnable.TabIndex = 3;
@@ -121,7 +123,7 @@
             this.btnSave.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
             this.btnSave.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
             this.btnSave.Location = new System.Drawing.Point(577, 98);
-            this.btnSave.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnSave.Margin = new System.Windows.Forms.Padding(2);
             this.btnSave.Name = "btnSave";
             this.btnSave.Size = new System.Drawing.Size(70, 43);
             this.btnSave.TabIndex = 4;
@@ -166,7 +168,7 @@
             // 
             this.btnReset.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
             this.btnReset.Location = new System.Drawing.Point(492, 98);
-            this.btnReset.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnReset.Margin = new System.Windows.Forms.Padding(2);
             this.btnReset.Name = "btnReset";
             this.btnReset.Size = new System.Drawing.Size(70, 43);
             this.btnReset.TabIndex = 5;
@@ -178,7 +180,7 @@
             // 
             this.txtDoctorID.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
             this.txtDoctorID.Location = new System.Drawing.Point(11, 94);
-            this.txtDoctorID.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtDoctorID.Margin = new System.Windows.Forms.Padding(2);
             this.txtDoctorID.Name = "txtDoctorID";
             this.txtDoctorID.ReadOnly = true;
             this.txtDoctorID.Size = new System.Drawing.Size(50, 23);
@@ -189,7 +191,7 @@
             // 
             this.txtNameEN.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
             this.txtNameEN.Location = new System.Drawing.Point(138, 13);
-            this.txtNameEN.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtNameEN.Margin = new System.Windows.Forms.Padding(2);
             this.txtNameEN.MaxLength = 255;
             this.txtNameEN.Name = "txtNameEN";
             this.txtNameEN.Size = new System.Drawing.Size(509, 26);
@@ -199,7 +201,7 @@
             // 
             this.txtNameTH.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
             this.txtNameTH.Location = new System.Drawing.Point(138, 48);
-            this.txtNameTH.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtNameTH.Margin = new System.Windows.Forms.Padding(2);
             this.txtNameTH.MaxLength = 255;
             this.txtNameTH.Name = "txtNameTH";
             this.txtNameTH.Size = new System.Drawing.Size(509, 26);
@@ -229,7 +231,7 @@
             this.panel1.Controls.Add(this.label5);
             this.panel1.Controls.Add(this.btnSave);
             this.panel1.Location = new System.Drawing.Point(10, 70);
-            this.panel1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.panel1.Margin = new System.Windows.Forms.Padding(2);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(680, 146);
             this.panel1.TabIndex = 19;
@@ -270,7 +272,7 @@
             this.Controls.Add(this.gridDoctor);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.label2);
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "DoctorForm";
             this.Load += new System.EventHandler(this.DoctorForm_Load);
             ((System.ComponentModel.ISupportInitialize)(this.gridDoctor)).EndInit();

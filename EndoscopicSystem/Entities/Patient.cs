@@ -39,5 +39,16 @@ namespace EndoscopicSystem.Entities
         public Nullable<int> CreateBy { get; set; }
         public Nullable<System.DateTime> UpdateDate { get; set; }
         public Nullable<int> UpdateBy { get; set; }
+        public Nullable<int> WardID { get; set; }
+        public Nullable<bool> ReferCheck { get; set; }
+        public string ReferDetail { get; set; }
+        public Nullable<int> AnesthesistID { get; set; }
+        public Nullable<int> AnesthesistMethodFirstID { get; set; }
+        public Nullable<int> AnesthesistMethodSecondID { get; set; }
+        public Nullable<int> IndicationID { get; set; }
+        public Nullable<int> PreDiagnosisFirstID { get; set; }
+        public Nullable<int> PreDiagnosisSecondID { get; set; }
+        public string Financial { get; set; }
+        public Nullable<int> OpdID { get; set; }
     }
 }

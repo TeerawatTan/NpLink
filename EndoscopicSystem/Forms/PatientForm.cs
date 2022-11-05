@@ -44,6 +44,15 @@ namespace EndoscopicSystem
             DropdownNurse(cbbNurseName2);
             DropdownNurse(cbbNurseName3);
             DropdownProcedure();
+            DropdownOPD();
+            DropdownWard();
+            DropdownAnesthesist();
+            DropdownAnesthesistMethod(cbbAnesthesiaMethod1);
+            DropdownAnesthesistMethod(cbbAnesthesiaMethod2);
+            DropdownMasterIndication();
+            DropdownPreDiagnosis(cbbPreDiagnosis1);
+            DropdownPreDiagnosis(cbbPreDiagnosis2);
+
             gridPatient.DataSource = new HistoryModel();
 
             if (!string.IsNullOrWhiteSpace(hnNo) && procedureId > 0)
@@ -211,6 +220,17 @@ namespace EndoscopicSystem
                             dtOperatingTime.Value.Second);
 
                         data.PicturePath = SavePicture() ?? data.PicturePath;
+                        data.Financial = txbFinancial.Text;
+                        data.OpdID = (int?)cbbOPD.SelectedValue;
+                        data.WardID = (int?)cbbWard.SelectedValue;
+                        data.ReferCheck = chkRefer.Checked;
+                        data.ReferDetail = txbRefer.Text;
+                        data.AnesthesistID = (int?)cbbAnesthesist.SelectedValue;
+                        data.AnesthesistMethodFirstID = (int?)cbbAnesthesiaMethod1.SelectedValue;
+                        data.AnesthesistMethodSecondID = (int?)cbbAnesthesiaMethod2.SelectedValue;
+                        data.IndicationID = (int?)cbbIndication.SelectedValue;
+                        data.PreDiagnosisFirstID = (int?)cbbPreDiagnosis1.SelectedValue;
+                        data.PreDiagnosisSecondID = (int?)cbbPreDiagnosis2.SelectedValue;
                         data.UpdateBy = UserID;
                         data.UpdateDate = DateTime.Now;
                         db.Entry(data).State = System.Data.Entity.EntityState.Modified;
@@ -262,6 +282,17 @@ namespace EndoscopicSystem
                             dtOperatingTime.Value.Minute,
                             dtOperatingTime.Value.Second);
                         patient.PicturePath = SavePicture() ?? patient.PicturePath;
+                        patient.Financial = txbFinancial.Text;
+                        patient.OpdID = (int?)cbbOPD.SelectedValue;
+                        patient.WardID = (int?)cbbWard.SelectedValue;
+                        patient.ReferCheck = chkRefer.Checked;
+                        patient.ReferDetail = txbRefer.Text;
+                        patient.AnesthesistID = (int?)cbbAnesthesist.SelectedValue;
+                        patient.AnesthesistMethodFirstID = (int?)cbbAnesthesiaMethod1.SelectedValue;
+                        patient.AnesthesistMethodSecondID = (int?)cbbAnesthesiaMethod2.SelectedValue;
+                        patient.IndicationID = (int?)cbbIndication.SelectedValue;
+                        patient.PreDiagnosisFirstID = (int?)cbbPreDiagnosis1.SelectedValue;
+                        patient.PreDiagnosisSecondID = (int?)cbbPreDiagnosis2.SelectedValue;
                         patient.IsActive = true;
                         patient.CreateBy = UserID;
                         patient.CreateDate = DateTime.Now;
@@ -286,6 +317,14 @@ namespace EndoscopicSystem
                     cbbNurseName3.SelectedIndex = 0;
                     cbbSex.SelectedIndex = 0;
                     cbbStation.SelectedIndex = 0;
+                    cbbOPD.SelectedIndex = 0;
+                    cbbWard.SelectedIndex = 0;
+                    cbbAnesthesist.SelectedIndex = 0;
+                    cbbAnesthesiaMethod1.SelectedIndex = 0;
+                    cbbAnesthesiaMethod2.SelectedIndex = 0;
+                    cbbIndication.SelectedIndex = 0;
+                    cbbPreDiagnosis1.SelectedIndex = 0;
+                    cbbPreDiagnosis2.SelectedIndex = 0;
                     MessageBox.Show(status);
                     gridPatient.DataSource = new HistoryModel();
                 }
@@ -460,7 +499,48 @@ namespace EndoscopicSystem
             cbbProcedureList.DataSource = list.GetProcedureList();
             cbbProcedureList.SelectedIndex = 0;
         }
-
+        public void DropdownOPD()
+        {
+            cbbOPD.ValueMember = "OpdID";
+            cbbOPD.DisplayMember = "OpdName";
+            cbbOPD.DataSource = list.GetOpdLists();
+            cbbOPD.SelectedIndex = 0;
+        }
+        public void DropdownWard()
+        {
+            cbbWard.ValueMember = "WardID";
+            cbbWard.DisplayMember = "WardName";
+            cbbWard.DataSource = list.GetWardLists();
+            cbbWard.SelectedIndex = 0;
+        }
+        public void DropdownAnesthesist()
+        {
+            cbbAnesthesist.ValueMember = "AnesthesistID";
+            cbbAnesthesist.DisplayMember = "NameTH";
+            cbbAnesthesist.DataSource = list.GetAnesthesists();
+            cbbAnesthesist.SelectedIndex = 0;
+        }
+        public void DropdownAnesthesistMethod(ComboBox comboBox)
+        {
+            comboBox.ValueMember = "ID";
+            comboBox.DisplayMember = "Name";
+            comboBox.DataSource = list.GetAnesthesistMethods();
+            comboBox.SelectedIndex = 0;
+        }
+        public void DropdownMasterIndication()
+        {
+            cbbIndication.ValueMember = "IndicationID";
+            cbbIndication.DisplayMember = "IndicationName";
+            cbbIndication.DataSource = list.GetIndicationList();
+            cbbIndication.SelectedIndex = 0;
+        }
+        public void DropdownPreDiagnosis(ComboBox comboBox)
+        {
+            comboBox.ValueMember = "ID";
+            comboBox.DisplayMember = "Name";
+            comboBox.DataSource = list.GetICD10s();
+            comboBox.SelectedIndex = 0;
+        }
         #endregion
 
         private void btnBrowse_Click(object sender, EventArgs e)
@@ -557,6 +637,42 @@ namespace EndoscopicSystem
         private void PatientForm_FormClosed(object sender, FormClosedEventArgs e)
         {
             
+        }
+
+        private void cbbOPD_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if (cbbOPD.SelectedIndex > 0)
+            {
+                chkOPD.Checked = true;
+            }
+            else
+            {
+                chkOPD.Checked = false;
+            }
+        }
+
+        private void cbbWard_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if (cbbWard.SelectedIndex > 0)
+            {
+                chkWard.Checked = true;
+            }
+            else
+            {
+                chkWard.Checked = false;
+            }
+        }
+
+        private void txbRefer_KeyUp(object sender, KeyEventArgs e)
+        {
+            if (txbRefer.TextLength > 0)
+            {
+                chkRefer.Checked = true;
+            }
+            else
+            {
+                chkRefer.Checked = false;
+            }
         }
     }
 

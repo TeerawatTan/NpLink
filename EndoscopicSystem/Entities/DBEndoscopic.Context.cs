@@ -110,6 +110,12 @@ namespace EndoscopicSystem.Entities
         public virtual DbSet<Uvula> Uvulas { get; set; }
         public virtual DbSet<Vallecula> Valleculas { get; set; }
         public virtual DbSet<Finding> Findings { get; set; }
+        public virtual DbSet<OpdList> OpdLists { get; set; }
+        public virtual DbSet<WardList> WardLists { get; set; }
+        public virtual DbSet<Anesthesist> Anesthesists { get; set; }
+        public virtual DbSet<AnesthesistMethod> AnesthesistMethods { get; set; }
+        public virtual DbSet<ICD10> ICD10 { get; set; }
+        public virtual DbSet<ICD9> ICD9 { get; set; }
     
         public virtual ObjectResult<BrochoscopyReport_Result> BrochoscopyReport(string hn, Nullable<int> procedure, Nullable<int> endoscopicId)
         {

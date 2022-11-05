@@ -31,14 +31,14 @@ namespace EndoscopicSystem.V2.Forms
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormHome));
             this.panel1 = new System.Windows.Forms.Panel();
-            this.pictureBox9 = new System.Windows.Forms.PictureBox();
-            this.pictureBox10 = new System.Windows.Forms.PictureBox();
-            this.pictureBox4 = new System.Windows.Forms.PictureBox();
-            this.pictureBox5 = new System.Windows.Forms.PictureBox();
-            this.pictureBox6 = new System.Windows.Forms.PictureBox();
-            this.pictureBox8 = new System.Windows.Forms.PictureBox();
-            this.pictureBox2 = new System.Windows.Forms.PictureBox();
-            this.pictureBox3 = new System.Windows.Forms.PictureBox();
+            this.pictureBox_PACSSetting = new System.Windows.Forms.PictureBox();
+            this.pictureBox_Statistic = new System.Windows.Forms.PictureBox();
+            this.pictureBox_HospitalSetting = new System.Windows.Forms.PictureBox();
+            this.pictureBox_CameraSetting = new System.Windows.Forms.PictureBox();
+            this.pictureBox_PhysicainList = new System.Windows.Forms.PictureBox();
+            this.pictureBox_Setting = new System.Windows.Forms.PictureBox();
+            this.pictureBox_SeaarchPatient = new System.Windows.Forms.PictureBox();
+            this.pictureBox_EndoscopyRoom = new System.Windows.Forms.PictureBox();
             this.pictureBox_Patient = new System.Windows.Forms.PictureBox();
             this.lb_PACSSetting = new System.Windows.Forms.Label();
             this.lb_Statistic = new System.Windows.Forms.Label();
@@ -55,20 +55,22 @@ namespace EndoscopicSystem.V2.Forms
             this.pictureBox_logo = new System.Windows.Forms.PictureBox();
             this.pictureBox7 = new System.Windows.Forms.PictureBox();
             this.label7 = new System.Windows.Forms.Label();
+            this.pictureBox5 = new System.Windows.Forms.PictureBox();
             this.panel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox9)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox10)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox8)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox_PACSSetting)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox_Statistic)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox_HospitalSetting)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox_CameraSetting)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox_PhysicainList)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox_Setting)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox_SeaarchPatient)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox_EndoscopyRoom)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox_Patient)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox_Dashboard)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox11)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox_logo)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
@@ -77,14 +79,14 @@ namespace EndoscopicSystem.V2.Forms
             | System.Windows.Forms.AnchorStyles.Right)));
             this.panel1.AutoScroll = true;
             this.panel1.BackColor = System.Drawing.Color.Transparent;
-            this.panel1.Controls.Add(this.pictureBox9);
-            this.panel1.Controls.Add(this.pictureBox10);
-            this.panel1.Controls.Add(this.pictureBox4);
-            this.panel1.Controls.Add(this.pictureBox5);
-            this.panel1.Controls.Add(this.pictureBox6);
-            this.panel1.Controls.Add(this.pictureBox8);
-            this.panel1.Controls.Add(this.pictureBox2);
-            this.panel1.Controls.Add(this.pictureBox3);
+            this.panel1.Controls.Add(this.pictureBox_PACSSetting);
+            this.panel1.Controls.Add(this.pictureBox_Statistic);
+            this.panel1.Controls.Add(this.pictureBox_HospitalSetting);
+            this.panel1.Controls.Add(this.pictureBox_CameraSetting);
+            this.panel1.Controls.Add(this.pictureBox_PhysicainList);
+            this.panel1.Controls.Add(this.pictureBox_Setting);
+            this.panel1.Controls.Add(this.pictureBox_SeaarchPatient);
+            this.panel1.Controls.Add(this.pictureBox_EndoscopyRoom);
             this.panel1.Controls.Add(this.pictureBox_Patient);
             this.panel1.Controls.Add(this.lb_PACSSetting);
             this.panel1.Controls.Add(this.lb_Statistic);
@@ -102,101 +104,117 @@ namespace EndoscopicSystem.V2.Forms
             this.panel1.Size = new System.Drawing.Size(1115, 218);
             this.panel1.TabIndex = 0;
             // 
-            // pictureBox9
+            // pictureBox_PACSSetting
             // 
-            this.pictureBox9.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.pictureBox9.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.pictureBox9.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox9.Image")));
-            this.pictureBox9.Location = new System.Drawing.Point(1667, 8);
-            this.pictureBox9.Name = "pictureBox9";
-            this.pictureBox9.Size = new System.Drawing.Size(178, 163);
-            this.pictureBox9.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox9.TabIndex = 29;
-            this.pictureBox9.TabStop = false;
+            this.pictureBox_PACSSetting.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.pictureBox_PACSSetting.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.pictureBox_PACSSetting.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox_PACSSetting.Image")));
+            this.pictureBox_PACSSetting.Location = new System.Drawing.Point(1667, 8);
+            this.pictureBox_PACSSetting.Name = "pictureBox_PACSSetting";
+            this.pictureBox_PACSSetting.Size = new System.Drawing.Size(178, 163);
+            this.pictureBox_PACSSetting.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox_PACSSetting.TabIndex = 29;
+            this.pictureBox_PACSSetting.TabStop = false;
+            this.pictureBox_PACSSetting.WaitOnLoad = true;
+            this.pictureBox_PACSSetting.Click += new System.EventHandler(this.pictureBox_PACSSetting_Click);
             // 
-            // pictureBox10
+            // pictureBox_Statistic
             // 
-            this.pictureBox10.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.pictureBox10.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.pictureBox10.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox10.Image")));
-            this.pictureBox10.Location = new System.Drawing.Point(1483, 8);
-            this.pictureBox10.Name = "pictureBox10";
-            this.pictureBox10.Size = new System.Drawing.Size(178, 163);
-            this.pictureBox10.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox10.TabIndex = 28;
-            this.pictureBox10.TabStop = false;
+            this.pictureBox_Statistic.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.pictureBox_Statistic.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.pictureBox_Statistic.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox_Statistic.Image")));
+            this.pictureBox_Statistic.Location = new System.Drawing.Point(1483, 8);
+            this.pictureBox_Statistic.Name = "pictureBox_Statistic";
+            this.pictureBox_Statistic.Size = new System.Drawing.Size(178, 163);
+            this.pictureBox_Statistic.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox_Statistic.TabIndex = 28;
+            this.pictureBox_Statistic.TabStop = false;
+            this.pictureBox_Statistic.WaitOnLoad = true;
+            this.pictureBox_Statistic.Click += new System.EventHandler(this.pictureBox_Statistic_Click);
             // 
-            // pictureBox4
+            // pictureBox_HospitalSetting
             // 
-            this.pictureBox4.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.pictureBox4.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.pictureBox4.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox4.Image")));
-            this.pictureBox4.Location = new System.Drawing.Point(1299, 8);
-            this.pictureBox4.Name = "pictureBox4";
-            this.pictureBox4.Size = new System.Drawing.Size(178, 163);
-            this.pictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox4.TabIndex = 27;
-            this.pictureBox4.TabStop = false;
+            this.pictureBox_HospitalSetting.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.pictureBox_HospitalSetting.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.pictureBox_HospitalSetting.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox_HospitalSetting.Image")));
+            this.pictureBox_HospitalSetting.Location = new System.Drawing.Point(1299, 8);
+            this.pictureBox_HospitalSetting.Name = "pictureBox_HospitalSetting";
+            this.pictureBox_HospitalSetting.Size = new System.Drawing.Size(178, 163);
+            this.pictureBox_HospitalSetting.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox_HospitalSetting.TabIndex = 27;
+            this.pictureBox_HospitalSetting.TabStop = false;
+            this.pictureBox_HospitalSetting.WaitOnLoad = true;
+            this.pictureBox_HospitalSetting.Click += new System.EventHandler(this.pictureBox_HospitalSetting_Click);
             // 
-            // pictureBox5
+            // pictureBox_CameraSetting
             // 
-            this.pictureBox5.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.pictureBox5.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.pictureBox5.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox5.Image")));
-            this.pictureBox5.Location = new System.Drawing.Point(1115, 8);
-            this.pictureBox5.Name = "pictureBox5";
-            this.pictureBox5.Size = new System.Drawing.Size(178, 163);
-            this.pictureBox5.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox5.TabIndex = 26;
-            this.pictureBox5.TabStop = false;
+            this.pictureBox_CameraSetting.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.pictureBox_CameraSetting.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.pictureBox_CameraSetting.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox_CameraSetting.Image")));
+            this.pictureBox_CameraSetting.Location = new System.Drawing.Point(1115, 8);
+            this.pictureBox_CameraSetting.Name = "pictureBox_CameraSetting";
+            this.pictureBox_CameraSetting.Size = new System.Drawing.Size(178, 163);
+            this.pictureBox_CameraSetting.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox_CameraSetting.TabIndex = 26;
+            this.pictureBox_CameraSetting.TabStop = false;
+            this.pictureBox_CameraSetting.WaitOnLoad = true;
+            this.pictureBox_CameraSetting.Click += new System.EventHandler(this.pictureBox_CameraSetting_Click);
             // 
-            // pictureBox6
+            // pictureBox_PhysicainList
             // 
-            this.pictureBox6.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.pictureBox6.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.pictureBox6.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox6.Image")));
-            this.pictureBox6.Location = new System.Drawing.Point(931, 8);
-            this.pictureBox6.Name = "pictureBox6";
-            this.pictureBox6.Size = new System.Drawing.Size(178, 163);
-            this.pictureBox6.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox6.TabIndex = 25;
-            this.pictureBox6.TabStop = false;
+            this.pictureBox_PhysicainList.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.pictureBox_PhysicainList.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.pictureBox_PhysicainList.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox_PhysicainList.Image")));
+            this.pictureBox_PhysicainList.Location = new System.Drawing.Point(931, 8);
+            this.pictureBox_PhysicainList.Name = "pictureBox_PhysicainList";
+            this.pictureBox_PhysicainList.Size = new System.Drawing.Size(178, 163);
+            this.pictureBox_PhysicainList.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox_PhysicainList.TabIndex = 25;
+            this.pictureBox_PhysicainList.TabStop = false;
+            this.pictureBox_PhysicainList.WaitOnLoad = true;
+            this.pictureBox_PhysicainList.Click += new System.EventHandler(this.pictureBox_PhysicainList_Click);
             // 
-            // pictureBox8
+            // pictureBox_Setting
             // 
-            this.pictureBox8.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.pictureBox8.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.pictureBox8.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox8.Image")));
-            this.pictureBox8.Location = new System.Drawing.Point(747, 8);
-            this.pictureBox8.Name = "pictureBox8";
-            this.pictureBox8.Size = new System.Drawing.Size(178, 163);
-            this.pictureBox8.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox8.TabIndex = 24;
-            this.pictureBox8.TabStop = false;
+            this.pictureBox_Setting.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.pictureBox_Setting.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.pictureBox_Setting.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox_Setting.Image")));
+            this.pictureBox_Setting.Location = new System.Drawing.Point(747, 8);
+            this.pictureBox_Setting.Name = "pictureBox_Setting";
+            this.pictureBox_Setting.Size = new System.Drawing.Size(178, 163);
+            this.pictureBox_Setting.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox_Setting.TabIndex = 24;
+            this.pictureBox_Setting.TabStop = false;
+            this.pictureBox_Setting.WaitOnLoad = true;
+            this.pictureBox_Setting.Click += new System.EventHandler(this.pictureBox_Setting_Click);
             // 
-            // pictureBox2
+            // pictureBox_SeaarchPatient
             // 
-            this.pictureBox2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.pictureBox2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
-            this.pictureBox2.Location = new System.Drawing.Point(563, 8);
-            this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(178, 163);
-            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox2.TabIndex = 23;
-            this.pictureBox2.TabStop = false;
+            this.pictureBox_SeaarchPatient.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.pictureBox_SeaarchPatient.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.pictureBox_SeaarchPatient.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox_SeaarchPatient.Image")));
+            this.pictureBox_SeaarchPatient.Location = new System.Drawing.Point(563, 8);
+            this.pictureBox_SeaarchPatient.Name = "pictureBox_SeaarchPatient";
+            this.pictureBox_SeaarchPatient.Size = new System.Drawing.Size(178, 163);
+            this.pictureBox_SeaarchPatient.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox_SeaarchPatient.TabIndex = 23;
+            this.pictureBox_SeaarchPatient.TabStop = false;
+            this.pictureBox_SeaarchPatient.WaitOnLoad = true;
+            this.pictureBox_SeaarchPatient.Click += new System.EventHandler(this.pictureBox_SeaarchPatient_Click);
             // 
-            // pictureBox3
+            // pictureBox_EndoscopyRoom
             // 
-            this.pictureBox3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.pictureBox3.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.pictureBox3.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox3.Image")));
-            this.pictureBox3.Location = new System.Drawing.Point(379, 8);
-            this.pictureBox3.Name = "pictureBox3";
-            this.pictureBox3.Size = new System.Drawing.Size(178, 163);
-            this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox3.TabIndex = 22;
-            this.pictureBox3.TabStop = false;
+            this.pictureBox_EndoscopyRoom.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.pictureBox_EndoscopyRoom.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.pictureBox_EndoscopyRoom.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox_EndoscopyRoom.Image")));
+            this.pictureBox_EndoscopyRoom.Location = new System.Drawing.Point(379, 8);
+            this.pictureBox_EndoscopyRoom.Name = "pictureBox_EndoscopyRoom";
+            this.pictureBox_EndoscopyRoom.Size = new System.Drawing.Size(178, 163);
+            this.pictureBox_EndoscopyRoom.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox_EndoscopyRoom.TabIndex = 22;
+            this.pictureBox_EndoscopyRoom.TabStop = false;
+            this.pictureBox_EndoscopyRoom.WaitOnLoad = true;
+            this.pictureBox_EndoscopyRoom.Click += new System.EventHandler(this.pictureBox_EndoscopyRoom_Click);
             // 
             // pictureBox_Patient
             // 
@@ -209,6 +227,7 @@ namespace EndoscopicSystem.V2.Forms
             this.pictureBox_Patient.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox_Patient.TabIndex = 21;
             this.pictureBox_Patient.TabStop = false;
+            this.pictureBox_Patient.WaitOnLoad = true;
             this.pictureBox_Patient.Click += new System.EventHandler(this.pictureBox_Patient_Click);
             // 
             // lb_PACSSetting
@@ -322,6 +341,7 @@ namespace EndoscopicSystem.V2.Forms
             this.pictureBox_Dashboard.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox_Dashboard.TabIndex = 1;
             this.pictureBox_Dashboard.TabStop = false;
+            this.pictureBox_Dashboard.WaitOnLoad = true;
             this.pictureBox_Dashboard.Click += new System.EventHandler(this.pictureBox_Dashboard_Click);
             // 
             // pictureBox11
@@ -343,7 +363,7 @@ namespace EndoscopicSystem.V2.Forms
             this.pictureBox_logo.Image = global::EndoscopicSystem.Properties.Resources.nplink_05;
             this.pictureBox_logo.Location = new System.Drawing.Point(1, 0);
             this.pictureBox_logo.Name = "pictureBox_logo";
-            this.pictureBox_logo.Size = new System.Drawing.Size(237, 196);
+            this.pictureBox_logo.Size = new System.Drawing.Size(211, 196);
             this.pictureBox_logo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox_logo.TabIndex = 2;
             this.pictureBox_logo.TabStop = false;
@@ -370,6 +390,18 @@ namespace EndoscopicSystem.V2.Forms
             this.label7.TabIndex = 14;
             this.label7.Text = "Camera Setting";
             // 
+            // pictureBox5
+            // 
+            this.pictureBox5.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.pictureBox5.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.pictureBox5.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox5.Image")));
+            this.pictureBox5.Location = new System.Drawing.Point(1115, 8);
+            this.pictureBox5.Name = "pictureBox5";
+            this.pictureBox5.Size = new System.Drawing.Size(178, 163);
+            this.pictureBox5.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox5.TabIndex = 26;
+            this.pictureBox5.TabStop = false;
+            // 
             // FormHome
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -389,19 +421,20 @@ namespace EndoscopicSystem.V2.Forms
             this.Load += new System.EventHandler(this.FormHome_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox9)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox10)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox8)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox_PACSSetting)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox_Statistic)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox_HospitalSetting)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox_CameraSetting)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox_PhysicainList)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox_Setting)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox_SeaarchPatient)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox_EndoscopyRoom)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox_Patient)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox_Dashboard)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox11)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox_logo)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -424,14 +457,15 @@ namespace EndoscopicSystem.V2.Forms
         private System.Windows.Forms.PictureBox pictureBox_logo;
         private System.Windows.Forms.PictureBox pictureBox7;
         private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.PictureBox pictureBox9;
-        private System.Windows.Forms.PictureBox pictureBox10;
-        private System.Windows.Forms.PictureBox pictureBox4;
-        private System.Windows.Forms.PictureBox pictureBox5;
-        private System.Windows.Forms.PictureBox pictureBox6;
-        private System.Windows.Forms.PictureBox pictureBox8;
-        private System.Windows.Forms.PictureBox pictureBox2;
-        private System.Windows.Forms.PictureBox pictureBox3;
+        private System.Windows.Forms.PictureBox pictureBox_PACSSetting;
+        private System.Windows.Forms.PictureBox pictureBox_Statistic;
+        private System.Windows.Forms.PictureBox pictureBox_HospitalSetting;
+        private System.Windows.Forms.PictureBox pictureBox_CameraSetting;
+        private System.Windows.Forms.PictureBox pictureBox_PhysicainList;
+        private System.Windows.Forms.PictureBox pictureBox_Setting;
+        private System.Windows.Forms.PictureBox pictureBox_SeaarchPatient;
+        private System.Windows.Forms.PictureBox pictureBox_EndoscopyRoom;
         private System.Windows.Forms.PictureBox pictureBox_Patient;
+        private System.Windows.Forms.PictureBox pictureBox5;
     }
 }

@@ -42,6 +42,7 @@ namespace EndoscopicSystem
                         data.NameTH = txtNameTH.Text;
                         data.NameEN = txtNameEN.Text;
                         data.IsActive = chkEnable.Checked;
+                        data.UpdateBy = UserID;
                     }
                     else
                     {
