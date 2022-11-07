@@ -89,6 +89,7 @@ namespace EndoscopicSystem
                     patientId = response.PatientID;
                     txtAge.Text = response.Age.HasValue ? response.Age.ToString() : "";
                     txtCID.Text = response.CardID;
+                    txbFinancial.Text = response.Financial;
                     cbbDoctorName.SelectedValue = response.DoctorID ?? 0;
                     txtFullName.Text = response.Fullname;
                     txtHN.Text = response.HN;
@@ -123,6 +124,12 @@ namespace EndoscopicSystem
                     cbbStation.SelectedValue = response.RoomID ?? 0;
                     pictureBox1.ImageLocation = response.PicturePath;
                     pictureBox1.SizeMode = PictureBoxSizeMode.StretchImage;
+                    cbbOPD.SelectedIndex = response.OpdID ?? 0;
+                    cbbWard.SelectedIndex = response.WardID ?? 0;
+                    cbbAnesthesist.SelectedIndex = response.AnesthesistID ?? 0;
+                    cbbAnesthesiaMethod1.SelectedIndex = response.AnesthesistMethodFirstID ?? 0;
+                    cbbAnesthesiaMethod2.SelectedIndex = response.AnesthesistMethodSecondID ?? 0;
+                    cbbIndication.SelectedIndex = response.IndicationID ?? 0;
 
                     procedureId = response.ProcedureID ?? 0;
                     Appointment app = db.Appointments.Where(x => txtHN.Text.Equals(x.HN) && x.ProcedureID == procedureId).OrderByDescending(x => x.AppointmentID).FirstOrDefault();

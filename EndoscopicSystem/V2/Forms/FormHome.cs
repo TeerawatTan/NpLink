@@ -131,5 +131,11 @@ namespace EndoscopicSystem.V2.Forms
         {
             ActiveMenuLabel(lb_PACSSetting);
         }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            FormProcedure formProcedure = new FormProcedure(_id, "102", 0, 0);
+            formProcedure.ShowDialog();
+        }
     }
 }

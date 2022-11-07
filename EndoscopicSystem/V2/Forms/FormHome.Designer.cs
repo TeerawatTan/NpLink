@@ -56,6 +56,7 @@ namespace EndoscopicSystem.V2.Forms
             this.pictureBox7 = new System.Windows.Forms.PictureBox();
             this.label7 = new System.Windows.Forms.Label();
             this.pictureBox5 = new System.Windows.Forms.PictureBox();
+            this.button1 = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox_PACSSetting)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox_Statistic)).BeginInit();
@@ -107,7 +108,6 @@ namespace EndoscopicSystem.V2.Forms
             // pictureBox_PACSSetting
             // 
             this.pictureBox_PACSSetting.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.pictureBox_PACSSetting.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.pictureBox_PACSSetting.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox_PACSSetting.Image")));
             this.pictureBox_PACSSetting.Location = new System.Drawing.Point(1667, 8);
             this.pictureBox_PACSSetting.Name = "pictureBox_PACSSetting";
@@ -121,7 +121,6 @@ namespace EndoscopicSystem.V2.Forms
             // pictureBox_Statistic
             // 
             this.pictureBox_Statistic.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.pictureBox_Statistic.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.pictureBox_Statistic.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox_Statistic.Image")));
             this.pictureBox_Statistic.Location = new System.Drawing.Point(1483, 8);
             this.pictureBox_Statistic.Name = "pictureBox_Statistic";
@@ -135,7 +134,6 @@ namespace EndoscopicSystem.V2.Forms
             // pictureBox_HospitalSetting
             // 
             this.pictureBox_HospitalSetting.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.pictureBox_HospitalSetting.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.pictureBox_HospitalSetting.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox_HospitalSetting.Image")));
             this.pictureBox_HospitalSetting.Location = new System.Drawing.Point(1299, 8);
             this.pictureBox_HospitalSetting.Name = "pictureBox_HospitalSetting";
@@ -149,7 +147,6 @@ namespace EndoscopicSystem.V2.Forms
             // pictureBox_CameraSetting
             // 
             this.pictureBox_CameraSetting.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.pictureBox_CameraSetting.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.pictureBox_CameraSetting.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox_CameraSetting.Image")));
             this.pictureBox_CameraSetting.Location = new System.Drawing.Point(1115, 8);
             this.pictureBox_CameraSetting.Name = "pictureBox_CameraSetting";
@@ -163,7 +160,6 @@ namespace EndoscopicSystem.V2.Forms
             // pictureBox_PhysicainList
             // 
             this.pictureBox_PhysicainList.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.pictureBox_PhysicainList.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.pictureBox_PhysicainList.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox_PhysicainList.Image")));
             this.pictureBox_PhysicainList.Location = new System.Drawing.Point(931, 8);
             this.pictureBox_PhysicainList.Name = "pictureBox_PhysicainList";
@@ -177,7 +173,6 @@ namespace EndoscopicSystem.V2.Forms
             // pictureBox_Setting
             // 
             this.pictureBox_Setting.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.pictureBox_Setting.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.pictureBox_Setting.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox_Setting.Image")));
             this.pictureBox_Setting.Location = new System.Drawing.Point(747, 8);
             this.pictureBox_Setting.Name = "pictureBox_Setting";
@@ -191,7 +186,6 @@ namespace EndoscopicSystem.V2.Forms
             // pictureBox_SeaarchPatient
             // 
             this.pictureBox_SeaarchPatient.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.pictureBox_SeaarchPatient.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.pictureBox_SeaarchPatient.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox_SeaarchPatient.Image")));
             this.pictureBox_SeaarchPatient.Location = new System.Drawing.Point(563, 8);
             this.pictureBox_SeaarchPatient.Name = "pictureBox_SeaarchPatient";
@@ -205,7 +199,6 @@ namespace EndoscopicSystem.V2.Forms
             // pictureBox_EndoscopyRoom
             // 
             this.pictureBox_EndoscopyRoom.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.pictureBox_EndoscopyRoom.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.pictureBox_EndoscopyRoom.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox_EndoscopyRoom.Image")));
             this.pictureBox_EndoscopyRoom.Location = new System.Drawing.Point(379, 8);
             this.pictureBox_EndoscopyRoom.Name = "pictureBox_EndoscopyRoom";
@@ -219,7 +212,6 @@ namespace EndoscopicSystem.V2.Forms
             // pictureBox_Patient
             // 
             this.pictureBox_Patient.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.pictureBox_Patient.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.pictureBox_Patient.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox_Patient.Image")));
             this.pictureBox_Patient.Location = new System.Drawing.Point(195, 8);
             this.pictureBox_Patient.Name = "pictureBox_Patient";
@@ -333,7 +325,6 @@ namespace EndoscopicSystem.V2.Forms
             // pictureBox_Dashboard
             // 
             this.pictureBox_Dashboard.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.pictureBox_Dashboard.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.pictureBox_Dashboard.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox_Dashboard.Image")));
             this.pictureBox_Dashboard.Location = new System.Drawing.Point(11, 8);
             this.pictureBox_Dashboard.Name = "pictureBox_Dashboard";
@@ -402,6 +393,16 @@ namespace EndoscopicSystem.V2.Forms
             this.pictureBox5.TabIndex = 26;
             this.pictureBox5.TabStop = false;
             // 
+            // button1
+            // 
+            this.button1.Location = new System.Drawing.Point(551, 45);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(131, 100);
+            this.button1.TabIndex = 3;
+            this.button1.Text = "TestProcedureRoom";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
             // FormHome
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -410,6 +411,7 @@ namespace EndoscopicSystem.V2.Forms
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(1116, 701);
+            this.Controls.Add(this.button1);
             this.Controls.Add(this.pictureBox_logo);
             this.Controls.Add(this.pictureBox11);
             this.Controls.Add(this.panel1);
@@ -467,5 +469,6 @@ namespace EndoscopicSystem.V2.Forms
         private System.Windows.Forms.PictureBox pictureBox_EndoscopyRoom;
         private System.Windows.Forms.PictureBox pictureBox_Patient;
         private System.Windows.Forms.PictureBox pictureBox5;
+        private System.Windows.Forms.Button button1;
     }
 }

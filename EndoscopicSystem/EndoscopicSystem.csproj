@@ -622,6 +622,7 @@
     <Compile Include="V2\Forms\FormWardSetting.Designer.cs">
       <DependentUpon>FormWardSetting.cs</DependentUpon>
     </Compile>
+    <Compile Include="V2\Forms\src\DropdownListService.cs" />
     <Content Include="Images\V2\iStock-1089688016.jpg" />
     <Content Include="Images\V2\iStock-1136980060.jpg" />
     <Content Include="Images\V2\iStock-1142818558.jpg" />
@@ -642,6 +643,7 @@
     <Content Include="Images\V2\iStock-920406470.jpg" />
     <Content Include="Images\V2\iStock-923000054.jpg" />
     <Content Include="Images\V2\iStock-972617570.jpg" />
+    <Content Include="Images\V2\Logout.png" />
     <Content Include="V2\Database\Database1.mdf">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
