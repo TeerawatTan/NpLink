@@ -30,6 +30,7 @@ namespace EndoscopicSystem.V2.Forms
     public partial class FormLive : Form
     {
         private readonly int UserID;
+        private readonly EndoscopicEntities _db = new EndoscopicEntities();
         private VideoCaptureDeviceForm _captureDeviceForm;
         private FilterInfoCollection _filterInfoCollection;
         private VideoCaptureDevice _videoCaptureDevice;
@@ -37,43 +38,23 @@ namespace EndoscopicSystem.V2.Forms
         private string _pathFolderVideo = Application.StartupPath.Replace("\\bin\\Debug", "") + @"\VideoRecord\";
         private string _pathFolderImage = Application.StartupPath.Replace("\\bin\\Debug", "") + @"\ImageCapture\";
         private string _pathFolderSounds = Application.StartupPath.Replace("\\bin\\Debug", "") + @"\Sounds\";
-        private string _pathFolderPDF = Application.StartupPath.Replace("\\bin\\Debug", "") + @"\Pdf\";
-        private string _pathFolderDicom = Application.StartupPath.Replace("\\bin\\Debug", "") + @"\Dicom\";
-        string reportPath = Application.StartupPath.Replace("\\bin\\Debug", "") + @"\Report\";
-        private string _initialDirectoryUpload = "C://Desktop";
-        private string _titleUpload = "Select image to be upload.";
-        private string _filterUpload = "Image Only(*.jpg; *.jpeg; *.gif; *.bmp; *.png)|*.jpg; *.jpeg; *.gif; *.bmp; *.png";
         private VideoFileWriter _fileWriter = new VideoFileWriter();
-        private DateTime? _firstFrameTime;
-        private bool _isRecord = false;
-        private bool _isPause = false;
-        private bool _isStopRecord = false;
+        private DateTime? _firstFrameTime, recordStartDate, recordEndDate;
+        private bool _isRecord = false, _isPause = false, _isStopRecord = false;
         private static bool _needSnapshot = false;
-        readonly EndoscopicEntities db = new EndoscopicEntities();
-        private int patientId;
-        private int AspectRatioID = 1;
-        private string PositionCropID = "L";
-        private string hnNo = "";
+        private int patientId, endoscopicId, procedureId = 0, appointmentId = 0, item = 0, _aspectRatioID = 1, h, m, s;
+        private string PositionCropID = "L", _hnNo = "", _fileName = ".jpg", _pathFolderImageToSave, _vdoPath;
         protected readonly GetDropdownList list = new GetDropdownList();
         public Dictionary<int, string> ImgPath = new Dictionary<int, string>();
-        public string VdoPath = "";
-        public Form formPopup = new Form();
-        public Form formPopupVdo = new Form();
-        private DateTime? recordStartDate;
-        private DateTime? recordEndDate;
-        private int endoscopicId;
-        private int? procedureId;
-        private int appointmentId = 0;
-        private int item = 0;
+        public Form formPopup = new Form(), formPopupVdo = new Form();
         private System.Timers.Timer t;
-        private int h, m, s;
-        private string _pathFolderImageToSave;
+        private List<Image> _imageList;
 
         public FormLive(int userID, string hn = "", int procId = 0, int endoId = 0, int apId = 0)
         {
             InitializeComponent();
             UserID = userID;
-            hnNo = hn;
+            _hnNo = hn;
             procedureId = procId;
             endoscopicId = endoId;
             appointmentId = apId;
@@ -92,18 +73,18 @@ namespace EndoscopicSystem.V2.Forms
 
             t = new System.Timers.Timer();
 
-            var v = db.Users.Where(x => x.Id == UserID).Select(x => new { x.AspectRatioID, x.PositionCrop }).FirstOrDefault();
-            AspectRatioID = (int)(v.AspectRatioID.HasValue ? v.AspectRatioID : 1);
+            var v = _db.Users.Where(x => x.Id == UserID).Select(x => new { x.AspectRatioID, x.PositionCrop }).FirstOrDefault();
+            _aspectRatioID = (int)(v.AspectRatioID.HasValue ? v.AspectRatioID : 1);
             PositionCropID = (string)(v.PositionCrop != "" ? v.PositionCrop : "L");
 
             EnableConnectionControls(true);
-            //LoadDataHN();
+
             _filterInfoCollection = new FilterInfoCollection(FilterCategory.VideoInputDevice);
 
             cbbProcedureList.ValueMember = "ProcedureID";
             cbbProcedureList.DisplayMember = "ProcedureName";
             cbbProcedureList.DataSource = list.GetProcedureList();
-            cbbProcedureList.SelectedIndex = 0;
+            cbbProcedureList.SelectedIndex = procedureId;
 
             if (_filterInfoCollection.Count != 0)
             {
@@ -124,25 +105,109 @@ namespace EndoscopicSystem.V2.Forms
                 this.Load += connectButton_Click;
             }
 
+            _pathFolderImageToSave = _pathFolderImage + _hnNo + @"\" + DateTime.Now.ToString("yyyyMMdd") + @"\" + cbbProcedureList.Text + @"\" + appointmentId + @"\";
+            if (!Directory.Exists(_pathFolderImageToSave))
+            {
+                Directory.CreateDirectory(_pathFolderImageToSave);
+            }
+
             listView1.Items.Clear();
             if (!string.IsNullOrWhiteSpace(_pathFolderImageToSave))
             {
-                DirectoryInfo dinfo = new DirectoryInfo(_pathFolderImageToSave);
-                FileInfo[] files = dinfo.GetFiles("*.jpg");
-                foreach (var item in files.OrderByDescending(o => o.CreationTime).ToList())
+                LoadImageFromFolder(_pathFolderImageToSave);
+
+                ImageList images = new ImageList();
+                images.ImageSize = new Size(180, 110);
+
+                foreach (var img in _imageList)
                 {
-                    ListViewItem listView = new ListViewItem();
-                    listView.Text = item.Name;
-                    listView1.Items.Add(listView);
+                    images.Images.Add(img);
+                }
+
+                listView1.LargeImageList = images;
+
+                for (int i = 0; i < _imageList.Count; i++)
+                {
+                    listView1.Items.Add(new ListViewItem($"Image_{_imageList.Count - i}", i));
                 }
             }
+
+            txtHN.Text = _hnNo;
+
+            if (!string.IsNullOrWhiteSpace(txtHN.Text) && procedureId > 0)
+            {
+                SearchHN(txtHN.Text, procedureId);
+            }
+        }
+
+        private void SearchHN(string hn, int procId = 0)
+        {
+            connectButton.Enabled = true;
+            _hnNo = hn;
+            procedureId = procId;
+            try
+            {
+                var getPatient = _db.Patients.FirstOrDefault(x => x.HN == hn && (x.IsActive.HasValue && x.IsActive.Value));
+                if (getPatient != null)
+                {
+                    connectButton.Enabled = true;
+                    patientId = getPatient.PatientID;
+                    txtHN.Text = getPatient.HN;
+                    txtFullName.Text = getPatient.Fullname;
+                    txtAge.Text = getPatient.Age.HasValue ? getPatient.Age.ToString() : "";
+
+                    if (procedureId == 0)
+                    {
+                        procedureId = getPatient.ProcedureID ?? 0;
+                    }
+
+                    Appointment app = new Appointment();
+                    var apps = _db.Appointments.Where(x => x.PatientID == patientId && txtHN.Text.Equals(x.HN) && x.ProcedureID == procedureId).ToList();
+                    if (apps != null)
+                    {
+                        if (appointmentId > 0)
+                        {
+                            apps = apps.Where(w => w.AppointmentID == appointmentId).ToList();
+                            app = apps.FirstOrDefault();
+                        }
+                        else
+                        {
+                            app = apps.OrderByDescending(o => o.AppointmentDate).FirstOrDefault();
+                            appointmentId = app.AppointmentID;
+                        }
+                        txtSymptom.Text = app.Symptom;
+                    }
+
+                    cbbProcedureList.SelectedValue = procedureId;
+                }
+                else
+                {
+                    MessageBox.Show("ไม่พบข้อมูลผู้ป่วย");
+                    Reset_Controller();
+                    connectButton.Enabled = false;
+                    txtHN.Focus();
+                    btnNext.Enabled = false;
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+                Reset_Controller();
+                btnNext.Enabled = false;
+            }
+        }
+
+        private void Reset_Controller()
+        {
+            this.Controls.ClearControls();
+            txtHN.Focus();
         }
 
         private void btnNext_Click(object sender, EventArgs e)
         {
             if (procedureId > 0 && appointmentId > 0)
             {
-                FormPreviewReport formPreviewReport = new FormPreviewReport(UserID, hnNo, procedureId.Value, appointmentId);
+                FormPreviewReport formPreviewReport = new FormPreviewReport(UserID, _hnNo, procedureId, appointmentId, _pathFolderImageToSave);
                 formPreviewReport.ShowDialog();
             }
             else
@@ -175,6 +240,7 @@ namespace EndoscopicSystem.V2.Forms
                 soundPlayer.Play();
 
                 btnCapture.Enabled = true;
+                btnCapture.BackColor = Color.FromArgb(0, 192, 0);
                 btnRecord.Enabled = true;
                 recordStartDate = DateTime.Now;
             }
@@ -220,9 +286,6 @@ namespace EndoscopicSystem.V2.Forms
             if ((_videoCaptureDevice != null) && (_videoCaptureDevice.ProvideSnapshots))
             {
                 _needSnapshot = true;
-
-                SoundPlayer soundCapture = new SoundPlayer(_pathFolderSounds + "capture.wav");
-                soundCapture.Play();
             }
         }
 
@@ -232,8 +295,13 @@ namespace EndoscopicSystem.V2.Forms
         {
             try
             {
-                _needSnapshot = false;
                 ++item;
+
+                SoundPlayer soundCapture = new SoundPlayer(_pathFolderSounds + "capture.wav");
+                soundCapture.Play();
+
+                _needSnapshot = false;
+
                 string namaImage = "Image";
                 string nameCapture = String.Format("{0}_{1}.jpg", namaImage, item);
 
@@ -243,10 +311,10 @@ namespace EndoscopicSystem.V2.Forms
                 int height = image.Height;
                 bool isFullScreen = false;
 
-                switch (AspectRatioID)
+                switch (_aspectRatioID)
                 {
                     case 0://Custom
-                        var ratio = db.Users.Where(x => x.Id == UserID).Select(x => new { x.CrpX, x.CrpY, x.CrpWidth, x.CrpHeight }).FirstOrDefault();
+                        var ratio = _db.Users.Where(x => x.Id == UserID).Select(x => new { x.CrpX, x.CrpY, x.CrpWidth, x.CrpHeight }).FirstOrDefault();
                         aspectRatio_X = ratio.CrpX ?? 0;
                         aspectRatio_Y = ratio.CrpY ?? 0;
                         width = ratio.CrpWidth ?? width;
@@ -256,7 +324,7 @@ namespace EndoscopicSystem.V2.Forms
                         isFullScreen = true;
                         break;
                 }
-                _pathFolderImageToSave = _pathFolderImage + hnNo + @"\" + DateTime.Now.ToString("yyyyMMdd") + @"\" + cbbProcedureList.Text + @"\" + appointmentId + @"\";
+                _pathFolderImageToSave = _pathFolderImage + _hnNo + @"\" + DateTime.Now.ToString("yyyyMMdd") + @"\" + cbbProcedureList.Text + @"\" + appointmentId + @"\";
                 if (!Directory.Exists(_pathFolderImageToSave))
                 {
                     Directory.CreateDirectory(_pathFolderImageToSave);
@@ -277,15 +345,24 @@ namespace EndoscopicSystem.V2.Forms
                 listView1.Items.Clear();
                 if (!string.IsNullOrWhiteSpace(_pathFolderImageToSave))
                 {
-                    DirectoryInfo dinfo = new DirectoryInfo(_pathFolderImageToSave);
-                    FileInfo[] files = dinfo.GetFiles("*.jpg");
-                    foreach (var item in files.OrderByDescending(o => o.CreationTime).ToList())
+                    LoadImageFromFolder(_pathFolderImageToSave);
+
+                    ImageList images = new ImageList();
+                    images.ImageSize = new Size(180, 110);
+
+                    foreach (var img in _imageList)
                     {
-                        ListViewItem listView = new ListViewItem();
-                        listView.Text = item.Name;
-                        listView1.Items.Add(listView);
+                        images.Images.Add(img);
+                    }
+
+                    listView1.LargeImageList = images;
+
+                    for (int j = 0; j < _imageList.Count; j++)
+                    {
+                        listView1.Items.Add(new ListViewItem($"Image_{_imageList.Count - j}", j));
                     }
                 }
+
             }
             catch (Exception ex)
             {
@@ -382,11 +459,15 @@ namespace EndoscopicSystem.V2.Forms
             _isRecord = true;
             _isPause = false;
 
+            // เพิ่มเสียง
+
+
+
             int h = _videoCaptureDevice.VideoResolution.FrameSize.Height;
             int w = _videoCaptureDevice.VideoResolution.FrameSize.Width;
 
             string nameImage = "Video"; //HN
-            string _pathFolderVideoToSave = _pathFolderVideo + @"\" + hnNo + @"\" + DateTime.Now.ToString("yyyyMMdd") + @"\";
+            string _pathFolderVideoToSave = _pathFolderVideo + @"\" + _hnNo + @"\" + DateTime.Now.ToString("yyyyMMdd") + @"\";
             string nameCapture = _pathFolderVideoToSave + nameImage + "_" + DateTime.Now.ToString("yyyyMMddHHmmss") + ".mp4";
 
             if (!Directory.Exists(_pathFolderVideoToSave))
@@ -407,7 +488,7 @@ namespace EndoscopicSystem.V2.Forms
             }
 
             _isStopRecord = false;
-            VdoPath = nameCapture;
+            _vdoPath = nameCapture;
             btnRecord.Enabled = false;
             btnStop.Enabled = true;
             btnPause.Enabled = true;
@@ -475,7 +556,7 @@ namespace EndoscopicSystem.V2.Forms
         {
             Image bi;
             MemoryStream ms = new MemoryStream();
-            bitmap.Save(ms, System.Drawing.Imaging.ImageFormat.Bmp);
+            bitmap.Save(ms, System.Drawing.Imaging.ImageFormat.Jpeg);
             ms.Seek(0, SeekOrigin.Begin);
             bi = Image.FromStream(ms);
             ms.Close();
@@ -485,6 +566,14 @@ namespace EndoscopicSystem.V2.Forms
         private void FormLive_FormClosing(object sender, FormClosingEventArgs e)
         {
             t.Stop();
+            Disconnect();
+            if (videoSourcePlayer == null)
+            { return; }
+            if (videoSourcePlayer.IsRunning)
+            {
+                this.videoSourcePlayer.Stop();
+                _fileWriter.Close();
+            }
         }
 
         private void videoSource_NewFrame(object sender, NewFrameEventArgs eventArgs)
@@ -527,5 +616,20 @@ namespace EndoscopicSystem.V2.Forms
             }
         }
 
+        private void LoadImageFromFolder(string path)
+        {
+            _imageList = new List<Image>();
+            if (!string.IsNullOrWhiteSpace(path))
+            {
+                DirectoryInfo dinfo = new DirectoryInfo(_pathFolderImageToSave);
+                FileInfo[] files = dinfo.GetFiles("*.jpg");
+                foreach (var item in files.OrderByDescending(o => o.CreationTime).ToList())
+                {
+                    Image imgFile = Image.FromFile(item.FullName);
+                    _imageList.Add(imgFile);
+                }
+                item = files.Count();
+            }
+        }
     }
 }

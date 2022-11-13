@@ -103,35 +103,6 @@ namespace EndoscopicSystem.V2.Forms
             formLogin.Show();
         }
 
-        private void pictureBox_CameraSetting_Click(object sender, EventArgs e)
-        {
-            SettingPicForm settingPicForm = new SettingPicForm(_id);
-            settingPicForm.ShowDialog();
-            ActiveMenuLabel(lb_CameraSetting);
-        }
-
-        private void pictureBox_HospitalSetting_Click(object sender, EventArgs e)
-        {
-            SettingHospitalForm settingHospitalForm = new SettingHospitalForm(_id);
-            settingHospitalForm.ShowDialog();
-            ActiveMenuLabel(lb_HospitalSetting);
-        }
-
-        private void pictureBox_PhysicainList_Click(object sender, EventArgs e)
-        {
-            ActiveMenuLabel(lb_PhysicainList);
-        }
-
-        private void pictureBox_Statistic_Click(object sender, EventArgs e)
-        {
-            ActiveMenuLabel(lb_Statistic);
-        }
-
-        private void pictureBox_PACSSetting_Click(object sender, EventArgs e)
-        {
-            ActiveMenuLabel(lb_PACSSetting);
-        }
-
         private void button1_Click(object sender, EventArgs e)
         {
             FormProcedure formProcedure = new FormProcedure(_id, "102", 0, 0);

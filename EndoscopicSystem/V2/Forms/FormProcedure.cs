@@ -308,8 +308,6 @@ namespace EndoscopicSystem.V2.Forms
                 cbbGeneralNurse2_EGD.SelectedValue = patient.NurseSecondID ?? 0;
                 cbbGeneralNurse3_EGD.SelectedValue = patient.NurseThirthID ?? 0;
                 cbbGeneralIndication_EGD.SelectedValue = patient.IndicationID ?? 0;
-                txbPreDiagCode_EGD.Text = patient.Prediagnosis1;
-                txbICD10Code_EGD.Text = patient.Prediagnosis2;
 
 
 

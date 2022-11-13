@@ -5,6 +5,7 @@ using EndoscopicSystem.Repository;
 using System;
 using System.Collections.Generic;
 using System.Data;
+using System.Data.Entity.Validation;
 using System.Drawing;
 using System.IO;
 using System.Linq;
@@ -194,31 +195,34 @@ namespace EndoscopicSystem
 
             if (!string.IsNullOrWhiteSpace(txtHN.Text))
             {
+                Patient patient = new Patient();
+
                 try
                 {
-                    var data = db.Patients.Where(x => x.HN == txtHN.Text).FirstOrDefault();
-                    if (data != null)
+                    patient = db.Patients.Where(x => x.HN == txtHN.Text).FirstOrDefault();
+                    if (patient != null)
                     {
+                        // Update Patient
                         procedureId = (int)cbbProcedureList.SelectedValue;
-                        data.Fullname = txtFullName.Text;
-                        data.CardID = txtCID.Text;
-                        data.Sex = gender;
-                        data.Age = (!string.IsNullOrWhiteSpace(txtAge.Text)) ? Convert.ToInt32(txtAge.Text) : 0;
-                        data.DoctorID = (int?)cbbDoctorName.SelectedValue;
-                        data.NurseFirstID = (int?)cbbNurseName1.SelectedValue;
-                        data.NurseSecondID = (int?)cbbNurseName2.SelectedValue;
-                        data.NurseThirthID = (int?)cbbNurseName3.SelectedValue;
-                        data.ProcedureID = (int?)cbbProcedureList.SelectedValue;
-                        data.StaffName = txtStaffName.Text;
-                        data.RoomID = (int?)cbbStation.SelectedValue;
-                        data.AppointmentDate = new DateTime(
+                        patient.Fullname = txtFullName.Text;
+                        patient.CardID = txtCID.Text;
+                        patient.Sex = gender;
+                        patient.Age = (!string.IsNullOrWhiteSpace(txtAge.Text)) ? Convert.ToInt32(txtAge.Text) : 0;
+                        patient.DoctorID = (int?)cbbDoctorName.SelectedValue;
+                        patient.NurseFirstID = (int?)cbbNurseName1.SelectedValue;
+                        patient.NurseSecondID = (int?)cbbNurseName2.SelectedValue;
+                        patient.NurseThirthID = (int?)cbbNurseName3.SelectedValue;
+                        patient.ProcedureID = (int?)cbbProcedureList.SelectedValue;
+                        patient.StaffName = txtStaffName.Text;
+                        patient.RoomID = (int?)cbbStation.SelectedValue;
+                        patient.AppointmentDate = new DateTime(
                             dtAppointmentDate.Value.Year,
                             dtAppointmentDate.Value.Month,
                             dtAppointmentDate.Value.Day,
                             dtAppointmentTime.Value.Hour,
                             dtAppointmentTime.Value.Minute,
                             dtAppointmentTime.Value.Second);
-                        data.OperationDate = new DateTime(
+                        patient.OperationDate = new DateTime(
                             dtOperatingDate.Value.Year,
                             dtOperatingDate.Value.Month,
                             dtOperatingDate.Value.Day,
@@ -226,31 +230,20 @@ namespace EndoscopicSystem
                             dtOperatingTime.Value.Minute,
                             dtOperatingTime.Value.Second);
 
-                        data.PicturePath = SavePicture() ?? data.PicturePath;
-                        data.Financial = txbFinancial.Text;
-                        data.OpdID = (int?)cbbOPD.SelectedValue;
-                        data.WardID = (int?)cbbWard.SelectedValue;
-                        data.ReferCheck = chkRefer.Checked;
-                        data.ReferDetail = txbRefer.Text;
-                        data.AnesthesistID = (int?)cbbAnesthesist.SelectedValue;
-                        data.AnesthesistMethodFirstID = (int?)cbbAnesthesiaMethod1.SelectedValue;
-                        data.AnesthesistMethodSecondID = (int?)cbbAnesthesiaMethod2.SelectedValue;
-                        data.IndicationID = (int?)cbbIndication.SelectedValue;
-                        data.PreDiagnosisFirstID = (int?)cbbPreDiagnosis1.SelectedValue;
-                        data.PreDiagnosisSecondID = (int?)cbbPreDiagnosis2.SelectedValue;
-                        data.UpdateBy = UserID;
-                        data.UpdateDate = DateTime.Now;
-                        db.Entry(data).State = System.Data.Entity.EntityState.Modified;
-                        if (db.SaveChanges() > 0)
-                        {
-                            SaveAppointment(txtHN.Text, data);
-                            status = Constant.STATUS_SUCCESS;
-                            this.Controls.ClearControls();
-                        }
-                        else
-                        {
-                            status = Constant.STATUS_ERROR;
-                        }
+                        patient.PicturePath = SavePicture() ?? patient.PicturePath;
+                        patient.Financial = txbFinancial.Text;
+                        patient.OpdID = (int?)cbbOPD.SelectedValue;
+                        patient.WardID = (int?)cbbWard.SelectedValue;
+                        patient.ReferCheck = chkRefer.Checked;
+                        patient.ReferDetail = txbRefer.Text;
+                        patient.AnesthesistID = (int?)cbbAnesthesist.SelectedValue;
+                        patient.AnesthesistMethodFirstID = (int?)cbbAnesthesiaMethod1.SelectedValue;
+                        patient.AnesthesistMethodSecondID = (int?)cbbAnesthesiaMethod2.SelectedValue;
+                        patient.IndicationID = (int?)cbbIndication.SelectedValue;
+                        patient.PreDiagnosisFirstID = cbbPreDiagnosis1.SelectedValue.ToString();
+                        patient.PreDiagnosisSecondID = cbbPreDiagnosis2.SelectedValue.ToString();
+                        patient.UpdateBy = UserID;
+                        patient.UpdateDate = DateTime.Now;
                     }
                     else
                     {
@@ -261,7 +254,6 @@ namespace EndoscopicSystem
                             this.Controls.ClearControls();
                             return;
                         }
-                        Patient patient = new Patient();
                         patient.HN = txtHN.Text;
                         patient.Fullname = txtFullName.Text;
                         patient.CardID = txtCID.Text;
@@ -298,13 +290,19 @@ namespace EndoscopicSystem
                         patient.AnesthesistMethodFirstID = (int?)cbbAnesthesiaMethod1.SelectedValue;
                         patient.AnesthesistMethodSecondID = (int?)cbbAnesthesiaMethod2.SelectedValue;
                         patient.IndicationID = (int?)cbbIndication.SelectedValue;
-                        patient.PreDiagnosisFirstID = (int?)cbbPreDiagnosis1.SelectedValue;
-                        patient.PreDiagnosisSecondID = (int?)cbbPreDiagnosis2.SelectedValue;
+                        patient.PreDiagnosisFirstID = cbbPreDiagnosis1.SelectedValue.ToString();
+                        patient.PreDiagnosisSecondID = cbbPreDiagnosis2.SelectedValue.ToString();
                         patient.IsActive = true;
                         patient.CreateBy = UserID;
                         patient.CreateDate = DateTime.Now;
                         db.Patients.Add(patient);
-                        if (db.SaveChanges() > 0)
+                    }
+
+                    int resultSave = 0;
+                    try
+                    {
+                        resultSave = db.SaveChanges();
+                        if (resultSave > 0)
                         {
                             SaveAppointment(txtHN.Text, patient);
                             status = Constant.STATUS_SUCCESS;
@@ -314,26 +312,14 @@ namespace EndoscopicSystem
                         {
                             status = Constant.STATUS_ERROR;
                         }
-
                     }
-                    ResetPictureBox();
-                    cbbProcedureList.SelectedIndex = 0;
-                    cbbDoctorName.SelectedIndex = 0;
-                    cbbNurseName1.SelectedIndex = 0;
-                    cbbNurseName2.SelectedIndex = 0;
-                    cbbNurseName3.SelectedIndex = 0;
-                    cbbSex.SelectedIndex = 0;
-                    cbbStation.SelectedIndex = 0;
-                    cbbOPD.SelectedIndex = 0;
-                    cbbWard.SelectedIndex = 0;
-                    cbbAnesthesist.SelectedIndex = 0;
-                    cbbAnesthesiaMethod1.SelectedIndex = 0;
-                    cbbAnesthesiaMethod2.SelectedIndex = 0;
-                    cbbIndication.SelectedIndex = 0;
-                    cbbPreDiagnosis1.SelectedIndex = 0;
-                    cbbPreDiagnosis2.SelectedIndex = 0;
+                    catch (DbEntityValidationException dbEx)
+                    {
+                        throw dbEx;
+                    }
+
                     MessageBox.Show(status);
-                    gridPatient.DataSource = new HistoryModel();
+                    ResetForm();
                 }
                 catch (Exception ex)
                 {
@@ -465,11 +451,31 @@ namespace EndoscopicSystem
 
         private void btnReset_Click(object sender, EventArgs e)
         {
-            this.Controls.ClearControls();
-            ResetPictureBox();
-            patientId = 0;
-            gridPatient.DataSource = new HistoryModel();
+            ResetForm();
             txtHN.Focus();
+        }
+
+        private void ResetForm()
+        {
+            ResetPictureBox();
+            this.Controls.ClearControls();
+            patientId = 0;
+            cbbProcedureList.SelectedIndex = 0;
+            cbbDoctorName.SelectedIndex = 0;
+            cbbNurseName1.SelectedIndex = 0;
+            cbbNurseName2.SelectedIndex = 0;
+            cbbNurseName3.SelectedIndex = 0;
+            cbbSex.SelectedIndex = 0;
+            cbbStation.SelectedIndex = 0;
+            cbbOPD.SelectedIndex = 0;
+            cbbWard.SelectedIndex = 0;
+            cbbAnesthesist.SelectedIndex = 0;
+            cbbAnesthesiaMethod1.SelectedIndex = 0;
+            cbbAnesthesiaMethod2.SelectedIndex = 0;
+            cbbIndication.SelectedIndex = 0;
+            cbbPreDiagnosis1.SelectedIndex = 0;
+            cbbPreDiagnosis2.SelectedIndex = 0;
+            gridPatient.DataSource = new HistoryModel();
         }
 
         private void ResetPictureBox()
@@ -543,7 +549,7 @@ namespace EndoscopicSystem
         }
         public void DropdownPreDiagnosis(ComboBox comboBox)
         {
-            comboBox.ValueMember = "ID";
+            comboBox.ValueMember = "Code";
             comboBox.DisplayMember = "Name";
             comboBox.DataSource = list.GetICD10s();
             comboBox.SelectedIndex = 0;

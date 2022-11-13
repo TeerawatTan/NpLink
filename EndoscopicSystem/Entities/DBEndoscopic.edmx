@@ -471,13 +471,11 @@
           <Property Name="AnesthesistMethodFirstID" Type="int" />
           <Property Name="AnesthesistMethodSecondID" Type="int" />
           <Property Name="IndicationID" Type="int" />
-          <Property Name="PreDiagnosisFirstID" Type="int" />
-          <Property Name="PreDiagnosisSecondID" Type="int" />
+          <Property Name="PreDiagnosisFirstID" Type="nvarchar" MaxLength="10" />
+          <Property Name="PreDiagnosisSecondID" Type="nvarchar" MaxLength="10" />
           <Property Name="Financial" Type="nvarchar" MaxLength="250" />
           <Property Name="OpdID" Type="int" />
           <Property Name="AnesthesiaID" Type="int" />
-          <Property Name="Prediagnosis1" Type="nvarchar" MaxLength="10" />
-          <Property Name="Prediagnosis2" Type="nvarchar" MaxLength="10" />
         </EntityType>
         <!--Errors Found During Generation:
 warning 6002: The table/view 'EndoscopicDb.dbo.ProcedureList' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
@@ -2769,13 +2767,11 @@ warning 6002: The table/view 'EndoscopicDb.dbo.v_PatientList' does not have a pr
           <Property Name="AnesthesistMethodFirstID" Type="Int32" />
           <Property Name="AnesthesistMethodSecondID" Type="Int32" />
           <Property Name="IndicationID" Type="Int32" />
-          <Property Name="PreDiagnosisFirstID" Type="Int32" />
-          <Property Name="PreDiagnosisSecondID" Type="Int32" />
+          <Property Name="PreDiagnosisFirstID" Type="String" MaxLength="10" FixedLength="false" Unicode="true" />
+          <Property Name="PreDiagnosisSecondID" Type="String" MaxLength="10" FixedLength="false" Unicode="true" />
           <Property Name="Financial" Type="String" MaxLength="250" FixedLength="false" Unicode="true" />
           <Property Name="OpdID" Type="Int32" />
           <Property Name="AnesthesiaID" Type="Int32" />
-          <Property Name="Prediagnosis1" Type="String" MaxLength="10" FixedLength="false" Unicode="true" />
-          <Property Name="Prediagnosis2" Type="String" MaxLength="10" FixedLength="false" Unicode="true" />
         </EntityType>
         </Schema>
     </edmx:ConceptualModels>
@@ -4156,8 +4152,6 @@ warning 6002: The table/view 'EndoscopicDb.dbo.v_PatientList' does not have a pr
           <EntitySetMapping Name="Patients">
             <EntityTypeMapping TypeName="EndoscopicModel.Patient">
               <MappingFragment StoreEntitySet="Patient">
-                <ScalarProperty Name="Prediagnosis2" ColumnName="Prediagnosis2" />
-                <ScalarProperty Name="Prediagnosis1" ColumnName="Prediagnosis1" />
                 <ScalarProperty Name="AnesthesiaID" ColumnName="AnesthesiaID" />
                 <ScalarProperty Name="OpdID" ColumnName="OpdID" />
                 <ScalarProperty Name="Financial" ColumnName="Financial" />

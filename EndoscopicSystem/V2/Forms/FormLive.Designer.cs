@@ -45,8 +45,6 @@ namespace EndoscopicSystem.V2.Forms
             this.disconnectButton = new System.Windows.Forms.Button();
             this.connectButton = new System.Windows.Forms.Button();
             this.devicesCombo = new System.Windows.Forms.ComboBox();
-            this.listView1 = new System.Windows.Forms.ListView();
-            this.ImageName = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.label1 = new System.Windows.Forms.Label();
             this.lbTime = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
@@ -57,6 +55,7 @@ namespace EndoscopicSystem.V2.Forms
             this.btnRecord = new System.Windows.Forms.Button();
             this.btnPause = new System.Windows.Forms.Button();
             this.pictureBoxSnapshot = new System.Windows.Forms.PictureBox();
+            this.listView1 = new System.Windows.Forms.ListView();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxRecording)).BeginInit();
@@ -216,7 +215,7 @@ namespace EndoscopicSystem.V2.Forms
             this.groupBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
             this.groupBox2.Location = new System.Drawing.Point(984, 13);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(358, 100);
+            this.groupBox2.Size = new System.Drawing.Size(407, 100);
             this.groupBox2.TabIndex = 88;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Devices";
@@ -226,7 +225,7 @@ namespace EndoscopicSystem.V2.Forms
             this.disconnectButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
             this.disconnectButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
             this.disconnectButton.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.disconnectButton.Location = new System.Drawing.Point(249, 51);
+            this.disconnectButton.Location = new System.Drawing.Point(300, 51);
             this.disconnectButton.Name = "disconnectButton";
             this.disconnectButton.Size = new System.Drawing.Size(101, 43);
             this.disconnectButton.TabIndex = 88;
@@ -239,7 +238,7 @@ namespace EndoscopicSystem.V2.Forms
             this.connectButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
             this.connectButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
             this.connectButton.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.connectButton.Location = new System.Drawing.Point(142, 51);
+            this.connectButton.Location = new System.Drawing.Point(193, 51);
             this.connectButton.Name = "connectButton";
             this.connectButton.Size = new System.Drawing.Size(101, 43);
             this.connectButton.TabIndex = 87;
@@ -254,25 +253,8 @@ namespace EndoscopicSystem.V2.Forms
             this.devicesCombo.FormattingEnabled = true;
             this.devicesCombo.Location = new System.Drawing.Point(6, 21);
             this.devicesCombo.Name = "devicesCombo";
-            this.devicesCombo.Size = new System.Drawing.Size(346, 24);
+            this.devicesCombo.Size = new System.Drawing.Size(395, 24);
             this.devicesCombo.TabIndex = 86;
-            // 
-            // listView1
-            // 
-            this.listView1.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
-            this.ImageName});
-            this.listView1.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
-            this.listView1.HideSelection = false;
-            this.listView1.Location = new System.Drawing.Point(984, 118);
-            this.listView1.Name = "listView1";
-            this.listView1.Size = new System.Drawing.Size(358, 641);
-            this.listView1.TabIndex = 89;
-            this.listView1.UseCompatibleStateImageBehavior = false;
-            this.listView1.View = System.Windows.Forms.View.List;
-            // 
-            // ImageName
-            // 
-            this.ImageName.Width = 200;
             // 
             // label1
             // 
@@ -312,7 +294,7 @@ namespace EndoscopicSystem.V2.Forms
             // 
             // btnCapture
             // 
-            this.btnCapture.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
+            this.btnCapture.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
             this.btnCapture.Enabled = false;
             this.btnCapture.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
             this.btnCapture.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
@@ -410,11 +392,21 @@ namespace EndoscopicSystem.V2.Forms
             this.pictureBoxSnapshot.TabStop = false;
             this.pictureBoxSnapshot.Visible = false;
             // 
+            // listView1
+            // 
+            this.listView1.HideSelection = false;
+            this.listView1.Location = new System.Drawing.Point(990, 119);
+            this.listView1.Name = "listView1";
+            this.listView1.Size = new System.Drawing.Size(401, 640);
+            this.listView1.TabIndex = 117;
+            this.listView1.UseCompatibleStateImageBehavior = false;
+            // 
             // FormLive
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1373, 860);
+            this.ClientSize = new System.Drawing.Size(1403, 860);
+            this.Controls.Add(this.listView1);
             this.Controls.Add(this.btnPause);
             this.Controls.Add(this.btnStop);
             this.Controls.Add(this.btnRecord);
@@ -424,11 +416,10 @@ namespace EndoscopicSystem.V2.Forms
             this.Controls.Add(this.label3);
             this.Controls.Add(this.lbTime);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.listView1);
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.groupBox1);
-            this.Controls.Add(this.videoSourcePlayer);
             this.Controls.Add(this.pictureBoxSnapshot);
+            this.Controls.Add(this.videoSourcePlayer);
             this.Name = "FormLive";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.FormLive_FormClosing);
@@ -448,7 +439,6 @@ namespace EndoscopicSystem.V2.Forms
         private AForge.Controls.VideoSourcePlayer videoSourcePlayer;
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.GroupBox groupBox2;
-        private System.Windows.Forms.ListView listView1;
         private System.Windows.Forms.Button disconnectButton;
         private System.Windows.Forms.Button connectButton;
         private System.Windows.Forms.ComboBox devicesCombo;
@@ -472,6 +462,6 @@ namespace EndoscopicSystem.V2.Forms
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.ComboBox cbbProcedureList;
         private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.ColumnHeader ImageName;
+        private System.Windows.Forms.ListView listView1;
     }
 }
