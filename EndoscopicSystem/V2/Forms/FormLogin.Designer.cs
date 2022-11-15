@@ -69,6 +69,7 @@ namespace EndoscopicSystem.V2.Forms
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox1.TabIndex = 1;
             this.pictureBox1.TabStop = false;
+            this.pictureBox1.WaitOnLoad = true;
             // 
             // btnLogin
             // 
@@ -152,6 +153,7 @@ namespace EndoscopicSystem.V2.Forms
             this.ClientSize = new System.Drawing.Size(906, 560);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.panel1);
+            this.DoubleBuffered = true;
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "FormLogin";

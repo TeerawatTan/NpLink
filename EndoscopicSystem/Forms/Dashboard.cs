@@ -148,9 +148,11 @@ namespace EndoscopicSystem
 
                     //EndoscopicForm endo = new EndoscopicForm(UserID, hnNo, procedureId, endoscopicId, appointmentId);
                     //endo.Show();
-
+                    this.Hide();
                     V2.Forms.FormPatientConfirm formPatientConfirm = new V2.Forms.FormPatientConfirm(UserID, hnNo, procedureId, endoscopicId, appointmentId);
                     formPatientConfirm.ShowDialog();
+                    formPatientConfirm = null;
+                    this.Show();
                 }
             }
             catch (Exception)

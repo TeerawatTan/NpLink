@@ -1,4 +1,5 @@
-﻿using System;
+﻿using EndoscopicSystem.Forms;
+using System;
 using System.Drawing;
 using System.Windows.Forms;
 
@@ -94,6 +95,18 @@ namespace EndoscopicSystem.V2.Forms
         private void menuAnesthesistMethod_Click(object sender, EventArgs e)
         {
             OpenChildForm(new FormAnesthesistMethodSetting(_id));
+            ActiveMenuButton(sender);
+        }
+
+        private void menuCameraSetting_Click(object sender, EventArgs e)
+        {
+            OpenChildForm(new SettingPicForm(_id));
+            ActiveMenuButton(sender);
+        }
+
+        private void menuHospitalSetting_Click(object sender, EventArgs e)
+        {
+            OpenChildForm(new SettingHospitalForm(_id));
             ActiveMenuButton(sender);
         }
     }

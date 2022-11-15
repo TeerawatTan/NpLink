@@ -70,9 +70,9 @@
             // btnSave
             // 
             this.btnSave.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
-            this.btnSave.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
+            this.btnSave.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
             this.btnSave.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.btnSave.Location = new System.Drawing.Point(985, 646);
+            this.btnSave.Location = new System.Drawing.Point(1215, 590);
             this.btnSave.Name = "btnSave";
             this.btnSave.Size = new System.Drawing.Size(96, 52);
             this.btnSave.TabIndex = 19;
@@ -83,7 +83,7 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(31, 132);
+            this.label3.Location = new System.Drawing.Point(17, 113);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(79, 13);
             this.label3.TabIndex = 22;
@@ -92,7 +92,7 @@
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(613, 132);
+            this.label4.Location = new System.Drawing.Point(670, 113);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(69, 13);
             this.label4.TabIndex = 23;
@@ -101,9 +101,9 @@
             // btnSimulate
             // 
             this.btnSimulate.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
-            this.btnSimulate.Location = new System.Drawing.Point(461, 74);
+            this.btnSimulate.Location = new System.Drawing.Point(461, 60);
             this.btnSimulate.Name = "btnSimulate";
-            this.btnSimulate.Size = new System.Drawing.Size(96, 48);
+            this.btnSimulate.Size = new System.Drawing.Size(96, 40);
             this.btnSimulate.TabIndex = 24;
             this.btnSimulate.Text = "Crop";
             this.btnSimulate.UseVisualStyleBackColor = true;
@@ -158,9 +158,9 @@
             // btnSelect
             // 
             this.btnSelect.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
-            this.btnSelect.Location = new System.Drawing.Point(359, 74);
+            this.btnSelect.Location = new System.Drawing.Point(359, 60);
             this.btnSelect.Name = "btnSelect";
-            this.btnSelect.Size = new System.Drawing.Size(96, 48);
+            this.btnSelect.Size = new System.Drawing.Size(96, 40);
             this.btnSelect.TabIndex = 31;
             this.btnSelect.Text = "Select";
             this.btnSelect.UseVisualStyleBackColor = true;
@@ -169,9 +169,9 @@
             // button1
             // 
             this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
-            this.button1.Location = new System.Drawing.Point(34, 74);
+            this.button1.Location = new System.Drawing.Point(34, 60);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(137, 48);
+            this.button1.Size = new System.Drawing.Size(137, 40);
             this.button1.TabIndex = 33;
             this.button1.Text = "Browse File ...";
             this.button1.UseVisualStyleBackColor = true;
@@ -182,7 +182,7 @@
             this.btnReset.BackColor = System.Drawing.Color.White;
             this.btnReset.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
             this.btnReset.ForeColor = System.Drawing.Color.Black;
-            this.btnReset.Location = new System.Drawing.Point(883, 647);
+            this.btnReset.Location = new System.Drawing.Point(1113, 591);
             this.btnReset.Name = "btnReset";
             this.btnReset.Size = new System.Drawing.Size(96, 52);
             this.btnReset.TabIndex = 34;
@@ -232,21 +232,23 @@
             // 
             // pictureBox1
             // 
+            this.pictureBox1.BackColor = System.Drawing.Color.Gainsboro;
             this.pictureBox1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.pictureBox1.Location = new System.Drawing.Point(34, 147);
+            this.pictureBox1.Location = new System.Drawing.Point(20, 128);
             this.pictureBox1.Margin = new System.Windows.Forms.Padding(2);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(562, 364);
+            this.pictureBox1.Size = new System.Drawing.Size(640, 428);
             this.pictureBox1.TabIndex = 32;
             this.pictureBox1.TabStop = false;
             // 
             // pictureBox2
             // 
+            this.pictureBox2.BackColor = System.Drawing.Color.Gainsboro;
             this.pictureBox2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.pictureBox2.Location = new System.Drawing.Point(616, 147);
+            this.pictureBox2.Location = new System.Drawing.Point(673, 128);
             this.pictureBox2.Margin = new System.Windows.Forms.Padding(2);
             this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(562, 364);
+            this.pictureBox2.Size = new System.Drawing.Size(640, 428);
             this.pictureBox2.TabIndex = 21;
             this.pictureBox2.TabStop = false;
             // 
@@ -297,7 +299,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(233)))), ((int)(((byte)(242)))));
-            this.ClientSize = new System.Drawing.Size(1312, 744);
+            this.ClientSize = new System.Drawing.Size(1332, 744);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.txbW);
@@ -308,7 +310,6 @@
             this.Controls.Add(this.txtPosition);
             this.Controls.Add(this.btnReset);
             this.Controls.Add(this.button1);
-            this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.btnSelect);
             this.Controls.Add(this.labelY);
             this.Controls.Add(this.labelX);
@@ -320,6 +321,7 @@
             this.Controls.Add(this.pictureBox2);
             this.Controls.Add(this.btnSave);
             this.Controls.Add(this.label2);
+            this.Controls.Add(this.pictureBox1);
             this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "SettingPicForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;

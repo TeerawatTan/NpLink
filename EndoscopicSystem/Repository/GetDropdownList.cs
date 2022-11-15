@@ -144,5 +144,6 @@ namespace EndoscopicSystem.Repository
         public List<Subglottic> GetSubglottics() => db.Subglottics.ToList();
         public List<UE> GetUEs() => db.UES.ToList();
         public List<LE> GetLEs() => db.LES.ToList();
+        public List<FindingLabel> GetFindingLabels(int procedureId) => db.FindingLabels.Where(w => w.ProcedureID == procedureId).ToList();
     }
 }

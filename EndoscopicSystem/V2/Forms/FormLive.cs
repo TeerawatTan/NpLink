@@ -42,7 +42,7 @@ namespace EndoscopicSystem.V2.Forms
         private DateTime? _firstFrameTime, recordStartDate, recordEndDate;
         private bool _isRecord = false, _isPause = false, _isStopRecord = false;
         private static bool _needSnapshot = false;
-        private int patientId, endoscopicId, procedureId = 0, appointmentId = 0, item = 0, _aspectRatioID = 1, h, m, s;
+        private int _patientId, _endoscopicId, _procedureId = 0, _appointmentId = 0, _item = 0, _aspectRatioID = 1, h, m, s;
         private string PositionCropID = "L", _hnNo = "", _fileName = ".jpg", _pathFolderImageToSave, _vdoPath;
         protected readonly GetDropdownList list = new GetDropdownList();
         public Dictionary<int, string> ImgPath = new Dictionary<int, string>();
@@ -55,14 +55,14 @@ namespace EndoscopicSystem.V2.Forms
             InitializeComponent();
             UserID = userID;
             _hnNo = hn;
-            procedureId = procId;
-            endoscopicId = endoId;
-            appointmentId = apId;
+            _procedureId = procId;
+            _endoscopicId = endoId;
+            _appointmentId = apId;
         }
 
         private void FormLive_Load(object sender, EventArgs e)
         {
-            if (procedureId > 0 && appointmentId > 0)
+            if (_procedureId > 0 && _appointmentId > 0)
             {
                 btnNext.Visible = true;
             }
@@ -84,7 +84,7 @@ namespace EndoscopicSystem.V2.Forms
             cbbProcedureList.ValueMember = "ProcedureID";
             cbbProcedureList.DisplayMember = "ProcedureName";
             cbbProcedureList.DataSource = list.GetProcedureList();
-            cbbProcedureList.SelectedIndex = procedureId;
+            cbbProcedureList.SelectedIndex = _procedureId;
 
             if (_filterInfoCollection.Count != 0)
             {
@@ -105,7 +105,7 @@ namespace EndoscopicSystem.V2.Forms
                 this.Load += connectButton_Click;
             }
 
-            _pathFolderImageToSave = _pathFolderImage + _hnNo + @"\" + DateTime.Now.ToString("yyyyMMdd") + @"\" + cbbProcedureList.Text + @"\" + appointmentId + @"\";
+            _pathFolderImageToSave = _pathFolderImage + _hnNo + @"\" + DateTime.Now.ToString("yyyyMMdd") + @"\" + cbbProcedureList.Text + @"\" + _appointmentId + @"\";
             if (!Directory.Exists(_pathFolderImageToSave))
             {
                 Directory.CreateDirectory(_pathFolderImageToSave);
@@ -134,9 +134,9 @@ namespace EndoscopicSystem.V2.Forms
 
             txtHN.Text = _hnNo;
 
-            if (!string.IsNullOrWhiteSpace(txtHN.Text) && procedureId > 0)
+            if (!string.IsNullOrWhiteSpace(txtHN.Text) && _procedureId > 0)
             {
-                SearchHN(txtHN.Text, procedureId);
+                SearchHN(txtHN.Text, _procedureId);
             }
         }
 
@@ -144,41 +144,41 @@ namespace EndoscopicSystem.V2.Forms
         {
             connectButton.Enabled = true;
             _hnNo = hn;
-            procedureId = procId;
+            _procedureId = procId;
             try
             {
                 var getPatient = _db.Patients.FirstOrDefault(x => x.HN == hn && (x.IsActive.HasValue && x.IsActive.Value));
                 if (getPatient != null)
                 {
                     connectButton.Enabled = true;
-                    patientId = getPatient.PatientID;
+                    _patientId = getPatient.PatientID;
                     txtHN.Text = getPatient.HN;
                     txtFullName.Text = getPatient.Fullname;
                     txtAge.Text = getPatient.Age.HasValue ? getPatient.Age.ToString() : "";
 
-                    if (procedureId == 0)
+                    if (_procedureId == 0)
                     {
-                        procedureId = getPatient.ProcedureID ?? 0;
+                        _procedureId = getPatient.ProcedureID ?? 0;
                     }
 
                     Appointment app = new Appointment();
-                    var apps = _db.Appointments.Where(x => x.PatientID == patientId && txtHN.Text.Equals(x.HN) && x.ProcedureID == procedureId).ToList();
+                    var apps = _db.Appointments.Where(x => x.PatientID == _patientId && txtHN.Text.Equals(x.HN) && x.ProcedureID == _procedureId).ToList();
                     if (apps != null)
                     {
-                        if (appointmentId > 0)
+                        if (_appointmentId > 0)
                         {
-                            apps = apps.Where(w => w.AppointmentID == appointmentId).ToList();
+                            apps = apps.Where(w => w.AppointmentID == _appointmentId).ToList();
                             app = apps.FirstOrDefault();
                         }
                         else
                         {
                             app = apps.OrderByDescending(o => o.AppointmentDate).FirstOrDefault();
-                            appointmentId = app.AppointmentID;
+                            _appointmentId = app.AppointmentID;
                         }
                         txtSymptom.Text = app.Symptom;
                     }
 
-                    cbbProcedureList.SelectedValue = procedureId;
+                    cbbProcedureList.SelectedValue = _procedureId;
                 }
                 else
                 {
@@ -205,10 +205,23 @@ namespace EndoscopicSystem.V2.Forms
 
         private void btnNext_Click(object sender, EventArgs e)
         {
-            if (procedureId > 0 && appointmentId > 0)
+            if (_procedureId > 0 && _appointmentId > 0)
             {
-                FormPreviewReport formPreviewReport = new FormPreviewReport(UserID, _hnNo, procedureId, appointmentId, _pathFolderImageToSave);
+                this.Hide();
+
+                FormPreviewReport formPreviewReport = new FormPreviewReport(
+                    UserID, 
+                    _hnNo, 
+                    _procedureId, 
+                    _appointmentId, 
+                    _endoscopicId, 
+                    _patientId, 
+                    _pathFolderImageToSave, 
+                    ImgPath,
+                    _vdoPath);
                 formPreviewReport.ShowDialog();
+                formPreviewReport = null;
+                this.Show();
             }
             else
             {
@@ -295,7 +308,7 @@ namespace EndoscopicSystem.V2.Forms
         {
             try
             {
-                ++item;
+                ++_item;
 
                 SoundPlayer soundCapture = new SoundPlayer(_pathFolderSounds + "capture.wav");
                 soundCapture.Play();
@@ -303,7 +316,7 @@ namespace EndoscopicSystem.V2.Forms
                 _needSnapshot = false;
 
                 string namaImage = "Image";
-                string nameCapture = String.Format("{0}_{1}.jpg", namaImage, item);
+                string nameCapture = String.Format("{0}_{1}.jpg", namaImage, _item);
 
                 int aspectRatio_X = 0;
                 int aspectRatio_Y = 0;
@@ -324,7 +337,7 @@ namespace EndoscopicSystem.V2.Forms
                         isFullScreen = true;
                         break;
                 }
-                _pathFolderImageToSave = _pathFolderImage + _hnNo + @"\" + DateTime.Now.ToString("yyyyMMdd") + @"\" + cbbProcedureList.Text + @"\" + appointmentId + @"\";
+                _pathFolderImageToSave = _pathFolderImage + _hnNo + @"\" + DateTime.Now.ToString("yyyyMMdd") + @"\" + cbbProcedureList.Text + @"\" + _appointmentId + @"\";
                 if (!Directory.Exists(_pathFolderImageToSave))
                 {
                     Directory.CreateDirectory(_pathFolderImageToSave);
@@ -628,7 +641,7 @@ namespace EndoscopicSystem.V2.Forms
                     Image imgFile = Image.FromFile(item.FullName);
                     _imageList.Add(imgFile);
                 }
-                item = files.Count();
+                _item = files.Count();
             }
         }
     }

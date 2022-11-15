@@ -237,6 +237,9 @@
     <Compile Include="Entities\Finding.cs">
       <DependentUpon>DBEndoscopic.tt</DependentUpon>
     </Compile>
+    <Compile Include="Entities\FindingLabel.cs">
+      <DependentUpon>DBEndoscopic.tt</DependentUpon>
+    </Compile>
     <Compile Include="Entities\Fundu.cs">
       <DependentUpon>DBEndoscopic.tt</DependentUpon>
     </Compile>

@@ -132,10 +132,12 @@ namespace EndoscopicSystem.V2.Forms
 
         private void btnOk_Click(object sender, EventArgs e)
         {
-            this.Hide();
+            this.Close();
 
             FormLive formLive = new FormLive(UserID, hnNo, procedureId, endoscopicId, appointmentId);
             formLive.ShowDialog();
+            formLive = null;
+            this.Show();
         }
 
         private void button1_Click(object sender, EventArgs e)

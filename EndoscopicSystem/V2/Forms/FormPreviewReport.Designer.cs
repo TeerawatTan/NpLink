@@ -31,6 +31,8 @@ namespace EndoscopicSystem.V2.Forms
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormPreviewReport));
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.cbbProcedureList = new System.Windows.Forms.ComboBox();
+            this.label6 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.panel3 = new System.Windows.Forms.Panel();
             this.groupBox14 = new System.Windows.Forms.GroupBox();
@@ -142,8 +144,6 @@ namespace EndoscopicSystem.V2.Forms
             this.btnNext = new System.Windows.Forms.Button();
             this.listView1 = new System.Windows.Forms.ListView();
             this.openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
-            this.cbbProcedureList = new System.Windows.Forms.ComboBox();
-            this.label6 = new System.Windows.Forms.Label();
             this.pictureBoxSnapshot = new System.Windows.Forms.PictureBox();
             this.groupBox1.SuspendLayout();
             this.panel3.SuspendLayout();
@@ -197,6 +197,32 @@ namespace EndoscopicSystem.V2.Forms
             this.groupBox1.TabIndex = 88;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Patient Information ";
+            // 
+            // cbbProcedureList
+            // 
+            this.cbbProcedureList.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cbbProcedureList.Enabled = false;
+            this.cbbProcedureList.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
+            this.cbbProcedureList.FormattingEnabled = true;
+            this.cbbProcedureList.Location = new System.Drawing.Point(979, 20);
+            this.cbbProcedureList.Margin = new System.Windows.Forms.Padding(2);
+            this.cbbProcedureList.Name = "cbbProcedureList";
+            this.cbbProcedureList.Size = new System.Drawing.Size(365, 24);
+            this.cbbProcedureList.TabIndex = 128;
+            this.cbbProcedureList.Visible = false;
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.BackColor = System.Drawing.Color.Transparent;
+            this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
+            this.label6.Location = new System.Drawing.Point(861, 22);
+            this.label6.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(114, 17);
+            this.label6.TabIndex = 127;
+            this.label6.Text = "Procedure List";
+            this.label6.Visible = false;
             // 
             // label1
             // 
@@ -289,6 +315,8 @@ namespace EndoscopicSystem.V2.Forms
             // 
             // txtPictureBoxSaved18
             // 
+            this.txtPictureBoxSaved18.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.Suggest;
+            this.txtPictureBoxSaved18.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.CustomSource;
             this.txtPictureBoxSaved18.Location = new System.Drawing.Point(5, 152);
             this.txtPictureBoxSaved18.Margin = new System.Windows.Forms.Padding(2);
             this.txtPictureBoxSaved18.MaxLength = 25;
@@ -350,6 +378,8 @@ namespace EndoscopicSystem.V2.Forms
             // 
             // txtPictureBoxSaved17
             // 
+            this.txtPictureBoxSaved17.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.Suggest;
+            this.txtPictureBoxSaved17.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.CustomSource;
             this.txtPictureBoxSaved17.Location = new System.Drawing.Point(4, 151);
             this.txtPictureBoxSaved17.Margin = new System.Windows.Forms.Padding(2);
             this.txtPictureBoxSaved17.MaxLength = 25;
@@ -412,6 +442,8 @@ namespace EndoscopicSystem.V2.Forms
             // 
             // txtPictureBoxSaved16
             // 
+            this.txtPictureBoxSaved16.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.Suggest;
+            this.txtPictureBoxSaved16.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.CustomSource;
             this.txtPictureBoxSaved16.Location = new System.Drawing.Point(5, 152);
             this.txtPictureBoxSaved16.Margin = new System.Windows.Forms.Padding(2);
             this.txtPictureBoxSaved16.MaxLength = 25;
@@ -487,6 +519,8 @@ namespace EndoscopicSystem.V2.Forms
             // 
             // txtPictureBoxSaved15
             // 
+            this.txtPictureBoxSaved15.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.Suggest;
+            this.txtPictureBoxSaved15.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.CustomSource;
             this.txtPictureBoxSaved15.Location = new System.Drawing.Point(5, 152);
             this.txtPictureBoxSaved15.Margin = new System.Windows.Forms.Padding(2);
             this.txtPictureBoxSaved15.MaxLength = 25;
@@ -562,6 +596,8 @@ namespace EndoscopicSystem.V2.Forms
             // 
             // txtPictureBoxSaved14
             // 
+            this.txtPictureBoxSaved14.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.Suggest;
+            this.txtPictureBoxSaved14.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.CustomSource;
             this.txtPictureBoxSaved14.Location = new System.Drawing.Point(5, 152);
             this.txtPictureBoxSaved14.Margin = new System.Windows.Forms.Padding(2);
             this.txtPictureBoxSaved14.MaxLength = 25;
@@ -637,6 +673,8 @@ namespace EndoscopicSystem.V2.Forms
             // 
             // txtPictureBoxSaved13
             // 
+            this.txtPictureBoxSaved13.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.Suggest;
+            this.txtPictureBoxSaved13.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.CustomSource;
             this.txtPictureBoxSaved13.Location = new System.Drawing.Point(5, 151);
             this.txtPictureBoxSaved13.Margin = new System.Windows.Forms.Padding(2);
             this.txtPictureBoxSaved13.MaxLength = 25;
@@ -712,6 +750,8 @@ namespace EndoscopicSystem.V2.Forms
             // 
             // txtPictureBoxSaved12
             // 
+            this.txtPictureBoxSaved12.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.Suggest;
+            this.txtPictureBoxSaved12.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.CustomSource;
             this.txtPictureBoxSaved12.Location = new System.Drawing.Point(5, 151);
             this.txtPictureBoxSaved12.Margin = new System.Windows.Forms.Padding(2);
             this.txtPictureBoxSaved12.MaxLength = 25;
@@ -787,6 +827,8 @@ namespace EndoscopicSystem.V2.Forms
             // 
             // txtPictureBoxSaved11
             // 
+            this.txtPictureBoxSaved11.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.Suggest;
+            this.txtPictureBoxSaved11.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.CustomSource;
             this.txtPictureBoxSaved11.Location = new System.Drawing.Point(5, 151);
             this.txtPictureBoxSaved11.Margin = new System.Windows.Forms.Padding(2);
             this.txtPictureBoxSaved11.MaxLength = 25;
@@ -862,6 +904,8 @@ namespace EndoscopicSystem.V2.Forms
             // 
             // txtPictureBoxSaved10
             // 
+            this.txtPictureBoxSaved10.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.Suggest;
+            this.txtPictureBoxSaved10.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.CustomSource;
             this.txtPictureBoxSaved10.Location = new System.Drawing.Point(5, 151);
             this.txtPictureBoxSaved10.Margin = new System.Windows.Forms.Padding(2);
             this.txtPictureBoxSaved10.MaxLength = 25;
@@ -951,6 +995,8 @@ namespace EndoscopicSystem.V2.Forms
             // 
             // txtPictureBoxSaved1
             // 
+            this.txtPictureBoxSaved1.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.Suggest;
+            this.txtPictureBoxSaved1.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.CustomSource;
             this.txtPictureBoxSaved1.Location = new System.Drawing.Point(4, 152);
             this.txtPictureBoxSaved1.Margin = new System.Windows.Forms.Padding(2);
             this.txtPictureBoxSaved1.MaxLength = 25;
@@ -1026,6 +1072,8 @@ namespace EndoscopicSystem.V2.Forms
             // 
             // txtPictureBoxSaved2
             // 
+            this.txtPictureBoxSaved2.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.Suggest;
+            this.txtPictureBoxSaved2.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.CustomSource;
             this.txtPictureBoxSaved2.Location = new System.Drawing.Point(2, 152);
             this.txtPictureBoxSaved2.Margin = new System.Windows.Forms.Padding(2);
             this.txtPictureBoxSaved2.MaxLength = 25;
@@ -1087,6 +1135,8 @@ namespace EndoscopicSystem.V2.Forms
             // 
             // txtPictureBoxSaved3
             // 
+            this.txtPictureBoxSaved3.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.Suggest;
+            this.txtPictureBoxSaved3.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.CustomSource;
             this.txtPictureBoxSaved3.Location = new System.Drawing.Point(4, 152);
             this.txtPictureBoxSaved3.Margin = new System.Windows.Forms.Padding(2);
             this.txtPictureBoxSaved3.MaxLength = 25;
@@ -1176,6 +1226,8 @@ namespace EndoscopicSystem.V2.Forms
             // 
             // txtPictureBoxSaved4
             // 
+            this.txtPictureBoxSaved4.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.Suggest;
+            this.txtPictureBoxSaved4.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.CustomSource;
             this.txtPictureBoxSaved4.Location = new System.Drawing.Point(5, 151);
             this.txtPictureBoxSaved4.Margin = new System.Windows.Forms.Padding(2);
             this.txtPictureBoxSaved4.MaxLength = 25;
@@ -1237,6 +1289,8 @@ namespace EndoscopicSystem.V2.Forms
             // 
             // txtPictureBoxSaved5
             // 
+            this.txtPictureBoxSaved5.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.Suggest;
+            this.txtPictureBoxSaved5.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.CustomSource;
             this.txtPictureBoxSaved5.Location = new System.Drawing.Point(6, 152);
             this.txtPictureBoxSaved5.Margin = new System.Windows.Forms.Padding(2);
             this.txtPictureBoxSaved5.MaxLength = 25;
@@ -1312,6 +1366,8 @@ namespace EndoscopicSystem.V2.Forms
             // 
             // txtPictureBoxSaved6
             // 
+            this.txtPictureBoxSaved6.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.Suggest;
+            this.txtPictureBoxSaved6.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.CustomSource;
             this.txtPictureBoxSaved6.Location = new System.Drawing.Point(6, 152);
             this.txtPictureBoxSaved6.Margin = new System.Windows.Forms.Padding(2);
             this.txtPictureBoxSaved6.MaxLength = 25;
@@ -1387,6 +1443,8 @@ namespace EndoscopicSystem.V2.Forms
             // 
             // txtPictureBoxSaved7
             // 
+            this.txtPictureBoxSaved7.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.Suggest;
+            this.txtPictureBoxSaved7.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.CustomSource;
             this.txtPictureBoxSaved7.Location = new System.Drawing.Point(5, 151);
             this.txtPictureBoxSaved7.Margin = new System.Windows.Forms.Padding(2);
             this.txtPictureBoxSaved7.MaxLength = 25;
@@ -1462,6 +1520,8 @@ namespace EndoscopicSystem.V2.Forms
             // 
             // txtPictureBoxSaved8
             // 
+            this.txtPictureBoxSaved8.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.Suggest;
+            this.txtPictureBoxSaved8.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.CustomSource;
             this.txtPictureBoxSaved8.Location = new System.Drawing.Point(5, 152);
             this.txtPictureBoxSaved8.Margin = new System.Windows.Forms.Padding(2);
             this.txtPictureBoxSaved8.MaxLength = 25;
@@ -1585,39 +1645,13 @@ namespace EndoscopicSystem.V2.Forms
             // 
             this.openFileDialog1.FileName = "openFileDialog1";
             // 
-            // cbbProcedureList
-            // 
-            this.cbbProcedureList.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cbbProcedureList.Enabled = false;
-            this.cbbProcedureList.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
-            this.cbbProcedureList.FormattingEnabled = true;
-            this.cbbProcedureList.Location = new System.Drawing.Point(979, 20);
-            this.cbbProcedureList.Margin = new System.Windows.Forms.Padding(2);
-            this.cbbProcedureList.Name = "cbbProcedureList";
-            this.cbbProcedureList.Size = new System.Drawing.Size(365, 24);
-            this.cbbProcedureList.TabIndex = 128;
-            this.cbbProcedureList.Visible = false;
-            // 
-            // label6
-            // 
-            this.label6.AutoSize = true;
-            this.label6.BackColor = System.Drawing.Color.Transparent;
-            this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
-            this.label6.Location = new System.Drawing.Point(861, 22);
-            this.label6.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(114, 17);
-            this.label6.TabIndex = 127;
-            this.label6.Text = "Procedure List";
-            this.label6.Visible = false;
-            // 
             // pictureBoxSnapshot
             // 
             this.pictureBoxSnapshot.BackColor = System.Drawing.Color.Silver;
-            this.pictureBoxSnapshot.Location = new System.Drawing.Point(119, 221);
+            this.pictureBoxSnapshot.Location = new System.Drawing.Point(167, 112);
             this.pictureBoxSnapshot.Margin = new System.Windows.Forms.Padding(2);
             this.pictureBoxSnapshot.Name = "pictureBoxSnapshot";
-            this.pictureBoxSnapshot.Size = new System.Drawing.Size(562, 364);
+            this.pictureBoxSnapshot.Size = new System.Drawing.Size(960, 642);
             this.pictureBoxSnapshot.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBoxSnapshot.TabIndex = 129;
             this.pictureBoxSnapshot.TabStop = false;
@@ -1628,7 +1662,6 @@ namespace EndoscopicSystem.V2.Forms
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1403, 860);
-            this.Controls.Add(this.pictureBoxSnapshot);
             this.Controls.Add(this.listView1);
             this.Controls.Add(this.btnNext);
             this.Controls.Add(this.btnSave);
@@ -1637,9 +1670,9 @@ namespace EndoscopicSystem.V2.Forms
             this.Controls.Add(this.panel3);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.pictureBox1);
+            this.Controls.Add(this.pictureBoxSnapshot);
             this.Name = "FormPreviewReport";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "FormPreviewReport";
             this.Load += new System.EventHandler(this.FormPreviewReport_Load);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();

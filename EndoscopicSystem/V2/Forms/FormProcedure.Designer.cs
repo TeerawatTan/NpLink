@@ -83,6 +83,36 @@ namespace EndoscopicSystem.V2.Forms
             this.label22 = new System.Windows.Forms.Label();
             this.txtGeneralInstrument_EGD = new System.Windows.Forms.TextBox();
             this.tabFindingEGD = new System.Windows.Forms.TabPage();
+            this.label33 = new System.Windows.Forms.Label();
+            this.txbFinding2ndPart_EGD = new System.Windows.Forms.TextBox();
+            this.txbFindingDuodenalBulb_EGD = new System.Windows.Forms.TextBox();
+            this.txbFindingPylorus_EGD = new System.Windows.Forms.TextBox();
+            this.txbFindingAntrum_EGD = new System.Windows.Forms.TextBox();
+            this.txbFindingBody_EGD = new System.Windows.Forms.TextBox();
+            this.txbFindingFundus_EGD = new System.Windows.Forms.TextBox();
+            this.txbFindingCardia_EGD = new System.Windows.Forms.TextBox();
+            this.txbFindingEGJunction_EGD = new System.Windows.Forms.TextBox();
+            this.txbFindingEsophagus_EGD = new System.Windows.Forms.TextBox();
+            this.txbFindingOropharynx_EGD = new System.Windows.Forms.TextBox();
+            this.cbbFinding2ndPart_EGD = new System.Windows.Forms.ComboBox();
+            this.label11 = new System.Windows.Forms.Label();
+            this.cbbFindingDuodenalBulb_EGD = new System.Windows.Forms.ComboBox();
+            this.label25 = new System.Windows.Forms.Label();
+            this.cbbFindingPylorus_EGD = new System.Windows.Forms.ComboBox();
+            this.cbbFindingAntrum_EGD = new System.Windows.Forms.ComboBox();
+            this.label26 = new System.Windows.Forms.Label();
+            this.label27 = new System.Windows.Forms.Label();
+            this.cbbFindingBody_EGD = new System.Windows.Forms.ComboBox();
+            this.cbbFindingFundus_EGD = new System.Windows.Forms.ComboBox();
+            this.label28 = new System.Windows.Forms.Label();
+            this.cbbFindingCardia_EGD = new System.Windows.Forms.ComboBox();
+            this.cbbFindingEGJunction_EGD = new System.Windows.Forms.ComboBox();
+            this.label29 = new System.Windows.Forms.Label();
+            this.label30 = new System.Windows.Forms.Label();
+            this.cbbFindingEsophagus_EGD = new System.Windows.Forms.ComboBox();
+            this.cbbFindingOropharynx_EGD = new System.Windows.Forms.ComboBox();
+            this.label31 = new System.Windows.Forms.Label();
+            this.label32 = new System.Windows.Forms.Label();
             this.txbFindingRecommendation_EGD = new System.Windows.Forms.TextBox();
             this.label109 = new System.Windows.Forms.Label();
             this.txbFindingHistopathology_EGD = new System.Windows.Forms.TextBox();
@@ -110,46 +140,10 @@ namespace EndoscopicSystem.V2.Forms
             this.txbFindingPrinncipalProcedureText_EGD = new System.Windows.Forms.TextBox();
             this.label21 = new System.Windows.Forms.Label();
             this.txbFindingPrinncipalProcedureCode_EGD = new System.Windows.Forms.TextBox();
-            this.cbbFindingLLL_EGD = new System.Windows.Forms.ComboBox();
             this.txbFindingComplication_EGD = new System.Windows.Forms.TextBox();
-            this.cbbFindingLingular_EGD = new System.Windows.Forms.ComboBox();
             this.label7 = new System.Windows.Forms.Label();
-            this.cbbFindingLUL_EGD = new System.Windows.Forms.ComboBox();
             this.label8 = new System.Windows.Forms.Label();
-            this.cbbFindingLeftMain_EGD = new System.Windows.Forms.ComboBox();
             this.txbFindingComment_EGD = new System.Windows.Forms.TextBox();
-            this.cbbFindingRLL_EGD = new System.Windows.Forms.ComboBox();
-            this.cbbFindingRML_EGD = new System.Windows.Forms.ComboBox();
-            this.cbbFindingRUL_EGD = new System.Windows.Forms.ComboBox();
-            this.cbbFindingRightIntermideate_EGD = new System.Windows.Forms.ComboBox();
-            this.cbbFindingRightMain_EGD = new System.Windows.Forms.ComboBox();
-            this.cbbFindingCarina_EGD = new System.Windows.Forms.ComboBox();
-            this.cbbFindingTrachea_EGD = new System.Windows.Forms.ComboBox();
-            this.cbbFindingVocal_EGD = new System.Windows.Forms.ComboBox();
-            this.label35 = new System.Windows.Forms.Label();
-            this.label11 = new System.Windows.Forms.Label();
-            this.label25 = new System.Windows.Forms.Label();
-            this.txbFindingLLL_EGD = new System.Windows.Forms.TextBox();
-            this.label26 = new System.Windows.Forms.Label();
-            this.txbFindingLingular_EGD = new System.Windows.Forms.TextBox();
-            this.txbFindingLUL_EGD = new System.Windows.Forms.TextBox();
-            this.txbFindingLeftMain_EGD = new System.Windows.Forms.TextBox();
-            this.label27 = new System.Windows.Forms.Label();
-            this.txbFindingRLL_EGD = new System.Windows.Forms.TextBox();
-            this.label28 = new System.Windows.Forms.Label();
-            this.txbFindingRML_EGD = new System.Windows.Forms.TextBox();
-            this.label29 = new System.Windows.Forms.Label();
-            this.label30 = new System.Windows.Forms.Label();
-            this.label31 = new System.Windows.Forms.Label();
-            this.label32 = new System.Windows.Forms.Label();
-            this.label33 = new System.Windows.Forms.Label();
-            this.label34 = new System.Windows.Forms.Label();
-            this.txbFindingRUL_EGD = new System.Windows.Forms.TextBox();
-            this.txbFindingIntermideate_EGD = new System.Windows.Forms.TextBox();
-            this.txbFindingRightMain_EGD = new System.Windows.Forms.TextBox();
-            this.txbFindingCarina_EGD = new System.Windows.Forms.TextBox();
-            this.txbFindingTrachea_EGD = new System.Windows.Forms.TextBox();
-            this.txbFindingVocalCord_EGD = new System.Windows.Forms.TextBox();
             this.tabIndicationBronchoscopy = new System.Windows.Forms.TabPage();
             this.cbOther_0 = new System.Windows.Forms.CheckBox();
             this.cbTherapeutic_0 = new System.Windows.Forms.CheckBox();
@@ -437,106 +431,55 @@ namespace EndoscopicSystem.V2.Forms
             this.btnReport = new System.Windows.Forms.Button();
             this.panel3 = new System.Windows.Forms.Panel();
             this.groupBox14 = new System.Windows.Forms.GroupBox();
-            this.btnEditPic18 = new System.Windows.Forms.Button();
-            this.btnPictureBoxSaved18 = new System.Windows.Forms.Button();
-            this.btnDeletePictureBoxSaved18 = new System.Windows.Forms.Button();
             this.txtPictureBoxSaved18 = new System.Windows.Forms.TextBox();
             this.pictureBoxSaved18 = new System.Windows.Forms.PictureBox();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
-            this.btnPictureBoxSaved17 = new System.Windows.Forms.Button();
-            this.btnEditPic17 = new System.Windows.Forms.Button();
             this.txtPictureBoxSaved17 = new System.Windows.Forms.TextBox();
-            this.btnDeletePictureBoxSaved17 = new System.Windows.Forms.Button();
             this.pictureBoxSaved17 = new System.Windows.Forms.PictureBox();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
-            this.btnPictureBoxSaved16 = new System.Windows.Forms.Button();
             this.txtPictureBoxSaved16 = new System.Windows.Forms.TextBox();
-            this.btnEditPic16 = new System.Windows.Forms.Button();
-            this.btnDeletePictureBoxSaved16 = new System.Windows.Forms.Button();
             this.pictureBoxSaved16 = new System.Windows.Forms.PictureBox();
             this.groupBox4 = new System.Windows.Forms.GroupBox();
-            this.btnPictureBoxSaved15 = new System.Windows.Forms.Button();
             this.txtPictureBoxSaved15 = new System.Windows.Forms.TextBox();
-            this.btnDeletePictureBoxSaved15 = new System.Windows.Forms.Button();
-            this.btnEditPic15 = new System.Windows.Forms.Button();
             this.pictureBoxSaved15 = new System.Windows.Forms.PictureBox();
             this.groupBox5 = new System.Windows.Forms.GroupBox();
-            this.btnPictureBoxSaved14 = new System.Windows.Forms.Button();
             this.txtPictureBoxSaved14 = new System.Windows.Forms.TextBox();
-            this.btnDeletePictureBoxSaved14 = new System.Windows.Forms.Button();
-            this.btnEditPic14 = new System.Windows.Forms.Button();
             this.pictureBoxSaved14 = new System.Windows.Forms.PictureBox();
             this.groupBox6 = new System.Windows.Forms.GroupBox();
-            this.btnPictureBoxSaved13 = new System.Windows.Forms.Button();
             this.txtPictureBoxSaved13 = new System.Windows.Forms.TextBox();
-            this.btnDeletePictureBoxSaved13 = new System.Windows.Forms.Button();
-            this.btnEditPic13 = new System.Windows.Forms.Button();
             this.pictureBoxSaved13 = new System.Windows.Forms.PictureBox();
             this.groupBox7 = new System.Windows.Forms.GroupBox();
-            this.btnPictureBoxSaved12 = new System.Windows.Forms.Button();
             this.txtPictureBoxSaved12 = new System.Windows.Forms.TextBox();
-            this.btnDeletePictureBoxSaved12 = new System.Windows.Forms.Button();
-            this.btnEditPic12 = new System.Windows.Forms.Button();
             this.pictureBoxSaved12 = new System.Windows.Forms.PictureBox();
             this.groupBox8 = new System.Windows.Forms.GroupBox();
-            this.btnPictureBoxSaved11 = new System.Windows.Forms.Button();
             this.txtPictureBoxSaved11 = new System.Windows.Forms.TextBox();
-            this.btnDeletePictureBoxSaved11 = new System.Windows.Forms.Button();
-            this.btnEditPic11 = new System.Windows.Forms.Button();
             this.pictureBoxSaved11 = new System.Windows.Forms.PictureBox();
             this.groupBox9 = new System.Windows.Forms.GroupBox();
-            this.btnPictureBoxSaved10 = new System.Windows.Forms.Button();
             this.txtPictureBoxSaved10 = new System.Windows.Forms.TextBox();
-            this.btnDeletePictureBoxSaved10 = new System.Windows.Forms.Button();
-            this.btnEditPic10 = new System.Windows.Forms.Button();
             this.pictureBoxSaved10 = new System.Windows.Forms.PictureBox();
             this.groupBox18 = new System.Windows.Forms.GroupBox();
-            this.btnPictureBoxSaved1 = new System.Windows.Forms.Button();
-            this.btnDeletePictureBoxSaved1 = new System.Windows.Forms.Button();
             this.txtPictureBoxSaved1 = new System.Windows.Forms.TextBox();
-            this.btnEditPic1 = new System.Windows.Forms.Button();
             this.pictureBoxSaved1 = new System.Windows.Forms.PictureBox();
             this.groupBox17 = new System.Windows.Forms.GroupBox();
-            this.btnPictureBoxSaved2 = new System.Windows.Forms.Button();
-            this.btnDeletePictureBoxSaved2 = new System.Windows.Forms.Button();
             this.txtPictureBoxSaved2 = new System.Windows.Forms.TextBox();
-            this.btnEditPic2 = new System.Windows.Forms.Button();
             this.pictureBoxSaved2 = new System.Windows.Forms.PictureBox();
             this.groupBox16 = new System.Windows.Forms.GroupBox();
-            this.btnPictureBoxSaved3 = new System.Windows.Forms.Button();
             this.txtPictureBoxSaved3 = new System.Windows.Forms.TextBox();
-            this.btnDeletePictureBoxSaved3 = new System.Windows.Forms.Button();
-            this.btnEditPic3 = new System.Windows.Forms.Button();
             this.pictureBoxSaved3 = new System.Windows.Forms.PictureBox();
             this.groupBox15 = new System.Windows.Forms.GroupBox();
-            this.btnPictureBoxSaved4 = new System.Windows.Forms.Button();
-            this.btnDeletePictureBoxSaved4 = new System.Windows.Forms.Button();
             this.txtPictureBoxSaved4 = new System.Windows.Forms.TextBox();
-            this.btnEditPic4 = new System.Windows.Forms.Button();
             this.pictureBoxSaved4 = new System.Windows.Forms.PictureBox();
             this.groupBox13 = new System.Windows.Forms.GroupBox();
-            this.btnPictureBoxSaved5 = new System.Windows.Forms.Button();
             this.txtPictureBoxSaved5 = new System.Windows.Forms.TextBox();
-            this.btnDeletePictureBoxSaved5 = new System.Windows.Forms.Button();
-            this.btnEditPic5 = new System.Windows.Forms.Button();
             this.pictureBoxSaved5 = new System.Windows.Forms.PictureBox();
             this.groupBox12 = new System.Windows.Forms.GroupBox();
-            this.btnPictureBoxSaved7 = new System.Windows.Forms.Button();
             this.txtPictureBoxSaved7 = new System.Windows.Forms.TextBox();
-            this.btnDeletePictureBoxSaved7 = new System.Windows.Forms.Button();
-            this.btnEditPic7 = new System.Windows.Forms.Button();
             this.pictureBoxSaved7 = new System.Windows.Forms.PictureBox();
             this.groupBox11 = new System.Windows.Forms.GroupBox();
-            this.btnPictureBoxSaved8 = new System.Windows.Forms.Button();
             this.txtPictureBoxSaved8 = new System.Windows.Forms.TextBox();
-            this.btnDeletePictureBoxSaved8 = new System.Windows.Forms.Button();
-            this.btnEditPic8 = new System.Windows.Forms.Button();
             this.pictureBoxSaved8 = new System.Windows.Forms.PictureBox();
             this.groupBox10 = new System.Windows.Forms.GroupBox();
-            this.btnPictureBoxSaved9 = new System.Windows.Forms.Button();
             this.txtPictureBoxSaved9 = new System.Windows.Forms.TextBox();
-            this.btnDeletePictureBoxSaved9 = new System.Windows.Forms.Button();
-            this.btnEditPic9 = new System.Windows.Forms.Button();
             this.pictureBoxSaved9 = new System.Windows.Forms.PictureBox();
             this.tabControl1.SuspendLayout();
             this.tabGeneralEGD.SuspendLayout();
@@ -1265,6 +1208,36 @@ namespace EndoscopicSystem.V2.Forms
             // tabFindingEGD
             // 
             this.tabFindingEGD.BackColor = System.Drawing.Color.White;
+            this.tabFindingEGD.Controls.Add(this.label33);
+            this.tabFindingEGD.Controls.Add(this.txbFinding2ndPart_EGD);
+            this.tabFindingEGD.Controls.Add(this.txbFindingDuodenalBulb_EGD);
+            this.tabFindingEGD.Controls.Add(this.txbFindingPylorus_EGD);
+            this.tabFindingEGD.Controls.Add(this.txbFindingAntrum_EGD);
+            this.tabFindingEGD.Controls.Add(this.txbFindingBody_EGD);
+            this.tabFindingEGD.Controls.Add(this.txbFindingFundus_EGD);
+            this.tabFindingEGD.Controls.Add(this.txbFindingCardia_EGD);
+            this.tabFindingEGD.Controls.Add(this.txbFindingEGJunction_EGD);
+            this.tabFindingEGD.Controls.Add(this.txbFindingEsophagus_EGD);
+            this.tabFindingEGD.Controls.Add(this.txbFindingOropharynx_EGD);
+            this.tabFindingEGD.Controls.Add(this.cbbFinding2ndPart_EGD);
+            this.tabFindingEGD.Controls.Add(this.label11);
+            this.tabFindingEGD.Controls.Add(this.cbbFindingDuodenalBulb_EGD);
+            this.tabFindingEGD.Controls.Add(this.label25);
+            this.tabFindingEGD.Controls.Add(this.cbbFindingPylorus_EGD);
+            this.tabFindingEGD.Controls.Add(this.cbbFindingAntrum_EGD);
+            this.tabFindingEGD.Controls.Add(this.label26);
+            this.tabFindingEGD.Controls.Add(this.label27);
+            this.tabFindingEGD.Controls.Add(this.cbbFindingBody_EGD);
+            this.tabFindingEGD.Controls.Add(this.cbbFindingFundus_EGD);
+            this.tabFindingEGD.Controls.Add(this.label28);
+            this.tabFindingEGD.Controls.Add(this.cbbFindingCardia_EGD);
+            this.tabFindingEGD.Controls.Add(this.cbbFindingEGJunction_EGD);
+            this.tabFindingEGD.Controls.Add(this.label29);
+            this.tabFindingEGD.Controls.Add(this.label30);
+            this.tabFindingEGD.Controls.Add(this.cbbFindingEsophagus_EGD);
+            this.tabFindingEGD.Controls.Add(this.cbbFindingOropharynx_EGD);
+            this.tabFindingEGD.Controls.Add(this.label31);
+            this.tabFindingEGD.Controls.Add(this.label32);
             this.tabFindingEGD.Controls.Add(this.txbFindingRecommendation_EGD);
             this.tabFindingEGD.Controls.Add(this.label109);
             this.tabFindingEGD.Controls.Add(this.txbFindingHistopathology_EGD);
@@ -1292,46 +1265,10 @@ namespace EndoscopicSystem.V2.Forms
             this.tabFindingEGD.Controls.Add(this.txbFindingPrinncipalProcedureText_EGD);
             this.tabFindingEGD.Controls.Add(this.label21);
             this.tabFindingEGD.Controls.Add(this.txbFindingPrinncipalProcedureCode_EGD);
-            this.tabFindingEGD.Controls.Add(this.cbbFindingLLL_EGD);
             this.tabFindingEGD.Controls.Add(this.txbFindingComplication_EGD);
-            this.tabFindingEGD.Controls.Add(this.cbbFindingLingular_EGD);
             this.tabFindingEGD.Controls.Add(this.label7);
-            this.tabFindingEGD.Controls.Add(this.cbbFindingLUL_EGD);
             this.tabFindingEGD.Controls.Add(this.label8);
-            this.tabFindingEGD.Controls.Add(this.cbbFindingLeftMain_EGD);
             this.tabFindingEGD.Controls.Add(this.txbFindingComment_EGD);
-            this.tabFindingEGD.Controls.Add(this.cbbFindingRLL_EGD);
-            this.tabFindingEGD.Controls.Add(this.cbbFindingRML_EGD);
-            this.tabFindingEGD.Controls.Add(this.cbbFindingRUL_EGD);
-            this.tabFindingEGD.Controls.Add(this.cbbFindingRightIntermideate_EGD);
-            this.tabFindingEGD.Controls.Add(this.cbbFindingRightMain_EGD);
-            this.tabFindingEGD.Controls.Add(this.cbbFindingCarina_EGD);
-            this.tabFindingEGD.Controls.Add(this.cbbFindingTrachea_EGD);
-            this.tabFindingEGD.Controls.Add(this.cbbFindingVocal_EGD);
-            this.tabFindingEGD.Controls.Add(this.label35);
-            this.tabFindingEGD.Controls.Add(this.label11);
-            this.tabFindingEGD.Controls.Add(this.label25);
-            this.tabFindingEGD.Controls.Add(this.txbFindingLLL_EGD);
-            this.tabFindingEGD.Controls.Add(this.label26);
-            this.tabFindingEGD.Controls.Add(this.txbFindingLingular_EGD);
-            this.tabFindingEGD.Controls.Add(this.txbFindingLUL_EGD);
-            this.tabFindingEGD.Controls.Add(this.txbFindingLeftMain_EGD);
-            this.tabFindingEGD.Controls.Add(this.label27);
-            this.tabFindingEGD.Controls.Add(this.txbFindingRLL_EGD);
-            this.tabFindingEGD.Controls.Add(this.label28);
-            this.tabFindingEGD.Controls.Add(this.txbFindingRML_EGD);
-            this.tabFindingEGD.Controls.Add(this.label29);
-            this.tabFindingEGD.Controls.Add(this.label30);
-            this.tabFindingEGD.Controls.Add(this.label31);
-            this.tabFindingEGD.Controls.Add(this.label32);
-            this.tabFindingEGD.Controls.Add(this.label33);
-            this.tabFindingEGD.Controls.Add(this.label34);
-            this.tabFindingEGD.Controls.Add(this.txbFindingRUL_EGD);
-            this.tabFindingEGD.Controls.Add(this.txbFindingIntermideate_EGD);
-            this.tabFindingEGD.Controls.Add(this.txbFindingRightMain_EGD);
-            this.tabFindingEGD.Controls.Add(this.txbFindingCarina_EGD);
-            this.tabFindingEGD.Controls.Add(this.txbFindingTrachea_EGD);
-            this.tabFindingEGD.Controls.Add(this.txbFindingVocalCord_EGD);
             this.tabFindingEGD.Location = new System.Drawing.Point(4, 34);
             this.tabFindingEGD.Margin = new System.Windows.Forms.Padding(2);
             this.tabFindingEGD.Name = "tabFindingEGD";
@@ -1339,12 +1276,372 @@ namespace EndoscopicSystem.V2.Forms
             this.tabFindingEGD.TabIndex = 4;
             this.tabFindingEGD.Text = "Finding";
             // 
+            // label33
+            // 
+            this.label33.AutoSize = true;
+            this.label33.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
+            this.label33.Location = new System.Drawing.Point(7, 144);
+            this.label33.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label33.Name = "label33";
+            this.label33.Size = new System.Drawing.Size(40, 17);
+            this.label33.TabIndex = 174;
+            this.label33.Text = "Body";
+            // 
+            // txbFinding2ndPart_EGD
+            // 
+            this.txbFinding2ndPart_EGD.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.txbFinding2ndPart_EGD.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
+            this.txbFinding2ndPart_EGD.Location = new System.Drawing.Point(321, 245);
+            this.txbFinding2ndPart_EGD.Margin = new System.Windows.Forms.Padding(2);
+            this.txbFinding2ndPart_EGD.MaxLength = 75;
+            this.txbFinding2ndPart_EGD.Name = "txbFinding2ndPart_EGD";
+            this.txbFinding2ndPart_EGD.Size = new System.Drawing.Size(564, 23);
+            this.txbFinding2ndPart_EGD.TabIndex = 173;
+            // 
+            // txbFindingDuodenalBulb_EGD
+            // 
+            this.txbFindingDuodenalBulb_EGD.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.txbFindingDuodenalBulb_EGD.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
+            this.txbFindingDuodenalBulb_EGD.Location = new System.Drawing.Point(321, 219);
+            this.txbFindingDuodenalBulb_EGD.Margin = new System.Windows.Forms.Padding(2);
+            this.txbFindingDuodenalBulb_EGD.MaxLength = 75;
+            this.txbFindingDuodenalBulb_EGD.Name = "txbFindingDuodenalBulb_EGD";
+            this.txbFindingDuodenalBulb_EGD.Size = new System.Drawing.Size(564, 23);
+            this.txbFindingDuodenalBulb_EGD.TabIndex = 172;
+            // 
+            // txbFindingPylorus_EGD
+            // 
+            this.txbFindingPylorus_EGD.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.txbFindingPylorus_EGD.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
+            this.txbFindingPylorus_EGD.Location = new System.Drawing.Point(321, 193);
+            this.txbFindingPylorus_EGD.Margin = new System.Windows.Forms.Padding(2);
+            this.txbFindingPylorus_EGD.MaxLength = 75;
+            this.txbFindingPylorus_EGD.Name = "txbFindingPylorus_EGD";
+            this.txbFindingPylorus_EGD.Size = new System.Drawing.Size(564, 23);
+            this.txbFindingPylorus_EGD.TabIndex = 171;
+            // 
+            // txbFindingAntrum_EGD
+            // 
+            this.txbFindingAntrum_EGD.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.txbFindingAntrum_EGD.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
+            this.txbFindingAntrum_EGD.Location = new System.Drawing.Point(321, 167);
+            this.txbFindingAntrum_EGD.Margin = new System.Windows.Forms.Padding(2);
+            this.txbFindingAntrum_EGD.MaxLength = 75;
+            this.txbFindingAntrum_EGD.Name = "txbFindingAntrum_EGD";
+            this.txbFindingAntrum_EGD.Size = new System.Drawing.Size(564, 23);
+            this.txbFindingAntrum_EGD.TabIndex = 170;
+            // 
+            // txbFindingBody_EGD
+            // 
+            this.txbFindingBody_EGD.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.txbFindingBody_EGD.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
+            this.txbFindingBody_EGD.Location = new System.Drawing.Point(321, 141);
+            this.txbFindingBody_EGD.Margin = new System.Windows.Forms.Padding(2);
+            this.txbFindingBody_EGD.MaxLength = 75;
+            this.txbFindingBody_EGD.Name = "txbFindingBody_EGD";
+            this.txbFindingBody_EGD.Size = new System.Drawing.Size(564, 23);
+            this.txbFindingBody_EGD.TabIndex = 169;
+            // 
+            // txbFindingFundus_EGD
+            // 
+            this.txbFindingFundus_EGD.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.txbFindingFundus_EGD.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
+            this.txbFindingFundus_EGD.Location = new System.Drawing.Point(321, 115);
+            this.txbFindingFundus_EGD.Margin = new System.Windows.Forms.Padding(2);
+            this.txbFindingFundus_EGD.MaxLength = 75;
+            this.txbFindingFundus_EGD.Name = "txbFindingFundus_EGD";
+            this.txbFindingFundus_EGD.Size = new System.Drawing.Size(564, 23);
+            this.txbFindingFundus_EGD.TabIndex = 168;
+            // 
+            // txbFindingCardia_EGD
+            // 
+            this.txbFindingCardia_EGD.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.txbFindingCardia_EGD.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
+            this.txbFindingCardia_EGD.Location = new System.Drawing.Point(321, 89);
+            this.txbFindingCardia_EGD.Margin = new System.Windows.Forms.Padding(2);
+            this.txbFindingCardia_EGD.MaxLength = 75;
+            this.txbFindingCardia_EGD.Name = "txbFindingCardia_EGD";
+            this.txbFindingCardia_EGD.Size = new System.Drawing.Size(564, 23);
+            this.txbFindingCardia_EGD.TabIndex = 167;
+            // 
+            // txbFindingEGJunction_EGD
+            // 
+            this.txbFindingEGJunction_EGD.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.txbFindingEGJunction_EGD.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
+            this.txbFindingEGJunction_EGD.Location = new System.Drawing.Point(321, 63);
+            this.txbFindingEGJunction_EGD.Margin = new System.Windows.Forms.Padding(2);
+            this.txbFindingEGJunction_EGD.MaxLength = 75;
+            this.txbFindingEGJunction_EGD.Name = "txbFindingEGJunction_EGD";
+            this.txbFindingEGJunction_EGD.Size = new System.Drawing.Size(564, 23);
+            this.txbFindingEGJunction_EGD.TabIndex = 166;
+            // 
+            // txbFindingEsophagus_EGD
+            // 
+            this.txbFindingEsophagus_EGD.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.txbFindingEsophagus_EGD.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
+            this.txbFindingEsophagus_EGD.Location = new System.Drawing.Point(321, 37);
+            this.txbFindingEsophagus_EGD.Margin = new System.Windows.Forms.Padding(2);
+            this.txbFindingEsophagus_EGD.MaxLength = 75;
+            this.txbFindingEsophagus_EGD.Name = "txbFindingEsophagus_EGD";
+            this.txbFindingEsophagus_EGD.Size = new System.Drawing.Size(564, 23);
+            this.txbFindingEsophagus_EGD.TabIndex = 165;
+            // 
+            // txbFindingOropharynx_EGD
+            // 
+            this.txbFindingOropharynx_EGD.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.txbFindingOropharynx_EGD.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
+            this.txbFindingOropharynx_EGD.Location = new System.Drawing.Point(321, 11);
+            this.txbFindingOropharynx_EGD.Margin = new System.Windows.Forms.Padding(2);
+            this.txbFindingOropharynx_EGD.MaxLength = 75;
+            this.txbFindingOropharynx_EGD.Name = "txbFindingOropharynx_EGD";
+            this.txbFindingOropharynx_EGD.Size = new System.Drawing.Size(564, 23);
+            this.txbFindingOropharynx_EGD.TabIndex = 164;
+            // 
+            // cbbFinding2ndPart_EGD
+            // 
+            this.cbbFinding2ndPart_EGD.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.cbbFinding2ndPart_EGD.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cbbFinding2ndPart_EGD.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
+            this.cbbFinding2ndPart_EGD.FormattingEnabled = true;
+            this.cbbFinding2ndPart_EGD.Location = new System.Drawing.Point(120, 245);
+            this.cbbFinding2ndPart_EGD.Margin = new System.Windows.Forms.Padding(2);
+            this.cbbFinding2ndPart_EGD.Name = "cbbFinding2ndPart_EGD";
+            this.cbbFinding2ndPart_EGD.Size = new System.Drawing.Size(197, 23);
+            this.cbbFinding2ndPart_EGD.TabIndex = 163;
+            // 
+            // label11
+            // 
+            this.label11.AutoSize = true;
+            this.label11.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
+            this.label11.Location = new System.Drawing.Point(7, 246);
+            this.label11.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label11.Name = "label11";
+            this.label11.Size = new System.Drawing.Size(62, 17);
+            this.label11.TabIndex = 162;
+            this.label11.Text = "2nd Part";
+            // 
+            // cbbFindingDuodenalBulb_EGD
+            // 
+            this.cbbFindingDuodenalBulb_EGD.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.cbbFindingDuodenalBulb_EGD.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cbbFindingDuodenalBulb_EGD.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
+            this.cbbFindingDuodenalBulb_EGD.FormattingEnabled = true;
+            this.cbbFindingDuodenalBulb_EGD.Location = new System.Drawing.Point(120, 219);
+            this.cbbFindingDuodenalBulb_EGD.Margin = new System.Windows.Forms.Padding(2);
+            this.cbbFindingDuodenalBulb_EGD.Name = "cbbFindingDuodenalBulb_EGD";
+            this.cbbFindingDuodenalBulb_EGD.Size = new System.Drawing.Size(197, 23);
+            this.cbbFindingDuodenalBulb_EGD.TabIndex = 161;
+            // 
+            // label25
+            // 
+            this.label25.AutoSize = true;
+            this.label25.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
+            this.label25.Location = new System.Drawing.Point(7, 220);
+            this.label25.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label25.Name = "label25";
+            this.label25.Size = new System.Drawing.Size(101, 17);
+            this.label25.TabIndex = 160;
+            this.label25.Text = "Duodenal Bulb";
+            // 
+            // cbbFindingPylorus_EGD
+            // 
+            this.cbbFindingPylorus_EGD.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.cbbFindingPylorus_EGD.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cbbFindingPylorus_EGD.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
+            this.cbbFindingPylorus_EGD.FormattingEnabled = true;
+            this.cbbFindingPylorus_EGD.Location = new System.Drawing.Point(120, 193);
+            this.cbbFindingPylorus_EGD.Margin = new System.Windows.Forms.Padding(2);
+            this.cbbFindingPylorus_EGD.Name = "cbbFindingPylorus_EGD";
+            this.cbbFindingPylorus_EGD.Size = new System.Drawing.Size(197, 23);
+            this.cbbFindingPylorus_EGD.TabIndex = 158;
+            // 
+            // cbbFindingAntrum_EGD
+            // 
+            this.cbbFindingAntrum_EGD.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.cbbFindingAntrum_EGD.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cbbFindingAntrum_EGD.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
+            this.cbbFindingAntrum_EGD.FormattingEnabled = true;
+            this.cbbFindingAntrum_EGD.Location = new System.Drawing.Point(120, 167);
+            this.cbbFindingAntrum_EGD.Margin = new System.Windows.Forms.Padding(2);
+            this.cbbFindingAntrum_EGD.Name = "cbbFindingAntrum_EGD";
+            this.cbbFindingAntrum_EGD.Size = new System.Drawing.Size(197, 23);
+            this.cbbFindingAntrum_EGD.TabIndex = 159;
+            // 
+            // label26
+            // 
+            this.label26.AutoSize = true;
+            this.label26.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
+            this.label26.Location = new System.Drawing.Point(7, 194);
+            this.label26.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label26.Name = "label26";
+            this.label26.Size = new System.Drawing.Size(55, 17);
+            this.label26.TabIndex = 157;
+            this.label26.Text = "Pylorus";
+            // 
+            // label27
+            // 
+            this.label27.AutoSize = true;
+            this.label27.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
+            this.label27.Location = new System.Drawing.Point(7, 168);
+            this.label27.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label27.Name = "label27";
+            this.label27.Size = new System.Drawing.Size(53, 17);
+            this.label27.TabIndex = 156;
+            this.label27.Text = "Antrum";
+            // 
+            // cbbFindingBody_EGD
+            // 
+            this.cbbFindingBody_EGD.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.cbbFindingBody_EGD.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cbbFindingBody_EGD.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
+            this.cbbFindingBody_EGD.FormattingEnabled = true;
+            this.cbbFindingBody_EGD.Location = new System.Drawing.Point(120, 141);
+            this.cbbFindingBody_EGD.Margin = new System.Windows.Forms.Padding(2);
+            this.cbbFindingBody_EGD.Name = "cbbFindingBody_EGD";
+            this.cbbFindingBody_EGD.Size = new System.Drawing.Size(197, 23);
+            this.cbbFindingBody_EGD.TabIndex = 154;
+            // 
+            // cbbFindingFundus_EGD
+            // 
+            this.cbbFindingFundus_EGD.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.cbbFindingFundus_EGD.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cbbFindingFundus_EGD.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
+            this.cbbFindingFundus_EGD.FormattingEnabled = true;
+            this.cbbFindingFundus_EGD.Location = new System.Drawing.Point(120, 115);
+            this.cbbFindingFundus_EGD.Margin = new System.Windows.Forms.Padding(2);
+            this.cbbFindingFundus_EGD.Name = "cbbFindingFundus_EGD";
+            this.cbbFindingFundus_EGD.Size = new System.Drawing.Size(197, 23);
+            this.cbbFindingFundus_EGD.TabIndex = 155;
+            // 
+            // label28
+            // 
+            this.label28.AutoSize = true;
+            this.label28.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
+            this.label28.Location = new System.Drawing.Point(7, 116);
+            this.label28.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label28.Name = "label28";
+            this.label28.Size = new System.Drawing.Size(55, 17);
+            this.label28.TabIndex = 153;
+            this.label28.Text = "Fundus";
+            // 
+            // cbbFindingCardia_EGD
+            // 
+            this.cbbFindingCardia_EGD.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.cbbFindingCardia_EGD.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cbbFindingCardia_EGD.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
+            this.cbbFindingCardia_EGD.FormattingEnabled = true;
+            this.cbbFindingCardia_EGD.Location = new System.Drawing.Point(120, 89);
+            this.cbbFindingCardia_EGD.Margin = new System.Windows.Forms.Padding(2);
+            this.cbbFindingCardia_EGD.Name = "cbbFindingCardia_EGD";
+            this.cbbFindingCardia_EGD.Size = new System.Drawing.Size(197, 23);
+            this.cbbFindingCardia_EGD.TabIndex = 151;
+            // 
+            // cbbFindingEGJunction_EGD
+            // 
+            this.cbbFindingEGJunction_EGD.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.cbbFindingEGJunction_EGD.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cbbFindingEGJunction_EGD.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
+            this.cbbFindingEGJunction_EGD.FormattingEnabled = true;
+            this.cbbFindingEGJunction_EGD.Location = new System.Drawing.Point(120, 63);
+            this.cbbFindingEGJunction_EGD.Margin = new System.Windows.Forms.Padding(2);
+            this.cbbFindingEGJunction_EGD.Name = "cbbFindingEGJunction_EGD";
+            this.cbbFindingEGJunction_EGD.Size = new System.Drawing.Size(197, 23);
+            this.cbbFindingEGJunction_EGD.TabIndex = 152;
+            // 
+            // label29
+            // 
+            this.label29.AutoSize = true;
+            this.label29.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
+            this.label29.Location = new System.Drawing.Point(7, 90);
+            this.label29.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label29.Name = "label29";
+            this.label29.Size = new System.Drawing.Size(49, 17);
+            this.label29.TabIndex = 150;
+            this.label29.Text = "Cardia";
+            // 
+            // label30
+            // 
+            this.label30.AutoSize = true;
+            this.label30.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
+            this.label30.Location = new System.Drawing.Point(7, 64);
+            this.label30.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label30.Name = "label30";
+            this.label30.Size = new System.Drawing.Size(86, 17);
+            this.label30.TabIndex = 149;
+            this.label30.Text = "EG-Junction";
+            // 
+            // cbbFindingEsophagus_EGD
+            // 
+            this.cbbFindingEsophagus_EGD.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.cbbFindingEsophagus_EGD.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cbbFindingEsophagus_EGD.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
+            this.cbbFindingEsophagus_EGD.FormattingEnabled = true;
+            this.cbbFindingEsophagus_EGD.Location = new System.Drawing.Point(120, 37);
+            this.cbbFindingEsophagus_EGD.Margin = new System.Windows.Forms.Padding(2);
+            this.cbbFindingEsophagus_EGD.Name = "cbbFindingEsophagus_EGD";
+            this.cbbFindingEsophagus_EGD.Size = new System.Drawing.Size(197, 23);
+            this.cbbFindingEsophagus_EGD.TabIndex = 148;
+            // 
+            // cbbFindingOropharynx_EGD
+            // 
+            this.cbbFindingOropharynx_EGD.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.cbbFindingOropharynx_EGD.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cbbFindingOropharynx_EGD.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
+            this.cbbFindingOropharynx_EGD.FormattingEnabled = true;
+            this.cbbFindingOropharynx_EGD.Location = new System.Drawing.Point(120, 11);
+            this.cbbFindingOropharynx_EGD.Margin = new System.Windows.Forms.Padding(2);
+            this.cbbFindingOropharynx_EGD.Name = "cbbFindingOropharynx_EGD";
+            this.cbbFindingOropharynx_EGD.Size = new System.Drawing.Size(197, 23);
+            this.cbbFindingOropharynx_EGD.TabIndex = 147;
+            // 
+            // label31
+            // 
+            this.label31.AutoSize = true;
+            this.label31.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
+            this.label31.Location = new System.Drawing.Point(7, 38);
+            this.label31.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label31.Name = "label31";
+            this.label31.Size = new System.Drawing.Size(79, 17);
+            this.label31.TabIndex = 146;
+            this.label31.Text = "Esophagus";
+            // 
+            // label32
+            // 
+            this.label32.AutoSize = true;
+            this.label32.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
+            this.label32.Location = new System.Drawing.Point(7, 12);
+            this.label32.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label32.Name = "label32";
+            this.label32.Size = new System.Drawing.Size(82, 17);
+            this.label32.TabIndex = 145;
+            this.label32.Text = "Oropharynx";
+            // 
             // txbFindingRecommendation_EGD
             // 
             this.txbFindingRecommendation_EGD.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.txbFindingRecommendation_EGD.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
-            this.txbFindingRecommendation_EGD.Location = new System.Drawing.Point(129, 659);
+            this.txbFindingRecommendation_EGD.Location = new System.Drawing.Point(129, 626);
             this.txbFindingRecommendation_EGD.Margin = new System.Windows.Forms.Padding(2);
             this.txbFindingRecommendation_EGD.MaxLength = 250;
             this.txbFindingRecommendation_EGD.Multiline = true;
@@ -1356,7 +1653,7 @@ namespace EndoscopicSystem.V2.Forms
             // 
             this.label109.AutoSize = true;
             this.label109.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
-            this.label109.Location = new System.Drawing.Point(7, 661);
+            this.label109.Location = new System.Drawing.Point(7, 628);
             this.label109.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label109.Name = "label109";
             this.label109.Size = new System.Drawing.Size(118, 17);
@@ -1368,7 +1665,7 @@ namespace EndoscopicSystem.V2.Forms
             this.txbFindingHistopathology_EGD.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.txbFindingHistopathology_EGD.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
-            this.txbFindingHistopathology_EGD.Location = new System.Drawing.Point(129, 611);
+            this.txbFindingHistopathology_EGD.Location = new System.Drawing.Point(129, 578);
             this.txbFindingHistopathology_EGD.Margin = new System.Windows.Forms.Padding(2);
             this.txbFindingHistopathology_EGD.MaxLength = 250;
             this.txbFindingHistopathology_EGD.Multiline = true;
@@ -1380,7 +1677,7 @@ namespace EndoscopicSystem.V2.Forms
             // 
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
-            this.label6.Location = new System.Drawing.Point(7, 613);
+            this.label6.Location = new System.Drawing.Point(7, 580);
             this.label6.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(102, 17);
@@ -1391,7 +1688,7 @@ namespace EndoscopicSystem.V2.Forms
             // 
             this.label106.AutoSize = true;
             this.label106.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
-            this.label106.Location = new System.Drawing.Point(6, 539);
+            this.label106.Location = new System.Drawing.Point(6, 506);
             this.label106.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label106.Name = "label106";
             this.label106.Size = new System.Drawing.Size(135, 17);
@@ -1402,7 +1699,7 @@ namespace EndoscopicSystem.V2.Forms
             // 
             this.label107.AutoSize = true;
             this.label107.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
-            this.label107.Location = new System.Drawing.Point(6, 512);
+            this.label107.Location = new System.Drawing.Point(6, 479);
             this.label107.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label107.Name = "label107";
             this.label107.Size = new System.Drawing.Size(135, 17);
@@ -1413,7 +1710,7 @@ namespace EndoscopicSystem.V2.Forms
             // 
             this.label105.AutoSize = true;
             this.label105.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
-            this.label105.Location = new System.Drawing.Point(6, 485);
+            this.label105.Location = new System.Drawing.Point(6, 452);
             this.label105.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label105.Name = "label105";
             this.label105.Size = new System.Drawing.Size(135, 17);
@@ -1424,7 +1721,7 @@ namespace EndoscopicSystem.V2.Forms
             // 
             this.label108.AutoSize = true;
             this.label108.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
-            this.label108.Location = new System.Drawing.Point(6, 458);
+            this.label108.Location = new System.Drawing.Point(6, 425);
             this.label108.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label108.Name = "label108";
             this.label108.Size = new System.Drawing.Size(135, 17);
@@ -1436,7 +1733,7 @@ namespace EndoscopicSystem.V2.Forms
             this.txbFindingDx4Text_EGD.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.txbFindingDx4Text_EGD.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
-            this.txbFindingDx4Text_EGD.Location = new System.Drawing.Point(321, 536);
+            this.txbFindingDx4Text_EGD.Location = new System.Drawing.Point(321, 503);
             this.txbFindingDx4Text_EGD.Margin = new System.Windows.Forms.Padding(2);
             this.txbFindingDx4Text_EGD.MaxLength = 200;
             this.txbFindingDx4Text_EGD.Name = "txbFindingDx4Text_EGD";
@@ -1448,7 +1745,7 @@ namespace EndoscopicSystem.V2.Forms
             this.txbFindingDx4Code_EGD.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.txbFindingDx4Code_EGD.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
-            this.txbFindingDx4Code_EGD.Location = new System.Drawing.Point(182, 536);
+            this.txbFindingDx4Code_EGD.Location = new System.Drawing.Point(182, 503);
             this.txbFindingDx4Code_EGD.Margin = new System.Windows.Forms.Padding(2);
             this.txbFindingDx4Code_EGD.MaxLength = 200;
             this.txbFindingDx4Code_EGD.Name = "txbFindingDx4Code_EGD";
@@ -1460,7 +1757,7 @@ namespace EndoscopicSystem.V2.Forms
             this.txbFindingDx3Text_EGD.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.txbFindingDx3Text_EGD.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
-            this.txbFindingDx3Text_EGD.Location = new System.Drawing.Point(321, 509);
+            this.txbFindingDx3Text_EGD.Location = new System.Drawing.Point(321, 476);
             this.txbFindingDx3Text_EGD.Margin = new System.Windows.Forms.Padding(2);
             this.txbFindingDx3Text_EGD.MaxLength = 200;
             this.txbFindingDx3Text_EGD.Name = "txbFindingDx3Text_EGD";
@@ -1472,7 +1769,7 @@ namespace EndoscopicSystem.V2.Forms
             this.txbFindingDx3Code_EGD.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.txbFindingDx3Code_EGD.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
-            this.txbFindingDx3Code_EGD.Location = new System.Drawing.Point(182, 509);
+            this.txbFindingDx3Code_EGD.Location = new System.Drawing.Point(182, 476);
             this.txbFindingDx3Code_EGD.Margin = new System.Windows.Forms.Padding(2);
             this.txbFindingDx3Code_EGD.MaxLength = 200;
             this.txbFindingDx3Code_EGD.Name = "txbFindingDx3Code_EGD";
@@ -1484,7 +1781,7 @@ namespace EndoscopicSystem.V2.Forms
             this.txbFindingDx2Text_EGD.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.txbFindingDx2Text_EGD.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
-            this.txbFindingDx2Text_EGD.Location = new System.Drawing.Point(321, 482);
+            this.txbFindingDx2Text_EGD.Location = new System.Drawing.Point(321, 449);
             this.txbFindingDx2Text_EGD.Margin = new System.Windows.Forms.Padding(2);
             this.txbFindingDx2Text_EGD.MaxLength = 200;
             this.txbFindingDx2Text_EGD.Name = "txbFindingDx2Text_EGD";
@@ -1496,7 +1793,7 @@ namespace EndoscopicSystem.V2.Forms
             this.txbFindingDx2Code_EGD.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.txbFindingDx2Code_EGD.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
-            this.txbFindingDx2Code_EGD.Location = new System.Drawing.Point(182, 482);
+            this.txbFindingDx2Code_EGD.Location = new System.Drawing.Point(182, 449);
             this.txbFindingDx2Code_EGD.Margin = new System.Windows.Forms.Padding(2);
             this.txbFindingDx2Code_EGD.MaxLength = 200;
             this.txbFindingDx2Code_EGD.Name = "txbFindingDx2Code_EGD";
@@ -1508,7 +1805,7 @@ namespace EndoscopicSystem.V2.Forms
             this.txbFindingDx1Text_EGD.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.txbFindingDx1Text_EGD.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
-            this.txbFindingDx1Text_EGD.Location = new System.Drawing.Point(321, 455);
+            this.txbFindingDx1Text_EGD.Location = new System.Drawing.Point(321, 422);
             this.txbFindingDx1Text_EGD.Margin = new System.Windows.Forms.Padding(2);
             this.txbFindingDx1Text_EGD.MaxLength = 200;
             this.txbFindingDx1Text_EGD.Name = "txbFindingDx1Text_EGD";
@@ -1520,7 +1817,7 @@ namespace EndoscopicSystem.V2.Forms
             this.txbFindingDx1Code_EGD.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.txbFindingDx1Code_EGD.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
-            this.txbFindingDx1Code_EGD.Location = new System.Drawing.Point(182, 455);
+            this.txbFindingDx1Code_EGD.Location = new System.Drawing.Point(182, 422);
             this.txbFindingDx1Code_EGD.Margin = new System.Windows.Forms.Padding(2);
             this.txbFindingDx1Code_EGD.MaxLength = 200;
             this.txbFindingDx1Code_EGD.Name = "txbFindingDx1Code_EGD";
@@ -1532,7 +1829,7 @@ namespace EndoscopicSystem.V2.Forms
             this.txbFindingProcedure_EGD.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.txbFindingProcedure_EGD.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
-            this.txbFindingProcedure_EGD.Location = new System.Drawing.Point(182, 386);
+            this.txbFindingProcedure_EGD.Location = new System.Drawing.Point(182, 353);
             this.txbFindingProcedure_EGD.Margin = new System.Windows.Forms.Padding(2);
             this.txbFindingProcedure_EGD.MaxLength = 200;
             this.txbFindingProcedure_EGD.Multiline = true;
@@ -1544,7 +1841,7 @@ namespace EndoscopicSystem.V2.Forms
             // 
             this.label103.AutoSize = true;
             this.label103.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
-            this.label103.Location = new System.Drawing.Point(7, 389);
+            this.label103.Location = new System.Drawing.Point(7, 356);
             this.label103.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label103.Name = "label103";
             this.label103.Size = new System.Drawing.Size(74, 17);
@@ -1556,7 +1853,7 @@ namespace EndoscopicSystem.V2.Forms
             this.txbFindingSupplementalProcedureText2_EGD.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.txbFindingSupplementalProcedureText2_EGD.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
-            this.txbFindingSupplementalProcedureText2_EGD.Location = new System.Drawing.Point(321, 359);
+            this.txbFindingSupplementalProcedureText2_EGD.Location = new System.Drawing.Point(321, 326);
             this.txbFindingSupplementalProcedureText2_EGD.Margin = new System.Windows.Forms.Padding(2);
             this.txbFindingSupplementalProcedureText2_EGD.MaxLength = 200;
             this.txbFindingSupplementalProcedureText2_EGD.Name = "txbFindingSupplementalProcedureText2_EGD";
@@ -1567,7 +1864,7 @@ namespace EndoscopicSystem.V2.Forms
             // 
             this.label104.AutoSize = true;
             this.label104.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
-            this.label104.Location = new System.Drawing.Point(7, 362);
+            this.label104.Location = new System.Drawing.Point(7, 329);
             this.label104.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label104.Name = "label104";
             this.label104.Size = new System.Drawing.Size(164, 17);
@@ -1579,7 +1876,7 @@ namespace EndoscopicSystem.V2.Forms
             this.txbFindingSupplementalProcedureCode2_EGD.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.txbFindingSupplementalProcedureCode2_EGD.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
-            this.txbFindingSupplementalProcedureCode2_EGD.Location = new System.Drawing.Point(182, 359);
+            this.txbFindingSupplementalProcedureCode2_EGD.Location = new System.Drawing.Point(182, 326);
             this.txbFindingSupplementalProcedureCode2_EGD.Margin = new System.Windows.Forms.Padding(2);
             this.txbFindingSupplementalProcedureCode2_EGD.MaxLength = 200;
             this.txbFindingSupplementalProcedureCode2_EGD.Name = "txbFindingSupplementalProcedureCode2_EGD";
@@ -1591,7 +1888,7 @@ namespace EndoscopicSystem.V2.Forms
             this.txbFindingSupplementalProcedureText_EGD.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.txbFindingSupplementalProcedureText_EGD.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
-            this.txbFindingSupplementalProcedureText_EGD.Location = new System.Drawing.Point(321, 332);
+            this.txbFindingSupplementalProcedureText_EGD.Location = new System.Drawing.Point(321, 299);
             this.txbFindingSupplementalProcedureText_EGD.Margin = new System.Windows.Forms.Padding(2);
             this.txbFindingSupplementalProcedureText_EGD.MaxLength = 200;
             this.txbFindingSupplementalProcedureText_EGD.Name = "txbFindingSupplementalProcedureText_EGD";
@@ -1602,7 +1899,7 @@ namespace EndoscopicSystem.V2.Forms
             // 
             this.label102.AutoSize = true;
             this.label102.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
-            this.label102.Location = new System.Drawing.Point(7, 335);
+            this.label102.Location = new System.Drawing.Point(7, 302);
             this.label102.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label102.Name = "label102";
             this.label102.Size = new System.Drawing.Size(164, 17);
@@ -1614,7 +1911,7 @@ namespace EndoscopicSystem.V2.Forms
             this.txbFindingSupplementalProcedureCode_EGD.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.txbFindingSupplementalProcedureCode_EGD.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
-            this.txbFindingSupplementalProcedureCode_EGD.Location = new System.Drawing.Point(182, 332);
+            this.txbFindingSupplementalProcedureCode_EGD.Location = new System.Drawing.Point(182, 299);
             this.txbFindingSupplementalProcedureCode_EGD.Margin = new System.Windows.Forms.Padding(2);
             this.txbFindingSupplementalProcedureCode_EGD.MaxLength = 200;
             this.txbFindingSupplementalProcedureCode_EGD.Name = "txbFindingSupplementalProcedureCode_EGD";
@@ -1626,7 +1923,7 @@ namespace EndoscopicSystem.V2.Forms
             this.txbFindingPrinncipalProcedureText_EGD.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.txbFindingPrinncipalProcedureText_EGD.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
-            this.txbFindingPrinncipalProcedureText_EGD.Location = new System.Drawing.Point(321, 305);
+            this.txbFindingPrinncipalProcedureText_EGD.Location = new System.Drawing.Point(321, 272);
             this.txbFindingPrinncipalProcedureText_EGD.Margin = new System.Windows.Forms.Padding(2);
             this.txbFindingPrinncipalProcedureText_EGD.MaxLength = 200;
             this.txbFindingPrinncipalProcedureText_EGD.Name = "txbFindingPrinncipalProcedureText_EGD";
@@ -1637,7 +1934,7 @@ namespace EndoscopicSystem.V2.Forms
             // 
             this.label21.AutoSize = true;
             this.label21.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
-            this.label21.Location = new System.Drawing.Point(7, 308);
+            this.label21.Location = new System.Drawing.Point(7, 275);
             this.label21.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label21.Name = "label21";
             this.label21.Size = new System.Drawing.Size(132, 17);
@@ -1649,32 +1946,19 @@ namespace EndoscopicSystem.V2.Forms
             this.txbFindingPrinncipalProcedureCode_EGD.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.txbFindingPrinncipalProcedureCode_EGD.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
-            this.txbFindingPrinncipalProcedureCode_EGD.Location = new System.Drawing.Point(182, 305);
+            this.txbFindingPrinncipalProcedureCode_EGD.Location = new System.Drawing.Point(182, 272);
             this.txbFindingPrinncipalProcedureCode_EGD.Margin = new System.Windows.Forms.Padding(2);
             this.txbFindingPrinncipalProcedureCode_EGD.MaxLength = 200;
             this.txbFindingPrinncipalProcedureCode_EGD.Name = "txbFindingPrinncipalProcedureCode_EGD";
             this.txbFindingPrinncipalProcedureCode_EGD.Size = new System.Drawing.Size(135, 23);
             this.txbFindingPrinncipalProcedureCode_EGD.TabIndex = 113;
             // 
-            // cbbFindingLLL_EGD
-            // 
-            this.cbbFindingLLL_EGD.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.cbbFindingLLL_EGD.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cbbFindingLLL_EGD.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
-            this.cbbFindingLLL_EGD.FormattingEnabled = true;
-            this.cbbFindingLLL_EGD.Location = new System.Drawing.Point(129, 278);
-            this.cbbFindingLLL_EGD.Margin = new System.Windows.Forms.Padding(2);
-            this.cbbFindingLLL_EGD.Name = "cbbFindingLLL_EGD";
-            this.cbbFindingLLL_EGD.Size = new System.Drawing.Size(218, 23);
-            this.cbbFindingLLL_EGD.TabIndex = 80;
-            // 
             // txbFindingComplication_EGD
             // 
             this.txbFindingComplication_EGD.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.txbFindingComplication_EGD.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
-            this.txbFindingComplication_EGD.Location = new System.Drawing.Point(129, 563);
+            this.txbFindingComplication_EGD.Location = new System.Drawing.Point(129, 530);
             this.txbFindingComplication_EGD.Margin = new System.Windows.Forms.Padding(2);
             this.txbFindingComplication_EGD.MaxLength = 250;
             this.txbFindingComplication_EGD.Multiline = true;
@@ -1682,459 +1966,40 @@ namespace EndoscopicSystem.V2.Forms
             this.txbFindingComplication_EGD.Size = new System.Drawing.Size(756, 44);
             this.txbFindingComplication_EGD.TabIndex = 18;
             // 
-            // cbbFindingLingular_EGD
-            // 
-            this.cbbFindingLingular_EGD.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.cbbFindingLingular_EGD.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cbbFindingLingular_EGD.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
-            this.cbbFindingLingular_EGD.FormattingEnabled = true;
-            this.cbbFindingLingular_EGD.Location = new System.Drawing.Point(129, 254);
-            this.cbbFindingLingular_EGD.Margin = new System.Windows.Forms.Padding(2);
-            this.cbbFindingLingular_EGD.Name = "cbbFindingLingular_EGD";
-            this.cbbFindingLingular_EGD.Size = new System.Drawing.Size(218, 23);
-            this.cbbFindingLingular_EGD.TabIndex = 79;
-            // 
             // label7
             // 
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
-            this.label7.Location = new System.Drawing.Point(7, 709);
+            this.label7.Location = new System.Drawing.Point(7, 676);
             this.label7.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(67, 17);
             this.label7.TabIndex = 0;
             this.label7.Text = "Comment";
             // 
-            // cbbFindingLUL_EGD
-            // 
-            this.cbbFindingLUL_EGD.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.cbbFindingLUL_EGD.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cbbFindingLUL_EGD.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
-            this.cbbFindingLUL_EGD.FormattingEnabled = true;
-            this.cbbFindingLUL_EGD.Location = new System.Drawing.Point(129, 229);
-            this.cbbFindingLUL_EGD.Margin = new System.Windows.Forms.Padding(2);
-            this.cbbFindingLUL_EGD.Name = "cbbFindingLUL_EGD";
-            this.cbbFindingLUL_EGD.Size = new System.Drawing.Size(218, 23);
-            this.cbbFindingLUL_EGD.TabIndex = 78;
-            // 
             // label8
             // 
             this.label8.AutoSize = true;
             this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
-            this.label8.Location = new System.Drawing.Point(7, 565);
+            this.label8.Location = new System.Drawing.Point(7, 532);
             this.label8.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(88, 17);
             this.label8.TabIndex = 0;
             this.label8.Text = "Complication";
             // 
-            // cbbFindingLeftMain_EGD
-            // 
-            this.cbbFindingLeftMain_EGD.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.cbbFindingLeftMain_EGD.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cbbFindingLeftMain_EGD.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
-            this.cbbFindingLeftMain_EGD.FormattingEnabled = true;
-            this.cbbFindingLeftMain_EGD.Location = new System.Drawing.Point(129, 205);
-            this.cbbFindingLeftMain_EGD.Margin = new System.Windows.Forms.Padding(2);
-            this.cbbFindingLeftMain_EGD.Name = "cbbFindingLeftMain_EGD";
-            this.cbbFindingLeftMain_EGD.Size = new System.Drawing.Size(218, 23);
-            this.cbbFindingLeftMain_EGD.TabIndex = 77;
-            // 
             // txbFindingComment_EGD
             // 
             this.txbFindingComment_EGD.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.txbFindingComment_EGD.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
-            this.txbFindingComment_EGD.Location = new System.Drawing.Point(129, 707);
+            this.txbFindingComment_EGD.Location = new System.Drawing.Point(129, 674);
             this.txbFindingComment_EGD.Margin = new System.Windows.Forms.Padding(2);
             this.txbFindingComment_EGD.MaxLength = 250;
             this.txbFindingComment_EGD.Multiline = true;
             this.txbFindingComment_EGD.Name = "txbFindingComment_EGD";
-            this.txbFindingComment_EGD.Size = new System.Drawing.Size(756, 44);
+            this.txbFindingComment_EGD.Size = new System.Drawing.Size(756, 78);
             this.txbFindingComment_EGD.TabIndex = 19;
-            // 
-            // cbbFindingRLL_EGD
-            // 
-            this.cbbFindingRLL_EGD.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.cbbFindingRLL_EGD.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cbbFindingRLL_EGD.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
-            this.cbbFindingRLL_EGD.FormattingEnabled = true;
-            this.cbbFindingRLL_EGD.Location = new System.Drawing.Point(129, 180);
-            this.cbbFindingRLL_EGD.Margin = new System.Windows.Forms.Padding(2);
-            this.cbbFindingRLL_EGD.Name = "cbbFindingRLL_EGD";
-            this.cbbFindingRLL_EGD.Size = new System.Drawing.Size(218, 23);
-            this.cbbFindingRLL_EGD.TabIndex = 76;
-            // 
-            // cbbFindingRML_EGD
-            // 
-            this.cbbFindingRML_EGD.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.cbbFindingRML_EGD.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cbbFindingRML_EGD.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
-            this.cbbFindingRML_EGD.FormattingEnabled = true;
-            this.cbbFindingRML_EGD.Location = new System.Drawing.Point(129, 156);
-            this.cbbFindingRML_EGD.Margin = new System.Windows.Forms.Padding(2);
-            this.cbbFindingRML_EGD.Name = "cbbFindingRML_EGD";
-            this.cbbFindingRML_EGD.Size = new System.Drawing.Size(218, 23);
-            this.cbbFindingRML_EGD.TabIndex = 75;
-            // 
-            // cbbFindingRUL_EGD
-            // 
-            this.cbbFindingRUL_EGD.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.cbbFindingRUL_EGD.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cbbFindingRUL_EGD.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
-            this.cbbFindingRUL_EGD.FormattingEnabled = true;
-            this.cbbFindingRUL_EGD.Location = new System.Drawing.Point(129, 132);
-            this.cbbFindingRUL_EGD.Margin = new System.Windows.Forms.Padding(2);
-            this.cbbFindingRUL_EGD.Name = "cbbFindingRUL_EGD";
-            this.cbbFindingRUL_EGD.Size = new System.Drawing.Size(218, 23);
-            this.cbbFindingRUL_EGD.TabIndex = 74;
-            // 
-            // cbbFindingRightIntermideate_EGD
-            // 
-            this.cbbFindingRightIntermideate_EGD.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.cbbFindingRightIntermideate_EGD.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cbbFindingRightIntermideate_EGD.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
-            this.cbbFindingRightIntermideate_EGD.FormattingEnabled = true;
-            this.cbbFindingRightIntermideate_EGD.Location = new System.Drawing.Point(129, 107);
-            this.cbbFindingRightIntermideate_EGD.Margin = new System.Windows.Forms.Padding(2);
-            this.cbbFindingRightIntermideate_EGD.Name = "cbbFindingRightIntermideate_EGD";
-            this.cbbFindingRightIntermideate_EGD.Size = new System.Drawing.Size(218, 23);
-            this.cbbFindingRightIntermideate_EGD.TabIndex = 73;
-            // 
-            // cbbFindingRightMain_EGD
-            // 
-            this.cbbFindingRightMain_EGD.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.cbbFindingRightMain_EGD.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cbbFindingRightMain_EGD.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
-            this.cbbFindingRightMain_EGD.FormattingEnabled = true;
-            this.cbbFindingRightMain_EGD.Location = new System.Drawing.Point(129, 83);
-            this.cbbFindingRightMain_EGD.Margin = new System.Windows.Forms.Padding(2);
-            this.cbbFindingRightMain_EGD.Name = "cbbFindingRightMain_EGD";
-            this.cbbFindingRightMain_EGD.Size = new System.Drawing.Size(218, 23);
-            this.cbbFindingRightMain_EGD.TabIndex = 72;
-            // 
-            // cbbFindingCarina_EGD
-            // 
-            this.cbbFindingCarina_EGD.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.cbbFindingCarina_EGD.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cbbFindingCarina_EGD.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
-            this.cbbFindingCarina_EGD.FormattingEnabled = true;
-            this.cbbFindingCarina_EGD.Location = new System.Drawing.Point(129, 58);
-            this.cbbFindingCarina_EGD.Margin = new System.Windows.Forms.Padding(2);
-            this.cbbFindingCarina_EGD.Name = "cbbFindingCarina_EGD";
-            this.cbbFindingCarina_EGD.Size = new System.Drawing.Size(218, 23);
-            this.cbbFindingCarina_EGD.TabIndex = 71;
-            // 
-            // cbbFindingTrachea_EGD
-            // 
-            this.cbbFindingTrachea_EGD.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.cbbFindingTrachea_EGD.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cbbFindingTrachea_EGD.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
-            this.cbbFindingTrachea_EGD.FormattingEnabled = true;
-            this.cbbFindingTrachea_EGD.Location = new System.Drawing.Point(129, 34);
-            this.cbbFindingTrachea_EGD.Margin = new System.Windows.Forms.Padding(2);
-            this.cbbFindingTrachea_EGD.Name = "cbbFindingTrachea_EGD";
-            this.cbbFindingTrachea_EGD.Size = new System.Drawing.Size(218, 23);
-            this.cbbFindingTrachea_EGD.TabIndex = 70;
-            // 
-            // cbbFindingVocal_EGD
-            // 
-            this.cbbFindingVocal_EGD.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.cbbFindingVocal_EGD.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cbbFindingVocal_EGD.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
-            this.cbbFindingVocal_EGD.FormattingEnabled = true;
-            this.cbbFindingVocal_EGD.Location = new System.Drawing.Point(129, 10);
-            this.cbbFindingVocal_EGD.Margin = new System.Windows.Forms.Padding(2);
-            this.cbbFindingVocal_EGD.Name = "cbbFindingVocal_EGD";
-            this.cbbFindingVocal_EGD.Size = new System.Drawing.Size(218, 23);
-            this.cbbFindingVocal_EGD.TabIndex = 69;
-            // 
-            // label35
-            // 
-            this.label35.AutoSize = true;
-            this.label35.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
-            this.label35.Location = new System.Drawing.Point(7, 280);
-            this.label35.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label35.Name = "label35";
-            this.label35.Size = new System.Drawing.Size(32, 17);
-            this.label35.TabIndex = 65;
-            this.label35.Text = "LLL";
-            // 
-            // label11
-            // 
-            this.label11.AutoSize = true;
-            this.label11.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
-            this.label11.Location = new System.Drawing.Point(6, 256);
-            this.label11.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(59, 17);
-            this.label11.TabIndex = 65;
-            this.label11.Text = "Lingular";
-            // 
-            // label25
-            // 
-            this.label25.AutoSize = true;
-            this.label25.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
-            this.label25.Location = new System.Drawing.Point(7, 232);
-            this.label25.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label25.Name = "label25";
-            this.label25.Size = new System.Drawing.Size(34, 17);
-            this.label25.TabIndex = 64;
-            this.label25.Text = "LUL";
-            // 
-            // txbFindingLLL_EGD
-            // 
-            this.txbFindingLLL_EGD.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.txbFindingLLL_EGD.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
-            this.txbFindingLLL_EGD.Location = new System.Drawing.Point(351, 278);
-            this.txbFindingLLL_EGD.Margin = new System.Windows.Forms.Padding(2);
-            this.txbFindingLLL_EGD.MaxLength = 75;
-            this.txbFindingLLL_EGD.Name = "txbFindingLLL_EGD";
-            this.txbFindingLLL_EGD.Size = new System.Drawing.Size(534, 23);
-            this.txbFindingLLL_EGD.TabIndex = 68;
-            // 
-            // label26
-            // 
-            this.label26.AutoSize = true;
-            this.label26.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
-            this.label26.Location = new System.Drawing.Point(7, 207);
-            this.label26.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label26.Name = "label26";
-            this.label26.Size = new System.Drawing.Size(66, 17);
-            this.label26.TabIndex = 63;
-            this.label26.Text = "Left Main";
-            // 
-            // txbFindingLingular_EGD
-            // 
-            this.txbFindingLingular_EGD.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.txbFindingLingular_EGD.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
-            this.txbFindingLingular_EGD.Location = new System.Drawing.Point(351, 254);
-            this.txbFindingLingular_EGD.Margin = new System.Windows.Forms.Padding(2);
-            this.txbFindingLingular_EGD.MaxLength = 75;
-            this.txbFindingLingular_EGD.Name = "txbFindingLingular_EGD";
-            this.txbFindingLingular_EGD.Size = new System.Drawing.Size(534, 23);
-            this.txbFindingLingular_EGD.TabIndex = 68;
-            // 
-            // txbFindingLUL_EGD
-            // 
-            this.txbFindingLUL_EGD.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.txbFindingLUL_EGD.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
-            this.txbFindingLUL_EGD.Location = new System.Drawing.Point(351, 229);
-            this.txbFindingLUL_EGD.Margin = new System.Windows.Forms.Padding(2);
-            this.txbFindingLUL_EGD.MaxLength = 75;
-            this.txbFindingLUL_EGD.Name = "txbFindingLUL_EGD";
-            this.txbFindingLUL_EGD.Size = new System.Drawing.Size(534, 23);
-            this.txbFindingLUL_EGD.TabIndex = 67;
-            // 
-            // txbFindingLeftMain_EGD
-            // 
-            this.txbFindingLeftMain_EGD.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.txbFindingLeftMain_EGD.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
-            this.txbFindingLeftMain_EGD.Location = new System.Drawing.Point(351, 205);
-            this.txbFindingLeftMain_EGD.Margin = new System.Windows.Forms.Padding(2);
-            this.txbFindingLeftMain_EGD.MaxLength = 75;
-            this.txbFindingLeftMain_EGD.Name = "txbFindingLeftMain_EGD";
-            this.txbFindingLeftMain_EGD.Size = new System.Drawing.Size(534, 23);
-            this.txbFindingLeftMain_EGD.TabIndex = 66;
-            // 
-            // label27
-            // 
-            this.label27.AutoSize = true;
-            this.label27.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
-            this.label27.Location = new System.Drawing.Point(7, 183);
-            this.label27.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label27.Name = "label27";
-            this.label27.Size = new System.Drawing.Size(34, 17);
-            this.label27.TabIndex = 61;
-            this.label27.Text = "RLL";
-            // 
-            // txbFindingRLL_EGD
-            // 
-            this.txbFindingRLL_EGD.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.txbFindingRLL_EGD.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
-            this.txbFindingRLL_EGD.Location = new System.Drawing.Point(351, 180);
-            this.txbFindingRLL_EGD.Margin = new System.Windows.Forms.Padding(2);
-            this.txbFindingRLL_EGD.MaxLength = 75;
-            this.txbFindingRLL_EGD.Name = "txbFindingRLL_EGD";
-            this.txbFindingRLL_EGD.Size = new System.Drawing.Size(534, 23);
-            this.txbFindingRLL_EGD.TabIndex = 62;
-            // 
-            // label28
-            // 
-            this.label28.AutoSize = true;
-            this.label28.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
-            this.label28.Location = new System.Drawing.Point(7, 159);
-            this.label28.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label28.Name = "label28";
-            this.label28.Size = new System.Drawing.Size(37, 17);
-            this.label28.TabIndex = 59;
-            this.label28.Text = "RML";
-            // 
-            // txbFindingRML_EGD
-            // 
-            this.txbFindingRML_EGD.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.txbFindingRML_EGD.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
-            this.txbFindingRML_EGD.Location = new System.Drawing.Point(351, 156);
-            this.txbFindingRML_EGD.Margin = new System.Windows.Forms.Padding(2);
-            this.txbFindingRML_EGD.MaxLength = 75;
-            this.txbFindingRML_EGD.Name = "txbFindingRML_EGD";
-            this.txbFindingRML_EGD.Size = new System.Drawing.Size(534, 23);
-            this.txbFindingRML_EGD.TabIndex = 60;
-            // 
-            // label29
-            // 
-            this.label29.AutoSize = true;
-            this.label29.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
-            this.label29.Location = new System.Drawing.Point(7, 134);
-            this.label29.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label29.Name = "label29";
-            this.label29.Size = new System.Drawing.Size(36, 17);
-            this.label29.TabIndex = 52;
-            this.label29.Text = "RUL";
-            // 
-            // label30
-            // 
-            this.label30.AutoSize = true;
-            this.label30.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
-            this.label30.Location = new System.Drawing.Point(7, 110);
-            this.label30.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label30.Name = "label30";
-            this.label30.Size = new System.Drawing.Size(123, 17);
-            this.label30.TabIndex = 51;
-            this.label30.Text = "Right Intermideate";
-            // 
-            // label31
-            // 
-            this.label31.AutoSize = true;
-            this.label31.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
-            this.label31.Location = new System.Drawing.Point(7, 86);
-            this.label31.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label31.Name = "label31";
-            this.label31.Size = new System.Drawing.Size(75, 17);
-            this.label31.TabIndex = 50;
-            this.label31.Text = "Right Main";
-            // 
-            // label32
-            // 
-            this.label32.AutoSize = true;
-            this.label32.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
-            this.label32.Location = new System.Drawing.Point(7, 61);
-            this.label32.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label32.Name = "label32";
-            this.label32.Size = new System.Drawing.Size(49, 17);
-            this.label32.TabIndex = 49;
-            this.label32.Text = "Carina";
-            // 
-            // label33
-            // 
-            this.label33.AutoSize = true;
-            this.label33.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
-            this.label33.Location = new System.Drawing.Point(7, 37);
-            this.label33.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label33.Name = "label33";
-            this.label33.Size = new System.Drawing.Size(61, 17);
-            this.label33.TabIndex = 48;
-            this.label33.Text = "Trachea";
-            // 
-            // label34
-            // 
-            this.label34.AutoSize = true;
-            this.label34.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
-            this.label34.Location = new System.Drawing.Point(7, 12);
-            this.label34.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label34.Name = "label34";
-            this.label34.Size = new System.Drawing.Size(77, 17);
-            this.label34.TabIndex = 47;
-            this.label34.Text = "Vocal Cord";
-            // 
-            // txbFindingRUL_EGD
-            // 
-            this.txbFindingRUL_EGD.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.txbFindingRUL_EGD.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
-            this.txbFindingRUL_EGD.Location = new System.Drawing.Point(351, 132);
-            this.txbFindingRUL_EGD.Margin = new System.Windows.Forms.Padding(2);
-            this.txbFindingRUL_EGD.MaxLength = 75;
-            this.txbFindingRUL_EGD.Name = "txbFindingRUL_EGD";
-            this.txbFindingRUL_EGD.Size = new System.Drawing.Size(534, 23);
-            this.txbFindingRUL_EGD.TabIndex = 58;
-            // 
-            // txbFindingIntermideate_EGD
-            // 
-            this.txbFindingIntermideate_EGD.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.txbFindingIntermideate_EGD.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
-            this.txbFindingIntermideate_EGD.Location = new System.Drawing.Point(351, 107);
-            this.txbFindingIntermideate_EGD.Margin = new System.Windows.Forms.Padding(2);
-            this.txbFindingIntermideate_EGD.MaxLength = 75;
-            this.txbFindingIntermideate_EGD.Name = "txbFindingIntermideate_EGD";
-            this.txbFindingIntermideate_EGD.Size = new System.Drawing.Size(534, 23);
-            this.txbFindingIntermideate_EGD.TabIndex = 57;
-            // 
-            // txbFindingRightMain_EGD
-            // 
-            this.txbFindingRightMain_EGD.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.txbFindingRightMain_EGD.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
-            this.txbFindingRightMain_EGD.Location = new System.Drawing.Point(351, 83);
-            this.txbFindingRightMain_EGD.Margin = new System.Windows.Forms.Padding(2);
-            this.txbFindingRightMain_EGD.MaxLength = 75;
-            this.txbFindingRightMain_EGD.Name = "txbFindingRightMain_EGD";
-            this.txbFindingRightMain_EGD.Size = new System.Drawing.Size(534, 23);
-            this.txbFindingRightMain_EGD.TabIndex = 56;
-            // 
-            // txbFindingCarina_EGD
-            // 
-            this.txbFindingCarina_EGD.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.txbFindingCarina_EGD.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
-            this.txbFindingCarina_EGD.Location = new System.Drawing.Point(351, 58);
-            this.txbFindingCarina_EGD.Margin = new System.Windows.Forms.Padding(2);
-            this.txbFindingCarina_EGD.MaxLength = 75;
-            this.txbFindingCarina_EGD.Name = "txbFindingCarina_EGD";
-            this.txbFindingCarina_EGD.Size = new System.Drawing.Size(534, 23);
-            this.txbFindingCarina_EGD.TabIndex = 55;
-            // 
-            // txbFindingTrachea_EGD
-            // 
-            this.txbFindingTrachea_EGD.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.txbFindingTrachea_EGD.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
-            this.txbFindingTrachea_EGD.Location = new System.Drawing.Point(351, 34);
-            this.txbFindingTrachea_EGD.Margin = new System.Windows.Forms.Padding(2);
-            this.txbFindingTrachea_EGD.MaxLength = 75;
-            this.txbFindingTrachea_EGD.Name = "txbFindingTrachea_EGD";
-            this.txbFindingTrachea_EGD.Size = new System.Drawing.Size(534, 23);
-            this.txbFindingTrachea_EGD.TabIndex = 54;
-            // 
-            // txbFindingVocalCord_EGD
-            // 
-            this.txbFindingVocalCord_EGD.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.txbFindingVocalCord_EGD.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
-            this.txbFindingVocalCord_EGD.Location = new System.Drawing.Point(351, 10);
-            this.txbFindingVocalCord_EGD.Margin = new System.Windows.Forms.Padding(2);
-            this.txbFindingVocalCord_EGD.MaxLength = 75;
-            this.txbFindingVocalCord_EGD.Name = "txbFindingVocalCord_EGD";
-            this.txbFindingVocalCord_EGD.Size = new System.Drawing.Size(534, 23);
-            this.txbFindingVocalCord_EGD.TabIndex = 53;
             // 
             // tabIndicationBronchoscopy
             // 
@@ -5829,9 +5694,6 @@ namespace EndoscopicSystem.V2.Forms
             // 
             // groupBox14
             // 
-            this.groupBox14.Controls.Add(this.btnEditPic18);
-            this.groupBox14.Controls.Add(this.btnPictureBoxSaved18);
-            this.groupBox14.Controls.Add(this.btnDeletePictureBoxSaved18);
             this.groupBox14.Controls.Add(this.txtPictureBoxSaved18);
             this.groupBox14.Controls.Add(this.pictureBoxSaved18);
             this.groupBox14.Location = new System.Drawing.Point(8, 2863);
@@ -5840,51 +5702,13 @@ namespace EndoscopicSystem.V2.Forms
             this.groupBox14.TabIndex = 84;
             this.groupBox14.TabStop = false;
             // 
-            // btnEditPic18
-            // 
-            this.btnEditPic18.BackgroundImage = global::EndoscopicSystem.Properties.Resources.editBtn;
-            this.btnEditPic18.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.btnEditPic18.Location = new System.Drawing.Point(154, 10);
-            this.btnEditPic18.Margin = new System.Windows.Forms.Padding(2);
-            this.btnEditPic18.Name = "btnEditPic18";
-            this.btnEditPic18.Size = new System.Drawing.Size(19, 20);
-            this.btnEditPic18.TabIndex = 61;
-            this.btnEditPic18.UseVisualStyleBackColor = true;
-            this.btnEditPic18.Visible = false;
-            // 
-            // btnPictureBoxSaved18
-            // 
-            this.btnPictureBoxSaved18.BackgroundImage = global::EndoscopicSystem.Properties.Resources.Upload;
-            this.btnPictureBoxSaved18.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.btnPictureBoxSaved18.Font = new System.Drawing.Font("Microsoft Sans Serif", 6F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnPictureBoxSaved18.Location = new System.Drawing.Point(160, 151);
-            this.btnPictureBoxSaved18.Margin = new System.Windows.Forms.Padding(2);
-            this.btnPictureBoxSaved18.Name = "btnPictureBoxSaved18";
-            this.btnPictureBoxSaved18.Size = new System.Drawing.Size(18, 20);
-            this.btnPictureBoxSaved18.TabIndex = 60;
-            this.btnPictureBoxSaved18.UseVisualStyleBackColor = true;
-            this.btnPictureBoxSaved18.Visible = false;
-            // 
-            // btnDeletePictureBoxSaved18
-            // 
-            this.btnDeletePictureBoxSaved18.BackColor = System.Drawing.Color.Red;
-            this.btnDeletePictureBoxSaved18.Font = new System.Drawing.Font("Microsoft Sans Serif", 7F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnDeletePictureBoxSaved18.Location = new System.Drawing.Point(178, 9);
-            this.btnDeletePictureBoxSaved18.Margin = new System.Windows.Forms.Padding(2);
-            this.btnDeletePictureBoxSaved18.Name = "btnDeletePictureBoxSaved18";
-            this.btnDeletePictureBoxSaved18.Size = new System.Drawing.Size(19, 20);
-            this.btnDeletePictureBoxSaved18.TabIndex = 59;
-            this.btnDeletePictureBoxSaved18.Text = "X";
-            this.btnDeletePictureBoxSaved18.UseVisualStyleBackColor = false;
-            this.btnDeletePictureBoxSaved18.Visible = false;
-            // 
             // txtPictureBoxSaved18
             // 
             this.txtPictureBoxSaved18.Location = new System.Drawing.Point(5, 152);
             this.txtPictureBoxSaved18.Margin = new System.Windows.Forms.Padding(2);
             this.txtPictureBoxSaved18.MaxLength = 25;
             this.txtPictureBoxSaved18.Name = "txtPictureBoxSaved18";
-            this.txtPictureBoxSaved18.Size = new System.Drawing.Size(152, 20);
+            this.txtPictureBoxSaved18.Size = new System.Drawing.Size(189, 20);
             this.txtPictureBoxSaved18.TabIndex = 58;
             // 
             // pictureBoxSaved18
@@ -5902,10 +5726,7 @@ namespace EndoscopicSystem.V2.Forms
             // 
             // groupBox3
             // 
-            this.groupBox3.Controls.Add(this.btnPictureBoxSaved17);
-            this.groupBox3.Controls.Add(this.btnEditPic17);
             this.groupBox3.Controls.Add(this.txtPictureBoxSaved17);
-            this.groupBox3.Controls.Add(this.btnDeletePictureBoxSaved17);
             this.groupBox3.Controls.Add(this.pictureBoxSaved17);
             this.groupBox3.Location = new System.Drawing.Point(9, 2687);
             this.groupBox3.Name = "groupBox3";
@@ -5913,52 +5734,14 @@ namespace EndoscopicSystem.V2.Forms
             this.groupBox3.TabIndex = 69;
             this.groupBox3.TabStop = false;
             // 
-            // btnPictureBoxSaved17
-            // 
-            this.btnPictureBoxSaved17.BackgroundImage = global::EndoscopicSystem.Properties.Resources.Upload;
-            this.btnPictureBoxSaved17.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.btnPictureBoxSaved17.Font = new System.Drawing.Font("Microsoft Sans Serif", 6F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnPictureBoxSaved17.Location = new System.Drawing.Point(159, 151);
-            this.btnPictureBoxSaved17.Margin = new System.Windows.Forms.Padding(2);
-            this.btnPictureBoxSaved17.Name = "btnPictureBoxSaved17";
-            this.btnPictureBoxSaved17.Size = new System.Drawing.Size(18, 20);
-            this.btnPictureBoxSaved17.TabIndex = 55;
-            this.btnPictureBoxSaved17.UseVisualStyleBackColor = true;
-            this.btnPictureBoxSaved17.Visible = false;
-            // 
-            // btnEditPic17
-            // 
-            this.btnEditPic17.BackgroundImage = global::EndoscopicSystem.Properties.Resources.editBtn;
-            this.btnEditPic17.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.btnEditPic17.Location = new System.Drawing.Point(153, 9);
-            this.btnEditPic17.Margin = new System.Windows.Forms.Padding(2);
-            this.btnEditPic17.Name = "btnEditPic17";
-            this.btnEditPic17.Size = new System.Drawing.Size(19, 20);
-            this.btnEditPic17.TabIndex = 56;
-            this.btnEditPic17.UseVisualStyleBackColor = true;
-            this.btnEditPic17.Visible = false;
-            // 
             // txtPictureBoxSaved17
             // 
             this.txtPictureBoxSaved17.Location = new System.Drawing.Point(4, 151);
             this.txtPictureBoxSaved17.Margin = new System.Windows.Forms.Padding(2);
             this.txtPictureBoxSaved17.MaxLength = 25;
             this.txtPictureBoxSaved17.Name = "txtPictureBoxSaved17";
-            this.txtPictureBoxSaved17.Size = new System.Drawing.Size(152, 20);
+            this.txtPictureBoxSaved17.Size = new System.Drawing.Size(194, 20);
             this.txtPictureBoxSaved17.TabIndex = 53;
-            // 
-            // btnDeletePictureBoxSaved17
-            // 
-            this.btnDeletePictureBoxSaved17.BackColor = System.Drawing.Color.Red;
-            this.btnDeletePictureBoxSaved17.Font = new System.Drawing.Font("Microsoft Sans Serif", 7F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnDeletePictureBoxSaved17.Location = new System.Drawing.Point(177, 8);
-            this.btnDeletePictureBoxSaved17.Margin = new System.Windows.Forms.Padding(2);
-            this.btnDeletePictureBoxSaved17.Name = "btnDeletePictureBoxSaved17";
-            this.btnDeletePictureBoxSaved17.Size = new System.Drawing.Size(19, 20);
-            this.btnDeletePictureBoxSaved17.TabIndex = 54;
-            this.btnDeletePictureBoxSaved17.Text = "X";
-            this.btnDeletePictureBoxSaved17.UseVisualStyleBackColor = false;
-            this.btnDeletePictureBoxSaved17.Visible = false;
             // 
             // pictureBoxSaved17
             // 
@@ -5975,10 +5758,7 @@ namespace EndoscopicSystem.V2.Forms
             // 
             // groupBox2
             // 
-            this.groupBox2.Controls.Add(this.btnPictureBoxSaved16);
             this.groupBox2.Controls.Add(this.txtPictureBoxSaved16);
-            this.groupBox2.Controls.Add(this.btnEditPic16);
-            this.groupBox2.Controls.Add(this.btnDeletePictureBoxSaved16);
             this.groupBox2.Controls.Add(this.pictureBoxSaved16);
             this.groupBox2.Location = new System.Drawing.Point(8, 2510);
             this.groupBox2.Name = "groupBox2";
@@ -5986,52 +5766,14 @@ namespace EndoscopicSystem.V2.Forms
             this.groupBox2.TabIndex = 83;
             this.groupBox2.TabStop = false;
             // 
-            // btnPictureBoxSaved16
-            // 
-            this.btnPictureBoxSaved16.BackgroundImage = global::EndoscopicSystem.Properties.Resources.Upload;
-            this.btnPictureBoxSaved16.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.btnPictureBoxSaved16.Font = new System.Drawing.Font("Microsoft Sans Serif", 6F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnPictureBoxSaved16.Location = new System.Drawing.Point(160, 152);
-            this.btnPictureBoxSaved16.Margin = new System.Windows.Forms.Padding(2);
-            this.btnPictureBoxSaved16.Name = "btnPictureBoxSaved16";
-            this.btnPictureBoxSaved16.Size = new System.Drawing.Size(18, 20);
-            this.btnPictureBoxSaved16.TabIndex = 50;
-            this.btnPictureBoxSaved16.UseVisualStyleBackColor = true;
-            this.btnPictureBoxSaved16.Visible = false;
-            // 
             // txtPictureBoxSaved16
             // 
             this.txtPictureBoxSaved16.Location = new System.Drawing.Point(5, 152);
             this.txtPictureBoxSaved16.Margin = new System.Windows.Forms.Padding(2);
             this.txtPictureBoxSaved16.MaxLength = 25;
             this.txtPictureBoxSaved16.Name = "txtPictureBoxSaved16";
-            this.txtPictureBoxSaved16.Size = new System.Drawing.Size(152, 20);
+            this.txtPictureBoxSaved16.Size = new System.Drawing.Size(196, 20);
             this.txtPictureBoxSaved16.TabIndex = 48;
-            // 
-            // btnEditPic16
-            // 
-            this.btnEditPic16.BackgroundImage = global::EndoscopicSystem.Properties.Resources.editBtn;
-            this.btnEditPic16.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.btnEditPic16.Location = new System.Drawing.Point(154, 9);
-            this.btnEditPic16.Margin = new System.Windows.Forms.Padding(2);
-            this.btnEditPic16.Name = "btnEditPic16";
-            this.btnEditPic16.Size = new System.Drawing.Size(19, 20);
-            this.btnEditPic16.TabIndex = 51;
-            this.btnEditPic16.UseVisualStyleBackColor = true;
-            this.btnEditPic16.Visible = false;
-            // 
-            // btnDeletePictureBoxSaved16
-            // 
-            this.btnDeletePictureBoxSaved16.BackColor = System.Drawing.Color.Red;
-            this.btnDeletePictureBoxSaved16.Font = new System.Drawing.Font("Microsoft Sans Serif", 7F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnDeletePictureBoxSaved16.Location = new System.Drawing.Point(178, 8);
-            this.btnDeletePictureBoxSaved16.Margin = new System.Windows.Forms.Padding(2);
-            this.btnDeletePictureBoxSaved16.Name = "btnDeletePictureBoxSaved16";
-            this.btnDeletePictureBoxSaved16.Size = new System.Drawing.Size(19, 20);
-            this.btnDeletePictureBoxSaved16.TabIndex = 49;
-            this.btnDeletePictureBoxSaved16.Text = "X";
-            this.btnDeletePictureBoxSaved16.UseVisualStyleBackColor = false;
-            this.btnDeletePictureBoxSaved16.Visible = false;
             // 
             // pictureBoxSaved16
             // 
@@ -6048,10 +5790,7 @@ namespace EndoscopicSystem.V2.Forms
             // 
             // groupBox4
             // 
-            this.groupBox4.Controls.Add(this.btnPictureBoxSaved15);
             this.groupBox4.Controls.Add(this.txtPictureBoxSaved15);
-            this.groupBox4.Controls.Add(this.btnDeletePictureBoxSaved15);
-            this.groupBox4.Controls.Add(this.btnEditPic15);
             this.groupBox4.Controls.Add(this.pictureBoxSaved15);
             this.groupBox4.Location = new System.Drawing.Point(8, 2333);
             this.groupBox4.Name = "groupBox4";
@@ -6059,52 +5798,14 @@ namespace EndoscopicSystem.V2.Forms
             this.groupBox4.TabIndex = 71;
             this.groupBox4.TabStop = false;
             // 
-            // btnPictureBoxSaved15
-            // 
-            this.btnPictureBoxSaved15.BackgroundImage = global::EndoscopicSystem.Properties.Resources.Upload;
-            this.btnPictureBoxSaved15.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.btnPictureBoxSaved15.Font = new System.Drawing.Font("Microsoft Sans Serif", 6F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnPictureBoxSaved15.Location = new System.Drawing.Point(160, 152);
-            this.btnPictureBoxSaved15.Margin = new System.Windows.Forms.Padding(2);
-            this.btnPictureBoxSaved15.Name = "btnPictureBoxSaved15";
-            this.btnPictureBoxSaved15.Size = new System.Drawing.Size(18, 20);
-            this.btnPictureBoxSaved15.TabIndex = 45;
-            this.btnPictureBoxSaved15.UseVisualStyleBackColor = true;
-            this.btnPictureBoxSaved15.Visible = false;
-            // 
             // txtPictureBoxSaved15
             // 
             this.txtPictureBoxSaved15.Location = new System.Drawing.Point(5, 152);
             this.txtPictureBoxSaved15.Margin = new System.Windows.Forms.Padding(2);
             this.txtPictureBoxSaved15.MaxLength = 25;
             this.txtPictureBoxSaved15.Name = "txtPictureBoxSaved15";
-            this.txtPictureBoxSaved15.Size = new System.Drawing.Size(152, 20);
+            this.txtPictureBoxSaved15.Size = new System.Drawing.Size(192, 20);
             this.txtPictureBoxSaved15.TabIndex = 43;
-            // 
-            // btnDeletePictureBoxSaved15
-            // 
-            this.btnDeletePictureBoxSaved15.BackColor = System.Drawing.Color.Red;
-            this.btnDeletePictureBoxSaved15.Font = new System.Drawing.Font("Microsoft Sans Serif", 7F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnDeletePictureBoxSaved15.Location = new System.Drawing.Point(178, 8);
-            this.btnDeletePictureBoxSaved15.Margin = new System.Windows.Forms.Padding(2);
-            this.btnDeletePictureBoxSaved15.Name = "btnDeletePictureBoxSaved15";
-            this.btnDeletePictureBoxSaved15.Size = new System.Drawing.Size(19, 20);
-            this.btnDeletePictureBoxSaved15.TabIndex = 44;
-            this.btnDeletePictureBoxSaved15.Text = "X";
-            this.btnDeletePictureBoxSaved15.UseVisualStyleBackColor = false;
-            this.btnDeletePictureBoxSaved15.Visible = false;
-            // 
-            // btnEditPic15
-            // 
-            this.btnEditPic15.BackgroundImage = global::EndoscopicSystem.Properties.Resources.editBtn;
-            this.btnEditPic15.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.btnEditPic15.Location = new System.Drawing.Point(154, 9);
-            this.btnEditPic15.Margin = new System.Windows.Forms.Padding(2);
-            this.btnEditPic15.Name = "btnEditPic15";
-            this.btnEditPic15.Size = new System.Drawing.Size(19, 20);
-            this.btnEditPic15.TabIndex = 46;
-            this.btnEditPic15.UseVisualStyleBackColor = true;
-            this.btnEditPic15.Visible = false;
             // 
             // pictureBoxSaved15
             // 
@@ -6121,10 +5822,7 @@ namespace EndoscopicSystem.V2.Forms
             // 
             // groupBox5
             // 
-            this.groupBox5.Controls.Add(this.btnPictureBoxSaved14);
             this.groupBox5.Controls.Add(this.txtPictureBoxSaved14);
-            this.groupBox5.Controls.Add(this.btnDeletePictureBoxSaved14);
-            this.groupBox5.Controls.Add(this.btnEditPic14);
             this.groupBox5.Controls.Add(this.pictureBoxSaved14);
             this.groupBox5.Location = new System.Drawing.Point(8, 2156);
             this.groupBox5.Name = "groupBox5";
@@ -6132,52 +5830,14 @@ namespace EndoscopicSystem.V2.Forms
             this.groupBox5.TabIndex = 82;
             this.groupBox5.TabStop = false;
             // 
-            // btnPictureBoxSaved14
-            // 
-            this.btnPictureBoxSaved14.BackgroundImage = global::EndoscopicSystem.Properties.Resources.Upload;
-            this.btnPictureBoxSaved14.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.btnPictureBoxSaved14.Font = new System.Drawing.Font("Microsoft Sans Serif", 6F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnPictureBoxSaved14.Location = new System.Drawing.Point(160, 152);
-            this.btnPictureBoxSaved14.Margin = new System.Windows.Forms.Padding(2);
-            this.btnPictureBoxSaved14.Name = "btnPictureBoxSaved14";
-            this.btnPictureBoxSaved14.Size = new System.Drawing.Size(18, 20);
-            this.btnPictureBoxSaved14.TabIndex = 40;
-            this.btnPictureBoxSaved14.UseVisualStyleBackColor = true;
-            this.btnPictureBoxSaved14.Visible = false;
-            // 
             // txtPictureBoxSaved14
             // 
             this.txtPictureBoxSaved14.Location = new System.Drawing.Point(5, 152);
             this.txtPictureBoxSaved14.Margin = new System.Windows.Forms.Padding(2);
             this.txtPictureBoxSaved14.MaxLength = 25;
             this.txtPictureBoxSaved14.Name = "txtPictureBoxSaved14";
-            this.txtPictureBoxSaved14.Size = new System.Drawing.Size(152, 20);
+            this.txtPictureBoxSaved14.Size = new System.Drawing.Size(192, 20);
             this.txtPictureBoxSaved14.TabIndex = 38;
-            // 
-            // btnDeletePictureBoxSaved14
-            // 
-            this.btnDeletePictureBoxSaved14.BackColor = System.Drawing.Color.Red;
-            this.btnDeletePictureBoxSaved14.Font = new System.Drawing.Font("Microsoft Sans Serif", 7F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnDeletePictureBoxSaved14.Location = new System.Drawing.Point(178, 8);
-            this.btnDeletePictureBoxSaved14.Margin = new System.Windows.Forms.Padding(2);
-            this.btnDeletePictureBoxSaved14.Name = "btnDeletePictureBoxSaved14";
-            this.btnDeletePictureBoxSaved14.Size = new System.Drawing.Size(19, 20);
-            this.btnDeletePictureBoxSaved14.TabIndex = 39;
-            this.btnDeletePictureBoxSaved14.Text = "X";
-            this.btnDeletePictureBoxSaved14.UseVisualStyleBackColor = false;
-            this.btnDeletePictureBoxSaved14.Visible = false;
-            // 
-            // btnEditPic14
-            // 
-            this.btnEditPic14.BackgroundImage = global::EndoscopicSystem.Properties.Resources.editBtn;
-            this.btnEditPic14.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.btnEditPic14.Location = new System.Drawing.Point(154, 9);
-            this.btnEditPic14.Margin = new System.Windows.Forms.Padding(2);
-            this.btnEditPic14.Name = "btnEditPic14";
-            this.btnEditPic14.Size = new System.Drawing.Size(19, 20);
-            this.btnEditPic14.TabIndex = 41;
-            this.btnEditPic14.UseVisualStyleBackColor = true;
-            this.btnEditPic14.Visible = false;
             // 
             // pictureBoxSaved14
             // 
@@ -6194,10 +5854,7 @@ namespace EndoscopicSystem.V2.Forms
             // 
             // groupBox6
             // 
-            this.groupBox6.Controls.Add(this.btnPictureBoxSaved13);
             this.groupBox6.Controls.Add(this.txtPictureBoxSaved13);
-            this.groupBox6.Controls.Add(this.btnDeletePictureBoxSaved13);
-            this.groupBox6.Controls.Add(this.btnEditPic13);
             this.groupBox6.Controls.Add(this.pictureBoxSaved13);
             this.groupBox6.Location = new System.Drawing.Point(9, 1980);
             this.groupBox6.Name = "groupBox6";
@@ -6205,52 +5862,14 @@ namespace EndoscopicSystem.V2.Forms
             this.groupBox6.TabIndex = 73;
             this.groupBox6.TabStop = false;
             // 
-            // btnPictureBoxSaved13
-            // 
-            this.btnPictureBoxSaved13.BackgroundImage = global::EndoscopicSystem.Properties.Resources.Upload;
-            this.btnPictureBoxSaved13.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.btnPictureBoxSaved13.Font = new System.Drawing.Font("Microsoft Sans Serif", 6F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnPictureBoxSaved13.Location = new System.Drawing.Point(159, 151);
-            this.btnPictureBoxSaved13.Margin = new System.Windows.Forms.Padding(2);
-            this.btnPictureBoxSaved13.Name = "btnPictureBoxSaved13";
-            this.btnPictureBoxSaved13.Size = new System.Drawing.Size(18, 20);
-            this.btnPictureBoxSaved13.TabIndex = 35;
-            this.btnPictureBoxSaved13.UseVisualStyleBackColor = true;
-            this.btnPictureBoxSaved13.Visible = false;
-            // 
             // txtPictureBoxSaved13
             // 
             this.txtPictureBoxSaved13.Location = new System.Drawing.Point(5, 151);
             this.txtPictureBoxSaved13.Margin = new System.Windows.Forms.Padding(2);
             this.txtPictureBoxSaved13.MaxLength = 25;
             this.txtPictureBoxSaved13.Name = "txtPictureBoxSaved13";
-            this.txtPictureBoxSaved13.Size = new System.Drawing.Size(152, 20);
+            this.txtPictureBoxSaved13.Size = new System.Drawing.Size(191, 20);
             this.txtPictureBoxSaved13.TabIndex = 33;
-            // 
-            // btnDeletePictureBoxSaved13
-            // 
-            this.btnDeletePictureBoxSaved13.BackColor = System.Drawing.Color.Red;
-            this.btnDeletePictureBoxSaved13.Font = new System.Drawing.Font("Microsoft Sans Serif", 7F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnDeletePictureBoxSaved13.Location = new System.Drawing.Point(177, 8);
-            this.btnDeletePictureBoxSaved13.Margin = new System.Windows.Forms.Padding(2);
-            this.btnDeletePictureBoxSaved13.Name = "btnDeletePictureBoxSaved13";
-            this.btnDeletePictureBoxSaved13.Size = new System.Drawing.Size(19, 20);
-            this.btnDeletePictureBoxSaved13.TabIndex = 34;
-            this.btnDeletePictureBoxSaved13.Text = "X";
-            this.btnDeletePictureBoxSaved13.UseVisualStyleBackColor = false;
-            this.btnDeletePictureBoxSaved13.Visible = false;
-            // 
-            // btnEditPic13
-            // 
-            this.btnEditPic13.BackgroundImage = global::EndoscopicSystem.Properties.Resources.editBtn;
-            this.btnEditPic13.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.btnEditPic13.Location = new System.Drawing.Point(153, 9);
-            this.btnEditPic13.Margin = new System.Windows.Forms.Padding(2);
-            this.btnEditPic13.Name = "btnEditPic13";
-            this.btnEditPic13.Size = new System.Drawing.Size(19, 20);
-            this.btnEditPic13.TabIndex = 36;
-            this.btnEditPic13.UseVisualStyleBackColor = true;
-            this.btnEditPic13.Visible = false;
             // 
             // pictureBoxSaved13
             // 
@@ -6267,10 +5886,7 @@ namespace EndoscopicSystem.V2.Forms
             // 
             // groupBox7
             // 
-            this.groupBox7.Controls.Add(this.btnPictureBoxSaved12);
             this.groupBox7.Controls.Add(this.txtPictureBoxSaved12);
-            this.groupBox7.Controls.Add(this.btnDeletePictureBoxSaved12);
-            this.groupBox7.Controls.Add(this.btnEditPic12);
             this.groupBox7.Controls.Add(this.pictureBoxSaved12);
             this.groupBox7.Location = new System.Drawing.Point(8, 1804);
             this.groupBox7.Name = "groupBox7";
@@ -6278,52 +5894,14 @@ namespace EndoscopicSystem.V2.Forms
             this.groupBox7.TabIndex = 81;
             this.groupBox7.TabStop = false;
             // 
-            // btnPictureBoxSaved12
-            // 
-            this.btnPictureBoxSaved12.BackgroundImage = global::EndoscopicSystem.Properties.Resources.Upload;
-            this.btnPictureBoxSaved12.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.btnPictureBoxSaved12.Font = new System.Drawing.Font("Microsoft Sans Serif", 6F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnPictureBoxSaved12.Location = new System.Drawing.Point(159, 151);
-            this.btnPictureBoxSaved12.Margin = new System.Windows.Forms.Padding(2);
-            this.btnPictureBoxSaved12.Name = "btnPictureBoxSaved12";
-            this.btnPictureBoxSaved12.Size = new System.Drawing.Size(18, 20);
-            this.btnPictureBoxSaved12.TabIndex = 30;
-            this.btnPictureBoxSaved12.UseVisualStyleBackColor = true;
-            this.btnPictureBoxSaved12.Visible = false;
-            // 
             // txtPictureBoxSaved12
             // 
             this.txtPictureBoxSaved12.Location = new System.Drawing.Point(5, 151);
             this.txtPictureBoxSaved12.Margin = new System.Windows.Forms.Padding(2);
             this.txtPictureBoxSaved12.MaxLength = 25;
             this.txtPictureBoxSaved12.Name = "txtPictureBoxSaved12";
-            this.txtPictureBoxSaved12.Size = new System.Drawing.Size(152, 20);
+            this.txtPictureBoxSaved12.Size = new System.Drawing.Size(192, 20);
             this.txtPictureBoxSaved12.TabIndex = 28;
-            // 
-            // btnDeletePictureBoxSaved12
-            // 
-            this.btnDeletePictureBoxSaved12.BackColor = System.Drawing.Color.Red;
-            this.btnDeletePictureBoxSaved12.Font = new System.Drawing.Font("Microsoft Sans Serif", 7F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnDeletePictureBoxSaved12.Location = new System.Drawing.Point(177, 8);
-            this.btnDeletePictureBoxSaved12.Margin = new System.Windows.Forms.Padding(2);
-            this.btnDeletePictureBoxSaved12.Name = "btnDeletePictureBoxSaved12";
-            this.btnDeletePictureBoxSaved12.Size = new System.Drawing.Size(19, 20);
-            this.btnDeletePictureBoxSaved12.TabIndex = 29;
-            this.btnDeletePictureBoxSaved12.Text = "X";
-            this.btnDeletePictureBoxSaved12.UseVisualStyleBackColor = false;
-            this.btnDeletePictureBoxSaved12.Visible = false;
-            // 
-            // btnEditPic12
-            // 
-            this.btnEditPic12.BackgroundImage = global::EndoscopicSystem.Properties.Resources.editBtn;
-            this.btnEditPic12.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.btnEditPic12.Location = new System.Drawing.Point(153, 9);
-            this.btnEditPic12.Margin = new System.Windows.Forms.Padding(2);
-            this.btnEditPic12.Name = "btnEditPic12";
-            this.btnEditPic12.Size = new System.Drawing.Size(19, 20);
-            this.btnEditPic12.TabIndex = 31;
-            this.btnEditPic12.UseVisualStyleBackColor = true;
-            this.btnEditPic12.Visible = false;
             // 
             // pictureBoxSaved12
             // 
@@ -6340,10 +5918,7 @@ namespace EndoscopicSystem.V2.Forms
             // 
             // groupBox8
             // 
-            this.groupBox8.Controls.Add(this.btnPictureBoxSaved11);
             this.groupBox8.Controls.Add(this.txtPictureBoxSaved11);
-            this.groupBox8.Controls.Add(this.btnDeletePictureBoxSaved11);
-            this.groupBox8.Controls.Add(this.btnEditPic11);
             this.groupBox8.Controls.Add(this.pictureBoxSaved11);
             this.groupBox8.Location = new System.Drawing.Point(9, 1628);
             this.groupBox8.Name = "groupBox8";
@@ -6351,52 +5926,14 @@ namespace EndoscopicSystem.V2.Forms
             this.groupBox8.TabIndex = 80;
             this.groupBox8.TabStop = false;
             // 
-            // btnPictureBoxSaved11
-            // 
-            this.btnPictureBoxSaved11.BackgroundImage = global::EndoscopicSystem.Properties.Resources.Upload;
-            this.btnPictureBoxSaved11.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.btnPictureBoxSaved11.Font = new System.Drawing.Font("Microsoft Sans Serif", 6F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnPictureBoxSaved11.Location = new System.Drawing.Point(159, 151);
-            this.btnPictureBoxSaved11.Margin = new System.Windows.Forms.Padding(2);
-            this.btnPictureBoxSaved11.Name = "btnPictureBoxSaved11";
-            this.btnPictureBoxSaved11.Size = new System.Drawing.Size(18, 20);
-            this.btnPictureBoxSaved11.TabIndex = 25;
-            this.btnPictureBoxSaved11.UseVisualStyleBackColor = true;
-            this.btnPictureBoxSaved11.Visible = false;
-            // 
             // txtPictureBoxSaved11
             // 
             this.txtPictureBoxSaved11.Location = new System.Drawing.Point(5, 151);
             this.txtPictureBoxSaved11.Margin = new System.Windows.Forms.Padding(2);
             this.txtPictureBoxSaved11.MaxLength = 25;
             this.txtPictureBoxSaved11.Name = "txtPictureBoxSaved11";
-            this.txtPictureBoxSaved11.Size = new System.Drawing.Size(152, 20);
+            this.txtPictureBoxSaved11.Size = new System.Drawing.Size(191, 20);
             this.txtPictureBoxSaved11.TabIndex = 23;
-            // 
-            // btnDeletePictureBoxSaved11
-            // 
-            this.btnDeletePictureBoxSaved11.BackColor = System.Drawing.Color.Red;
-            this.btnDeletePictureBoxSaved11.Font = new System.Drawing.Font("Microsoft Sans Serif", 7F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnDeletePictureBoxSaved11.Location = new System.Drawing.Point(177, 8);
-            this.btnDeletePictureBoxSaved11.Margin = new System.Windows.Forms.Padding(2);
-            this.btnDeletePictureBoxSaved11.Name = "btnDeletePictureBoxSaved11";
-            this.btnDeletePictureBoxSaved11.Size = new System.Drawing.Size(19, 20);
-            this.btnDeletePictureBoxSaved11.TabIndex = 24;
-            this.btnDeletePictureBoxSaved11.Text = "X";
-            this.btnDeletePictureBoxSaved11.UseVisualStyleBackColor = false;
-            this.btnDeletePictureBoxSaved11.Visible = false;
-            // 
-            // btnEditPic11
-            // 
-            this.btnEditPic11.BackgroundImage = global::EndoscopicSystem.Properties.Resources.editBtn;
-            this.btnEditPic11.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.btnEditPic11.Location = new System.Drawing.Point(154, 9);
-            this.btnEditPic11.Margin = new System.Windows.Forms.Padding(2);
-            this.btnEditPic11.Name = "btnEditPic11";
-            this.btnEditPic11.Size = new System.Drawing.Size(19, 20);
-            this.btnEditPic11.TabIndex = 26;
-            this.btnEditPic11.UseVisualStyleBackColor = true;
-            this.btnEditPic11.Visible = false;
             // 
             // pictureBoxSaved11
             // 
@@ -6413,10 +5950,7 @@ namespace EndoscopicSystem.V2.Forms
             // 
             // groupBox9
             // 
-            this.groupBox9.Controls.Add(this.btnPictureBoxSaved10);
             this.groupBox9.Controls.Add(this.txtPictureBoxSaved10);
-            this.groupBox9.Controls.Add(this.btnDeletePictureBoxSaved10);
-            this.groupBox9.Controls.Add(this.btnEditPic10);
             this.groupBox9.Controls.Add(this.pictureBoxSaved10);
             this.groupBox9.Location = new System.Drawing.Point(8, 1452);
             this.groupBox9.Name = "groupBox9";
@@ -6424,52 +5958,14 @@ namespace EndoscopicSystem.V2.Forms
             this.groupBox9.TabIndex = 76;
             this.groupBox9.TabStop = false;
             // 
-            // btnPictureBoxSaved10
-            // 
-            this.btnPictureBoxSaved10.BackgroundImage = global::EndoscopicSystem.Properties.Resources.Upload;
-            this.btnPictureBoxSaved10.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.btnPictureBoxSaved10.Font = new System.Drawing.Font("Microsoft Sans Serif", 6F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnPictureBoxSaved10.Location = new System.Drawing.Point(159, 152);
-            this.btnPictureBoxSaved10.Margin = new System.Windows.Forms.Padding(2);
-            this.btnPictureBoxSaved10.Name = "btnPictureBoxSaved10";
-            this.btnPictureBoxSaved10.Size = new System.Drawing.Size(18, 20);
-            this.btnPictureBoxSaved10.TabIndex = 20;
-            this.btnPictureBoxSaved10.UseVisualStyleBackColor = true;
-            this.btnPictureBoxSaved10.Visible = false;
-            // 
             // txtPictureBoxSaved10
             // 
             this.txtPictureBoxSaved10.Location = new System.Drawing.Point(5, 151);
             this.txtPictureBoxSaved10.Margin = new System.Windows.Forms.Padding(2);
             this.txtPictureBoxSaved10.MaxLength = 25;
             this.txtPictureBoxSaved10.Name = "txtPictureBoxSaved10";
-            this.txtPictureBoxSaved10.Size = new System.Drawing.Size(152, 20);
+            this.txtPictureBoxSaved10.Size = new System.Drawing.Size(192, 20);
             this.txtPictureBoxSaved10.TabIndex = 18;
-            // 
-            // btnDeletePictureBoxSaved10
-            // 
-            this.btnDeletePictureBoxSaved10.BackColor = System.Drawing.Color.Red;
-            this.btnDeletePictureBoxSaved10.Font = new System.Drawing.Font("Microsoft Sans Serif", 7F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnDeletePictureBoxSaved10.Location = new System.Drawing.Point(177, 8);
-            this.btnDeletePictureBoxSaved10.Margin = new System.Windows.Forms.Padding(2);
-            this.btnDeletePictureBoxSaved10.Name = "btnDeletePictureBoxSaved10";
-            this.btnDeletePictureBoxSaved10.Size = new System.Drawing.Size(19, 20);
-            this.btnDeletePictureBoxSaved10.TabIndex = 19;
-            this.btnDeletePictureBoxSaved10.Text = "X";
-            this.btnDeletePictureBoxSaved10.UseVisualStyleBackColor = false;
-            this.btnDeletePictureBoxSaved10.Visible = false;
-            // 
-            // btnEditPic10
-            // 
-            this.btnEditPic10.BackgroundImage = global::EndoscopicSystem.Properties.Resources.editBtn;
-            this.btnEditPic10.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.btnEditPic10.Location = new System.Drawing.Point(154, 9);
-            this.btnEditPic10.Margin = new System.Windows.Forms.Padding(2);
-            this.btnEditPic10.Name = "btnEditPic10";
-            this.btnEditPic10.Size = new System.Drawing.Size(19, 20);
-            this.btnEditPic10.TabIndex = 21;
-            this.btnEditPic10.UseVisualStyleBackColor = true;
-            this.btnEditPic10.Visible = false;
             // 
             // pictureBoxSaved10
             // 
@@ -6486,10 +5982,7 @@ namespace EndoscopicSystem.V2.Forms
             // 
             // groupBox18
             // 
-            this.groupBox18.Controls.Add(this.btnPictureBoxSaved1);
-            this.groupBox18.Controls.Add(this.btnDeletePictureBoxSaved1);
             this.groupBox18.Controls.Add(this.txtPictureBoxSaved1);
-            this.groupBox18.Controls.Add(this.btnEditPic1);
             this.groupBox18.Controls.Add(this.pictureBoxSaved1);
             this.groupBox18.Location = new System.Drawing.Point(10, 3);
             this.groupBox18.Name = "groupBox18";
@@ -6497,52 +5990,14 @@ namespace EndoscopicSystem.V2.Forms
             this.groupBox18.TabIndex = 67;
             this.groupBox18.TabStop = false;
             // 
-            // btnPictureBoxSaved1
-            // 
-            this.btnPictureBoxSaved1.BackgroundImage = global::EndoscopicSystem.Properties.Resources.Upload;
-            this.btnPictureBoxSaved1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.btnPictureBoxSaved1.Font = new System.Drawing.Font("Microsoft Sans Serif", 6F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnPictureBoxSaved1.Location = new System.Drawing.Point(159, 152);
-            this.btnPictureBoxSaved1.Margin = new System.Windows.Forms.Padding(2);
-            this.btnPictureBoxSaved1.Name = "btnPictureBoxSaved1";
-            this.btnPictureBoxSaved1.Size = new System.Drawing.Size(18, 20);
-            this.btnPictureBoxSaved1.TabIndex = 10;
-            this.btnPictureBoxSaved1.UseVisualStyleBackColor = true;
-            this.btnPictureBoxSaved1.Visible = false;
-            // 
-            // btnDeletePictureBoxSaved1
-            // 
-            this.btnDeletePictureBoxSaved1.BackColor = System.Drawing.Color.Red;
-            this.btnDeletePictureBoxSaved1.Font = new System.Drawing.Font("Microsoft Sans Serif", 7F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnDeletePictureBoxSaved1.Location = new System.Drawing.Point(178, 8);
-            this.btnDeletePictureBoxSaved1.Margin = new System.Windows.Forms.Padding(2);
-            this.btnDeletePictureBoxSaved1.Name = "btnDeletePictureBoxSaved1";
-            this.btnDeletePictureBoxSaved1.Size = new System.Drawing.Size(19, 20);
-            this.btnDeletePictureBoxSaved1.TabIndex = 7;
-            this.btnDeletePictureBoxSaved1.Text = "X";
-            this.btnDeletePictureBoxSaved1.UseVisualStyleBackColor = false;
-            this.btnDeletePictureBoxSaved1.Visible = false;
-            // 
             // txtPictureBoxSaved1
             // 
             this.txtPictureBoxSaved1.Location = new System.Drawing.Point(4, 152);
             this.txtPictureBoxSaved1.Margin = new System.Windows.Forms.Padding(2);
             this.txtPictureBoxSaved1.MaxLength = 25;
             this.txtPictureBoxSaved1.Name = "txtPictureBoxSaved1";
-            this.txtPictureBoxSaved1.Size = new System.Drawing.Size(152, 20);
+            this.txtPictureBoxSaved1.Size = new System.Drawing.Size(191, 20);
             this.txtPictureBoxSaved1.TabIndex = 1;
-            // 
-            // btnEditPic1
-            // 
-            this.btnEditPic1.BackgroundImage = global::EndoscopicSystem.Properties.Resources.editBtn;
-            this.btnEditPic1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.btnEditPic1.Location = new System.Drawing.Point(154, 9);
-            this.btnEditPic1.Margin = new System.Windows.Forms.Padding(2);
-            this.btnEditPic1.Name = "btnEditPic1";
-            this.btnEditPic1.Size = new System.Drawing.Size(19, 20);
-            this.btnEditPic1.TabIndex = 10;
-            this.btnEditPic1.UseVisualStyleBackColor = true;
-            this.btnEditPic1.Visible = false;
             // 
             // pictureBoxSaved1
             // 
@@ -6559,10 +6014,7 @@ namespace EndoscopicSystem.V2.Forms
             // 
             // groupBox17
             // 
-            this.groupBox17.Controls.Add(this.btnPictureBoxSaved2);
-            this.groupBox17.Controls.Add(this.btnDeletePictureBoxSaved2);
             this.groupBox17.Controls.Add(this.txtPictureBoxSaved2);
-            this.groupBox17.Controls.Add(this.btnEditPic2);
             this.groupBox17.Controls.Add(this.pictureBoxSaved2);
             this.groupBox17.Location = new System.Drawing.Point(6, 184);
             this.groupBox17.Name = "groupBox17";
@@ -6570,52 +6022,14 @@ namespace EndoscopicSystem.V2.Forms
             this.groupBox17.TabIndex = 67;
             this.groupBox17.TabStop = false;
             // 
-            // btnPictureBoxSaved2
-            // 
-            this.btnPictureBoxSaved2.BackgroundImage = global::EndoscopicSystem.Properties.Resources.Upload;
-            this.btnPictureBoxSaved2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.btnPictureBoxSaved2.Font = new System.Drawing.Font("Microsoft Sans Serif", 6F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnPictureBoxSaved2.Location = new System.Drawing.Point(157, 151);
-            this.btnPictureBoxSaved2.Margin = new System.Windows.Forms.Padding(2);
-            this.btnPictureBoxSaved2.Name = "btnPictureBoxSaved2";
-            this.btnPictureBoxSaved2.Size = new System.Drawing.Size(18, 20);
-            this.btnPictureBoxSaved2.TabIndex = 10;
-            this.btnPictureBoxSaved2.UseVisualStyleBackColor = true;
-            this.btnPictureBoxSaved2.Visible = false;
-            // 
-            // btnDeletePictureBoxSaved2
-            // 
-            this.btnDeletePictureBoxSaved2.BackColor = System.Drawing.Color.Red;
-            this.btnDeletePictureBoxSaved2.Font = new System.Drawing.Font("Microsoft Sans Serif", 7F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnDeletePictureBoxSaved2.Location = new System.Drawing.Point(175, 7);
-            this.btnDeletePictureBoxSaved2.Margin = new System.Windows.Forms.Padding(2);
-            this.btnDeletePictureBoxSaved2.Name = "btnDeletePictureBoxSaved2";
-            this.btnDeletePictureBoxSaved2.Size = new System.Drawing.Size(19, 20);
-            this.btnDeletePictureBoxSaved2.TabIndex = 7;
-            this.btnDeletePictureBoxSaved2.Text = "X";
-            this.btnDeletePictureBoxSaved2.UseVisualStyleBackColor = false;
-            this.btnDeletePictureBoxSaved2.Visible = false;
-            // 
             // txtPictureBoxSaved2
             // 
             this.txtPictureBoxSaved2.Location = new System.Drawing.Point(2, 152);
             this.txtPictureBoxSaved2.Margin = new System.Windows.Forms.Padding(2);
             this.txtPictureBoxSaved2.MaxLength = 25;
             this.txtPictureBoxSaved2.Name = "txtPictureBoxSaved2";
-            this.txtPictureBoxSaved2.Size = new System.Drawing.Size(152, 20);
+            this.txtPictureBoxSaved2.Size = new System.Drawing.Size(191, 20);
             this.txtPictureBoxSaved2.TabIndex = 1;
-            // 
-            // btnEditPic2
-            // 
-            this.btnEditPic2.BackgroundImage = global::EndoscopicSystem.Properties.Resources.editBtn;
-            this.btnEditPic2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.btnEditPic2.Location = new System.Drawing.Point(152, 9);
-            this.btnEditPic2.Margin = new System.Windows.Forms.Padding(2);
-            this.btnEditPic2.Name = "btnEditPic2";
-            this.btnEditPic2.Size = new System.Drawing.Size(19, 20);
-            this.btnEditPic2.TabIndex = 9;
-            this.btnEditPic2.UseVisualStyleBackColor = true;
-            this.btnEditPic2.Visible = false;
             // 
             // pictureBoxSaved2
             // 
@@ -6632,10 +6046,7 @@ namespace EndoscopicSystem.V2.Forms
             // 
             // groupBox16
             // 
-            this.groupBox16.Controls.Add(this.btnPictureBoxSaved3);
             this.groupBox16.Controls.Add(this.txtPictureBoxSaved3);
-            this.groupBox16.Controls.Add(this.btnDeletePictureBoxSaved3);
-            this.groupBox16.Controls.Add(this.btnEditPic3);
             this.groupBox16.Controls.Add(this.pictureBoxSaved3);
             this.groupBox16.Location = new System.Drawing.Point(8, 365);
             this.groupBox16.Name = "groupBox16";
@@ -6643,52 +6054,14 @@ namespace EndoscopicSystem.V2.Forms
             this.groupBox16.TabIndex = 67;
             this.groupBox16.TabStop = false;
             // 
-            // btnPictureBoxSaved3
-            // 
-            this.btnPictureBoxSaved3.BackgroundImage = global::EndoscopicSystem.Properties.Resources.Upload;
-            this.btnPictureBoxSaved3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.btnPictureBoxSaved3.Font = new System.Drawing.Font("Microsoft Sans Serif", 6F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnPictureBoxSaved3.Location = new System.Drawing.Point(159, 150);
-            this.btnPictureBoxSaved3.Margin = new System.Windows.Forms.Padding(2);
-            this.btnPictureBoxSaved3.Name = "btnPictureBoxSaved3";
-            this.btnPictureBoxSaved3.Size = new System.Drawing.Size(18, 20);
-            this.btnPictureBoxSaved3.TabIndex = 10;
-            this.btnPictureBoxSaved3.UseVisualStyleBackColor = true;
-            this.btnPictureBoxSaved3.Visible = false;
-            // 
             // txtPictureBoxSaved3
             // 
             this.txtPictureBoxSaved3.Location = new System.Drawing.Point(4, 152);
             this.txtPictureBoxSaved3.Margin = new System.Windows.Forms.Padding(2);
             this.txtPictureBoxSaved3.MaxLength = 25;
             this.txtPictureBoxSaved3.Name = "txtPictureBoxSaved3";
-            this.txtPictureBoxSaved3.Size = new System.Drawing.Size(152, 20);
+            this.txtPictureBoxSaved3.Size = new System.Drawing.Size(191, 20);
             this.txtPictureBoxSaved3.TabIndex = 1;
-            // 
-            // btnDeletePictureBoxSaved3
-            // 
-            this.btnDeletePictureBoxSaved3.BackColor = System.Drawing.Color.Red;
-            this.btnDeletePictureBoxSaved3.Font = new System.Drawing.Font("Microsoft Sans Serif", 7F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnDeletePictureBoxSaved3.Location = new System.Drawing.Point(177, 8);
-            this.btnDeletePictureBoxSaved3.Margin = new System.Windows.Forms.Padding(2);
-            this.btnDeletePictureBoxSaved3.Name = "btnDeletePictureBoxSaved3";
-            this.btnDeletePictureBoxSaved3.Size = new System.Drawing.Size(19, 20);
-            this.btnDeletePictureBoxSaved3.TabIndex = 7;
-            this.btnDeletePictureBoxSaved3.Text = "X";
-            this.btnDeletePictureBoxSaved3.UseVisualStyleBackColor = false;
-            this.btnDeletePictureBoxSaved3.Visible = false;
-            // 
-            // btnEditPic3
-            // 
-            this.btnEditPic3.BackgroundImage = global::EndoscopicSystem.Properties.Resources.editBtn;
-            this.btnEditPic3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.btnEditPic3.Location = new System.Drawing.Point(154, 10);
-            this.btnEditPic3.Margin = new System.Windows.Forms.Padding(2);
-            this.btnEditPic3.Name = "btnEditPic3";
-            this.btnEditPic3.Size = new System.Drawing.Size(19, 20);
-            this.btnEditPic3.TabIndex = 10;
-            this.btnEditPic3.UseVisualStyleBackColor = true;
-            this.btnEditPic3.Visible = false;
             // 
             // pictureBoxSaved3
             // 
@@ -6705,10 +6078,7 @@ namespace EndoscopicSystem.V2.Forms
             // 
             // groupBox15
             // 
-            this.groupBox15.Controls.Add(this.btnPictureBoxSaved4);
-            this.groupBox15.Controls.Add(this.btnDeletePictureBoxSaved4);
             this.groupBox15.Controls.Add(this.txtPictureBoxSaved4);
-            this.groupBox15.Controls.Add(this.btnEditPic4);
             this.groupBox15.Controls.Add(this.pictureBoxSaved4);
             this.groupBox15.Location = new System.Drawing.Point(6, 551);
             this.groupBox15.Name = "groupBox15";
@@ -6716,52 +6086,14 @@ namespace EndoscopicSystem.V2.Forms
             this.groupBox15.TabIndex = 67;
             this.groupBox15.TabStop = false;
             // 
-            // btnPictureBoxSaved4
-            // 
-            this.btnPictureBoxSaved4.BackgroundImage = global::EndoscopicSystem.Properties.Resources.Upload;
-            this.btnPictureBoxSaved4.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.btnPictureBoxSaved4.Font = new System.Drawing.Font("Microsoft Sans Serif", 6F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnPictureBoxSaved4.Location = new System.Drawing.Point(159, 150);
-            this.btnPictureBoxSaved4.Margin = new System.Windows.Forms.Padding(2);
-            this.btnPictureBoxSaved4.Name = "btnPictureBoxSaved4";
-            this.btnPictureBoxSaved4.Size = new System.Drawing.Size(18, 20);
-            this.btnPictureBoxSaved4.TabIndex = 10;
-            this.btnPictureBoxSaved4.UseVisualStyleBackColor = true;
-            this.btnPictureBoxSaved4.Visible = false;
-            // 
-            // btnDeletePictureBoxSaved4
-            // 
-            this.btnDeletePictureBoxSaved4.BackColor = System.Drawing.Color.Red;
-            this.btnDeletePictureBoxSaved4.Font = new System.Drawing.Font("Microsoft Sans Serif", 7F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnDeletePictureBoxSaved4.Location = new System.Drawing.Point(178, 8);
-            this.btnDeletePictureBoxSaved4.Margin = new System.Windows.Forms.Padding(2);
-            this.btnDeletePictureBoxSaved4.Name = "btnDeletePictureBoxSaved4";
-            this.btnDeletePictureBoxSaved4.Size = new System.Drawing.Size(19, 20);
-            this.btnDeletePictureBoxSaved4.TabIndex = 7;
-            this.btnDeletePictureBoxSaved4.Text = "X";
-            this.btnDeletePictureBoxSaved4.UseVisualStyleBackColor = false;
-            this.btnDeletePictureBoxSaved4.Visible = false;
-            // 
             // txtPictureBoxSaved4
             // 
             this.txtPictureBoxSaved4.Location = new System.Drawing.Point(5, 151);
             this.txtPictureBoxSaved4.Margin = new System.Windows.Forms.Padding(2);
             this.txtPictureBoxSaved4.MaxLength = 25;
             this.txtPictureBoxSaved4.Name = "txtPictureBoxSaved4";
-            this.txtPictureBoxSaved4.Size = new System.Drawing.Size(152, 20);
+            this.txtPictureBoxSaved4.Size = new System.Drawing.Size(191, 20);
             this.txtPictureBoxSaved4.TabIndex = 1;
-            // 
-            // btnEditPic4
-            // 
-            this.btnEditPic4.BackgroundImage = global::EndoscopicSystem.Properties.Resources.editBtn;
-            this.btnEditPic4.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.btnEditPic4.Location = new System.Drawing.Point(155, 9);
-            this.btnEditPic4.Margin = new System.Windows.Forms.Padding(2);
-            this.btnEditPic4.Name = "btnEditPic4";
-            this.btnEditPic4.Size = new System.Drawing.Size(19, 20);
-            this.btnEditPic4.TabIndex = 11;
-            this.btnEditPic4.UseVisualStyleBackColor = true;
-            this.btnEditPic4.Visible = false;
             // 
             // pictureBoxSaved4
             // 
@@ -6778,10 +6110,7 @@ namespace EndoscopicSystem.V2.Forms
             // 
             // groupBox13
             // 
-            this.groupBox13.Controls.Add(this.btnPictureBoxSaved5);
             this.groupBox13.Controls.Add(this.txtPictureBoxSaved5);
-            this.groupBox13.Controls.Add(this.btnDeletePictureBoxSaved5);
-            this.groupBox13.Controls.Add(this.btnEditPic5);
             this.groupBox13.Controls.Add(this.pictureBoxSaved5);
             this.groupBox13.Location = new System.Drawing.Point(6, 732);
             this.groupBox13.Name = "groupBox13";
@@ -6789,52 +6118,14 @@ namespace EndoscopicSystem.V2.Forms
             this.groupBox13.TabIndex = 79;
             this.groupBox13.TabStop = false;
             // 
-            // btnPictureBoxSaved5
-            // 
-            this.btnPictureBoxSaved5.BackgroundImage = global::EndoscopicSystem.Properties.Resources.Upload;
-            this.btnPictureBoxSaved5.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.btnPictureBoxSaved5.Font = new System.Drawing.Font("Microsoft Sans Serif", 6F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnPictureBoxSaved5.Location = new System.Drawing.Point(160, 152);
-            this.btnPictureBoxSaved5.Margin = new System.Windows.Forms.Padding(2);
-            this.btnPictureBoxSaved5.Name = "btnPictureBoxSaved5";
-            this.btnPictureBoxSaved5.Size = new System.Drawing.Size(18, 20);
-            this.btnPictureBoxSaved5.TabIndex = 10;
-            this.btnPictureBoxSaved5.UseVisualStyleBackColor = true;
-            this.btnPictureBoxSaved5.Visible = false;
-            // 
             // txtPictureBoxSaved5
             // 
             this.txtPictureBoxSaved5.Location = new System.Drawing.Point(6, 152);
             this.txtPictureBoxSaved5.Margin = new System.Windows.Forms.Padding(2);
             this.txtPictureBoxSaved5.MaxLength = 25;
             this.txtPictureBoxSaved5.Name = "txtPictureBoxSaved5";
-            this.txtPictureBoxSaved5.Size = new System.Drawing.Size(152, 20);
+            this.txtPictureBoxSaved5.Size = new System.Drawing.Size(191, 20);
             this.txtPictureBoxSaved5.TabIndex = 1;
-            // 
-            // btnDeletePictureBoxSaved5
-            // 
-            this.btnDeletePictureBoxSaved5.BackColor = System.Drawing.Color.Red;
-            this.btnDeletePictureBoxSaved5.Font = new System.Drawing.Font("Microsoft Sans Serif", 7F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnDeletePictureBoxSaved5.Location = new System.Drawing.Point(177, 7);
-            this.btnDeletePictureBoxSaved5.Margin = new System.Windows.Forms.Padding(2);
-            this.btnDeletePictureBoxSaved5.Name = "btnDeletePictureBoxSaved5";
-            this.btnDeletePictureBoxSaved5.Size = new System.Drawing.Size(19, 20);
-            this.btnDeletePictureBoxSaved5.TabIndex = 7;
-            this.btnDeletePictureBoxSaved5.Text = "X";
-            this.btnDeletePictureBoxSaved5.UseVisualStyleBackColor = false;
-            this.btnDeletePictureBoxSaved5.Visible = false;
-            // 
-            // btnEditPic5
-            // 
-            this.btnEditPic5.BackgroundImage = global::EndoscopicSystem.Properties.Resources.editBtn;
-            this.btnEditPic5.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.btnEditPic5.Location = new System.Drawing.Point(155, 9);
-            this.btnEditPic5.Margin = new System.Windows.Forms.Padding(2);
-            this.btnEditPic5.Name = "btnEditPic5";
-            this.btnEditPic5.Size = new System.Drawing.Size(19, 20);
-            this.btnEditPic5.TabIndex = 13;
-            this.btnEditPic5.UseVisualStyleBackColor = true;
-            this.btnEditPic5.Visible = false;
             // 
             // pictureBoxSaved5
             // 
@@ -6851,10 +6142,7 @@ namespace EndoscopicSystem.V2.Forms
             // 
             // groupBox12
             // 
-            this.groupBox12.Controls.Add(this.btnPictureBoxSaved7);
             this.groupBox12.Controls.Add(this.txtPictureBoxSaved7);
-            this.groupBox12.Controls.Add(this.btnDeletePictureBoxSaved7);
-            this.groupBox12.Controls.Add(this.btnEditPic7);
             this.groupBox12.Controls.Add(this.pictureBoxSaved7);
             this.groupBox12.Location = new System.Drawing.Point(6, 913);
             this.groupBox12.Name = "groupBox12";
@@ -6862,52 +6150,14 @@ namespace EndoscopicSystem.V2.Forms
             this.groupBox12.TabIndex = 78;
             this.groupBox12.TabStop = false;
             // 
-            // btnPictureBoxSaved7
-            // 
-            this.btnPictureBoxSaved7.BackgroundImage = global::EndoscopicSystem.Properties.Resources.Upload;
-            this.btnPictureBoxSaved7.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.btnPictureBoxSaved7.Font = new System.Drawing.Font("Microsoft Sans Serif", 6F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnPictureBoxSaved7.Location = new System.Drawing.Point(161, 152);
-            this.btnPictureBoxSaved7.Margin = new System.Windows.Forms.Padding(2);
-            this.btnPictureBoxSaved7.Name = "btnPictureBoxSaved7";
-            this.btnPictureBoxSaved7.Size = new System.Drawing.Size(18, 20);
-            this.btnPictureBoxSaved7.TabIndex = 10;
-            this.btnPictureBoxSaved7.UseVisualStyleBackColor = true;
-            this.btnPictureBoxSaved7.Visible = false;
-            // 
             // txtPictureBoxSaved7
             // 
             this.txtPictureBoxSaved7.Location = new System.Drawing.Point(6, 152);
             this.txtPictureBoxSaved7.Margin = new System.Windows.Forms.Padding(2);
             this.txtPictureBoxSaved7.MaxLength = 25;
             this.txtPictureBoxSaved7.Name = "txtPictureBoxSaved7";
-            this.txtPictureBoxSaved7.Size = new System.Drawing.Size(152, 20);
+            this.txtPictureBoxSaved7.Size = new System.Drawing.Size(191, 20);
             this.txtPictureBoxSaved7.TabIndex = 1;
-            // 
-            // btnDeletePictureBoxSaved7
-            // 
-            this.btnDeletePictureBoxSaved7.BackColor = System.Drawing.Color.Red;
-            this.btnDeletePictureBoxSaved7.Font = new System.Drawing.Font("Microsoft Sans Serif", 7F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnDeletePictureBoxSaved7.Location = new System.Drawing.Point(178, 9);
-            this.btnDeletePictureBoxSaved7.Margin = new System.Windows.Forms.Padding(2);
-            this.btnDeletePictureBoxSaved7.Name = "btnDeletePictureBoxSaved7";
-            this.btnDeletePictureBoxSaved7.Size = new System.Drawing.Size(19, 20);
-            this.btnDeletePictureBoxSaved7.TabIndex = 7;
-            this.btnDeletePictureBoxSaved7.Text = "X";
-            this.btnDeletePictureBoxSaved7.UseVisualStyleBackColor = false;
-            this.btnDeletePictureBoxSaved7.Visible = false;
-            // 
-            // btnEditPic7
-            // 
-            this.btnEditPic7.BackgroundImage = global::EndoscopicSystem.Properties.Resources.editBtn;
-            this.btnEditPic7.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.btnEditPic7.Location = new System.Drawing.Point(155, 10);
-            this.btnEditPic7.Margin = new System.Windows.Forms.Padding(2);
-            this.btnEditPic7.Name = "btnEditPic7";
-            this.btnEditPic7.Size = new System.Drawing.Size(19, 20);
-            this.btnEditPic7.TabIndex = 14;
-            this.btnEditPic7.UseVisualStyleBackColor = true;
-            this.btnEditPic7.Visible = false;
             // 
             // pictureBoxSaved7
             // 
@@ -6924,10 +6174,7 @@ namespace EndoscopicSystem.V2.Forms
             // 
             // groupBox11
             // 
-            this.groupBox11.Controls.Add(this.btnPictureBoxSaved8);
             this.groupBox11.Controls.Add(this.txtPictureBoxSaved8);
-            this.groupBox11.Controls.Add(this.btnDeletePictureBoxSaved8);
-            this.groupBox11.Controls.Add(this.btnEditPic8);
             this.groupBox11.Controls.Add(this.pictureBoxSaved8);
             this.groupBox11.Location = new System.Drawing.Point(8, 1094);
             this.groupBox11.Name = "groupBox11";
@@ -6935,52 +6182,14 @@ namespace EndoscopicSystem.V2.Forms
             this.groupBox11.TabIndex = 77;
             this.groupBox11.TabStop = false;
             // 
-            // btnPictureBoxSaved8
-            // 
-            this.btnPictureBoxSaved8.BackgroundImage = global::EndoscopicSystem.Properties.Resources.Upload;
-            this.btnPictureBoxSaved8.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.btnPictureBoxSaved8.Font = new System.Drawing.Font("Microsoft Sans Serif", 6F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnPictureBoxSaved8.Location = new System.Drawing.Point(160, 151);
-            this.btnPictureBoxSaved8.Margin = new System.Windows.Forms.Padding(2);
-            this.btnPictureBoxSaved8.Name = "btnPictureBoxSaved8";
-            this.btnPictureBoxSaved8.Size = new System.Drawing.Size(18, 20);
-            this.btnPictureBoxSaved8.TabIndex = 10;
-            this.btnPictureBoxSaved8.UseVisualStyleBackColor = true;
-            this.btnPictureBoxSaved8.Visible = false;
-            // 
             // txtPictureBoxSaved8
             // 
             this.txtPictureBoxSaved8.Location = new System.Drawing.Point(5, 151);
             this.txtPictureBoxSaved8.Margin = new System.Windows.Forms.Padding(2);
             this.txtPictureBoxSaved8.MaxLength = 25;
             this.txtPictureBoxSaved8.Name = "txtPictureBoxSaved8";
-            this.txtPictureBoxSaved8.Size = new System.Drawing.Size(152, 20);
+            this.txtPictureBoxSaved8.Size = new System.Drawing.Size(192, 20);
             this.txtPictureBoxSaved8.TabIndex = 1;
-            // 
-            // btnDeletePictureBoxSaved8
-            // 
-            this.btnDeletePictureBoxSaved8.BackColor = System.Drawing.Color.Red;
-            this.btnDeletePictureBoxSaved8.Font = new System.Drawing.Font("Microsoft Sans Serif", 7F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnDeletePictureBoxSaved8.Location = new System.Drawing.Point(177, 8);
-            this.btnDeletePictureBoxSaved8.Margin = new System.Windows.Forms.Padding(2);
-            this.btnDeletePictureBoxSaved8.Name = "btnDeletePictureBoxSaved8";
-            this.btnDeletePictureBoxSaved8.Size = new System.Drawing.Size(19, 20);
-            this.btnDeletePictureBoxSaved8.TabIndex = 7;
-            this.btnDeletePictureBoxSaved8.Text = "X";
-            this.btnDeletePictureBoxSaved8.UseVisualStyleBackColor = false;
-            this.btnDeletePictureBoxSaved8.Visible = false;
-            // 
-            // btnEditPic8
-            // 
-            this.btnEditPic8.BackgroundImage = global::EndoscopicSystem.Properties.Resources.editBtn;
-            this.btnEditPic8.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.btnEditPic8.Location = new System.Drawing.Point(153, 9);
-            this.btnEditPic8.Margin = new System.Windows.Forms.Padding(2);
-            this.btnEditPic8.Name = "btnEditPic8";
-            this.btnEditPic8.Size = new System.Drawing.Size(19, 20);
-            this.btnEditPic8.TabIndex = 15;
-            this.btnEditPic8.UseVisualStyleBackColor = true;
-            this.btnEditPic8.Visible = false;
             // 
             // pictureBoxSaved8
             // 
@@ -6997,10 +6206,7 @@ namespace EndoscopicSystem.V2.Forms
             // 
             // groupBox10
             // 
-            this.groupBox10.Controls.Add(this.btnPictureBoxSaved9);
             this.groupBox10.Controls.Add(this.txtPictureBoxSaved9);
-            this.groupBox10.Controls.Add(this.btnDeletePictureBoxSaved9);
-            this.groupBox10.Controls.Add(this.btnEditPic9);
             this.groupBox10.Controls.Add(this.pictureBoxSaved9);
             this.groupBox10.Location = new System.Drawing.Point(7, 1275);
             this.groupBox10.Name = "groupBox10";
@@ -7008,52 +6214,14 @@ namespace EndoscopicSystem.V2.Forms
             this.groupBox10.TabIndex = 76;
             this.groupBox10.TabStop = false;
             // 
-            // btnPictureBoxSaved9
-            // 
-            this.btnPictureBoxSaved9.BackgroundImage = global::EndoscopicSystem.Properties.Resources.Upload;
-            this.btnPictureBoxSaved9.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.btnPictureBoxSaved9.Font = new System.Drawing.Font("Microsoft Sans Serif", 6F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnPictureBoxSaved9.Location = new System.Drawing.Point(159, 152);
-            this.btnPictureBoxSaved9.Margin = new System.Windows.Forms.Padding(2);
-            this.btnPictureBoxSaved9.Name = "btnPictureBoxSaved9";
-            this.btnPictureBoxSaved9.Size = new System.Drawing.Size(18, 20);
-            this.btnPictureBoxSaved9.TabIndex = 10;
-            this.btnPictureBoxSaved9.UseVisualStyleBackColor = true;
-            this.btnPictureBoxSaved9.Visible = false;
-            // 
             // txtPictureBoxSaved9
             // 
             this.txtPictureBoxSaved9.Location = new System.Drawing.Point(5, 152);
             this.txtPictureBoxSaved9.Margin = new System.Windows.Forms.Padding(2);
             this.txtPictureBoxSaved9.MaxLength = 25;
             this.txtPictureBoxSaved9.Name = "txtPictureBoxSaved9";
-            this.txtPictureBoxSaved9.Size = new System.Drawing.Size(152, 20);
+            this.txtPictureBoxSaved9.Size = new System.Drawing.Size(192, 20);
             this.txtPictureBoxSaved9.TabIndex = 1;
-            // 
-            // btnDeletePictureBoxSaved9
-            // 
-            this.btnDeletePictureBoxSaved9.BackColor = System.Drawing.Color.Red;
-            this.btnDeletePictureBoxSaved9.Font = new System.Drawing.Font("Microsoft Sans Serif", 7F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnDeletePictureBoxSaved9.Location = new System.Drawing.Point(176, 9);
-            this.btnDeletePictureBoxSaved9.Margin = new System.Windows.Forms.Padding(2);
-            this.btnDeletePictureBoxSaved9.Name = "btnDeletePictureBoxSaved9";
-            this.btnDeletePictureBoxSaved9.Size = new System.Drawing.Size(19, 20);
-            this.btnDeletePictureBoxSaved9.TabIndex = 7;
-            this.btnDeletePictureBoxSaved9.Text = "X";
-            this.btnDeletePictureBoxSaved9.UseVisualStyleBackColor = false;
-            this.btnDeletePictureBoxSaved9.Visible = false;
-            // 
-            // btnEditPic9
-            // 
-            this.btnEditPic9.BackgroundImage = global::EndoscopicSystem.Properties.Resources.editBtn;
-            this.btnEditPic9.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.btnEditPic9.Location = new System.Drawing.Point(153, 11);
-            this.btnEditPic9.Margin = new System.Windows.Forms.Padding(2);
-            this.btnEditPic9.Name = "btnEditPic9";
-            this.btnEditPic9.Size = new System.Drawing.Size(19, 20);
-            this.btnEditPic9.TabIndex = 16;
-            this.btnEditPic9.UseVisualStyleBackColor = true;
-            this.btnEditPic9.Visible = false;
             // 
             // pictureBoxSaved9
             // 
@@ -7194,42 +6362,6 @@ namespace EndoscopicSystem.V2.Forms
         private System.Windows.Forms.Label label22;
         private System.Windows.Forms.TextBox txtGeneralInstrument_EGD;
         private System.Windows.Forms.TabPage tabFindingEGD;
-        private System.Windows.Forms.ComboBox cbbFindingLLL_EGD;
-        private System.Windows.Forms.ComboBox cbbFindingLingular_EGD;
-        private System.Windows.Forms.ComboBox cbbFindingLUL_EGD;
-        private System.Windows.Forms.ComboBox cbbFindingLeftMain_EGD;
-        private System.Windows.Forms.ComboBox cbbFindingRLL_EGD;
-        private System.Windows.Forms.ComboBox cbbFindingRML_EGD;
-        private System.Windows.Forms.ComboBox cbbFindingRUL_EGD;
-        private System.Windows.Forms.ComboBox cbbFindingRightIntermideate_EGD;
-        private System.Windows.Forms.ComboBox cbbFindingRightMain_EGD;
-        private System.Windows.Forms.ComboBox cbbFindingCarina_EGD;
-        private System.Windows.Forms.ComboBox cbbFindingTrachea_EGD;
-        private System.Windows.Forms.ComboBox cbbFindingVocal_EGD;
-        private System.Windows.Forms.Label label35;
-        private System.Windows.Forms.Label label11;
-        private System.Windows.Forms.Label label25;
-        private System.Windows.Forms.TextBox txbFindingLLL_EGD;
-        private System.Windows.Forms.Label label26;
-        private System.Windows.Forms.TextBox txbFindingLingular_EGD;
-        private System.Windows.Forms.TextBox txbFindingLUL_EGD;
-        private System.Windows.Forms.TextBox txbFindingLeftMain_EGD;
-        private System.Windows.Forms.Label label27;
-        private System.Windows.Forms.TextBox txbFindingRLL_EGD;
-        private System.Windows.Forms.Label label28;
-        private System.Windows.Forms.TextBox txbFindingRML_EGD;
-        private System.Windows.Forms.Label label29;
-        private System.Windows.Forms.Label label30;
-        private System.Windows.Forms.Label label31;
-        private System.Windows.Forms.Label label32;
-        private System.Windows.Forms.Label label33;
-        private System.Windows.Forms.Label label34;
-        private System.Windows.Forms.TextBox txbFindingRUL_EGD;
-        private System.Windows.Forms.TextBox txbFindingIntermideate_EGD;
-        private System.Windows.Forms.TextBox txbFindingRightMain_EGD;
-        private System.Windows.Forms.TextBox txbFindingCarina_EGD;
-        private System.Windows.Forms.TextBox txbFindingTrachea_EGD;
-        private System.Windows.Forms.TextBox txbFindingVocalCord_EGD;
         private System.Windows.Forms.TabPage tabIndicationBronchoscopy;
         private System.Windows.Forms.CheckBox cbOther_0;
         private System.Windows.Forms.CheckBox cbTherapeutic_0;
@@ -7573,108 +6705,87 @@ namespace EndoscopicSystem.V2.Forms
         private System.Windows.Forms.TextBox txbGeneralFinancial_EGD;
         private System.Windows.Forms.Panel panel3;
         private System.Windows.Forms.GroupBox groupBox14;
-        private System.Windows.Forms.Button btnEditPic18;
-        private System.Windows.Forms.Button btnPictureBoxSaved18;
-        private System.Windows.Forms.Button btnDeletePictureBoxSaved18;
         private System.Windows.Forms.TextBox txtPictureBoxSaved18;
         private System.Windows.Forms.PictureBox pictureBoxSaved18;
         private System.Windows.Forms.GroupBox groupBox3;
-        private System.Windows.Forms.Button btnPictureBoxSaved17;
-        private System.Windows.Forms.Button btnEditPic17;
         private System.Windows.Forms.TextBox txtPictureBoxSaved17;
-        private System.Windows.Forms.Button btnDeletePictureBoxSaved17;
         private System.Windows.Forms.PictureBox pictureBoxSaved17;
         private System.Windows.Forms.GroupBox groupBox2;
-        private System.Windows.Forms.Button btnPictureBoxSaved16;
         private System.Windows.Forms.TextBox txtPictureBoxSaved16;
-        private System.Windows.Forms.Button btnEditPic16;
-        private System.Windows.Forms.Button btnDeletePictureBoxSaved16;
         private System.Windows.Forms.PictureBox pictureBoxSaved16;
         private System.Windows.Forms.GroupBox groupBox4;
-        private System.Windows.Forms.Button btnPictureBoxSaved15;
         private System.Windows.Forms.TextBox txtPictureBoxSaved15;
-        private System.Windows.Forms.Button btnDeletePictureBoxSaved15;
-        private System.Windows.Forms.Button btnEditPic15;
         private System.Windows.Forms.PictureBox pictureBoxSaved15;
         private System.Windows.Forms.GroupBox groupBox5;
-        private System.Windows.Forms.Button btnPictureBoxSaved14;
         private System.Windows.Forms.TextBox txtPictureBoxSaved14;
-        private System.Windows.Forms.Button btnDeletePictureBoxSaved14;
-        private System.Windows.Forms.Button btnEditPic14;
         private System.Windows.Forms.PictureBox pictureBoxSaved14;
         private System.Windows.Forms.GroupBox groupBox6;
-        private System.Windows.Forms.Button btnPictureBoxSaved13;
         private System.Windows.Forms.TextBox txtPictureBoxSaved13;
-        private System.Windows.Forms.Button btnDeletePictureBoxSaved13;
-        private System.Windows.Forms.Button btnEditPic13;
         private System.Windows.Forms.PictureBox pictureBoxSaved13;
         private System.Windows.Forms.GroupBox groupBox7;
-        private System.Windows.Forms.Button btnPictureBoxSaved12;
         private System.Windows.Forms.TextBox txtPictureBoxSaved12;
-        private System.Windows.Forms.Button btnDeletePictureBoxSaved12;
-        private System.Windows.Forms.Button btnEditPic12;
         private System.Windows.Forms.PictureBox pictureBoxSaved12;
         private System.Windows.Forms.GroupBox groupBox8;
-        private System.Windows.Forms.Button btnPictureBoxSaved11;
         private System.Windows.Forms.TextBox txtPictureBoxSaved11;
-        private System.Windows.Forms.Button btnDeletePictureBoxSaved11;
-        private System.Windows.Forms.Button btnEditPic11;
         private System.Windows.Forms.PictureBox pictureBoxSaved11;
         private System.Windows.Forms.GroupBox groupBox9;
-        private System.Windows.Forms.Button btnPictureBoxSaved10;
         private System.Windows.Forms.TextBox txtPictureBoxSaved10;
-        private System.Windows.Forms.Button btnDeletePictureBoxSaved10;
-        private System.Windows.Forms.Button btnEditPic10;
         private System.Windows.Forms.PictureBox pictureBoxSaved10;
         private System.Windows.Forms.GroupBox groupBox18;
-        private System.Windows.Forms.Button btnPictureBoxSaved1;
-        private System.Windows.Forms.Button btnDeletePictureBoxSaved1;
         private System.Windows.Forms.TextBox txtPictureBoxSaved1;
-        private System.Windows.Forms.Button btnEditPic1;
         private System.Windows.Forms.PictureBox pictureBoxSaved1;
         private System.Windows.Forms.GroupBox groupBox17;
-        private System.Windows.Forms.Button btnPictureBoxSaved2;
-        private System.Windows.Forms.Button btnDeletePictureBoxSaved2;
         private System.Windows.Forms.TextBox txtPictureBoxSaved2;
-        private System.Windows.Forms.Button btnEditPic2;
         private System.Windows.Forms.PictureBox pictureBoxSaved2;
         private System.Windows.Forms.GroupBox groupBox16;
-        private System.Windows.Forms.Button btnPictureBoxSaved3;
         private System.Windows.Forms.TextBox txtPictureBoxSaved3;
-        private System.Windows.Forms.Button btnDeletePictureBoxSaved3;
-        private System.Windows.Forms.Button btnEditPic3;
         private System.Windows.Forms.PictureBox pictureBoxSaved3;
         private System.Windows.Forms.GroupBox groupBox15;
-        private System.Windows.Forms.Button btnPictureBoxSaved4;
-        private System.Windows.Forms.Button btnDeletePictureBoxSaved4;
         private System.Windows.Forms.TextBox txtPictureBoxSaved4;
-        private System.Windows.Forms.Button btnEditPic4;
         private System.Windows.Forms.PictureBox pictureBoxSaved4;
         private System.Windows.Forms.GroupBox groupBox13;
-        private System.Windows.Forms.Button btnPictureBoxSaved5;
         private System.Windows.Forms.TextBox txtPictureBoxSaved5;
-        private System.Windows.Forms.Button btnDeletePictureBoxSaved5;
-        private System.Windows.Forms.Button btnEditPic5;
         private System.Windows.Forms.PictureBox pictureBoxSaved5;
         private System.Windows.Forms.GroupBox groupBox12;
-        private System.Windows.Forms.Button btnPictureBoxSaved7;
         private System.Windows.Forms.TextBox txtPictureBoxSaved7;
-        private System.Windows.Forms.Button btnDeletePictureBoxSaved7;
-        private System.Windows.Forms.Button btnEditPic7;
         private System.Windows.Forms.PictureBox pictureBoxSaved7;
         private System.Windows.Forms.GroupBox groupBox11;
-        private System.Windows.Forms.Button btnPictureBoxSaved8;
         private System.Windows.Forms.TextBox txtPictureBoxSaved8;
-        private System.Windows.Forms.Button btnDeletePictureBoxSaved8;
-        private System.Windows.Forms.Button btnEditPic8;
         private System.Windows.Forms.PictureBox pictureBoxSaved8;
         private System.Windows.Forms.GroupBox groupBox10;
-        private System.Windows.Forms.Button btnPictureBoxSaved9;
         private System.Windows.Forms.TextBox txtPictureBoxSaved9;
-        private System.Windows.Forms.Button btnDeletePictureBoxSaved9;
-        private System.Windows.Forms.Button btnEditPic9;
         private System.Windows.Forms.PictureBox pictureBoxSaved9;
         private System.Windows.Forms.ComboBox cbbGeneralAnesthesist_EGD;
         private System.Windows.Forms.ComboBox cbbGeneralAnesthesia_EGD;
+        private System.Windows.Forms.TextBox txbFinding2ndPart_EGD;
+        private System.Windows.Forms.TextBox txbFindingDuodenalBulb_EGD;
+        private System.Windows.Forms.TextBox txbFindingPylorus_EGD;
+        private System.Windows.Forms.TextBox txbFindingAntrum_EGD;
+        private System.Windows.Forms.TextBox txbFindingBody_EGD;
+        private System.Windows.Forms.TextBox txbFindingFundus_EGD;
+        private System.Windows.Forms.TextBox txbFindingCardia_EGD;
+        private System.Windows.Forms.TextBox txbFindingEGJunction_EGD;
+        private System.Windows.Forms.TextBox txbFindingEsophagus_EGD;
+        private System.Windows.Forms.TextBox txbFindingOropharynx_EGD;
+        private System.Windows.Forms.ComboBox cbbFinding2ndPart_EGD;
+        private System.Windows.Forms.Label label11;
+        private System.Windows.Forms.ComboBox cbbFindingDuodenalBulb_EGD;
+        private System.Windows.Forms.Label label25;
+        private System.Windows.Forms.ComboBox cbbFindingPylorus_EGD;
+        private System.Windows.Forms.ComboBox cbbFindingAntrum_EGD;
+        private System.Windows.Forms.Label label26;
+        private System.Windows.Forms.Label label27;
+        private System.Windows.Forms.ComboBox cbbFindingBody_EGD;
+        private System.Windows.Forms.ComboBox cbbFindingFundus_EGD;
+        private System.Windows.Forms.Label label28;
+        private System.Windows.Forms.ComboBox cbbFindingCardia_EGD;
+        private System.Windows.Forms.ComboBox cbbFindingEGJunction_EGD;
+        private System.Windows.Forms.Label label29;
+        private System.Windows.Forms.Label label30;
+        private System.Windows.Forms.ComboBox cbbFindingEsophagus_EGD;
+        private System.Windows.Forms.ComboBox cbbFindingOropharynx_EGD;
+        private System.Windows.Forms.Label label31;
+        private System.Windows.Forms.Label label32;
+        private System.Windows.Forms.Label label33;
     }
 }

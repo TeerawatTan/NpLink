@@ -57,6 +57,10 @@ namespace EndoscopicSystem.V2.Forms
                     // V.2
                     FormHome formHome = new FormHome(userID);
                     formHome.ShowDialog();
+
+                    formHome = null;
+
+                    this.Show();
                 }
                 else
                 {

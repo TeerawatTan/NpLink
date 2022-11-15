@@ -31,6 +31,9 @@ namespace EndoscopicSystem.V2.Forms
         {
             this.panelChild = new System.Windows.Forms.Panel();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.menuPACSSetting = new System.Windows.Forms.Button();
+            this.menuHospitalSetting = new System.Windows.Forms.Button();
+            this.menuCameraSetting = new System.Windows.Forms.Button();
             this.menuAnesthesistMethod = new System.Windows.Forms.Button();
             this.Anesthesist = new System.Windows.Forms.Button();
             this.menuWard = new System.Windows.Forms.Button();
@@ -39,9 +42,6 @@ namespace EndoscopicSystem.V2.Forms
             this.menuDoctor = new System.Windows.Forms.Button();
             this.menuUserManage = new System.Windows.Forms.Button();
             this.panelSidebar = new System.Windows.Forms.Panel();
-            this.button1 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
-            this.button3 = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             this.panelSidebar.SuspendLayout();
             this.SuspendLayout();
@@ -57,10 +57,10 @@ namespace EndoscopicSystem.V2.Forms
             // 
             // panel1
             // 
-            this.panel1.BackColor = System.Drawing.Color.Transparent;
-            this.panel1.Controls.Add(this.button3);
-            this.panel1.Controls.Add(this.button2);
-            this.panel1.Controls.Add(this.button1);
+            this.panel1.BackColor = System.Drawing.Color.Azure;
+            this.panel1.Controls.Add(this.menuPACSSetting);
+            this.panel1.Controls.Add(this.menuHospitalSetting);
+            this.panel1.Controls.Add(this.menuCameraSetting);
             this.panel1.Controls.Add(this.menuAnesthesistMethod);
             this.panel1.Controls.Add(this.Anesthesist);
             this.panel1.Controls.Add(this.menuWard);
@@ -73,6 +73,47 @@ namespace EndoscopicSystem.V2.Forms
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(279, 788);
             this.panel1.TabIndex = 0;
+            // 
+            // menuPACSSetting
+            // 
+            this.menuPACSSetting.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(80)))), ((int)(((byte)(139)))));
+            this.menuPACSSetting.Dock = System.Windows.Forms.DockStyle.Top;
+            this.menuPACSSetting.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
+            this.menuPACSSetting.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.menuPACSSetting.Location = new System.Drawing.Point(0, 567);
+            this.menuPACSSetting.Name = "menuPACSSetting";
+            this.menuPACSSetting.Size = new System.Drawing.Size(279, 63);
+            this.menuPACSSetting.TabIndex = 16;
+            this.menuPACSSetting.Text = "PACS Setting";
+            this.menuPACSSetting.UseVisualStyleBackColor = false;
+            // 
+            // menuHospitalSetting
+            // 
+            this.menuHospitalSetting.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(80)))), ((int)(((byte)(139)))));
+            this.menuHospitalSetting.Dock = System.Windows.Forms.DockStyle.Top;
+            this.menuHospitalSetting.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
+            this.menuHospitalSetting.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.menuHospitalSetting.Location = new System.Drawing.Point(0, 504);
+            this.menuHospitalSetting.Name = "menuHospitalSetting";
+            this.menuHospitalSetting.Size = new System.Drawing.Size(279, 63);
+            this.menuHospitalSetting.TabIndex = 15;
+            this.menuHospitalSetting.Text = "Hospital Setting";
+            this.menuHospitalSetting.UseVisualStyleBackColor = false;
+            this.menuHospitalSetting.Click += new System.EventHandler(this.menuHospitalSetting_Click);
+            // 
+            // menuCameraSetting
+            // 
+            this.menuCameraSetting.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(80)))), ((int)(((byte)(139)))));
+            this.menuCameraSetting.Dock = System.Windows.Forms.DockStyle.Top;
+            this.menuCameraSetting.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
+            this.menuCameraSetting.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.menuCameraSetting.Location = new System.Drawing.Point(0, 441);
+            this.menuCameraSetting.Name = "menuCameraSetting";
+            this.menuCameraSetting.Size = new System.Drawing.Size(279, 63);
+            this.menuCameraSetting.TabIndex = 14;
+            this.menuCameraSetting.Text = "Camera Setting";
+            this.menuCameraSetting.UseVisualStyleBackColor = false;
+            this.menuCameraSetting.Click += new System.EventHandler(this.menuCameraSetting_Click);
             // 
             // menuAnesthesistMethod
             // 
@@ -174,52 +215,13 @@ namespace EndoscopicSystem.V2.Forms
             // 
             // panelSidebar
             // 
-            this.panelSidebar.BackColor = System.Drawing.Color.Transparent;
+            this.panelSidebar.BackColor = System.Drawing.Color.Azure;
             this.panelSidebar.Controls.Add(this.panel1);
             this.panelSidebar.Dock = System.Windows.Forms.DockStyle.Left;
             this.panelSidebar.Location = new System.Drawing.Point(0, 0);
             this.panelSidebar.Name = "panelSidebar";
             this.panelSidebar.Size = new System.Drawing.Size(297, 810);
             this.panelSidebar.TabIndex = 8;
-            // 
-            // button1
-            // 
-            this.button1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(80)))), ((int)(((byte)(139)))));
-            this.button1.Dock = System.Windows.Forms.DockStyle.Top;
-            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
-            this.button1.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.button1.Location = new System.Drawing.Point(0, 441);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(279, 63);
-            this.button1.TabIndex = 14;
-            this.button1.Text = "Camera Setting";
-            this.button1.UseVisualStyleBackColor = false;
-            // 
-            // button2
-            // 
-            this.button2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(80)))), ((int)(((byte)(139)))));
-            this.button2.Dock = System.Windows.Forms.DockStyle.Top;
-            this.button2.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
-            this.button2.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.button2.Location = new System.Drawing.Point(0, 504);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(279, 63);
-            this.button2.TabIndex = 15;
-            this.button2.Text = "Hospital Setting";
-            this.button2.UseVisualStyleBackColor = false;
-            // 
-            // button3
-            // 
-            this.button3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(80)))), ((int)(((byte)(139)))));
-            this.button3.Dock = System.Windows.Forms.DockStyle.Top;
-            this.button3.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
-            this.button3.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.button3.Location = new System.Drawing.Point(0, 567);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(279, 63);
-            this.button3.TabIndex = 16;
-            this.button3.Text = "PACS Setting";
-            this.button3.UseVisualStyleBackColor = false;
             // 
             // FormSetting
             // 
@@ -228,9 +230,11 @@ namespace EndoscopicSystem.V2.Forms
             this.ClientSize = new System.Drawing.Size(1425, 810);
             this.Controls.Add(this.panelChild);
             this.Controls.Add(this.panelSidebar);
+            this.MinimizeBox = false;
             this.Name = "FormSetting";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "FormSetting";
+            this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.Load += new System.EventHandler(this.FormSetting_Load);
             this.panel1.ResumeLayout(false);
             this.panelSidebar.ResumeLayout(false);
@@ -250,8 +254,8 @@ namespace EndoscopicSystem.V2.Forms
         private System.Windows.Forms.Button menuWard;
         private System.Windows.Forms.Button Anesthesist;
         private System.Windows.Forms.Button menuAnesthesistMethod;
-        private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.Button button3;
+        private System.Windows.Forms.Button menuHospitalSetting;
+        private System.Windows.Forms.Button menuCameraSetting;
+        private System.Windows.Forms.Button menuPACSSetting;
     }
 }

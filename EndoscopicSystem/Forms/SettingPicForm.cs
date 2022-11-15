@@ -49,18 +49,22 @@ namespace EndoscopicSystem.Forms
         {
             RatioX = txtX.Text == "" ? 0 : Convert.ToInt32(txtX.Text);
             RatioY = txtY.Text == "" ? 0 : Convert.ToInt32(txtY.Text);
-            var userData = db.Users.Where(x => x.Id == UserID);
-            User user = userData.FirstOrDefault();
+            var user = db.Users.FirstOrDefault(x => x.Id == UserID);
+            if (user == null)
+            {
+                MessageBox.Show("User not found.");
+                return;
+            }
             user.AspectRatioID = txtAspectRatio.Text == "" ? 0 : Convert.ToInt32(txtAspectRatio.Text);
             user.PositionCrop = txtPosition.Text;
-            user.CrpX = crpX;
-            user.CrpY = crpY;
-            user.CrpWidth = rectW;
-            user.CrpHeight = rectH;
-            txtCrpX.Text = crpX.ToString();
-            txtCrpY.Text = crpY.ToString();
-            txbW.Text = rectW.ToString();
-            txbH.Text = rectH.ToString();
+            user.CrpX = (int?)(crpX * 1.5);
+            user.CrpY = (int?)(crpY * 1.5);
+            user.CrpWidth = (int?)(rectW * 1.5);
+            user.CrpHeight = (int?)(rectH * 1.5);
+            txtCrpX.Text = (crpX * 1.5).ToString();
+            txtCrpY.Text = (crpY * 1.5).ToString();
+            txbW.Text = (rectW * 1.5).ToString();
+            txbH.Text = (rectH * 1.5).ToString();
             try
             {
                 db.SaveChanges();
@@ -74,32 +78,38 @@ namespace EndoscopicSystem.Forms
 
         private void btnSimulate_Click(object sender, EventArgs e)
         {
-            txtX.Text = rectW.ToString();
-            txtY.Text = rectH.ToString();
-            txbW.Text = rectW.ToString();
-            txbH.Text = rectH.ToString();
-            txtAspectRatio.Text = "0";
-            txtPosition.Text = "L";
-
-            Cursor = Cursors.Default;
-
-            Bitmap bmp2 = new Bitmap(pictureBox1.Width, pictureBox1.Height);
-            pictureBox1.DrawToBitmap(bmp2, pictureBox1.ClientRectangle);
-
-            Bitmap crpImg = new Bitmap(rectW, rectH);
-
-            for (int i = 0; i < rectW; i++)
+            try
             {
-                for (int j = 0; j < rectH; j++)
+                txtX.Text = rectW.ToString();
+                txtY.Text = rectH.ToString();
+                txbW.Text = rectW.ToString();
+                txbH.Text = rectH.ToString();
+                txtAspectRatio.Text = "0";
+                txtPosition.Text = "L";
+
+                Cursor = Cursors.Default;
+
+                Bitmap bmp2 = new Bitmap(pictureBox1.Width, pictureBox1.Height);
+                pictureBox1.DrawToBitmap(bmp2, pictureBox1.ClientRectangle);
+
+                Bitmap crpImg = new Bitmap(rectW, rectH);
+
+                for (int i = 0; i < rectW; i++)
                 {
-                    Color pxlclr = bmp2.GetPixel(crpX + i, crpY + j);
-                    crpImg.SetPixel(i, j, pxlclr);
+                    for (int j = 0; j < rectH; j++)
+                    {
+                        Color pxlclr = bmp2.GetPixel(crpX + i, crpY + j);
+                        crpImg.SetPixel(i, j, pxlclr);
+                    }
                 }
+
+                pictureBox2.Image = (Image)crpImg;
+                pictureBox2.SizeMode = PictureBoxSizeMode.StretchImage;
             }
-
-            pictureBox2.Image = (Image)crpImg;
-            pictureBox2.SizeMode = PictureBoxSizeMode.StretchImage;
-
+            catch (Exception)
+            {
+                return;
+            }
         }
         private Image uploadImageFile()
         {

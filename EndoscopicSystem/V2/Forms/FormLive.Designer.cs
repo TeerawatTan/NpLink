@@ -68,7 +68,7 @@ namespace EndoscopicSystem.V2.Forms
             this.videoSourcePlayer.Location = new System.Drawing.Point(13, 118);
             this.videoSourcePlayer.Margin = new System.Windows.Forms.Padding(2);
             this.videoSourcePlayer.Name = "videoSourcePlayer";
-            this.videoSourcePlayer.Size = new System.Drawing.Size(965, 641);
+            this.videoSourcePlayer.Size = new System.Drawing.Size(960, 642);
             this.videoSourcePlayer.TabIndex = 86;
             this.videoSourcePlayer.Text = "videoSourcePlayer";
             this.videoSourcePlayer.VideoSource = null;
@@ -294,7 +294,7 @@ namespace EndoscopicSystem.V2.Forms
             // 
             // btnCapture
             // 
-            this.btnCapture.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            this.btnCapture.BackColor = System.Drawing.Color.Gainsboro;
             this.btnCapture.Enabled = false;
             this.btnCapture.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
             this.btnCapture.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
@@ -383,14 +383,13 @@ namespace EndoscopicSystem.V2.Forms
             // pictureBoxSnapshot
             // 
             this.pictureBoxSnapshot.BackColor = System.Drawing.Color.Silver;
-            this.pictureBoxSnapshot.Location = new System.Drawing.Point(405, 248);
+            this.pictureBoxSnapshot.Location = new System.Drawing.Point(432, 119);
             this.pictureBoxSnapshot.Margin = new System.Windows.Forms.Padding(2);
             this.pictureBoxSnapshot.Name = "pictureBoxSnapshot";
-            this.pictureBoxSnapshot.Size = new System.Drawing.Size(562, 364);
+            this.pictureBoxSnapshot.Size = new System.Drawing.Size(960, 642);
             this.pictureBoxSnapshot.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBoxSnapshot.TabIndex = 116;
             this.pictureBoxSnapshot.TabStop = false;
-            this.pictureBoxSnapshot.Visible = false;
             // 
             // listView1
             // 
@@ -418,8 +417,8 @@ namespace EndoscopicSystem.V2.Forms
             this.Controls.Add(this.label1);
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.groupBox1);
-            this.Controls.Add(this.pictureBoxSnapshot);
             this.Controls.Add(this.videoSourcePlayer);
+            this.Controls.Add(this.pictureBoxSnapshot);
             this.Name = "FormLive";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.FormLive_FormClosing);

@@ -747,6 +747,14 @@ warning 6002: The table/view 'EndoscopicDb.dbo.ProcedureList' does not have a pr
           <Property Name="EustachianTubeOrificeID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
           <Property Name="EustachianTubeOrificeName" Type="varchar" MaxLength="255" />
         </EntityType>
+        <EntityType Name="FindingLabel">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Name" Type="nvarchar" MaxLength="200" />
+          <Property Name="ProcedureID" Type="int" />
+        </EntityType>
         <EntityType Name="Fundus">
           <Key>
             <PropertyRef Name="FundusID" />
@@ -1246,6 +1254,7 @@ warning 6002: The table/view 'EndoscopicDb.dbo.v_PatientList' does not have a pr
           <EntitySet Name="ERCPEsophagus" EntityType="Self.ERCPEsophagus" Schema="master" store:Type="Tables" />
           <EntitySet Name="Esophagus" EntityType="Self.Esophagus" Schema="master" store:Type="Tables" />
           <EntitySet Name="EustachianTubeOrifice" EntityType="Self.EustachianTubeOrifice" Schema="master" store:Type="Tables" />
+          <EntitySet Name="FindingLabel" EntityType="Self.FindingLabel" Schema="master" store:Type="Tables" />
           <EntitySet Name="Fundus" EntityType="Self.Fundus" Schema="master" store:Type="Tables" />
           <EntitySet Name="Glottic" EntityType="Self.Glottic" Schema="master" store:Type="Tables" />
           <EntitySet Name="HepaticFlexure" EntityType="Self.HepaticFlexure" Schema="master" store:Type="Tables" />
@@ -1469,6 +1478,7 @@ warning 6002: The table/view 'EndoscopicDb.dbo.v_PatientList' does not have a pr
           <EntitySet Name="ICD10" EntityType="EndoscopicModel.ICD10" />
           <EntitySet Name="ICD9" EntityType="EndoscopicModel.ICD9" />
           <EntitySet Name="Patients" EntityType="EndoscopicModel.Patient" />
+          <EntitySet Name="FindingLabels" EntityType="EndoscopicModel.FindingLabel" />
           </EntityContainer>
         <EntityType Name="Doctor">
           <Key>
@@ -2772,6 +2782,14 @@ warning 6002: The table/view 'EndoscopicDb.dbo.v_PatientList' does not have a pr
           <Property Name="Financial" Type="String" MaxLength="250" FixedLength="false" Unicode="true" />
           <Property Name="OpdID" Type="Int32" />
           <Property Name="AnesthesiaID" Type="Int32" />
+        </EntityType>
+        <EntityType Name="FindingLabel">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Name" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+          <Property Name="ProcedureID" Type="Int32" />
         </EntityType>
         </Schema>
     </edmx:ConceptualModels>
@@ -4189,6 +4207,15 @@ warning 6002: The table/view 'EndoscopicDb.dbo.v_PatientList' does not have a pr
                 <ScalarProperty Name="Firstname" ColumnName="Firstname" />
                 <ScalarProperty Name="HN" ColumnName="HN" />
                 <ScalarProperty Name="PatientID" ColumnName="PatientID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="FindingLabels">
+            <EntityTypeMapping TypeName="EndoscopicModel.FindingLabel">
+              <MappingFragment StoreEntitySet="FindingLabel">
+                <ScalarProperty Name="ProcedureID" ColumnName="ProcedureID" />
+                <ScalarProperty Name="Name" ColumnName="Name" />
+                <ScalarProperty Name="ID" ColumnName="ID" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
