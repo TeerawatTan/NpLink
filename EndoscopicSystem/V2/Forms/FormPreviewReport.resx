@@ -804,7 +804,7 @@
         AAAAAAAAAAAAAAAAAACAc/jy5X9tU5IdvJJyuwAAAABJRU5ErkJggg==
 </value>
   </data>
-  <data name="pictureBoxSaved6.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+  <data name="pictureBoxSaved7.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAAOYAAACuCAYAAAAiYXG6AAAABGdBTUEAALGPC/xhBQAACmRJREFUeF7t
         nYGx0zoQRSmBEiiBEiiBEiiBEiiBEiiBEqADSqAEOuDfm7Hf/CQKsbO7spR3zszO50Mir2fujWRpJb8B
@@ -854,7 +854,7 @@
         AAAAAAAAAPB6ePPmP0oqqwQLktuDAAAAAElFTkSuQmCC
 </value>
   </data>
-  <data name="pictureBoxSaved7.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+  <data name="pictureBoxSaved8.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAAOYAAACuCAYAAAAiYXG6AAAABGdBTUEAALGPC/xhBQAABIhJREFUeF7t
         3cGNnUgYhVGH4BAcQofQITgEh9AhOASH4BA6BDsDh+AQnMHMRaoVqgVQFw0enSP9WxZPfOIBBXwAAAAA
@@ -879,7 +879,7 @@
         AAAAAAAAgL/ehw//AmNGeanjOn7aAAAAAElFTkSuQmCC
 </value>
   </data>
-  <data name="pictureBoxSaved8.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+  <data name="pictureBoxSaved9.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAAOYAAACuCAYAAAAiYXG6AAAABGdBTUEAALGPC/xhBQAACfdJREFUeF7t
         nY1t3LoWhFNCSrgluISUkBJSQkpICSkhJaSEpIOUkBLSge+MQRm2lusVxcO/9fcBAzzgZqWjhxmToo6o
@@ -929,5 +929,8 @@
   </data>
   <metadata name="openFileDialog1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>17, 17</value>
+  </metadata>
+  <metadata name="$this.TrayHeight" type="System.Int32, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>37</value>
   </metadata>
 </root>

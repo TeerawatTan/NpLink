@@ -248,12 +248,16 @@ namespace EndoscopicSystem
                     else
                     {
                         //New Patient
+                        
+                        patient = new Patient();
+
                         if (this.CheckHN(txtHN.Text))
                         {
                             MessageBox.Show("มี HN นี้อยู่ในระบบแล้ว");
                             this.Controls.ClearControls();
                             return;
                         }
+
                         patient.HN = txtHN.Text;
                         patient.Fullname = txtFullName.Text;
                         patient.CardID = txtCID.Text;

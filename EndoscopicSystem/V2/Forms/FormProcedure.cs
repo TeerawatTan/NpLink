@@ -43,18 +43,19 @@ namespace EndoscopicSystem.V2.Forms
 
         private void FormProcedure_Load(object sender, EventArgs e)
         {
+            cbbProcedureList.ValueMember = "ProcedureID";
+            cbbProcedureList.DisplayMember = "ProcedureName";
+            cbbProcedureList.DataSource = _dropdownRepo.GetProcedureList();
+            cbbProcedureList.SelectedIndex = 0;
+            cbbProcedureList.Enabled = true;
             if (_procedureId <= 0)
             {
-                cbbProcedureList.ValueMember = "ProcedureID";
-                cbbProcedureList.DisplayMember = "ProcedureName";
-                cbbProcedureList.DataSource = _dropdownRepo.GetProcedureList();
-                cbbProcedureList.SelectedIndex = 0;
-
                 btnReport.Visible = false;
             }
             else
             {
                 cbbProcedureList.SelectedValue = _procedureId;
+                cbbProcedureList.Enabled = false;
                 OpenTabPage(_procedureId);
                 SearchHN(_hnNo, _procedureId);
 
@@ -62,6 +63,24 @@ namespace EndoscopicSystem.V2.Forms
             }
 
             listBox1.Items.Clear();
+
+            LoadTextBoxAutoComplete(txtPictureBoxSaved1);
+            LoadTextBoxAutoComplete(txtPictureBoxSaved2);
+            LoadTextBoxAutoComplete(txtPictureBoxSaved3);
+            LoadTextBoxAutoComplete(txtPictureBoxSaved4);
+            LoadTextBoxAutoComplete(txtPictureBoxSaved5);
+            LoadTextBoxAutoComplete(txtPictureBoxSaved7);
+            LoadTextBoxAutoComplete(txtPictureBoxSaved8);
+            LoadTextBoxAutoComplete(txtPictureBoxSaved9);
+            LoadTextBoxAutoComplete(txtPictureBoxSaved10);
+            LoadTextBoxAutoComplete(txtPictureBoxSaved11);
+            LoadTextBoxAutoComplete(txtPictureBoxSaved12);
+            LoadTextBoxAutoComplete(txtPictureBoxSaved13);
+            LoadTextBoxAutoComplete(txtPictureBoxSaved14);
+            LoadTextBoxAutoComplete(txtPictureBoxSaved15);
+            LoadTextBoxAutoComplete(txtPictureBoxSaved16);
+            LoadTextBoxAutoComplete(txtPictureBoxSaved17);
+            LoadTextBoxAutoComplete(txtPictureBoxSaved18);
         }
 
         private void cbbProcedureList_SelectedIndexChanged(object sender, EventArgs e)
@@ -180,7 +199,7 @@ namespace EndoscopicSystem.V2.Forms
                 Directory.CreateDirectory(_pathFolderPDFToSave);
             }
             string fileNamePDF = DateTime.Now.ToString("yyyyMMddHHmmssfff");
-            string namaPDF = "pdf"; //HN
+            string namaPDF = "pdf";
             string nameSave = namaPDF + "_" + fileNamePDF + ".pdf";
             string path = _pathFolderPDFToSave + nameSave;
             rprt.ExportToDisk(CrystalDecisions.Shared.ExportFormatType.PortableDocFormat, path);
@@ -190,7 +209,7 @@ namespace EndoscopicSystem.V2.Forms
             {
                 Directory.CreateDirectory(_pathFolderDicomSave);
             }
-            string namaDicom = "dicom"; //HN
+            string namaDicom = "dicom";
             string nameDicomSave = namaDicom + "_" + fileNamePDF + ".dcm";
             string pathDicom = _pathFolderDicomSave + nameDicomSave;
             rprt.ExportToDisk(CrystalDecisions.Shared.ExportFormatType.PortableDocFormat, pathDicom);
@@ -230,8 +249,6 @@ namespace EndoscopicSystem.V2.Forms
 
         private void SearchHN(string hn, int procId = 0)
         {
-            _hnNo = hn;
-            _procedureId = procId;
             try
             {
                 var getPatient = _db.Patients.FirstOrDefault(x => x.HN == hn && (x.IsActive.HasValue && x.IsActive.Value));
@@ -307,6 +324,10 @@ namespace EndoscopicSystem.V2.Forms
                                     }
                                 }
                             }
+                            else
+                            {
+
+                            }
                         }
 
                         btnReport.Enabled = true;
@@ -358,6 +379,19 @@ namespace EndoscopicSystem.V2.Forms
             }
         }
 
+        private void LoadTextBoxAutoComplete(TextBox textBox)
+        {
+            var findingList = _dropdownRepo.GetFindingLabels(_procedureId);
+            if (findingList != null && findingList.Count > 0)
+            {
+                AutoCompleteStringCollection ac = new AutoCompleteStringCollection();
+                foreach (var item in findingList)
+                {
+                    ac.Add(item.Name);
+                }
+                textBox.AutoCompleteCustomSource = ac;
+            }
+        }
         #endregion
 
         #region Push Data
@@ -369,7 +403,6 @@ namespace EndoscopicSystem.V2.Forms
             SetPictureBox(pictureBoxSaved3, txtPictureBoxSaved3, 3);
             SetPictureBox(pictureBoxSaved4, txtPictureBoxSaved4, 4);
             SetPictureBox(pictureBoxSaved5, txtPictureBoxSaved5, 5);
-            //SetPictureBox(pictureBoxSaved6, txtPictureBoxSaved6, 6, btnEditPic6, btnDeletePictureBoxSaved6);
             SetPictureBox(pictureBoxSaved7, txtPictureBoxSaved7, 7);
             SetPictureBox(pictureBoxSaved8, txtPictureBoxSaved8, 8);
             SetPictureBox(pictureBoxSaved9, txtPictureBoxSaved9, 9);

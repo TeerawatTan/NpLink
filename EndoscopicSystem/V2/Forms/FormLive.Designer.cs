@@ -140,6 +140,7 @@ namespace EndoscopicSystem.V2.Forms
             this.txtHN.Name = "txtHN";
             this.txtHN.Size = new System.Drawing.Size(172, 23);
             this.txtHN.TabIndex = 121;
+            this.txtHN.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txtHN_KeyDown);
             // 
             // txtSymptom
             // 
@@ -275,9 +276,9 @@ namespace EndoscopicSystem.V2.Forms
             this.lbTime.ForeColor = System.Drawing.Color.Red;
             this.lbTime.Location = new System.Drawing.Point(214, 802);
             this.lbTime.Name = "lbTime";
-            this.lbTime.Size = new System.Drawing.Size(54, 20);
+            this.lbTime.Size = new System.Drawing.Size(79, 20);
             this.lbTime.TabIndex = 91;
-            this.lbTime.Text = "00:00";
+            this.lbTime.Text = "00:00:00";
             this.lbTime.Visible = false;
             // 
             // label3
@@ -285,7 +286,7 @@ namespace EndoscopicSystem.V2.Forms
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
             this.label3.ForeColor = System.Drawing.Color.Black;
-            this.label3.Location = new System.Drawing.Point(274, 802);
+            this.label3.Location = new System.Drawing.Point(294, 802);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(38, 20);
             this.label3.TabIndex = 92;
@@ -421,6 +422,7 @@ namespace EndoscopicSystem.V2.Forms
             this.Controls.Add(this.pictureBoxSnapshot);
             this.Name = "FormLive";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
+            this.Text = "Live";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.FormLive_FormClosing);
             this.Load += new System.EventHandler(this.FormLive_Load);
             this.groupBox1.ResumeLayout(false);

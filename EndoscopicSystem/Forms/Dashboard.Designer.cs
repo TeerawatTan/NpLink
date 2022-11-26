@@ -117,10 +117,12 @@
             this.gridQueue.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.gridQueue.Location = new System.Drawing.Point(9, 449);
             this.gridQueue.Margin = new System.Windows.Forms.Padding(2);
+            this.gridQueue.MultiSelect = false;
             this.gridQueue.Name = "gridQueue";
             this.gridQueue.ReadOnly = true;
             this.gridQueue.RowHeadersWidth = 51;
             this.gridQueue.RowTemplate.Height = 24;
+            this.gridQueue.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.gridQueue.Size = new System.Drawing.Size(1351, 360);
             this.gridQueue.TabIndex = 4;
             this.gridQueue.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.gridQueue_CellClick);

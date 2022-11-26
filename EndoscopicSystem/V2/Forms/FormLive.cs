@@ -62,15 +62,6 @@ namespace EndoscopicSystem.V2.Forms
 
         private void FormLive_Load(object sender, EventArgs e)
         {
-            if (_procedureId > 0 && _appointmentId > 0)
-            {
-                btnNext.Visible = true;
-            }
-            else
-            {
-                btnNext.Visible = false;
-            }
-
             t = new System.Timers.Timer();
 
             var v = _db.Users.Where(x => x.Id == UserID).Select(x => new { x.AspectRatioID, x.PositionCrop }).FirstOrDefault();
@@ -97,12 +88,23 @@ namespace EndoscopicSystem.V2.Forms
             {
                 devicesCombo.Items.Add("No DirectShow devices found");
             }
-            _captureDeviceForm = new VideoCaptureDeviceForm();
-            int index = devicesCombo.FindString("Game Capture");
-            devicesCombo.SelectedIndex = index;
-            if (index > 0)
+
+            if (devicesCombo.Items.Count > 0)
             {
-                this.Load += connectButton_Click;
+                _captureDeviceForm = new VideoCaptureDeviceForm();
+                int index = 0; //devicesCombo.FindString("Game Capture");
+                devicesCombo.SelectedIndex = index;
+                if (index >= 0 && !string.IsNullOrWhiteSpace(_hnNo))
+                {
+                    try
+                    {
+                        OnLoadVdoCaptureDevice(_hnNo);
+                    }
+                    catch (Exception ex)
+                    {
+                        throw ex;
+                    }
+                }
             }
 
             _pathFolderImageToSave = _pathFolderImage + _hnNo + @"\" + DateTime.Now.ToString("yyyyMMdd") + @"\" + cbbProcedureList.Text + @"\" + _appointmentId + @"\";
@@ -137,6 +139,10 @@ namespace EndoscopicSystem.V2.Forms
             if (!string.IsNullOrWhiteSpace(txtHN.Text) && _procedureId > 0)
             {
                 SearchHN(txtHN.Text, _procedureId);
+            }
+            else
+            {
+                txtHN.Focus();
             }
         }
 
@@ -179,6 +185,17 @@ namespace EndoscopicSystem.V2.Forms
                     }
 
                     cbbProcedureList.SelectedValue = _procedureId;
+
+                    if (_procedureId > 0 && _appointmentId > 0)
+                    {
+                        btnNext.Visible = true;
+
+                        OnLoadVdoCaptureDevice(_hnNo);
+                    }
+                    else
+                    {
+                        btnNext.Visible = false;
+                    }
                 }
                 else
                 {
@@ -210,13 +227,13 @@ namespace EndoscopicSystem.V2.Forms
                 this.Hide();
 
                 FormPreviewReport formPreviewReport = new FormPreviewReport(
-                    UserID, 
-                    _hnNo, 
-                    _procedureId, 
-                    _appointmentId, 
-                    _endoscopicId, 
-                    _patientId, 
-                    _pathFolderImageToSave, 
+                    UserID,
+                    _hnNo,
+                    _procedureId,
+                    _appointmentId,
+                    _endoscopicId,
+                    _patientId,
+                    _pathFolderImageToSave,
                     ImgPath,
                     _vdoPath);
                 formPreviewReport.ShowDialog();
@@ -236,30 +253,53 @@ namespace EndoscopicSystem.V2.Forms
             disconnectButton.Enabled = !enable;
         }
 
+        private void OnLoadVdoCaptureDevice(string hnNo)
+        {
+            if (string.IsNullOrWhiteSpace(hnNo)) return;
+            
+            _videoCaptureDevice = new VideoCaptureDevice(_filterInfoCollection[devicesCombo.SelectedIndex].MonikerString);
+            _videoCaptureDevice.VideoResolution = _videoCaptureDevice.VideoCapabilities[0];
+            _videoCaptureDevice.ProvideSnapshots = true;
+            _videoCaptureDevice.NewFrame += new NewFrameEventHandler(videoSource_NewFrame);
+            EnableConnectionControls(false);
+
+            videoSourcePlayer.VideoSource = _videoCaptureDevice;
+            videoSourcePlayer.Start();
+
+            SoundPlayer soundPlayer = new SoundPlayer(_pathFolderSounds + "connect.wav");
+            soundPlayer.Play();
+
+            btnCapture.Enabled = true;
+            btnCapture.BackColor = Color.FromArgb(0, 192, 0);
+            btnRecord.Enabled = true;
+            recordStartDate = DateTime.Now;
+        }
+
         private void connectButton_Click(object sender, EventArgs e)
         {
             try
             {
-                _videoCaptureDevice = new VideoCaptureDevice(_filterInfoCollection[devicesCombo.SelectedIndex].MonikerString);
-                _videoCaptureDevice.VideoResolution = _videoCaptureDevice.VideoCapabilities[0];
-                _videoCaptureDevice.ProvideSnapshots = true;
-                _videoCaptureDevice.NewFrame += new NewFrameEventHandler(videoSource_NewFrame);
-                EnableConnectionControls(false);
-
-                videoSourcePlayer.VideoSource = _videoCaptureDevice;
-                videoSourcePlayer.Start();
-
-                SoundPlayer soundPlayer = new SoundPlayer(_pathFolderSounds + "connect.wav");
-                soundPlayer.Play();
-
-                btnCapture.Enabled = true;
-                btnCapture.BackColor = Color.FromArgb(0, 192, 0);
-                btnRecord.Enabled = true;
-                recordStartDate = DateTime.Now;
+                OnLoadVdoCaptureDevice(_hnNo);
             }
             catch (Exception)
             {
                 return;
+            }
+        }
+
+        private void txtHN_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Enter)
+            {
+                if (txtHN.Text.Length > 0)
+                {
+                    SearchHN(txtHN.Text);
+                }
+                else
+                {
+                    Reset_Controller();
+                    connectButton.Enabled = false;
+                }
             }
         }
 
@@ -511,31 +551,37 @@ namespace EndoscopicSystem.V2.Forms
             lbTime.Visible = true;
             label3.Visible = true;
 
-            t.Interval = 10;
+            t = new System.Timers.Timer();
+            t.Enabled = true;
+            t.AutoReset = true;
+            t.Interval = 1000;
             t.Elapsed += OnTimeEvent;
         }
 
         private void OnTimeEvent(object sender, ElapsedEventArgs e)
         {
-            Invoke(new Action(() =>
+            try
             {
-                s++;
-                if (s == 60)
+                Invoke(new Action(() =>
                 {
-                    s = 0;
-                    m += 1;
-                }
-                if (m == 60)
-                {
-                    m = 0;
-                    h += 1;
-                }
-                if (m == 5)
-                {
-                    t.Stop();
-                }
-                lbTime.Text = String.Format("{0}:{1}", h.ToString().PadLeft(2, '0'), m.ToString().PadLeft(2, '0'));
-            }));
+                    s++;
+                    if (s == 60)
+                    {
+                        s = 0;
+                        m += 1;
+                    }
+                    if (m == 60)
+                    {
+                        m = 0;
+                        h += 1;
+                    }
+                    lbTime.Text = String.Format("{0}:{1}:{2}", h.ToString().PadLeft(2, '0'), m.ToString().PadLeft(2, '0'), s.ToString().PadLeft(2, '0'));
+                }));
+            }
+            catch (Exception)
+            {
+                t.Stop();
+            }
         }
 
         private void btnStop_Click(object sender, EventArgs e)
@@ -563,6 +609,10 @@ namespace EndoscopicSystem.V2.Forms
             pictureBoxRecording.Visible = false;
 
             t.Stop();
+            h = 0;
+            m = 0;
+            s = 0;
+            lbTime.Text = String.Format("{0}:{1}:{2}", h.ToString().PadLeft(2, '0'), m.ToString().PadLeft(2, '0'), s.ToString().PadLeft(2, '0'));
         }
 
         public Bitmap CloneBitmap(Bitmap bitmap)
@@ -578,7 +628,6 @@ namespace EndoscopicSystem.V2.Forms
 
         private void FormLive_FormClosing(object sender, FormClosingEventArgs e)
         {
-            t.Stop();
             Disconnect();
             if (videoSourcePlayer == null)
             { return; }
@@ -635,10 +684,10 @@ namespace EndoscopicSystem.V2.Forms
             if (!string.IsNullOrWhiteSpace(path))
             {
                 DirectoryInfo dinfo = new DirectoryInfo(_pathFolderImageToSave);
-                FileInfo[] files = dinfo.GetFiles("*.jpg");
+                FileInfo[] files = (FileInfo[])dinfo.GetFiles("*.jpg").Clone();
                 foreach (var item in files.OrderByDescending(o => o.CreationTime).ToList())
                 {
-                    Image imgFile = Image.FromFile(item.FullName);
+                    var imgFile = (Image)Image.FromFile(item.FullName);
                     _imageList.Add(imgFile);
                 }
                 _item = files.Count();

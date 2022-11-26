@@ -547,7 +547,7 @@ namespace EndoscopicSystem.V2.Forms
             this.tabControl1.Controls.Add(this.tabSpecimenGastroscopy);
             this.tabControl1.Controls.Add(this.tabFindingENT);
             this.tabControl1.Controls.Add(this.tabFindingENT2);
-            this.tabControl1.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
+            this.tabControl1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
             this.tabControl1.ItemSize = new System.Drawing.Size(60, 30);
             this.tabControl1.Location = new System.Drawing.Point(308, 45);
             this.tabControl1.Margin = new System.Windows.Forms.Padding(2);
@@ -558,7 +558,7 @@ namespace EndoscopicSystem.V2.Forms
             // 
             // tabGeneralEGD
             // 
-            this.tabGeneralEGD.BackColor = System.Drawing.Color.White;
+            this.tabGeneralEGD.BackColor = System.Drawing.Color.Silver;
             this.tabGeneralEGD.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.tabGeneralEGD.Controls.Add(this.cbbGeneralAnesthesia_EGD);
             this.tabGeneralEGD.Controls.Add(this.cbbGeneralAnesthesist_EGD);
@@ -624,10 +624,10 @@ namespace EndoscopicSystem.V2.Forms
             this.cbbGeneralAnesthesia_EGD.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cbbGeneralAnesthesia_EGD.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
             this.cbbGeneralAnesthesia_EGD.FormattingEnabled = true;
-            this.cbbGeneralAnesthesia_EGD.Location = new System.Drawing.Point(123, 169);
+            this.cbbGeneralAnesthesia_EGD.Location = new System.Drawing.Point(141, 169);
             this.cbbGeneralAnesthesia_EGD.Margin = new System.Windows.Forms.Padding(2);
             this.cbbGeneralAnesthesia_EGD.Name = "cbbGeneralAnesthesia_EGD";
-            this.cbbGeneralAnesthesia_EGD.Size = new System.Drawing.Size(400, 23);
+            this.cbbGeneralAnesthesia_EGD.Size = new System.Drawing.Size(382, 23);
             this.cbbGeneralAnesthesia_EGD.TabIndex = 121;
             // 
             // cbbGeneralAnesthesist_EGD
@@ -637,20 +637,20 @@ namespace EndoscopicSystem.V2.Forms
             this.cbbGeneralAnesthesist_EGD.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cbbGeneralAnesthesist_EGD.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
             this.cbbGeneralAnesthesist_EGD.FormattingEnabled = true;
-            this.cbbGeneralAnesthesist_EGD.Location = new System.Drawing.Point(123, 196);
+            this.cbbGeneralAnesthesist_EGD.Location = new System.Drawing.Point(141, 196);
             this.cbbGeneralAnesthesist_EGD.Margin = new System.Windows.Forms.Padding(2);
             this.cbbGeneralAnesthesist_EGD.Name = "cbbGeneralAnesthesist_EGD";
-            this.cbbGeneralAnesthesist_EGD.Size = new System.Drawing.Size(400, 23);
+            this.cbbGeneralAnesthesist_EGD.Size = new System.Drawing.Size(382, 23);
             this.cbbGeneralAnesthesist_EGD.TabIndex = 120;
             // 
             // label110
             // 
             this.label110.AutoSize = true;
-            this.label110.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
+            this.label110.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
             this.label110.Location = new System.Drawing.Point(14, 118);
             this.label110.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label110.Name = "label110";
-            this.label110.Size = new System.Drawing.Size(64, 17);
+            this.label110.Size = new System.Drawing.Size(81, 20);
             this.label110.TabIndex = 119;
             this.label110.Text = "Financial";
             // 
@@ -659,21 +659,21 @@ namespace EndoscopicSystem.V2.Forms
             this.txbGeneralFinancial_EGD.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.txbGeneralFinancial_EGD.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
-            this.txbGeneralFinancial_EGD.Location = new System.Drawing.Point(123, 115);
+            this.txbGeneralFinancial_EGD.Location = new System.Drawing.Point(141, 115);
             this.txbGeneralFinancial_EGD.Margin = new System.Windows.Forms.Padding(2);
             this.txbGeneralFinancial_EGD.MaxLength = 200;
             this.txbGeneralFinancial_EGD.Name = "txbGeneralFinancial_EGD";
-            this.txbGeneralFinancial_EGD.Size = new System.Drawing.Size(776, 23);
+            this.txbGeneralFinancial_EGD.Size = new System.Drawing.Size(758, 23);
             this.txbGeneralFinancial_EGD.TabIndex = 118;
             // 
             // label101
             // 
             this.label101.AutoSize = true;
-            this.label101.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
+            this.label101.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
             this.label101.Location = new System.Drawing.Point(14, 470);
             this.label101.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label101.Name = "label101";
-            this.label101.Size = new System.Drawing.Size(85, 17);
+            this.label101.Size = new System.Drawing.Size(108, 20);
             this.label101.TabIndex = 117;
             this.label101.Text = "Brief History";
             // 
@@ -682,12 +682,12 @@ namespace EndoscopicSystem.V2.Forms
             this.txbBriefHistory_EGD.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.txbBriefHistory_EGD.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
-            this.txbBriefHistory_EGD.Location = new System.Drawing.Point(123, 467);
+            this.txbBriefHistory_EGD.Location = new System.Drawing.Point(141, 467);
             this.txbBriefHistory_EGD.Margin = new System.Windows.Forms.Padding(2);
             this.txbBriefHistory_EGD.MaxLength = 200;
             this.txbBriefHistory_EGD.Multiline = true;
             this.txbBriefHistory_EGD.Name = "txbBriefHistory_EGD";
-            this.txbBriefHistory_EGD.Size = new System.Drawing.Size(776, 118);
+            this.txbBriefHistory_EGD.Size = new System.Drawing.Size(758, 118);
             this.txbBriefHistory_EGD.TabIndex = 116;
             // 
             // txbICD10Text_EGD
@@ -695,21 +695,21 @@ namespace EndoscopicSystem.V2.Forms
             this.txbICD10Text_EGD.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.txbICD10Text_EGD.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
-            this.txbICD10Text_EGD.Location = new System.Drawing.Point(339, 440);
+            this.txbICD10Text_EGD.Location = new System.Drawing.Point(357, 440);
             this.txbICD10Text_EGD.Margin = new System.Windows.Forms.Padding(2);
             this.txbICD10Text_EGD.MaxLength = 200;
             this.txbICD10Text_EGD.Name = "txbICD10Text_EGD";
-            this.txbICD10Text_EGD.Size = new System.Drawing.Size(560, 23);
+            this.txbICD10Text_EGD.Size = new System.Drawing.Size(542, 23);
             this.txbICD10Text_EGD.TabIndex = 115;
             // 
             // label100
             // 
             this.label100.AutoSize = true;
-            this.label100.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
+            this.label100.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
             this.label100.Location = new System.Drawing.Point(14, 443);
             this.label100.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label100.Name = "label100";
-            this.label100.Size = new System.Drawing.Size(89, 17);
+            this.label100.Size = new System.Drawing.Size(114, 20);
             this.label100.TabIndex = 114;
             this.label100.Text = "ICD-10 (Dx2)";
             // 
@@ -718,11 +718,11 @@ namespace EndoscopicSystem.V2.Forms
             this.txbICD10Code_EGD.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.txbICD10Code_EGD.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
-            this.txbICD10Code_EGD.Location = new System.Drawing.Point(160, 440);
+            this.txbICD10Code_EGD.Location = new System.Drawing.Point(178, 440);
             this.txbICD10Code_EGD.Margin = new System.Windows.Forms.Padding(2);
             this.txbICD10Code_EGD.MaxLength = 200;
             this.txbICD10Code_EGD.Name = "txbICD10Code_EGD";
-            this.txbICD10Code_EGD.Size = new System.Drawing.Size(175, 23);
+            this.txbICD10Code_EGD.Size = new System.Drawing.Size(157, 23);
             this.txbICD10Code_EGD.TabIndex = 113;
             this.txbICD10Code_EGD.Click += new System.EventHandler(this.txbICD10Code_EGD_Click);
             this.txbICD10Code_EGD.TextChanged += new System.EventHandler(this.txbICD10Code_EGD_TextChanged);
@@ -731,22 +731,23 @@ namespace EndoscopicSystem.V2.Forms
             // 
             this.txbPreDiagText_EGD.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
+            this.txbPreDiagText_EGD.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.txbPreDiagText_EGD.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
-            this.txbPreDiagText_EGD.Location = new System.Drawing.Point(339, 413);
+            this.txbPreDiagText_EGD.Location = new System.Drawing.Point(357, 413);
             this.txbPreDiagText_EGD.Margin = new System.Windows.Forms.Padding(2);
             this.txbPreDiagText_EGD.MaxLength = 200;
             this.txbPreDiagText_EGD.Name = "txbPreDiagText_EGD";
-            this.txbPreDiagText_EGD.Size = new System.Drawing.Size(560, 23);
+            this.txbPreDiagText_EGD.Size = new System.Drawing.Size(542, 23);
             this.txbPreDiagText_EGD.TabIndex = 112;
             // 
             // label99
             // 
             this.label99.AutoSize = true;
-            this.label99.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
+            this.label99.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
             this.label99.Location = new System.Drawing.Point(14, 416);
             this.label99.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label99.Name = "label99";
-            this.label99.Size = new System.Drawing.Size(135, 17);
+            this.label99.Size = new System.Drawing.Size(169, 20);
             this.label99.TabIndex = 111;
             this.label99.Text = "Pre-Diagnosis (Dx1)";
             // 
@@ -755,11 +756,11 @@ namespace EndoscopicSystem.V2.Forms
             this.txbPreDiagCode_EGD.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.txbPreDiagCode_EGD.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
-            this.txbPreDiagCode_EGD.Location = new System.Drawing.Point(160, 413);
+            this.txbPreDiagCode_EGD.Location = new System.Drawing.Point(178, 413);
             this.txbPreDiagCode_EGD.Margin = new System.Windows.Forms.Padding(2);
             this.txbPreDiagCode_EGD.MaxLength = 200;
             this.txbPreDiagCode_EGD.Name = "txbPreDiagCode_EGD";
-            this.txbPreDiagCode_EGD.Size = new System.Drawing.Size(175, 23);
+            this.txbPreDiagCode_EGD.Size = new System.Drawing.Size(157, 23);
             this.txbPreDiagCode_EGD.TabIndex = 110;
             this.txbPreDiagCode_EGD.Click += new System.EventHandler(this.txbPreDiagCode_EGD_Click);
             this.txbPreDiagCode_EGD.TextChanged += new System.EventHandler(this.txbPreDiagCode_EGD_TextChanged);
@@ -769,11 +770,11 @@ namespace EndoscopicSystem.V2.Forms
             this.txbGeneralIndication_EGD.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.txbGeneralIndication_EGD.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
-            this.txbGeneralIndication_EGD.Location = new System.Drawing.Point(465, 386);
+            this.txbGeneralIndication_EGD.Location = new System.Drawing.Point(483, 386);
             this.txbGeneralIndication_EGD.Margin = new System.Windows.Forms.Padding(2);
             this.txbGeneralIndication_EGD.MaxLength = 36;
             this.txbGeneralIndication_EGD.Name = "txbGeneralIndication_EGD";
-            this.txbGeneralIndication_EGD.Size = new System.Drawing.Size(434, 23);
+            this.txbGeneralIndication_EGD.Size = new System.Drawing.Size(416, 23);
             this.txbGeneralIndication_EGD.TabIndex = 109;
             // 
             // cbbGeneralIndication_EGD
@@ -783,20 +784,20 @@ namespace EndoscopicSystem.V2.Forms
             this.cbbGeneralIndication_EGD.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cbbGeneralIndication_EGD.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
             this.cbbGeneralIndication_EGD.FormattingEnabled = true;
-            this.cbbGeneralIndication_EGD.Location = new System.Drawing.Point(123, 386);
+            this.cbbGeneralIndication_EGD.Location = new System.Drawing.Point(141, 386);
             this.cbbGeneralIndication_EGD.Margin = new System.Windows.Forms.Padding(2);
             this.cbbGeneralIndication_EGD.Name = "cbbGeneralIndication_EGD";
-            this.cbbGeneralIndication_EGD.Size = new System.Drawing.Size(336, 23);
+            this.cbbGeneralIndication_EGD.Size = new System.Drawing.Size(318, 23);
             this.cbbGeneralIndication_EGD.TabIndex = 108;
             // 
             // label67
             // 
             this.label67.AutoSize = true;
-            this.label67.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
+            this.label67.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
             this.label67.Location = new System.Drawing.Point(14, 390);
             this.label67.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label67.Name = "label67";
-            this.label67.Size = new System.Drawing.Size(68, 17);
+            this.label67.Size = new System.Drawing.Size(88, 20);
             this.label67.TabIndex = 107;
             this.label67.Text = "Indication";
             // 
@@ -805,11 +806,11 @@ namespace EndoscopicSystem.V2.Forms
             this.txtGeneralSn_EGD.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.txtGeneralSn_EGD.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
-            this.txtGeneralSn_EGD.Location = new System.Drawing.Point(521, 332);
+            this.txtGeneralSn_EGD.Location = new System.Drawing.Point(539, 332);
             this.txtGeneralSn_EGD.Margin = new System.Windows.Forms.Padding(2);
             this.txtGeneralSn_EGD.MaxLength = 65;
             this.txtGeneralSn_EGD.Name = "txtGeneralSn_EGD";
-            this.txtGeneralSn_EGD.Size = new System.Drawing.Size(336, 23);
+            this.txtGeneralSn_EGD.Size = new System.Drawing.Size(318, 23);
             this.txtGeneralSn_EGD.TabIndex = 106;
             // 
             // label16
@@ -828,10 +829,10 @@ namespace EndoscopicSystem.V2.Forms
             this.dpTo.CustomFormat = "dd/MM/yyyy";
             this.dpTo.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
             this.dpTo.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.dpTo.Location = new System.Drawing.Point(521, 304);
+            this.dpTo.Location = new System.Drawing.Point(539, 304);
             this.dpTo.MinDate = new System.DateTime(2022, 10, 22, 0, 0, 0, 0);
             this.dpTo.Name = "dpTo";
-            this.dpTo.Size = new System.Drawing.Size(200, 22);
+            this.dpTo.Size = new System.Drawing.Size(182, 22);
             this.dpTo.TabIndex = 104;
             // 
             // label12
@@ -850,20 +851,20 @@ namespace EndoscopicSystem.V2.Forms
             this.dpFrom.CustomFormat = "dd/MM/yyyy";
             this.dpFrom.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
             this.dpFrom.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.dpFrom.Location = new System.Drawing.Point(123, 305);
+            this.dpFrom.Location = new System.Drawing.Point(141, 305);
             this.dpFrom.MinDate = new System.DateTime(2022, 10, 22, 0, 0, 0, 0);
             this.dpFrom.Name = "dpFrom";
-            this.dpFrom.Size = new System.Drawing.Size(200, 22);
+            this.dpFrom.Size = new System.Drawing.Size(182, 22);
             this.dpFrom.TabIndex = 102;
             // 
             // label10
             // 
             this.label10.AutoSize = true;
-            this.label10.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
+            this.label10.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
             this.label10.Location = new System.Drawing.Point(14, 309);
             this.label10.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(69, 17);
+            this.label10.Size = new System.Drawing.Size(86, 20);
             this.label10.TabIndex = 101;
             this.label10.Text = "DateTime";
             // 
@@ -871,21 +872,21 @@ namespace EndoscopicSystem.V2.Forms
             // 
             this.txbRefer_EGD.CausesValidation = false;
             this.txbRefer_EGD.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
-            this.txbRefer_EGD.Location = new System.Drawing.Point(130, 89);
+            this.txbRefer_EGD.Location = new System.Drawing.Point(148, 89);
             this.txbRefer_EGD.Margin = new System.Windows.Forms.Padding(2);
             this.txbRefer_EGD.MaxLength = 255;
             this.txbRefer_EGD.Name = "txbRefer_EGD";
-            this.txbRefer_EGD.Size = new System.Drawing.Size(769, 22);
+            this.txbRefer_EGD.Size = new System.Drawing.Size(751, 22);
             this.txbRefer_EGD.TabIndex = 99;
             // 
             // chkRefer_EGD
             // 
             this.chkRefer_EGD.AutoSize = true;
-            this.chkRefer_EGD.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
+            this.chkRefer_EGD.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
             this.chkRefer_EGD.Location = new System.Drawing.Point(66, 90);
             this.chkRefer_EGD.Margin = new System.Windows.Forms.Padding(2);
             this.chkRefer_EGD.Name = "chkRefer_EGD";
-            this.chkRefer_EGD.Size = new System.Drawing.Size(60, 20);
+            this.chkRefer_EGD.Size = new System.Drawing.Size(73, 24);
             this.chkRefer_EGD.TabIndex = 98;
             this.chkRefer_EGD.Text = "Refer";
             this.chkRefer_EGD.UseVisualStyleBackColor = true;
@@ -895,20 +896,20 @@ namespace EndoscopicSystem.V2.Forms
             this.cbbGeneralWard_EGD.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cbbGeneralWard_EGD.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
             this.cbbGeneralWard_EGD.FormattingEnabled = true;
-            this.cbbGeneralWard_EGD.Location = new System.Drawing.Point(130, 61);
+            this.cbbGeneralWard_EGD.Location = new System.Drawing.Point(148, 61);
             this.cbbGeneralWard_EGD.Margin = new System.Windows.Forms.Padding(2);
             this.cbbGeneralWard_EGD.Name = "cbbGeneralWard_EGD";
-            this.cbbGeneralWard_EGD.Size = new System.Drawing.Size(393, 24);
+            this.cbbGeneralWard_EGD.Size = new System.Drawing.Size(375, 24);
             this.cbbGeneralWard_EGD.TabIndex = 97;
             // 
             // chkWard_EGD
             // 
             this.chkWard_EGD.AutoSize = true;
-            this.chkWard_EGD.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
+            this.chkWard_EGD.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
             this.chkWard_EGD.Location = new System.Drawing.Point(66, 65);
             this.chkWard_EGD.Margin = new System.Windows.Forms.Padding(2);
             this.chkWard_EGD.Name = "chkWard_EGD";
-            this.chkWard_EGD.Size = new System.Drawing.Size(60, 20);
+            this.chkWard_EGD.Size = new System.Drawing.Size(70, 24);
             this.chkWard_EGD.TabIndex = 96;
             this.chkWard_EGD.Text = "Ward";
             this.chkWard_EGD.UseVisualStyleBackColor = true;
@@ -927,11 +928,11 @@ namespace EndoscopicSystem.V2.Forms
             // chkOPD_EGD
             // 
             this.chkOPD_EGD.AutoSize = true;
-            this.chkOPD_EGD.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
+            this.chkOPD_EGD.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
             this.chkOPD_EGD.Location = new System.Drawing.Point(241, 35);
             this.chkOPD_EGD.Margin = new System.Windows.Forms.Padding(2);
             this.chkOPD_EGD.Name = "chkOPD_EGD";
-            this.chkOPD_EGD.Size = new System.Drawing.Size(56, 20);
+            this.chkOPD_EGD.Size = new System.Drawing.Size(65, 24);
             this.chkOPD_EGD.TabIndex = 94;
             this.chkOPD_EGD.Text = "OPD";
             this.chkOPD_EGD.UseVisualStyleBackColor = true;
@@ -963,11 +964,11 @@ namespace EndoscopicSystem.V2.Forms
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
+            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
             this.label4.Location = new System.Drawing.Point(588, 9);
             this.label4.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(33, 17);
+            this.label4.Size = new System.Drawing.Size(41, 20);
             this.label4.TabIndex = 63;
             this.label4.Text = "Age";
             // 
@@ -986,11 +987,11 @@ namespace EndoscopicSystem.V2.Forms
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
+            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
             this.label3.Location = new System.Drawing.Point(482, 9);
             this.label3.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(35, 17);
+            this.label3.Size = new System.Drawing.Size(45, 20);
             this.label3.TabIndex = 61;
             this.label3.Text = "SEX";
             // 
@@ -1009,22 +1010,22 @@ namespace EndoscopicSystem.V2.Forms
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
             this.label2.Location = new System.Drawing.Point(14, 33);
             this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(28, 17);
+            this.label2.Size = new System.Drawing.Size(34, 20);
             this.label2.TabIndex = 59;
             this.label2.Text = "HN";
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
             this.label1.Location = new System.Drawing.Point(14, 6);
             this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(45, 17);
+            this.label1.Size = new System.Drawing.Size(55, 20);
             this.label1.TabIndex = 57;
             this.label1.Text = "Name";
             // 
@@ -1033,11 +1034,11 @@ namespace EndoscopicSystem.V2.Forms
             this.txbGeneralMedication_EGD.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.txbGeneralMedication_EGD.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
-            this.txbGeneralMedication_EGD.Location = new System.Drawing.Point(465, 359);
+            this.txbGeneralMedication_EGD.Location = new System.Drawing.Point(483, 359);
             this.txbGeneralMedication_EGD.Margin = new System.Windows.Forms.Padding(2);
             this.txbGeneralMedication_EGD.MaxLength = 36;
             this.txbGeneralMedication_EGD.Name = "txbGeneralMedication_EGD";
-            this.txbGeneralMedication_EGD.Size = new System.Drawing.Size(434, 23);
+            this.txbGeneralMedication_EGD.Size = new System.Drawing.Size(416, 23);
             this.txbGeneralMedication_EGD.TabIndex = 56;
             // 
             // cbbGeneralNurse3_EGD
@@ -1047,20 +1048,20 @@ namespace EndoscopicSystem.V2.Forms
             this.cbbGeneralNurse3_EGD.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cbbGeneralNurse3_EGD.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
             this.cbbGeneralNurse3_EGD.FormattingEnabled = true;
-            this.cbbGeneralNurse3_EGD.Location = new System.Drawing.Point(123, 277);
+            this.cbbGeneralNurse3_EGD.Location = new System.Drawing.Point(141, 277);
             this.cbbGeneralNurse3_EGD.Margin = new System.Windows.Forms.Padding(2);
             this.cbbGeneralNurse3_EGD.Name = "cbbGeneralNurse3_EGD";
-            this.cbbGeneralNurse3_EGD.Size = new System.Drawing.Size(400, 23);
+            this.cbbGeneralNurse3_EGD.Size = new System.Drawing.Size(382, 23);
             this.cbbGeneralNurse3_EGD.TabIndex = 55;
             // 
             // label52
             // 
             this.label52.AutoSize = true;
-            this.label52.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
+            this.label52.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
             this.label52.Location = new System.Drawing.Point(14, 282);
             this.label52.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label52.Name = "label52";
-            this.label52.Size = new System.Drawing.Size(58, 17);
+            this.label52.Size = new System.Drawing.Size(71, 20);
             this.label52.TabIndex = 54;
             this.label52.Text = "Nurse 3";
             // 
@@ -1071,10 +1072,10 @@ namespace EndoscopicSystem.V2.Forms
             this.cbbGeneralNurse2_EGD.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cbbGeneralNurse2_EGD.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
             this.cbbGeneralNurse2_EGD.FormattingEnabled = true;
-            this.cbbGeneralNurse2_EGD.Location = new System.Drawing.Point(123, 250);
+            this.cbbGeneralNurse2_EGD.Location = new System.Drawing.Point(141, 250);
             this.cbbGeneralNurse2_EGD.Margin = new System.Windows.Forms.Padding(2);
             this.cbbGeneralNurse2_EGD.Name = "cbbGeneralNurse2_EGD";
-            this.cbbGeneralNurse2_EGD.Size = new System.Drawing.Size(400, 23);
+            this.cbbGeneralNurse2_EGD.Size = new System.Drawing.Size(382, 23);
             this.cbbGeneralNurse2_EGD.TabIndex = 53;
             // 
             // cbbGeneralNurse1_EGD
@@ -1084,20 +1085,20 @@ namespace EndoscopicSystem.V2.Forms
             this.cbbGeneralNurse1_EGD.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cbbGeneralNurse1_EGD.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
             this.cbbGeneralNurse1_EGD.FormattingEnabled = true;
-            this.cbbGeneralNurse1_EGD.Location = new System.Drawing.Point(123, 223);
+            this.cbbGeneralNurse1_EGD.Location = new System.Drawing.Point(141, 223);
             this.cbbGeneralNurse1_EGD.Margin = new System.Windows.Forms.Padding(2);
             this.cbbGeneralNurse1_EGD.Name = "cbbGeneralNurse1_EGD";
-            this.cbbGeneralNurse1_EGD.Size = new System.Drawing.Size(400, 23);
+            this.cbbGeneralNurse1_EGD.Size = new System.Drawing.Size(382, 23);
             this.cbbGeneralNurse1_EGD.TabIndex = 52;
             // 
             // label84
             // 
             this.label84.AutoSize = true;
-            this.label84.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
+            this.label84.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
             this.label84.Location = new System.Drawing.Point(14, 199);
             this.label84.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label84.Name = "label84";
-            this.label84.Size = new System.Drawing.Size(81, 17);
+            this.label84.Size = new System.Drawing.Size(104, 20);
             this.label84.TabIndex = 50;
             this.label84.Text = "Anesthesist";
             // 
@@ -1108,10 +1109,10 @@ namespace EndoscopicSystem.V2.Forms
             this.cbbGeneralDoctor_EGD.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cbbGeneralDoctor_EGD.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
             this.cbbGeneralDoctor_EGD.FormattingEnabled = true;
-            this.cbbGeneralDoctor_EGD.Location = new System.Drawing.Point(123, 142);
+            this.cbbGeneralDoctor_EGD.Location = new System.Drawing.Point(141, 142);
             this.cbbGeneralDoctor_EGD.Margin = new System.Windows.Forms.Padding(2);
             this.cbbGeneralDoctor_EGD.Name = "cbbGeneralDoctor_EGD";
-            this.cbbGeneralDoctor_EGD.Size = new System.Drawing.Size(400, 23);
+            this.cbbGeneralDoctor_EGD.Size = new System.Drawing.Size(382, 23);
             this.cbbGeneralDoctor_EGD.TabIndex = 48;
             // 
             // cbbGeneralMedication_EGD
@@ -1121,75 +1122,75 @@ namespace EndoscopicSystem.V2.Forms
             this.cbbGeneralMedication_EGD.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cbbGeneralMedication_EGD.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
             this.cbbGeneralMedication_EGD.FormattingEnabled = true;
-            this.cbbGeneralMedication_EGD.Location = new System.Drawing.Point(123, 359);
+            this.cbbGeneralMedication_EGD.Location = new System.Drawing.Point(141, 359);
             this.cbbGeneralMedication_EGD.Margin = new System.Windows.Forms.Padding(2);
             this.cbbGeneralMedication_EGD.Name = "cbbGeneralMedication_EGD";
-            this.cbbGeneralMedication_EGD.Size = new System.Drawing.Size(336, 23);
+            this.cbbGeneralMedication_EGD.Size = new System.Drawing.Size(318, 23);
             this.cbbGeneralMedication_EGD.TabIndex = 47;
             // 
             // label13
             // 
             this.label13.AutoSize = true;
-            this.label13.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
+            this.label13.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
             this.label13.Location = new System.Drawing.Point(14, 172);
             this.label13.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(78, 17);
+            this.label13.Size = new System.Drawing.Size(99, 20);
             this.label13.TabIndex = 43;
             this.label13.Text = "Anesthesia";
             // 
             // label14
             // 
             this.label14.AutoSize = true;
-            this.label14.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
+            this.label14.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
             this.label14.Location = new System.Drawing.Point(14, 253);
             this.label14.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label14.Name = "label14";
-            this.label14.Size = new System.Drawing.Size(58, 17);
+            this.label14.Size = new System.Drawing.Size(71, 20);
             this.label14.TabIndex = 42;
             this.label14.Text = "Nurse 2";
             // 
             // label15
             // 
             this.label15.AutoSize = true;
-            this.label15.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
+            this.label15.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
             this.label15.Location = new System.Drawing.Point(14, 226);
             this.label15.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label15.Name = "label15";
-            this.label15.Size = new System.Drawing.Size(58, 17);
+            this.label15.Size = new System.Drawing.Size(71, 20);
             this.label15.TabIndex = 41;
             this.label15.Text = "Nurse 1";
             // 
             // label19
             // 
             this.label19.AutoSize = true;
-            this.label19.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
+            this.label19.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
             this.label19.Location = new System.Drawing.Point(14, 363);
             this.label19.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label19.Name = "label19";
-            this.label19.Size = new System.Drawing.Size(76, 17);
+            this.label19.Size = new System.Drawing.Size(96, 20);
             this.label19.TabIndex = 30;
             this.label19.Text = "Medication";
             // 
             // label20
             // 
             this.label20.AutoSize = true;
-            this.label20.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
+            this.label20.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
             this.label20.Location = new System.Drawing.Point(14, 336);
             this.label20.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label20.Name = "label20";
-            this.label20.Size = new System.Drawing.Size(74, 17);
+            this.label20.Size = new System.Drawing.Size(96, 20);
             this.label20.TabIndex = 29;
             this.label20.Text = "Instrument";
             // 
             // label22
             // 
             this.label22.AutoSize = true;
-            this.label22.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
+            this.label22.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
             this.label22.Location = new System.Drawing.Point(14, 145);
             this.label22.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label22.Name = "label22";
-            this.label22.Size = new System.Drawing.Size(50, 17);
+            this.label22.Size = new System.Drawing.Size(63, 20);
             this.label22.TabIndex = 27;
             this.label22.Text = "Doctor";
             // 
@@ -1198,16 +1199,16 @@ namespace EndoscopicSystem.V2.Forms
             this.txtGeneralInstrument_EGD.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.txtGeneralInstrument_EGD.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
-            this.txtGeneralInstrument_EGD.Location = new System.Drawing.Point(123, 332);
+            this.txtGeneralInstrument_EGD.Location = new System.Drawing.Point(141, 332);
             this.txtGeneralInstrument_EGD.Margin = new System.Windows.Forms.Padding(2);
             this.txtGeneralInstrument_EGD.MaxLength = 65;
             this.txtGeneralInstrument_EGD.Name = "txtGeneralInstrument_EGD";
-            this.txtGeneralInstrument_EGD.Size = new System.Drawing.Size(336, 23);
+            this.txtGeneralInstrument_EGD.Size = new System.Drawing.Size(318, 23);
             this.txtGeneralInstrument_EGD.TabIndex = 35;
             // 
             // tabFindingEGD
             // 
-            this.tabFindingEGD.BackColor = System.Drawing.Color.White;
+            this.tabFindingEGD.BackColor = System.Drawing.Color.Silver;
             this.tabFindingEGD.Controls.Add(this.label33);
             this.tabFindingEGD.Controls.Add(this.txbFinding2ndPart_EGD);
             this.tabFindingEGD.Controls.Add(this.txbFindingDuodenalBulb_EGD);
@@ -1279,11 +1280,12 @@ namespace EndoscopicSystem.V2.Forms
             // label33
             // 
             this.label33.AutoSize = true;
-            this.label33.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
+            this.label33.BackColor = System.Drawing.Color.White;
+            this.label33.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
             this.label33.Location = new System.Drawing.Point(7, 144);
             this.label33.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label33.Name = "label33";
-            this.label33.Size = new System.Drawing.Size(40, 17);
+            this.label33.Size = new System.Drawing.Size(49, 20);
             this.label33.TabIndex = 174;
             this.label33.Text = "Body";
             // 
@@ -1291,6 +1293,7 @@ namespace EndoscopicSystem.V2.Forms
             // 
             this.txbFinding2ndPart_EGD.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
+            this.txbFinding2ndPart_EGD.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.txbFinding2ndPart_EGD.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
             this.txbFinding2ndPart_EGD.Location = new System.Drawing.Point(321, 245);
             this.txbFinding2ndPart_EGD.Margin = new System.Windows.Forms.Padding(2);
@@ -1303,6 +1306,7 @@ namespace EndoscopicSystem.V2.Forms
             // 
             this.txbFindingDuodenalBulb_EGD.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
+            this.txbFindingDuodenalBulb_EGD.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.txbFindingDuodenalBulb_EGD.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
             this.txbFindingDuodenalBulb_EGD.Location = new System.Drawing.Point(321, 219);
             this.txbFindingDuodenalBulb_EGD.Margin = new System.Windows.Forms.Padding(2);
@@ -1315,6 +1319,7 @@ namespace EndoscopicSystem.V2.Forms
             // 
             this.txbFindingPylorus_EGD.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
+            this.txbFindingPylorus_EGD.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.txbFindingPylorus_EGD.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
             this.txbFindingPylorus_EGD.Location = new System.Drawing.Point(321, 193);
             this.txbFindingPylorus_EGD.Margin = new System.Windows.Forms.Padding(2);
@@ -1327,6 +1332,7 @@ namespace EndoscopicSystem.V2.Forms
             // 
             this.txbFindingAntrum_EGD.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
+            this.txbFindingAntrum_EGD.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.txbFindingAntrum_EGD.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
             this.txbFindingAntrum_EGD.Location = new System.Drawing.Point(321, 167);
             this.txbFindingAntrum_EGD.Margin = new System.Windows.Forms.Padding(2);
@@ -1339,6 +1345,7 @@ namespace EndoscopicSystem.V2.Forms
             // 
             this.txbFindingBody_EGD.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
+            this.txbFindingBody_EGD.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.txbFindingBody_EGD.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
             this.txbFindingBody_EGD.Location = new System.Drawing.Point(321, 141);
             this.txbFindingBody_EGD.Margin = new System.Windows.Forms.Padding(2);
@@ -1351,6 +1358,7 @@ namespace EndoscopicSystem.V2.Forms
             // 
             this.txbFindingFundus_EGD.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
+            this.txbFindingFundus_EGD.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.txbFindingFundus_EGD.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
             this.txbFindingFundus_EGD.Location = new System.Drawing.Point(321, 115);
             this.txbFindingFundus_EGD.Margin = new System.Windows.Forms.Padding(2);
@@ -1363,6 +1371,7 @@ namespace EndoscopicSystem.V2.Forms
             // 
             this.txbFindingCardia_EGD.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
+            this.txbFindingCardia_EGD.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.txbFindingCardia_EGD.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
             this.txbFindingCardia_EGD.Location = new System.Drawing.Point(321, 89);
             this.txbFindingCardia_EGD.Margin = new System.Windows.Forms.Padding(2);
@@ -1375,6 +1384,7 @@ namespace EndoscopicSystem.V2.Forms
             // 
             this.txbFindingEGJunction_EGD.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
+            this.txbFindingEGJunction_EGD.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.txbFindingEGJunction_EGD.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
             this.txbFindingEGJunction_EGD.Location = new System.Drawing.Point(321, 63);
             this.txbFindingEGJunction_EGD.Margin = new System.Windows.Forms.Padding(2);
@@ -1387,6 +1397,7 @@ namespace EndoscopicSystem.V2.Forms
             // 
             this.txbFindingEsophagus_EGD.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
+            this.txbFindingEsophagus_EGD.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.txbFindingEsophagus_EGD.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
             this.txbFindingEsophagus_EGD.Location = new System.Drawing.Point(321, 37);
             this.txbFindingEsophagus_EGD.Margin = new System.Windows.Forms.Padding(2);
@@ -1399,6 +1410,7 @@ namespace EndoscopicSystem.V2.Forms
             // 
             this.txbFindingOropharynx_EGD.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
+            this.txbFindingOropharynx_EGD.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.txbFindingOropharynx_EGD.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
             this.txbFindingOropharynx_EGD.Location = new System.Drawing.Point(321, 11);
             this.txbFindingOropharynx_EGD.Margin = new System.Windows.Forms.Padding(2);
@@ -1411,6 +1423,7 @@ namespace EndoscopicSystem.V2.Forms
             // 
             this.cbbFinding2ndPart_EGD.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
+            this.cbbFinding2ndPart_EGD.BackColor = System.Drawing.SystemColors.InactiveBorder;
             this.cbbFinding2ndPart_EGD.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cbbFinding2ndPart_EGD.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
             this.cbbFinding2ndPart_EGD.FormattingEnabled = true;
@@ -1423,11 +1436,12 @@ namespace EndoscopicSystem.V2.Forms
             // label11
             // 
             this.label11.AutoSize = true;
-            this.label11.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
+            this.label11.BackColor = System.Drawing.Color.White;
+            this.label11.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
             this.label11.Location = new System.Drawing.Point(7, 246);
             this.label11.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(62, 17);
+            this.label11.Size = new System.Drawing.Size(77, 20);
             this.label11.TabIndex = 162;
             this.label11.Text = "2nd Part";
             // 
@@ -1435,6 +1449,7 @@ namespace EndoscopicSystem.V2.Forms
             // 
             this.cbbFindingDuodenalBulb_EGD.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
+            this.cbbFindingDuodenalBulb_EGD.BackColor = System.Drawing.SystemColors.InactiveBorder;
             this.cbbFindingDuodenalBulb_EGD.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cbbFindingDuodenalBulb_EGD.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
             this.cbbFindingDuodenalBulb_EGD.FormattingEnabled = true;
@@ -1447,11 +1462,12 @@ namespace EndoscopicSystem.V2.Forms
             // label25
             // 
             this.label25.AutoSize = true;
-            this.label25.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
+            this.label25.BackColor = System.Drawing.Color.White;
+            this.label25.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
             this.label25.Location = new System.Drawing.Point(7, 220);
             this.label25.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label25.Name = "label25";
-            this.label25.Size = new System.Drawing.Size(101, 17);
+            this.label25.Size = new System.Drawing.Size(127, 20);
             this.label25.TabIndex = 160;
             this.label25.Text = "Duodenal Bulb";
             // 
@@ -1459,6 +1475,7 @@ namespace EndoscopicSystem.V2.Forms
             // 
             this.cbbFindingPylorus_EGD.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
+            this.cbbFindingPylorus_EGD.BackColor = System.Drawing.SystemColors.InactiveBorder;
             this.cbbFindingPylorus_EGD.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cbbFindingPylorus_EGD.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
             this.cbbFindingPylorus_EGD.FormattingEnabled = true;
@@ -1472,6 +1489,7 @@ namespace EndoscopicSystem.V2.Forms
             // 
             this.cbbFindingAntrum_EGD.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
+            this.cbbFindingAntrum_EGD.BackColor = System.Drawing.SystemColors.InactiveBorder;
             this.cbbFindingAntrum_EGD.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cbbFindingAntrum_EGD.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
             this.cbbFindingAntrum_EGD.FormattingEnabled = true;
@@ -1484,22 +1502,24 @@ namespace EndoscopicSystem.V2.Forms
             // label26
             // 
             this.label26.AutoSize = true;
-            this.label26.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
+            this.label26.BackColor = System.Drawing.Color.White;
+            this.label26.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
             this.label26.Location = new System.Drawing.Point(7, 194);
             this.label26.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label26.Name = "label26";
-            this.label26.Size = new System.Drawing.Size(55, 17);
+            this.label26.Size = new System.Drawing.Size(67, 20);
             this.label26.TabIndex = 157;
             this.label26.Text = "Pylorus";
             // 
             // label27
             // 
             this.label27.AutoSize = true;
-            this.label27.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
+            this.label27.BackColor = System.Drawing.Color.White;
+            this.label27.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
             this.label27.Location = new System.Drawing.Point(7, 168);
             this.label27.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label27.Name = "label27";
-            this.label27.Size = new System.Drawing.Size(53, 17);
+            this.label27.Size = new System.Drawing.Size(67, 20);
             this.label27.TabIndex = 156;
             this.label27.Text = "Antrum";
             // 
@@ -1507,6 +1527,7 @@ namespace EndoscopicSystem.V2.Forms
             // 
             this.cbbFindingBody_EGD.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
+            this.cbbFindingBody_EGD.BackColor = System.Drawing.SystemColors.InactiveBorder;
             this.cbbFindingBody_EGD.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cbbFindingBody_EGD.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
             this.cbbFindingBody_EGD.FormattingEnabled = true;
@@ -1520,6 +1541,7 @@ namespace EndoscopicSystem.V2.Forms
             // 
             this.cbbFindingFundus_EGD.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
+            this.cbbFindingFundus_EGD.BackColor = System.Drawing.SystemColors.InactiveBorder;
             this.cbbFindingFundus_EGD.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cbbFindingFundus_EGD.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
             this.cbbFindingFundus_EGD.FormattingEnabled = true;
@@ -1532,11 +1554,12 @@ namespace EndoscopicSystem.V2.Forms
             // label28
             // 
             this.label28.AutoSize = true;
-            this.label28.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
+            this.label28.BackColor = System.Drawing.Color.White;
+            this.label28.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
             this.label28.Location = new System.Drawing.Point(7, 116);
             this.label28.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label28.Name = "label28";
-            this.label28.Size = new System.Drawing.Size(55, 17);
+            this.label28.Size = new System.Drawing.Size(69, 20);
             this.label28.TabIndex = 153;
             this.label28.Text = "Fundus";
             // 
@@ -1544,6 +1567,7 @@ namespace EndoscopicSystem.V2.Forms
             // 
             this.cbbFindingCardia_EGD.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
+            this.cbbFindingCardia_EGD.BackColor = System.Drawing.SystemColors.InactiveBorder;
             this.cbbFindingCardia_EGD.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cbbFindingCardia_EGD.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
             this.cbbFindingCardia_EGD.FormattingEnabled = true;
@@ -1557,6 +1581,7 @@ namespace EndoscopicSystem.V2.Forms
             // 
             this.cbbFindingEGJunction_EGD.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
+            this.cbbFindingEGJunction_EGD.BackColor = System.Drawing.SystemColors.InactiveBorder;
             this.cbbFindingEGJunction_EGD.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cbbFindingEGJunction_EGD.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
             this.cbbFindingEGJunction_EGD.FormattingEnabled = true;
@@ -1569,22 +1594,24 @@ namespace EndoscopicSystem.V2.Forms
             // label29
             // 
             this.label29.AutoSize = true;
-            this.label29.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
+            this.label29.BackColor = System.Drawing.Color.White;
+            this.label29.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
             this.label29.Location = new System.Drawing.Point(7, 90);
             this.label29.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label29.Name = "label29";
-            this.label29.Size = new System.Drawing.Size(49, 17);
+            this.label29.Size = new System.Drawing.Size(61, 20);
             this.label29.TabIndex = 150;
             this.label29.Text = "Cardia";
             // 
             // label30
             // 
             this.label30.AutoSize = true;
-            this.label30.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
+            this.label30.BackColor = System.Drawing.Color.White;
+            this.label30.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
             this.label30.Location = new System.Drawing.Point(7, 64);
             this.label30.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label30.Name = "label30";
-            this.label30.Size = new System.Drawing.Size(86, 17);
+            this.label30.Size = new System.Drawing.Size(109, 20);
             this.label30.TabIndex = 149;
             this.label30.Text = "EG-Junction";
             // 
@@ -1592,6 +1619,7 @@ namespace EndoscopicSystem.V2.Forms
             // 
             this.cbbFindingEsophagus_EGD.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
+            this.cbbFindingEsophagus_EGD.BackColor = System.Drawing.SystemColors.InactiveBorder;
             this.cbbFindingEsophagus_EGD.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cbbFindingEsophagus_EGD.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
             this.cbbFindingEsophagus_EGD.FormattingEnabled = true;
@@ -1605,6 +1633,7 @@ namespace EndoscopicSystem.V2.Forms
             // 
             this.cbbFindingOropharynx_EGD.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
+            this.cbbFindingOropharynx_EGD.BackColor = System.Drawing.SystemColors.InactiveBorder;
             this.cbbFindingOropharynx_EGD.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cbbFindingOropharynx_EGD.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
             this.cbbFindingOropharynx_EGD.FormattingEnabled = true;
@@ -1617,22 +1646,24 @@ namespace EndoscopicSystem.V2.Forms
             // label31
             // 
             this.label31.AutoSize = true;
-            this.label31.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
+            this.label31.BackColor = System.Drawing.Color.White;
+            this.label31.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
             this.label31.Location = new System.Drawing.Point(7, 38);
             this.label31.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label31.Name = "label31";
-            this.label31.Size = new System.Drawing.Size(79, 17);
+            this.label31.Size = new System.Drawing.Size(99, 20);
             this.label31.TabIndex = 146;
             this.label31.Text = "Esophagus";
             // 
             // label32
             // 
             this.label32.AutoSize = true;
-            this.label32.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
+            this.label32.BackColor = System.Drawing.Color.White;
+            this.label32.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
             this.label32.Location = new System.Drawing.Point(7, 12);
             this.label32.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label32.Name = "label32";
-            this.label32.Size = new System.Drawing.Size(82, 17);
+            this.label32.Size = new System.Drawing.Size(100, 20);
             this.label32.TabIndex = 145;
             this.label32.Text = "Oropharynx";
             // 
@@ -1652,11 +1683,12 @@ namespace EndoscopicSystem.V2.Forms
             // label109
             // 
             this.label109.AutoSize = true;
-            this.label109.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
+            this.label109.BackColor = System.Drawing.Color.White;
+            this.label109.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
             this.label109.Location = new System.Drawing.Point(7, 628);
             this.label109.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label109.Name = "label109";
-            this.label109.Size = new System.Drawing.Size(118, 17);
+            this.label109.Size = new System.Drawing.Size(149, 20);
             this.label109.TabIndex = 143;
             this.label109.Text = "Recommendation";
             // 
@@ -1676,55 +1708,60 @@ namespace EndoscopicSystem.V2.Forms
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
+            this.label6.BackColor = System.Drawing.Color.White;
+            this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
             this.label6.Location = new System.Drawing.Point(7, 580);
             this.label6.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(102, 17);
+            this.label6.Size = new System.Drawing.Size(129, 20);
             this.label6.TabIndex = 141;
             this.label6.Text = "Histopathology";
             // 
             // label106
             // 
             this.label106.AutoSize = true;
-            this.label106.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
+            this.label106.BackColor = System.Drawing.Color.White;
+            this.label106.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
             this.label106.Location = new System.Drawing.Point(6, 506);
             this.label106.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label106.Name = "label106";
-            this.label106.Size = new System.Drawing.Size(135, 17);
+            this.label106.Size = new System.Drawing.Size(169, 20);
             this.label106.TabIndex = 140;
             this.label106.Text = "Pre-Diagnosis (Dx4)";
             // 
             // label107
             // 
             this.label107.AutoSize = true;
-            this.label107.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
+            this.label107.BackColor = System.Drawing.Color.White;
+            this.label107.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
             this.label107.Location = new System.Drawing.Point(6, 479);
             this.label107.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label107.Name = "label107";
-            this.label107.Size = new System.Drawing.Size(135, 17);
+            this.label107.Size = new System.Drawing.Size(169, 20);
             this.label107.TabIndex = 139;
             this.label107.Text = "Pre-Diagnosis (Dx3)";
             // 
             // label105
             // 
             this.label105.AutoSize = true;
-            this.label105.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
+            this.label105.BackColor = System.Drawing.Color.White;
+            this.label105.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
             this.label105.Location = new System.Drawing.Point(6, 452);
             this.label105.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label105.Name = "label105";
-            this.label105.Size = new System.Drawing.Size(135, 17);
+            this.label105.Size = new System.Drawing.Size(169, 20);
             this.label105.TabIndex = 138;
             this.label105.Text = "Pre-Diagnosis (Dx2)";
             // 
             // label108
             // 
             this.label108.AutoSize = true;
-            this.label108.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
+            this.label108.BackColor = System.Drawing.Color.White;
+            this.label108.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
             this.label108.Location = new System.Drawing.Point(6, 425);
             this.label108.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label108.Name = "label108";
-            this.label108.Size = new System.Drawing.Size(135, 17);
+            this.label108.Size = new System.Drawing.Size(169, 20);
             this.label108.TabIndex = 137;
             this.label108.Text = "Pre-Diagnosis (Dx1)";
             // 
@@ -1840,11 +1877,12 @@ namespace EndoscopicSystem.V2.Forms
             // label103
             // 
             this.label103.AutoSize = true;
-            this.label103.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
+            this.label103.BackColor = System.Drawing.Color.White;
+            this.label103.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
             this.label103.Location = new System.Drawing.Point(7, 356);
             this.label103.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label103.Name = "label103";
-            this.label103.Size = new System.Drawing.Size(74, 17);
+            this.label103.Size = new System.Drawing.Size(91, 20);
             this.label103.TabIndex = 123;
             this.label103.Text = "Procedure";
             // 
@@ -1852,6 +1890,7 @@ namespace EndoscopicSystem.V2.Forms
             // 
             this.txbFindingSupplementalProcedureText2_EGD.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
+            this.txbFindingSupplementalProcedureText2_EGD.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.txbFindingSupplementalProcedureText2_EGD.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
             this.txbFindingSupplementalProcedureText2_EGD.Location = new System.Drawing.Point(321, 326);
             this.txbFindingSupplementalProcedureText2_EGD.Margin = new System.Windows.Forms.Padding(2);
@@ -1863,11 +1902,12 @@ namespace EndoscopicSystem.V2.Forms
             // label104
             // 
             this.label104.AutoSize = true;
-            this.label104.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
+            this.label104.BackColor = System.Drawing.Color.White;
+            this.label104.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
             this.label104.Location = new System.Drawing.Point(7, 329);
             this.label104.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label104.Name = "label104";
-            this.label104.Size = new System.Drawing.Size(164, 17);
+            this.label104.Size = new System.Drawing.Size(206, 20);
             this.label104.TabIndex = 120;
             this.label104.Text = "Supplemental Procedure";
             // 
@@ -1887,6 +1927,7 @@ namespace EndoscopicSystem.V2.Forms
             // 
             this.txbFindingSupplementalProcedureText_EGD.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
+            this.txbFindingSupplementalProcedureText_EGD.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.txbFindingSupplementalProcedureText_EGD.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
             this.txbFindingSupplementalProcedureText_EGD.Location = new System.Drawing.Point(321, 299);
             this.txbFindingSupplementalProcedureText_EGD.Margin = new System.Windows.Forms.Padding(2);
@@ -1898,11 +1939,12 @@ namespace EndoscopicSystem.V2.Forms
             // label102
             // 
             this.label102.AutoSize = true;
-            this.label102.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
+            this.label102.BackColor = System.Drawing.Color.White;
+            this.label102.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
             this.label102.Location = new System.Drawing.Point(7, 302);
             this.label102.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label102.Name = "label102";
-            this.label102.Size = new System.Drawing.Size(164, 17);
+            this.label102.Size = new System.Drawing.Size(206, 20);
             this.label102.TabIndex = 117;
             this.label102.Text = "Supplemental Procedure";
             // 
@@ -1922,6 +1964,7 @@ namespace EndoscopicSystem.V2.Forms
             // 
             this.txbFindingPrinncipalProcedureText_EGD.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
+            this.txbFindingPrinncipalProcedureText_EGD.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.txbFindingPrinncipalProcedureText_EGD.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
             this.txbFindingPrinncipalProcedureText_EGD.Location = new System.Drawing.Point(321, 272);
             this.txbFindingPrinncipalProcedureText_EGD.Margin = new System.Windows.Forms.Padding(2);
@@ -1933,11 +1976,12 @@ namespace EndoscopicSystem.V2.Forms
             // label21
             // 
             this.label21.AutoSize = true;
-            this.label21.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
+            this.label21.BackColor = System.Drawing.Color.White;
+            this.label21.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
             this.label21.Location = new System.Drawing.Point(7, 275);
             this.label21.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label21.Name = "label21";
-            this.label21.Size = new System.Drawing.Size(132, 17);
+            this.label21.Size = new System.Drawing.Size(164, 20);
             this.label21.TabIndex = 114;
             this.label21.Text = "Principal Procedure";
             // 
@@ -1969,22 +2013,24 @@ namespace EndoscopicSystem.V2.Forms
             // label7
             // 
             this.label7.AutoSize = true;
-            this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
+            this.label7.BackColor = System.Drawing.Color.White;
+            this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
             this.label7.Location = new System.Drawing.Point(7, 676);
             this.label7.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(67, 17);
+            this.label7.Size = new System.Drawing.Size(85, 20);
             this.label7.TabIndex = 0;
             this.label7.Text = "Comment";
             // 
             // label8
             // 
             this.label8.AutoSize = true;
-            this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
+            this.label8.BackColor = System.Drawing.Color.White;
+            this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
             this.label8.Location = new System.Drawing.Point(7, 532);
             this.label8.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(88, 17);
+            this.label8.Size = new System.Drawing.Size(112, 20);
             this.label8.TabIndex = 0;
             this.label8.Text = "Complication";
             // 
@@ -2443,7 +2489,7 @@ namespace EndoscopicSystem.V2.Forms
             this.label40.Location = new System.Drawing.Point(561, 16);
             this.label40.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label40.Name = "label40";
-            this.label40.Size = new System.Drawing.Size(51, 13);
+            this.label40.Size = new System.Drawing.Size(83, 20);
             this.label40.TabIndex = 87;
             this.label40.Text = "Mod AFB";
             // 
@@ -2454,7 +2500,7 @@ namespace EndoscopicSystem.V2.Forms
             this.label39.Location = new System.Drawing.Point(527, 16);
             this.label39.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label39.Name = "label39";
-            this.label39.Size = new System.Drawing.Size(27, 13);
+            this.label39.Size = new System.Drawing.Size(44, 20);
             this.label39.TabIndex = 87;
             this.label39.Text = "AFB";
             // 
@@ -2465,7 +2511,7 @@ namespace EndoscopicSystem.V2.Forms
             this.label38.Location = new System.Drawing.Point(480, 16);
             this.label38.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label38.Name = "label38";
-            this.label38.Size = new System.Drawing.Size(32, 13);
+            this.label38.Size = new System.Drawing.Size(53, 20);
             this.label38.TabIndex = 87;
             this.label38.Text = "Gram";
             // 
@@ -2476,7 +2522,7 @@ namespace EndoscopicSystem.V2.Forms
             this.label37.Location = new System.Drawing.Point(436, 16);
             this.label37.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label37.Name = "label37";
-            this.label37.Size = new System.Drawing.Size(35, 13);
+            this.label37.Size = new System.Drawing.Size(56, 20);
             this.label37.TabIndex = 87;
             this.label37.Text = "Patho";
             // 
@@ -2487,7 +2533,7 @@ namespace EndoscopicSystem.V2.Forms
             this.label36.Location = new System.Drawing.Point(394, 16);
             this.label36.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label36.Name = "label36";
-            this.label36.Size = new System.Drawing.Size(34, 13);
+            this.label36.Size = new System.Drawing.Size(55, 20);
             this.label36.TabIndex = 87;
             this.label36.Text = "Cytho";
             // 
@@ -5704,6 +5750,8 @@ namespace EndoscopicSystem.V2.Forms
             // 
             // txtPictureBoxSaved18
             // 
+            this.txtPictureBoxSaved18.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.Suggest;
+            this.txtPictureBoxSaved18.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.CustomSource;
             this.txtPictureBoxSaved18.Location = new System.Drawing.Point(5, 152);
             this.txtPictureBoxSaved18.Margin = new System.Windows.Forms.Padding(2);
             this.txtPictureBoxSaved18.MaxLength = 25;
@@ -5736,6 +5784,8 @@ namespace EndoscopicSystem.V2.Forms
             // 
             // txtPictureBoxSaved17
             // 
+            this.txtPictureBoxSaved17.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.Suggest;
+            this.txtPictureBoxSaved17.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.CustomSource;
             this.txtPictureBoxSaved17.Location = new System.Drawing.Point(4, 151);
             this.txtPictureBoxSaved17.Margin = new System.Windows.Forms.Padding(2);
             this.txtPictureBoxSaved17.MaxLength = 25;
@@ -5768,6 +5818,8 @@ namespace EndoscopicSystem.V2.Forms
             // 
             // txtPictureBoxSaved16
             // 
+            this.txtPictureBoxSaved16.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.Suggest;
+            this.txtPictureBoxSaved16.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.CustomSource;
             this.txtPictureBoxSaved16.Location = new System.Drawing.Point(5, 152);
             this.txtPictureBoxSaved16.Margin = new System.Windows.Forms.Padding(2);
             this.txtPictureBoxSaved16.MaxLength = 25;
@@ -5800,6 +5852,8 @@ namespace EndoscopicSystem.V2.Forms
             // 
             // txtPictureBoxSaved15
             // 
+            this.txtPictureBoxSaved15.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.Suggest;
+            this.txtPictureBoxSaved15.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.CustomSource;
             this.txtPictureBoxSaved15.Location = new System.Drawing.Point(5, 152);
             this.txtPictureBoxSaved15.Margin = new System.Windows.Forms.Padding(2);
             this.txtPictureBoxSaved15.MaxLength = 25;
@@ -5832,6 +5886,8 @@ namespace EndoscopicSystem.V2.Forms
             // 
             // txtPictureBoxSaved14
             // 
+            this.txtPictureBoxSaved14.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.Suggest;
+            this.txtPictureBoxSaved14.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.CustomSource;
             this.txtPictureBoxSaved14.Location = new System.Drawing.Point(5, 152);
             this.txtPictureBoxSaved14.Margin = new System.Windows.Forms.Padding(2);
             this.txtPictureBoxSaved14.MaxLength = 25;
@@ -5864,6 +5920,8 @@ namespace EndoscopicSystem.V2.Forms
             // 
             // txtPictureBoxSaved13
             // 
+            this.txtPictureBoxSaved13.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.Suggest;
+            this.txtPictureBoxSaved13.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.CustomSource;
             this.txtPictureBoxSaved13.Location = new System.Drawing.Point(5, 151);
             this.txtPictureBoxSaved13.Margin = new System.Windows.Forms.Padding(2);
             this.txtPictureBoxSaved13.MaxLength = 25;
@@ -5896,6 +5954,8 @@ namespace EndoscopicSystem.V2.Forms
             // 
             // txtPictureBoxSaved12
             // 
+            this.txtPictureBoxSaved12.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.Suggest;
+            this.txtPictureBoxSaved12.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.CustomSource;
             this.txtPictureBoxSaved12.Location = new System.Drawing.Point(5, 151);
             this.txtPictureBoxSaved12.Margin = new System.Windows.Forms.Padding(2);
             this.txtPictureBoxSaved12.MaxLength = 25;
@@ -5928,6 +5988,8 @@ namespace EndoscopicSystem.V2.Forms
             // 
             // txtPictureBoxSaved11
             // 
+            this.txtPictureBoxSaved11.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.Suggest;
+            this.txtPictureBoxSaved11.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.CustomSource;
             this.txtPictureBoxSaved11.Location = new System.Drawing.Point(5, 151);
             this.txtPictureBoxSaved11.Margin = new System.Windows.Forms.Padding(2);
             this.txtPictureBoxSaved11.MaxLength = 25;
@@ -5960,6 +6022,8 @@ namespace EndoscopicSystem.V2.Forms
             // 
             // txtPictureBoxSaved10
             // 
+            this.txtPictureBoxSaved10.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.Suggest;
+            this.txtPictureBoxSaved10.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.CustomSource;
             this.txtPictureBoxSaved10.Location = new System.Drawing.Point(5, 151);
             this.txtPictureBoxSaved10.Margin = new System.Windows.Forms.Padding(2);
             this.txtPictureBoxSaved10.MaxLength = 25;
@@ -5992,6 +6056,8 @@ namespace EndoscopicSystem.V2.Forms
             // 
             // txtPictureBoxSaved1
             // 
+            this.txtPictureBoxSaved1.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.Suggest;
+            this.txtPictureBoxSaved1.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.CustomSource;
             this.txtPictureBoxSaved1.Location = new System.Drawing.Point(4, 152);
             this.txtPictureBoxSaved1.Margin = new System.Windows.Forms.Padding(2);
             this.txtPictureBoxSaved1.MaxLength = 25;
@@ -6024,6 +6090,8 @@ namespace EndoscopicSystem.V2.Forms
             // 
             // txtPictureBoxSaved2
             // 
+            this.txtPictureBoxSaved2.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.Suggest;
+            this.txtPictureBoxSaved2.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.CustomSource;
             this.txtPictureBoxSaved2.Location = new System.Drawing.Point(2, 152);
             this.txtPictureBoxSaved2.Margin = new System.Windows.Forms.Padding(2);
             this.txtPictureBoxSaved2.MaxLength = 25;
@@ -6056,6 +6124,8 @@ namespace EndoscopicSystem.V2.Forms
             // 
             // txtPictureBoxSaved3
             // 
+            this.txtPictureBoxSaved3.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.Suggest;
+            this.txtPictureBoxSaved3.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.CustomSource;
             this.txtPictureBoxSaved3.Location = new System.Drawing.Point(4, 152);
             this.txtPictureBoxSaved3.Margin = new System.Windows.Forms.Padding(2);
             this.txtPictureBoxSaved3.MaxLength = 25;
@@ -6088,6 +6158,8 @@ namespace EndoscopicSystem.V2.Forms
             // 
             // txtPictureBoxSaved4
             // 
+            this.txtPictureBoxSaved4.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.Suggest;
+            this.txtPictureBoxSaved4.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.CustomSource;
             this.txtPictureBoxSaved4.Location = new System.Drawing.Point(5, 151);
             this.txtPictureBoxSaved4.Margin = new System.Windows.Forms.Padding(2);
             this.txtPictureBoxSaved4.MaxLength = 25;
@@ -6120,6 +6192,8 @@ namespace EndoscopicSystem.V2.Forms
             // 
             // txtPictureBoxSaved5
             // 
+            this.txtPictureBoxSaved5.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.Suggest;
+            this.txtPictureBoxSaved5.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.CustomSource;
             this.txtPictureBoxSaved5.Location = new System.Drawing.Point(6, 152);
             this.txtPictureBoxSaved5.Margin = new System.Windows.Forms.Padding(2);
             this.txtPictureBoxSaved5.MaxLength = 25;
@@ -6152,6 +6226,8 @@ namespace EndoscopicSystem.V2.Forms
             // 
             // txtPictureBoxSaved7
             // 
+            this.txtPictureBoxSaved7.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.Suggest;
+            this.txtPictureBoxSaved7.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.CustomSource;
             this.txtPictureBoxSaved7.Location = new System.Drawing.Point(6, 152);
             this.txtPictureBoxSaved7.Margin = new System.Windows.Forms.Padding(2);
             this.txtPictureBoxSaved7.MaxLength = 25;
@@ -6184,6 +6260,8 @@ namespace EndoscopicSystem.V2.Forms
             // 
             // txtPictureBoxSaved8
             // 
+            this.txtPictureBoxSaved8.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.Suggest;
+            this.txtPictureBoxSaved8.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.CustomSource;
             this.txtPictureBoxSaved8.Location = new System.Drawing.Point(5, 151);
             this.txtPictureBoxSaved8.Margin = new System.Windows.Forms.Padding(2);
             this.txtPictureBoxSaved8.MaxLength = 25;
@@ -6216,6 +6294,8 @@ namespace EndoscopicSystem.V2.Forms
             // 
             // txtPictureBoxSaved9
             // 
+            this.txtPictureBoxSaved9.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.Suggest;
+            this.txtPictureBoxSaved9.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.CustomSource;
             this.txtPictureBoxSaved9.Location = new System.Drawing.Point(5, 152);
             this.txtPictureBoxSaved9.Margin = new System.Windows.Forms.Padding(2);
             this.txtPictureBoxSaved9.MaxLength = 25;
