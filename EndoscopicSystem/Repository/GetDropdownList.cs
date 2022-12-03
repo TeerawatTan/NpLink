@@ -65,13 +65,13 @@ namespace EndoscopicSystem.Repository
         public List<ICD9> GetICD9s()
         {
             var list = db.ICD9.ToList();
-            list.Insert(0, new ICD9() { Code = "0", Name = "" });
+            list.Insert(0, new ICD9() { ID = 0, Code = "0", Name = "" });
             return list;
         }
         public List<ICD10> GetICD10s()
         {
             var list = db.ICD10.ToList();
-            list.Insert(0, new ICD10() { Code = "0", Name = "" });
+            list.Insert(0, new ICD10() { ID = 0, Code = "0", Name = "" });
             return list;
         }
         public List<Anesthesist> GetAnesthesists()
@@ -84,6 +84,12 @@ namespace EndoscopicSystem.Repository
         {
             var list = db.Anesthesias.ToList();
             list.Insert(0, new Anesthesia() { AnesthesiaID = 0, AnesthesiaName = "" });
+            return list;
+        }
+        public List<Financial> GetFinancial()
+        {
+            var list = db.Financials.ToList();
+            list.Insert(0, new Financial() { ID = 0, Name = "" });
             return list;
         }
         public List<AnalCanal> GetAnalCanalList() => db.AnalCanals.ToList();

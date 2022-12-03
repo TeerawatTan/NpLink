@@ -88,11 +88,14 @@ namespace EndoscopicSystem.V2.Forms
             {
                 devicesCombo.Items.Add("No DirectShow devices found");
             }
+            //_captureDeviceForm = new VideoCaptureDeviceForm();
+            //int index = devicesCombo.FindString("Game Capture");
+            //devicesCombo.SelectedIndex = index;
 
             if (devicesCombo.Items.Count > 0)
             {
                 _captureDeviceForm = new VideoCaptureDeviceForm();
-                int index = 0; //devicesCombo.FindString("Game Capture");
+                int index = 0; // devicesCombo.FindString("Game Capture");
                 devicesCombo.SelectedIndex = index;
                 if (index >= 0 && !string.IsNullOrWhiteSpace(_hnNo))
                 {
@@ -119,7 +122,7 @@ namespace EndoscopicSystem.V2.Forms
                 LoadImageFromFolder(_pathFolderImageToSave);
 
                 ImageList images = new ImageList();
-                images.ImageSize = new Size(180, 110);
+                images.ImageSize = new Size(220, 160);
 
                 foreach (var img in _imageList)
                 {

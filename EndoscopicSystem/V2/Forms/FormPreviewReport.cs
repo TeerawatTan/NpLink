@@ -147,7 +147,7 @@ namespace EndoscopicSystem.V2.Forms
                 }
 
                 ImageList images = new ImageList();
-                images.ImageSize = new Size(150, 90);
+                images.ImageSize = new Size(220, 160);
 
                 foreach (var img in imageList)
                 {
@@ -201,17 +201,7 @@ namespace EndoscopicSystem.V2.Forms
 
         private void btnNext_Click(object sender, EventArgs e)
         {
-            if (_isSave)
-            {
-                this.Hide();
-
-                FormProcedure formProcedure = new FormProcedure(_id, _hnNo, _procedureId, _appointmentId);
-                formProcedure.ShowDialog();
-                formProcedure = null;
-
-                this.Show();
-            }
-            else
+            if (!_isSave)
             {
                 try
                 {
@@ -222,14 +212,7 @@ namespace EndoscopicSystem.V2.Forms
                         btnSave.Enabled = false;
 
                         _isSave = true;
-
-                        this.Hide();
-
-                        FormProcedure formProcedure = new FormProcedure(_id, _hnNo, _procedureId, _appointmentId);
-                        formProcedure.ShowDialog();
-                        formProcedure = null;
-
-                        this.Show();
+                       
                     }
                 }
                 catch (Exception ex)
@@ -237,6 +220,14 @@ namespace EndoscopicSystem.V2.Forms
                     MessageBox.Show(ex.Message, "Saved not success.");
                 }
             }
+
+            this.Hide();
+
+            FormProcedure formProcedure = new FormProcedure(_id, _hnNo, _procedureId, _appointmentId, _pathFolderImageSave);
+            formProcedure.ShowDialog();
+            formProcedure = null;
+
+            this.Show();
         }
 
         private void PictureBox_DragEnter(object sender, DragEventArgs e)
@@ -714,6 +705,7 @@ namespace EndoscopicSystem.V2.Forms
         {
             SavePictureBoxOnClick(17, pictureBoxSaved17, btnEditPic17, btnDeletePictureBoxSaved17);
         }
+
         private void btnPictureBoxSaved18_Click(object sender, EventArgs e)
         {
             SavePictureBoxOnClick(18, pictureBoxSaved18, btnEditPic18, btnDeletePictureBoxSaved18);

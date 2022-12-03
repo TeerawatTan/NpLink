@@ -484,5 +484,12 @@ namespace EndoscopicSystem.V2.Forms.src
             comboBox.DataSource = _db.GetAnesthesists();
             comboBox.SelectedIndex = 0;
         }
+        public void DropdownFinancial(ComboBox comboBox)
+        {
+            comboBox.ValueMember = "ID";
+            comboBox.DisplayMember = "Name";
+            comboBox.DataSource = _db.GetFinancial();
+            comboBox.SelectedIndex = 0;
+        }
     }
 }

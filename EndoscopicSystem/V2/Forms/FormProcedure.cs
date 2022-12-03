@@ -11,6 +11,8 @@ using System.Configuration;
 using System.Data;
 using System.Data.Entity;
 using System.Drawing;
+using System.Drawing.Drawing2D;
+using System.Drawing.Imaging;
 using System.IO;
 using System.Linq;
 using System.Text;
@@ -24,14 +26,19 @@ namespace EndoscopicSystem.V2.Forms
         private string _reportPath = Application.StartupPath.Replace("\\bin\\Debug", "") + @"\Report\";
         private string _pathFolderPDF = Application.StartupPath.Replace("\\bin\\Debug", "") + @"\Pdf\";
         private string _pathFolderDicom = Application.StartupPath.Replace("\\bin\\Debug", "") + @"\Dicom\";
-        private string _hnNo;
-        private int _id, _procedureId, _appointmentId, _patientId, _endoscopicId;
+        private readonly string _initialDirectoryUpload = "C://Desktop";
+        private readonly string _titleUpload = "Select image to be upload.";
+        private readonly string _filterUpload = "Image Only(*.jpg; *.jpeg; *.gif; *.bmp; *.png)|*.jpg; *.jpeg; *.gif; *.bmp; *.png";
+        private readonly string _pathFolderImage = Application.StartupPath.Replace("\\bin\\Debug", "") + @"\ImageCapture\";
+        private string _pathFolderImageSave, _hnNo, _pathImg, _fileName = ".jpg", _vdoPath;
+        private int _id, _procedureId, _appointmentId, _patientId, _endoscopicId, _item, _aspectRatioID = 1;
         private readonly GetDropdownList _dropdownRepo = new GetDropdownList();
         private readonly EndoscopicEntities _db = new EndoscopicEntities();
         private readonly DropdownListService _dropdownListService = new DropdownListService();
         public Dictionary<int, string> _imgPath = new Dictionary<int, string>();
         private TextBox lastFocused;
-        public FormProcedure(int id, string hn, int procId, int appId)
+        public Form formPopup = new Form();
+        public FormProcedure(int id, string hn, int procId, int appId, string pathImg)
         {
             InitializeComponent();
 
@@ -39,6 +46,7 @@ namespace EndoscopicSystem.V2.Forms
             this._hnNo = hn;
             this._procedureId = procId;
             this._appointmentId = appId;
+            this._pathFolderImageSave = pathImg;
         }
 
         private void FormProcedure_Load(object sender, EventArgs e)
@@ -219,7 +227,11 @@ namespace EndoscopicSystem.V2.Forms
         {
             if (!string.IsNullOrWhiteSpace(_hnNo) && _procedureId > 0 && _endoscopicId > 0)
             {
-                ExportEndoscopic(_hnNo, _procedureId, _endoscopicId);
+                // Save
+                bool isSave = OnSave(_hnNo, _patientId, _procedureId, _endoscopicId);
+
+                // Export
+                //ExportEndoscopic(_hnNo, _procedureId, _endoscopicId);
             }
             else
             {
@@ -246,7 +258,6 @@ namespace EndoscopicSystem.V2.Forms
 
             return await Task.FromResult(ItemObject);
         }
-
         private void SearchHN(string hn, int procId = 0)
         {
             try
@@ -352,7 +363,6 @@ namespace EndoscopicSystem.V2.Forms
                 btnReport.Enabled = false;
             }
         }
-
         private void txbPreDiagCode_EGD_TextChanged(object sender, EventArgs e)
         {
             if (txbPreDiagCode_EGD.TextLength > 0)
@@ -365,7 +375,6 @@ namespace EndoscopicSystem.V2.Forms
                 }
             }
         }
-
         private void txbICD10Code_EGD_TextChanged(object sender, EventArgs e)
         {
             if (txbPreDiagCode_EGD.TextLength > 0)
@@ -378,7 +387,6 @@ namespace EndoscopicSystem.V2.Forms
                 }
             }
         }
-
         private void LoadTextBoxAutoComplete(TextBox textBox)
         {
             var findingList = _dropdownRepo.GetFindingLabels(_procedureId);
@@ -392,6 +400,7 @@ namespace EndoscopicSystem.V2.Forms
                 textBox.AutoCompleteCustomSource = ac;
             }
         }
+       
         #endregion
 
         #region Push Data
@@ -443,8 +452,6 @@ namespace EndoscopicSystem.V2.Forms
                 }
             }
         }
-
-
         private void PushEndoscopicData(
            int? procId,
            Patient patient = null,
@@ -474,7 +481,7 @@ namespace EndoscopicSystem.V2.Forms
                 chkWard_EGD.Checked = patient.WardID.HasValue && patient.WardID.Value > 0 ? true : false;
                 chkRefer_EGD.Checked = patient.ReferCheck ?? false;
                 txbRefer_EGD.Text = patient.ReferDetail;
-                txbGeneralFinancial_EGD.Text = patient.Financial;
+                cbbGeneralFinancial_EGD.SelectedValue = patient.FinancialID;
                 cbbGeneralDoctor_EGD.SelectedValue = patient.DoctorID ?? 0;
                 cbbGeneralAnesthesia_EGD.SelectedValue = patient.AnesthesiaID ?? 0;
                 cbbGeneralAnesthesist_EGD.SelectedValue = patient.AnesthesistID ?? 0;
@@ -805,7 +812,204 @@ namespace EndoscopicSystem.V2.Forms
             PushEndoscopicImage();
             //PushEndoscopicVideo();
         }
+        private int SaveLogEndoscopic(Endoscopic en, int patientId, int procedureId)
+        {
+            if (en == null) return 0;
 
+            try
+            {
+                Endoscopic_Log log = new Endoscopic_Log()
+                {
+                    CreateDate = DateTime.Now,
+                    EndoscopicID = en.EndoscopicID,
+                    AnesNurse = en.AnesNurse,
+                    Anesthesia = en.Anesthesia,
+                    Arrive = en.Arrive,
+                    Assistant1 = en.Assistant1,
+                    Assistant2 = en.Assistant2,
+                    Comment = en.Comment,
+                    Complication = en.Complication,
+                    Diagnosis = en.Diagnosis,
+                    EndoscopistID = en.EndoscopistID,
+                    EndRecordDate = en.EndRecordDate,
+                    FindingID = en.FindingID,
+                    FluDose = en.FluDose,
+                    FollowUpCase = en.FollowUpCase,
+                    History = en.History,
+                    InCase = en.InCase,
+                    Indication = en.Indication,
+                    IndicationID = en.IndicationID,
+                    IndicationOther = en.IndicationOther,
+                    Instrument = en.Instrument,
+                    Intervention = en.Intervention,
+                    InterventionID = en.InterventionID,
+                    MedicationID = en.MedicationID,
+                    MedicationOther = en.MedicationOther,
+                    NewCase = en.NewCase,
+                    NurseFirstID = en.NurseFirstID,
+                    NurseSecondID = en.NurseSecondID,
+                    NurseThirthID = en.NurseThirthID,
+                    PatientID = en.PatientID,
+                    ProcedureID = en.ProcedureID,
+                    ReferringPhysicain = en.ReferringPhysicain,
+                    SpecimenID = en.SpecimenID,
+                    StartRecordDate = en.StartRecordDate,
+                    IsActive = true
+                };
+                _db.Endoscopic_Log.Add(log);
+                if (_db.SaveChanges() > 0)
+                {
+                    var logEndoscopic = _db.Endoscopic_Log.Where(x => x.ProcedureID == procedureId && x.PatientID == patientId).OrderByDescending(o => o.CreateDate).FirstOrDefault();
+                    if (logEndoscopic != null)
+                    {
+                        return logEndoscopic.ID;
+                    }
+                }
+                return 0;
+
+            }
+            catch (Exception)
+            {
+                return 0;
+            }
+        }
+        private void SaveLogHistory(int patientId, int procedureId, int? doctorID, int logEndoId = 0)
+        {
+            History history = new History();
+            history.PatientID = patientId;
+            history.EndoscopicID = logEndoId;
+            history.ProcedureID = procedureId;
+            history.DoctorID = doctorID;
+            history.CreateDate = DateTime.Now;
+            history.CreateBy = _id;
+            history.IsActive = true;
+            _db.Histories.Add(history);
+            _db.SaveChanges();
+        }
+        private void UpdateDataAll(int procedureId, int patientId, Endoscopic endoscopic)
+        {
+            try
+            {
+                var findingData = _db.Findings.Where(x => x.PatientID == patientId).OrderByDescending(o => o.FindingID).FirstOrDefault();
+                endoscopic.FindingID = findingData.FindingID;
+                endoscopic.IsSaved = true;
+                endoscopic.ProcedureID = procedureId;
+                //endoscopic.Diagnosis = txtDiagnosis.Text;
+                //endoscopic.Complication = txtComplication.Text;
+                //endoscopic.Comment = txtComment.Text;
+                if (procedureId == 1) // || procedureId == 2 || procedureId == 3 || procedureId == 5)
+                {
+                    endoscopic.EndoscopistID = (int?)cbbGeneralDoctor_EGD.SelectedValue;
+                    endoscopic.Arrive = dpGeneralFrom_EGD.Value;
+                    endoscopic.Instrument = txbGeneralInstrument_EGD.Text;
+                    endoscopic.MedicationID = (int?)cbbGeneralMedication_EGD.SelectedValue;
+                    endoscopic.Indication = (int?)cbbGeneralIndication_EGD.SelectedValue;
+                    endoscopic.NurseFirstID = (int?)cbbGeneralNurse1_EGD.SelectedValue;
+                    endoscopic.NurseSecondID = (int?)cbbGeneralNurse2_EGD.SelectedValue;
+                    endoscopic.NurseThirthID = (int?)cbbGeneralNurse3_EGD.SelectedValue;
+                    endoscopic.MedicationOther = txbGeneralMedication_EGD.Text;
+                    endoscopic.IndicationOther = txbGeneralIndication_EGD.Text;
+                    //if (procedureId == 3) endoscopic.InterventionID = SaveIntervention();
+                }
+                else
+                {
+                    endoscopic.EndoscopistID = (int?)cbbGeneralDoctor_Colono.SelectedValue;
+                    endoscopic.Arrive = dpGeneralFrom_Colono.Value;
+                    endoscopic.Instrument = txbGeneralInstrument_Colono.Text;
+                    endoscopic.MedicationID = (int?)cbbGeneralMedication_Colono.SelectedValue;
+                    endoscopic.NurseFirstID = (int?)cbbGeneralNurse1_Colono.SelectedValue;
+                    endoscopic.NurseSecondID = (int?)cbbGeneralNurse2_Colono.SelectedValue;
+                    endoscopic.NurseThirthID = (int?)cbbGeneralNurse3_Colono.SelectedValue;
+                    endoscopic.MedicationOther = txbGeneralMedication_Colono.Text;
+                    //endoscopic.IndicationID = SaveIndication();
+                }
+                //endoscopic.SpecimenID = SaveSpecimen(procedureId);
+                //endoscopic.StartRecordDate = recordStartDate;
+                //endoscopic.EndRecordDate = recordEndDate;
+                endoscopic.UpdateDate = System.DateTime.Now;
+                endoscopic.UpdateBy = _id;
+
+                var patient = _db.Patients.Where(x => x.PatientID == patientId).FirstOrDefault();
+                if (patient != null)
+                {
+                    patient.Fullname = procedureId == 1 ? txbFullName_EGD.Text : txbFullName_Colono.Text;
+                    patient.Age = procedureId == 1 ? Convert.ToInt32(txbAge_EGD.Text) : Convert.ToInt32(txbAge_Colono);
+                    patient.ProcedureID = procedureId;
+                    patient.UpdateBy = _id;
+                    patient.UpdateDate = DateTime.Now;
+                    if (procedureId == 1) // || procedureId == 2 || procedureId == 3)
+                    {
+                        patient.DoctorID = (int?)cbbGeneralDoctor_EGD.SelectedValue;
+                        patient.NurseFirstID = (int?)cbbGeneralNurse1_EGD.SelectedValue;
+                        patient.NurseSecondID = (int?)cbbGeneralNurse2_EGD.SelectedValue;
+                        patient.NurseThirthID = (int?)cbbGeneralNurse3_EGD.SelectedValue;
+                        patient.AnesthesiaID = (int?)cbbGeneralAnesthesia_EGD.SelectedValue;
+                    }
+                    else
+                    {
+                        patient.DoctorID = (int?)cbbGeneralDoctor_Colono.SelectedValue;
+                        patient.NurseFirstID = (int?)cbbGeneralNurse1_Colono.SelectedValue;
+                        patient.NurseSecondID = (int?)cbbGeneralNurse2_Colono.SelectedValue;
+                        patient.NurseThirthID = (int?)cbbGeneralNurse3_Colono.SelectedValue;
+                        patient.AnesthesiaID = (int?)cbbGeneralAnesthesia_Colono.SelectedValue;
+                    }
+                }
+
+                //UpdateFinding(procedureId);
+                //UpdateAppointment(endoscopicId);
+                //SaveImage(endoscopic.EndoscopicID, procedureId);
+                //SaveAllImage(endoscopic.EndoscopicID, procedureId);
+                //SaveVideo(endoscopic.EndoscopicID, procedureId);
+                SaveLogEndoscopic(endoscopic, patientId, procedureId);
+                SaveLogHistory(patientId, procedureId, patient.DoctorID, endoscopic.EndoscopicID);
+                _db.SaveChanges();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+        }
+        private void UpdateEndoscopic(int patientId, int procedureId, int endoscopicId)
+        {
+            Endoscopic endo = new Endoscopic();
+            if (endoscopicId == 0)
+            {
+                Endoscopic endoscopic = new Endoscopic() { PatientID = patientId, IsSaved = false, ProcedureID = procedureId, CreateBy = _id, CreateDate = System.DateTime.Now };
+                _db.Endoscopics.Add(endoscopic);
+
+                Finding finding = new Finding() { PatientID = patientId, CreateBy = _id, CreateDate = System.DateTime.Now };
+                _db.Findings.Add(finding);
+                _db.SaveChanges();
+
+                var endos = _db.Endoscopics.ToList();
+                endo = endos.LastOrDefault();
+                endoscopicId = endo.EndoscopicID;
+            }
+            else
+            {
+                endo = _db.Endoscopics.Where(x => x.EndoscopicID == endoscopicId).FirstOrDefault();
+            }
+            UpdateDataAll(procedureId, patientId, endo);
+
+        }
+        private bool OnSave(string hn, int patientId, int procedureId, int endoscopicId)
+        {
+            if (string.IsNullOrWhiteSpace(hn) || patientId <= 0 || procedureId <= 0 || endoscopicId <= 0)
+                return false;
+
+            try
+            {
+                UpdateEndoscopic(patientId, procedureId, endoscopicId);
+                
+                MessageBox.Show(Constant.STATUS_SUCCESS, "Save Form", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+                return true;
+            }
+            catch (Exception)
+            {
+                return false;
+            }
+        }
 
         #endregion
 
@@ -815,7 +1019,7 @@ namespace EndoscopicSystem.V2.Forms
         {
             RemoveTabPage();
 
-            if (procedureId == 1)
+            if (procedureId == 1)   // EGD
             {
                 TabPage[] tabs = { tabGeneralEGD, tabFindingEGD };
                 tabControl1.TabPages.AddRange(tabs);
@@ -829,6 +1033,23 @@ namespace EndoscopicSystem.V2.Forms
                 _dropdownListService.DropdownNurse(cbbGeneralNurse3_EGD);
                 _dropdownListService.DropdownMedication(cbbGeneralMedication_EGD);
                 _dropdownListService.DropdownIndication(cbbGeneralIndication_EGD);
+                _dropdownListService.DropdownFinancial(cbbGeneralFinancial_EGD);
+            }
+            else if (procedureId == 2)  // Colonoscopy
+            {
+                TabPage[] tabs = { tabGeneralColonoscopy, tabFindingColonoscopy };
+                tabControl1.TabPages.AddRange(tabs);
+                _dropdownListService.DropdownOPD(cbbGeneralOPD_Colono);
+                _dropdownListService.DropdownWard(cbbGeneralWard_Colono);
+                _dropdownListService.DropdownDoctor(cbbGeneralDoctor_Colono);
+                _dropdownListService.DropdownAnesthesia(cbbGeneralAnesthesia_Colono);
+                _dropdownListService.DropdownAnesthesist(cbbGeneralAnesthesist_Colono);
+                _dropdownListService.DropdownNurse(cbbGeneralNurse1_Colono);
+                _dropdownListService.DropdownNurse(cbbGeneralNurse2_Colono);
+                _dropdownListService.DropdownNurse(cbbGeneralNurse3_Colono);
+                _dropdownListService.DropdownMedication(cbbGeneralMedication_Colono);
+                _dropdownListService.DropdownIndication(cbbGeneralIndication_Colono);
+                _dropdownListService.DropdownFinancial(cbbGeneralFinancial_Colono);
             }
         }
 
@@ -847,5 +1068,504 @@ namespace EndoscopicSystem.V2.Forms
         }
 
         #endregion
+
+
+        private void pictureBoxRefresh()
+        {
+            pictureBoxSaved1.ImageLocation = pictureBoxSaved1.ImageLocation;
+            pictureBoxSaved1.Refresh();
+            pictureBoxSaved2.ImageLocation = pictureBoxSaved2.ImageLocation;
+            pictureBoxSaved2.Refresh();
+            pictureBoxSaved3.ImageLocation = pictureBoxSaved3.ImageLocation;
+            pictureBoxSaved3.Refresh();
+            pictureBoxSaved4.ImageLocation = pictureBoxSaved4.ImageLocation;
+            pictureBoxSaved4.Refresh();
+            pictureBoxSaved5.ImageLocation = pictureBoxSaved5.ImageLocation;
+            pictureBoxSaved5.Refresh();
+
+            pictureBoxSaved7.ImageLocation = pictureBoxSaved7.ImageLocation;
+            pictureBoxSaved7.Refresh();
+            pictureBoxSaved8.ImageLocation = pictureBoxSaved8.ImageLocation;
+            pictureBoxSaved8.Refresh();
+            pictureBoxSaved9.ImageLocation = pictureBoxSaved9.ImageLocation;
+            pictureBoxSaved9.Refresh();
+            pictureBoxSaved9.ImageLocation = pictureBoxSaved9.ImageLocation;
+            pictureBoxSaved9.Refresh();
+            pictureBoxSaved10.ImageLocation = pictureBoxSaved10.ImageLocation;
+            pictureBoxSaved10.Refresh();
+            pictureBoxSaved11.ImageLocation = pictureBoxSaved11.ImageLocation;
+            pictureBoxSaved11.Refresh();
+            pictureBoxSaved12.ImageLocation = pictureBoxSaved12.ImageLocation;
+            pictureBoxSaved12.Refresh();
+            pictureBoxSaved13.ImageLocation = pictureBoxSaved13.ImageLocation;
+            pictureBoxSaved13.Refresh();
+            pictureBoxSaved14.ImageLocation = pictureBoxSaved14.ImageLocation;
+            pictureBoxSaved14.Refresh();
+            pictureBoxSaved15.ImageLocation = pictureBoxSaved15.ImageLocation;
+            pictureBoxSaved15.Refresh();
+            pictureBoxSaved16.ImageLocation = pictureBoxSaved16.ImageLocation;
+            pictureBoxSaved16.Refresh();
+            pictureBoxSaved17.ImageLocation = pictureBoxSaved17.ImageLocation;
+            pictureBoxSaved17.Refresh();
+            pictureBoxSaved18.ImageLocation = pictureBoxSaved18.ImageLocation;
+            pictureBoxSaved18.Refresh();
+
+            foreach (var i in formPopup.Controls)
+            {
+                if (i.GetType() == typeof(PictureBox))
+                {
+                    PictureBox p = i as PictureBox;
+                    p.ImageLocation = p.ImageLocation;
+                    p.Refresh();
+                }
+            }
+        }
+        private async Task<Bitmap> ResizeImgToPictureBox(Image image, int width, int height)
+        {
+            var destRect = new Rectangle(0, 0, width, height);
+            //create new destImage object
+            var destImage = new Bitmap(width, height);
+
+            //maintains DPI regardless of physical size
+            destImage.SetResolution(image.HorizontalResolution, image.VerticalResolution);
+
+            using (var graphics = Graphics.FromImage(destImage))
+            {
+                //determines whether pixels from a source image overwrite or are combined with background pixels.
+                graphics.CompositingMode = CompositingMode.SourceCopy;
+                //determines the rendering quality level of layered images.
+                graphics.CompositingQuality = CompositingQuality.HighQuality;
+                // determines how intermediate values between two endpoints are calculated
+                graphics.InterpolationMode = InterpolationMode.HighQualityBicubic;
+                //specifies whether lines, curves, and the edges of filled areas use smoothing 
+                graphics.SmoothingMode = SmoothingMode.HighQuality;
+                //affects rendering quality when drawing the new image
+                graphics.PixelOffsetMode = PixelOffsetMode.HighQuality;
+
+                using (var wrapMode = new ImageAttributes())
+                {
+                    //prevents ghosting around the image borders
+                    wrapMode.SetWrapMode(WrapMode.TileFlipXY);
+                    graphics.DrawImage(image, destRect, 0, 0, image.Width, image.Height, GraphicsUnit.Pixel, wrapMode);
+                }
+            }
+            return await Task.FromResult(destImage);
+        }
+
+        private async Task<Image> ResizeImg(Image img, int x, int y, int width, int height, bool isFullScreen)
+        {
+            Bitmap reImg = await ResizeImgToPictureBox(img, pictureBoxSnapshot.Width, pictureBoxSnapshot.Height);
+
+            Bitmap crpImg = null;
+            if (!isFullScreen)
+            {
+                crpImg = new Bitmap(pictureBoxSnapshot.Width, pictureBoxSnapshot.Height);
+                Graphics grp = Graphics.FromImage(crpImg);
+                Rectangle rect = new Rectangle(x, y, width, height);
+                Rectangle dest = new Rectangle(0, 0, pictureBoxSnapshot.Width, pictureBoxSnapshot.Height);
+                grp.DrawImage(reImg, dest, rect, GraphicsUnit.Pixel);
+                grp.Dispose();
+            }
+            else
+            {
+                crpImg = new Bitmap(img, img.Width, img.Height);
+            }
+            return (Image)crpImg;
+        }
+
+        private async Task<string> saveImageFile(Bitmap img, int num)
+        {
+            Image cropedImg = null;
+            string ImgPath = null;
+
+            try
+            {
+                ++_item;
+                string filename = System.IO.Path.GetFileName(openFileDialog1.FileName);
+                string filenameExtension = System.IO.Path.GetExtension(filename);
+                if (filename == null)
+                {
+                    MessageBox.Show("Please select a valid image.");
+                }
+                else
+                {
+                    string namaImage = "Image";
+                    string nameCapture = String.Format("{0}_{1}.jpg", namaImage, _item);
+
+                    int aspectRatio_X = 0;
+                    int aspectRatio_Y = 0;
+                    int width = img.Width;
+                    int height = img.Height;
+                    bool isFullScreen = false;
+
+                    switch (_aspectRatioID)
+                    {
+                        case 0://Custom
+                            var ratio = _db.Users.Where(x => x.Id == _id).Select(x => new { x.CrpX, x.CrpY, x.CrpWidth, x.CrpHeight }).FirstOrDefault();
+                            aspectRatio_X = ratio.CrpX ?? 0;
+                            aspectRatio_Y = ratio.CrpY ?? 0;
+                            width = ratio.CrpWidth ?? width;
+                            height = ratio.CrpHeight ?? height;
+                            break;
+                        default://FullScreen
+                            isFullScreen = true;
+                            break;
+                    }
+                    _pathFolderImageSave = _pathFolderImage + _hnNo + @"\" + DateTime.Now.ToString("yyyyMMdd") + @"\" + cbbProcedureList.Text + @"\" + _appointmentId + @"\";
+                    if (!Directory.Exists(_pathFolderImageSave))
+                    {
+                        Directory.CreateDirectory(_pathFolderImageSave);
+                    }
+
+                    cropedImg = await ResizeImg(img, aspectRatio_X, aspectRatio_Y, width, height, isFullScreen);
+                    cropedImg.Save(_pathFolderImageSave + nameCapture, System.Drawing.Imaging.ImageFormat.Png);
+                    ImgPath = _pathFolderImageSave + nameCapture;
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message, "File Already exits");
+            }
+
+            return ImgPath;
+        }
+
+
+        private async Task<string> uploadImageFile(int num)
+        {
+            openFileDialog1.InitialDirectory = _initialDirectoryUpload;
+            openFileDialog1.Title = _titleUpload;
+            openFileDialog1.Filter = _filterUpload;
+            openFileDialog1.FilterIndex = 1;
+
+            string cropedImgPath = null;
+
+            try
+            {
+                if (openFileDialog1.ShowDialog() == System.Windows.Forms.DialogResult.OK)
+                {
+                    if (openFileDialog1.CheckFileExists)
+                    {
+                        Bitmap Imageupload = new Bitmap(openFileDialog1.FileName);
+                        cropedImgPath = await saveImageFile(Imageupload, num);
+
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+            return cropedImgPath;
+        }
+
+
+        #region btnDeletePictureBoxSaved_Click
+        private void btnDeletePictureBoxSaved1_Click(object sender, EventArgs e)
+        {
+            pictureBoxSaved1.ImageLocation = null;
+            pictureBoxSaved1.Update();
+            btnDeletePictureBoxSaved1.Visible = false;
+            btnEditPic1.Visible = false;
+        }
+        private void btnDeletePictureBoxSaved2_Click(object sender, EventArgs e)
+        {
+            pictureBoxSaved2.ImageLocation = null;
+            pictureBoxSaved2.Update();
+            btnDeletePictureBoxSaved2.Visible = false;
+            btnEditPic2.Visible = false;
+        }
+        private void btnDeletePictureBoxSaved3_Click(object sender, EventArgs e)
+        {
+            pictureBoxSaved3.ImageLocation = null;
+            pictureBoxSaved3.Update();
+            btnDeletePictureBoxSaved3.Visible = false;
+            btnEditPic3.Visible = false;
+        }
+        private void btnDeletePictureBoxSaved4_Click(object sender, EventArgs e)
+        {
+            pictureBoxSaved4.ImageLocation = null;
+            pictureBoxSaved4.Update();
+            btnDeletePictureBoxSaved4.Visible = false;
+            btnEditPic4.Visible = false;
+        }
+        private void btnDeletePictureBoxSaved5_Click(object sender, EventArgs e)
+        {
+
+            pictureBoxSaved5.ImageLocation = null;
+            pictureBoxSaved5.Update();
+            btnDeletePictureBoxSaved5.Visible = false;
+            btnEditPic5.Visible = false;
+        }
+        private void btnDeletePictureBoxSaved6_Click(object sender, EventArgs e)
+        {
+            pictureBoxSaved7.ImageLocation = null;
+            pictureBoxSaved7.Update();
+            btnDeletePictureBoxSaved7.Visible = false;
+            btnEditPic7.Visible = false;
+        }
+        private void btnDeletePictureBoxSaved7_Click(object sender, EventArgs e)
+        {
+            pictureBoxSaved8.ImageLocation = null;
+            pictureBoxSaved8.Update();
+            btnDeletePictureBoxSaved8.Visible = false;
+            btnEditPic8.Visible = false;
+        }
+        private void btnDeletePictureBoxSaved8_Click(object sender, EventArgs e)
+        {
+            pictureBoxSaved9.ImageLocation = null;
+            pictureBoxSaved9.Update();
+            btnDeletePictureBoxSaved9.Visible = false;
+            btnEditPic9.Visible = false;
+        }
+        //private void btnDeletePictureBoxSaved9_Click(object sender, EventArgs e)
+        //{
+        //    pictureBoxSaved9.ImageLocation = null;
+        //    pictureBoxSaved9.Update();
+        //    btnDeletePictureBoxSaved9.Visible = false;
+        //    btnEditPic9.Visible = false;
+        //}
+        private void btnDeletePictureBoxSaved10_Click(object sender, EventArgs e)
+        {
+            pictureBoxSaved10.ImageLocation = null;
+            pictureBoxSaved10.Update();
+            btnDeletePictureBoxSaved10.Visible = false;
+            btnEditPic10.Visible = false;
+        }
+        private void btnDeletePictureBoxSaved11_Click(object sender, EventArgs e)
+        {
+            pictureBoxSaved11.ImageLocation = null;
+            pictureBoxSaved11.Update();
+            btnDeletePictureBoxSaved11.Visible = false;
+            btnEditPic11.Visible = false;
+        }
+        private void btnDeletePictureBoxSaved12_Click(object sender, EventArgs e)
+        {
+            pictureBoxSaved12.ImageLocation = null;
+            pictureBoxSaved12.Update();
+            btnDeletePictureBoxSaved12.Visible = false;
+            btnEditPic12.Visible = false;
+        }
+        private void btnDeletePictureBoxSaved13_Click(object sender, EventArgs e)
+        {
+            pictureBoxSaved13.ImageLocation = null;
+            pictureBoxSaved13.Update();
+            btnDeletePictureBoxSaved13.Visible = false;
+            btnEditPic13.Visible = false;
+        }
+        private void btnDeletePictureBoxSaved14_Click(object sender, EventArgs e)
+        {
+            pictureBoxSaved14.ImageLocation = null;
+            pictureBoxSaved14.Update();
+            btnDeletePictureBoxSaved14.Visible = false;
+            btnEditPic14.Visible = false;
+        }
+        private void btnDeletePictureBoxSaved15_Click(object sender, EventArgs e)
+        {
+            pictureBoxSaved15.ImageLocation = null;
+            pictureBoxSaved15.Update();
+            btnDeletePictureBoxSaved15.Visible = false;
+            btnEditPic15.Visible = false;
+        }
+        private void btnDeletePictureBoxSaved16_Click(object sender, EventArgs e)
+        {
+            pictureBoxSaved16.ImageLocation = null;
+            pictureBoxSaved16.Update();
+            btnDeletePictureBoxSaved16.Visible = false;
+            btnEditPic16.Visible = false;
+        }
+        private void btnDeletePictureBoxSaved17_Click(object sender, EventArgs e)
+        {
+            pictureBoxSaved17.ImageLocation = null;
+            pictureBoxSaved17.Update();
+            btnDeletePictureBoxSaved17.Visible = false;
+            btnEditPic17.Visible = false;
+        }
+        private void btnDeletePictureBoxSaved18_Click(object sender, EventArgs e)
+        {
+            pictureBoxSaved18.ImageLocation = null;
+            pictureBoxSaved18.Update();
+            btnDeletePictureBoxSaved18.Visible = false;
+            btnEditPic18.Visible = false;
+        }
+        #endregion
+
+        #region BtnEditPic_Click
+        private void btnEditPic1_Click(object sender, EventArgs e)
+        {
+            EditPictureCaptureOnClick(pictureBoxSaved1);
+        }
+        private void btnEditPic2_Click(object sender, EventArgs e)
+        {
+            EditPictureCaptureOnClick(pictureBoxSaved2);
+        }
+        private void btnEditPic3_Click(object sender, EventArgs e)
+        {
+            EditPictureCaptureOnClick(pictureBoxSaved3);
+        }
+        private void btnEditPic4_Click(object sender, EventArgs e)
+        {
+            EditPictureCaptureOnClick(pictureBoxSaved4);
+        }
+        private void btnEditPic5_Click(object sender, EventArgs e)
+        {
+            EditPictureCaptureOnClick(pictureBoxSaved5);
+        }
+        private void btnEditPic6_Click(object sender, EventArgs e)
+        {
+            EditPictureCaptureOnClick(pictureBoxSaved7);
+        }
+        private void btnEditPic7_Click(object sender, EventArgs e)
+        {
+            EditPictureCaptureOnClick(pictureBoxSaved8);
+        }
+        private void btnEditPic8_Click(object sender, EventArgs e)
+        {
+            EditPictureCaptureOnClick(pictureBoxSaved9);
+        }
+        //private void btnEditPic9_Click(object sender, EventArgs e)
+        //{
+        //    EditPictureCaptureOnClick(pictureBoxSaved9);
+        //}
+        private void btnEditPic10_Click(object sender, EventArgs e)
+        {
+            EditPictureCaptureOnClick(pictureBoxSaved10);
+        }
+        private void btnEditPic11_Click(object sender, EventArgs e)
+        {
+            EditPictureCaptureOnClick(pictureBoxSaved11);
+        }
+        private void btnEditPic12_Click(object sender, EventArgs e)
+        {
+            EditPictureCaptureOnClick(pictureBoxSaved12);
+        }
+        private void btnEditPic13_Click(object sender, EventArgs e)
+        {
+            EditPictureCaptureOnClick(pictureBoxSaved13);
+        }
+        private void btnEditPic14_Click(object sender, EventArgs e)
+        {
+            EditPictureCaptureOnClick(pictureBoxSaved14);
+        }
+        private void btnEditPic15_Click(object sender, EventArgs e)
+        {
+            EditPictureCaptureOnClick(pictureBoxSaved15);
+        }
+        private void btnEditPic16_Click(object sender, EventArgs e)
+        {
+            EditPictureCaptureOnClick(pictureBoxSaved16);
+        }
+        private void btnEditPic17_Click(object sender, EventArgs e)
+        {
+            EditPictureCaptureOnClick(pictureBoxSaved17);
+        }
+        private void btnEditPic18_Click(object sender, EventArgs e)
+        {
+            EditPictureCaptureOnClick(pictureBoxSaved18);
+        }
+        public void EditPictureCaptureOnClick(PictureBox pictureBox)
+        {
+            using (System.Diagnostics.Process ExternalProcess = new System.Diagnostics.Process())
+            {
+                ExternalProcess.StartInfo.FileName = ("mspaint.exe");
+                string imgLo = string.Concat("\"", pictureBox.ImageLocation, "\"");
+                ExternalProcess.StartInfo.Arguments = imgLo;
+                ExternalProcess.StartInfo.UseShellExecute = true;
+                ExternalProcess.Start();
+                ExternalProcess.WaitForExit();
+            }
+            pictureBoxRefresh();
+        }
+
+        #endregion
+
+        #region BtnPictureBoxSaved_Click
+        private void btnPictureBoxSaved1_Click(object sender, EventArgs e)
+        {
+            SavePictureBoxOnClick(1, pictureBoxSaved1, btnEditPic1, btnDeletePictureBoxSaved1);
+        }
+        private void btnPictureBoxSaved2_Click(object sender, EventArgs e)
+        {
+            SavePictureBoxOnClick(2, pictureBoxSaved2, btnEditPic2, btnDeletePictureBoxSaved2);
+        }
+        private void btnPictureBoxSaved3_Click(object sender, EventArgs e)
+        {
+            SavePictureBoxOnClick(3, pictureBoxSaved3, btnEditPic3, btnDeletePictureBoxSaved3);
+        }
+        private void btnPictureBoxSaved4_Click(object sender, EventArgs e)
+        {
+            SavePictureBoxOnClick(4, pictureBoxSaved4, btnEditPic4, btnDeletePictureBoxSaved4);
+        }
+        private void btnPictureBoxSaved5_Click(object sender, EventArgs e)
+        {
+            SavePictureBoxOnClick(5, pictureBoxSaved5, btnEditPic5, btnDeletePictureBoxSaved5);
+        }
+        private void btnPictureBoxSaved6_Click(object sender, EventArgs e)
+        {
+            SavePictureBoxOnClick(6, pictureBoxSaved7, btnEditPic7, btnDeletePictureBoxSaved7);
+        }
+        private void btnPictureBoxSaved7_Click(object sender, EventArgs e)
+        {
+            SavePictureBoxOnClick(7, pictureBoxSaved8, btnEditPic8, btnDeletePictureBoxSaved8);
+        }
+        private void btnPictureBoxSaved8_Click(object sender, EventArgs e)
+        {
+            SavePictureBoxOnClick(8, pictureBoxSaved9, btnEditPic9, btnDeletePictureBoxSaved9);
+        }
+        //private void btnPictureBoxSaved9_Click(object sender, EventArgs e)
+        //{
+        //    SavePictureBoxOnClick(9, pictureBoxSaved9, btnEditPic9, btnDeletePictureBoxSaved9);
+        //}
+        private void btnPictureBoxSaved10_Click(object sender, EventArgs e)
+        {
+            SavePictureBoxOnClick(10, pictureBoxSaved10, btnEditPic10, btnDeletePictureBoxSaved10);
+        }
+        private void btnPictureBoxSaved11_Click(object sender, EventArgs e)
+        {
+            SavePictureBoxOnClick(11, pictureBoxSaved11, btnEditPic11, btnDeletePictureBoxSaved11);
+        }
+        private void btnPictureBoxSaved12_Click(object sender, EventArgs e)
+        {
+            SavePictureBoxOnClick(12, pictureBoxSaved12, btnEditPic12, btnDeletePictureBoxSaved12);
+        }
+        private void btnPictureBoxSaved13_Click(object sender, EventArgs e)
+        {
+            SavePictureBoxOnClick(13, pictureBoxSaved13, btnEditPic13, btnDeletePictureBoxSaved13);
+        }
+        private void btnPictureBoxSaved14_Click(object sender, EventArgs e)
+        {
+            SavePictureBoxOnClick(14, pictureBoxSaved14, btnEditPic14, btnDeletePictureBoxSaved14);
+        }
+        private void btnPictureBoxSaved15_Click(object sender, EventArgs e)
+        {
+            SavePictureBoxOnClick(15, pictureBoxSaved15, btnEditPic15, btnDeletePictureBoxSaved15);
+        }
+        private void btnPictureBoxSaved16_Click(object sender, EventArgs e)
+        {
+            SavePictureBoxOnClick(16, pictureBoxSaved16, btnEditPic16, btnDeletePictureBoxSaved16);
+        }
+        private void btnPictureBoxSaved17_Click(object sender, EventArgs e)
+        {
+            SavePictureBoxOnClick(17, pictureBoxSaved17, btnEditPic17, btnDeletePictureBoxSaved17);
+        }
+
+        private void btnPictureBoxSaved18_Click(object sender, EventArgs e)
+        {
+            SavePictureBoxOnClick(18, pictureBoxSaved18, btnEditPic18, btnDeletePictureBoxSaved18);
+        }
+        public async void SavePictureBoxOnClick(int num, PictureBox pictureBox, Button btnEdit, Button btnDelete)
+        {
+            string FilePath = await uploadImageFile(num);
+            if (FilePath != null)
+            {
+                pictureBox.ImageLocation = FilePath;
+                pictureBox.SizeMode = PictureBoxSizeMode.StretchImage;
+                pictureBox.Update();
+                btnEdit.Visible = true;
+                btnDelete.Visible = true;
+            }
+        }
+        #endregion
+
     }
 }

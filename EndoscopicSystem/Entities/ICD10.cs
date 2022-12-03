@@ -14,9 +14,8 @@ namespace EndoscopicSystem.Entities
     
     public partial class ICD10
     {
+        public int ID { get; set; }
         public string Code { get; set; }
         public string Name { get; set; }
-        public Nullable<System.DateTime> CreateDate { get; set; }
-        public Nullable<System.DateTime> UpdateDate { get; set; }
     }
 }

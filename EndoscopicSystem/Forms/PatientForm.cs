@@ -53,6 +53,7 @@ namespace EndoscopicSystem
             DropdownMasterIndication();
             DropdownPreDiagnosis(cbbPreDiagnosis1);
             DropdownPreDiagnosis(cbbPreDiagnosis2);
+            DropdownFinancial();
 
             gridPatient.DataSource = new HistoryModel();
 
@@ -90,7 +91,7 @@ namespace EndoscopicSystem
                     patientId = response.PatientID;
                     txtAge.Text = response.Age.HasValue ? response.Age.ToString() : "";
                     txtCID.Text = response.CardID;
-                    txbFinancial.Text = response.Financial;
+                    cbbFinancial.SelectedValue = response.FinancialID;
                     cbbDoctorName.SelectedValue = response.DoctorID ?? 0;
                     txtFullName.Text = response.Fullname;
                     txtHN.Text = response.HN;
@@ -231,7 +232,7 @@ namespace EndoscopicSystem
                             dtOperatingTime.Value.Second);
 
                         patient.PicturePath = SavePicture() ?? patient.PicturePath;
-                        patient.Financial = txbFinancial.Text;
+                        patient.FinancialID = (int?)cbbFinancial.SelectedValue;
                         patient.OpdID = (int?)cbbOPD.SelectedValue;
                         patient.WardID = (int?)cbbWard.SelectedValue;
                         patient.ReferCheck = chkRefer.Checked;
@@ -285,7 +286,7 @@ namespace EndoscopicSystem
                             dtOperatingTime.Value.Minute,
                             dtOperatingTime.Value.Second);
                         patient.PicturePath = SavePicture() ?? patient.PicturePath;
-                        patient.Financial = txbFinancial.Text;
+                        patient.FinancialID = (int?)cbbFinancial.SelectedValue;
                         patient.OpdID = (int?)cbbOPD.SelectedValue;
                         patient.WardID = (int?)cbbWard.SelectedValue;
                         patient.ReferCheck = chkRefer.Checked;
@@ -322,7 +323,7 @@ namespace EndoscopicSystem
                         throw dbEx;
                     }
 
-                    MessageBox.Show(status);
+                    MessageBox.Show(status, "Save Form", MessageBoxButtons.OK, MessageBoxIcon.Information);
                     ResetForm();
                 }
                 catch (Exception ex)
@@ -557,6 +558,13 @@ namespace EndoscopicSystem
             comboBox.DisplayMember = "Name";
             comboBox.DataSource = list.GetICD10s();
             comboBox.SelectedIndex = 0;
+        }
+        public void DropdownFinancial()
+        {
+            cbbFinancial.ValueMember = "ID";
+            cbbFinancial.DisplayMember = "Name";
+            cbbFinancial.DataSource = list.GetFinancial();
+            cbbFinancial.SelectedIndex = 0;
         }
         #endregion
 

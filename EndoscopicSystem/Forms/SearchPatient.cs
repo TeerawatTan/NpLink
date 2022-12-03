@@ -92,6 +92,13 @@ namespace EndoscopicSystem
             gridPatient.Columns["DoctorID"].Visible = false;
             gridPatient.Columns["ProcedureID"].Visible = false;
             gridPatient.Columns["RoomID"].Visible = false;
+
+            DataGridViewButtonColumn btn = new DataGridViewButtonColumn();
+            gridPatient.Columns.Add(btn);
+            btn.HeaderText = "";
+            btn.Text = "Endoscopic Room";
+            btn.Name = "btnGotoEndoscopicRoom";
+            btn.UseColumnTextForButtonValue = true;
         }
 
         private void gridPatient_CellDoubleClick(object sender, DataGridViewCellEventArgs e)

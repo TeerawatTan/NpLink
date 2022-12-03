@@ -42,6 +42,7 @@ namespace EndoscopicSystem.V2.Forms
             this.menuDoctor = new System.Windows.Forms.Button();
             this.menuUserManage = new System.Windows.Forms.Button();
             this.panelSidebar = new System.Windows.Forms.Panel();
+            this.menuFinancialSetting = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             this.panelSidebar.SuspendLayout();
             this.SuspendLayout();
@@ -58,6 +59,7 @@ namespace EndoscopicSystem.V2.Forms
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.Azure;
+            this.panel1.Controls.Add(this.menuFinancialSetting);
             this.panel1.Controls.Add(this.menuPACSSetting);
             this.panel1.Controls.Add(this.menuHospitalSetting);
             this.panel1.Controls.Add(this.menuCameraSetting);
@@ -223,6 +225,20 @@ namespace EndoscopicSystem.V2.Forms
             this.panelSidebar.Size = new System.Drawing.Size(297, 810);
             this.panelSidebar.TabIndex = 8;
             // 
+            // menuFinancialSetting
+            // 
+            this.menuFinancialSetting.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(80)))), ((int)(((byte)(139)))));
+            this.menuFinancialSetting.Dock = System.Windows.Forms.DockStyle.Top;
+            this.menuFinancialSetting.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
+            this.menuFinancialSetting.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.menuFinancialSetting.Location = new System.Drawing.Point(0, 630);
+            this.menuFinancialSetting.Name = "menuFinancialSetting";
+            this.menuFinancialSetting.Size = new System.Drawing.Size(279, 63);
+            this.menuFinancialSetting.TabIndex = 17;
+            this.menuFinancialSetting.Text = "Financial Setting";
+            this.menuFinancialSetting.UseVisualStyleBackColor = false;
+            this.menuFinancialSetting.Click += new System.EventHandler(this.menuFinancialSetting_Click);
+            // 
             // FormSetting
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -257,5 +273,6 @@ namespace EndoscopicSystem.V2.Forms
         private System.Windows.Forms.Button menuHospitalSetting;
         private System.Windows.Forms.Button menuCameraSetting;
         private System.Windows.Forms.Button menuPACSSetting;
+        private System.Windows.Forms.Button menuFinancialSetting;
     }
 }

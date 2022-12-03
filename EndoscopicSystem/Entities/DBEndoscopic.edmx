@@ -473,7 +473,7 @@
           <Property Name="IndicationID" Type="int" />
           <Property Name="PreDiagnosisFirstID" Type="nvarchar" MaxLength="10" />
           <Property Name="PreDiagnosisSecondID" Type="nvarchar" MaxLength="10" />
-          <Property Name="Financial" Type="nvarchar" MaxLength="250" />
+          <Property Name="FinancialID" Type="int" />
           <Property Name="OpdID" Type="int" />
           <Property Name="AnesthesiaID" Type="int" />
         </EntityType>
@@ -747,6 +747,13 @@ warning 6002: The table/view 'EndoscopicDb.dbo.ProcedureList' does not have a pr
           <Property Name="EustachianTubeOrificeID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
           <Property Name="EustachianTubeOrificeName" Type="varchar" MaxLength="255" />
         </EntityType>
+        <EntityType Name="Financial">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Name" Type="nvarchar" MaxLength="200" />
+        </EntityType>
         <EntityType Name="FindingLabel">
           <Key>
             <PropertyRef Name="ID" />
@@ -782,21 +789,19 @@ warning 6002: The table/view 'EndoscopicDb.dbo.ProcedureList' does not have a pr
         </EntityType>
         <EntityType Name="ICD10">
           <Key>
-            <PropertyRef Name="Code" />
+            <PropertyRef Name="ID" />
           </Key>
-          <Property Name="Code" Type="nvarchar" MaxLength="10" Nullable="false" />
-          <Property Name="Name" Type="nvarchar" MaxLength="200" />
-          <Property Name="CreateDate" Type="datetime" />
-          <Property Name="UpdateDate" Type="datetime" />
+          <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Code" Type="nvarchar" MaxLength="10" />
+          <Property Name="Name" Type="nvarchar" MaxLength="250" />
         </EntityType>
         <EntityType Name="ICD9">
           <Key>
-            <PropertyRef Name="Code" />
+            <PropertyRef Name="ID" />
           </Key>
-          <Property Name="Code" Type="nvarchar" MaxLength="10" Nullable="false" />
-          <Property Name="Name" Type="nvarchar" MaxLength="200" />
-          <Property Name="CreateDate" Type="datetime" />
-          <Property Name="UpdateDate" Type="datetime" />
+          <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Code" Type="nvarchar" MaxLength="10" />
+          <Property Name="Name" Type="nvarchar" MaxLength="250" />
         </EntityType>
         <EntityType Name="IleocecalValve">
           <Key>
@@ -1254,6 +1259,7 @@ warning 6002: The table/view 'EndoscopicDb.dbo.v_PatientList' does not have a pr
           <EntitySet Name="ERCPEsophagus" EntityType="Self.ERCPEsophagus" Schema="master" store:Type="Tables" />
           <EntitySet Name="Esophagus" EntityType="Self.Esophagus" Schema="master" store:Type="Tables" />
           <EntitySet Name="EustachianTubeOrifice" EntityType="Self.EustachianTubeOrifice" Schema="master" store:Type="Tables" />
+          <EntitySet Name="Financial" EntityType="Self.Financial" Schema="master" store:Type="Tables" />
           <EntitySet Name="FindingLabel" EntityType="Self.FindingLabel" Schema="master" store:Type="Tables" />
           <EntitySet Name="Fundus" EntityType="Self.Fundus" Schema="master" store:Type="Tables" />
           <EntitySet Name="Glottic" EntityType="Self.Glottic" Schema="master" store:Type="Tables" />
@@ -1475,10 +1481,11 @@ warning 6002: The table/view 'EndoscopicDb.dbo.v_PatientList' does not have a pr
           <EntitySet Name="WardLists" EntityType="EndoscopicModel.WardList" />
           <EntitySet Name="Anesthesists" EntityType="EndoscopicModel.Anesthesist" />
           <EntitySet Name="AnesthesistMethods" EntityType="EndoscopicModel.AnesthesistMethod" />
+          <EntitySet Name="FindingLabels" EntityType="EndoscopicModel.FindingLabel" />
+          <EntitySet Name="Patients" EntityType="EndoscopicModel.Patient" />
+          <EntitySet Name="Financials" EntityType="EndoscopicModel.Financial" />
           <EntitySet Name="ICD10" EntityType="EndoscopicModel.ICD10" />
           <EntitySet Name="ICD9" EntityType="EndoscopicModel.ICD9" />
-          <EntitySet Name="Patients" EntityType="EndoscopicModel.Patient" />
-          <EntitySet Name="FindingLabels" EntityType="EndoscopicModel.FindingLabel" />
           </EntityContainer>
         <EntityType Name="Doctor">
           <Key>
@@ -2723,23 +2730,13 @@ warning 6002: The table/view 'EndoscopicDb.dbo.v_PatientList' does not have a pr
           <Property Name="UpdateDate" Type="DateTime" Precision="3" />
           <Property Name="UpdateBy" Type="Int32" />
         </EntityType>
-        <EntityType Name="ICD10">
+        <EntityType Name="FindingLabel">
           <Key>
-            <PropertyRef Name="Code" />
+            <PropertyRef Name="ID" />
           </Key>
-          <Property Name="Code" Type="String" Nullable="false" MaxLength="10" FixedLength="false" Unicode="true" />
+          <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
           <Property Name="Name" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
-          <Property Name="CreateDate" Type="DateTime" Precision="3" />
-          <Property Name="UpdateDate" Type="DateTime" Precision="3" />
-        </EntityType>
-        <EntityType Name="ICD9">
-          <Key>
-            <PropertyRef Name="Code" />
-          </Key>
-          <Property Name="Code" Type="String" Nullable="false" MaxLength="10" FixedLength="false" Unicode="true" />
-          <Property Name="Name" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
-          <Property Name="CreateDate" Type="DateTime" Precision="3" />
-          <Property Name="UpdateDate" Type="DateTime" Precision="3" />
+          <Property Name="ProcedureID" Type="Int32" />
         </EntityType>
         <EntityType Name="Patient">
           <Key>
@@ -2779,17 +2776,32 @@ warning 6002: The table/view 'EndoscopicDb.dbo.v_PatientList' does not have a pr
           <Property Name="IndicationID" Type="Int32" />
           <Property Name="PreDiagnosisFirstID" Type="String" MaxLength="10" FixedLength="false" Unicode="true" />
           <Property Name="PreDiagnosisSecondID" Type="String" MaxLength="10" FixedLength="false" Unicode="true" />
-          <Property Name="Financial" Type="String" MaxLength="250" FixedLength="false" Unicode="true" />
+          <Property Name="FinancialID" Type="Int32" />
           <Property Name="OpdID" Type="Int32" />
           <Property Name="AnesthesiaID" Type="Int32" />
         </EntityType>
-        <EntityType Name="FindingLabel">
+        <EntityType Name="Financial">
           <Key>
             <PropertyRef Name="ID" />
           </Key>
           <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
           <Property Name="Name" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
-          <Property Name="ProcedureID" Type="Int32" />
+        </EntityType>
+        <EntityType Name="ICD10">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Code" Type="String" MaxLength="10" FixedLength="false" Unicode="true" />
+          <Property Name="Name" Type="String" MaxLength="250" FixedLength="false" Unicode="true" />
+        </EntityType>
+        <EntityType Name="ICD9">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Code" Type="String" MaxLength="10" FixedLength="false" Unicode="true" />
+          <Property Name="Name" Type="String" MaxLength="250" FixedLength="false" Unicode="true" />
         </EntityType>
         </Schema>
     </edmx:ConceptualModels>
@@ -4147,23 +4159,12 @@ warning 6002: The table/view 'EndoscopicDb.dbo.v_PatientList' does not have a pr
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
-          <EntitySetMapping Name="ICD10">
-            <EntityTypeMapping TypeName="EndoscopicModel.ICD10">
-              <MappingFragment StoreEntitySet="ICD10">
-                <ScalarProperty Name="UpdateDate" ColumnName="UpdateDate" />
-                <ScalarProperty Name="CreateDate" ColumnName="CreateDate" />
+          <EntitySetMapping Name="FindingLabels">
+            <EntityTypeMapping TypeName="EndoscopicModel.FindingLabel">
+              <MappingFragment StoreEntitySet="FindingLabel">
+                <ScalarProperty Name="ProcedureID" ColumnName="ProcedureID" />
                 <ScalarProperty Name="Name" ColumnName="Name" />
-                <ScalarProperty Name="Code" ColumnName="Code" />
-              </MappingFragment>
-            </EntityTypeMapping>
-          </EntitySetMapping>
-          <EntitySetMapping Name="ICD9">
-            <EntityTypeMapping TypeName="EndoscopicModel.ICD9">
-              <MappingFragment StoreEntitySet="ICD9">
-                <ScalarProperty Name="UpdateDate" ColumnName="UpdateDate" />
-                <ScalarProperty Name="CreateDate" ColumnName="CreateDate" />
-                <ScalarProperty Name="Name" ColumnName="Name" />
-                <ScalarProperty Name="Code" ColumnName="Code" />
+                <ScalarProperty Name="ID" ColumnName="ID" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
@@ -4172,7 +4173,7 @@ warning 6002: The table/view 'EndoscopicDb.dbo.v_PatientList' does not have a pr
               <MappingFragment StoreEntitySet="Patient">
                 <ScalarProperty Name="AnesthesiaID" ColumnName="AnesthesiaID" />
                 <ScalarProperty Name="OpdID" ColumnName="OpdID" />
-                <ScalarProperty Name="Financial" ColumnName="Financial" />
+                <ScalarProperty Name="FinancialID" ColumnName="FinancialID" />
                 <ScalarProperty Name="PreDiagnosisSecondID" ColumnName="PreDiagnosisSecondID" />
                 <ScalarProperty Name="PreDiagnosisFirstID" ColumnName="PreDiagnosisFirstID" />
                 <ScalarProperty Name="IndicationID" ColumnName="IndicationID" />
@@ -4210,11 +4211,28 @@ warning 6002: The table/view 'EndoscopicDb.dbo.v_PatientList' does not have a pr
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
-          <EntitySetMapping Name="FindingLabels">
-            <EntityTypeMapping TypeName="EndoscopicModel.FindingLabel">
-              <MappingFragment StoreEntitySet="FindingLabel">
-                <ScalarProperty Name="ProcedureID" ColumnName="ProcedureID" />
+          <EntitySetMapping Name="Financials">
+            <EntityTypeMapping TypeName="EndoscopicModel.Financial">
+              <MappingFragment StoreEntitySet="Financial">
                 <ScalarProperty Name="Name" ColumnName="Name" />
+                <ScalarProperty Name="ID" ColumnName="ID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="ICD10">
+            <EntityTypeMapping TypeName="EndoscopicModel.ICD10">
+              <MappingFragment StoreEntitySet="ICD10">
+                <ScalarProperty Name="Name" ColumnName="Name" />
+                <ScalarProperty Name="Code" ColumnName="Code" />
+                <ScalarProperty Name="ID" ColumnName="ID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="ICD9">
+            <EntityTypeMapping TypeName="EndoscopicModel.ICD9">
+              <MappingFragment StoreEntitySet="ICD9">
+                <ScalarProperty Name="Name" ColumnName="Name" />
+                <ScalarProperty Name="Code" ColumnName="Code" />
                 <ScalarProperty Name="ID" ColumnName="ID" />
               </MappingFragment>
             </EntityTypeMapping>

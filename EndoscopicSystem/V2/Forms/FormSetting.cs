@@ -109,5 +109,11 @@ namespace EndoscopicSystem.V2.Forms
             OpenChildForm(new SettingHospitalForm(_id));
             ActiveMenuButton(sender);
         }
+
+        private void menuFinancialSetting_Click(object sender, EventArgs e)
+        {
+            OpenChildForm(new FormFinancialSetting());
+            ActiveMenuButton(sender);
+        }
     }
 }
