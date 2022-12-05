@@ -33,6 +33,9 @@ namespace EndoscopicSystem.Constants
             months.Add(new MonthModel() { MonthID = 12, MonthName = "ธันวาคม" });
             return months;
         }
+
+        public const int Icd9 = 1;  // ICD-9
+        public const int Icd10 = 2; // ICD-10
     }
 
     public class MonthModel

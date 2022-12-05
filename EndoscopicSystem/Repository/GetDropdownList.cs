@@ -10,7 +10,7 @@ namespace EndoscopicSystem.Repository
         readonly EndoscopicEntities db = new EndoscopicEntities();
         public List<ProcedureList> GetProcedureList()
         {
-            var list = db.ProcedureLists.ToList();
+            var list = db.ProcedureLists.Where(w => w.IsActive).ToList();
             list.Insert(0, new ProcedureList() { ProcedureID = 0, ProcedureName = "" });
             return list;
         }

@@ -38,6 +38,9 @@ namespace EndoscopicSystem.V2.Forms
         public Dictionary<int, string> _imgPath = new Dictionary<int, string>();
         private TextBox lastFocused;
         public Form formPopup = new Form();
+        private List<FindingLabel> _findingLabels = new List<FindingLabel>();
+        private List<ICD9> _iCD9s = new List<ICD9>();
+        private List<ICD10> _iCD10s = new List<ICD10>();
         public FormProcedure(int id, string hn, int procId, int appId, string pathImg)
         {
             InitializeComponent();
@@ -89,6 +92,10 @@ namespace EndoscopicSystem.V2.Forms
             LoadTextBoxAutoComplete(txtPictureBoxSaved16);
             LoadTextBoxAutoComplete(txtPictureBoxSaved17);
             LoadTextBoxAutoComplete(txtPictureBoxSaved18);
+
+            LoadFinding();
+            LoadICD9();
+            LoadICD10();
         }
 
         private void cbbProcedureList_SelectedIndexChanged(object sender, EventArgs e)
@@ -119,39 +126,12 @@ namespace EndoscopicSystem.V2.Forms
             {
                 if (lastFocused != null)
                 {
-                    if (lastFocused.Name == txbPreDiagCode_EGD.Name)
-                    {
-                        txbPreDiagCode_EGD.Text = subStrItem[0].Trim();
-                    }
-                    else if (lastFocused.Name == txbICD10Code_EGD.Name)
-                    {
-                        txbICD10Code_EGD.Text = subStrItem[0].Trim();
-                    }
+                    lastFocused.Text = subStrItem[0].Trim();
                 }
             }
 
             listBox1.Items.Clear();
         }
-
-        private async void txbPreDiagCode_EGD_Click(object sender, EventArgs e)
-        {
-            listBox1.Items.Clear();
-
-            var ItemObject = await GetIcd10();
-            listBox1.Items.AddRange(ItemObject);
-
-            lastFocused = (TextBox)sender;
-        }
-
-        private async void txbICD10Code_EGD_Click(object sender, EventArgs e)
-        {
-            listBox1.Items.Clear();
-
-           var ItemObject = await GetIcd10();
-            listBox1.Items.AddRange(ItemObject);
-            lastFocused = (TextBox)sender;
-        }
-
         private void ExportEndoscopic(string hn, int proc, int endosId)
         {
             ReportDocument rprt = new ReportDocument();
@@ -222,7 +202,6 @@ namespace EndoscopicSystem.V2.Forms
             string pathDicom = _pathFolderDicomSave + nameDicomSave;
             rprt.ExportToDisk(CrystalDecisions.Shared.ExportFormatType.PortableDocFormat, pathDicom);
         }
-
         private void btnReport_Click(object sender, EventArgs e)
         {
             if (!string.IsNullOrWhiteSpace(_hnNo) && _procedureId > 0 && _endoscopicId > 0)
@@ -241,22 +220,55 @@ namespace EndoscopicSystem.V2.Forms
 
         #region Search Data
 
-        private async Task<Object[]> GetIcd10()
+        private void SetDataInListBox(int listId)
+        {
+            listBox1.Items.Clear();
+            if (listId == Constant.Icd9)
+            {
+                var ItemObject = GetIcd9();
+                listBox1.Items.AddRange(ItemObject);
+            }
+            else if (listId == Constant.Icd10)
+            {
+                var ItemObject = GetIcd10();
+                listBox1.Items.AddRange(ItemObject);
+            }
+        }
+        private Object[] GetIcd9()
         {
             Object[] ItemObject = new Object[0];
 
-            var icd10 = await _db.ICD10.ToListAsync();
-            if (icd10 != null && icd10.Count > 0)
+            var icd9 = _iCD9s.Where(w => w.ProcedureId == _procedureId || w.ProcedureId == null).OrderBy(o => o.ID);
+            if (icd9 != null && icd9.Count() > 0)
             {
-                ItemObject = new Object[icd10.Count];
+                var data = icd9.ToList();
+                ItemObject = new Object[data.Count];
 
-                for (int i = 0; i < icd10.Count; i++)
+                for (int i = 0; i < data.Count; i++)
                 {
-                    ItemObject[i] = icd10[i].Code + " - " + icd10[i].Name;
+                    ItemObject[i] = data[i].Code + " - " + data[i].Name;
                 }
             }
 
-            return await Task.FromResult(ItemObject);
+            return ItemObject;
+        }
+        private Object[] GetIcd10()
+        {
+            Object[] ItemObject = new Object[0];
+
+            var icd10 = _iCD10s.Where(w => w.ProcedureId == _procedureId || w.ProcedureId == null).OrderBy(o => o.ID);
+            if (icd10 != null && icd10.Count() > 0)
+            {
+                var data = icd10.ToList();
+                ItemObject = new Object[data.Count];
+
+                for (int i = 0; i < data.Count; i++)
+                {
+                    ItemObject[i] = data[i].Code + " - " + data[i].Name;
+                }
+            }
+
+            return ItemObject;
         }
         private void SearchHN(string hn, int procId = 0)
         {
@@ -363,37 +375,515 @@ namespace EndoscopicSystem.V2.Forms
                 btnReport.Enabled = false;
             }
         }
+        private void txbPreDiagCode_EGD_Click(object sender, EventArgs e)
+        {
+            SetDataInListBox(Constant.Icd10);
+            lastFocused = (TextBox)sender;
+        }
+        private void txbICD10Code_EGD_Click(object sender, EventArgs e)
+        {
+            SetDataInListBox(Constant.Icd10);
+            lastFocused = (TextBox)sender;
+        }
+        private void txbFindingPrinncipalProcedureCode_EGD_Click(object sender, EventArgs e)
+        {
+            SetDataInListBox(Constant.Icd9);
+            lastFocused = (TextBox)sender;
+        }
+        private void txbFindingSupplementalProcedureCode_EGD_Click(object sender, EventArgs e)
+        {
+            SetDataInListBox(Constant.Icd9);
+            lastFocused = (TextBox)sender;
+        }
+        private void txbFindingSupplementalProcedureCode2_EGD_Click(object sender, EventArgs e)
+        {
+            SetDataInListBox(Constant.Icd9);
+            lastFocused = (TextBox)sender;
+        }
+        private void txbFindingDx1Code_EGD_Click(object sender, EventArgs e)
+        {
+            SetDataInListBox(Constant.Icd10);
+            lastFocused = (TextBox)sender;
+        }
+        private void txbFindingDx2Code_EGD_Click(object sender, EventArgs e)
+        {
+            SetDataInListBox(Constant.Icd10);
+            lastFocused = (TextBox)sender;
+        }
+        private void txbFindingDx3Code_EGD_Click(object sender, EventArgs e)
+        {
+            SetDataInListBox(Constant.Icd10);
+            lastFocused = (TextBox)sender;
+        }
+        private void txbFindingDx4Code_EGD_Click(object sender, EventArgs e)
+        {
+            SetDataInListBox(Constant.Icd10);
+            lastFocused = (TextBox)sender;
+        }
+        private void txbPreDiagCode_Colono_Click(object sender, EventArgs e)
+        {
+            SetDataInListBox(Constant.Icd10);
+            lastFocused = (TextBox)sender;
+        }
+        private void txbICD10Code_Colono_Click(object sender, EventArgs e)
+        {
+            SetDataInListBox(Constant.Icd10);
+            lastFocused = (TextBox)sender;
+        }
+        private void txbFindingPrinncipalProcedureCode_Colono_Click(object sender, EventArgs e)
+        {
+            SetDataInListBox(Constant.Icd9);
+            lastFocused = (TextBox)sender;
+        }
+        private void txbFindingSupplementalProcedureCode_Colono_Click(object sender, EventArgs e)
+        {
+            SetDataInListBox(Constant.Icd9);
+            lastFocused = (TextBox)sender;
+        }
+        private void txbFindingSupplementalProcedure2Code_Colono_Click(object sender, EventArgs e)
+        {
+            SetDataInListBox(Constant.Icd9);
+            lastFocused = (TextBox)sender;
+        }
+        private void txbFindingDx1Code_Colono_Click(object sender, EventArgs e)
+        {
+            SetDataInListBox(Constant.Icd10);
+            lastFocused = (TextBox)sender;
+        }
+        private void txbFindingDx2Code_Colono_Click(object sender, EventArgs e)
+        {
+            SetDataInListBox(Constant.Icd10);
+            lastFocused = (TextBox)sender;
+        }
+        private void txbFindingDx3Code_Colono_Click(object sender, EventArgs e)
+        {
+            SetDataInListBox(Constant.Icd10);
+            lastFocused = (TextBox)sender;
+        }
+        private void txbFindingDx4Code_Colono_Click(object sender, EventArgs e)
+        {
+            SetDataInListBox(Constant.Icd10);
+            lastFocused = (TextBox)sender;
+        }
         private void txbPreDiagCode_EGD_TextChanged(object sender, EventArgs e)
         {
             if (txbPreDiagCode_EGD.TextLength > 0)
             {
-                var icd10 = _db.ICD10.FirstOrDefault(f => f.Code == txbPreDiagCode_EGD.Text);
+                var icd10 = _iCD10s.FirstOrDefault(f => f.Code == txbPreDiagCode_EGD.Text);
 
                 if (icd10 != null)
                 {
                     txbPreDiagText_EGD.Text = icd10.Name;
+                    txbGeneralDx1ID_EGD.Text = icd10.ID.ToString();
                 }
+                else
+                {
+                    txbPreDiagText_EGD.Clear();
+                    txbGeneralDx1ID_EGD.Clear();
+                }
+            }
+            else
+            {
+                txbPreDiagText_EGD.Clear();
+                txbGeneralDx1ID_EGD.Clear();
             }
         }
         private void txbICD10Code_EGD_TextChanged(object sender, EventArgs e)
         {
-            if (txbPreDiagCode_EGD.TextLength > 0)
+            if (txbICD10Code_EGD.TextLength > 0)
             {
-                var icd10 = _db.ICD10.FirstOrDefault(f => f.Code == txbPreDiagCode_EGD.Text);
+                var icd10 = _iCD10s.FirstOrDefault(f => f.Code == txbICD10Code_EGD.Text);
 
                 if (icd10 != null)
                 {
                     txbICD10Text_EGD.Text = icd10.Name;
+                    txbGeneralDx2ID_EGD.Text = icd10.ID.ToString();
+                }
+                else
+                {
+                    txbICD10Text_EGD.Clear();
+                    txbGeneralDx2ID_EGD.Clear();
                 }
             }
+            else
+            {
+                txbICD10Text_EGD.Clear();
+                txbGeneralDx2ID_EGD.Clear();
+            }
+        }
+        private void txbFindingPrinncipalProcedureCode_EGD_TextChanged(object sender, EventArgs e)
+        {
+            if (txbFindingPrinncipalProcedureCode_EGD.TextLength > 0)
+            {
+                var icd9 = _iCD9s.FirstOrDefault(f => f.Code == txbFindingPrinncipalProcedureCode_EGD.Text);
+                if (icd9 != null)
+                {
+                    txbFindingPrinncipalProcedureText_EGD.Text = icd9.Name;
+                    txbFindingPrinncipalProcedureID_EGD.Text = icd9.ID.ToString();
+                }
+                else
+                {
+                    txbFindingPrinncipalProcedureText_EGD.Clear();
+                    txbFindingPrinncipalProcedureID_EGD.Clear();
+                }
+            }
+            else
+            {
+                txbFindingPrinncipalProcedureText_EGD.Clear();
+                txbFindingPrinncipalProcedureID_EGD.Clear();
+            }
+        }
+        private void txbFindingSupplementalProcedureCode_EGD_TextChanged(object sender, EventArgs e)
+        {
+            if (txbFindingSupplementalProcedureCode_EGD.TextLength > 0)
+            {
+                var icd9 = _iCD9s.FirstOrDefault(f => f.Code == txbFindingSupplementalProcedureCode_EGD.Text);
+                if (icd9 != null)
+                {
+                    txbFindingSupplementalProcedureText_EGD.Text = icd9.Name;
+                    txbFindingSupplementalProcedureID_EGD.Text = icd9.ID.ToString();
+                }
+                else
+                {
+                    txbFindingSupplementalProcedureText_EGD.Clear();
+                    txbFindingSupplementalProcedureID_EGD.Clear();
+                }
+            }
+            else
+            {
+                txbFindingSupplementalProcedureText_EGD.Clear();
+                txbFindingSupplementalProcedureID_EGD.Clear();
+            }
+        }
+        private void txbFindingSupplementalProcedureCode2_EGD_TextChanged(object sender, EventArgs e)
+        {
+            if (txbFindingSupplementalProcedureCode2_EGD.TextLength > 0)
+            {
+                var icd9 = _iCD9s.FirstOrDefault(f => f.Code == txbFindingSupplementalProcedureCode2_EGD.Text);
+                if (icd9 != null)
+                {
+                    txbFindingSupplementalProcedureText2_EGD.Text = icd9.Name;
+                    txbFindingSupplementalProcedureID2_EGD.Text = icd9.ID.ToString();
+                }
+                else
+                {
+                    txbFindingSupplementalProcedureText2_EGD.Clear();
+                    txbFindingSupplementalProcedureID2_EGD.Clear();
+                }
+            }
+            else
+            {
+                txbFindingSupplementalProcedureText2_EGD.Clear();
+                txbFindingSupplementalProcedureID2_EGD.Clear();
+            }
+        }
+        private void txbFindingDx1Code_EGD_TextChanged(object sender, EventArgs e)
+        {
+            if (txbFindingDx1Code_EGD.TextLength > 0)
+            {
+                var icd10 = _iCD10s.FirstOrDefault(f => f.Code == txbFindingDx1Code_EGD.Text);
+                if (icd10 != null)
+                {
+                    txbFindingDx1Text_EGD.Text = icd10.Name;
+                    txbFindingDx1ID_EGD.Text = icd10.ID.ToString();
+                }
+                else
+                {
+                    txbFindingDx1Text_EGD.Clear();
+                    txbFindingDx1ID_EGD.Clear();
+                }
+            }
+            else
+            {
+                txbFindingDx1Text_EGD.Clear();
+                txbFindingDx1ID_EGD.Clear();
+            }
+        }
+        private void txbFindingDx2Code_EGD_TextChanged(object sender, EventArgs e)
+        {
+            if (txbFindingDx2Code_EGD.TextLength > 0)
+            {
+                var icd10 = _iCD10s.FirstOrDefault(f => f.Code == txbFindingDx2Code_EGD.Text);
+                if (icd10 != null)
+                {
+                    txbFindingDx2Text_EGD.Text = icd10.Name;
+                    txbFindingDx2ID_EGD.Text = icd10.ID.ToString();
+                }
+                else
+                {
+                    txbFindingDx2Text_EGD.Clear();
+                    txbFindingDx2ID_EGD.Clear();
+                }
+            }
+            else
+            {
+                txbFindingDx2Text_EGD.Clear();
+                txbFindingDx2ID_EGD.Clear();
+            }
+        }
+        private void txbFindingDx3Code_EGD_TextChanged(object sender, EventArgs e)
+        {
+            if (txbFindingDx3Code_EGD.TextLength > 0)
+            {
+                var icd10 = _iCD10s.FirstOrDefault(f => f.Code == txbFindingDx3Code_EGD.Text);
+                if (icd10 != null)
+                {
+                    txbFindingDx3Text_EGD.Text = icd10.Name;
+                    txbFindingDx3ID_EGD.Text = icd10.ID.ToString();
+                }
+                else
+                {
+                    txbFindingDx3Text_EGD.Clear();
+                    txbFindingDx3ID_EGD.Clear();
+                }
+            }
+            else
+            {
+                txbFindingDx3Text_EGD.Clear();
+                txbFindingDx3ID_EGD.Clear();
+            }
+
+        }
+        private void txbFindingDx4Code_EGD_TextChanged(object sender, EventArgs e)
+        {
+            if (txbFindingDx4Code_EGD.TextLength > 0)
+            {
+                var icd10 = _iCD10s.FirstOrDefault(f => f.Code == txbFindingDx4Code_EGD.Text);
+                if (icd10 != null)
+                {
+                    txbFindingDx4Text_EGD.Text = icd10.Name;
+                    txbFindingDx4ID_EGD.Text = icd10.ID.ToString();
+                }
+                else
+                {
+                    txbFindingDx4Text_EGD.Clear();
+                    txbFindingDx4ID_EGD.Clear();
+                }
+            }
+            else
+            {
+                txbFindingDx4Text_EGD.Clear();
+                txbFindingDx4ID_EGD.Clear();
+            }
+        }
+        private void txbPreDiagCode_Colono_TextChanged(object sender, EventArgs e)
+        {
+            if (txbPreDiagCode_Colono.TextLength > 0)
+            {
+                var icd10 = _iCD10s.FirstOrDefault(f => f.Code == txbPreDiagCode_Colono.Text);
+
+                if (icd10 != null)
+                {
+                    txbPreDiagText_Colono.Text = icd10.Name;
+                    txbGeneralDx1ID_Colono.Text = icd10.ID.ToString();
+                }
+                else
+                {
+                    txbPreDiagText_Colono.Clear();
+                    txbGeneralDx1ID_Colono.Clear();
+                }
+            }
+            else
+            {
+                txbPreDiagText_Colono.Clear();
+                txbGeneralDx1ID_Colono.Clear();
+            }
+        }
+        private void txbICD10Code_Colono_TextChanged(object sender, EventArgs e)
+        {
+            if (txbICD10Code_Colono.TextLength > 0)
+            {
+                var icd10 = _iCD10s.FirstOrDefault(f => f.Code == txbICD10Code_Colono.Text);
+
+                if (icd10 != null)
+                {
+                    txbICD10Text_Colono.Text = icd10.Name;
+                    txbGeneralDx2ID_Colono.Text = icd10.ID.ToString();
+                }
+                else
+                {
+                    txbICD10Text_Colono.Clear();
+                    txbGeneralDx2ID_Colono.Clear();
+                }
+            }
+            else
+            {
+                txbICD10Text_Colono.Clear();
+                txbGeneralDx2ID_Colono.Clear();
+            }
+        }
+        private void txbFindingPrinncipalProcedureCode_Colono_TextChanged(object sender, EventArgs e)
+        {
+            if (txbFindingPrinncipalProcedureCode_Colono.TextLength > 0)
+            {
+                var icd9 = _iCD9s.FirstOrDefault(f => f.Code == txbFindingPrinncipalProcedureCode_Colono.Text);
+                if (icd9 != null)
+                {
+                    txbFindingPrinncipalProcedureText_Colono.Text = icd9.Name;
+                    txbFindingPrinncipalProcedureID_Colono.Text = icd9.ID.ToString();
+                }
+                else
+                {
+                    txbFindingPrinncipalProcedureText_Colono.Clear();
+                    txbFindingPrinncipalProcedureID_Colono.Clear();
+                }
+            }
+            else
+            {
+                txbFindingPrinncipalProcedureText_Colono.Clear();
+                txbFindingPrinncipalProcedureID_Colono.Clear();
+            }
+        }
+        private void txbFindingSupplementalProcedureCode_Colono_TextChanged(object sender, EventArgs e)
+        {
+            if (txbFindingSupplementalProcedureCode_Colono.TextLength > 0)
+            {
+                var icd9 = _iCD9s.FirstOrDefault(f => f.Code == txbFindingSupplementalProcedureCode_Colono.Text);
+                if (icd9 != null)
+                {
+                    txbFindingSupplementalProcedureText_Colono.Text = icd9.Name;
+                    txbFindingSupplementalProcedureID_Colono.Text = icd9.ID.ToString();
+                }
+                else
+                {
+                    txbFindingSupplementalProcedureText_Colono.Clear();
+                    txbFindingSupplementalProcedureID_Colono.Clear();
+                }
+            }
+            else
+            {
+                txbFindingSupplementalProcedureText_Colono.Clear();
+                txbFindingSupplementalProcedureID_Colono.Clear();
+            }
+        }
+        private void txbFindingSupplementalProcedure2Code_Colono_TextChanged(object sender, EventArgs e)
+        {
+            if (txbFindingSupplementalProcedure2Code_Colono.TextLength > 0)
+            {
+                var icd9 = _iCD9s.FirstOrDefault(f => f.Code == txbFindingSupplementalProcedure2Code_Colono.Text);
+                if (icd9 != null)
+                {
+                    txbFindingSupplementalProcedure2Text_Colono.Text = icd9.Name;
+                    txbFindingSupplementalProcedure2ID_Colono.Text = icd9.ID.ToString();
+                }
+                else
+                {
+                    txbFindingSupplementalProcedure2Text_Colono.Clear();
+                    txbFindingSupplementalProcedure2ID_Colono.Clear();
+                }
+            }
+            else
+            {
+                txbFindingSupplementalProcedure2Text_Colono.Clear();
+                txbFindingSupplementalProcedure2ID_Colono.Clear();
+            }
+        }
+        private void txbFindingDx1Code_Colono_TextChanged(object sender, EventArgs e)
+        {
+            if (txbFindingDx1Code_Colono.TextLength > 0)
+            {
+                var icd10 = _iCD10s.FirstOrDefault(f => f.Code == txbFindingDx1Code_Colono.Text);
+                if (icd10 != null)
+                {
+                    txbFindingDx1Text_Colono.Text = icd10.Name;
+                    txbFindingDx1ID_Colono.Text = icd10.ID.ToString();
+                }
+                else
+                {
+                    txbFindingDx1Text_Colono.Clear();
+                    txbFindingDx1ID_Colono.Clear();
+                }
+            }
+            else
+            {
+                txbFindingDx1Text_Colono.Clear();
+                txbFindingDx1ID_Colono.Clear();
+            }
+        }
+        private void txbFindingDx2Code_Colono_TextChanged(object sender, EventArgs e)
+        {
+            if (txbFindingDx2Code_Colono.TextLength > 0)
+            {
+                var icd10 = _iCD10s.FirstOrDefault(f => f.Code == txbFindingDx2Code_Colono.Text);
+                if (icd10 != null)
+                {
+                    txbFindingDx2Text_Colono.Text = icd10.Name;
+                    txbFindingDx2ID_Colono.Text = icd10.ID.ToString();
+                }
+                else
+                {
+                    txbFindingDx2Text_Colono.Clear();
+                    txbFindingDx2ID_Colono.Clear();
+                }
+            }
+            else
+            {
+                txbFindingDx2Text_Colono.Clear();
+                txbFindingDx2ID_Colono.Clear();
+            }
+        }
+        private void txbFindingDx3Code_Colono_TextChanged(object sender, EventArgs e)
+        {
+            if (txbFindingDx3Code_Colono.TextLength > 0)
+            {
+                var icd10 = _iCD10s.FirstOrDefault(f => f.Code == txbFindingDx3Code_Colono.Text);
+                if (icd10 != null)
+                {
+                    txbFindingDx3Text_Colono.Text = icd10.Name;
+                    txbFindingDx3ID_Colono.Text = icd10.ID.ToString();
+                }
+                else
+                {
+                    txbFindingDx3Text_Colono.Clear();
+                    txbFindingDx3ID_Colono.Clear();
+                }
+            }
+            else
+            {
+                txbFindingDx3Text_Colono.Clear();
+                txbFindingDx3ID_Colono.Clear();
+            }
+        }
+        private void txbFindingDx4Code_Colono_TextChanged(object sender, EventArgs e)
+        {
+            if (txbFindingDx4Code_Colono.TextLength > 0)
+            {
+                var icd10 = _iCD10s.FirstOrDefault(f => f.Code == txbFindingDx4Code_Colono.Text);
+                if (icd10 != null)
+                {
+                    txbFindingDx4Text_Colono.Text = icd10.Name;
+                    txbFindingDx4ID_Colono.Text = icd10.ID.ToString();
+                }
+                else
+                {
+                    txbFindingDx4Text_Colono.Clear();
+                    txbFindingDx4ID_Colono.Clear();
+                }
+            }
+            else
+            {
+                txbFindingDx4Text_Colono.Clear();
+                txbFindingDx4ID_Colono.Clear();
+            }
+        }
+        private void LoadFinding()
+        {
+            _findingLabels = _dropdownRepo.GetFindingLabels(_procedureId);
+        }
+        private void LoadICD9()
+        {
+            _iCD9s = _db.ICD9.ToList();
+        }
+        private void LoadICD10()
+        {
+            _iCD10s = _db.ICD10.ToList();
         }
         private void LoadTextBoxAutoComplete(TextBox textBox)
         {
-            var findingList = _dropdownRepo.GetFindingLabels(_procedureId);
-            if (findingList != null && findingList.Count > 0)
+            if (_findingLabels != null && _findingLabels.Count > 0)
             {
                 AutoCompleteStringCollection ac = new AutoCompleteStringCollection();
-                foreach (var item in findingList)
+                foreach (var item in _findingLabels)
                 {
                     ac.Add(item.Name);
                 }
@@ -401,6 +891,7 @@ namespace EndoscopicSystem.V2.Forms
             }
         }
        
+
         #endregion
 
         #region Push Data
@@ -1006,7 +1497,6 @@ namespace EndoscopicSystem.V2.Forms
                 _db.SaveChanges();
             }
         }
-
         private int SaveLogEndoscopic(Endoscopic en, int patientId, int procedureId)
         {
             if (en == null) return 0;
@@ -1119,9 +1609,9 @@ namespace EndoscopicSystem.V2.Forms
                     endoscopic.MedicationOther = txbGeneralMedication_EGD.Text;
                     endoscopic.IndicationOther = txbGeneralIndication_EGD.Text;
                     endoscopic.DxId1 = !string.IsNullOrWhiteSpace(txbGeneralDx1ID_EGD.Text) ? Convert.ToInt32(txbGeneralDx1ID_EGD.Text) : 0;
-                    endoscopic.DxId1Detail = txbPreDiagCode_EGD + "-" + txbPreDiagText_EGD.Text;
+                    endoscopic.DxId1Detail = txbPreDiagCode_EGD.Text + "-" + txbPreDiagText_EGD.Text;
                     endoscopic.DxId2 = !string.IsNullOrWhiteSpace(txbGeneralDx2ID_EGD.Text) ? Convert.ToInt32(txbGeneralDx2ID_EGD.Text) : 0;
-                    endoscopic.DxId1Detail = txbICD10Code_EGD + "-" + txbICD10Text_EGD.Text;
+                    endoscopic.DxId2Detail = txbICD10Code_EGD.Text + "-" + txbICD10Text_EGD.Text;
                     endoscopic.BriefHistory = txbBriefHistory_EGD.Text;
                 }
                 else if (procedureId == 2)
@@ -1150,9 +1640,9 @@ namespace EndoscopicSystem.V2.Forms
                     endoscopic.MedicationOther = txbGeneralMedication_Colono.Text;
                     endoscopic.IndicationOther = txbGeneralIndication_Colono.Text;
                     endoscopic.DxId1 = !string.IsNullOrWhiteSpace(txbGeneralDx1ID_Colono.Text) ? Convert.ToInt32(txbGeneralDx1ID_Colono.Text) : 0;
-                    endoscopic.DxId1Detail = txbPreDiagCode_Colono + "-" + txbPreDiagText_Colono.Text;
+                    endoscopic.DxId1Detail = txbPreDiagCode_Colono.Text + "-" + txbPreDiagText_Colono.Text;
                     endoscopic.DxId2 = !string.IsNullOrWhiteSpace(txbGeneralDx2ID_Colono.Text) ? Convert.ToInt32(txbGeneralDx2ID_Colono.Text) : 0;
-                    endoscopic.DxId1Detail = txbICD10Code_Colono + "-" + txbICD10Text_Colono.Text;
+                    endoscopic.DxId2Detail = txbICD10Code_Colono.Text + "-" + txbICD10Text_Colono.Text;
                     endoscopic.BriefHistory = txbBriefHistory_Colono.Text;
                     endoscopic.BowelPreparationRegimen = txbGeneralBowelPreparationRegimen_Colono.Text;
                     endoscopic.BowelPreparationResult = txbGeneralBowelPreparationResult_colono.Text;
@@ -1258,6 +1748,7 @@ namespace EndoscopicSystem.V2.Forms
             {
                 TabPage[] tabs = { tabGeneralEGD, tabFindingEGD };
                 tabControl1.TabPages.AddRange(tabs);
+                // General Tab
                 _dropdownListService.DropdownOPD(cbbGeneralOPD_EGD);
                 _dropdownListService.DropdownWard(cbbGeneralWard_EGD);
                 _dropdownListService.DropdownDoctor(cbbGeneralDoctor_EGD);
@@ -1269,6 +1760,9 @@ namespace EndoscopicSystem.V2.Forms
                 _dropdownListService.DropdownMedication(cbbGeneralMedication_EGD);
                 _dropdownListService.DropdownIndication(cbbGeneralIndication_EGD);
                 _dropdownListService.DropdownFinancial(cbbGeneralFinancial_EGD);
+                
+                // Finding Tab
+                _dropdownListService.DropdownOropharynx(cbbFindingOropharynx_EGD);
             }
             else if (procedureId == 2)  // Colonoscopy
             {
@@ -1464,7 +1958,6 @@ namespace EndoscopicSystem.V2.Forms
 
             return ImgPath;
         }
-
 
         private async Task<string> uploadImageFile(int num)
         {

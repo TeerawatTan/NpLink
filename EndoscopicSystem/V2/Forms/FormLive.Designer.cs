@@ -324,11 +324,10 @@ namespace EndoscopicSystem.V2.Forms
             // 
             // label1
             // 
-            this.label1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
             this.label1.ForeColor = System.Drawing.Color.Black;
-            this.label1.Location = new System.Drawing.Point(75, 966);
+            this.label1.Location = new System.Drawing.Point(75, 936);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(128, 20);
             this.label1.TabIndex = 90;
@@ -337,11 +336,10 @@ namespace EndoscopicSystem.V2.Forms
             // 
             // lbTime
             // 
-            this.lbTime.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.lbTime.AutoSize = true;
             this.lbTime.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
             this.lbTime.ForeColor = System.Drawing.Color.Red;
-            this.lbTime.Location = new System.Drawing.Point(214, 966);
+            this.lbTime.Location = new System.Drawing.Point(214, 936);
             this.lbTime.Name = "lbTime";
             this.lbTime.Size = new System.Drawing.Size(79, 20);
             this.lbTime.TabIndex = 91;
@@ -350,11 +348,10 @@ namespace EndoscopicSystem.V2.Forms
             // 
             // label3
             // 
-            this.label3.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
             this.label3.ForeColor = System.Drawing.Color.Black;
-            this.label3.Location = new System.Drawing.Point(294, 966);
+            this.label3.Location = new System.Drawing.Point(294, 936);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(38, 20);
             this.label3.TabIndex = 92;
@@ -363,12 +360,11 @@ namespace EndoscopicSystem.V2.Forms
             // 
             // btnCapture
             // 
-            this.btnCapture.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.btnCapture.BackColor = System.Drawing.Color.Gainsboro;
             this.btnCapture.Enabled = false;
             this.btnCapture.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
             this.btnCapture.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.btnCapture.Location = new System.Drawing.Point(868, 928);
+            this.btnCapture.Location = new System.Drawing.Point(868, 898);
             this.btnCapture.Margin = new System.Windows.Forms.Padding(2);
             this.btnCapture.Name = "btnCapture";
             this.btnCapture.Size = new System.Drawing.Size(226, 88);
@@ -380,10 +376,9 @@ namespace EndoscopicSystem.V2.Forms
             // 
             // btnNext
             // 
-            this.btnNext.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.btnNext.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(222)));
             this.btnNext.ForeColor = System.Drawing.Color.Blue;
-            this.btnNext.Location = new System.Drawing.Point(1207, 928);
+            this.btnNext.Location = new System.Drawing.Point(1207, 898);
             this.btnNext.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnNext.Name = "btnNext";
             this.btnNext.Size = new System.Drawing.Size(135, 85);
@@ -408,12 +403,11 @@ namespace EndoscopicSystem.V2.Forms
             // 
             // btnStop
             // 
-            this.btnStop.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.btnStop.BackColor = System.Drawing.Color.Gainsboro;
             this.btnStop.Enabled = false;
             this.btnStop.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F);
             this.btnStop.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.btnStop.Location = new System.Drawing.Point(707, 928);
+            this.btnStop.Location = new System.Drawing.Point(707, 898);
             this.btnStop.Margin = new System.Windows.Forms.Padding(2);
             this.btnStop.Name = "btnStop";
             this.btnStop.Size = new System.Drawing.Size(157, 88);
@@ -425,11 +419,10 @@ namespace EndoscopicSystem.V2.Forms
             // 
             // btnRecord
             // 
-            this.btnRecord.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.btnRecord.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(224)))), ((int)(((byte)(192)))));
             this.btnRecord.Enabled = false;
             this.btnRecord.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F);
-            this.btnRecord.Location = new System.Drawing.Point(385, 928);
+            this.btnRecord.Location = new System.Drawing.Point(385, 898);
             this.btnRecord.Margin = new System.Windows.Forms.Padding(2);
             this.btnRecord.Name = "btnRecord";
             this.btnRecord.Size = new System.Drawing.Size(157, 88);
@@ -441,11 +434,10 @@ namespace EndoscopicSystem.V2.Forms
             // 
             // btnPause
             // 
-            this.btnPause.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.btnPause.BackColor = System.Drawing.Color.Gainsboro;
             this.btnPause.Enabled = false;
             this.btnPause.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F);
-            this.btnPause.Location = new System.Drawing.Point(546, 928);
+            this.btnPause.Location = new System.Drawing.Point(546, 898);
             this.btnPause.Margin = new System.Windows.Forms.Padding(2);
             this.btnPause.Name = "btnPause";
             this.btnPause.Size = new System.Drawing.Size(157, 88);
@@ -468,13 +460,12 @@ namespace EndoscopicSystem.V2.Forms
             // 
             // listView1
             // 
-            this.listView1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
+            this.listView1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.listView1.HideSelection = false;
             this.listView1.Location = new System.Drawing.Point(1096, 119);
             this.listView1.Name = "listView1";
-            this.listView1.Size = new System.Drawing.Size(796, 785);
+            this.listView1.Size = new System.Drawing.Size(796, 755);
             this.listView1.TabIndex = 117;
             this.listView1.UseCompatibleStateImageBehavior = false;
             // 
@@ -482,7 +473,7 @@ namespace EndoscopicSystem.V2.Forms
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1904, 1041);
+            this.ClientSize = new System.Drawing.Size(1904, 1011);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.listView1);
             this.Controls.Add(this.btnPause);
