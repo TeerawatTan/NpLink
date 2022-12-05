@@ -51,8 +51,8 @@ namespace EndoscopicSystem
             DropdownAnesthesistMethod(cbbAnesthesiaMethod1);
             DropdownAnesthesistMethod(cbbAnesthesiaMethod2);
             DropdownMasterIndication();
-            DropdownPreDiagnosis(cbbPreDiagnosis1);
-            DropdownPreDiagnosis(cbbPreDiagnosis2);
+            DropdownPreDiagnosis(cbbPreDiagnosis1, txbPreDiagnosis1ID);
+            DropdownPreDiagnosis(cbbPreDiagnosis2, txbPreDiagnosis2ID);
             DropdownFinancial();
 
             gridPatient.DataSource = new HistoryModel();
@@ -241,8 +241,8 @@ namespace EndoscopicSystem
                         patient.AnesthesistMethodFirstID = (int?)cbbAnesthesiaMethod1.SelectedValue;
                         patient.AnesthesistMethodSecondID = (int?)cbbAnesthesiaMethod2.SelectedValue;
                         patient.IndicationID = (int?)cbbIndication.SelectedValue;
-                        patient.PreDiagnosisFirstID = cbbPreDiagnosis1.SelectedValue.ToString();
-                        patient.PreDiagnosisSecondID = cbbPreDiagnosis2.SelectedValue.ToString();
+                        patient.PreDiagnosisFirstID = !string.IsNullOrWhiteSpace(txbPreDiagnosis1ID.Text) ? Convert.ToInt32(txbPreDiagnosis1ID.Text) : 0;
+                        patient.PreDiagnosisSecondID = !string.IsNullOrWhiteSpace(txbPreDiagnosis2ID.Text) ? Convert.ToInt32(txbPreDiagnosis2ID.Text) : 0;
                         patient.UpdateBy = UserID;
                         patient.UpdateDate = DateTime.Now;
                     }
@@ -295,8 +295,8 @@ namespace EndoscopicSystem
                         patient.AnesthesistMethodFirstID = (int?)cbbAnesthesiaMethod1.SelectedValue;
                         patient.AnesthesistMethodSecondID = (int?)cbbAnesthesiaMethod2.SelectedValue;
                         patient.IndicationID = (int?)cbbIndication.SelectedValue;
-                        patient.PreDiagnosisFirstID = cbbPreDiagnosis1.SelectedValue.ToString();
-                        patient.PreDiagnosisSecondID = cbbPreDiagnosis2.SelectedValue.ToString();
+                        patient.PreDiagnosisFirstID = !string.IsNullOrWhiteSpace(txbPreDiagnosis1ID.Text) ? Convert.ToInt32(txbPreDiagnosis1ID.Text) : 0;
+                        patient.PreDiagnosisSecondID = !string.IsNullOrWhiteSpace(txbPreDiagnosis2ID.Text) ? Convert.ToInt32(txbPreDiagnosis2ID.Text) : 0;
                         patient.IsActive = true;
                         patient.CreateBy = UserID;
                         patient.CreateDate = DateTime.Now;
@@ -552,12 +552,13 @@ namespace EndoscopicSystem
             cbbIndication.DataSource = list.GetIndicationList();
             cbbIndication.SelectedIndex = 0;
         }
-        public void DropdownPreDiagnosis(ComboBox comboBox)
+        public void DropdownPreDiagnosis(ComboBox comboBox, TextBox textBox)
         {
-            comboBox.ValueMember = "Code";
+            comboBox.ValueMember = "ID";
             comboBox.DisplayMember = "Name";
             comboBox.DataSource = list.GetICD10s();
             comboBox.SelectedIndex = 0;
+            textBox.Text = "0";
         }
         public void DropdownFinancial()
         {
@@ -697,6 +698,32 @@ namespace EndoscopicSystem
             else
             {
                 chkRefer.Checked = false;
+            }
+        }
+
+        private void cbbPreDiagnosis1_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            int preDiag1Val = (int?)cbbPreDiagnosis1.SelectedValue ?? 0;
+            if (preDiag1Val > 0)
+            {
+                txbPreDiagnosis1ID.Text = preDiag1Val.ToString();
+            }
+            else
+            {
+                txbPreDiagnosis1ID.Text = "0";
+            }
+        }
+
+        private void cbbPreDiagnosis2_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            int preDiag2Val = (int?)cbbPreDiagnosis2.SelectedValue ?? 0;
+            if (preDiag2Val > 0)
+            {
+                txbPreDiagnosis2ID.Text = preDiag2Val.ToString();
+            }
+            else
+            {
+                txbPreDiagnosis2ID.Text = "0";
             }
         }
     }

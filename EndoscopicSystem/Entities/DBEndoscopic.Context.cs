@@ -81,9 +81,7 @@ namespace EndoscopicSystem.Entities
         public virtual DbSet<RUL> RULs { get; set; }
         public virtual DbSet<Trachea> Tracheas { get; set; }
         public virtual DbSet<VocalCord> VocalCords { get; set; }
-        public virtual DbSet<Endoscopic> Endoscopics { get; set; }
         public virtual DbSet<v_HistoryEndoscopic> v_HistoryEndoscopic { get; set; }
-        public virtual DbSet<v_PatientList> v_PatientList { get; set; }
         public virtual DbSet<Endoscopic_Log> Endoscopic_Log { get; set; }
         public virtual DbSet<Appointment> Appointments { get; set; }
         public virtual DbSet<v_AppointmentDetails> v_AppointmentDetails { get; set; }
@@ -108,16 +106,18 @@ namespace EndoscopicSystem.Entities
         public virtual DbSet<UE> UES { get; set; }
         public virtual DbSet<Uvula> Uvulas { get; set; }
         public virtual DbSet<Vallecula> Valleculas { get; set; }
-        public virtual DbSet<Finding> Findings { get; set; }
         public virtual DbSet<OpdList> OpdLists { get; set; }
         public virtual DbSet<WardList> WardLists { get; set; }
         public virtual DbSet<Anesthesist> Anesthesists { get; set; }
         public virtual DbSet<AnesthesistMethod> AnesthesistMethods { get; set; }
         public virtual DbSet<FindingLabel> FindingLabels { get; set; }
-        public virtual DbSet<Patient> Patients { get; set; }
         public virtual DbSet<Financial> Financials { get; set; }
         public virtual DbSet<ICD10> ICD10 { get; set; }
         public virtual DbSet<ICD9> ICD9 { get; set; }
+        public virtual DbSet<Patient> Patients { get; set; }
+        public virtual DbSet<Endoscopic> Endoscopics { get; set; }
+        public virtual DbSet<Finding> Findings { get; set; }
+        public virtual DbSet<v_PatientList> v_PatientList { get; set; }
     
         public virtual ObjectResult<BrochoscopyReport_Result> BrochoscopyReport(string hn, Nullable<int> procedure, Nullable<int> endoscopicId)
         {

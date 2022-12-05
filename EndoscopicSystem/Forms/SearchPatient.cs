@@ -18,7 +18,7 @@ namespace EndoscopicSystem
         protected readonly GetDropdownList list = new GetDropdownList();
         private readonly int UserID;
         public string hnNo = "";
-        public int procedureId = 0;
+        public int procedureId = 0, endoscopicId = 0, appointmentId = 0;
         public SearchPatientForm(int userID)
         {
             InitializeComponent();
@@ -92,6 +92,8 @@ namespace EndoscopicSystem
             gridPatient.Columns["DoctorID"].Visible = false;
             gridPatient.Columns["ProcedureID"].Visible = false;
             gridPatient.Columns["RoomID"].Visible = false;
+            gridPatient.Columns["EndoscopicID"].Visible = false;
+            gridPatient.Columns["AppointmentID"].Visible = false;
 
             DataGridViewButtonColumn btn = new DataGridViewButtonColumn();
             gridPatient.Columns.Add(btn);
@@ -105,7 +107,7 @@ namespace EndoscopicSystem
         {
             try
             {
-                if (gridPatient.CurrentRow.Index != -1)
+                if (gridPatient.CurrentRow.Index >= 0)
                 {
                     hnNo = gridPatient.CurrentRow.Cells["HN"].Value.ToString();
                     procedureId = (int)gridPatient.CurrentRow.Cells["ProcedureID"].Value;
@@ -122,6 +124,33 @@ namespace EndoscopicSystem
 
         private void SearchPatientForm_FormClosed(object sender, FormClosedEventArgs e)
         {
+        }
+
+        private void gridPatient_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            if (gridPatient.CurrentRow.Index >= 0 && e.ColumnIndex == 13)
+            {
+                try
+                {
+                    hnNo = gridPatient.CurrentRow.Cells["HN"].Value.ToString();
+                    procedureId = (int)gridPatient.CurrentRow.Cells["ProcedureID"].Value;
+                    endoscopicId = (int)gridPatient.CurrentRow.Cells["EndoscopicID"].Value;
+                    appointmentId = (int)gridPatient.CurrentRow.Cells["AppointmentID"].Value;
+
+                    this.Hide();
+
+                    V2.Forms.FormLive formLive = new V2.Forms.FormLive(UserID, hnNo, procedureId, endoscopicId, appointmentId);
+                    formLive.ShowDialog();
+
+                    formLive = null;
+
+                    this.Show();
+                }
+                catch (Exception ex)
+                {
+                    throw ex;
+                }
+            }
         }
     }
 }

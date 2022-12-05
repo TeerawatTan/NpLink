@@ -31,16 +31,21 @@ namespace EndoscopicSystem.V2.Forms
         {
             this.videoSourcePlayer = new AForge.Controls.VideoSourcePlayer();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.cbbProcedureList = new System.Windows.Forms.ComboBox();
-            this.label6 = new System.Windows.Forms.Label();
+            this.label9 = new System.Windows.Forms.Label();
+            this.label8 = new System.Windows.Forms.Label();
+            this.txbDoctor = new System.Windows.Forms.TextBox();
+            this.txbSex = new System.Windows.Forms.TextBox();
+            this.label7 = new System.Windows.Forms.Label();
             this.label12 = new System.Windows.Forms.Label();
-            this.txtHN = new System.Windows.Forms.TextBox();
-            this.txtSymptom = new System.Windows.Forms.TextBox();
-            this.txtAge = new System.Windows.Forms.TextBox();
-            this.txtFullName = new System.Windows.Forms.TextBox();
+            this.txbHN = new System.Windows.Forms.TextBox();
+            this.txbSymptom = new System.Windows.Forms.TextBox();
+            this.txbAge = new System.Windows.Forms.TextBox();
+            this.txbPatientFullName = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
+            this.cbbProcedureList = new System.Windows.Forms.ComboBox();
+            this.label6 = new System.Windows.Forms.Label();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.disconnectButton = new System.Windows.Forms.Button();
             this.connectButton = new System.Windows.Forms.Button();
@@ -65,7 +70,7 @@ namespace EndoscopicSystem.V2.Forms
             // videoSourcePlayer
             // 
             this.videoSourcePlayer.BackColor = System.Drawing.Color.Black;
-            this.videoSourcePlayer.Location = new System.Drawing.Point(107, 118);
+            this.videoSourcePlayer.Location = new System.Drawing.Point(11, 118);
             this.videoSourcePlayer.Margin = new System.Windows.Forms.Padding(2);
             this.videoSourcePlayer.Name = "videoSourcePlayer";
             this.videoSourcePlayer.Size = new System.Drawing.Size(1080, 750);
@@ -76,16 +81,21 @@ namespace EndoscopicSystem.V2.Forms
             // 
             // groupBox1
             // 
-            this.groupBox1.Controls.Add(this.cbbProcedureList);
-            this.groupBox1.Controls.Add(this.label6);
+            this.groupBox1.Controls.Add(this.label9);
+            this.groupBox1.Controls.Add(this.label8);
+            this.groupBox1.Controls.Add(this.txbDoctor);
+            this.groupBox1.Controls.Add(this.txbSex);
+            this.groupBox1.Controls.Add(this.label7);
             this.groupBox1.Controls.Add(this.label12);
-            this.groupBox1.Controls.Add(this.txtHN);
-            this.groupBox1.Controls.Add(this.txtSymptom);
-            this.groupBox1.Controls.Add(this.txtAge);
-            this.groupBox1.Controls.Add(this.txtFullName);
+            this.groupBox1.Controls.Add(this.txbHN);
+            this.groupBox1.Controls.Add(this.txbSymptom);
+            this.groupBox1.Controls.Add(this.txbAge);
+            this.groupBox1.Controls.Add(this.txbPatientFullName);
             this.groupBox1.Controls.Add(this.label5);
             this.groupBox1.Controls.Add(this.label2);
             this.groupBox1.Controls.Add(this.label4);
+            this.groupBox1.Controls.Add(this.cbbProcedureList);
+            this.groupBox1.Controls.Add(this.label6);
             this.groupBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
             this.groupBox1.Location = new System.Drawing.Point(13, 13);
             this.groupBox1.Name = "groupBox1";
@@ -94,29 +104,58 @@ namespace EndoscopicSystem.V2.Forms
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Patient Information";
             // 
-            // cbbProcedureList
+            // label9
             // 
-            this.cbbProcedureList.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cbbProcedureList.Enabled = false;
-            this.cbbProcedureList.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
-            this.cbbProcedureList.FormattingEnabled = true;
-            this.cbbProcedureList.Location = new System.Drawing.Point(533, 55);
-            this.cbbProcedureList.Margin = new System.Windows.Forms.Padding(2);
-            this.cbbProcedureList.Name = "cbbProcedureList";
-            this.cbbProcedureList.Size = new System.Drawing.Size(427, 24);
-            this.cbbProcedureList.TabIndex = 126;
+            this.label9.AutoSize = true;
+            this.label9.Location = new System.Drawing.Point(2, 87);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(33, 16);
+            this.label9.TabIndex = 131;
+            this.label9.Text = "Live";
             // 
-            // label6
+            // label8
             // 
-            this.label6.AutoSize = true;
-            this.label6.BackColor = System.Drawing.Color.Transparent;
-            this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
-            this.label6.Location = new System.Drawing.Point(415, 57);
-            this.label6.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(114, 17);
-            this.label6.TabIndex = 125;
-            this.label6.Text = "Procedure List";
+            this.label8.AutoSize = true;
+            this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
+            this.label8.Location = new System.Drawing.Point(407, 55);
+            this.label8.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(107, 16);
+            this.label8.TabIndex = 129;
+            this.label8.Text = "Doctor Name :";
+            // 
+            // txbDoctor
+            // 
+            this.txbDoctor.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
+            this.txbDoctor.Location = new System.Drawing.Point(518, 52);
+            this.txbDoctor.Margin = new System.Windows.Forms.Padding(2);
+            this.txbDoctor.MaxLength = 250;
+            this.txbDoctor.Name = "txbDoctor";
+            this.txbDoctor.ReadOnly = true;
+            this.txbDoctor.Size = new System.Drawing.Size(218, 23);
+            this.txbDoctor.TabIndex = 130;
+            // 
+            // txbSex
+            // 
+            this.txbSex.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
+            this.txbSex.Location = new System.Drawing.Point(648, 22);
+            this.txbSex.Margin = new System.Windows.Forms.Padding(2);
+            this.txbSex.MaxLength = 255;
+            this.txbSex.Name = "txbSex";
+            this.txbSex.ReadOnly = true;
+            this.txbSex.Size = new System.Drawing.Size(88, 23);
+            this.txbSex.TabIndex = 128;
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
+            this.label7.Location = new System.Drawing.Point(597, 25);
+            this.label7.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(42, 16);
+            this.label7.TabIndex = 127;
+            this.label7.Text = "Sex :";
             // 
             // label12
             // 
@@ -129,49 +168,49 @@ namespace EndoscopicSystem.V2.Forms
             this.label12.TabIndex = 117;
             this.label12.Text = "Symptom :";
             // 
-            // txtHN
+            // txbHN
             // 
-            this.txtHN.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
-            this.txtHN.Location = new System.Drawing.Point(95, 22);
-            this.txtHN.Margin = new System.Windows.Forms.Padding(2);
-            this.txtHN.MaxLength = 255;
-            this.txtHN.Name = "txtHN";
-            this.txtHN.Size = new System.Drawing.Size(172, 23);
-            this.txtHN.TabIndex = 121;
-            this.txtHN.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txtHN_KeyDown);
+            this.txbHN.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
+            this.txbHN.Location = new System.Drawing.Point(95, 22);
+            this.txbHN.Margin = new System.Windows.Forms.Padding(2);
+            this.txbHN.MaxLength = 255;
+            this.txbHN.Name = "txbHN";
+            this.txbHN.Size = new System.Drawing.Size(172, 23);
+            this.txbHN.TabIndex = 121;
+            this.txbHN.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txtHN_KeyDown);
             // 
-            // txtSymptom
+            // txbSymptom
             // 
-            this.txtSymptom.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
-            this.txtSymptom.Location = new System.Drawing.Point(95, 52);
-            this.txtSymptom.Margin = new System.Windows.Forms.Padding(2);
-            this.txtSymptom.MaxLength = 250;
-            this.txtSymptom.Name = "txtSymptom";
-            this.txtSymptom.ReadOnly = true;
-            this.txtSymptom.Size = new System.Drawing.Size(172, 23);
-            this.txtSymptom.TabIndex = 124;
+            this.txbSymptom.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
+            this.txbSymptom.Location = new System.Drawing.Point(95, 52);
+            this.txbSymptom.Margin = new System.Windows.Forms.Padding(2);
+            this.txbSymptom.MaxLength = 250;
+            this.txbSymptom.Name = "txbSymptom";
+            this.txbSymptom.ReadOnly = true;
+            this.txbSymptom.Size = new System.Drawing.Size(172, 23);
+            this.txbSymptom.TabIndex = 124;
             // 
-            // txtAge
+            // txbAge
             // 
-            this.txtAge.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
-            this.txtAge.Location = new System.Drawing.Point(344, 52);
-            this.txtAge.Margin = new System.Windows.Forms.Padding(2);
-            this.txtAge.MaxLength = 255;
-            this.txtAge.Name = "txtAge";
-            this.txtAge.ReadOnly = true;
-            this.txtAge.Size = new System.Drawing.Size(54, 23);
-            this.txtAge.TabIndex = 123;
+            this.txbAge.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
+            this.txbAge.Location = new System.Drawing.Point(344, 52);
+            this.txbAge.Margin = new System.Windows.Forms.Padding(2);
+            this.txbAge.MaxLength = 255;
+            this.txbAge.Name = "txbAge";
+            this.txbAge.ReadOnly = true;
+            this.txbAge.Size = new System.Drawing.Size(54, 23);
+            this.txbAge.TabIndex = 123;
             // 
-            // txtFullName
+            // txbPatientFullName
             // 
-            this.txtFullName.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
-            this.txtFullName.Location = new System.Drawing.Point(343, 22);
-            this.txtFullName.Margin = new System.Windows.Forms.Padding(2);
-            this.txtFullName.MaxLength = 255;
-            this.txtFullName.Name = "txtFullName";
-            this.txtFullName.ReadOnly = true;
-            this.txtFullName.Size = new System.Drawing.Size(227, 23);
-            this.txtFullName.TabIndex = 122;
+            this.txbPatientFullName.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
+            this.txbPatientFullName.Location = new System.Drawing.Point(343, 22);
+            this.txbPatientFullName.Margin = new System.Windows.Forms.Padding(2);
+            this.txbPatientFullName.MaxLength = 255;
+            this.txbPatientFullName.Name = "txbPatientFullName";
+            this.txbPatientFullName.ReadOnly = true;
+            this.txbPatientFullName.Size = new System.Drawing.Size(227, 23);
+            this.txbPatientFullName.TabIndex = 122;
             // 
             // label5
             // 
@@ -205,6 +244,32 @@ namespace EndoscopicSystem.V2.Forms
             this.label4.Size = new System.Drawing.Size(57, 16);
             this.label4.TabIndex = 119;
             this.label4.Text = "Name :";
+            // 
+            // cbbProcedureList
+            // 
+            this.cbbProcedureList.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cbbProcedureList.Enabled = false;
+            this.cbbProcedureList.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
+            this.cbbProcedureList.FormattingEnabled = true;
+            this.cbbProcedureList.Location = new System.Drawing.Point(533, -6);
+            this.cbbProcedureList.Margin = new System.Windows.Forms.Padding(2);
+            this.cbbProcedureList.Name = "cbbProcedureList";
+            this.cbbProcedureList.Size = new System.Drawing.Size(427, 24);
+            this.cbbProcedureList.TabIndex = 126;
+            this.cbbProcedureList.Visible = false;
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.BackColor = System.Drawing.Color.Transparent;
+            this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
+            this.label6.Location = new System.Drawing.Point(415, -4);
+            this.label6.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(114, 17);
+            this.label6.TabIndex = 125;
+            this.label6.Text = "Procedure List";
+            this.label6.Visible = false;
             // 
             // groupBox2
             // 
@@ -392,7 +457,7 @@ namespace EndoscopicSystem.V2.Forms
             // pictureBoxSnapshot
             // 
             this.pictureBoxSnapshot.BackColor = System.Drawing.Color.Silver;
-            this.pictureBoxSnapshot.Location = new System.Drawing.Point(107, 119);
+            this.pictureBoxSnapshot.Location = new System.Drawing.Point(18, 118);
             this.pictureBoxSnapshot.Margin = new System.Windows.Forms.Padding(2);
             this.pictureBoxSnapshot.Name = "pictureBoxSnapshot";
             this.pictureBoxSnapshot.Size = new System.Drawing.Size(1080, 750);
@@ -407,9 +472,9 @@ namespace EndoscopicSystem.V2.Forms
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.listView1.HideSelection = false;
-            this.listView1.Location = new System.Drawing.Point(1245, 119);
+            this.listView1.Location = new System.Drawing.Point(1096, 119);
             this.listView1.Name = "listView1";
-            this.listView1.Size = new System.Drawing.Size(614, 785);
+            this.listView1.Size = new System.Drawing.Size(796, 785);
             this.listView1.TabIndex = 117;
             this.listView1.UseCompatibleStateImageBehavior = false;
             // 
@@ -418,6 +483,7 @@ namespace EndoscopicSystem.V2.Forms
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1904, 1041);
+            this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.listView1);
             this.Controls.Add(this.btnPause);
             this.Controls.Add(this.btnStop);
@@ -429,9 +495,10 @@ namespace EndoscopicSystem.V2.Forms
             this.Controls.Add(this.lbTime);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.groupBox2);
-            this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.videoSourcePlayer);
             this.Controls.Add(this.pictureBoxSnapshot);
+            this.MaximizeBox = false;
+            this.MinimizeBox = false;
             this.Name = "FormLive";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Live";
@@ -467,15 +534,20 @@ namespace EndoscopicSystem.V2.Forms
         private System.Windows.Forms.Button btnPause;
         private System.Windows.Forms.PictureBox pictureBoxSnapshot;
         private System.Windows.Forms.Label label12;
-        private System.Windows.Forms.TextBox txtHN;
-        private System.Windows.Forms.TextBox txtSymptom;
-        private System.Windows.Forms.TextBox txtAge;
-        private System.Windows.Forms.TextBox txtFullName;
+        private System.Windows.Forms.TextBox txbHN;
+        private System.Windows.Forms.TextBox txbSymptom;
+        private System.Windows.Forms.TextBox txbAge;
+        private System.Windows.Forms.TextBox txbPatientFullName;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.ComboBox cbbProcedureList;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.ListView listView1;
+        private System.Windows.Forms.TextBox txbSex;
+        private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.Label label8;
+        private System.Windows.Forms.TextBox txbDoctor;
+        private System.Windows.Forms.Label label9;
     }
 }

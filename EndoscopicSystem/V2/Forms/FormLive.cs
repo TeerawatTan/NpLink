@@ -88,26 +88,30 @@ namespace EndoscopicSystem.V2.Forms
             {
                 devicesCombo.Items.Add("No DirectShow devices found");
             }
-            //_captureDeviceForm = new VideoCaptureDeviceForm();
-            //int index = devicesCombo.FindString("Game Capture");
-            //devicesCombo.SelectedIndex = index;
-
+            
             if (devicesCombo.Items.Count > 0)
             {
-                _captureDeviceForm = new VideoCaptureDeviceForm();
-                int index = 0; // devicesCombo.FindString("Game Capture");
-                devicesCombo.SelectedIndex = index;
-                if (index >= 0 && !string.IsNullOrWhiteSpace(_hnNo))
+                try
                 {
-                    try
-                    {
-                        OnLoadVdoCaptureDevice(_hnNo);
-                    }
-                    catch (Exception ex)
-                    {
-                        throw ex;
-                    }
+                    _captureDeviceForm = new VideoCaptureDeviceForm();
+                    int index = devicesCombo.FindString("Game Capture");
+                    devicesCombo.SelectedIndex = index;
                 }
+                catch (Exception)
+                {
+                }
+                
+                //if (index >= 0 && !string.IsNullOrWhiteSpace(_hnNo))
+                //{
+                //    try
+                //    {
+                //        OnLoadVdoCaptureDevice(_hnNo);
+                //    }
+                //    catch (Exception ex)
+                //    {
+                //        throw ex;
+                //    }
+                //}
             }
 
             _pathFolderImageToSave = _pathFolderImage + _hnNo + @"\" + DateTime.Now.ToString("yyyyMMdd") + @"\" + cbbProcedureList.Text + @"\" + _appointmentId + @"\";
@@ -137,15 +141,15 @@ namespace EndoscopicSystem.V2.Forms
                 }
             }
 
-            txtHN.Text = _hnNo;
+            txbHN.Text = _hnNo;
 
-            if (!string.IsNullOrWhiteSpace(txtHN.Text) && _procedureId > 0)
+            if (!string.IsNullOrWhiteSpace(txbHN.Text) && _procedureId > 0)
             {
-                SearchHN(txtHN.Text, _procedureId);
+                SearchHN(txbHN.Text, _procedureId);
             }
             else
             {
-                txtHN.Focus();
+                txbHN.Focus();
             }
         }
 
@@ -161,9 +165,11 @@ namespace EndoscopicSystem.V2.Forms
                 {
                     connectButton.Enabled = true;
                     _patientId = getPatient.PatientID;
-                    txtHN.Text = getPatient.HN;
-                    txtFullName.Text = getPatient.Fullname;
-                    txtAge.Text = getPatient.Age.HasValue ? getPatient.Age.ToString() : "";
+                    txbHN.Text = getPatient.HN;
+                    txbPatientFullName.Text = getPatient.Fullname;
+                    txbAge.Text = getPatient.Age.HasValue ? getPatient.Age.ToString() : "";
+                    txbSex.Text = getPatient.Sex.HasValue ? getPatient.Sex.Value ? Constant.Male : Constant.FeMale : "";
+                    txbDoctor.Text = _db.Doctors.FirstOrDefault(f => f.DoctorID == getPatient.DoctorID)?.NameTH;
 
                     if (_procedureId == 0)
                     {
@@ -171,7 +177,7 @@ namespace EndoscopicSystem.V2.Forms
                     }
 
                     Appointment app = new Appointment();
-                    var apps = _db.Appointments.Where(x => x.PatientID == _patientId && txtHN.Text.Equals(x.HN) && x.ProcedureID == _procedureId).ToList();
+                    var apps = _db.Appointments.Where(x => x.PatientID == _patientId && txbHN.Text.Equals(x.HN) && x.ProcedureID == _procedureId).ToList();
                     if (apps != null)
                     {
                         if (_appointmentId > 0)
@@ -184,7 +190,7 @@ namespace EndoscopicSystem.V2.Forms
                             app = apps.OrderByDescending(o => o.AppointmentDate).FirstOrDefault();
                             _appointmentId = app.AppointmentID;
                         }
-                        txtSymptom.Text = app.Symptom;
+                        txbSymptom.Text = app.Symptom;
                     }
 
                     cbbProcedureList.SelectedValue = _procedureId;
@@ -192,8 +198,6 @@ namespace EndoscopicSystem.V2.Forms
                     if (_procedureId > 0 && _appointmentId > 0)
                     {
                         btnNext.Visible = true;
-
-                        OnLoadVdoCaptureDevice(_hnNo);
                     }
                     else
                     {
@@ -205,7 +209,7 @@ namespace EndoscopicSystem.V2.Forms
                     MessageBox.Show("ไม่พบข้อมูลผู้ป่วย");
                     Reset_Controller();
                     connectButton.Enabled = false;
-                    txtHN.Focus();
+                    txbHN.Focus();
                     btnNext.Enabled = false;
                 }
             }
@@ -220,7 +224,7 @@ namespace EndoscopicSystem.V2.Forms
         private void Reset_Controller()
         {
             this.Controls.ClearControls();
-            txtHN.Focus();
+            txbHN.Focus();
         }
 
         private void btnNext_Click(object sender, EventArgs e)
@@ -228,6 +232,16 @@ namespace EndoscopicSystem.V2.Forms
             if (_procedureId > 0 && _appointmentId > 0)
             {
                 this.Hide();
+
+                // Stop VdoSourcePlayer
+                Disconnect();
+                if (videoSourcePlayer == null)
+                { return; }
+                if (videoSourcePlayer.IsRunning)
+                {
+                    this.videoSourcePlayer.Stop();
+                    _fileWriter.Close();
+                }
 
                 FormPreviewReport formPreviewReport = new FormPreviewReport(
                     UserID,
@@ -294,9 +308,9 @@ namespace EndoscopicSystem.V2.Forms
         {
             if (e.KeyCode == Keys.Enter)
             {
-                if (txtHN.Text.Length > 0)
+                if (txbHN.Text.Length > 0)
                 {
-                    SearchHN(txtHN.Text);
+                    SearchHN(txbHN.Text);
                 }
                 else
                 {

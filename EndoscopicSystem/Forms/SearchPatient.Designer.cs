@@ -185,6 +185,7 @@
             this.gridPatient.RowTemplate.Height = 24;
             this.gridPatient.Size = new System.Drawing.Size(1146, 561);
             this.gridPatient.TabIndex = 0;
+            this.gridPatient.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.gridPatient_CellClick);
             this.gridPatient.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.gridPatient_CellDoubleClick);
             // 
             // panel1

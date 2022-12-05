@@ -25,5 +25,7 @@ namespace EndoscopicSystem.Entities
         public string ProcedureName { get; set; }
         public Nullable<int> RoomID { get; set; }
         public string RoomName { get; set; }
+        public Nullable<int> EndoscopicID { get; set; }
+        public int AppointmentID { get; set; }
     }
 }

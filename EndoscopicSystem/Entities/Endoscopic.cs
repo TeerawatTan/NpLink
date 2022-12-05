@@ -52,5 +52,12 @@ namespace EndoscopicSystem.Entities
         public Nullable<int> UpdateBy { get; set; }
         public string MedicationOther { get; set; }
         public string IndicationOther { get; set; }
+        public Nullable<int> DxId1 { get; set; }
+        public Nullable<int> DxId2 { get; set; }
+        public string DxId1Detail { get; set; }
+        public string DxId2Detail { get; set; }
+        public string BriefHistory { get; set; }
+        public string BowelPreparationRegimen { get; set; }
+        public string BowelPreparationResult { get; set; }
     }
 }

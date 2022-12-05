@@ -68,10 +68,13 @@
             this.btnBrowse = new System.Windows.Forms.Button();
             this.openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.cbbFinancial = new System.Windows.Forms.ComboBox();
             this.label24 = new System.Windows.Forms.Label();
             this.label23 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.txbPreDiagnosis2ID = new System.Windows.Forms.TextBox();
+            this.txbPreDiagnosis1ID = new System.Windows.Forms.TextBox();
             this.label22 = new System.Windows.Forms.Label();
             this.cbbPreDiagnosis2 = new System.Windows.Forms.ComboBox();
             this.cbbPreDiagnosis1 = new System.Windows.Forms.ComboBox();
@@ -96,7 +99,6 @@
             this.chkFollowUpCase = new System.Windows.Forms.CheckBox();
             this.chkNewCase = new System.Windows.Forms.CheckBox();
             this.label6 = new System.Windows.Forms.Label();
-            this.cbbFinancial = new System.Windows.Forms.ComboBox();
             ((System.ComponentModel.ISupportInitialize)(this.gridPatient)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panel1.SuspendLayout();
@@ -579,6 +581,17 @@
             this.panel1.Size = new System.Drawing.Size(982, 161);
             this.panel1.TabIndex = 22;
             // 
+            // cbbFinancial
+            // 
+            this.cbbFinancial.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cbbFinancial.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
+            this.cbbFinancial.FormattingEnabled = true;
+            this.cbbFinancial.Location = new System.Drawing.Point(574, 82);
+            this.cbbFinancial.Margin = new System.Windows.Forms.Padding(2);
+            this.cbbFinancial.Name = "cbbFinancial";
+            this.cbbFinancial.Size = new System.Drawing.Size(384, 28);
+            this.cbbFinancial.TabIndex = 107;
+            // 
             // label24
             // 
             this.label24.AutoSize = true;
@@ -622,6 +635,8 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.panel2.BackColor = System.Drawing.Color.White;
             this.panel2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panel2.Controls.Add(this.txbPreDiagnosis2ID);
+            this.panel2.Controls.Add(this.txbPreDiagnosis1ID);
             this.panel2.Controls.Add(this.label22);
             this.panel2.Controls.Add(this.cbbPreDiagnosis2);
             this.panel2.Controls.Add(this.cbbPreDiagnosis1);
@@ -671,6 +686,30 @@
             this.panel2.Size = new System.Drawing.Size(1248, 370);
             this.panel2.TabIndex = 8;
             // 
+            // txbPreDiagnosis2ID
+            // 
+            this.txbPreDiagnosis2ID.CausesValidation = false;
+            this.txbPreDiagnosis2ID.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
+            this.txbPreDiagnosis2ID.Location = new System.Drawing.Point(789, 327);
+            this.txbPreDiagnosis2ID.Margin = new System.Windows.Forms.Padding(2);
+            this.txbPreDiagnosis2ID.MaxLength = 255;
+            this.txbPreDiagnosis2ID.Name = "txbPreDiagnosis2ID";
+            this.txbPreDiagnosis2ID.Size = new System.Drawing.Size(21, 26);
+            this.txbPreDiagnosis2ID.TabIndex = 108;
+            this.txbPreDiagnosis2ID.Visible = false;
+            // 
+            // txbPreDiagnosis1ID
+            // 
+            this.txbPreDiagnosis1ID.CausesValidation = false;
+            this.txbPreDiagnosis1ID.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
+            this.txbPreDiagnosis1ID.Location = new System.Drawing.Point(789, 295);
+            this.txbPreDiagnosis1ID.Margin = new System.Windows.Forms.Padding(2);
+            this.txbPreDiagnosis1ID.MaxLength = 255;
+            this.txbPreDiagnosis1ID.Name = "txbPreDiagnosis1ID";
+            this.txbPreDiagnosis1ID.Size = new System.Drawing.Size(21, 26);
+            this.txbPreDiagnosis1ID.TabIndex = 107;
+            this.txbPreDiagnosis1ID.Visible = false;
+            // 
             // label22
             // 
             this.label22.AutoSize = true;
@@ -694,6 +733,7 @@
             this.cbbPreDiagnosis2.Name = "cbbPreDiagnosis2";
             this.cbbPreDiagnosis2.Size = new System.Drawing.Size(440, 28);
             this.cbbPreDiagnosis2.TabIndex = 105;
+            this.cbbPreDiagnosis2.SelectedIndexChanged += new System.EventHandler(this.cbbPreDiagnosis2_SelectedIndexChanged);
             // 
             // cbbPreDiagnosis1
             // 
@@ -705,6 +745,7 @@
             this.cbbPreDiagnosis1.Name = "cbbPreDiagnosis1";
             this.cbbPreDiagnosis1.Size = new System.Drawing.Size(440, 28);
             this.cbbPreDiagnosis1.TabIndex = 104;
+            this.cbbPreDiagnosis1.SelectedIndexChanged += new System.EventHandler(this.cbbPreDiagnosis1_SelectedIndexChanged);
             // 
             // label21
             // 
@@ -949,17 +990,6 @@
             this.label6.TabIndex = 90;
             this.label6.Text = "*";
             // 
-            // cbbFinancial
-            // 
-            this.cbbFinancial.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cbbFinancial.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
-            this.cbbFinancial.FormattingEnabled = true;
-            this.cbbFinancial.Location = new System.Drawing.Point(574, 82);
-            this.cbbFinancial.Margin = new System.Windows.Forms.Padding(2);
-            this.cbbFinancial.Name = "cbbFinancial";
-            this.cbbFinancial.Size = new System.Drawing.Size(384, 28);
-            this.cbbFinancial.TabIndex = 107;
-            // 
             // PatientForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -1059,5 +1089,7 @@
         private System.Windows.Forms.Label label22;
         private System.Windows.Forms.Label label24;
         private System.Windows.Forms.ComboBox cbbFinancial;
+        private System.Windows.Forms.TextBox txbPreDiagnosis2ID;
+        private System.Windows.Forms.TextBox txbPreDiagnosis1ID;
     }
 }

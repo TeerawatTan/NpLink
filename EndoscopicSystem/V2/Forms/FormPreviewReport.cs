@@ -163,6 +163,70 @@ namespace EndoscopicSystem.V2.Forms
             }
 
             #endregion
+
+            SearchHN(_hnNo, _procedureId);
+        }
+
+        private void SearchHN(string hn, int procId = 0)
+        {
+            _hnNo = hn;
+            _procedureId = procId;
+            try
+            {
+                var getPatient = _db.Patients.FirstOrDefault(x => x.HN == hn && (x.IsActive.HasValue && x.IsActive.Value));
+                if (getPatient != null)
+                {
+                    _patientId = getPatient.PatientID;
+                    txbHN.Text = getPatient.HN;
+                    txbPatientFullName.Text = getPatient.Fullname;
+                    txbAge.Text = getPatient.Age.HasValue ? getPatient.Age.ToString() : "";
+                    txbSex.Text = getPatient.Sex.HasValue ? getPatient.Sex.Value ? Constant.Male : Constant.FeMale : "";
+                    txbDoctor.Text = _db.Doctors.FirstOrDefault(f => f.DoctorID == getPatient.DoctorID)?.NameTH;
+                    if (_procedureId == 0)
+                    {
+                        _procedureId = getPatient.ProcedureID ?? 0;
+                    }
+
+                    Appointment app = new Appointment();
+                    var apps = _db.Appointments.Where(x => x.PatientID == _patientId && txbHN.Text.Equals(x.HN) && x.ProcedureID == _procedureId).ToList();
+                    if (apps != null)
+                    {
+                        if (_appointmentId > 0)
+                        {
+                            apps = apps.Where(w => w.AppointmentID == _appointmentId).ToList();
+                            app = apps.FirstOrDefault();
+                        }
+                        else
+                        {
+                            app = apps.OrderByDescending(o => o.AppointmentDate).FirstOrDefault();
+                            _appointmentId = app.AppointmentID;
+                        }
+                        txbSymptom.Text = app.Symptom;
+                    }
+
+                    cbbProcedureList.SelectedValue = _procedureId;
+
+                    if (_procedureId > 0 && _appointmentId > 0)
+                    {
+                        btnNext.Visible = true;
+                    }
+                    else
+                    {
+                        btnNext.Visible = false;
+                    }
+                }
+                else
+                {
+                    MessageBox.Show("ไม่พบข้อมูลผู้ป่วย");
+                    this.Controls.ClearControls();
+                    btnNext.Enabled = false;
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+                btnNext.Enabled = false;
+            }
         }
 
         private void listView1_Click(object sender, EventArgs e)

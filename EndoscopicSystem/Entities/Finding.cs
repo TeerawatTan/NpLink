@@ -142,5 +142,24 @@ namespace EndoscopicSystem.Entities
         public string UES { get; set; }
         public Nullable<int> LESID { get; set; }
         public string LES { get; set; }
+        public Nullable<int> PrincipalProcedureID { get; set; }
+        public string PrincipalProcedureDetail { get; set; }
+        public Nullable<int> SupplementalProcedure1ID { get; set; }
+        public string SupplementalProcedure1Detail { get; set; }
+        public Nullable<int> SupplementalProcedure2ID { get; set; }
+        public string SupplementalProcedure2Detail { get; set; }
+        public string Procedure { get; set; }
+        public Nullable<int> DxID1 { get; set; }
+        public string DxID1Detail { get; set; }
+        public Nullable<int> DxID2 { get; set; }
+        public string DxID2Detail { get; set; }
+        public Nullable<int> DxID3 { get; set; }
+        public string DxID3Detail { get; set; }
+        public Nullable<int> DxID4 { get; set; }
+        public string DxID4Detail { get; set; }
+        public string Complication { get; set; }
+        public string Histopathology { get; set; }
+        public string Recommendation { get; set; }
+        public string Comment { get; set; }
     }
 }

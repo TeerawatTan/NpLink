@@ -46,8 +46,8 @@ namespace EndoscopicSystem.Entities
         public Nullable<int> AnesthesistMethodFirstID { get; set; }
         public Nullable<int> AnesthesistMethodSecondID { get; set; }
         public Nullable<int> IndicationID { get; set; }
-        public string PreDiagnosisFirstID { get; set; }
-        public string PreDiagnosisSecondID { get; set; }
+        public Nullable<int> PreDiagnosisFirstID { get; set; }
+        public Nullable<int> PreDiagnosisSecondID { get; set; }
         public Nullable<int> FinancialID { get; set; }
         public Nullable<int> OpdID { get; set; }
         public Nullable<int> AnesthesiaID { get; set; }
