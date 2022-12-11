@@ -51,5 +51,6 @@ namespace EndoscopicSystem.Entities
         public Nullable<int> FinancialID { get; set; }
         public Nullable<int> OpdID { get; set; }
         public Nullable<int> AnesthesiaID { get; set; }
+        public Nullable<int> InstrumentID { get; set; }
     }
 }

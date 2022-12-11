@@ -11,9 +11,12 @@ namespace EndoscopicSystem.V2.Forms
     public partial class FormOpdSetting : Form
     {
         private readonly EndoscopicEntities _db = new EndoscopicEntities();
-        public FormOpdSetting()
+        private int _id;
+        public FormOpdSetting(int id)
         {
             InitializeComponent();
+
+            this._id = id;
         }
 
         private void LoadData(List<OpdList> data)

@@ -54,24 +54,17 @@ namespace EndoscopicSystem.V2.Forms
 
         private void FormProcedure_Load(object sender, EventArgs e)
         {
+            btnReport.Visible = false;
+
             cbbProcedureList.ValueMember = "ProcedureID";
             cbbProcedureList.DisplayMember = "ProcedureName";
             cbbProcedureList.DataSource = _dropdownRepo.GetProcedureList();
             cbbProcedureList.SelectedIndex = 0;
             cbbProcedureList.Enabled = true;
-            if (_procedureId <= 0)
-            {
-                btnReport.Visible = false;
-            }
-            else
-            {
-                cbbProcedureList.SelectedValue = _procedureId;
-                cbbProcedureList.Enabled = false;
-                OpenTabPage(_procedureId);
-                SearchHN(_hnNo, _procedureId);
-
-                btnReport.Visible = true;
-            }
+            cbbProcedureList.SelectedValue = _procedureId;
+            cbbProcedureList.Enabled = false;
+            OpenTabPage(_procedureId);
+            SearchHN(_hnNo, _procedureId);
 
             listBox1.Items.Clear();
 
@@ -202,15 +195,29 @@ namespace EndoscopicSystem.V2.Forms
             string pathDicom = _pathFolderDicomSave + nameDicomSave;
             rprt.ExportToDisk(CrystalDecisions.Shared.ExportFormatType.PortableDocFormat, pathDicom);
         }
-        private void btnReport_Click(object sender, EventArgs e)
+        private void btnSave_Click(object sender, EventArgs e)
         {
             if (!string.IsNullOrWhiteSpace(_hnNo) && _procedureId > 0 && _endoscopicId > 0)
             {
                 // Save
                 bool isSave = OnSave(_hnNo, _patientId, _procedureId, _endoscopicId);
-
+                if (isSave)
+                {
+                    btnReport.Visible = true;
+                }
+            }
+            else
+            {
+                btnReport.Visible = false;
+                return;
+            }
+        }
+        private void btnReport_Click(object sender, EventArgs e)
+        {
+            if (!string.IsNullOrWhiteSpace(_hnNo) && _procedureId > 0 && _endoscopicId > 0)
+            {
                 // Export
-                //ExportEndoscopic(_hnNo, _procedureId, _endoscopicId);
+                ExportEndoscopic(_hnNo, _procedureId, _endoscopicId);
             }
             else
             {
@@ -890,7 +897,7 @@ namespace EndoscopicSystem.V2.Forms
                 textBox.AutoCompleteCustomSource = ac;
             }
         }
-       
+
 
         #endregion
 
@@ -1571,6 +1578,125 @@ namespace EndoscopicSystem.V2.Forms
             _db.Histories.Add(history);
             _db.SaveChanges();
         }
+        private void SaveImage(int endoscopicID, int procedureID)
+        {
+            System.Windows.Forms.PictureBox[] boxes =
+            {
+                    pictureBoxSaved1,
+                    pictureBoxSaved2,
+                    pictureBoxSaved3,
+                    pictureBoxSaved4,
+                    pictureBoxSaved5,
+                    pictureBoxSaved7,
+                    pictureBoxSaved8,
+                    pictureBoxSaved9,
+                    pictureBoxSaved10,
+                    pictureBoxSaved11,
+                    pictureBoxSaved12,
+                    pictureBoxSaved13,
+                    pictureBoxSaved14,
+                    pictureBoxSaved15,
+                    pictureBoxSaved16,
+                    pictureBoxSaved17,
+                    pictureBoxSaved18
+                };
+            System.Windows.Forms.TextBox[] texts =
+            {
+                    txtPictureBoxSaved1,
+                    txtPictureBoxSaved2,
+                    txtPictureBoxSaved3,
+                    txtPictureBoxSaved4,
+                    txtPictureBoxSaved5,
+                    txtPictureBoxSaved7,
+                    txtPictureBoxSaved8,
+                    txtPictureBoxSaved9,
+                    txtPictureBoxSaved10,
+                    txtPictureBoxSaved11,
+                    txtPictureBoxSaved12,
+                    txtPictureBoxSaved13,
+                    txtPictureBoxSaved14,
+                    txtPictureBoxSaved15,
+                    txtPictureBoxSaved16,
+                    txtPictureBoxSaved17,
+                    txtPictureBoxSaved18
+                };
+            int i = 0;
+            int seq = 1;
+            foreach (var item in texts)
+            {
+                String Imgpath = boxes[i].ImageLocation != null ? boxes[i].ImageLocation.ToString() : "";
+                var endoImgs = _db.EndoscopicImages.Where(x => x.EndoscopicID == endoscopicID && x.ProcedureID == procedureID && x.Seq == seq).FirstOrDefault();
+                if (endoImgs != null)
+                {
+                    if (Imgpath == "")
+                    {
+                        _db.EndoscopicImages.Remove(endoImgs);
+                    }
+                    else
+                    {
+                        endoImgs.ImagePath = Imgpath;
+                        endoImgs.ImageComment = item.Text;
+                        endoImgs.Seq = i + 1;
+                        endoImgs.UpdateBy = _id;
+                        endoImgs.UpdateDate = DateTime.Now;
+                    }
+                }
+                else
+                {
+                    EndoscopicImage endoscopicImage = new EndoscopicImage();
+                    endoscopicImage.EndoscopicID = endoscopicID;
+                    endoscopicImage.ProcedureID = procedureID;
+                    endoscopicImage.ImagePath = Imgpath;
+                    endoscopicImage.ImageComment = item.Text;
+                    endoscopicImage.Seq = i + 1;
+                    endoscopicImage.CreateBy = _id;
+                    endoscopicImage.CreateDate = DateTime.Now;
+                    endoscopicImage.UpdateBy = _id;
+                    endoscopicImage.UpdateDate = DateTime.Now;
+                    _db.EndoscopicImages.Add(endoscopicImage);
+                }
+                i++;
+                seq++;
+            }
+        }
+        private void SaveAllImage(int endoscopicID, int procedureID)
+        {
+            int i = 0;
+            int seq = 1;
+            foreach (var item in _imgPath.Values)
+            {
+                var endoAllImgs = _db.EndoscopicAllImages.Where(x => x.EndoscopicID == endoscopicID && x.ProcedureID == procedureID && x.Seq == seq).FirstOrDefault();
+                if (item != null)
+                {
+                    if (endoAllImgs != null)
+                    {
+                        endoAllImgs.ImagePath = item.ToString();
+                        endoAllImgs.UpdateBy = _id;
+                        endoAllImgs.UpdateDate = DateTime.Now;
+                    }
+                    else
+                    {
+                        EndoscopicAllImage endoscopicAllImage = new EndoscopicAllImage();
+                        endoscopicAllImage.EndoscopicID = endoscopicID;
+                        endoscopicAllImage.ProcedureID = procedureID;
+                        endoscopicAllImage.ImagePath = item.ToString();
+                        endoscopicAllImage.Seq = i + 1;
+                        endoscopicAllImage.CreateBy = _id;
+                        endoscopicAllImage.CreateDate = DateTime.Now;
+                        endoscopicAllImage.UpdateBy = _id;
+                        endoscopicAllImage.UpdateDate = DateTime.Now;
+                        _db.EndoscopicAllImages.Add(endoscopicAllImage);
+                    }
+                    i++;
+                    seq++;
+                }
+                else
+                {
+
+                }
+            }
+        }
+
         private void UpdateDataAll(int procedureId, int patientId, Endoscopic endoscopic)
         {
             try
@@ -1682,8 +1808,8 @@ namespace EndoscopicSystem.V2.Forms
 
                 UpdateFinding(procedureId);
                 //UpdateAppointment(endoscopicId);
-                //SaveImage(endoscopic.EndoscopicID, procedureId);
-                //SaveAllImage(endoscopic.EndoscopicID, procedureId);
+                SaveImage(endoscopic.EndoscopicID, procedureId);
+                SaveAllImage(endoscopic.EndoscopicID, procedureId);
                 //SaveVideo(endoscopic.EndoscopicID, procedureId);
                 SaveLogEndoscopic(endoscopic, patientId, procedureId);
                 SaveLogHistory(patientId, procedureId, patient.DoctorID, endoscopic.EndoscopicID);
@@ -1725,7 +1851,7 @@ namespace EndoscopicSystem.V2.Forms
             try
             {
                 UpdateEndoscopic(patientId, procedureId, endoscopicId);
-                
+
                 MessageBox.Show(Constant.STATUS_SUCCESS, "Save Form", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
                 return true;
@@ -1760,7 +1886,7 @@ namespace EndoscopicSystem.V2.Forms
                 _dropdownListService.DropdownMedication(cbbGeneralMedication_EGD);
                 _dropdownListService.DropdownIndication(cbbGeneralIndication_EGD);
                 _dropdownListService.DropdownFinancial(cbbGeneralFinancial_EGD);
-                
+
                 // Finding Tab
                 _dropdownListService.DropdownOropharynx(cbbFindingOropharynx_EGD);
             }
@@ -2240,6 +2366,7 @@ namespace EndoscopicSystem.V2.Forms
         {
             SavePictureBoxOnClick(8, pictureBoxSaved9, btnEditPic9, btnDeletePictureBoxSaved9);
         }
+
         //private void btnPictureBoxSaved9_Click(object sender, EventArgs e)
         //{
         //    SavePictureBoxOnClick(9, pictureBoxSaved9, btnEditPic9, btnDeletePictureBoxSaved9);

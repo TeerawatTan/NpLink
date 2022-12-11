@@ -111,13 +111,14 @@ namespace EndoscopicSystem.Entities
         public virtual DbSet<AnesthesistMethod> AnesthesistMethods { get; set; }
         public virtual DbSet<FindingLabel> FindingLabels { get; set; }
         public virtual DbSet<Financial> Financials { get; set; }
-        public virtual DbSet<Patient> Patients { get; set; }
         public virtual DbSet<Endoscopic> Endoscopics { get; set; }
         public virtual DbSet<Finding> Findings { get; set; }
         public virtual DbSet<v_PatientList> v_PatientList { get; set; }
         public virtual DbSet<ICD10> ICD10 { get; set; }
         public virtual DbSet<ICD9> ICD9 { get; set; }
         public virtual DbSet<ProcedureList> ProcedureLists { get; set; }
+        public virtual DbSet<Patient> Patients { get; set; }
+        public virtual DbSet<Instrument> Instruments { get; set; }
     
         public virtual ObjectResult<BrochoscopyReport_Result> BrochoscopyReport(string hn, Nullable<int> procedure, Nullable<int> endoscopicId)
         {

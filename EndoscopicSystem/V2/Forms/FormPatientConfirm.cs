@@ -42,6 +42,7 @@ namespace EndoscopicSystem.V2.Forms
             {
                 InitialData(defaultData, defaultData, defaultData, defaultData);
             }
+            GetInstrumentList();
         }
 
         private void InitialData(string fullName, string hnNum, string doctorList, string nurseList)
@@ -51,6 +52,30 @@ namespace EndoscopicSystem.V2.Forms
             lbHn.Text = hnNum;
             lbDoctorList.Text = doctorList;
             lbNurseList.Text = nurseList;
+        }
+
+        private void GetInstrumentList()
+        {
+            List<InstrumentConfirmModel> list = new List<InstrumentConfirmModel>();
+
+            var data = db.Instruments.ToList();
+            if (data != null)
+            {
+                foreach (var item in data)
+                {
+                    InstrumentConfirmModel i = new InstrumentConfirmModel()
+                    {
+                        No = item.ID,
+                        Name = item.Code + " - " + item.SerialNumber
+                    };
+                    list.Add(i);
+                }
+            }
+
+            cbbInstrument.ValueMember = "No";
+            cbbInstrument.DisplayMember = "Name";
+            cbbInstrument.DataSource = list;
+            cbbInstrument.SelectedIndex = 0;
         }
 
         private void SearchHN(string hn, int procId = 0)
@@ -144,5 +169,11 @@ namespace EndoscopicSystem.V2.Forms
         {
             this.Close();
         }
+    }
+
+    public class InstrumentConfirmModel
+    {
+        public int No { get; set; }
+        public string Name { get; set; }
     }
 }

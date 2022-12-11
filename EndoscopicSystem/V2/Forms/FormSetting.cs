@@ -76,7 +76,7 @@ namespace EndoscopicSystem.V2.Forms
 
         private void menuOPD_Click(object sender, EventArgs e)
         {
-            OpenChildForm(new FormOpdSetting());
+            OpenChildForm(new FormOpdSetting(_id));
             ActiveMenuButton(sender);
         }
 
@@ -113,6 +113,12 @@ namespace EndoscopicSystem.V2.Forms
         private void menuFinancialSetting_Click(object sender, EventArgs e)
         {
             OpenChildForm(new FormFinancialSetting());
+            ActiveMenuButton(sender);
+        }
+
+        private void menuInstrumentSetting_Click(object sender, EventArgs e)
+        {
+            OpenChildForm(new FormInstrumentSetting(_id));
             ActiveMenuButton(sender);
         }
     }

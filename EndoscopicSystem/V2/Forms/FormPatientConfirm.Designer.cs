@@ -46,6 +46,7 @@ namespace EndoscopicSystem.V2.Forms
             this.lbDoctorList = new System.Windows.Forms.Label();
             this.lbHn = new System.Windows.Forms.Label();
             this.lbName = new System.Windows.Forms.Label();
+            this.cbbInstrument = new System.Windows.Forms.ComboBox();
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -138,7 +139,7 @@ namespace EndoscopicSystem.V2.Forms
             // textBox1
             // 
             this.textBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
-            this.textBox1.Location = new System.Drawing.Point(38, 556);
+            this.textBox1.Location = new System.Drawing.Point(138, 312);
             this.textBox1.Name = "textBox1";
             this.textBox1.ReadOnly = true;
             this.textBox1.Size = new System.Drawing.Size(266, 35);
@@ -180,6 +181,7 @@ namespace EndoscopicSystem.V2.Forms
             this.groupBox1.Controls.Add(this.lbHn);
             this.groupBox1.Controls.Add(this.lbName);
             this.groupBox1.Controls.Add(this.label5);
+            this.groupBox1.Controls.Add(this.textBox1);
             this.groupBox1.Controls.Add(this.label4);
             this.groupBox1.Controls.Add(this.label3);
             this.groupBox1.Controls.Add(this.label2);
@@ -229,16 +231,27 @@ namespace EndoscopicSystem.V2.Forms
             this.lbName.TabIndex = 5;
             this.lbName.Text = "......";
             // 
+            // cbbInstrument
+            // 
+            this.cbbInstrument.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cbbInstrument.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
+            this.cbbInstrument.FormattingEnabled = true;
+            this.cbbInstrument.Location = new System.Drawing.Point(38, 566);
+            this.cbbInstrument.Margin = new System.Windows.Forms.Padding(2);
+            this.cbbInstrument.Name = "cbbInstrument";
+            this.cbbInstrument.Size = new System.Drawing.Size(266, 24);
+            this.cbbInstrument.TabIndex = 98;
+            // 
             // FormPatientConfirm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(635, 725);
+            this.Controls.Add(this.cbbInstrument);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.label8);
             this.Controls.Add(this.label7);
             this.Controls.Add(this.textBox2);
-            this.Controls.Add(this.textBox1);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.btnOk);
             this.Controls.Add(this.label6);
@@ -274,5 +287,6 @@ namespace EndoscopicSystem.V2.Forms
         private System.Windows.Forms.Label lbDoctorList;
         private System.Windows.Forms.Label lbHn;
         private System.Windows.Forms.Label lbName;
+        private System.Windows.Forms.ComboBox cbbInstrument;
     }
 }
