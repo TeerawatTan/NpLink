@@ -60,7 +60,6 @@
         <EntityTypeShape EntityType="EndoscopicModel.VocalCord" Width="1.5" PointX="7.375" PointY="22.75" />
         <EntityTypeShape EntityType="EndoscopicModel.v_HistoryEndoscopic" Width="1.5" PointX="11.375" PointY="0.75" />
         <EntityTypeShape EntityType="EndoscopicModel.Endoscopic_Log" Width="1.5" PointX="23.375" PointY="11.75" />
-        <EntityTypeShape EntityType="EndoscopicModel.Appointment" Width="1.5" PointX="0.75" PointY="9.75" />
         <EntityTypeShape EntityType="EndoscopicModel.v_AppointmentDetails" Width="1.5" PointX="23.375" PointY="20.75" />
         <EntityTypeShape EntityType="EndoscopicModel.User" Width="1.5" PointX="9.375" PointY="24.75" />
         <EntityTypeShape EntityType="EndoscopicModel.BaseOfTongue" Width="1.5" PointX="9.75" PointY="4.75" />
@@ -97,6 +96,7 @@
         <EntityTypeShape EntityType="EndoscopicModel.ProcedureList" Width="1.5" PointX="5.375" PointY="28.75" />
         <EntityTypeShape EntityType="EndoscopicModel.Patient" Width="1.5" PointX="22.375" PointY="28.75" />
         <EntityTypeShape EntityType="EndoscopicModel.Instrument" Width="1.5" PointX="28.375" PointY="6.75" />
+        <EntityTypeShape EntityType="EndoscopicModel.Appointment" Width="1.5" PointX="28.375" PointY="26.75" />
       </Diagram>
     </edmx:Diagrams>
   </edmx:Designer>

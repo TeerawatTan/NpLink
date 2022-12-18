@@ -65,6 +65,8 @@
           <Property Name="UpdateDate" Type="datetime" />
           <Property Name="UpdateBy" Type="int" />
           <Property Name="EndoscopicID" Type="int" />
+          <Property Name="Instrument1ID" Type="int" />
+          <Property Name="Instrument2ID" Type="int" />
         </EntityType>
         <EntityType Name="Doctor">
           <Key>
@@ -1490,7 +1492,6 @@ warning 6002: The table/view 'EndoscopicDb.dbo.v_PatientList' does not have a pr
           <EntitySet Name="VocalCords" EntityType="EndoscopicModel.VocalCord" />
           <EntitySet Name="v_HistoryEndoscopic" EntityType="EndoscopicModel.v_HistoryEndoscopic" />
           <EntitySet Name="Endoscopic_Log" EntityType="EndoscopicModel.Endoscopic_Log" />
-          <EntitySet Name="Appointments" EntityType="EndoscopicModel.Appointment" />
           <FunctionImport Name="Chart" ReturnType="Collection(EndoscopicModel.Chart_Result)">
             <Parameter Name="monthVal" Mode="In" Type="Int32" />
             <Parameter Name="yearVal" Mode="In" Type="Int32" />
@@ -1534,6 +1535,7 @@ warning 6002: The table/view 'EndoscopicDb.dbo.v_PatientList' does not have a pr
           <EntitySet Name="ProcedureLists" EntityType="EndoscopicModel.ProcedureList" />
           <EntitySet Name="Patients" EntityType="EndoscopicModel.Patient" />
           <EntitySet Name="Instruments" EntityType="EndoscopicModel.Instrument" />
+          <EntitySet Name="Appointments" EntityType="EndoscopicModel.Appointment" />
           </EntityContainer>
         <EntityType Name="Doctor">
           <Key>
@@ -2307,42 +2309,6 @@ warning 6002: The table/view 'EndoscopicDb.dbo.v_PatientList' does not have a pr
           <Property Name="IndicationOther" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
           <Property Name="IsActive" Type="Boolean" />
         </EntityType>
-        <EntityType Name="Appointment">
-          <Key>
-            <PropertyRef Name="AppointmentID" />
-          </Key>
-          <Property Name="AppointmentID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-          <Property Name="PatientID" Type="Int32" />
-          <Property Name="ProcedureID" Type="Int32" />
-          <Property Name="HN" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
-          <Property Name="Firstname" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
-          <Property Name="Lastname" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
-          <Property Name="Fullname" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
-          <Property Name="CardID" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
-          <Property Name="Sex" Type="Boolean" />
-          <Property Name="Age" Type="Int32" />
-          <Property Name="MobileNumber" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
-          <Property Name="FullAddress" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
-          <Property Name="Symptom" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
-          <Property Name="RoomID" Type="Int32" />
-          <Property Name="StaffName" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
-          <Property Name="NurseFirstID" Type="Int32" />
-          <Property Name="NurseSecondID" Type="Int32" />
-          <Property Name="NurseThirthID" Type="Int32" />
-          <Property Name="DoctorID" Type="Int32" />
-          <Property Name="OperationDate" Type="DateTime" Precision="3" />
-          <Property Name="AppointmentDate" Type="DateTime" Precision="3" />
-          <Property Name="IsNewCase" Type="Boolean" />
-          <Property Name="IsFollowCase" Type="Boolean" />
-          <Property Name="OPD" Type="Boolean" />
-          <Property Name="IPD" Type="Boolean" />
-          <Property Name="EndoscopicCheck" Type="Boolean" />
-          <Property Name="CreateDate" Type="DateTime" Precision="3" />
-          <Property Name="CreateBy" Type="Int32" />
-          <Property Name="UpdateDate" Type="DateTime" Precision="3" />
-          <Property Name="UpdateBy" Type="Int32" />
-          <Property Name="EndoscopicID" Type="Int32" />
-        </EntityType>
         <ComplexType Name="Chart_Result">
           <Property Type="Int32" Name="ProcedureID" Nullable="false" />
           <Property Type="Int32" Name="CountPatient" Nullable="true" />
@@ -2893,6 +2859,44 @@ warning 6002: The table/view 'EndoscopicDb.dbo.v_PatientList' does not have a pr
           <Property Name="Code" Type="String" MaxLength="250" FixedLength="false" Unicode="true" />
           <Property Name="SerialNumber" Type="String" MaxLength="250" FixedLength="false" Unicode="true" />
           <Property Name="IsActive" Type="Boolean" Nullable="false" />
+        </EntityType>
+        <EntityType Name="Appointment">
+          <Key>
+            <PropertyRef Name="AppointmentID" />
+          </Key>
+          <Property Name="AppointmentID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="PatientID" Type="Int32" />
+          <Property Name="ProcedureID" Type="Int32" />
+          <Property Name="HN" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Firstname" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="Lastname" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="Fullname" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+          <Property Name="CardID" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Sex" Type="Boolean" />
+          <Property Name="Age" Type="Int32" />
+          <Property Name="MobileNumber" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="FullAddress" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+          <Property Name="Symptom" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="RoomID" Type="Int32" />
+          <Property Name="StaffName" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="NurseFirstID" Type="Int32" />
+          <Property Name="NurseSecondID" Type="Int32" />
+          <Property Name="NurseThirthID" Type="Int32" />
+          <Property Name="DoctorID" Type="Int32" />
+          <Property Name="OperationDate" Type="DateTime" Precision="3" />
+          <Property Name="AppointmentDate" Type="DateTime" Precision="3" />
+          <Property Name="IsNewCase" Type="Boolean" />
+          <Property Name="IsFollowCase" Type="Boolean" />
+          <Property Name="OPD" Type="Boolean" />
+          <Property Name="IPD" Type="Boolean" />
+          <Property Name="EndoscopicCheck" Type="Boolean" />
+          <Property Name="CreateDate" Type="DateTime" Precision="3" />
+          <Property Name="CreateBy" Type="Int32" />
+          <Property Name="UpdateDate" Type="DateTime" Precision="3" />
+          <Property Name="UpdateBy" Type="Int32" />
+          <Property Name="EndoscopicID" Type="Int32" />
+          <Property Name="Instrument1ID" Type="Int32" />
+          <Property Name="Instrument2ID" Type="Int32" />
         </EntityType>
         </Schema>
     </edmx:ConceptualModels>
@@ -3743,43 +3747,6 @@ warning 6002: The table/view 'EndoscopicDb.dbo.v_PatientList' does not have a pr
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
-          <EntitySetMapping Name="Appointments">
-            <EntityTypeMapping TypeName="EndoscopicModel.Appointment">
-              <MappingFragment StoreEntitySet="Appointment">
-                <ScalarProperty Name="EndoscopicID" ColumnName="EndoscopicID" />
-                <ScalarProperty Name="UpdateBy" ColumnName="UpdateBy" />
-                <ScalarProperty Name="UpdateDate" ColumnName="UpdateDate" />
-                <ScalarProperty Name="CreateBy" ColumnName="CreateBy" />
-                <ScalarProperty Name="CreateDate" ColumnName="CreateDate" />
-                <ScalarProperty Name="EndoscopicCheck" ColumnName="EndoscopicCheck" />
-                <ScalarProperty Name="IPD" ColumnName="IPD" />
-                <ScalarProperty Name="OPD" ColumnName="OPD" />
-                <ScalarProperty Name="IsFollowCase" ColumnName="IsFollowCase" />
-                <ScalarProperty Name="IsNewCase" ColumnName="IsNewCase" />
-                <ScalarProperty Name="AppointmentDate" ColumnName="AppointmentDate" />
-                <ScalarProperty Name="OperationDate" ColumnName="OperationDate" />
-                <ScalarProperty Name="DoctorID" ColumnName="DoctorID" />
-                <ScalarProperty Name="NurseThirthID" ColumnName="NurseThirthID" />
-                <ScalarProperty Name="NurseSecondID" ColumnName="NurseSecondID" />
-                <ScalarProperty Name="NurseFirstID" ColumnName="NurseFirstID" />
-                <ScalarProperty Name="StaffName" ColumnName="StaffName" />
-                <ScalarProperty Name="RoomID" ColumnName="RoomID" />
-                <ScalarProperty Name="Symptom" ColumnName="Symptom" />
-                <ScalarProperty Name="FullAddress" ColumnName="FullAddress" />
-                <ScalarProperty Name="MobileNumber" ColumnName="MobileNumber" />
-                <ScalarProperty Name="Age" ColumnName="Age" />
-                <ScalarProperty Name="Sex" ColumnName="Sex" />
-                <ScalarProperty Name="CardID" ColumnName="CardID" />
-                <ScalarProperty Name="Fullname" ColumnName="Fullname" />
-                <ScalarProperty Name="Lastname" ColumnName="Lastname" />
-                <ScalarProperty Name="Firstname" ColumnName="Firstname" />
-                <ScalarProperty Name="HN" ColumnName="HN" />
-                <ScalarProperty Name="ProcedureID" ColumnName="ProcedureID" />
-                <ScalarProperty Name="PatientID" ColumnName="PatientID" />
-                <ScalarProperty Name="AppointmentID" ColumnName="AppointmentID" />
-              </MappingFragment>
-            </EntityTypeMapping>
-          </EntitySetMapping>
           <FunctionImportMapping FunctionImportName="Chart" FunctionName="EndoscopicModel.Store.Chart">
             <ResultMapping>
               <ComplexTypeMapping TypeName="EndoscopicModel.Chart_Result">
@@ -4367,6 +4334,45 @@ warning 6002: The table/view 'EndoscopicDb.dbo.v_PatientList' does not have a pr
                 <ScalarProperty Name="SerialNumber" ColumnName="SerialNumber" />
                 <ScalarProperty Name="Code" ColumnName="Code" />
                 <ScalarProperty Name="ID" ColumnName="ID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Appointments">
+            <EntityTypeMapping TypeName="EndoscopicModel.Appointment">
+              <MappingFragment StoreEntitySet="Appointment">
+                <ScalarProperty Name="Instrument2ID" ColumnName="Instrument2ID" />
+                <ScalarProperty Name="Instrument1ID" ColumnName="Instrument1ID" />
+                <ScalarProperty Name="EndoscopicID" ColumnName="EndoscopicID" />
+                <ScalarProperty Name="UpdateBy" ColumnName="UpdateBy" />
+                <ScalarProperty Name="UpdateDate" ColumnName="UpdateDate" />
+                <ScalarProperty Name="CreateBy" ColumnName="CreateBy" />
+                <ScalarProperty Name="CreateDate" ColumnName="CreateDate" />
+                <ScalarProperty Name="EndoscopicCheck" ColumnName="EndoscopicCheck" />
+                <ScalarProperty Name="IPD" ColumnName="IPD" />
+                <ScalarProperty Name="OPD" ColumnName="OPD" />
+                <ScalarProperty Name="IsFollowCase" ColumnName="IsFollowCase" />
+                <ScalarProperty Name="IsNewCase" ColumnName="IsNewCase" />
+                <ScalarProperty Name="AppointmentDate" ColumnName="AppointmentDate" />
+                <ScalarProperty Name="OperationDate" ColumnName="OperationDate" />
+                <ScalarProperty Name="DoctorID" ColumnName="DoctorID" />
+                <ScalarProperty Name="NurseThirthID" ColumnName="NurseThirthID" />
+                <ScalarProperty Name="NurseSecondID" ColumnName="NurseSecondID" />
+                <ScalarProperty Name="NurseFirstID" ColumnName="NurseFirstID" />
+                <ScalarProperty Name="StaffName" ColumnName="StaffName" />
+                <ScalarProperty Name="RoomID" ColumnName="RoomID" />
+                <ScalarProperty Name="Symptom" ColumnName="Symptom" />
+                <ScalarProperty Name="FullAddress" ColumnName="FullAddress" />
+                <ScalarProperty Name="MobileNumber" ColumnName="MobileNumber" />
+                <ScalarProperty Name="Age" ColumnName="Age" />
+                <ScalarProperty Name="Sex" ColumnName="Sex" />
+                <ScalarProperty Name="CardID" ColumnName="CardID" />
+                <ScalarProperty Name="Fullname" ColumnName="Fullname" />
+                <ScalarProperty Name="Lastname" ColumnName="Lastname" />
+                <ScalarProperty Name="Firstname" ColumnName="Firstname" />
+                <ScalarProperty Name="HN" ColumnName="HN" />
+                <ScalarProperty Name="ProcedureID" ColumnName="ProcedureID" />
+                <ScalarProperty Name="PatientID" ColumnName="PatientID" />
+                <ScalarProperty Name="AppointmentID" ColumnName="AppointmentID" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>

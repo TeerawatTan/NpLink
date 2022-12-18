@@ -38,7 +38,7 @@ namespace EndoscopicSystem.V2.Forms
             this.btnOk = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
             this.textBox1 = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.SerialNumber1 = new System.Windows.Forms.TextBox();
             this.label7 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
@@ -46,7 +46,11 @@ namespace EndoscopicSystem.V2.Forms
             this.lbDoctorList = new System.Windows.Forms.Label();
             this.lbHn = new System.Windows.Forms.Label();
             this.lbName = new System.Windows.Forms.Label();
-            this.cbbInstrument = new System.Windows.Forms.ComboBox();
+            this.cbbInstrument1 = new System.Windows.Forms.ComboBox();
+            this.cbbInstrument2 = new System.Windows.Forms.ComboBox();
+            this.SerialNumber2 = new System.Windows.Forms.Label();
+            this.label10 = new System.Windows.Forms.Label();
+            this.textBox3 = new System.Windows.Forms.TextBox();
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -115,7 +119,7 @@ namespace EndoscopicSystem.V2.Forms
             this.btnOk.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
             this.btnOk.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
             this.btnOk.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.btnOk.Location = new System.Drawing.Point(335, 650);
+            this.btnOk.Location = new System.Drawing.Point(335, 671);
             this.btnOk.Name = "btnOk";
             this.btnOk.Size = new System.Drawing.Size(121, 63);
             this.btnOk.TabIndex = 6;
@@ -128,7 +132,7 @@ namespace EndoscopicSystem.V2.Forms
             this.button1.BackColor = System.Drawing.Color.White;
             this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
             this.button1.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.button1.Location = new System.Drawing.Point(162, 650);
+            this.button1.Location = new System.Drawing.Point(162, 671);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(126, 63);
             this.button1.TabIndex = 7;
@@ -139,20 +143,20 @@ namespace EndoscopicSystem.V2.Forms
             // textBox1
             // 
             this.textBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
-            this.textBox1.Location = new System.Drawing.Point(138, 312);
+            this.textBox1.Location = new System.Drawing.Point(190, 484);
             this.textBox1.Name = "textBox1";
             this.textBox1.ReadOnly = true;
             this.textBox1.Size = new System.Drawing.Size(266, 35);
             this.textBox1.TabIndex = 8;
             // 
-            // textBox2
+            // SerialNumber1
             // 
-            this.textBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
-            this.textBox2.Location = new System.Drawing.Point(335, 556);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.ReadOnly = true;
-            this.textBox2.Size = new System.Drawing.Size(266, 35);
-            this.textBox2.TabIndex = 9;
+            this.SerialNumber1.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
+            this.SerialNumber1.Location = new System.Drawing.Point(335, 556);
+            this.SerialNumber1.Name = "SerialNumber1";
+            this.SerialNumber1.ReadOnly = true;
+            this.SerialNumber1.Size = new System.Drawing.Size(266, 35);
+            this.SerialNumber1.TabIndex = 9;
             // 
             // label7
             // 
@@ -181,7 +185,6 @@ namespace EndoscopicSystem.V2.Forms
             this.groupBox1.Controls.Add(this.lbHn);
             this.groupBox1.Controls.Add(this.lbName);
             this.groupBox1.Controls.Add(this.label5);
-            this.groupBox1.Controls.Add(this.textBox1);
             this.groupBox1.Controls.Add(this.label4);
             this.groupBox1.Controls.Add(this.label3);
             this.groupBox1.Controls.Add(this.label2);
@@ -231,27 +234,76 @@ namespace EndoscopicSystem.V2.Forms
             this.lbName.TabIndex = 5;
             this.lbName.Text = "......";
             // 
-            // cbbInstrument
+            // cbbInstrument1
             // 
-            this.cbbInstrument.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cbbInstrument.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
-            this.cbbInstrument.FormattingEnabled = true;
-            this.cbbInstrument.Location = new System.Drawing.Point(38, 566);
-            this.cbbInstrument.Margin = new System.Windows.Forms.Padding(2);
-            this.cbbInstrument.Name = "cbbInstrument";
-            this.cbbInstrument.Size = new System.Drawing.Size(266, 24);
-            this.cbbInstrument.TabIndex = 98;
+            this.cbbInstrument1.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cbbInstrument1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
+            this.cbbInstrument1.FormattingEnabled = true;
+            this.cbbInstrument1.Location = new System.Drawing.Point(38, 563);
+            this.cbbInstrument1.Margin = new System.Windows.Forms.Padding(2);
+            this.cbbInstrument1.Name = "cbbInstrument1";
+            this.cbbInstrument1.Size = new System.Drawing.Size(266, 28);
+            this.cbbInstrument1.TabIndex = 98;
+            // 
+            // cbbInstrument2
+            // 
+            this.cbbInstrument2.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cbbInstrument2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
+            this.cbbInstrument2.FormattingEnabled = true;
+            this.cbbInstrument2.Location = new System.Drawing.Point(38, 628);
+            this.cbbInstrument2.Margin = new System.Windows.Forms.Padding(2);
+            this.cbbInstrument2.Name = "cbbInstrument2";
+            this.cbbInstrument2.Size = new System.Drawing.Size(266, 28);
+            this.cbbInstrument2.TabIndex = 102;
+            this.cbbInstrument2.Visible = false;
+            // 
+            // SerialNumber2
+            // 
+            this.SerialNumber2.AutoSize = true;
+            this.SerialNumber2.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
+            this.SerialNumber2.Location = new System.Drawing.Point(331, 594);
+            this.SerialNumber2.Name = "SerialNumber2";
+            this.SerialNumber2.Size = new System.Drawing.Size(38, 24);
+            this.SerialNumber2.TabIndex = 101;
+            this.SerialNumber2.Text = "S/n";
+            this.SerialNumber2.Visible = false;
+            // 
+            // label10
+            // 
+            this.label10.AutoSize = true;
+            this.label10.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
+            this.label10.Location = new System.Drawing.Point(34, 594);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(31, 24);
+            this.label10.TabIndex = 100;
+            this.label10.Text = "รุ่น";
+            this.label10.Visible = false;
+            // 
+            // textBox3
+            // 
+            this.textBox3.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
+            this.textBox3.Location = new System.Drawing.Point(335, 621);
+            this.textBox3.Name = "textBox3";
+            this.textBox3.ReadOnly = true;
+            this.textBox3.Size = new System.Drawing.Size(266, 35);
+            this.textBox3.TabIndex = 99;
+            this.textBox3.Visible = false;
             // 
             // FormPatientConfirm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(635, 725);
-            this.Controls.Add(this.cbbInstrument);
+            this.ClientSize = new System.Drawing.Size(679, 744);
+            this.Controls.Add(this.cbbInstrument2);
+            this.Controls.Add(this.SerialNumber2);
+            this.Controls.Add(this.label10);
+            this.Controls.Add(this.textBox3);
+            this.Controls.Add(this.cbbInstrument1);
+            this.Controls.Add(this.textBox1);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.label8);
             this.Controls.Add(this.label7);
-            this.Controls.Add(this.textBox2);
+            this.Controls.Add(this.SerialNumber1);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.btnOk);
             this.Controls.Add(this.label6);
@@ -279,7 +331,7 @@ namespace EndoscopicSystem.V2.Forms
         private System.Windows.Forms.Button btnOk;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.TextBox SerialNumber1;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.GroupBox groupBox1;
@@ -287,6 +339,10 @@ namespace EndoscopicSystem.V2.Forms
         private System.Windows.Forms.Label lbDoctorList;
         private System.Windows.Forms.Label lbHn;
         private System.Windows.Forms.Label lbName;
-        private System.Windows.Forms.ComboBox cbbInstrument;
+        private System.Windows.Forms.ComboBox cbbInstrument1;
+        private System.Windows.Forms.ComboBox cbbInstrument2;
+        private System.Windows.Forms.Label SerialNumber2;
+        private System.Windows.Forms.Label label10;
+        private System.Windows.Forms.TextBox textBox3;
     }
 }

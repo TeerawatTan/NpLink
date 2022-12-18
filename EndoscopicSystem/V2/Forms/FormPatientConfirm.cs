@@ -72,10 +72,10 @@ namespace EndoscopicSystem.V2.Forms
                 }
             }
 
-            cbbInstrument.ValueMember = "No";
-            cbbInstrument.DisplayMember = "Name";
-            cbbInstrument.DataSource = list;
-            cbbInstrument.SelectedIndex = 0;
+            cbbInstrument1.ValueMember = "No";
+            cbbInstrument1.DisplayMember = "Name";
+            cbbInstrument1.DataSource = list;
+            cbbInstrument1.SelectedIndex = 0;
         }
 
         private void SearchHN(string hn, int procId = 0)

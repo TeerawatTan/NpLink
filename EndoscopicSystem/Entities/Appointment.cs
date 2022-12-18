@@ -45,5 +45,7 @@ namespace EndoscopicSystem.Entities
         public Nullable<System.DateTime> UpdateDate { get; set; }
         public Nullable<int> UpdateBy { get; set; }
         public Nullable<int> EndoscopicID { get; set; }
+        public Nullable<int> Instrument1ID { get; set; }
+        public Nullable<int> Instrument2ID { get; set; }
     }
 }

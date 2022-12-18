@@ -96,13 +96,13 @@ namespace EndoscopicSystem.V2.Forms
             if (cbbProcedureList.SelectedIndex <= 0)
             {
                 RemoveTabPage();
-                btnReport.Visible = false;
+                btnSave.Visible = false;
                 return;
             }
             else
             {
                 OpenTabPage(cbbProcedureList.SelectedIndex);
-                btnReport.Visible = true;
+                btnSave.Visible = true;
             }
         }
 
@@ -360,26 +360,25 @@ namespace EndoscopicSystem.V2.Forms
                             }
                         }
 
-                        btnReport.Enabled = true;
+                        btnSave.Visible = true;
                     }
                     else
                     {
                         Reset_Controller();
-                        btnReport.Enabled = true;
                     }
                 }
                 else
                 {
                     MessageBox.Show("ไม่พบข้อมูลผู้ป่วย");
                     Reset_Controller();
-                    btnReport.Enabled = false;
+                    btnSave.Visible = false;
                 }
             }
             catch (Exception ex)
             {
                 MessageBox.Show(ex.Message);
                 Reset_Controller();
-                btnReport.Enabled = false;
+                btnSave.Visible = false;
             }
         }
         private void txbPreDiagCode_EGD_Click(object sender, EventArgs e)
@@ -1340,7 +1339,7 @@ namespace EndoscopicSystem.V2.Forms
                     finding.DuodenalBulb = txtFindingDuodenalBulb_3.Text;
                     finding.SecondPart = txtFindingSecondPart_3.Text;
                     finding.PrincipalProcedureID = !string.IsNullOrWhiteSpace(txbFindingPrinncipalProcedureID_EGD.Text) ? Convert.ToInt32(txbFindingPrinncipalProcedureID_EGD.Text) : 0;
-                    finding.PrincipalProcedureDetail = txbFindingPrinncipalProcedureCode_EGD + "-" + txbFindingPrinncipalProcedureText_EGD.Text;
+                    finding.PrincipalProcedureDetail = txbFindingPrinncipalProcedureCode_EGD.Text + "-" + txbFindingPrinncipalProcedureText_EGD.Text;
                     finding.SupplementalProcedure1ID = !string.IsNullOrWhiteSpace(txbFindingSupplementalProcedureID_EGD.Text) ? Convert.ToInt32(txbFindingSupplementalProcedureID_EGD.Text) : 0;
                     finding.SupplementalProcedure1Detail = txbFindingSupplementalProcedureCode_EGD.Text + "-" + txbFindingSupplementalProcedureText_EGD.Text;
                     finding.SupplementalProcedure2ID = !string.IsNullOrWhiteSpace(txbFindingSupplementalProcedureID2_EGD.Text) ? Convert.ToInt32(txbFindingSupplementalProcedureID2_EGD.Text) : 0;
@@ -1624,17 +1623,17 @@ namespace EndoscopicSystem.V2.Forms
             int seq = 1;
             foreach (var item in texts)
             {
-                String Imgpath = boxes[i].ImageLocation != null ? boxes[i].ImageLocation.ToString() : "";
+                string Imgpath = boxes[i].ImageLocation != null ? boxes[i].ImageLocation.ToString() : "";
                 var endoImgs = _db.EndoscopicImages.Where(x => x.EndoscopicID == endoscopicID && x.ProcedureID == procedureID && x.Seq == seq).FirstOrDefault();
                 if (endoImgs != null)
                 {
-                    if (Imgpath == "")
+                    if (string.IsNullOrWhiteSpace(Imgpath))
                     {
                         _db.EndoscopicImages.Remove(endoImgs);
                     }
                     else
                     {
-                        endoImgs.ImagePath = Imgpath;
+                        endoImgs.ImagePath = string.IsNullOrWhiteSpace(Imgpath) ? null : Imgpath;
                         endoImgs.ImageComment = item.Text;
                         endoImgs.Seq = i + 1;
                         endoImgs.UpdateBy = _id;
@@ -1646,8 +1645,8 @@ namespace EndoscopicSystem.V2.Forms
                     EndoscopicImage endoscopicImage = new EndoscopicImage();
                     endoscopicImage.EndoscopicID = endoscopicID;
                     endoscopicImage.ProcedureID = procedureID;
-                    endoscopicImage.ImagePath = Imgpath;
-                    endoscopicImage.ImageComment = item.Text;
+                    endoscopicImage.ImagePath = string.IsNullOrWhiteSpace(Imgpath) ? null : Imgpath;
+                    endoscopicImage.ImageComment = string.IsNullOrWhiteSpace(item.Text) ? null : item.Text;
                     endoscopicImage.Seq = i + 1;
                     endoscopicImage.CreateBy = _id;
                     endoscopicImage.CreateDate = DateTime.Now;
@@ -1689,10 +1688,6 @@ namespace EndoscopicSystem.V2.Forms
                     }
                     i++;
                     seq++;
-                }
-                else
-                {
-
                 }
             }
         }
@@ -1889,6 +1884,15 @@ namespace EndoscopicSystem.V2.Forms
 
                 // Finding Tab
                 _dropdownListService.DropdownOropharynx(cbbFindingOropharynx_EGD);
+                _dropdownListService.DropdownEsophagus(cbbFindingEsophagus_EGD);
+                _dropdownListService.DropdownEGJunction(cbbFindingEGJunction_EGD);
+                _dropdownListService.DropdownCardia(cbbFindingCardia_EGD);
+                _dropdownListService.DropdownFundus(cbbFindingFundus_EGD);
+                _dropdownListService.DropdownBody(cbbFindingBody_EGD);
+                _dropdownListService.DropdownAntrum(cbbFindingAntrum_EGD);
+                _dropdownListService.DropdownPylorus(cbbFindingPylorus_EGD);
+                _dropdownListService.DropdownDuodenalBulb(cbbFindingDuodenalBulb_EGD);
+                _dropdownListService.DropdownSecondPart(cbbFinding2ndPart_EGD);
             }
             else if (procedureId == 2)  // Colonoscopy
             {
@@ -1905,6 +1909,19 @@ namespace EndoscopicSystem.V2.Forms
                 _dropdownListService.DropdownMedication(cbbGeneralMedication_Colono);
                 _dropdownListService.DropdownIndication(cbbGeneralIndication_Colono);
                 _dropdownListService.DropdownFinancial(cbbGeneralFinancial_Colono);
+
+                // Finding Tab
+                _dropdownListService.DropdownAnalCanal(cbbFindingAnalCanal_Colono);
+                _dropdownListService.DropdownRectum(cbbFindingRectum_Colono);
+                _dropdownListService.DropdownSigmoidColon(cbbFindingSigmoid_Colono);
+                _dropdownListService.DropdownDescendingColon(cbbFindingDescending_Colono);
+                _dropdownListService.DropdownSplenicFlexure(cbbFindingFlexure_Colono);
+                _dropdownListService.DropdownTransverseColon(cbbFindingTransverse_Colono);
+                _dropdownListService.DropdownHepaticFlexure(cbbFindingHepatic_Colono);
+                _dropdownListService.DropdownAscendingColon(cbbFindingAscending_Colono);
+                _dropdownListService.DropdownIleocecalValve(cbbFindingIleocecal_Colono);
+                _dropdownListService.DropdownCecum(cbbFindingCecum_Colono);
+                _dropdownListService.DropdownTerminalIleum(cbbFindingTerminal_Colono);
             }
         }
 
@@ -1919,7 +1936,7 @@ namespace EndoscopicSystem.V2.Forms
         {
             this.Controls.ClearControls();
             RemoveTabPage();
-            btnReport.Hide();
+            btnReport.Visible = false;
         }
 
         #endregion
