@@ -88,7 +88,7 @@ namespace EndoscopicSystem.V2.Forms
             {
                 devicesCombo.Items.Add("No DirectShow devices found");
             }
-            
+
             if (devicesCombo.Items.Count > 0)
             {
                 try
@@ -100,7 +100,7 @@ namespace EndoscopicSystem.V2.Forms
                 catch (Exception)
                 {
                 }
-                
+
                 //if (index >= 0 && !string.IsNullOrWhiteSpace(_hnNo))
                 //{
                 //    try
@@ -114,7 +114,8 @@ namespace EndoscopicSystem.V2.Forms
                 //}
             }
 
-            _pathFolderImageToSave = _pathFolderImage + _hnNo + @"\" + DateTime.Now.ToString("yyyyMMdd") + @"\" + cbbProcedureList.Text + @"\" + _appointmentId + @"\";
+            _pathFolderImageToSave = GetPathFolderImageToSaved();
+
             if (!Directory.Exists(_pathFolderImageToSave))
             {
                 Directory.CreateDirectory(_pathFolderImageToSave);
@@ -123,10 +124,25 @@ namespace EndoscopicSystem.V2.Forms
             listView1.Items.Clear();
             if (!string.IsNullOrWhiteSpace(_pathFolderImageToSave))
             {
-                LoadImageFromFolder(_pathFolderImageToSave);
+                _imageList = new List<Image>();
+                DirectoryInfo dinfo = new DirectoryInfo(_pathFolderImageToSave);
+                FileInfo[] files = (FileInfo[])dinfo.GetFiles("*.jpg").Where(w => w.Name.StartsWith("Image")).ToArray();
+                foreach (var item in files.OrderByDescending(o => o.CreationTime))
+                {
+                    var imgFile = (Image)Image.FromFile(item.FullName);
+                    _imageList.Add(imgFile);
+                }
+                _item = files.Count();
 
-                ImageList images = new ImageList();
-                images.ImageSize = new Size(220, 160);
+                ImageList images = new ImageList
+                {
+                    ImageSize = new Size(180, 110)
+                };
+
+                foreach (var img in _imageList)
+                {
+                    images.Images.Add(img);
+                }
 
                 foreach (var img in _imageList)
                 {
@@ -137,7 +153,11 @@ namespace EndoscopicSystem.V2.Forms
 
                 for (int i = 0; i < _imageList.Count; i++)
                 {
-                    listView1.Items.Add(new ListViewItem($"Image_{_imageList.Count - i}", i));
+                    //listView1.Items.Add(new ListViewItem($"Image_{_imageList.Count - i}", i));
+
+                    ListViewItem item = new ListViewItem($"Image_{_imageList.Count - i}", i);
+                    item.Tag = files[i].FullName; // Store the file path in the Tag property
+                    listView1.Items.Add(item);
                 }
             }
 
@@ -151,6 +171,22 @@ namespace EndoscopicSystem.V2.Forms
             {
                 txbHN.Focus();
             }
+        }
+
+        private string GetPathFolderImageToSaved()
+        {
+            string path = _pathFolderImage + _hnNo + @"\" + DateTime.Now.ToString("yyyyMMdd") + @"\" + cbbProcedureList.Text + @"\" + _appointmentId + @"\";
+
+            var getEndo = _db.EndoscopicAllImages.FirstOrDefault(f => f.EndoscopicID == _endoscopicId);
+            if (getEndo != null)
+            {
+                var arrStr = getEndo.ImagePath.Split(new string[] { @"\Image_" }, StringSplitOptions.None);
+                if (arrStr == null)
+                    return path;
+                path = arrStr[0];
+            }
+
+            return path;
         }
 
         private void SearchHN(string hn, int procId = 0)
@@ -273,7 +309,7 @@ namespace EndoscopicSystem.V2.Forms
         private void OnLoadVdoCaptureDevice(string hnNo)
         {
             if (string.IsNullOrWhiteSpace(hnNo)) return;
-            
+
             _videoCaptureDevice = new VideoCaptureDevice(_filterInfoCollection[devicesCombo.SelectedIndex].MonikerString);
             _videoCaptureDevice.VideoResolution = _videoCaptureDevice.VideoCapabilities[0];
             _videoCaptureDevice.ProvideSnapshots = true;
@@ -415,10 +451,20 @@ namespace EndoscopicSystem.V2.Forms
                 listView1.Items.Clear();
                 if (!string.IsNullOrWhiteSpace(_pathFolderImageToSave))
                 {
-                    LoadImageFromFolder(_pathFolderImageToSave);
+                    _imageList = new List<Image>();
+                    DirectoryInfo dinfo = new DirectoryInfo(_pathFolderImageToSave);
+                    FileInfo[] files = (FileInfo[])dinfo.GetFiles("*.jpg").Where(w => w.Name.StartsWith("Image")).ToArray();
+                    foreach (var item in files.OrderByDescending(o => o.CreationTime))
+                    {
+                        var imgFile = (Image)Image.FromFile(item.FullName);
+                        _imageList.Add(imgFile);
+                    }
+                    _item = files.Count();
 
-                    ImageList images = new ImageList();
-                    images.ImageSize = new Size(180, 110);
+                    ImageList images = new ImageList
+                    {
+                        ImageSize = new Size(180, 110)
+                    };
 
                     foreach (var img in _imageList)
                     {
@@ -429,7 +475,10 @@ namespace EndoscopicSystem.V2.Forms
 
                     for (int j = 0; j < _imageList.Count; j++)
                     {
-                        listView1.Items.Add(new ListViewItem($"Image_{_imageList.Count - j}", j));
+                        //listView1.Items.Add(new ListViewItem($"Image_{_imageList.Count - j}", j));
+                        ListViewItem item = new ListViewItem($"Image_{_imageList.Count - j}", j);
+                        item.Tag = files[j].FullName; // Store the file path in the Tag property
+                        listView1.Items.Add(item);
                     }
                 }
 
@@ -695,20 +744,5 @@ namespace EndoscopicSystem.V2.Forms
             }
         }
 
-        private void LoadImageFromFolder(string path)
-        {
-            _imageList = new List<Image>();
-            if (!string.IsNullOrWhiteSpace(path))
-            {
-                DirectoryInfo dinfo = new DirectoryInfo(_pathFolderImageToSave);
-                FileInfo[] files = (FileInfo[])dinfo.GetFiles("*.jpg").Clone();
-                foreach (var item in files.OrderByDescending(o => o.CreationTime).ToList())
-                {
-                    var imgFile = (Image)Image.FromFile(item.FullName);
-                    _imageList.Add(imgFile);
-                }
-                _item = files.Count();
-            }
-        }
     }
 }

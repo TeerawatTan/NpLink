@@ -133,9 +133,16 @@ namespace EndoscopicSystem
                 try
                 {
                     hnNo = gridPatient.CurrentRow.Cells["HN"].Value.ToString();
-                    procedureId = (int)gridPatient.CurrentRow.Cells["ProcedureID"].Value;
-                    endoscopicId = (int)gridPatient.CurrentRow.Cells["EndoscopicID"].Value;
-                    appointmentId = (int)gridPatient.CurrentRow.Cells["AppointmentID"].Value;
+                    procedureId = (int?)gridPatient.CurrentRow.Cells["ProcedureID"].Value ?? 0;
+                    endoscopicId = (int?)gridPatient.CurrentRow.Cells["EndoscopicID"].Value ?? 0;
+                    appointmentId = (int?)gridPatient.CurrentRow.Cells["AppointmentID"].Value ?? 0;
+
+                    if (string.IsNullOrWhiteSpace(hnNo))
+                        return;
+                    if (procedureId <= 0)
+                        return;
+                    if (endoscopicId <= 0)
+                        return;
 
                     this.Hide();
 

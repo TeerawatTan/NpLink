@@ -64,6 +64,10 @@ namespace EndoscopicSystem.Forms
             {
                 rprt.Load(reportPath + "EntReport.rpt");
             }
+            else if (procedureId == 6)
+            {
+                rprt.Load(reportPath + "LaparoscopicReport.rpt");
+            }
             else
             {
                 return;
