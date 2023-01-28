@@ -625,6 +625,7 @@
       <Generator>EntityModelCodeGenerator</Generator>
       <LastGenOutput>DBEndoscopic.Designer.cs</LastGenOutput>
     </EntityDeploy>
+    <None Include="App.config" />
     <None Include="EndoscopicDbDataSet.xsc">
       <DependentUpon>EndoscopicDbDataSet.xsd</DependentUpon>
     </None>
