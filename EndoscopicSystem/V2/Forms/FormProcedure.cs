@@ -224,6 +224,7 @@ namespace EndoscopicSystem.V2.Forms
                 bool isSave = OnSave(_hnNo, _patientId, _procedureId, _endoscopicId);
                 if (isSave)
                 {
+                    ExportEndoscopic(_hnNo, _procedureId, _endoscopicId);
                     btnReport.Visible = true;
                 }
             }
@@ -237,42 +238,9 @@ namespace EndoscopicSystem.V2.Forms
         {
             if (!string.IsNullOrWhiteSpace(_hnNo) && _procedureId > 0 && _endoscopicId > 0)
             {
-                //this.Hide();
-                //FormLoading2 formLoading2 = new FormLoading2();
-                //formLoading2.ShowDialog();
-                //formLoading2 = null;
-
-                foreach (var item in _imgPath)
-                {
-                    Console.WriteLine(item.Value.ToString());
-                }
-
-                //var processes = from p in Process.GetProcesses()
-                //                where p.MainModule.FileName.Contains(_imgPath.Values.ToString())
-                //                select p;
-
-                //foreach (var process in processes)
-                //{
-                //    process.Kill();
-                //}
-
                 if (!isExport)
                 {
-                    //btnReport.Enabled = false;
-                    //ReportEndoscopic reportForm = new ReportEndoscopic(_hnNo, _procedureId, _endoscopicId);
-                    //reportForm.ShowDialog();
-                    //reportForm = null;
-                    //this.Show();
-
                     FormProceed.Self.txbStep.Text = "3,,";
-                    //var t = Task.Run(() => 
-                    //{
-                    //    return ExportEndoscopic(_hnNo, _procedureId, _endoscopicId);
-                    //});
-                    //t.Wait();
-                    //bool chkExport = t.Result;
-                    //if (chkExport)
-                        //this.Close();
                 }
                 else
                 {
@@ -1197,29 +1165,7 @@ namespace EndoscopicSystem.V2.Forms
             if (list.Count > 0)
             {
                 string originalPathImage = list.FirstOrDefault()?.ImagePath;
-                //string path = list.FirstOrDefault()?.ImagePath?.Replace("\\Copy", "");
                 string comment = list.FirstOrDefault()?.ImageComment;
-                //if (File.Exists(path))
-                //{
-                //    try
-                //    {
-                //        using (FileStream stream = new FileStream(path, FileMode.Open, FileAccess.Read))
-                //        {
-                //            using (Image image = Image.FromStream(stream))
-                //            {
-                //                pictureBox.Image = image;
-                //                pictureBox.ImageLocation = originalPathImage;
-                //                pictureBox.SizeMode = PictureBoxSizeMode.StretchImage;
-                //                textBox.Text = comment;
-                //            }
-                //        }
-                //    }
-                //    catch (OutOfMemoryException)
-                //    {
-                //        Console.WriteLine("The file is not a valid image file or is too large to be loaded into memory.");
-                //    }
-                //}
-
                 pictureBox.ImageLocation = originalPathImage;
                 pictureBox.SizeMode = PictureBoxSizeMode.StretchImage;
                 textBox.Text = comment;
