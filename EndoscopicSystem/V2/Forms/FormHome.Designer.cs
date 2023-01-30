@@ -47,6 +47,7 @@ namespace EndoscopicSystem.V2.Forms
             this.pictureBox7 = new System.Windows.Forms.PictureBox();
             this.label7 = new System.Windows.Forms.Label();
             this.pictureBox5 = new System.Windows.Forms.PictureBox();
+            this.label3 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox_Statistic)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox_Setting)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox_SeaarchPatient)).BeginInit();
@@ -268,6 +269,20 @@ namespace EndoscopicSystem.V2.Forms
             this.pictureBox5.TabIndex = 26;
             this.pictureBox5.TabStop = false;
             // 
+            // label3
+            // 
+            this.label3.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.label3.AutoSize = true;
+            this.label3.BackColor = System.Drawing.Color.Transparent;
+            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
+            this.label3.ForeColor = System.Drawing.Color.DarkGray;
+            this.label3.Location = new System.Drawing.Point(830, 700);
+            this.label3.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(295, 17);
+            this.label3.TabIndex = 101;
+            this.label3.Text = "Copyright © 2020 All Rights Reserved V.2.0.1";
+            // 
             // FormHome
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -275,7 +290,7 @@ namespace EndoscopicSystem.V2.Forms
             this.AutoScroll = true;
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.ClientSize = new System.Drawing.Size(1126, 713);
+            this.ClientSize = new System.Drawing.Size(1126, 716);
             this.Controls.Add(this.pictureBox_Statistic);
             this.Controls.Add(this.lb_Statistic);
             this.Controls.Add(this.pictureBox_logo);
@@ -290,11 +305,13 @@ namespace EndoscopicSystem.V2.Forms
             this.Controls.Add(this.lb_Dashboard);
             this.Controls.Add(this.pictureBox_SeaarchPatient);
             this.Controls.Add(this.lb_EndoscopyRoom);
+            this.Controls.Add(this.label3);
             this.DoubleBuffered = true;
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "FormHome";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
+            this.Text = "Home Page";
             this.Load += new System.EventHandler(this.FormHome_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox_Statistic)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox_Setting)).EndInit();
@@ -329,5 +346,6 @@ namespace EndoscopicSystem.V2.Forms
         private System.Windows.Forms.PictureBox pictureBox_EndoscopyRoom;
         private System.Windows.Forms.PictureBox pictureBox_Patient;
         private System.Windows.Forms.PictureBox pictureBox5;
+        private System.Windows.Forms.Label label3;
     }
 }

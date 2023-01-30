@@ -49,17 +49,24 @@ namespace EndoscopicSystem.V2.Forms
                 string status = CheckLogin(txbUsername.Text, txbPassword.Text);
                 if (status.Equals(Constant.LOGIN_SUCCESS))
                 {
-                    this.Hide();
+                    // Hide all forms except subForm
+                    //foreach (Form form in Application.OpenForms)
+                    //{
+                    //    if (form != this)
+                    //    {
+                    //        form.Hide();
+                    //    }
+                    //}
                     // V.1
                     //Home openHome = new Home(userID);
                     //openHome.ShowDialog();
 
                     // V.2
+                    this.Hide();
+
                     FormHome formHome = new FormHome(userID);
                     formHome.ShowDialog();
-
                     formHome = null;
-
                     this.Show();
                 }
                 else
@@ -89,8 +96,13 @@ namespace EndoscopicSystem.V2.Forms
 
         private void FormLogin_FormClosed(object sender, FormClosedEventArgs e)
         {
-            Application.Exit();
-            Application.ExitThread();
+            
+        }
+
+        private void FormLogin_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            //Application.Exit();
+            //Application.ExitThread();
         }
     }
 }

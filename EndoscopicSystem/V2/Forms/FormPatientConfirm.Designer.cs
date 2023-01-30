@@ -312,6 +312,7 @@ namespace EndoscopicSystem.V2.Forms
             this.MinimizeBox = false;
             this.Name = "FormPatientConfirm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
+            this.Text = "Patient Confirmation Page";
             this.Load += new System.EventHandler(this.FormPatientConfirm_Load);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();

@@ -12,6 +12,7 @@ using System.ComponentModel;
 using System.Configuration;
 using System.Data;
 using System.Data.Entity;
+using System.Diagnostics;
 using System.Drawing;
 using System.Drawing.Drawing2D;
 using System.Drawing.Imaging;
@@ -44,7 +45,7 @@ namespace EndoscopicSystem.V2.Forms
         private List<FindingLabel> _findingLabels = new List<FindingLabel>();
         private List<ICD9> _iCD9s = new List<ICD9>();
         private List<ICD10> _iCD10s = new List<ICD10>();
-        public FormProcedure(int id, string hn, int procId, int appId, int endoId, string pathImg)
+        public FormProcedure(int id, string hn, int procId, int appId, int endoId, string pathImg, string pathVdo)
         {
             InitializeComponent();
 
@@ -54,6 +55,7 @@ namespace EndoscopicSystem.V2.Forms
             this._appointmentId = appId;
             this._endoscopicId = endoId;
             this._pathFolderImageSave = pathImg;
+            this._vdoPath = pathVdo;
         }
 
         private void FormProcedure_Load(object sender, EventArgs e)
@@ -129,7 +131,7 @@ namespace EndoscopicSystem.V2.Forms
 
             listBox1.Items.Clear();
         }
-        private void ExportEndoscopic(string hn, int proc, int endosId)
+        private bool ExportEndoscopic(string hn, int proc, int endosId)
         {
             try
             {
@@ -170,7 +172,7 @@ namespace EndoscopicSystem.V2.Forms
                 }
                 else
                 {
-                    return;
+                    throw new Exception("Error : Not found report.");
                 }
 
                 CrTables = rprt.Database.Tables;
@@ -206,6 +208,8 @@ namespace EndoscopicSystem.V2.Forms
                 rprt.ExportToDisk(CrystalDecisions.Shared.ExportFormatType.PortableDocFormat, pathDicom);
 
                 isExport = true;
+
+                return isExport;
             }
             catch (Exception ex)
             {
@@ -233,19 +237,47 @@ namespace EndoscopicSystem.V2.Forms
         {
             if (!string.IsNullOrWhiteSpace(_hnNo) && _procedureId > 0 && _endoscopicId > 0)
             {
-                // Export
+                //this.Hide();
+                //FormLoading2 formLoading2 = new FormLoading2();
+                //formLoading2.ShowDialog();
+                //formLoading2 = null;
+
+                foreach (var item in _imgPath)
+                {
+                    Console.WriteLine(item.Value.ToString());
+                }
+
+                //var processes = from p in Process.GetProcesses()
+                //                where p.MainModule.FileName.Contains(_imgPath.Values.ToString())
+                //                select p;
+
+                //foreach (var process in processes)
+                //{
+                //    process.Kill();
+                //}
+
                 if (!isExport)
                 {
                     //btnReport.Enabled = false;
-                    ExportEndoscopic(_hnNo, _procedureId, _endoscopicId);
+                    //ReportEndoscopic reportForm = new ReportEndoscopic(_hnNo, _procedureId, _endoscopicId);
+                    //reportForm.ShowDialog();
+                    //reportForm = null;
+                    //this.Show();
+
+                    FormProceed.Self.txbStep.Text = "3,,";
+                    //var t = Task.Run(() => 
+                    //{
+                    //    return ExportEndoscopic(_hnNo, _procedureId, _endoscopicId);
+                    //});
+                    //t.Wait();
+                    //bool chkExport = t.Result;
+                    //if (chkExport)
+                        //this.Close();
                 }
                 else
                 {
                     btnReport.Enabled = true;
                 }
-
-                ReportEndoscopic reportForm = new ReportEndoscopic(_hnNo, _procedureId, _endoscopicId);
-                reportForm.Show();
             }
             else
             {
@@ -1164,10 +1196,33 @@ namespace EndoscopicSystem.V2.Forms
                 .OrderByDescending(x => x.EndoscopicImageID).ToList();
             if (list.Count > 0)
             {
-                string path = list.FirstOrDefault().ImagePath;
-                pictureBox.ImageLocation = path;
+                string originalPathImage = list.FirstOrDefault()?.ImagePath;
+                //string path = list.FirstOrDefault()?.ImagePath?.Replace("\\Copy", "");
+                string comment = list.FirstOrDefault()?.ImageComment;
+                //if (File.Exists(path))
+                //{
+                //    try
+                //    {
+                //        using (FileStream stream = new FileStream(path, FileMode.Open, FileAccess.Read))
+                //        {
+                //            using (Image image = Image.FromStream(stream))
+                //            {
+                //                pictureBox.Image = image;
+                //                pictureBox.ImageLocation = originalPathImage;
+                //                pictureBox.SizeMode = PictureBoxSizeMode.StretchImage;
+                //                textBox.Text = comment;
+                //            }
+                //        }
+                //    }
+                //    catch (OutOfMemoryException)
+                //    {
+                //        Console.WriteLine("The file is not a valid image file or is too large to be loaded into memory.");
+                //    }
+                //}
+
+                pictureBox.ImageLocation = originalPathImage;
                 pictureBox.SizeMode = PictureBoxSizeMode.StretchImage;
-                textBox.Text = list.FirstOrDefault().ImageComment;
+                textBox.Text = comment;
             }
         }
         private void SetAllPicture()
@@ -1222,8 +1277,9 @@ namespace EndoscopicSystem.V2.Forms
                 cbbGeneralNurse3_EGD.SelectedValue = patient.NurseThirthID ?? 0;
                 dpGeneralFrom_EGD.Value = endoscopic.StartRecordDate ?? DateTime.Now;
                 dpGeneralTo_EGD.Value = endoscopic.EndRecordDate ?? DateTime.Now;
-                //txbGeneralInstrument_EGD.Text = 
-                //txtGeneralSn_EGD.Text = 
+                cbbInstrument_EGD.SelectedValue = patient.InstrumentID ?? 0;
+                if (patient.InstrumentID > 0)
+                    txtGeneralSn_EGD.Text = _db.Instruments.FirstOrDefault(f => f.ID == patient.InstrumentID)?.SerialNumber;
                 cbbGeneralMedication_EGD.SelectedIndex = endoscopic.MedicationID ?? 0;
                 txbGeneralMedication_EGD.Text = endoscopic.MedicationOther;
                 if (patient.IndicationID != null)
@@ -1243,145 +1299,86 @@ namespace EndoscopicSystem.V2.Forms
                 }
                 txbGeneralIndication_EGD.Text = endoscopic.IndicationOther;
                 txbGeneralDx1ID_EGD.Text = endoscopic.DxId1.ToString();
-                string[] dx1Detailsplit = string.IsNullOrWhiteSpace(endoscopic.DxId1Detail) ? endoscopic.DxId1Detail.Split('-') : null;
+                string[] dx1Detailsplit = string.IsNullOrWhiteSpace(endoscopic.DxId1Detail) ? null : endoscopic.DxId1Detail.Split('-');
                 txbPreDiagCode_EGD.Text = dx1Detailsplit == null ? string.Empty : dx1Detailsplit[0];
                 txbPreDiagText_EGD.Text = dx1Detailsplit == null ? string.Empty : dx1Detailsplit[1];
                 txbGeneralDx2ID_EGD.Text = endoscopic.DxId2.ToString();
-                string[] dx2Detailsplit = string.IsNullOrWhiteSpace(endoscopic.DxId2Detail) ? endoscopic.DxId2Detail.Split('-') : null;
+                string[] dx2Detailsplit = string.IsNullOrWhiteSpace(endoscopic.DxId2Detail) ? null : endoscopic.DxId2Detail.Split('-');
                 txbICD10Code_EGD.Text = dx2Detailsplit == null ? string.Empty : dx2Detailsplit[0];
                 txbICD10Text_EGD.Text = dx2Detailsplit == null ? string.Empty : dx2Detailsplit[1];
                 txbBriefHistory_EGD.Text = endoscopic.BriefHistory;
 
-                if (procId == 1)
+                if (procId == 1) //EGD
                 {
                     // Finding
-                    cbbFindingOropharynx_3.SelectedValue = finding.OropharynxID ?? 0;
-                    cbbFindingEsophagus_3.SelectedValue = finding.EsophagusID ?? 0;
-                    cbbFindingEGJunction_3.SelectedValue = finding.EGJunctionID ?? 0;
-                    cbbFindingCardia_3.SelectedValue = finding.CardiaID ?? 0;
-                    cbbFindingFundus_3.SelectedValue = finding.FundusID ?? 0;
-                    cbbFindingBody_3.SelectedValue = finding.BodyID ?? 0;
-                    cbbFindingAntrum_3.SelectedValue = finding.AntrumID ?? 0;
-                    cbbFindingPylorus_3.SelectedValue = finding.PylorusID ?? 0;
-                    cbbFindingDuodenalBulb_3.SelectedValue = finding.DuodenalBulbID ?? 0;
-                    cbbFindingSecondPart_3.SelectedValue = finding.SecondPartID ?? 0;
-                    txtFindingOropharynx_3.Text = finding.Oropharynx;
-                    txtFindingEsophagus_3.Text = finding.Esophagus;
-                    txtFindingEGJunction_3.Text = finding.EGJunction;
-                    txtFindingCardia_3.Text = finding.Cardia;
-                    txtFindingFundus_3.Text = finding.Fundus;
-                    txtFindingBody_3.Text = finding.Body;
-                    txtFindingAntrum_3.Text = finding.Antrum;
-                    txtFindingPylorus_3.Text = finding.Pylorus;
-                    txtFindingDuodenalBulb_3.Text = finding.DuodenalBulb;
-                    txtFindingSecondPart_3.Text = finding.SecondPart;
-
-
-                    //Specimen
-                    cbCLOTest_3.Checked = speciman.BiopsyforCLOTest ?? false;
-                    cbPositive.Checked = speciman.Positive ?? false;
-                    cbNagative.Checked = speciman.Nagative ?? false;
-                    cbPathologocal_3.Checked = speciman.BiopsyforPathological ?? false;
-                    if (!string.IsNullOrWhiteSpace(speciman.OtherDetail1) ||
-                        !string.IsNullOrWhiteSpace(speciman.OtherDetail2) ||
-                        !string.IsNullOrWhiteSpace(speciman.OtherDetail3) ||
-                        !string.IsNullOrWhiteSpace(speciman.OtherDetail4) ||
-                        !string.IsNullOrWhiteSpace(speciman.OtherDetail5))
-                    {
-                        cbOther_3.Checked = true;
-                    }
-                    txtOther0_3.Text = speciman.OtherDetail1;
-                    txtOther1_3.Text = speciman.OtherDetail2;
-                    txtOther2_3.Text = speciman.OtherDetail3;
-                    txtOther3_3.Text = speciman.OtherDetail4;
-                    txtOther4_3.Text = speciman.OtherDetail5;
+                    cbbFindingOropharynx_EGD.SelectedValue = finding.OropharynxID ?? 0;
+                    cbbFindingEsophagus_EGD.SelectedValue = finding.EsophagusID ?? 0;
+                    cbbFindingEGJunction_EGD.SelectedValue = finding.EGJunctionID ?? 0;
+                    cbbFindingCardia_EGD.SelectedValue = finding.CardiaID ?? 0;
+                    cbbFindingFundus_EGD.SelectedValue = finding.FundusID ?? 0;
+                    cbbFindingBody_EGD.SelectedValue = finding.BodyID ?? 0;
+                    cbbFindingAntrum_EGD.SelectedValue = finding.AntrumID ?? 0;
+                    cbbFindingPylorus_EGD.SelectedValue = finding.PylorusID ?? 0;
+                    cbbFindingDuodenalBulb_EGD.SelectedValue = finding.DuodenalBulbID ?? 0;
+                    cbbFinding2ndPart_EGD.SelectedValue = finding.SecondPartID ?? 0;
+                    txbFindingOropharynx_EGD.Text = finding.Oropharynx;
+                    txbFindingEsophagus_EGD.Text = finding.Esophagus;
+                    txbFindingEGJunction_EGD.Text = finding.EGJunction;
+                    txbFindingCardia_EGD.Text = finding.Cardia;
+                    txbFindingFundus_EGD.Text = finding.Fundus;
+                    txbFindingBody_EGD.Text = finding.Body;
+                    txbFindingAntrum_EGD.Text = finding.Antrum;
+                    txbFindingPylorus_EGD.Text = finding.Pylorus;
+                    txbFindingDuodenalBulb_EGD.Text = finding.DuodenalBulb;
+                    txbFinding2ndPart_EGD.Text = finding.SecondPart;
+                    txbFindingPrinncipalProcedureID_EGD.Text = Convert.ToString(finding.PrincipalProcedureID ?? 0);
+                    string[] principalProcedureSplit = string.IsNullOrWhiteSpace(finding.PrincipalProcedureDetail) ? null : finding.PrincipalProcedureDetail.Split('-');
+                    txbFindingPrinncipalProcedureCode_EGD.Text = principalProcedureSplit == null ? string.Empty : principalProcedureSplit[0];
+                    txbFindingPrinncipalProcedureText_EGD.Text = principalProcedureSplit == null ? string.Empty : principalProcedureSplit[1];
+                    txbFindingSupplementalProcedureID_EGD.Text = Convert.ToString(finding.SupplementalProcedure1ID ?? 0);
+                    string[] SupplementalProcedureSplit = string.IsNullOrWhiteSpace(finding.SupplementalProcedure1Detail) ? null : finding.SupplementalProcedure1Detail.Split('-');
+                    txbFindingSupplementalProcedureCode_EGD.Text = SupplementalProcedureSplit == null ? string.Empty : SupplementalProcedureSplit[0];
+                    txbFindingSupplementalProcedureText_EGD.Text = SupplementalProcedureSplit == null ? string.Empty : SupplementalProcedureSplit[1];
+                    string[] SupplementalProcedure2Split = string.IsNullOrWhiteSpace(finding.SupplementalProcedure2Detail) ? null : finding.SupplementalProcedure2Detail.Split('-');
+                    txbFindingSupplementalProcedureCode_EGD.Text = SupplementalProcedure2Split == null ? string.Empty : SupplementalProcedure2Split[0];
+                    txbFindingSupplementalProcedureText_EGD.Text = SupplementalProcedure2Split == null ? string.Empty : SupplementalProcedure2Split[1];
+                    txbFindingProcedure_EGD.Text = finding.Procedure;
+                    txbFindingDx1ID_EGD.Text = Convert.ToString(finding.DxID1 ?? 0);
+                    string[] dx1EGDSplit = string.IsNullOrWhiteSpace(finding.DxID1Detail) ? null : finding.DxID1Detail.Split('-');
+                    txbFindingDx1Code_EGD.Text = dx1EGDSplit == null ? string.Empty : dx1EGDSplit[0];
+                    txbFindingDx1Text_EGD.Text = dx1EGDSplit == null ? string.Empty : dx1EGDSplit[1];
+                    txbFindingDx2ID_EGD.Text = Convert.ToString(finding.DxID2 ?? 0);
+                    string[] dx2EGDSplit = string.IsNullOrWhiteSpace(finding.DxID2Detail) ? null : finding.DxID2Detail.Split('-');
+                    txbFindingDx2Code_EGD.Text = dx2EGDSplit == null ? string.Empty : dx2EGDSplit[0];
+                    txbFindingDx2Text_EGD.Text = dx2EGDSplit == null ? string.Empty : dx2EGDSplit[1];
+                    txbFindingDx3ID_EGD.Text = Convert.ToString(finding.DxID3 ?? 0);
+                    string[] dx3EGDSplit = string.IsNullOrWhiteSpace(finding.DxID3Detail) ? null : finding.DxID3Detail.Split('-');
+                    txbFindingDx3Code_EGD.Text = dx3EGDSplit == null ? string.Empty : dx3EGDSplit[0];
+                    txbFindingDx3Text_EGD.Text = dx3EGDSplit == null ? string.Empty : dx3EGDSplit[1];
+                    txbFindingDx4ID_EGD.Text = Convert.ToString(finding.DxID4 ?? 0);
+                    string[] dx4EGDSplit = string.IsNullOrWhiteSpace(finding.DxID4Detail) ? null : finding.DxID4Detail.Split('-');
+                    txbFindingDx4Code_EGD.Text = dx4EGDSplit == null ? string.Empty : dx4EGDSplit[0];
+                    txbFindingDx4Text_EGD.Text = dx4EGDSplit == null ? string.Empty : dx4EGDSplit[1];
+                    txbFindingComplication_EGD.Text = finding.Complication;
+                    txbFindingHistopathology_EGD.Text = finding.Histopathology;
+                    txbFindingRecommendation_EGD.Text = finding.Recommendation;
+                    txbFindingComment_EGD.Text = finding.Comment;
                 }
-                else if (procId == 2)
-                {
-                    // Finding
-                    cbbFindingAnalCanal_Colono.SelectedValue = finding.AnalCanalID ?? 0;
-                    cbbFindingRectum_Colono.SelectedValue = finding.RectumID ?? 0;
-                    cbbFindingSigmoid_Colono.SelectedValue = finding.SigmoidColonID ?? 0;
-                    cbbFindingDescending_Colono.SelectedValue = finding.DescendingColonID ?? 0;
-                    cbbFindingFlexure_Colono.SelectedValue = finding.SplenicFlexureID ?? 0;
-                    cbbFindingHepatic_Colono.SelectedValue = finding.HepaticFlexureID ?? 0;
-                    cbbFindingAscending_Colono.SelectedValue = finding.AscendingColonID ?? 0;
-                    cbbFindingIleocecal_Colono.SelectedValue = finding.IleocecalVolveID ?? 0;
-                    cbbFindingTerminal_Colono.SelectedValue = finding.TerminalIleumID ?? 0;
-                    cbbFindingCecum_Colono.SelectedValue = finding.CecumID ?? 0;
-                    cbbFindingTransverse_Colono.SelectedValue = finding.TransverseColonID ?? 0;
-                    txtFindingAnalCanal_Colono.Text = finding.AnalCanal;
-                    txtFindingRectum_Colono.Text = finding.Rectum;
-                    txtFindingSigmoid_Colono.Text = finding.SigmoidColon;
-                    txtFindingDescending_Colono.Text = finding.DescendingColon;
-                    txtFindingFlexure_Colono.Text = finding.SplenicFlexure;
-                    txtFindingTransverse_Colono.Text = finding.TransverseColon;
-                    txtFindingHepatic_Colono.Text = finding.HepaticFlexure;
-                    txtFindingAscending_Colono.Text = finding.AscendingColon;
-                    txtFindingIleocecal_Colono.Text = finding.IleocecalVolve;
-                    txtFindingCecum_Colono.Text = finding.Cecum;
-                    txtFindingTerminal_Colono.Text = finding.TerminalIleum;
-
-                    //Specimen
-                    cbPathological.Checked = speciman.BiopsyforPathological ?? false;
-                    if (!string.IsNullOrWhiteSpace(speciman.OtherDetail1) ||
-                        !string.IsNullOrWhiteSpace(speciman.OtherDetail2) ||
-                        !string.IsNullOrWhiteSpace(speciman.OtherDetail3) ||
-                        !string.IsNullOrWhiteSpace(speciman.OtherDetail4) ||
-                        !string.IsNullOrWhiteSpace(speciman.OtherDetail5))
-                    {
-                        cbOther_1.Checked = true;
-                    }
-                    txtOther0_1.Text = speciman.OtherDetail1;
-                    txtOther1_1.Text = speciman.OtherDetail2;
-                    txtOther2_1.Text = speciman.OtherDetail3;
-                    txtOther3_1.Text = speciman.OtherDetail4;
-                    txtOther4_1.Text = speciman.OtherDetail5;
-                }
-                else if (procId == 3)
+                else if (procId == 3) // ERCP
                 {
                     // Finding
                     cbbFindingEsophagus_ERCP.SelectedValue = finding.EsophagusID ?? 0;
                     cbbFindingStomach_ERCP.SelectedValue = finding.StomachID ?? 0;
                     cbbFindingDuodenum_ERCP.SelectedValue = finding.DuodenumID ?? 0;
                     cbbFindingAmpulla_ERCP.SelectedValue = finding.AmpullaOfVaterID ?? 0;
-                    cbbFindingCholangiogram_ERCP.SelectedValue = finding.CholangiogramID ?? 0;
-                    cbbFindingPancreatogram_ERCP.SelectedValue = finding.PancreatogramID ?? 0;
+                    //cbbFindingCholangiogram_ERCP.SelectedValue = finding.CholangiogramID ?? 0;
+                    //cbbFindingPancreatogram_ERCP.SelectedValue = finding.PancreatogramID ?? 0;
                     txbFindingEsophagus_ERCP.Text = finding.Esophagus;
                     txbFindingStomach_ERCP.Text = finding.Stomach;
                     txbFindingDuodenum_ERCP.Text = finding.Duodenum;
                     txbFindingAmpulla_ERCP.Text = finding.AmpullaOfVater;
                     txbFindingCholangiogram_ERCP.Text = finding.Cholangiogram;
                     txbFindingPancreatogram_ERCP.Text = finding.Pancreatogram;
-
-                    // Intervention
-                    cbSpincterotomy_2.Checked = intervention.Spincterotomy ?? false;
-                    cbStoneExtraction_2.Checked = intervention.StoneExtraction ?? false;
-                    cbStentInsertion_2.Checked = intervention.StentInsertion ?? false;
-                    cbPlastic_2.Checked = intervention.IsPlastic ?? false;
-                    txtPlasticFt.Text = intervention.PlasticFoot;
-                    txtPlasticCm.Text = intervention.PlasticCentimeter;
-                    cbMetal_2.Checked = intervention.IsMetal ?? false;
-                    txtMetalFt.Text = intervention.MetalFoot;
-                    txtMetalCm.Text = intervention.MetalCentimeter;
-                    cbHemonstasis_2.Checked = intervention.Hemonstasis ?? false;
-                    cbAdrenaline_2.Checked = intervention.Adrenaline ?? false;
-                    cbCoagulation_2.Checked = intervention.Coagulation ?? false;
-                    cbSpecimens_2.Checked = intervention.Specimens ?? false;
-                    cbPathological_2.Checked = intervention.BiopsyforPathological ?? false;
-                    if (!string.IsNullOrWhiteSpace(intervention.OtherDetail1) ||
-                        !string.IsNullOrWhiteSpace(intervention.OtherDetail2) ||
-                        !string.IsNullOrWhiteSpace(intervention.OtherDetail3) ||
-                        !string.IsNullOrWhiteSpace(intervention.OtherDetail4) ||
-                        !string.IsNullOrWhiteSpace(intervention.OtherDetail5))
-                    {
-                        cbOther_2.Checked = true;
-                    }
-                    txtOther0_2.Text = intervention.OtherDetail1;
-                    txtOther1_2.Text = intervention.OtherDetail2;
-                    txtOther2_2.Text = intervention.OtherDetail3;
-                    txtOther3_2.Text = intervention.OtherDetail4;
-                    txtOther4_2.Text = intervention.OtherDetail5;
                 }
                 else if (procId == 5)
                 {
@@ -1459,7 +1456,96 @@ namespace EndoscopicSystem.V2.Forms
                 cbbGeneralNurse1_Colono.SelectedValue = patient.NurseFirstID ?? 0;
                 cbbGeneralNurse2_Colono.SelectedValue = patient.NurseSecondID ?? 0;
                 cbbGeneralNurse3_Colono.SelectedValue = patient.NurseThirthID ?? 0;
+                dpGeneralFrom_Colono.Value = endoscopic.StartRecordDate ?? DateTime.Now;
+                dpGeneralTo_Colono.Value = endoscopic.EndRecordDate ?? DateTime.Now;
                 cbbGeneralIndication_Colono.SelectedValue = patient.IndicationID ?? 0;
+                cbbInstrument_Colono.SelectedValue = patient.InstrumentID ?? 0;
+                if (patient.InstrumentID > 0)
+                    txbGeneralSN_Colono.Text = _db.Instruments.FirstOrDefault(f => f.ID == patient.InstrumentID)?.SerialNumber;
+                cbbGeneralMedication_Colono.SelectedIndex = endoscopic.MedicationID ?? 0;
+                txbGeneralMedication_Colono.Text = endoscopic.MedicationOther;
+                if (patient.IndicationID != null)
+                {
+                    cbbGeneralIndication_Colono.SelectedValue = patient.IndicationID;
+                }
+                else
+                {
+                    if (endoscopic.IndicationID != null)
+                    {
+                        cbbGeneralIndication_Colono.SelectedValue = endoscopic.IndicationID;
+                    }
+                    else
+                    {
+                        cbbGeneralIndication_Colono.SelectedValue = 0;
+                    }
+                }
+                txbGeneralDx1ID_Colono.Text = endoscopic.DxId1.ToString();
+                string[] dx1Detailsplit = string.IsNullOrWhiteSpace(endoscopic.DxId1Detail) ? null : endoscopic.DxId1Detail.Split('-');
+                txbPreDiagCode_Colono.Text = dx1Detailsplit == null ? string.Empty : dx1Detailsplit[0];
+                txbPreDiagText_Colono.Text = dx1Detailsplit == null ? string.Empty : dx1Detailsplit[1];
+                txbGeneralDx2ID_Colono.Text = endoscopic.DxId2.ToString();
+                string[] dx2Detailsplit = string.IsNullOrWhiteSpace(endoscopic.DxId2Detail) ? null : endoscopic.DxId2Detail.Split('-');
+                txbICD10Code_Colono.Text = dx2Detailsplit == null ? string.Empty : dx2Detailsplit[0];
+                txbICD10Text_Colono.Text = dx2Detailsplit == null ? string.Empty : dx2Detailsplit[1];
+                txbBriefHistory_Colono.Text = endoscopic.BriefHistory;
+                txbGeneralBowelPreparationRegimen_Colono.Text = endoscopic.BowelPreparationRegimen;
+                txbGeneralBowelPreparationResult_colono.Text = endoscopic.BowelPreparationResult;
+
+                // Finding
+                cbbFindingAnalCanal_Colono.SelectedValue = finding.AnalCanalID ?? 0;
+                cbbFindingRectum_Colono.SelectedValue = finding.RectumID ?? 0;
+                cbbFindingSigmoid_Colono.SelectedValue = finding.SigmoidColonID ?? 0;
+                cbbFindingDescending_Colono.SelectedValue = finding.DescendingColonID ?? 0;
+                cbbFindingFlexure_Colono.SelectedValue = finding.SplenicFlexureID ?? 0;
+                cbbFindingHepatic_Colono.SelectedValue = finding.HepaticFlexureID ?? 0;
+                cbbFindingAscending_Colono.SelectedValue = finding.AscendingColonID ?? 0;
+                cbbFindingIleocecal_Colono.SelectedValue = finding.IleocecalVolveID ?? 0;
+                cbbFindingTerminal_Colono.SelectedValue = finding.TerminalIleumID ?? 0;
+                cbbFindingCecum_Colono.SelectedValue = finding.CecumID ?? 0;
+                cbbFindingTransverse_Colono.SelectedValue = finding.TransverseColonID ?? 0;
+                txtFindingAnalCanal_Colono.Text = finding.AnalCanal;
+                txtFindingRectum_Colono.Text = finding.Rectum;
+                txtFindingSigmoid_Colono.Text = finding.SigmoidColon;
+                txtFindingDescending_Colono.Text = finding.DescendingColon;
+                txtFindingFlexure_Colono.Text = finding.SplenicFlexure;
+                txtFindingTransverse_Colono.Text = finding.TransverseColon;
+                txtFindingHepatic_Colono.Text = finding.HepaticFlexure;
+                txtFindingAscending_Colono.Text = finding.AscendingColon;
+                txtFindingIleocecal_Colono.Text = finding.IleocecalVolve;
+                txtFindingCecum_Colono.Text = finding.Cecum;
+                txtFindingTerminal_Colono.Text = finding.TerminalIleum;
+                txbFindingPrinncipalProcedureID_Colono.Text = Convert.ToString(finding.PrincipalProcedureID ?? 0);
+                string[] principalProcedureSplit = string.IsNullOrWhiteSpace(finding.PrincipalProcedureDetail) ? null : finding.PrincipalProcedureDetail.Split('-');
+                txbFindingPrinncipalProcedureCode_Colono.Text = principalProcedureSplit == null ? string.Empty : principalProcedureSplit[0];
+                txbFindingPrinncipalProcedureText_Colono.Text = principalProcedureSplit == null ? string.Empty : principalProcedureSplit[1];
+                txbFindingSupplementalProcedureID_Colono.Text = Convert.ToString(finding.SupplementalProcedure1ID ?? 0);
+                string[] SupplementalProcedureSplit = string.IsNullOrWhiteSpace(finding.SupplementalProcedure1Detail) ? null : finding.SupplementalProcedure1Detail.Split('-');
+                txbFindingSupplementalProcedureCode_Colono.Text = SupplementalProcedureSplit == null ? string.Empty : SupplementalProcedureSplit[0];
+                txbFindingSupplementalProcedureText_Colono.Text = SupplementalProcedureSplit == null ? string.Empty : SupplementalProcedureSplit[1];
+                string[] SupplementalProcedure2Split = string.IsNullOrWhiteSpace(finding.SupplementalProcedure2Detail) ? null : finding.SupplementalProcedure2Detail.Split('-');
+                txbFindingSupplementalProcedureCode_Colono.Text = SupplementalProcedure2Split == null ? string.Empty : SupplementalProcedure2Split[0];
+                txbFindingSupplementalProcedureText_Colono.Text = SupplementalProcedure2Split == null ? string.Empty : SupplementalProcedure2Split[1];
+                txbFindingProcedure_Colono.Text = finding.Procedure;
+                txbFindingDx1ID_Colono.Text = Convert.ToString(finding.DxID1 ?? 0);
+                string[] dx1EGDSplit = string.IsNullOrWhiteSpace(finding.DxID1Detail) ? null : finding.DxID1Detail.Split('-');
+                txbFindingDx1Code_Colono.Text = dx1EGDSplit == null ? string.Empty : dx1EGDSplit[0];
+                txbFindingDx1Text_Colono.Text = dx1EGDSplit == null ? string.Empty : dx1EGDSplit[1];
+                txbFindingDx2ID_Colono.Text = Convert.ToString(finding.DxID2 ?? 0);
+                string[] dx2EGDSplit = string.IsNullOrWhiteSpace(finding.DxID2Detail) ? null : finding.DxID2Detail.Split('-');
+                txbFindingDx2Code_Colono.Text = dx2EGDSplit == null ? string.Empty : dx2EGDSplit[0];
+                txbFindingDx2Text_Colono.Text = dx2EGDSplit == null ? string.Empty : dx2EGDSplit[1];
+                txbFindingDx3ID_Colono.Text = Convert.ToString(finding.DxID3 ?? 0);
+                string[] dx3EGDSplit = string.IsNullOrWhiteSpace(finding.DxID3Detail) ? null : finding.DxID3Detail.Split('-');
+                txbFindingDx3Code_Colono.Text = dx3EGDSplit == null ? string.Empty : dx3EGDSplit[0];
+                txbFindingDx3Text_Colono.Text = dx3EGDSplit == null ? string.Empty : dx3EGDSplit[1];
+                txbFindingDx4ID_Colono.Text = Convert.ToString(finding.DxID4 ?? 0);
+                string[] dx4EGDSplit = string.IsNullOrWhiteSpace(finding.DxID4Detail) ? null : finding.DxID4Detail.Split('-');
+                txbFindingDx4Code_Colono.Text = dx4EGDSplit == null ? string.Empty : dx4EGDSplit[0];
+                txbFindingDx4Text_Colono.Text = dx4EGDSplit == null ? string.Empty : dx4EGDSplit[1];
+                txbFindingComplication_Colono.Text = finding.Complication;
+                txbFindingHistopathology_Colono.Text = finding.Histopathology;
+                txbFindingRecommendation_Colono.Text = finding.Recommendation;
+                txbFindingComment_Colono.Text = finding.Comment;
             }
             else if (procId == 4) // Bronchoscopy 
             {
@@ -1682,8 +1768,10 @@ namespace EndoscopicSystem.V2.Forms
                     finding.StomachID = (int?)cbbFindingStomach_ERCP.SelectedValue;
                     finding.DuodenumID = (int?)cbbFindingDuodenum_ERCP.SelectedValue;
                     finding.AmpullaOfVaterID = (int?)cbbFindingAmpulla_ERCP.SelectedValue;
-                    finding.CholangiogramID = (int?)cbbFindingCholangiogram_ERCP.SelectedValue;
-                    finding.PancreatogramID = (int?)cbbFindingPancreatogram_ERCP.SelectedValue;
+                    //finding.CholangiogramID = (int?)cbbFindingCholangiogram_ERCP.SelectedValue;
+                    //finding.PancreatogramID = (int?)cbbFindingPancreatogram_ERCP.SelectedValue;
+                    finding.Cholangiogram = txbFindingCholangiogram_ERCP.Text;
+                    finding.Pancreatogram = txbFindingPancreatogram_ERCP.Text;
                     finding.Esophagus = txbFindingEsophagus_ERCP.Text;
                     finding.Stomach = txbFindingStomach_ERCP.Text;
                     finding.Duodenum = txbFindingDuodenum_ERCP.Text;
@@ -1922,18 +2010,18 @@ namespace EndoscopicSystem.V2.Forms
                 var endoImgs = _db.EndoscopicImages.Where(x => x.EndoscopicID == endoscopicID && x.ProcedureID == procedureID && x.Seq == seq).FirstOrDefault();
                 if (endoImgs != null)
                 {
-                    if (string.IsNullOrWhiteSpace(Imgpath))
-                    {
-                        _db.EndoscopicImages.Remove(endoImgs);
-                    }
-                    else
-                    {
+                    //if (string.IsNullOrWhiteSpace(Imgpath))
+                    //{
+                    //    _db.EndoscopicImages.Remove(endoImgs);
+                    //}
+                    //else
+                    //{
                         endoImgs.ImagePath = string.IsNullOrWhiteSpace(Imgpath) ? null : Imgpath;
                         endoImgs.ImageComment = item.Text;
                         endoImgs.Seq = i + 1;
                         endoImgs.UpdateBy = _id;
                         endoImgs.UpdateDate = DateTime.Now;
-                    }
+                    //}
                 }
                 else
                 {
@@ -1953,39 +2041,39 @@ namespace EndoscopicSystem.V2.Forms
                 seq++;
             }
         }
-        private void SaveAllImage(int endoscopicID, int procedureID)
-        {
-            int i = 0;
-            int seq = 1;
-            foreach (var item in _imgPath.Values)
-            {
-                var endoAllImgs = _db.EndoscopicAllImages.Where(x => x.EndoscopicID == endoscopicID && x.ProcedureID == procedureID && x.Seq == seq).FirstOrDefault();
-                if (item != null)
-                {
-                    if (endoAllImgs != null)
-                    {
-                        endoAllImgs.ImagePath = item.ToString();
-                        endoAllImgs.UpdateBy = _id;
-                        endoAllImgs.UpdateDate = DateTime.Now;
-                    }
-                    else
-                    {
-                        EndoscopicAllImage endoscopicAllImage = new EndoscopicAllImage();
-                        endoscopicAllImage.EndoscopicID = endoscopicID;
-                        endoscopicAllImage.ProcedureID = procedureID;
-                        endoscopicAllImage.ImagePath = item.ToString();
-                        endoscopicAllImage.Seq = i + 1;
-                        endoscopicAllImage.CreateBy = _id;
-                        endoscopicAllImage.CreateDate = DateTime.Now;
-                        endoscopicAllImage.UpdateBy = _id;
-                        endoscopicAllImage.UpdateDate = DateTime.Now;
-                        _db.EndoscopicAllImages.Add(endoscopicAllImage);
-                    }
-                    i++;
-                    seq++;
-                }
-            }
-        }
+        //private void SaveAllImage(int endoscopicID, int procedureID)
+        //{
+        //    int i = 0;
+        //    int seq = 1;
+        //    foreach (var item in _imgPath.Values)
+        //    {
+        //        var endoAllImgs = _db.EndoscopicAllImages.Where(x => x.EndoscopicID == endoscopicID && x.ProcedureID == procedureID && x.Seq == seq).FirstOrDefault();
+        //        if (item != null)
+        //        {
+        //            if (endoAllImgs != null)
+        //            {
+        //                endoAllImgs.ImagePath = item.ToString();
+        //                endoAllImgs.UpdateBy = _id;
+        //                endoAllImgs.UpdateDate = DateTime.Now;
+        //            }
+        //            else
+        //            {
+        //                EndoscopicAllImage endoscopicAllImage = new EndoscopicAllImage();
+        //                endoscopicAllImage.EndoscopicID = endoscopicID;
+        //                endoscopicAllImage.ProcedureID = procedureID;
+        //                endoscopicAllImage.ImagePath = item.ToString();
+        //                endoscopicAllImage.Seq = i + 1;
+        //                endoscopicAllImage.CreateBy = _id;
+        //                endoscopicAllImage.CreateDate = DateTime.Now;
+        //                endoscopicAllImage.UpdateBy = _id;
+        //                endoscopicAllImage.UpdateDate = DateTime.Now;
+        //                _db.EndoscopicAllImages.Add(endoscopicAllImage);
+        //            }
+        //            i++;
+        //            seq++;
+        //        }
+        //    }
+        //}
         private void UpdateDataAll(int procedureId, int patientId, Endoscopic endoscopic)
         {
             try
@@ -2001,7 +2089,6 @@ namespace EndoscopicSystem.V2.Forms
                 {
                     endoscopic.EndoscopistID = (int?)cbbGeneralDoctor_EGD.SelectedValue;
                     endoscopic.Arrive = dpGeneralFrom_EGD.Value;
-                    endoscopic.Instrument = txbGeneralInstrument_EGD.Text;
                     endoscopic.MedicationID = (int?)cbbGeneralMedication_EGD.SelectedValue;
                     endoscopic.Indication = (int?)cbbGeneralIndication_EGD.SelectedValue;
                     endoscopic.NurseFirstID = (int?)cbbGeneralNurse1_EGD.SelectedValue;
@@ -2033,7 +2120,6 @@ namespace EndoscopicSystem.V2.Forms
                 {
                     endoscopic.EndoscopistID = (int?)cbbGeneralDoctor_Colono.SelectedValue;
                     endoscopic.Arrive = dpGeneralFrom_Colono.Value;
-                    endoscopic.Instrument = txbGeneralInstrument_Colono.Text;
                     endoscopic.MedicationID = (int?)cbbGeneralMedication_Colono.SelectedValue;
                     endoscopic.NurseFirstID = (int?)cbbGeneralNurse1_Colono.SelectedValue;
                     endoscopic.NurseSecondID = (int?)cbbGeneralNurse2_Colono.SelectedValue;
@@ -2073,7 +2159,7 @@ namespace EndoscopicSystem.V2.Forms
                 if (patient != null)
                 {
                     patient.Fullname = procedureId == 1 ? txbFullName_EGD.Text : txbFullName_Colono.Text;
-                    patient.Age = procedureId == 1 ? Convert.ToInt32(txbAge_EGD.Text) : Convert.ToInt32(txbAge_Colono);
+                    patient.Age = procedureId == 1 ? Convert.ToInt32(txbAge_EGD.Text) : Convert.ToInt32(txbAge_Colono.Text);
                     patient.ProcedureID = procedureId;
                     patient.UpdateBy = _id;
                     patient.UpdateDate = DateTime.Now;
@@ -2084,6 +2170,7 @@ namespace EndoscopicSystem.V2.Forms
                         patient.NurseSecondID = (int?)cbbGeneralNurse2_EGD.SelectedValue;
                         patient.NurseThirthID = (int?)cbbGeneralNurse3_EGD.SelectedValue;
                         patient.AnesthesiaID = (int?)cbbGeneralAnesthesia_EGD.SelectedValue;
+                        patient.InstrumentID = (int?)cbbInstrument_EGD.SelectedValue;
                     }
                     else
                     {
@@ -2092,13 +2179,14 @@ namespace EndoscopicSystem.V2.Forms
                         patient.NurseSecondID = (int?)cbbGeneralNurse2_Colono.SelectedValue;
                         patient.NurseThirthID = (int?)cbbGeneralNurse3_Colono.SelectedValue;
                         patient.AnesthesiaID = (int?)cbbGeneralAnesthesia_Colono.SelectedValue;
+                        patient.InstrumentID = (int?)cbbInstrument_EGD.SelectedValue;
                     }
                 }
 
                 UpdateFinding(procedureId);
                 //UpdateAppointment(endoscopicId);
                 SaveImage(endoscopic.EndoscopicID, procedureId);
-                SaveAllImage(endoscopic.EndoscopicID, procedureId);
+                //SaveAllImage(endoscopic.EndoscopicID, procedureId);
                 //SaveVideo(endoscopic.EndoscopicID, procedureId);
                 SaveLogEndoscopic(endoscopic, patientId, procedureId);
                 SaveLogHistory(patientId, procedureId, patient.DoctorID, endoscopic.EndoscopicID);
@@ -2240,8 +2328,8 @@ namespace EndoscopicSystem.V2.Forms
                 _dropdownListService.DropdownStomach(cbbFindingStomach_ERCP);
                 _dropdownListService.DropdownDuodenum(cbbFindingDuodenum_ERCP);
                 _dropdownListService.DropdownAmpulla(cbbFindingAmpulla_ERCP);
-                _dropdownListService.DropdownCholangiogram(cbbFindingCholangiogram_ERCP);
-                _dropdownListService.DropdownPancreatogram(cbbFindingPancreatogram_ERCP);
+                //_dropdownListService.DropdownCholangiogram(cbbFindingCholangiogram_ERCP);
+                //_dropdownListService.DropdownPancreatogram(cbbFindingPancreatogram_ERCP);
             }
         }
 
@@ -2413,7 +2501,7 @@ namespace EndoscopicSystem.V2.Forms
                     if (cropedImg != null)
                     {
                         string newPathUpload = _pathFolderImageSave + "upload_" + nameCapture;
-                        cropedImg.Save(newPathUpload);
+                        cropedImg.Save(newPathUpload, System.Drawing.Imaging.ImageFormat.Jpeg);
                         ImgPath = newPathUpload;
                     }
                 }
@@ -2694,7 +2782,8 @@ namespace EndoscopicSystem.V2.Forms
             catch (Exception ex)
             {
                 // Handle the exception
-                Console.WriteLine("Error: {0}", ex.Message);
+                //Console.WriteLine("Error: {0}", ex.Message);
+                throw ex;
             }
 
 

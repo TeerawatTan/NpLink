@@ -7,6 +7,7 @@ using System.Drawing;
 using System.Linq;
 using System.Windows.Forms;
 using EndoscopicSystem.Constants;
+using EndoscopicSystem.V2.Forms.src;
 
 namespace EndoscopicSystem
 {
@@ -22,6 +23,7 @@ namespace EndoscopicSystem
         List<v_AppointmentDetails> appList;
         public int appointmentId = 0;
         public int endoscopicId = 0;
+        private readonly DropdownListService _dropdownListService = new DropdownListService();
         public DashboardForm(int userID)
         {
             InitializeComponent();
@@ -35,8 +37,9 @@ namespace EndoscopicSystem
             DropdownMonths();
             DropdownYear();
             DropdownOrder();
-            LoadChart((int)cbbMonth.SelectedValue, (int)cbbYear.SelectedItem);
+            LoadChartCountProcedure((int)cbbMonth.SelectedValue, (int)cbbYear.SelectedItem);
             LoadData();
+            _dropdownListService.DropdownInstrument(cbbInstrument, 1);
             btnDeleteHn.Hide();
         }
 
@@ -100,7 +103,7 @@ namespace EndoscopicSystem
             LoadData(txtHN.Text, txtFullName.Text);
         }
 
-        private void LoadChart(int m, int y)
+        private void LoadChartCountProcedure(int m, int y)
         {
             List<ChartModel> data = new List<ChartModel>();
             data = repo.GetsChart(m, y);
@@ -161,6 +164,20 @@ namespace EndoscopicSystem
             }
         }
 
+        private void LoadChartCountInstrument(int instrumentId)
+        {
+            List<ChartInstrumentModel> data = new List<ChartInstrumentModel>()
+            {
+                new ChartInstrumentModel() { InstrumentID = 1, CountInstrument = 5, InstrumentName = "Test1" },
+                new ChartInstrumentModel() { InstrumentID = 2, CountInstrument = 8, InstrumentName = "Test2" },
+                new ChartInstrumentModel() { InstrumentID = 3, CountInstrument = 2, InstrumentName = "Test3" },
+            };
+            chart1.DataSource = data;
+            chart1.Series["Patient"].XValueMember = "InstrumentName";
+            chart1.Series["Patient"].YValueMembers = "CountInstrument";
+            chart1.DataBind();
+        }
+
         private void btnShowChart_Click(object sender, EventArgs e)
         {
             int month = 0;
@@ -174,7 +191,7 @@ namespace EndoscopicSystem
             {
                 year = Convert.ToInt32(cbbYear.SelectedItem);
             }
-            LoadChart(month, year);
+            LoadChartCountProcedure(month, year);
         }
         public void DropdownMonths()
         {
@@ -205,7 +222,7 @@ namespace EndoscopicSystem
                     {
                         db.Appointments.Remove(app);
                         db.SaveChanges();
-                        LoadChart((int)cbbMonth.SelectedValue, (int)cbbYear.SelectedItem);
+                        LoadChartCountProcedure((int)cbbMonth.SelectedValue, (int)cbbYear.SelectedItem);
                         LoadData();
                     }
                 }
@@ -247,8 +264,9 @@ namespace EndoscopicSystem
             }
         }
 
-        private void DashboardForm_FormClosed(object sender, FormClosedEventArgs e)
+        private void btnShowChartInstrument_Click(object sender, EventArgs e)
         {
+            LoadChartCountInstrument(Convert.ToInt32(cbbInstrument.SelectedValue ?? 0));
         }
     }
 

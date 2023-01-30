@@ -34,4 +34,11 @@ namespace EndoscopicSystem.Repository
         public int Month { get; set; }
         public int Year { get; set; }
     }
+
+    public class ChartInstrumentModel
+    {
+        public int InstrumentID { get; set; }
+        public string InstrumentName { get; set; }
+        public int CountInstrument { get; set; }
+    }
 }

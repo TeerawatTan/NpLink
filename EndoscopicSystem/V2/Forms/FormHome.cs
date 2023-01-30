@@ -23,19 +23,12 @@ namespace EndoscopicSystem.V2.Forms
 
         private void FormHome_Load(object sender, EventArgs e)
         {
-            var logo = _db.Hospitals.Where(c => c.HospitalID == 1).SingleOrDefault();
+            var logo = _db.Hospitals.Where(c => c.HospitalID == 1).FirstOrDefault();
 
             if (logo != null)
             {
-                try
-                {
-                    pictureBox_logo.ImageLocation = logo.HospitalLogoPath;
-                    pictureBox_logo.SizeMode = PictureBoxSizeMode.StretchImage;
-                }
-                catch (Exception)
-                {
-
-                }
+                pictureBox_logo.ImageLocation = logo.HospitalLogoPath;
+                pictureBox_logo.SizeMode = PictureBoxSizeMode.StretchImage;
             }
         }
 
@@ -64,16 +57,33 @@ namespace EndoscopicSystem.V2.Forms
 
         private void pictureBox_Dashboard_Click(object sender, EventArgs e)
         {
+            // Hide all forms except subForm
+            //foreach (Form form in Application.OpenForms)
+            //{
+            //    if (form != this)
+            //    {
+            //        form.Hide();
+            //    }
+            //}
             this.Hide();
-            DashboardForm dashboardForm  = new DashboardForm(_id);
+            DashboardForm dashboardForm = new DashboardForm(_id);
             dashboardForm.ShowDialog();
             dashboardForm = null;
             this.Show();
+            //dashboardForm.Show();
             ActiveMenuLabel(lb_Dashboard);
         }
 
         private void pictureBox_Patient_Click(object sender, EventArgs e)
         {
+            // Hide all forms except subForm
+            //foreach (Form form in Application.OpenForms)
+            //{
+            //    if (form != this)
+            //    {
+            //        form.Hide();
+            //    }
+            //}
             this.Hide();
             PatientForm patientForm = new PatientForm(_id);
             patientForm.ShowDialog();
@@ -84,6 +94,14 @@ namespace EndoscopicSystem.V2.Forms
 
         private void pictureBox_EndoscopyRoom_Click(object sender, EventArgs e)
         {
+            // Hide all forms except subForm
+            //foreach (Form form in Application.OpenForms)
+            //{
+            //    if (form != this)
+            //    {
+            //        form.Hide();
+            //    }
+            //}
             this.Hide();
             FormLive formLive = new FormLive(_id);
             formLive.ShowDialog();
@@ -94,6 +112,14 @@ namespace EndoscopicSystem.V2.Forms
 
         private void pictureBox_SeaarchPatient_Click(object sender, EventArgs e)
         {
+            // Hide all forms except subForm
+            //foreach (Form form in Application.OpenForms)
+            //{
+            //    if (form != this)
+            //    {
+            //        form.Hide();
+            //    }
+            //}
             this.Hide();
             SearchPatientForm searchPatientForm = new SearchPatientForm(_id);
             searchPatientForm.ShowDialog();
@@ -104,6 +130,14 @@ namespace EndoscopicSystem.V2.Forms
 
         private void pictureBox_Setting_Click(object sender, EventArgs e)
         {
+            // Hide all forms except subForm
+            //foreach (Form form in Application.OpenForms)
+            //{
+            //    if (form != this)
+            //    {
+            //        form.Hide();
+            //    }
+            //}
             this.Hide();
             FormSetting formSetting = new FormSetting(_id);
             formSetting.ShowDialog();

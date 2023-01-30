@@ -32,6 +32,8 @@ namespace EndoscopicSystem.Forms
 
         private void ReportEndoscopic_Load(object sender, EventArgs e)
         {
+            crystalReportViewer1.Refresh();
+
             ReportDocument rprt = new ReportDocument();
 
             TableLogOnInfos crtableLogoninfos = new TableLogOnInfos();

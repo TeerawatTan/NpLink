@@ -32,6 +32,7 @@ namespace EndoscopicSystem.V2.Forms
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormProcedure));
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tabGeneralEGD = new System.Windows.Forms.TabPage();
+            this.cbbInstrument_EGD = new System.Windows.Forms.ComboBox();
             this.txbGeneralDx2ID_EGD = new System.Windows.Forms.TextBox();
             this.txbGeneralDx1ID_EGD = new System.Windows.Forms.TextBox();
             this.cbbGeneralFinancial_EGD = new System.Windows.Forms.ComboBox();
@@ -85,7 +86,6 @@ namespace EndoscopicSystem.V2.Forms
             this.label19 = new System.Windows.Forms.Label();
             this.label20 = new System.Windows.Forms.Label();
             this.label22 = new System.Windows.Forms.Label();
-            this.txbGeneralInstrument_EGD = new System.Windows.Forms.TextBox();
             this.tabFindingEGD = new System.Windows.Forms.TabPage();
             this.txbFindingDx4ID_EGD = new System.Windows.Forms.TextBox();
             this.txbFindingDx3ID_EGD = new System.Windows.Forms.TextBox();
@@ -156,6 +156,7 @@ namespace EndoscopicSystem.V2.Forms
             this.label8 = new System.Windows.Forms.Label();
             this.txbFindingComment_EGD = new System.Windows.Forms.TextBox();
             this.tabGeneralColonoscopy = new System.Windows.Forms.TabPage();
+            this.cbbInstrument_Colono = new System.Windows.Forms.ComboBox();
             this.cbbGeneralFinancial_Colono = new System.Windows.Forms.ComboBox();
             this.txbGeneralBowelPreparationResult_colono = new System.Windows.Forms.TextBox();
             this.label126 = new System.Windows.Forms.Label();
@@ -209,7 +210,6 @@ namespace EndoscopicSystem.V2.Forms
             this.label122 = new System.Windows.Forms.Label();
             this.label123 = new System.Windows.Forms.Label();
             this.label124 = new System.Windows.Forms.Label();
-            this.txbGeneralInstrument_Colono = new System.Windows.Forms.TextBox();
             this.txbGeneralDx2ID_Colono = new System.Windows.Forms.TextBox();
             this.txbGeneralDx1ID_Colono = new System.Windows.Forms.TextBox();
             this.txbICD10Code_Colono = new System.Windows.Forms.TextBox();
@@ -287,14 +287,50 @@ namespace EndoscopicSystem.V2.Forms
             this.label41 = new System.Windows.Forms.Label();
             this.label42 = new System.Windows.Forms.Label();
             this.tabFindingERCP = new System.Windows.Forms.TabPage();
+            this.txbFindingDx4ID_ERCP = new System.Windows.Forms.TextBox();
+            this.txbFindingDx3ID_ERCP = new System.Windows.Forms.TextBox();
+            this.txbFindingDx2ID_ERCP = new System.Windows.Forms.TextBox();
+            this.txbFindingDx1ID_ERCP = new System.Windows.Forms.TextBox();
+            this.txbFindingSupplementalProcedure2ID_ERCP = new System.Windows.Forms.TextBox();
+            this.txbFindingSupplementalProcedureID_ERCP = new System.Windows.Forms.TextBox();
+            this.txbFindingPrinncipalProcedureID_ERCP = new System.Windows.Forms.TextBox();
+            this.txbFindingRecommendation_ERCP = new System.Windows.Forms.TextBox();
+            this.label139 = new System.Windows.Forms.Label();
+            this.txbFindingHistopathology_ERCP = new System.Windows.Forms.TextBox();
+            this.label140 = new System.Windows.Forms.Label();
+            this.label141 = new System.Windows.Forms.Label();
+            this.label142 = new System.Windows.Forms.Label();
+            this.label143 = new System.Windows.Forms.Label();
+            this.label144 = new System.Windows.Forms.Label();
+            this.txbFindingDx4Text_ERCP = new System.Windows.Forms.TextBox();
+            this.txbFindingDx4Code_ERCP = new System.Windows.Forms.TextBox();
+            this.txbFindingDx3Text_ERCP = new System.Windows.Forms.TextBox();
+            this.txbFindingDx3Code_ERCP = new System.Windows.Forms.TextBox();
+            this.txbFindingDx2Text_ERCP = new System.Windows.Forms.TextBox();
+            this.txbFindingDx2Code_ERCP = new System.Windows.Forms.TextBox();
+            this.txbFindingDx1Text_ERCP = new System.Windows.Forms.TextBox();
+            this.txbFindingDx1Code_ERCP = new System.Windows.Forms.TextBox();
+            this.txbFindingProcedure_ERCP = new System.Windows.Forms.TextBox();
+            this.label145 = new System.Windows.Forms.Label();
+            this.txbFindingSupplementalProcedure2Text_ERCP = new System.Windows.Forms.TextBox();
+            this.label146 = new System.Windows.Forms.Label();
+            this.txbFindingSupplementalProcedure2Code_ERCP = new System.Windows.Forms.TextBox();
+            this.txbFindingSupplementalProcedureText_ERCP = new System.Windows.Forms.TextBox();
+            this.label147 = new System.Windows.Forms.Label();
+            this.txbFindingSupplementalProcedureCode_ERCP = new System.Windows.Forms.TextBox();
+            this.txbFindingPrinncipalProcedureText_ERCP = new System.Windows.Forms.TextBox();
+            this.label148 = new System.Windows.Forms.Label();
+            this.txbFindingPrinncipalProcedureCode_ERCP = new System.Windows.Forms.TextBox();
+            this.txbFindingComplication_ERCP = new System.Windows.Forms.TextBox();
+            this.label149 = new System.Windows.Forms.Label();
+            this.label150 = new System.Windows.Forms.Label();
+            this.txbFindingComment_ERCP = new System.Windows.Forms.TextBox();
             this.txbFindingPancreatogram_ERCP = new System.Windows.Forms.TextBox();
             this.txbFindingCholangiogram_ERCP = new System.Windows.Forms.TextBox();
             this.txbFindingAmpulla_ERCP = new System.Windows.Forms.TextBox();
             this.txbFindingDuodenum_ERCP = new System.Windows.Forms.TextBox();
             this.txbFindingStomach_ERCP = new System.Windows.Forms.TextBox();
             this.txbFindingEsophagus_ERCP = new System.Windows.Forms.TextBox();
-            this.cbbFindingPancreatogram_ERCP = new System.Windows.Forms.ComboBox();
-            this.cbbFindingCholangiogram_ERCP = new System.Windows.Forms.ComboBox();
             this.label68 = new System.Windows.Forms.Label();
             this.label69 = new System.Windows.Forms.Label();
             this.cbbFindingAmpulla_ERCP = new System.Windows.Forms.ComboBox();
@@ -626,44 +662,6 @@ namespace EndoscopicSystem.V2.Forms
             this.pictureBoxSaved5 = new System.Windows.Forms.PictureBox();
             this.openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
             this.btnSave = new System.Windows.Forms.Button();
-            this.txbFindingDx4ID_ERCP = new System.Windows.Forms.TextBox();
-            this.txbFindingDx3ID_ERCP = new System.Windows.Forms.TextBox();
-            this.txbFindingDx2ID_ERCP = new System.Windows.Forms.TextBox();
-            this.txbFindingDx1ID_ERCP = new System.Windows.Forms.TextBox();
-            this.txbFindingSupplementalProcedure2ID_ERCP = new System.Windows.Forms.TextBox();
-            this.txbFindingSupplementalProcedureID_ERCP = new System.Windows.Forms.TextBox();
-            this.txbFindingPrinncipalProcedureID_ERCP = new System.Windows.Forms.TextBox();
-            this.txbFindingRecommendation_ERCP = new System.Windows.Forms.TextBox();
-            this.label139 = new System.Windows.Forms.Label();
-            this.txbFindingHistopathology_ERCP = new System.Windows.Forms.TextBox();
-            this.label140 = new System.Windows.Forms.Label();
-            this.label141 = new System.Windows.Forms.Label();
-            this.label142 = new System.Windows.Forms.Label();
-            this.label143 = new System.Windows.Forms.Label();
-            this.label144 = new System.Windows.Forms.Label();
-            this.txbFindingDx4Text_ERCP = new System.Windows.Forms.TextBox();
-            this.txbFindingDx4Code_ERCP = new System.Windows.Forms.TextBox();
-            this.txbFindingDx3Text_ERCP = new System.Windows.Forms.TextBox();
-            this.txbFindingDx3Code_ERCP = new System.Windows.Forms.TextBox();
-            this.txbFindingDx2Text_ERCP = new System.Windows.Forms.TextBox();
-            this.txbFindingDx2Code_ERCP = new System.Windows.Forms.TextBox();
-            this.txbFindingDx1Text_ERCP = new System.Windows.Forms.TextBox();
-            this.txbFindingDx1Code_ERCP = new System.Windows.Forms.TextBox();
-            this.txbFindingProcedure_ERCP = new System.Windows.Forms.TextBox();
-            this.label145 = new System.Windows.Forms.Label();
-            this.txbFindingSupplementalProcedure2Text_ERCP = new System.Windows.Forms.TextBox();
-            this.label146 = new System.Windows.Forms.Label();
-            this.txbFindingSupplementalProcedure2Code_ERCP = new System.Windows.Forms.TextBox();
-            this.txbFindingSupplementalProcedureText_ERCP = new System.Windows.Forms.TextBox();
-            this.label147 = new System.Windows.Forms.Label();
-            this.txbFindingSupplementalProcedureCode_ERCP = new System.Windows.Forms.TextBox();
-            this.txbFindingPrinncipalProcedureText_ERCP = new System.Windows.Forms.TextBox();
-            this.label148 = new System.Windows.Forms.Label();
-            this.txbFindingPrinncipalProcedureCode_ERCP = new System.Windows.Forms.TextBox();
-            this.txbFindingComplication_ERCP = new System.Windows.Forms.TextBox();
-            this.label149 = new System.Windows.Forms.Label();
-            this.label150 = new System.Windows.Forms.Label();
-            this.txbFindingComment_ERCP = new System.Windows.Forms.TextBox();
             this.tabControl1.SuspendLayout();
             this.tabGeneralEGD.SuspendLayout();
             this.tabFindingEGD.SuspendLayout();
@@ -746,6 +744,7 @@ namespace EndoscopicSystem.V2.Forms
             // 
             this.tabGeneralEGD.BackColor = System.Drawing.Color.LightGray;
             this.tabGeneralEGD.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.tabGeneralEGD.Controls.Add(this.cbbInstrument_EGD);
             this.tabGeneralEGD.Controls.Add(this.txbGeneralDx2ID_EGD);
             this.tabGeneralEGD.Controls.Add(this.txbGeneralDx1ID_EGD);
             this.tabGeneralEGD.Controls.Add(this.cbbGeneralFinancial_EGD);
@@ -799,13 +798,23 @@ namespace EndoscopicSystem.V2.Forms
             this.tabGeneralEGD.Controls.Add(this.label19);
             this.tabGeneralEGD.Controls.Add(this.label20);
             this.tabGeneralEGD.Controls.Add(this.label22);
-            this.tabGeneralEGD.Controls.Add(this.txbGeneralInstrument_EGD);
             this.tabGeneralEGD.Location = new System.Drawing.Point(4, 34);
             this.tabGeneralEGD.Margin = new System.Windows.Forms.Padding(2);
             this.tabGeneralEGD.Name = "tabGeneralEGD";
             this.tabGeneralEGD.Size = new System.Drawing.Size(993, 790);
             this.tabGeneralEGD.TabIndex = 3;
             this.tabGeneralEGD.Text = "General";
+            // 
+            // cbbInstrument_EGD
+            // 
+            this.cbbInstrument_EGD.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cbbInstrument_EGD.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F);
+            this.cbbInstrument_EGD.FormattingEnabled = true;
+            this.cbbInstrument_EGD.Location = new System.Drawing.Point(137, 379);
+            this.cbbInstrument_EGD.Margin = new System.Windows.Forms.Padding(2);
+            this.cbbInstrument_EGD.Name = "cbbInstrument_EGD";
+            this.cbbInstrument_EGD.Size = new System.Drawing.Size(318, 23);
+            this.cbbInstrument_EGD.TabIndex = 133;
             // 
             // txbGeneralDx2ID_EGD
             // 
@@ -1057,6 +1066,7 @@ namespace EndoscopicSystem.V2.Forms
             this.txtGeneralSn_EGD.Margin = new System.Windows.Forms.Padding(2);
             this.txtGeneralSn_EGD.MaxLength = 65;
             this.txtGeneralSn_EGD.Name = "txtGeneralSn_EGD";
+            this.txtGeneralSn_EGD.ReadOnly = true;
             this.txtGeneralSn_EGD.Size = new System.Drawing.Size(396, 23);
             this.txtGeneralSn_EGD.TabIndex = 106;
             // 
@@ -1446,19 +1456,6 @@ namespace EndoscopicSystem.V2.Forms
             this.label22.Size = new System.Drawing.Size(63, 20);
             this.label22.TabIndex = 27;
             this.label22.Text = "Doctor";
-            // 
-            // txbGeneralInstrument_EGD
-            // 
-            this.txbGeneralInstrument_EGD.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.txbGeneralInstrument_EGD.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.txbGeneralInstrument_EGD.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
-            this.txbGeneralInstrument_EGD.Location = new System.Drawing.Point(137, 380);
-            this.txbGeneralInstrument_EGD.Margin = new System.Windows.Forms.Padding(2);
-            this.txbGeneralInstrument_EGD.MaxLength = 65;
-            this.txbGeneralInstrument_EGD.Name = "txbGeneralInstrument_EGD";
-            this.txbGeneralInstrument_EGD.Size = new System.Drawing.Size(386, 23);
-            this.txbGeneralInstrument_EGD.TabIndex = 35;
             // 
             // tabFindingEGD
             // 
@@ -2439,6 +2436,7 @@ namespace EndoscopicSystem.V2.Forms
             // tabGeneralColonoscopy
             // 
             this.tabGeneralColonoscopy.BackColor = System.Drawing.Color.LightGray;
+            this.tabGeneralColonoscopy.Controls.Add(this.cbbInstrument_Colono);
             this.tabGeneralColonoscopy.Controls.Add(this.cbbGeneralFinancial_Colono);
             this.tabGeneralColonoscopy.Controls.Add(this.txbGeneralBowelPreparationResult_colono);
             this.tabGeneralColonoscopy.Controls.Add(this.label126);
@@ -2492,7 +2490,6 @@ namespace EndoscopicSystem.V2.Forms
             this.tabGeneralColonoscopy.Controls.Add(this.label122);
             this.tabGeneralColonoscopy.Controls.Add(this.label123);
             this.tabGeneralColonoscopy.Controls.Add(this.label124);
-            this.tabGeneralColonoscopy.Controls.Add(this.txbGeneralInstrument_Colono);
             this.tabGeneralColonoscopy.Controls.Add(this.txbGeneralDx2ID_Colono);
             this.tabGeneralColonoscopy.Controls.Add(this.txbGeneralDx1ID_Colono);
             this.tabGeneralColonoscopy.Controls.Add(this.txbICD10Code_Colono);
@@ -2504,6 +2501,17 @@ namespace EndoscopicSystem.V2.Forms
             this.tabGeneralColonoscopy.Size = new System.Drawing.Size(993, 790);
             this.tabGeneralColonoscopy.TabIndex = 0;
             this.tabGeneralColonoscopy.Text = "General";
+            // 
+            // cbbInstrument_Colono
+            // 
+            this.cbbInstrument_Colono.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cbbInstrument_Colono.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F);
+            this.cbbInstrument_Colono.FormattingEnabled = true;
+            this.cbbInstrument_Colono.Location = new System.Drawing.Point(140, 389);
+            this.cbbInstrument_Colono.Margin = new System.Windows.Forms.Padding(2);
+            this.cbbInstrument_Colono.Name = "cbbInstrument_Colono";
+            this.cbbInstrument_Colono.Size = new System.Drawing.Size(318, 23);
+            this.cbbInstrument_Colono.TabIndex = 184;
             // 
             // cbbGeneralFinancial_Colono
             // 
@@ -2672,9 +2680,9 @@ namespace EndoscopicSystem.V2.Forms
             this.label35.Location = new System.Drawing.Point(13, 500);
             this.label35.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label35.Name = "label35";
-            this.label35.Size = new System.Drawing.Size(52, 20);
+            this.label35.Size = new System.Drawing.Size(169, 20);
             this.label35.TabIndex = 166;
-            this.label35.Text = "(Dx2)";
+            this.label35.Text = "Pre-Diagnosis (Dx2)";
             // 
             // txbPreDiagText_Colono
             // 
@@ -2747,6 +2755,7 @@ namespace EndoscopicSystem.V2.Forms
             this.txbGeneralSN_Colono.Margin = new System.Windows.Forms.Padding(2);
             this.txbGeneralSN_Colono.MaxLength = 65;
             this.txbGeneralSN_Colono.Name = "txbGeneralSN_Colono";
+            this.txbGeneralSN_Colono.ReadOnly = true;
             this.txbGeneralSN_Colono.Size = new System.Drawing.Size(394, 23);
             this.txbGeneralSN_Colono.TabIndex = 158;
             // 
@@ -3136,19 +3145,6 @@ namespace EndoscopicSystem.V2.Forms
             this.label124.Size = new System.Drawing.Size(63, 20);
             this.label124.TabIndex = 124;
             this.label124.Text = "Doctor";
-            // 
-            // txbGeneralInstrument_Colono
-            // 
-            this.txbGeneralInstrument_Colono.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.txbGeneralInstrument_Colono.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.txbGeneralInstrument_Colono.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
-            this.txbGeneralInstrument_Colono.Location = new System.Drawing.Point(140, 389);
-            this.txbGeneralInstrument_Colono.Margin = new System.Windows.Forms.Padding(2);
-            this.txbGeneralInstrument_Colono.MaxLength = 65;
-            this.txbGeneralInstrument_Colono.Name = "txbGeneralInstrument_Colono";
-            this.txbGeneralInstrument_Colono.Size = new System.Drawing.Size(375, 23);
-            this.txbGeneralInstrument_Colono.TabIndex = 127;
             // 
             // txbGeneralDx2ID_Colono
             // 
@@ -4250,8 +4246,6 @@ namespace EndoscopicSystem.V2.Forms
             this.tabFindingERCP.Controls.Add(this.txbFindingDuodenum_ERCP);
             this.tabFindingERCP.Controls.Add(this.txbFindingStomach_ERCP);
             this.tabFindingERCP.Controls.Add(this.txbFindingEsophagus_ERCP);
-            this.tabFindingERCP.Controls.Add(this.cbbFindingPancreatogram_ERCP);
-            this.tabFindingERCP.Controls.Add(this.cbbFindingCholangiogram_ERCP);
             this.tabFindingERCP.Controls.Add(this.label68);
             this.tabFindingERCP.Controls.Add(this.label69);
             this.tabFindingERCP.Controls.Add(this.cbbFindingAmpulla_ERCP);
@@ -4269,17 +4263,526 @@ namespace EndoscopicSystem.V2.Forms
             this.tabFindingERCP.TabIndex = 11;
             this.tabFindingERCP.Text = "Finding";
             // 
+            // txbFindingDx4ID_ERCP
+            // 
+            this.txbFindingDx4ID_ERCP.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.txbFindingDx4ID_ERCP.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.txbFindingDx4ID_ERCP.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
+            this.txbFindingDx4ID_ERCP.Location = new System.Drawing.Point(179, 443);
+            this.txbFindingDx4ID_ERCP.Margin = new System.Windows.Forms.Padding(2);
+            this.txbFindingDx4ID_ERCP.MaxLength = 200;
+            this.txbFindingDx4ID_ERCP.Name = "txbFindingDx4ID_ERCP";
+            this.txbFindingDx4ID_ERCP.Size = new System.Drawing.Size(23, 23);
+            this.txbFindingDx4ID_ERCP.TabIndex = 220;
+            this.txbFindingDx4ID_ERCP.Visible = false;
+            // 
+            // txbFindingDx3ID_ERCP
+            // 
+            this.txbFindingDx3ID_ERCP.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.txbFindingDx3ID_ERCP.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.txbFindingDx3ID_ERCP.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
+            this.txbFindingDx3ID_ERCP.Location = new System.Drawing.Point(179, 416);
+            this.txbFindingDx3ID_ERCP.Margin = new System.Windows.Forms.Padding(2);
+            this.txbFindingDx3ID_ERCP.MaxLength = 200;
+            this.txbFindingDx3ID_ERCP.Name = "txbFindingDx3ID_ERCP";
+            this.txbFindingDx3ID_ERCP.Size = new System.Drawing.Size(23, 23);
+            this.txbFindingDx3ID_ERCP.TabIndex = 219;
+            this.txbFindingDx3ID_ERCP.Visible = false;
+            // 
+            // txbFindingDx2ID_ERCP
+            // 
+            this.txbFindingDx2ID_ERCP.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.txbFindingDx2ID_ERCP.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.txbFindingDx2ID_ERCP.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
+            this.txbFindingDx2ID_ERCP.Location = new System.Drawing.Point(179, 389);
+            this.txbFindingDx2ID_ERCP.Margin = new System.Windows.Forms.Padding(2);
+            this.txbFindingDx2ID_ERCP.MaxLength = 200;
+            this.txbFindingDx2ID_ERCP.Name = "txbFindingDx2ID_ERCP";
+            this.txbFindingDx2ID_ERCP.Size = new System.Drawing.Size(23, 23);
+            this.txbFindingDx2ID_ERCP.TabIndex = 218;
+            this.txbFindingDx2ID_ERCP.Visible = false;
+            // 
+            // txbFindingDx1ID_ERCP
+            // 
+            this.txbFindingDx1ID_ERCP.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.txbFindingDx1ID_ERCP.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.txbFindingDx1ID_ERCP.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
+            this.txbFindingDx1ID_ERCP.Location = new System.Drawing.Point(179, 362);
+            this.txbFindingDx1ID_ERCP.Margin = new System.Windows.Forms.Padding(2);
+            this.txbFindingDx1ID_ERCP.MaxLength = 200;
+            this.txbFindingDx1ID_ERCP.Name = "txbFindingDx1ID_ERCP";
+            this.txbFindingDx1ID_ERCP.Size = new System.Drawing.Size(23, 23);
+            this.txbFindingDx1ID_ERCP.TabIndex = 217;
+            this.txbFindingDx1ID_ERCP.Visible = false;
+            // 
+            // txbFindingSupplementalProcedure2ID_ERCP
+            // 
+            this.txbFindingSupplementalProcedure2ID_ERCP.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.txbFindingSupplementalProcedure2ID_ERCP.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.txbFindingSupplementalProcedure2ID_ERCP.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
+            this.txbFindingSupplementalProcedure2ID_ERCP.Location = new System.Drawing.Point(221, 266);
+            this.txbFindingSupplementalProcedure2ID_ERCP.Margin = new System.Windows.Forms.Padding(2);
+            this.txbFindingSupplementalProcedure2ID_ERCP.MaxLength = 200;
+            this.txbFindingSupplementalProcedure2ID_ERCP.Name = "txbFindingSupplementalProcedure2ID_ERCP";
+            this.txbFindingSupplementalProcedure2ID_ERCP.Size = new System.Drawing.Size(32, 23);
+            this.txbFindingSupplementalProcedure2ID_ERCP.TabIndex = 216;
+            this.txbFindingSupplementalProcedure2ID_ERCP.Visible = false;
+            // 
+            // txbFindingSupplementalProcedureID_ERCP
+            // 
+            this.txbFindingSupplementalProcedureID_ERCP.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.txbFindingSupplementalProcedureID_ERCP.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.txbFindingSupplementalProcedureID_ERCP.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
+            this.txbFindingSupplementalProcedureID_ERCP.Location = new System.Drawing.Point(221, 239);
+            this.txbFindingSupplementalProcedureID_ERCP.Margin = new System.Windows.Forms.Padding(2);
+            this.txbFindingSupplementalProcedureID_ERCP.MaxLength = 200;
+            this.txbFindingSupplementalProcedureID_ERCP.Name = "txbFindingSupplementalProcedureID_ERCP";
+            this.txbFindingSupplementalProcedureID_ERCP.Size = new System.Drawing.Size(32, 23);
+            this.txbFindingSupplementalProcedureID_ERCP.TabIndex = 215;
+            this.txbFindingSupplementalProcedureID_ERCP.Visible = false;
+            // 
+            // txbFindingPrinncipalProcedureID_ERCP
+            // 
+            this.txbFindingPrinncipalProcedureID_ERCP.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.txbFindingPrinncipalProcedureID_ERCP.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.txbFindingPrinncipalProcedureID_ERCP.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
+            this.txbFindingPrinncipalProcedureID_ERCP.Location = new System.Drawing.Point(221, 212);
+            this.txbFindingPrinncipalProcedureID_ERCP.Margin = new System.Windows.Forms.Padding(2);
+            this.txbFindingPrinncipalProcedureID_ERCP.MaxLength = 200;
+            this.txbFindingPrinncipalProcedureID_ERCP.Name = "txbFindingPrinncipalProcedureID_ERCP";
+            this.txbFindingPrinncipalProcedureID_ERCP.Size = new System.Drawing.Size(32, 23);
+            this.txbFindingPrinncipalProcedureID_ERCP.TabIndex = 214;
+            this.txbFindingPrinncipalProcedureID_ERCP.Visible = false;
+            // 
+            // txbFindingRecommendation_ERCP
+            // 
+            this.txbFindingRecommendation_ERCP.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.txbFindingRecommendation_ERCP.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.txbFindingRecommendation_ERCP.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
+            this.txbFindingRecommendation_ERCP.Location = new System.Drawing.Point(168, 566);
+            this.txbFindingRecommendation_ERCP.Margin = new System.Windows.Forms.Padding(2);
+            this.txbFindingRecommendation_ERCP.MaxLength = 250;
+            this.txbFindingRecommendation_ERCP.Multiline = true;
+            this.txbFindingRecommendation_ERCP.Name = "txbFindingRecommendation_ERCP";
+            this.txbFindingRecommendation_ERCP.Size = new System.Drawing.Size(813, 44);
+            this.txbFindingRecommendation_ERCP.TabIndex = 213;
+            // 
+            // label139
+            // 
+            this.label139.AutoSize = true;
+            this.label139.BackColor = System.Drawing.Color.Transparent;
+            this.label139.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
+            this.label139.Location = new System.Drawing.Point(7, 568);
+            this.label139.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label139.Name = "label139";
+            this.label139.Size = new System.Drawing.Size(149, 20);
+            this.label139.TabIndex = 212;
+            this.label139.Text = "Recommendation";
+            // 
+            // txbFindingHistopathology_ERCP
+            // 
+            this.txbFindingHistopathology_ERCP.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.txbFindingHistopathology_ERCP.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.txbFindingHistopathology_ERCP.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
+            this.txbFindingHistopathology_ERCP.Location = new System.Drawing.Point(168, 518);
+            this.txbFindingHistopathology_ERCP.Margin = new System.Windows.Forms.Padding(2);
+            this.txbFindingHistopathology_ERCP.MaxLength = 250;
+            this.txbFindingHistopathology_ERCP.Multiline = true;
+            this.txbFindingHistopathology_ERCP.Name = "txbFindingHistopathology_ERCP";
+            this.txbFindingHistopathology_ERCP.Size = new System.Drawing.Size(813, 44);
+            this.txbFindingHistopathology_ERCP.TabIndex = 211;
+            // 
+            // label140
+            // 
+            this.label140.AutoSize = true;
+            this.label140.BackColor = System.Drawing.Color.Transparent;
+            this.label140.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
+            this.label140.Location = new System.Drawing.Point(7, 520);
+            this.label140.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label140.Name = "label140";
+            this.label140.Size = new System.Drawing.Size(129, 20);
+            this.label140.TabIndex = 210;
+            this.label140.Text = "Histopathology";
+            // 
+            // label141
+            // 
+            this.label141.AutoSize = true;
+            this.label141.BackColor = System.Drawing.Color.Transparent;
+            this.label141.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
+            this.label141.Location = new System.Drawing.Point(6, 446);
+            this.label141.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label141.Name = "label141";
+            this.label141.Size = new System.Drawing.Size(169, 20);
+            this.label141.TabIndex = 209;
+            this.label141.Text = "Pre-Diagnosis (Dx4)";
+            // 
+            // label142
+            // 
+            this.label142.AutoSize = true;
+            this.label142.BackColor = System.Drawing.Color.Transparent;
+            this.label142.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
+            this.label142.Location = new System.Drawing.Point(6, 419);
+            this.label142.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label142.Name = "label142";
+            this.label142.Size = new System.Drawing.Size(169, 20);
+            this.label142.TabIndex = 208;
+            this.label142.Text = "Pre-Diagnosis (Dx3)";
+            // 
+            // label143
+            // 
+            this.label143.AutoSize = true;
+            this.label143.BackColor = System.Drawing.Color.Transparent;
+            this.label143.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
+            this.label143.Location = new System.Drawing.Point(6, 392);
+            this.label143.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label143.Name = "label143";
+            this.label143.Size = new System.Drawing.Size(169, 20);
+            this.label143.TabIndex = 207;
+            this.label143.Text = "Pre-Diagnosis (Dx2)";
+            // 
+            // label144
+            // 
+            this.label144.AutoSize = true;
+            this.label144.BackColor = System.Drawing.Color.Transparent;
+            this.label144.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
+            this.label144.Location = new System.Drawing.Point(6, 365);
+            this.label144.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label144.Name = "label144";
+            this.label144.Size = new System.Drawing.Size(169, 20);
+            this.label144.TabIndex = 206;
+            this.label144.Text = "Pre-Diagnosis (Dx1)";
+            // 
+            // txbFindingDx4Text_ERCP
+            // 
+            this.txbFindingDx4Text_ERCP.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.txbFindingDx4Text_ERCP.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.txbFindingDx4Text_ERCP.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
+            this.txbFindingDx4Text_ERCP.Location = new System.Drawing.Point(321, 443);
+            this.txbFindingDx4Text_ERCP.Margin = new System.Windows.Forms.Padding(2);
+            this.txbFindingDx4Text_ERCP.MaxLength = 200;
+            this.txbFindingDx4Text_ERCP.Name = "txbFindingDx4Text_ERCP";
+            this.txbFindingDx4Text_ERCP.Size = new System.Drawing.Size(660, 23);
+            this.txbFindingDx4Text_ERCP.TabIndex = 205;
+            // 
+            // txbFindingDx4Code_ERCP
+            // 
+            this.txbFindingDx4Code_ERCP.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.txbFindingDx4Code_ERCP.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.txbFindingDx4Code_ERCP.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
+            this.txbFindingDx4Code_ERCP.Location = new System.Drawing.Point(179, 443);
+            this.txbFindingDx4Code_ERCP.Margin = new System.Windows.Forms.Padding(2);
+            this.txbFindingDx4Code_ERCP.MaxLength = 200;
+            this.txbFindingDx4Code_ERCP.Name = "txbFindingDx4Code_ERCP";
+            this.txbFindingDx4Code_ERCP.Size = new System.Drawing.Size(138, 23);
+            this.txbFindingDx4Code_ERCP.TabIndex = 204;
+            this.txbFindingDx4Code_ERCP.Click += new System.EventHandler(this.txbFindingDx4Code_ERCP_Click);
+            this.txbFindingDx4Code_ERCP.TextChanged += new System.EventHandler(this.txbFindingDx4Code_ERCP_TextChanged);
+            // 
+            // txbFindingDx3Text_ERCP
+            // 
+            this.txbFindingDx3Text_ERCP.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.txbFindingDx3Text_ERCP.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.txbFindingDx3Text_ERCP.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
+            this.txbFindingDx3Text_ERCP.Location = new System.Drawing.Point(321, 416);
+            this.txbFindingDx3Text_ERCP.Margin = new System.Windows.Forms.Padding(2);
+            this.txbFindingDx3Text_ERCP.MaxLength = 200;
+            this.txbFindingDx3Text_ERCP.Name = "txbFindingDx3Text_ERCP";
+            this.txbFindingDx3Text_ERCP.Size = new System.Drawing.Size(660, 23);
+            this.txbFindingDx3Text_ERCP.TabIndex = 203;
+            // 
+            // txbFindingDx3Code_ERCP
+            // 
+            this.txbFindingDx3Code_ERCP.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.txbFindingDx3Code_ERCP.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.txbFindingDx3Code_ERCP.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
+            this.txbFindingDx3Code_ERCP.Location = new System.Drawing.Point(179, 416);
+            this.txbFindingDx3Code_ERCP.Margin = new System.Windows.Forms.Padding(2);
+            this.txbFindingDx3Code_ERCP.MaxLength = 200;
+            this.txbFindingDx3Code_ERCP.Name = "txbFindingDx3Code_ERCP";
+            this.txbFindingDx3Code_ERCP.Size = new System.Drawing.Size(138, 23);
+            this.txbFindingDx3Code_ERCP.TabIndex = 202;
+            this.txbFindingDx3Code_ERCP.Click += new System.EventHandler(this.txbFindingDx3Code_ERCP_Click);
+            this.txbFindingDx3Code_ERCP.TextChanged += new System.EventHandler(this.txbFindingDx3Code_ERCP_TextChanged);
+            // 
+            // txbFindingDx2Text_ERCP
+            // 
+            this.txbFindingDx2Text_ERCP.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.txbFindingDx2Text_ERCP.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.txbFindingDx2Text_ERCP.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
+            this.txbFindingDx2Text_ERCP.Location = new System.Drawing.Point(321, 389);
+            this.txbFindingDx2Text_ERCP.Margin = new System.Windows.Forms.Padding(2);
+            this.txbFindingDx2Text_ERCP.MaxLength = 200;
+            this.txbFindingDx2Text_ERCP.Name = "txbFindingDx2Text_ERCP";
+            this.txbFindingDx2Text_ERCP.Size = new System.Drawing.Size(660, 23);
+            this.txbFindingDx2Text_ERCP.TabIndex = 201;
+            // 
+            // txbFindingDx2Code_ERCP
+            // 
+            this.txbFindingDx2Code_ERCP.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.txbFindingDx2Code_ERCP.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.txbFindingDx2Code_ERCP.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
+            this.txbFindingDx2Code_ERCP.Location = new System.Drawing.Point(179, 389);
+            this.txbFindingDx2Code_ERCP.Margin = new System.Windows.Forms.Padding(2);
+            this.txbFindingDx2Code_ERCP.MaxLength = 200;
+            this.txbFindingDx2Code_ERCP.Name = "txbFindingDx2Code_ERCP";
+            this.txbFindingDx2Code_ERCP.Size = new System.Drawing.Size(138, 23);
+            this.txbFindingDx2Code_ERCP.TabIndex = 200;
+            this.txbFindingDx2Code_ERCP.Click += new System.EventHandler(this.txbFindingDx2Code_ERCP_Click);
+            this.txbFindingDx2Code_ERCP.TextChanged += new System.EventHandler(this.txbFindingDx2Code_ERCP_TextChanged);
+            // 
+            // txbFindingDx1Text_ERCP
+            // 
+            this.txbFindingDx1Text_ERCP.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.txbFindingDx1Text_ERCP.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.txbFindingDx1Text_ERCP.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
+            this.txbFindingDx1Text_ERCP.Location = new System.Drawing.Point(321, 362);
+            this.txbFindingDx1Text_ERCP.Margin = new System.Windows.Forms.Padding(2);
+            this.txbFindingDx1Text_ERCP.MaxLength = 200;
+            this.txbFindingDx1Text_ERCP.Name = "txbFindingDx1Text_ERCP";
+            this.txbFindingDx1Text_ERCP.Size = new System.Drawing.Size(660, 23);
+            this.txbFindingDx1Text_ERCP.TabIndex = 199;
+            // 
+            // txbFindingDx1Code_ERCP
+            // 
+            this.txbFindingDx1Code_ERCP.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.txbFindingDx1Code_ERCP.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.txbFindingDx1Code_ERCP.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
+            this.txbFindingDx1Code_ERCP.Location = new System.Drawing.Point(179, 362);
+            this.txbFindingDx1Code_ERCP.Margin = new System.Windows.Forms.Padding(2);
+            this.txbFindingDx1Code_ERCP.MaxLength = 200;
+            this.txbFindingDx1Code_ERCP.Name = "txbFindingDx1Code_ERCP";
+            this.txbFindingDx1Code_ERCP.Size = new System.Drawing.Size(138, 23);
+            this.txbFindingDx1Code_ERCP.TabIndex = 198;
+            this.txbFindingDx1Code_ERCP.Click += new System.EventHandler(this.txbFindingDx1Code_ERCP_Click);
+            this.txbFindingDx1Code_ERCP.TextChanged += new System.EventHandler(this.txbFindingDx1Code_ERCP_TextChanged);
+            // 
+            // txbFindingProcedure_ERCP
+            // 
+            this.txbFindingProcedure_ERCP.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.txbFindingProcedure_ERCP.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.txbFindingProcedure_ERCP.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
+            this.txbFindingProcedure_ERCP.Location = new System.Drawing.Point(168, 293);
+            this.txbFindingProcedure_ERCP.Margin = new System.Windows.Forms.Padding(2);
+            this.txbFindingProcedure_ERCP.MaxLength = 200;
+            this.txbFindingProcedure_ERCP.Multiline = true;
+            this.txbFindingProcedure_ERCP.Name = "txbFindingProcedure_ERCP";
+            this.txbFindingProcedure_ERCP.Size = new System.Drawing.Size(813, 65);
+            this.txbFindingProcedure_ERCP.TabIndex = 197;
+            // 
+            // label145
+            // 
+            this.label145.AutoSize = true;
+            this.label145.BackColor = System.Drawing.Color.Transparent;
+            this.label145.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
+            this.label145.Location = new System.Drawing.Point(7, 296);
+            this.label145.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label145.Name = "label145";
+            this.label145.Size = new System.Drawing.Size(91, 20);
+            this.label145.TabIndex = 196;
+            this.label145.Text = "Procedure";
+            // 
+            // txbFindingSupplementalProcedure2Text_ERCP
+            // 
+            this.txbFindingSupplementalProcedure2Text_ERCP.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.txbFindingSupplementalProcedure2Text_ERCP.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.txbFindingSupplementalProcedure2Text_ERCP.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
+            this.txbFindingSupplementalProcedure2Text_ERCP.Location = new System.Drawing.Point(321, 266);
+            this.txbFindingSupplementalProcedure2Text_ERCP.Margin = new System.Windows.Forms.Padding(2);
+            this.txbFindingSupplementalProcedure2Text_ERCP.MaxLength = 200;
+            this.txbFindingSupplementalProcedure2Text_ERCP.Name = "txbFindingSupplementalProcedure2Text_ERCP";
+            this.txbFindingSupplementalProcedure2Text_ERCP.Size = new System.Drawing.Size(660, 23);
+            this.txbFindingSupplementalProcedure2Text_ERCP.TabIndex = 195;
+            // 
+            // label146
+            // 
+            this.label146.AutoSize = true;
+            this.label146.BackColor = System.Drawing.Color.Transparent;
+            this.label146.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
+            this.label146.Location = new System.Drawing.Point(7, 269);
+            this.label146.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label146.Name = "label146";
+            this.label146.Size = new System.Drawing.Size(206, 20);
+            this.label146.TabIndex = 194;
+            this.label146.Text = "Supplemental Procedure";
+            // 
+            // txbFindingSupplementalProcedure2Code_ERCP
+            // 
+            this.txbFindingSupplementalProcedure2Code_ERCP.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.txbFindingSupplementalProcedure2Code_ERCP.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.txbFindingSupplementalProcedure2Code_ERCP.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
+            this.txbFindingSupplementalProcedure2Code_ERCP.Location = new System.Drawing.Point(221, 266);
+            this.txbFindingSupplementalProcedure2Code_ERCP.Margin = new System.Windows.Forms.Padding(2);
+            this.txbFindingSupplementalProcedure2Code_ERCP.MaxLength = 200;
+            this.txbFindingSupplementalProcedure2Code_ERCP.Name = "txbFindingSupplementalProcedure2Code_ERCP";
+            this.txbFindingSupplementalProcedure2Code_ERCP.Size = new System.Drawing.Size(96, 23);
+            this.txbFindingSupplementalProcedure2Code_ERCP.TabIndex = 193;
+            this.txbFindingSupplementalProcedure2Code_ERCP.Click += new System.EventHandler(this.txbFindingSupplementalProcedure2Code_ERCP_Click);
+            this.txbFindingSupplementalProcedure2Code_ERCP.TextChanged += new System.EventHandler(this.txbFindingSupplementalProcedure2Code_ERCP_TextChanged);
+            // 
+            // txbFindingSupplementalProcedureText_ERCP
+            // 
+            this.txbFindingSupplementalProcedureText_ERCP.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.txbFindingSupplementalProcedureText_ERCP.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.txbFindingSupplementalProcedureText_ERCP.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
+            this.txbFindingSupplementalProcedureText_ERCP.Location = new System.Drawing.Point(321, 239);
+            this.txbFindingSupplementalProcedureText_ERCP.Margin = new System.Windows.Forms.Padding(2);
+            this.txbFindingSupplementalProcedureText_ERCP.MaxLength = 200;
+            this.txbFindingSupplementalProcedureText_ERCP.Name = "txbFindingSupplementalProcedureText_ERCP";
+            this.txbFindingSupplementalProcedureText_ERCP.Size = new System.Drawing.Size(660, 23);
+            this.txbFindingSupplementalProcedureText_ERCP.TabIndex = 192;
+            // 
+            // label147
+            // 
+            this.label147.AutoSize = true;
+            this.label147.BackColor = System.Drawing.Color.Transparent;
+            this.label147.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
+            this.label147.Location = new System.Drawing.Point(7, 242);
+            this.label147.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label147.Name = "label147";
+            this.label147.Size = new System.Drawing.Size(206, 20);
+            this.label147.TabIndex = 191;
+            this.label147.Text = "Supplemental Procedure";
+            // 
+            // txbFindingSupplementalProcedureCode_ERCP
+            // 
+            this.txbFindingSupplementalProcedureCode_ERCP.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.txbFindingSupplementalProcedureCode_ERCP.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.txbFindingSupplementalProcedureCode_ERCP.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
+            this.txbFindingSupplementalProcedureCode_ERCP.Location = new System.Drawing.Point(221, 239);
+            this.txbFindingSupplementalProcedureCode_ERCP.Margin = new System.Windows.Forms.Padding(2);
+            this.txbFindingSupplementalProcedureCode_ERCP.MaxLength = 200;
+            this.txbFindingSupplementalProcedureCode_ERCP.Name = "txbFindingSupplementalProcedureCode_ERCP";
+            this.txbFindingSupplementalProcedureCode_ERCP.Size = new System.Drawing.Size(96, 23);
+            this.txbFindingSupplementalProcedureCode_ERCP.TabIndex = 190;
+            this.txbFindingSupplementalProcedureCode_ERCP.Click += new System.EventHandler(this.txbFindingSupplementalProcedureCode_ERCP_Click);
+            this.txbFindingSupplementalProcedureCode_ERCP.TextChanged += new System.EventHandler(this.txbFindingSupplementalProcedureCode_ERCP_TextChanged);
+            // 
+            // txbFindingPrinncipalProcedureText_ERCP
+            // 
+            this.txbFindingPrinncipalProcedureText_ERCP.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.txbFindingPrinncipalProcedureText_ERCP.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.txbFindingPrinncipalProcedureText_ERCP.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
+            this.txbFindingPrinncipalProcedureText_ERCP.Location = new System.Drawing.Point(321, 212);
+            this.txbFindingPrinncipalProcedureText_ERCP.Margin = new System.Windows.Forms.Padding(2);
+            this.txbFindingPrinncipalProcedureText_ERCP.MaxLength = 200;
+            this.txbFindingPrinncipalProcedureText_ERCP.Name = "txbFindingPrinncipalProcedureText_ERCP";
+            this.txbFindingPrinncipalProcedureText_ERCP.Size = new System.Drawing.Size(660, 23);
+            this.txbFindingPrinncipalProcedureText_ERCP.TabIndex = 189;
+            // 
+            // label148
+            // 
+            this.label148.AutoSize = true;
+            this.label148.BackColor = System.Drawing.Color.Transparent;
+            this.label148.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
+            this.label148.Location = new System.Drawing.Point(7, 215);
+            this.label148.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label148.Name = "label148";
+            this.label148.Size = new System.Drawing.Size(164, 20);
+            this.label148.TabIndex = 188;
+            this.label148.Text = "Principal Procedure";
+            // 
+            // txbFindingPrinncipalProcedureCode_ERCP
+            // 
+            this.txbFindingPrinncipalProcedureCode_ERCP.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.txbFindingPrinncipalProcedureCode_ERCP.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.txbFindingPrinncipalProcedureCode_ERCP.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
+            this.txbFindingPrinncipalProcedureCode_ERCP.Location = new System.Drawing.Point(221, 212);
+            this.txbFindingPrinncipalProcedureCode_ERCP.Margin = new System.Windows.Forms.Padding(2);
+            this.txbFindingPrinncipalProcedureCode_ERCP.MaxLength = 200;
+            this.txbFindingPrinncipalProcedureCode_ERCP.Name = "txbFindingPrinncipalProcedureCode_ERCP";
+            this.txbFindingPrinncipalProcedureCode_ERCP.Size = new System.Drawing.Size(96, 23);
+            this.txbFindingPrinncipalProcedureCode_ERCP.TabIndex = 187;
+            this.txbFindingPrinncipalProcedureCode_ERCP.Click += new System.EventHandler(this.txbFindingPrinncipalProcedureCode_ERCP_Click);
+            this.txbFindingPrinncipalProcedureCode_ERCP.TextChanged += new System.EventHandler(this.txbFindingPrinncipalProcedureCode_ERCP_TextChanged);
+            // 
+            // txbFindingComplication_ERCP
+            // 
+            this.txbFindingComplication_ERCP.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.txbFindingComplication_ERCP.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.txbFindingComplication_ERCP.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
+            this.txbFindingComplication_ERCP.Location = new System.Drawing.Point(168, 470);
+            this.txbFindingComplication_ERCP.Margin = new System.Windows.Forms.Padding(2);
+            this.txbFindingComplication_ERCP.MaxLength = 250;
+            this.txbFindingComplication_ERCP.Multiline = true;
+            this.txbFindingComplication_ERCP.Name = "txbFindingComplication_ERCP";
+            this.txbFindingComplication_ERCP.Size = new System.Drawing.Size(813, 44);
+            this.txbFindingComplication_ERCP.TabIndex = 185;
+            // 
+            // label149
+            // 
+            this.label149.AutoSize = true;
+            this.label149.BackColor = System.Drawing.Color.Transparent;
+            this.label149.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
+            this.label149.Location = new System.Drawing.Point(7, 616);
+            this.label149.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label149.Name = "label149";
+            this.label149.Size = new System.Drawing.Size(85, 20);
+            this.label149.TabIndex = 183;
+            this.label149.Text = "Comment";
+            // 
+            // label150
+            // 
+            this.label150.AutoSize = true;
+            this.label150.BackColor = System.Drawing.Color.Transparent;
+            this.label150.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
+            this.label150.Location = new System.Drawing.Point(7, 472);
+            this.label150.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label150.Name = "label150";
+            this.label150.Size = new System.Drawing.Size(112, 20);
+            this.label150.TabIndex = 184;
+            this.label150.Text = "Complication";
+            // 
+            // txbFindingComment_ERCP
+            // 
+            this.txbFindingComment_ERCP.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.txbFindingComment_ERCP.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.txbFindingComment_ERCP.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
+            this.txbFindingComment_ERCP.Location = new System.Drawing.Point(168, 614);
+            this.txbFindingComment_ERCP.Margin = new System.Windows.Forms.Padding(2);
+            this.txbFindingComment_ERCP.MaxLength = 250;
+            this.txbFindingComment_ERCP.Multiline = true;
+            this.txbFindingComment_ERCP.Name = "txbFindingComment_ERCP";
+            this.txbFindingComment_ERCP.Size = new System.Drawing.Size(813, 78);
+            this.txbFindingComment_ERCP.TabIndex = 186;
+            // 
             // txbFindingPancreatogram_ERCP
             // 
             this.txbFindingPancreatogram_ERCP.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.txbFindingPancreatogram_ERCP.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.txbFindingPancreatogram_ERCP.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
-            this.txbFindingPancreatogram_ERCP.Location = new System.Drawing.Point(462, 141);
+            this.txbFindingPancreatogram_ERCP.Location = new System.Drawing.Point(152, 164);
             this.txbFindingPancreatogram_ERCP.Margin = new System.Windows.Forms.Padding(2);
             this.txbFindingPancreatogram_ERCP.MaxLength = 75;
+            this.txbFindingPancreatogram_ERCP.Multiline = true;
             this.txbFindingPancreatogram_ERCP.Name = "txbFindingPancreatogram_ERCP";
-            this.txbFindingPancreatogram_ERCP.Size = new System.Drawing.Size(519, 23);
+            this.txbFindingPancreatogram_ERCP.Size = new System.Drawing.Size(829, 44);
             this.txbFindingPancreatogram_ERCP.TabIndex = 87;
             // 
             // txbFindingCholangiogram_ERCP
@@ -4288,11 +4791,12 @@ namespace EndoscopicSystem.V2.Forms
             | System.Windows.Forms.AnchorStyles.Right)));
             this.txbFindingCholangiogram_ERCP.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.txbFindingCholangiogram_ERCP.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
-            this.txbFindingCholangiogram_ERCP.Location = new System.Drawing.Point(462, 115);
+            this.txbFindingCholangiogram_ERCP.Location = new System.Drawing.Point(152, 116);
             this.txbFindingCholangiogram_ERCP.Margin = new System.Windows.Forms.Padding(2);
             this.txbFindingCholangiogram_ERCP.MaxLength = 75;
+            this.txbFindingCholangiogram_ERCP.Multiline = true;
             this.txbFindingCholangiogram_ERCP.Name = "txbFindingCholangiogram_ERCP";
-            this.txbFindingCholangiogram_ERCP.Size = new System.Drawing.Size(519, 23);
+            this.txbFindingCholangiogram_ERCP.Size = new System.Drawing.Size(829, 44);
             this.txbFindingCholangiogram_ERCP.TabIndex = 86;
             // 
             // txbFindingAmpulla_ERCP
@@ -4347,37 +4851,11 @@ namespace EndoscopicSystem.V2.Forms
             this.txbFindingEsophagus_ERCP.Size = new System.Drawing.Size(519, 23);
             this.txbFindingEsophagus_ERCP.TabIndex = 82;
             // 
-            // cbbFindingPancreatogram_ERCP
-            // 
-            this.cbbFindingPancreatogram_ERCP.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.cbbFindingPancreatogram_ERCP.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cbbFindingPancreatogram_ERCP.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
-            this.cbbFindingPancreatogram_ERCP.FormattingEnabled = true;
-            this.cbbFindingPancreatogram_ERCP.Location = new System.Drawing.Point(152, 141);
-            this.cbbFindingPancreatogram_ERCP.Margin = new System.Windows.Forms.Padding(2);
-            this.cbbFindingPancreatogram_ERCP.Name = "cbbFindingPancreatogram_ERCP";
-            this.cbbFindingPancreatogram_ERCP.Size = new System.Drawing.Size(306, 23);
-            this.cbbFindingPancreatogram_ERCP.TabIndex = 80;
-            // 
-            // cbbFindingCholangiogram_ERCP
-            // 
-            this.cbbFindingCholangiogram_ERCP.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.cbbFindingCholangiogram_ERCP.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cbbFindingCholangiogram_ERCP.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
-            this.cbbFindingCholangiogram_ERCP.FormattingEnabled = true;
-            this.cbbFindingCholangiogram_ERCP.Location = new System.Drawing.Point(152, 115);
-            this.cbbFindingCholangiogram_ERCP.Margin = new System.Windows.Forms.Padding(2);
-            this.cbbFindingCholangiogram_ERCP.Name = "cbbFindingCholangiogram_ERCP";
-            this.cbbFindingCholangiogram_ERCP.Size = new System.Drawing.Size(306, 23);
-            this.cbbFindingCholangiogram_ERCP.TabIndex = 81;
-            // 
             // label68
             // 
             this.label68.AutoSize = true;
             this.label68.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold);
-            this.label68.Location = new System.Drawing.Point(7, 141);
+            this.label68.Location = new System.Drawing.Point(7, 164);
             this.label68.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label68.Name = "label68";
             this.label68.Size = new System.Drawing.Size(131, 20);
@@ -8626,514 +9104,6 @@ namespace EndoscopicSystem.V2.Forms
             this.btnSave.UseVisualStyleBackColor = false;
             this.btnSave.Click += new System.EventHandler(this.btnSave_Click);
             // 
-            // txbFindingDx4ID_ERCP
-            // 
-            this.txbFindingDx4ID_ERCP.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.txbFindingDx4ID_ERCP.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.txbFindingDx4ID_ERCP.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
-            this.txbFindingDx4ID_ERCP.Location = new System.Drawing.Point(179, 400);
-            this.txbFindingDx4ID_ERCP.Margin = new System.Windows.Forms.Padding(2);
-            this.txbFindingDx4ID_ERCP.MaxLength = 200;
-            this.txbFindingDx4ID_ERCP.Name = "txbFindingDx4ID_ERCP";
-            this.txbFindingDx4ID_ERCP.Size = new System.Drawing.Size(23, 23);
-            this.txbFindingDx4ID_ERCP.TabIndex = 220;
-            this.txbFindingDx4ID_ERCP.Visible = false;
-            // 
-            // txbFindingDx3ID_ERCP
-            // 
-            this.txbFindingDx3ID_ERCP.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.txbFindingDx3ID_ERCP.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.txbFindingDx3ID_ERCP.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
-            this.txbFindingDx3ID_ERCP.Location = new System.Drawing.Point(179, 373);
-            this.txbFindingDx3ID_ERCP.Margin = new System.Windows.Forms.Padding(2);
-            this.txbFindingDx3ID_ERCP.MaxLength = 200;
-            this.txbFindingDx3ID_ERCP.Name = "txbFindingDx3ID_ERCP";
-            this.txbFindingDx3ID_ERCP.Size = new System.Drawing.Size(23, 23);
-            this.txbFindingDx3ID_ERCP.TabIndex = 219;
-            this.txbFindingDx3ID_ERCP.Visible = false;
-            // 
-            // txbFindingDx2ID_ERCP
-            // 
-            this.txbFindingDx2ID_ERCP.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.txbFindingDx2ID_ERCP.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.txbFindingDx2ID_ERCP.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
-            this.txbFindingDx2ID_ERCP.Location = new System.Drawing.Point(179, 346);
-            this.txbFindingDx2ID_ERCP.Margin = new System.Windows.Forms.Padding(2);
-            this.txbFindingDx2ID_ERCP.MaxLength = 200;
-            this.txbFindingDx2ID_ERCP.Name = "txbFindingDx2ID_ERCP";
-            this.txbFindingDx2ID_ERCP.Size = new System.Drawing.Size(23, 23);
-            this.txbFindingDx2ID_ERCP.TabIndex = 218;
-            this.txbFindingDx2ID_ERCP.Visible = false;
-            // 
-            // txbFindingDx1ID_ERCP
-            // 
-            this.txbFindingDx1ID_ERCP.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.txbFindingDx1ID_ERCP.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.txbFindingDx1ID_ERCP.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
-            this.txbFindingDx1ID_ERCP.Location = new System.Drawing.Point(179, 319);
-            this.txbFindingDx1ID_ERCP.Margin = new System.Windows.Forms.Padding(2);
-            this.txbFindingDx1ID_ERCP.MaxLength = 200;
-            this.txbFindingDx1ID_ERCP.Name = "txbFindingDx1ID_ERCP";
-            this.txbFindingDx1ID_ERCP.Size = new System.Drawing.Size(23, 23);
-            this.txbFindingDx1ID_ERCP.TabIndex = 217;
-            this.txbFindingDx1ID_ERCP.Visible = false;
-            // 
-            // txbFindingSupplementalProcedure2ID_ERCP
-            // 
-            this.txbFindingSupplementalProcedure2ID_ERCP.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.txbFindingSupplementalProcedure2ID_ERCP.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.txbFindingSupplementalProcedure2ID_ERCP.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
-            this.txbFindingSupplementalProcedure2ID_ERCP.Location = new System.Drawing.Point(221, 223);
-            this.txbFindingSupplementalProcedure2ID_ERCP.Margin = new System.Windows.Forms.Padding(2);
-            this.txbFindingSupplementalProcedure2ID_ERCP.MaxLength = 200;
-            this.txbFindingSupplementalProcedure2ID_ERCP.Name = "txbFindingSupplementalProcedure2ID_ERCP";
-            this.txbFindingSupplementalProcedure2ID_ERCP.Size = new System.Drawing.Size(32, 23);
-            this.txbFindingSupplementalProcedure2ID_ERCP.TabIndex = 216;
-            this.txbFindingSupplementalProcedure2ID_ERCP.Visible = false;
-            // 
-            // txbFindingSupplementalProcedureID_ERCP
-            // 
-            this.txbFindingSupplementalProcedureID_ERCP.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.txbFindingSupplementalProcedureID_ERCP.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.txbFindingSupplementalProcedureID_ERCP.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
-            this.txbFindingSupplementalProcedureID_ERCP.Location = new System.Drawing.Point(221, 196);
-            this.txbFindingSupplementalProcedureID_ERCP.Margin = new System.Windows.Forms.Padding(2);
-            this.txbFindingSupplementalProcedureID_ERCP.MaxLength = 200;
-            this.txbFindingSupplementalProcedureID_ERCP.Name = "txbFindingSupplementalProcedureID_ERCP";
-            this.txbFindingSupplementalProcedureID_ERCP.Size = new System.Drawing.Size(32, 23);
-            this.txbFindingSupplementalProcedureID_ERCP.TabIndex = 215;
-            this.txbFindingSupplementalProcedureID_ERCP.Visible = false;
-            // 
-            // txbFindingPrinncipalProcedureID_ERCP
-            // 
-            this.txbFindingPrinncipalProcedureID_ERCP.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.txbFindingPrinncipalProcedureID_ERCP.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.txbFindingPrinncipalProcedureID_ERCP.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
-            this.txbFindingPrinncipalProcedureID_ERCP.Location = new System.Drawing.Point(221, 169);
-            this.txbFindingPrinncipalProcedureID_ERCP.Margin = new System.Windows.Forms.Padding(2);
-            this.txbFindingPrinncipalProcedureID_ERCP.MaxLength = 200;
-            this.txbFindingPrinncipalProcedureID_ERCP.Name = "txbFindingPrinncipalProcedureID_ERCP";
-            this.txbFindingPrinncipalProcedureID_ERCP.Size = new System.Drawing.Size(32, 23);
-            this.txbFindingPrinncipalProcedureID_ERCP.TabIndex = 214;
-            this.txbFindingPrinncipalProcedureID_ERCP.Visible = false;
-            // 
-            // txbFindingRecommendation_ERCP
-            // 
-            this.txbFindingRecommendation_ERCP.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.txbFindingRecommendation_ERCP.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.txbFindingRecommendation_ERCP.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
-            this.txbFindingRecommendation_ERCP.Location = new System.Drawing.Point(168, 523);
-            this.txbFindingRecommendation_ERCP.Margin = new System.Windows.Forms.Padding(2);
-            this.txbFindingRecommendation_ERCP.MaxLength = 250;
-            this.txbFindingRecommendation_ERCP.Multiline = true;
-            this.txbFindingRecommendation_ERCP.Name = "txbFindingRecommendation_ERCP";
-            this.txbFindingRecommendation_ERCP.Size = new System.Drawing.Size(804, 44);
-            this.txbFindingRecommendation_ERCP.TabIndex = 213;
-            // 
-            // label139
-            // 
-            this.label139.AutoSize = true;
-            this.label139.BackColor = System.Drawing.Color.Transparent;
-            this.label139.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
-            this.label139.Location = new System.Drawing.Point(7, 525);
-            this.label139.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label139.Name = "label139";
-            this.label139.Size = new System.Drawing.Size(149, 20);
-            this.label139.TabIndex = 212;
-            this.label139.Text = "Recommendation";
-            // 
-            // txbFindingHistopathology_ERCP
-            // 
-            this.txbFindingHistopathology_ERCP.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.txbFindingHistopathology_ERCP.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.txbFindingHistopathology_ERCP.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
-            this.txbFindingHistopathology_ERCP.Location = new System.Drawing.Point(168, 475);
-            this.txbFindingHistopathology_ERCP.Margin = new System.Windows.Forms.Padding(2);
-            this.txbFindingHistopathology_ERCP.MaxLength = 250;
-            this.txbFindingHistopathology_ERCP.Multiline = true;
-            this.txbFindingHistopathology_ERCP.Name = "txbFindingHistopathology_ERCP";
-            this.txbFindingHistopathology_ERCP.Size = new System.Drawing.Size(804, 44);
-            this.txbFindingHistopathology_ERCP.TabIndex = 211;
-            // 
-            // label140
-            // 
-            this.label140.AutoSize = true;
-            this.label140.BackColor = System.Drawing.Color.Transparent;
-            this.label140.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
-            this.label140.Location = new System.Drawing.Point(7, 477);
-            this.label140.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label140.Name = "label140";
-            this.label140.Size = new System.Drawing.Size(129, 20);
-            this.label140.TabIndex = 210;
-            this.label140.Text = "Histopathology";
-            // 
-            // label141
-            // 
-            this.label141.AutoSize = true;
-            this.label141.BackColor = System.Drawing.Color.Transparent;
-            this.label141.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
-            this.label141.Location = new System.Drawing.Point(6, 403);
-            this.label141.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label141.Name = "label141";
-            this.label141.Size = new System.Drawing.Size(169, 20);
-            this.label141.TabIndex = 209;
-            this.label141.Text = "Pre-Diagnosis (Dx4)";
-            // 
-            // label142
-            // 
-            this.label142.AutoSize = true;
-            this.label142.BackColor = System.Drawing.Color.Transparent;
-            this.label142.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
-            this.label142.Location = new System.Drawing.Point(6, 376);
-            this.label142.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label142.Name = "label142";
-            this.label142.Size = new System.Drawing.Size(169, 20);
-            this.label142.TabIndex = 208;
-            this.label142.Text = "Pre-Diagnosis (Dx3)";
-            // 
-            // label143
-            // 
-            this.label143.AutoSize = true;
-            this.label143.BackColor = System.Drawing.Color.Transparent;
-            this.label143.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
-            this.label143.Location = new System.Drawing.Point(6, 349);
-            this.label143.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label143.Name = "label143";
-            this.label143.Size = new System.Drawing.Size(169, 20);
-            this.label143.TabIndex = 207;
-            this.label143.Text = "Pre-Diagnosis (Dx2)";
-            // 
-            // label144
-            // 
-            this.label144.AutoSize = true;
-            this.label144.BackColor = System.Drawing.Color.Transparent;
-            this.label144.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
-            this.label144.Location = new System.Drawing.Point(6, 322);
-            this.label144.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label144.Name = "label144";
-            this.label144.Size = new System.Drawing.Size(169, 20);
-            this.label144.TabIndex = 206;
-            this.label144.Text = "Pre-Diagnosis (Dx1)";
-            // 
-            // txbFindingDx4Text_ERCP
-            // 
-            this.txbFindingDx4Text_ERCP.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.txbFindingDx4Text_ERCP.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.txbFindingDx4Text_ERCP.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
-            this.txbFindingDx4Text_ERCP.Location = new System.Drawing.Point(321, 400);
-            this.txbFindingDx4Text_ERCP.Margin = new System.Windows.Forms.Padding(2);
-            this.txbFindingDx4Text_ERCP.MaxLength = 200;
-            this.txbFindingDx4Text_ERCP.Name = "txbFindingDx4Text_ERCP";
-            this.txbFindingDx4Text_ERCP.Size = new System.Drawing.Size(651, 23);
-            this.txbFindingDx4Text_ERCP.TabIndex = 205;
-            // 
-            // txbFindingDx4Code_ERCP
-            // 
-            this.txbFindingDx4Code_ERCP.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.txbFindingDx4Code_ERCP.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.txbFindingDx4Code_ERCP.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
-            this.txbFindingDx4Code_ERCP.Location = new System.Drawing.Point(179, 400);
-            this.txbFindingDx4Code_ERCP.Margin = new System.Windows.Forms.Padding(2);
-            this.txbFindingDx4Code_ERCP.MaxLength = 200;
-            this.txbFindingDx4Code_ERCP.Name = "txbFindingDx4Code_ERCP";
-            this.txbFindingDx4Code_ERCP.Size = new System.Drawing.Size(138, 23);
-            this.txbFindingDx4Code_ERCP.TabIndex = 204;
-            this.txbFindingDx4Code_ERCP.Click += new System.EventHandler(this.txbFindingDx4Code_ERCP_Click);
-            this.txbFindingDx4Code_ERCP.TextChanged += new System.EventHandler(this.txbFindingDx4Code_ERCP_TextChanged);
-            // 
-            // txbFindingDx3Text_ERCP
-            // 
-            this.txbFindingDx3Text_ERCP.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.txbFindingDx3Text_ERCP.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.txbFindingDx3Text_ERCP.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
-            this.txbFindingDx3Text_ERCP.Location = new System.Drawing.Point(321, 373);
-            this.txbFindingDx3Text_ERCP.Margin = new System.Windows.Forms.Padding(2);
-            this.txbFindingDx3Text_ERCP.MaxLength = 200;
-            this.txbFindingDx3Text_ERCP.Name = "txbFindingDx3Text_ERCP";
-            this.txbFindingDx3Text_ERCP.Size = new System.Drawing.Size(651, 23);
-            this.txbFindingDx3Text_ERCP.TabIndex = 203;
-            // 
-            // txbFindingDx3Code_ERCP
-            // 
-            this.txbFindingDx3Code_ERCP.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.txbFindingDx3Code_ERCP.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.txbFindingDx3Code_ERCP.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
-            this.txbFindingDx3Code_ERCP.Location = new System.Drawing.Point(179, 373);
-            this.txbFindingDx3Code_ERCP.Margin = new System.Windows.Forms.Padding(2);
-            this.txbFindingDx3Code_ERCP.MaxLength = 200;
-            this.txbFindingDx3Code_ERCP.Name = "txbFindingDx3Code_ERCP";
-            this.txbFindingDx3Code_ERCP.Size = new System.Drawing.Size(138, 23);
-            this.txbFindingDx3Code_ERCP.TabIndex = 202;
-            this.txbFindingDx3Code_ERCP.Click += new System.EventHandler(this.txbFindingDx3Code_ERCP_Click);
-            this.txbFindingDx3Code_ERCP.TextChanged += new System.EventHandler(this.txbFindingDx3Code_ERCP_TextChanged);
-            // 
-            // txbFindingDx2Text_ERCP
-            // 
-            this.txbFindingDx2Text_ERCP.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.txbFindingDx2Text_ERCP.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.txbFindingDx2Text_ERCP.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
-            this.txbFindingDx2Text_ERCP.Location = new System.Drawing.Point(321, 346);
-            this.txbFindingDx2Text_ERCP.Margin = new System.Windows.Forms.Padding(2);
-            this.txbFindingDx2Text_ERCP.MaxLength = 200;
-            this.txbFindingDx2Text_ERCP.Name = "txbFindingDx2Text_ERCP";
-            this.txbFindingDx2Text_ERCP.Size = new System.Drawing.Size(651, 23);
-            this.txbFindingDx2Text_ERCP.TabIndex = 201;
-            // 
-            // txbFindingDx2Code_ERCP
-            // 
-            this.txbFindingDx2Code_ERCP.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.txbFindingDx2Code_ERCP.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.txbFindingDx2Code_ERCP.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
-            this.txbFindingDx2Code_ERCP.Location = new System.Drawing.Point(179, 346);
-            this.txbFindingDx2Code_ERCP.Margin = new System.Windows.Forms.Padding(2);
-            this.txbFindingDx2Code_ERCP.MaxLength = 200;
-            this.txbFindingDx2Code_ERCP.Name = "txbFindingDx2Code_ERCP";
-            this.txbFindingDx2Code_ERCP.Size = new System.Drawing.Size(138, 23);
-            this.txbFindingDx2Code_ERCP.TabIndex = 200;
-            this.txbFindingDx2Code_ERCP.Click += new System.EventHandler(this.txbFindingDx2Code_ERCP_Click);
-            this.txbFindingDx2Code_ERCP.TextChanged += new System.EventHandler(this.txbFindingDx2Code_ERCP_TextChanged);
-            // 
-            // txbFindingDx1Text_ERCP
-            // 
-            this.txbFindingDx1Text_ERCP.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.txbFindingDx1Text_ERCP.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.txbFindingDx1Text_ERCP.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
-            this.txbFindingDx1Text_ERCP.Location = new System.Drawing.Point(321, 319);
-            this.txbFindingDx1Text_ERCP.Margin = new System.Windows.Forms.Padding(2);
-            this.txbFindingDx1Text_ERCP.MaxLength = 200;
-            this.txbFindingDx1Text_ERCP.Name = "txbFindingDx1Text_ERCP";
-            this.txbFindingDx1Text_ERCP.Size = new System.Drawing.Size(651, 23);
-            this.txbFindingDx1Text_ERCP.TabIndex = 199;
-            // 
-            // txbFindingDx1Code_ERCP
-            // 
-            this.txbFindingDx1Code_ERCP.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.txbFindingDx1Code_ERCP.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.txbFindingDx1Code_ERCP.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
-            this.txbFindingDx1Code_ERCP.Location = new System.Drawing.Point(179, 319);
-            this.txbFindingDx1Code_ERCP.Margin = new System.Windows.Forms.Padding(2);
-            this.txbFindingDx1Code_ERCP.MaxLength = 200;
-            this.txbFindingDx1Code_ERCP.Name = "txbFindingDx1Code_ERCP";
-            this.txbFindingDx1Code_ERCP.Size = new System.Drawing.Size(138, 23);
-            this.txbFindingDx1Code_ERCP.TabIndex = 198;
-            this.txbFindingDx1Code_ERCP.Click += new System.EventHandler(this.txbFindingDx1Code_ERCP_Click);
-            this.txbFindingDx1Code_ERCP.TextChanged += new System.EventHandler(this.txbFindingDx1Code_ERCP_TextChanged);
-            // 
-            // txbFindingProcedure_ERCP
-            // 
-            this.txbFindingProcedure_ERCP.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.txbFindingProcedure_ERCP.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.txbFindingProcedure_ERCP.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
-            this.txbFindingProcedure_ERCP.Location = new System.Drawing.Point(168, 250);
-            this.txbFindingProcedure_ERCP.Margin = new System.Windows.Forms.Padding(2);
-            this.txbFindingProcedure_ERCP.MaxLength = 200;
-            this.txbFindingProcedure_ERCP.Multiline = true;
-            this.txbFindingProcedure_ERCP.Name = "txbFindingProcedure_ERCP";
-            this.txbFindingProcedure_ERCP.Size = new System.Drawing.Size(804, 65);
-            this.txbFindingProcedure_ERCP.TabIndex = 197;
-            // 
-            // label145
-            // 
-            this.label145.AutoSize = true;
-            this.label145.BackColor = System.Drawing.Color.Transparent;
-            this.label145.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
-            this.label145.Location = new System.Drawing.Point(7, 253);
-            this.label145.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label145.Name = "label145";
-            this.label145.Size = new System.Drawing.Size(91, 20);
-            this.label145.TabIndex = 196;
-            this.label145.Text = "Procedure";
-            // 
-            // txbFindingSupplementalProcedure2Text_ERCP
-            // 
-            this.txbFindingSupplementalProcedure2Text_ERCP.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.txbFindingSupplementalProcedure2Text_ERCP.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.txbFindingSupplementalProcedure2Text_ERCP.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
-            this.txbFindingSupplementalProcedure2Text_ERCP.Location = new System.Drawing.Point(321, 223);
-            this.txbFindingSupplementalProcedure2Text_ERCP.Margin = new System.Windows.Forms.Padding(2);
-            this.txbFindingSupplementalProcedure2Text_ERCP.MaxLength = 200;
-            this.txbFindingSupplementalProcedure2Text_ERCP.Name = "txbFindingSupplementalProcedure2Text_ERCP";
-            this.txbFindingSupplementalProcedure2Text_ERCP.Size = new System.Drawing.Size(651, 23);
-            this.txbFindingSupplementalProcedure2Text_ERCP.TabIndex = 195;
-            // 
-            // label146
-            // 
-            this.label146.AutoSize = true;
-            this.label146.BackColor = System.Drawing.Color.Transparent;
-            this.label146.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
-            this.label146.Location = new System.Drawing.Point(7, 226);
-            this.label146.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label146.Name = "label146";
-            this.label146.Size = new System.Drawing.Size(206, 20);
-            this.label146.TabIndex = 194;
-            this.label146.Text = "Supplemental Procedure";
-            // 
-            // txbFindingSupplementalProcedure2Code_ERCP
-            // 
-            this.txbFindingSupplementalProcedure2Code_ERCP.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.txbFindingSupplementalProcedure2Code_ERCP.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.txbFindingSupplementalProcedure2Code_ERCP.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
-            this.txbFindingSupplementalProcedure2Code_ERCP.Location = new System.Drawing.Point(221, 223);
-            this.txbFindingSupplementalProcedure2Code_ERCP.Margin = new System.Windows.Forms.Padding(2);
-            this.txbFindingSupplementalProcedure2Code_ERCP.MaxLength = 200;
-            this.txbFindingSupplementalProcedure2Code_ERCP.Name = "txbFindingSupplementalProcedure2Code_ERCP";
-            this.txbFindingSupplementalProcedure2Code_ERCP.Size = new System.Drawing.Size(96, 23);
-            this.txbFindingSupplementalProcedure2Code_ERCP.TabIndex = 193;
-            this.txbFindingSupplementalProcedure2Code_ERCP.Click += new System.EventHandler(this.txbFindingSupplementalProcedure2Code_ERCP_Click);
-            this.txbFindingSupplementalProcedure2Code_ERCP.TextChanged += new System.EventHandler(this.txbFindingSupplementalProcedure2Code_ERCP_TextChanged);
-            // 
-            // txbFindingSupplementalProcedureText_ERCP
-            // 
-            this.txbFindingSupplementalProcedureText_ERCP.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.txbFindingSupplementalProcedureText_ERCP.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.txbFindingSupplementalProcedureText_ERCP.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
-            this.txbFindingSupplementalProcedureText_ERCP.Location = new System.Drawing.Point(321, 196);
-            this.txbFindingSupplementalProcedureText_ERCP.Margin = new System.Windows.Forms.Padding(2);
-            this.txbFindingSupplementalProcedureText_ERCP.MaxLength = 200;
-            this.txbFindingSupplementalProcedureText_ERCP.Name = "txbFindingSupplementalProcedureText_ERCP";
-            this.txbFindingSupplementalProcedureText_ERCP.Size = new System.Drawing.Size(651, 23);
-            this.txbFindingSupplementalProcedureText_ERCP.TabIndex = 192;
-            // 
-            // label147
-            // 
-            this.label147.AutoSize = true;
-            this.label147.BackColor = System.Drawing.Color.Transparent;
-            this.label147.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
-            this.label147.Location = new System.Drawing.Point(7, 199);
-            this.label147.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label147.Name = "label147";
-            this.label147.Size = new System.Drawing.Size(206, 20);
-            this.label147.TabIndex = 191;
-            this.label147.Text = "Supplemental Procedure";
-            // 
-            // txbFindingSupplementalProcedureCode_ERCP
-            // 
-            this.txbFindingSupplementalProcedureCode_ERCP.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.txbFindingSupplementalProcedureCode_ERCP.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.txbFindingSupplementalProcedureCode_ERCP.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
-            this.txbFindingSupplementalProcedureCode_ERCP.Location = new System.Drawing.Point(221, 196);
-            this.txbFindingSupplementalProcedureCode_ERCP.Margin = new System.Windows.Forms.Padding(2);
-            this.txbFindingSupplementalProcedureCode_ERCP.MaxLength = 200;
-            this.txbFindingSupplementalProcedureCode_ERCP.Name = "txbFindingSupplementalProcedureCode_ERCP";
-            this.txbFindingSupplementalProcedureCode_ERCP.Size = new System.Drawing.Size(96, 23);
-            this.txbFindingSupplementalProcedureCode_ERCP.TabIndex = 190;
-            this.txbFindingSupplementalProcedureCode_ERCP.Click += new System.EventHandler(this.txbFindingSupplementalProcedureCode_ERCP_Click);
-            this.txbFindingSupplementalProcedureCode_ERCP.TextChanged += new System.EventHandler(this.txbFindingSupplementalProcedureCode_ERCP_TextChanged);
-            // 
-            // txbFindingPrinncipalProcedureText_ERCP
-            // 
-            this.txbFindingPrinncipalProcedureText_ERCP.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.txbFindingPrinncipalProcedureText_ERCP.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.txbFindingPrinncipalProcedureText_ERCP.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
-            this.txbFindingPrinncipalProcedureText_ERCP.Location = new System.Drawing.Point(321, 169);
-            this.txbFindingPrinncipalProcedureText_ERCP.Margin = new System.Windows.Forms.Padding(2);
-            this.txbFindingPrinncipalProcedureText_ERCP.MaxLength = 200;
-            this.txbFindingPrinncipalProcedureText_ERCP.Name = "txbFindingPrinncipalProcedureText_ERCP";
-            this.txbFindingPrinncipalProcedureText_ERCP.Size = new System.Drawing.Size(651, 23);
-            this.txbFindingPrinncipalProcedureText_ERCP.TabIndex = 189;
-            // 
-            // label148
-            // 
-            this.label148.AutoSize = true;
-            this.label148.BackColor = System.Drawing.Color.Transparent;
-            this.label148.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
-            this.label148.Location = new System.Drawing.Point(7, 172);
-            this.label148.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label148.Name = "label148";
-            this.label148.Size = new System.Drawing.Size(164, 20);
-            this.label148.TabIndex = 188;
-            this.label148.Text = "Principal Procedure";
-            // 
-            // txbFindingPrinncipalProcedureCode_ERCP
-            // 
-            this.txbFindingPrinncipalProcedureCode_ERCP.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.txbFindingPrinncipalProcedureCode_ERCP.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.txbFindingPrinncipalProcedureCode_ERCP.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
-            this.txbFindingPrinncipalProcedureCode_ERCP.Location = new System.Drawing.Point(221, 169);
-            this.txbFindingPrinncipalProcedureCode_ERCP.Margin = new System.Windows.Forms.Padding(2);
-            this.txbFindingPrinncipalProcedureCode_ERCP.MaxLength = 200;
-            this.txbFindingPrinncipalProcedureCode_ERCP.Name = "txbFindingPrinncipalProcedureCode_ERCP";
-            this.txbFindingPrinncipalProcedureCode_ERCP.Size = new System.Drawing.Size(96, 23);
-            this.txbFindingPrinncipalProcedureCode_ERCP.TabIndex = 187;
-            this.txbFindingPrinncipalProcedureCode_ERCP.Click += new System.EventHandler(this.txbFindingPrinncipalProcedureCode_ERCP_Click);
-            this.txbFindingPrinncipalProcedureCode_ERCP.TextChanged += new System.EventHandler(this.txbFindingPrinncipalProcedureCode_ERCP_TextChanged);
-            // 
-            // txbFindingComplication_ERCP
-            // 
-            this.txbFindingComplication_ERCP.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.txbFindingComplication_ERCP.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.txbFindingComplication_ERCP.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
-            this.txbFindingComplication_ERCP.Location = new System.Drawing.Point(168, 427);
-            this.txbFindingComplication_ERCP.Margin = new System.Windows.Forms.Padding(2);
-            this.txbFindingComplication_ERCP.MaxLength = 250;
-            this.txbFindingComplication_ERCP.Multiline = true;
-            this.txbFindingComplication_ERCP.Name = "txbFindingComplication_ERCP";
-            this.txbFindingComplication_ERCP.Size = new System.Drawing.Size(804, 44);
-            this.txbFindingComplication_ERCP.TabIndex = 185;
-            // 
-            // label149
-            // 
-            this.label149.AutoSize = true;
-            this.label149.BackColor = System.Drawing.Color.Transparent;
-            this.label149.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
-            this.label149.Location = new System.Drawing.Point(7, 573);
-            this.label149.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label149.Name = "label149";
-            this.label149.Size = new System.Drawing.Size(85, 20);
-            this.label149.TabIndex = 183;
-            this.label149.Text = "Comment";
-            // 
-            // label150
-            // 
-            this.label150.AutoSize = true;
-            this.label150.BackColor = System.Drawing.Color.Transparent;
-            this.label150.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
-            this.label150.Location = new System.Drawing.Point(7, 429);
-            this.label150.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label150.Name = "label150";
-            this.label150.Size = new System.Drawing.Size(112, 20);
-            this.label150.TabIndex = 184;
-            this.label150.Text = "Complication";
-            // 
-            // txbFindingComment_ERCP
-            // 
-            this.txbFindingComment_ERCP.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.txbFindingComment_ERCP.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.txbFindingComment_ERCP.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
-            this.txbFindingComment_ERCP.Location = new System.Drawing.Point(168, 571);
-            this.txbFindingComment_ERCP.Margin = new System.Windows.Forms.Padding(2);
-            this.txbFindingComment_ERCP.MaxLength = 250;
-            this.txbFindingComment_ERCP.Multiline = true;
-            this.txbFindingComment_ERCP.Name = "txbFindingComment_ERCP";
-            this.txbFindingComment_ERCP.Size = new System.Drawing.Size(804, 78);
-            this.txbFindingComment_ERCP.TabIndex = 186;
-            // 
             // FormProcedure
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -9151,7 +9121,7 @@ namespace EndoscopicSystem.V2.Forms
             this.MinimizeBox = false;
             this.Name = "FormProcedure";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "FormProcedure";
+            this.Text = "Procedure Page";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.Load += new System.EventHandler(this.FormProcedure_Load);
             this.tabControl1.ResumeLayout(false);
@@ -9267,7 +9237,6 @@ namespace EndoscopicSystem.V2.Forms
         private System.Windows.Forms.Label label19;
         private System.Windows.Forms.Label label20;
         private System.Windows.Forms.Label label22;
-        private System.Windows.Forms.TextBox txbGeneralInstrument_EGD;
         private System.Windows.Forms.TabPage tabFindingEGD;
         private System.Windows.Forms.TabPage tabSpecimenBronchoscopy;
         private System.Windows.Forms.CheckBox cbTransbroncialNeedle_Mod;
@@ -9360,8 +9329,6 @@ namespace EndoscopicSystem.V2.Forms
         private System.Windows.Forms.TextBox txbFindingDuodenum_ERCP;
         private System.Windows.Forms.TextBox txbFindingStomach_ERCP;
         private System.Windows.Forms.TextBox txbFindingEsophagus_ERCP;
-        private System.Windows.Forms.ComboBox cbbFindingPancreatogram_ERCP;
-        private System.Windows.Forms.ComboBox cbbFindingCholangiogram_ERCP;
         private System.Windows.Forms.Label label68;
         private System.Windows.Forms.Label label69;
         private System.Windows.Forms.ComboBox cbbFindingAmpulla_ERCP;
@@ -9671,7 +9638,6 @@ namespace EndoscopicSystem.V2.Forms
         private System.Windows.Forms.Label label122;
         private System.Windows.Forms.Label label123;
         private System.Windows.Forms.Label label124;
-        private System.Windows.Forms.TextBox txbGeneralInstrument_Colono;
         private System.Windows.Forms.TextBox txbGeneralBowelPreparationResult_colono;
         private System.Windows.Forms.Label label126;
         private System.Windows.Forms.TextBox txbGeneralBowelPreparationRegimen_Colono;
@@ -9877,5 +9843,7 @@ namespace EndoscopicSystem.V2.Forms
         private System.Windows.Forms.Label label149;
         private System.Windows.Forms.Label label150;
         private System.Windows.Forms.TextBox txbFindingComment_ERCP;
+        private System.Windows.Forms.ComboBox cbbInstrument_EGD;
+        private System.Windows.Forms.ComboBox cbbInstrument_Colono;
     }
 }

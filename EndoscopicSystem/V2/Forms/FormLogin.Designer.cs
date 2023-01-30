@@ -137,12 +137,12 @@ namespace EndoscopicSystem.V2.Forms
             this.label3.BackColor = System.Drawing.Color.Transparent;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
             this.label3.ForeColor = System.Drawing.Color.DarkGray;
-            this.label3.Location = new System.Drawing.Point(602, 534);
+            this.label3.Location = new System.Drawing.Point(655, 584);
             this.label3.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(295, 17);
             this.label3.TabIndex = 100;
-            this.label3.Text = "Copyright © 2020 All Rights Reserved V.2.0.0";
+            this.label3.Text = "Copyright © 2020 All Rights Reserved V.2.0.1";
             // 
             // FormLogin
             // 
@@ -150,7 +150,7 @@ namespace EndoscopicSystem.V2.Forms
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.ClientSize = new System.Drawing.Size(906, 560);
+            this.ClientSize = new System.Drawing.Size(959, 610);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.panel1);
             this.DoubleBuffered = true;
@@ -158,6 +158,8 @@ namespace EndoscopicSystem.V2.Forms
             this.MinimizeBox = false;
             this.Name = "FormLogin";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
+            this.Text = "Login Page";
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.FormLogin_FormClosing);
             this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.FormLogin_FormClosed);
             this.Load += new System.EventHandler(this.FormLogin_Load);
             this.panel1.ResumeLayout(false);

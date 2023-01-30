@@ -571,6 +571,12 @@
     <Compile Include="Repository\ProcedureListRepository.cs" />
     <Compile Include="Repository\UserRepository.cs" />
     <Compile Include="Settings.cs" />
+    <Compile Include="V2\Forms\FormLoading.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="V2\Forms\FormLoading.Designer.cs">
+      <DependentUpon>FormLoading.cs</DependentUpon>
+    </Compile>
     <Compile Include="V2\Forms\FormAnesthesistMethodSetting.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -607,6 +613,12 @@
     <Compile Include="V2\Forms\FormLive.Designer.cs">
       <DependentUpon>FormLive.cs</DependentUpon>
     </Compile>
+    <Compile Include="V2\Forms\FormLoading2.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="V2\Forms\FormLoading2.Designer.cs">
+      <DependentUpon>FormLoading2.cs</DependentUpon>
+    </Compile>
     <Compile Include="V2\Forms\FormLogin.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -637,6 +649,12 @@
     <Compile Include="V2\Forms\FormProcedure.Designer.cs">
       <DependentUpon>FormProcedure.cs</DependentUpon>
     </Compile>
+    <Compile Include="V2\Forms\FormProceed.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="V2\Forms\FormProceed.Designer.cs">
+      <DependentUpon>FormProceed.cs</DependentUpon>
+    </Compile>
     <Compile Include="V2\Forms\FormSetting.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -650,6 +668,7 @@
       <DependentUpon>FormWardSetting.cs</DependentUpon>
     </Compile>
     <Compile Include="V2\Forms\src\DropdownListService.cs" />
+    <Content Include="Images\GIF\loading-100.gif" />
     <Content Include="Images\V2\iStock-1089688016.jpg" />
     <Content Include="Images\V2\iStock-1136980060.jpg" />
     <Content Include="Images\V2\iStock-1142818558.jpg" />
@@ -766,6 +785,9 @@
       <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
       <LastGenOutput>LaparoscopicReport.cs</LastGenOutput>
     </Content>
+    <EmbeddedResource Include="V2\Forms\FormLoading.resx">
+      <DependentUpon>FormLoading.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="V2\Forms\FormAnesthesistMethodSetting.resx">
       <DependentUpon>FormAnesthesistMethodSetting.cs</DependentUpon>
     </EmbeddedResource>
@@ -784,6 +806,9 @@
     <EmbeddedResource Include="V2\Forms\FormLive.resx">
       <DependentUpon>FormLive.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="V2\Forms\FormLoading2.resx">
+      <DependentUpon>FormLoading2.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="V2\Forms\FormLogin.resx">
       <DependentUpon>FormLogin.cs</DependentUpon>
     </EmbeddedResource>
@@ -798,6 +823,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="V2\Forms\FormProcedure.resx">
       <DependentUpon>FormProcedure.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="V2\Forms\FormProceed.resx">
+      <DependentUpon>FormProceed.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="V2\Forms\FormSetting.resx">
       <DependentUpon>FormSetting.cs</DependentUpon>

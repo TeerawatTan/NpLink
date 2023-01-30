@@ -488,11 +488,12 @@ namespace EndoscopicSystem.V2.Forms
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.videoSourcePlayer);
             this.Controls.Add(this.pictureBoxSnapshot);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "FormLive";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Live";
+            this.Text = "Live Page";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.FormLive_FormClosing);
             this.Load += new System.EventHandler(this.FormLive_Load);

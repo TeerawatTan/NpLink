@@ -166,7 +166,7 @@ namespace EndoscopicSystem
                 }
                 else
                 {
-                    MessageBox.Show("ไม่พบข้อมูลผู้ป่วย");
+                    MessageBox.Show("ไม่พบข้อมูลผู้ป่วย", "Patient not found.", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                     ResetPictureBox();
                     this.Controls.ClearControls();
                 }
@@ -176,7 +176,7 @@ namespace EndoscopicSystem
             }
             catch (Exception ex)
             {
-                MessageBox.Show(ex.ToString());
+                MessageBox.Show(ex.ToString(), "Exception Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
 
@@ -184,7 +184,7 @@ namespace EndoscopicSystem
         {
             if ((int)cbbProcedureList.SelectedValue == 0)
             {
-                MessageBox.Show("กรุณาเลือก Procedure List");
+                MessageBox.Show("กรุณาเลือก Procedure List", "Procedure List", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 return;
             }
 
@@ -254,7 +254,7 @@ namespace EndoscopicSystem
 
                         if (this.CheckHN(txtHN.Text))
                         {
-                            MessageBox.Show("มี HN นี้อยู่ในระบบแล้ว");
+                            MessageBox.Show("มี HN นี้อยู่ในระบบแล้ว", "Save Form", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                             this.Controls.ClearControls();
                             return;
                         }
@@ -323,12 +323,15 @@ namespace EndoscopicSystem
                         throw dbEx;
                     }
 
-                    MessageBox.Show(status, "Save Form", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    if (status == Constant.STATUS_ERROR)
+                        MessageBox.Show(status, "Error Save Form", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    else
+                        MessageBox.Show(status, "Save Form", MessageBoxButtons.OK, MessageBoxIcon.Information);
                     ResetForm();
                 }
                 catch (Exception ex)
                 {
-                    MessageBox.Show(ex.Message);
+                    MessageBox.Show(ex.Message, "Exception Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
             }
         }
@@ -564,7 +567,7 @@ namespace EndoscopicSystem
         {
             cbbFinancial.ValueMember = "ID";
             cbbFinancial.DisplayMember = "Name";
-            cbbFinancial.DataSource = list.GetFinancial();
+            cbbFinancial.DataSource = list.GetFinancials();
             cbbFinancial.SelectedIndex = 0;
         }
         #endregion
@@ -658,11 +661,6 @@ namespace EndoscopicSystem
                 ReportEndoscopic reportForm = new ReportEndoscopic(hnNo, procedureId, endoscopicId);
                 reportForm.Show();
             }
-        }
-
-        private void PatientForm_FormClosed(object sender, FormClosedEventArgs e)
-        {
-            
         }
 
         private void cbbOPD_SelectedIndexChanged(object sender, EventArgs e)

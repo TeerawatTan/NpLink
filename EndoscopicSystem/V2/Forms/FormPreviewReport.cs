@@ -30,7 +30,7 @@ namespace EndoscopicSystem.V2.Forms
         public Dictionary<int, string> _imgPath = new Dictionary<int, string>();
         private bool _isSave = false;
 
-        public FormPreviewReport(int id, string hn, int procId, int appId, int endoId, int patientId, string pathImg, object imgPath, string vdoPath)
+        public FormPreviewReport(int id, string hn, int procId, int appId, int endoId, int patientId, string pathImg, string pathVdo)
         {
             InitializeComponent();
 
@@ -41,8 +41,8 @@ namespace EndoscopicSystem.V2.Forms
             this._endoscopicId = endoId;
             this._patientId = patientId;
             this._pathFolderImageSave = pathImg;
-            this._imgPath = (Dictionary<int, string>)imgPath;
-            this._vdoPath = vdoPath;
+            //this._imgPath = (Dictionary<int, string>)imgPath;
+            this._vdoPath = pathVdo;
         }
 
         private void FormPreviewReport_Load(object sender, EventArgs e)
@@ -164,7 +164,6 @@ namespace EndoscopicSystem.V2.Forms
                 for (int i = 0; i < imageList.Count; i++)
                 {
                     ListViewItem item = new ListViewItem($"Image_{imageList.Count - i}", i);
-                    item.Tag = files[i].FullName; // Store the file path in the Tag property
                     listView1.Items.Add(item);
                 }
             }
@@ -226,7 +225,7 @@ namespace EndoscopicSystem.V2.Forms
                 }
                 else
                 {
-                    MessageBox.Show("ไม่พบข้อมูลผู้ป่วย");
+                    MessageBox.Show("ไม่พบข้อมูลผู้ป่วย", "Patient not found.", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                     this.Controls.ClearControls();
                     btnNext.Enabled = false;
                 }
@@ -267,10 +266,34 @@ namespace EndoscopicSystem.V2.Forms
                 .OrderByDescending(x => x.EndoscopicImageID).ToList();
             if (list.Count > 0)
             {
-                string path = list.FirstOrDefault().ImagePath;
-                pictureBox.ImageLocation = path;
+                string originalPathImage = list.FirstOrDefault()?.ImagePath;
+                //string path = list.FirstOrDefault()?.ImagePath?.Replace("\\Copy", "");
+                string comment = list.FirstOrDefault()?.ImageComment;
+                //if (File.Exists(path) && File.Exists(originalPathImage))
+                //{
+                //    try
+                //    {
+                //        using (FileStream stream = new FileStream(originalPathImage, FileMode.Open, FileAccess.ReadWrite))
+                //        {
+                //            using (Image image = Image.FromStream(stream))
+                //            {
+                //                pictureBox.Image = image;
+                //                pictureBox.ImageLocation = originalPathImage;
+                //                pictureBox.SizeMode = PictureBoxSizeMode.StretchImage;
+                //                textBox.Text = comment;
+                //            }
+                //        }
+                //        _imgPath.Add(num, originalPathImage);
+                //    }
+                //    catch (OutOfMemoryException)
+                //    {
+                //        Console.WriteLine("The file is not a valid image file or is too large to be loaded into memory.");
+                //    }
+                //}
+
+                pictureBox.ImageLocation = originalPathImage;
                 pictureBox.SizeMode = PictureBoxSizeMode.StretchImage;
-                textBox.Text = list.FirstOrDefault().ImageComment;
+                textBox.Text = comment;
             }
         }
 
@@ -294,7 +317,7 @@ namespace EndoscopicSystem.V2.Forms
             try
             {
                 var item = listView1.SelectedItems[0].Text;
-                pictureBox1.Image = Image.FromFile(_pathFolderImageSave + @"\" + item + _fileName);
+                pictureBox1.Image = Image.FromFile(_pathFolderImageSave + item + _fileName);
                 pictureBox1.SizeMode = PictureBoxSizeMode.StretchImage;
                 pictureBox1.Update();
             }
@@ -311,8 +334,8 @@ namespace EndoscopicSystem.V2.Forms
                 if (_patientId > 0)
                 {
                     UpdateEndoscopic(_procedureId);
-                    MessageBox.Show(Constant.STATUS_SUCCESS);
-                    btnSave.Enabled = false;
+                    MessageBox.Show(Constant.STATUS_SUCCESS, "Save Form", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    //btnSave.Enabled = false;
 
                     _isSave = true;
                 }
@@ -332,7 +355,7 @@ namespace EndoscopicSystem.V2.Forms
                     if (_patientId > 0)
                     {
                         UpdateEndoscopic(_procedureId);
-                        MessageBox.Show(Constant.STATUS_SUCCESS);
+                        MessageBox.Show(Constant.STATUS_SUCCESS, "Save Form", MessageBoxButtons.OK, MessageBoxIcon.Information);
                         btnSave.Enabled = false;
 
                         _isSave = true;
@@ -341,17 +364,20 @@ namespace EndoscopicSystem.V2.Forms
                 }
                 catch (Exception ex)
                 {
-                    MessageBox.Show(ex.Message, "Saved not success.");
+                    MessageBox.Show(ex.Message, "Saved not success.", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
             }
 
-            this.Hide();
+            //this.Hide();
+            //FormProcedure formProcedure = new FormProcedure(_id, _hnNo, _procedureId, _appointmentId, _endoscopicId, _pathFolderImageSave);
+            //formProcedure.ShowDialog();
+            //formProcedure = null;
 
-            FormProcedure formProcedure = new FormProcedure(_id, _hnNo, _procedureId, _appointmentId, _endoscopicId, _pathFolderImageSave);
-            formProcedure.ShowDialog();
-            formProcedure = null;
+            //this.Show();
 
-            this.Show();
+            FormProceed.Self.txbStep.Text = "2" + "," + _pathFolderImageSave + "," + _vdoPath;
+
+            //this.Close();
         }
 
         private void PictureBox_DragEnter(object sender, DragEventArgs e)
@@ -436,23 +462,58 @@ namespace EndoscopicSystem.V2.Forms
                     btnDeletePictureBoxSaved18
                 };
 
-
                 PictureBox pb = (PictureBox)sender;
 
                 var item = (ListViewItem)e.Data.GetData(typeof(ListViewItem));
                 if (item == null) return;
 
-                string path = $"{_pathFolderImageSave}\\{item.Text}{_fileName}";
+                string path = $"{_pathFolderImageSave}{item.Text}{_fileName}";
 
-                pb.ImageLocation = path;
-                pb.SizeMode = PictureBoxSizeMode.StretchImage;
-                pb.Update();
+                if (File.Exists(path))
+                {
+                    try
+                    {
+                        using (FileStream stream = new FileStream(path, FileMode.Open, FileAccess.Read))
+                        {
+                            using (Image image = Image.FromStream(stream))
+                            {
+                                pb.Image = image;
+                                pb.SizeMode = PictureBoxSizeMode.StretchImage;
+                                pb.ImageLocation = path;
+                                pb.Update();
+                            }
+                        }
+                    }
+                    catch (OutOfMemoryException)
+                    {
+                        Console.WriteLine("The file is not a valid image file or is too large to be loaded into memory.");
+                    }
+                }
+
+                
+
+                string pbNewLocation = $"{_pathFolderImageSave}Copy\\";
+                if (!Directory.Exists(pbNewLocation))
+                {
+                    Directory.CreateDirectory(pbNewLocation);
+                }
+                string newPathImg = $"{pbNewLocation}{item.Text}{_fileName}";
+                //pb.Image.Save(newPathImg);
+
+                File.Copy(path, newPathImg, true);
+
+                //pb.Image = null;
+                //pb.ImageLocation = null;
+                //pb.Image = Image.FromFile(newPathImg);
+                pb.ImageLocation = newPathImg;
+                //pb.SizeMode = PictureBoxSizeMode.StretchImage;
+                //pb.Refresh();
                 for (int i = 0; i < boxes.Length; i++)
                 {
                     if (boxes[i].Image != null)
                     {
                         buttondel[i].Visible = true;
-                        buttonedit[i].Visible = true;
+                        //buttonedit[i].Visible = true;
                     }
                 }
             }
@@ -750,6 +811,10 @@ namespace EndoscopicSystem.V2.Forms
         }
         public void EditPictureCaptureOnClick(PictureBox pictureBox)
         {
+            //FormLoading formLoading = new FormLoading();
+            //formLoading.ShowDialog();
+            //formLoading = null;
+
             using (System.Diagnostics.Process ExternalProcess = new System.Diagnostics.Process())
             {
                 ExternalProcess.StartInfo.FileName = ("mspaint.exe");
@@ -956,18 +1021,11 @@ namespace EndoscopicSystem.V2.Forms
                 var endoImgs = _db.EndoscopicImages.Where(x => x.EndoscopicID == endoscopicID && x.ProcedureID == procedureID && x.Seq == seq).FirstOrDefault();
                 if (endoImgs != null)
                 {
-                    if (Imgpath == "")
-                    {
-                        _db.EndoscopicImages.Remove(endoImgs);
-                    }
-                    else
-                    {
-                        endoImgs.ImagePath = Imgpath;
-                        endoImgs.ImageComment = item.Text;
-                        endoImgs.Seq = i + 1;
-                        endoImgs.UpdateBy = _id;
-                        endoImgs.UpdateDate = DateTime.Now;
-                    }
+                    endoImgs.ImagePath = Imgpath;
+                    endoImgs.ImageComment = item.Text;
+                    endoImgs.Seq = i + 1;
+                    endoImgs.UpdateBy = _id;
+                    endoImgs.UpdateDate = DateTime.Now;
                 }
                 else
                 {
@@ -1203,7 +1261,7 @@ namespace EndoscopicSystem.V2.Forms
                     }
 
                     cropedImg = await ResizeImg(img, aspectRatio_X, aspectRatio_Y, width, height, isFullScreen);
-                    cropedImg.Save(_pathFolderImageSave + nameCapture);
+                    cropedImg.Save(_pathFolderImageSave + nameCapture, ImageFormat.Jpeg);
                     ImgPath = _pathFolderImageSave + nameCapture;
                 }
             }

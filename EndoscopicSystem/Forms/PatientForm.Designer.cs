@@ -1009,7 +1009,7 @@
             this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "PatientForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.PatientForm_FormClosed);
+            this.Text = "Patient Page";
             this.Load += new System.EventHandler(this.PatientForm_Load);
             ((System.ComponentModel.ISupportInitialize)(this.gridPatient)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();

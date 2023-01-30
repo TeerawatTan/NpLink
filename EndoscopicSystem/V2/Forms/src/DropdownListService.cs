@@ -488,7 +488,14 @@ namespace EndoscopicSystem.V2.Forms.src
         {
             comboBox.ValueMember = "ID";
             comboBox.DisplayMember = "Name";
-            comboBox.DataSource = _db.GetFinancial();
+            comboBox.DataSource = _db.GetFinancials();
+            comboBox.SelectedIndex = 0;
+        }
+        public void DropdownInstrument(ComboBox comboBox, int startIdx = 0)
+        {
+            comboBox.ValueMember = "No";
+            comboBox.DisplayMember = "Name";
+            comboBox.DataSource = _db.GetInstruments(startIdx);
             comboBox.SelectedIndex = 0;
         }
     }

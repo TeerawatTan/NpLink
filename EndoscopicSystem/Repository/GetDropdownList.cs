@@ -1,4 +1,5 @@
 ﻿using EndoscopicSystem.Entities;
+using EndoscopicSystem.V2.Forms;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -86,11 +87,29 @@ namespace EndoscopicSystem.Repository
             list.Insert(0, new Anesthesia() { AnesthesiaID = 0, AnesthesiaName = "" });
             return list;
         }
-        public List<Financial> GetFinancial()
+        public List<Financial> GetFinancials()
         {
             var list = db.Financials.ToList();
             list.Insert(0, new Financial() { ID = 0, Name = "" });
             return list;
+        }
+        public List<InstrumentConfirmModel> GetInstruments(int startIdx = 0)
+        {
+            var list = db.Instruments.ToList();
+            if (startIdx == 0)
+                list.Insert(0, new Instrument() { ID = 0, Code = "", SerialNumber = "" });
+            List<InstrumentConfirmModel> res = new List<InstrumentConfirmModel>();
+
+            foreach (var item in list)
+            {
+                InstrumentConfirmModel i = new InstrumentConfirmModel()
+                {
+                    No = item.ID,
+                    Name = item.Code + " - " + item.SerialNumber
+                };
+                res.Add(i);
+            }
+            return res;
         }
         public List<AnalCanal> GetAnalCanalList() => db.AnalCanals.ToList();
         public List<Rectum> GetRectumList() => db.Rectums.ToList();
