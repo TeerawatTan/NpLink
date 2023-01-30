@@ -38,7 +38,7 @@ namespace EndoscopicSystem.V2.Forms
         private bool isExport = false;
         private readonly GetDropdownList _dropdownRepo = new GetDropdownList();
         private readonly EndoscopicEntities _db = new EndoscopicEntities();
-        private readonly DropdownListService _dropdownListService = new DropdownListService();
+        private DropdownListService _dropdownListService = new DropdownListService();
         public Dictionary<int, string> _imgPath = new Dictionary<int, string>();
         private TextBox lastFocused;
         public Form formPopup = new Form();
@@ -69,7 +69,7 @@ namespace EndoscopicSystem.V2.Forms
             cbbProcedureList.Enabled = true;
             cbbProcedureList.SelectedValue = _procedureId;
             cbbProcedureList.Enabled = false;
-            OpenTabPage(_procedureId);
+            //OpenTabPage(_procedureId);
             SearchHN(_hnNo, _procedureId);
 
             listBox1.Items.Clear();
@@ -1249,7 +1249,7 @@ namespace EndoscopicSystem.V2.Forms
                     }
                     else
                     {
-                        cbbGeneralIndication_EGD.SelectedValue = 0;
+                        cbbGeneralIndication_EGD.SelectedIndex = 0;
                     }
                 }
                 txbGeneralIndication_EGD.Text = endoscopic.IndicationOther;
@@ -1266,16 +1266,16 @@ namespace EndoscopicSystem.V2.Forms
                 if (procId == 1) //EGD
                 {
                     // Finding
-                    cbbFindingOropharynx_EGD.SelectedValue = finding.OropharynxID ?? 0;
-                    cbbFindingEsophagus_EGD.SelectedValue = finding.EsophagusID ?? 0;
-                    cbbFindingEGJunction_EGD.SelectedValue = finding.EGJunctionID ?? 0;
-                    cbbFindingCardia_EGD.SelectedValue = finding.CardiaID ?? 0;
-                    cbbFindingFundus_EGD.SelectedValue = finding.FundusID ?? 0;
-                    cbbFindingBody_EGD.SelectedValue = finding.BodyID ?? 0;
-                    cbbFindingAntrum_EGD.SelectedValue = finding.AntrumID ?? 0;
-                    cbbFindingPylorus_EGD.SelectedValue = finding.PylorusID ?? 0;
-                    cbbFindingDuodenalBulb_EGD.SelectedValue = finding.DuodenalBulbID ?? 0;
-                    cbbFinding2ndPart_EGD.SelectedValue = finding.SecondPartID ?? 0;
+                    cbbFindingOropharynx_EGD.SelectedValue = finding.OropharynxID ?? 1;
+                    cbbFindingEsophagus_EGD.SelectedValue = finding.EsophagusID ?? 1;
+                    cbbFindingEGJunction_EGD.SelectedValue = finding.EGJunctionID ?? 1;
+                    cbbFindingCardia_EGD.SelectedValue = finding.CardiaID ?? 1;
+                    cbbFindingFundus_EGD.SelectedValue = finding.FundusID ?? 1;
+                    cbbFindingBody_EGD.SelectedValue = finding.BodyID ?? 1;
+                    cbbFindingAntrum_EGD.SelectedValue = finding.AntrumID ?? 1;
+                    cbbFindingPylorus_EGD.SelectedValue = finding.PylorusID ?? 1;
+                    cbbFindingDuodenalBulb_EGD.SelectedValue = finding.DuodenalBulbID ?? 1;
+                    cbbFinding2ndPart_EGD.SelectedValue = finding.SecondPartID ?? 1;
                     txbFindingOropharynx_EGD.Text = finding.Oropharynx;
                     txbFindingEsophagus_EGD.Text = finding.Esophagus;
                     txbFindingEGJunction_EGD.Text = finding.EGJunction;
@@ -1322,12 +1322,12 @@ namespace EndoscopicSystem.V2.Forms
                 else if (procId == 3) // ERCP
                 {
                     // Finding
-                    cbbFindingEsophagus_ERCP.SelectedValue = finding.EsophagusID ?? 0;
-                    cbbFindingStomach_ERCP.SelectedValue = finding.StomachID ?? 0;
-                    cbbFindingDuodenum_ERCP.SelectedValue = finding.DuodenumID ?? 0;
-                    cbbFindingAmpulla_ERCP.SelectedValue = finding.AmpullaOfVaterID ?? 0;
-                    //cbbFindingCholangiogram_ERCP.SelectedValue = finding.CholangiogramID ?? 0;
-                    //cbbFindingPancreatogram_ERCP.SelectedValue = finding.PancreatogramID ?? 0;
+                    cbbFindingEsophagus_ERCP.SelectedValue = finding.EsophagusID ?? 1;
+                    cbbFindingStomach_ERCP.SelectedValue = finding.StomachID ?? 1;
+                    cbbFindingDuodenum_ERCP.SelectedValue = finding.DuodenumID ?? 1;
+                    cbbFindingAmpulla_ERCP.SelectedValue = finding.AmpullaOfVaterID ?? 1;
+                    //cbbFindingCholangiogram_ERCP.SelectedValue = finding.CholangiogramID ?? 1;
+                    //cbbFindingPancreatogram_ERCP.SelectedValue = finding.PancreatogramID ?? 1;
                     txbFindingEsophagus_ERCP.Text = finding.Esophagus;
                     txbFindingStomach_ERCP.Text = finding.Stomach;
                     txbFindingDuodenum_ERCP.Text = finding.Duodenum;
@@ -1338,53 +1338,53 @@ namespace EndoscopicSystem.V2.Forms
                 else if (procId == 5)
                 {
                     // Finding
-                    cbbFiNCL.SelectedValue = finding.NasalCavityLeftID ?? 0;
+                    cbbFiNCL.SelectedValue = finding.NasalCavityLeftID ?? 1;
                     txbFiNCL.Text = finding.NasalCavityLeft;
-                    cbbFiNCR.SelectedValue = finding.NasalCavityRightID ?? 0;
+                    cbbFiNCR.SelectedValue = finding.NasalCavityRightID ?? 1;
                     txbFiNCR.Text = finding.NasalCavityRight;
-                    cbbFiSeptum.SelectedValue = finding.SeptumID ?? 0;
+                    cbbFiSeptum.SelectedValue = finding.SeptumID ?? 1;
                     txbFiSeptum.Text = finding.Septum;
-                    cbbFiRoof.SelectedValue = finding.RoofID ?? 0;
+                    cbbFiRoof.SelectedValue = finding.RoofID ?? 1;
                     txbFiRoof.Text = finding.Roof;
-                    cbbFiPosteriorWall.SelectedValue = finding.PosteriorWallID ?? 0;
+                    cbbFiPosteriorWall.SelectedValue = finding.PosteriorWallID ?? 1;
                     txbFiPosteriorWall.Text = finding.PosteriorWall;
-                    cbbFiRosenmullerFossa.SelectedValue = finding.RosenmullerFossaID ?? 0;
+                    cbbFiRosenmullerFossa.SelectedValue = finding.RosenmullerFossaID ?? 1;
                     txbFiRosenmullerFossa.Text = finding.RosenmullerFossa;
-                    cbbFiETOrificeL.SelectedValue = finding.EustachianTubeOrificeLeftID ?? 0;
+                    cbbFiETOrificeL.SelectedValue = finding.EustachianTubeOrificeLeftID ?? 1;
                     txbFiETOrificeL.Text = finding.EustachianTubeOrificeLeft;
-                    cbbFiETOrificeR.SelectedValue = finding.EustachianTubeOrificeRightID ?? 0;
+                    cbbFiETOrificeR.SelectedValue = finding.EustachianTubeOrificeRightID ?? 1;
                     txbFiETOrificeR.Text = finding.EustachianTubeOrificeRight;
-                    cbbFiSoftPalate.SelectedValue = finding.SoftPalateID ?? 0;
+                    cbbFiSoftPalate.SelectedValue = finding.SoftPalateID ?? 1;
                     txbFiSoftPalate.Text = finding.SoftPalate;
-                    cbbFiUvula.SelectedValue = finding.UvulaID ?? 0;
+                    cbbFiUvula.SelectedValue = finding.UvulaID ?? 1;
                     txbFiUvula.Text = finding.Uvula;
-                    cbbFiTonsil.SelectedValue = finding.TonsilID ?? 0;
+                    cbbFiTonsil.SelectedValue = finding.TonsilID ?? 1;
                     txbFiTonsil.Text = finding.Tonsil;
-                    cbbFiBaseOfTongue.SelectedValue = finding.BaseOfTongueID ?? 0;
+                    cbbFiBaseOfTongue.SelectedValue = finding.BaseOfTongueID ?? 1;
                     txbFiBaseOfTongue.Text = finding.BaseOfTongue;
-                    cbbFiVallecula.SelectedValue = finding.ValleculaID ?? 0;
+                    cbbFiVallecula.SelectedValue = finding.ValleculaID ?? 1;
                     txbFiVallecula.Text = finding.Vallecula;
-                    cbbFiPyrSinusL.SelectedValue = finding.PyriformSinusLeftID ?? 0;
+                    cbbFiPyrSinusL.SelectedValue = finding.PyriformSinusLeftID ?? 1;
                     txbFiPyrSinusL.Text = finding.PyriformSinusLeft;
-                    cbbFiPyrSinusR.SelectedValue = finding.PyriformSinusRightID ?? 0;
+                    cbbFiPyrSinusR.SelectedValue = finding.PyriformSinusRightID ?? 1;
                     txbFiPyrSinusR.Text = finding.PyriformSinusRight;
-                    cbbFiPostcricoid.SelectedValue = finding.PostcricoidID ?? 0;
+                    cbbFiPostcricoid.SelectedValue = finding.PostcricoidID ?? 1;
                     txbFiPostcricoid.Text = finding.Postcricoid;
-                    cbbFiPosPhaWall.SelectedValue = finding.PosteriorPharyngealWallID ?? 0;
+                    cbbFiPosPhaWall.SelectedValue = finding.PosteriorPharyngealWallID ?? 1;
                     txbFiPosPhaWall.Text = finding.PosteriorPharyngealWall;
-                    cbbFiSupraglottic.SelectedValue = finding.SupraglotticID ?? 0;
+                    cbbFiSupraglottic.SelectedValue = finding.SupraglotticID ?? 1;
                     txbFiSupraglottic.Text = finding.Supraglottic;
-                    cbbFiGlottic.SelectedValue = finding.GlotticID ?? 0;
+                    cbbFiGlottic.SelectedValue = finding.GlotticID ?? 1;
                     txbFiGlottic.Text = finding.Glottic;
-                    cbbFiSubglottic.SelectedValue = finding.SubglotticID ?? 0;
+                    cbbFiSubglottic.SelectedValue = finding.SubglotticID ?? 1;
                     txbFiSubglottic.Text = finding.Subglottic;
-                    cbbFiUES.SelectedValue = finding.UESID ?? 0;
+                    cbbFiUES.SelectedValue = finding.UESID ?? 1;
                     txbFiUES.Text = finding.UES;
-                    cbbFiEsophagus.SelectedValue = finding.EsophagusID ?? 0;
+                    cbbFiEsophagus.SelectedValue = finding.EsophagusID ?? 1;
                     txbFiEsophagus.Text = finding.Esophagus;
-                    cbbFiLES.SelectedValue = finding.LESID ?? 0;
+                    cbbFiLES.SelectedValue = finding.LESID ?? 1;
                     txbFiLES.Text = finding.LES;
-                    cbbFiStomach.SelectedValue = finding.StomachID ?? 0;
+                    cbbFiStomach.SelectedValue = finding.StomachID ?? 1;
                     txbFiStomach.Text = finding.Stomach;
 
                     // Specimen
@@ -1996,39 +1996,6 @@ namespace EndoscopicSystem.V2.Forms
                 seq++;
             }
         }
-        //private void SaveAllImage(int endoscopicID, int procedureID)
-        //{
-        //    int i = 0;
-        //    int seq = 1;
-        //    foreach (var item in _imgPath.Values)
-        //    {
-        //        var endoAllImgs = _db.EndoscopicAllImages.Where(x => x.EndoscopicID == endoscopicID && x.ProcedureID == procedureID && x.Seq == seq).FirstOrDefault();
-        //        if (item != null)
-        //        {
-        //            if (endoAllImgs != null)
-        //            {
-        //                endoAllImgs.ImagePath = item.ToString();
-        //                endoAllImgs.UpdateBy = _id;
-        //                endoAllImgs.UpdateDate = DateTime.Now;
-        //            }
-        //            else
-        //            {
-        //                EndoscopicAllImage endoscopicAllImage = new EndoscopicAllImage();
-        //                endoscopicAllImage.EndoscopicID = endoscopicID;
-        //                endoscopicAllImage.ProcedureID = procedureID;
-        //                endoscopicAllImage.ImagePath = item.ToString();
-        //                endoscopicAllImage.Seq = i + 1;
-        //                endoscopicAllImage.CreateBy = _id;
-        //                endoscopicAllImage.CreateDate = DateTime.Now;
-        //                endoscopicAllImage.UpdateBy = _id;
-        //                endoscopicAllImage.UpdateDate = DateTime.Now;
-        //                _db.EndoscopicAllImages.Add(endoscopicAllImage);
-        //            }
-        //            i++;
-        //            seq++;
-        //        }
-        //    }
-        //}
         private void UpdateDataAll(int procedureId, int patientId, Endoscopic endoscopic)
         {
             try
@@ -2204,8 +2171,11 @@ namespace EndoscopicSystem.V2.Forms
 
             if (procedureId == 1)   // EGD
             {
-                TabPage[] tabs = { tabGeneralEGD, tabFindingEGD };
-                tabControl1.TabPages.AddRange(tabs);
+                //TabPage[] tabs = { tabGeneralEGD, tabFindingEGD };
+                //tabControl1.TabPages.AddRange(tabs);
+
+                tabControl1.TabPages.Add(tabGeneralEGD);
+                tabControl1.TabPages.Add(tabFindingEGD);
                 // General Tab
                 _dropdownListService.DropdownOPD(cbbGeneralOPD_EGD);
                 _dropdownListService.DropdownWard(cbbGeneralWard_EGD);
@@ -2220,7 +2190,8 @@ namespace EndoscopicSystem.V2.Forms
                 _dropdownListService.DropdownFinancial(cbbGeneralFinancial_EGD);
 
                 // Finding Tab
-                _dropdownListService.DropdownOropharynx(cbbFindingOropharynx_EGD);
+                DropdownOropharynx();
+                //_dropdownListService.DropdownOropharynx(cbbFindingOropharynx_EGD);
                 _dropdownListService.DropdownEsophagus(cbbFindingEsophagus_EGD);
                 _dropdownListService.DropdownEGJunction(cbbFindingEGJunction_EGD);
                 _dropdownListService.DropdownCardia(cbbFindingCardia_EGD);
@@ -2285,6 +2256,10 @@ namespace EndoscopicSystem.V2.Forms
                 _dropdownListService.DropdownAmpulla(cbbFindingAmpulla_ERCP);
                 //_dropdownListService.DropdownCholangiogram(cbbFindingCholangiogram_ERCP);
                 //_dropdownListService.DropdownPancreatogram(cbbFindingPancreatogram_ERCP);
+            }
+            else
+            {
+                RemoveTabPage();
             }
         }
 
