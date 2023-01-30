@@ -224,8 +224,15 @@ namespace EndoscopicSystem.V2.Forms
                 bool isSave = OnSave(_hnNo, _patientId, _procedureId, _endoscopicId);
                 if (isSave)
                 {
-                    ExportEndoscopic(_hnNo, _procedureId, _endoscopicId);
+                    isExport = ExportEndoscopic(_hnNo, _procedureId, _endoscopicId);
                     btnReport.Visible = true;
+                    btnSave.Enabled = false;
+                }
+                else
+                {
+                    btnReport.Visible = false;
+                    btnSave.Enabled = true;
+
                 }
             }
             else
@@ -238,13 +245,15 @@ namespace EndoscopicSystem.V2.Forms
         {
             if (!string.IsNullOrWhiteSpace(_hnNo) && _procedureId > 0 && _endoscopicId > 0)
             {
-                if (!isExport)
+                btnSave.Enabled = true;
+
+                if (isExport)
                 {
                     FormProceed.Self.txbStep.Text = "3,,";
                 }
                 else
                 {
-                    btnReport.Enabled = true;
+                    btnReport.Visible = false;
                 }
             }
             else
