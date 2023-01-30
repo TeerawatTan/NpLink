@@ -1633,26 +1633,26 @@ namespace EndoscopicSystem.V2.Forms
                 Finding finding = findingData.FirstOrDefault();
                 if (procedureId == 1)
                 {
-                    finding.OropharynxID = (int?)cbbFindingOropharynx_3.SelectedValue;
-                    finding.EsophagusID = (int?)cbbFindingEsophagus_3.SelectedValue;
-                    finding.EGJunctionID = (int?)cbbFindingEGJunction_3.SelectedValue;
-                    finding.CardiaID = (int?)cbbFindingCardia_3.SelectedValue;
-                    finding.FundusID = (int?)cbbFindingFundus_3.SelectedValue;
-                    finding.BodyID = (int?)cbbFindingBody_3.SelectedValue;
-                    finding.AntrumID = (int?)cbbFindingAntrum_3.SelectedValue;
-                    finding.PylorusID = (int?)cbbFindingPylorus_3.SelectedValue;
-                    finding.DuodenalBulbID = (int?)cbbFindingDuodenalBulb_3.SelectedValue;
-                    finding.SecondPartID = (int?)cbbFindingSecondPart_3.SelectedValue;
-                    finding.Oropharynx = txtFindingOropharynx_3.Text;
-                    finding.Esophagus = txtFindingEsophagus_3.Text;
-                    finding.EGJunction = txtFindingEGJunction_3.Text;
-                    finding.Cardia = txtFindingCardia_3.Text;
-                    finding.Fundus = txtFindingFundus_3.Text;
-                    finding.Body = txtFindingBody_3.Text;
-                    finding.Antrum = txtFindingAntrum_3.Text;
-                    finding.Pylorus = txtFindingPylorus_3.Text;
-                    finding.DuodenalBulb = txtFindingDuodenalBulb_3.Text;
-                    finding.SecondPart = txtFindingSecondPart_3.Text;
+                    finding.OropharynxID = (int?)cbbFindingOropharynx_EGD.SelectedValue;
+                    finding.EsophagusID = (int?)cbbFindingEsophagus_EGD.SelectedValue;
+                    finding.EGJunctionID = (int?)cbbFindingEGJunction_EGD.SelectedValue;
+                    finding.CardiaID = (int?)cbbFindingCardia_EGD.SelectedValue;
+                    finding.FundusID = (int?)cbbFindingFundus_EGD.SelectedValue;
+                    finding.BodyID = (int?)cbbFindingBody_EGD.SelectedValue;
+                    finding.AntrumID = (int?)cbbFindingAntrum_EGD.SelectedValue;
+                    finding.PylorusID = (int?)cbbFindingPylorus_EGD.SelectedValue;
+                    finding.DuodenalBulbID = (int?)cbbFindingDuodenalBulb_EGD.SelectedValue;
+                    finding.SecondPartID = (int?)cbbFinding2ndPart_EGD.SelectedValue;
+                    finding.Oropharynx = txbFindingOropharynx_EGD.Text;
+                    finding.Esophagus = txbFindingEsophagus_EGD.Text;
+                    finding.EGJunction = txbFindingEGJunction_EGD.Text;
+                    finding.Cardia = txbFindingCardia_EGD.Text;
+                    finding.Fundus = txbFindingFundus_EGD.Text;
+                    finding.Body = txbFindingBody_EGD.Text;
+                    finding.Antrum = txbFindingAntrum_EGD.Text;
+                    finding.Pylorus = txbFindingPylorus_EGD.Text;
+                    finding.DuodenalBulb = txbFindingDuodenalBulb_EGD.Text;
+                    finding.SecondPart = txbFinding2ndPart_EGD.Text;
                     finding.PrincipalProcedureID = !string.IsNullOrWhiteSpace(txbFindingPrinncipalProcedureID_EGD.Text) ? Convert.ToInt32(txbFindingPrinncipalProcedureID_EGD.Text) : 0;
                     finding.PrincipalProcedureDetail = txbFindingPrinncipalProcedureCode_EGD.Text + "-" + txbFindingPrinncipalProcedureText_EGD.Text;
                     finding.SupplementalProcedure1ID = !string.IsNullOrWhiteSpace(txbFindingSupplementalProcedureID_EGD.Text) ? Convert.ToInt32(txbFindingSupplementalProcedureID_EGD.Text) : 0;
@@ -2190,8 +2190,7 @@ namespace EndoscopicSystem.V2.Forms
                 _dropdownListService.DropdownFinancial(cbbGeneralFinancial_EGD);
 
                 // Finding Tab
-                DropdownOropharynx();
-                //_dropdownListService.DropdownOropharynx(cbbFindingOropharynx_EGD);
+                _dropdownListService.DropdownOropharynx(cbbFindingOropharynx_EGD);
                 _dropdownListService.DropdownEsophagus(cbbFindingEsophagus_EGD);
                 _dropdownListService.DropdownEGJunction(cbbFindingEGJunction_EGD);
                 _dropdownListService.DropdownCardia(cbbFindingCardia_EGD);
