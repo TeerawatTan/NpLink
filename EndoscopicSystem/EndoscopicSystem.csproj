@@ -168,6 +168,9 @@
     <Compile Include="Entities\Cecum.cs">
       <DependentUpon>DBEndoscopic.tt</DependentUpon>
     </Compile>
+    <Compile Include="Entities\ChartInstrument_Result.cs">
+      <DependentUpon>DBEndoscopic.tt</DependentUpon>
+    </Compile>
     <Compile Include="Entities\Chart_Result.cs">
       <DependentUpon>DBEndoscopic.tt</DependentUpon>
     </Compile>

@@ -209,5 +209,14 @@ namespace EndoscopicSystem.Entities
     
             return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction("CleanData", isSuperAdminParameter);
         }
+    
+        public virtual ObjectResult<ChartInstrument_Result> ChartInstrument(Nullable<int> instrumentVal)
+        {
+            var instrumentValParameter = instrumentVal.HasValue ?
+                new ObjectParameter("instrumentVal", instrumentVal) :
+                new ObjectParameter("instrumentVal", typeof(int));
+    
+            return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction<ChartInstrument_Result>("ChartInstrument", instrumentValParameter);
+        }
     }
 }

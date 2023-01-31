@@ -79,31 +79,33 @@ namespace EndoscopicSystem.V2.Forms
                             getEndo.NewCase = false;
                         }
                         _endoscopicId = getEndo.EndoscopicID;
-                        Finding getFinding = _db.Findings.Where(x => x.FindingID == getEndo.FindingID).FirstOrDefault();
-                        Indication getIndication = _db.Indications.Where(x => x.IndicationID == getEndo.IndicationID).FirstOrDefault();
-                        Speciman getSpecimen = _db.Specimen.Where(x => x.SpecimenID == getEndo.SpecimenID).FirstOrDefault();
-                        Intervention getIntervention = _db.Interventions.Where(x => x.InterventionID == getEndo.InterventionID).FirstOrDefault();
+
+                        //Finding getFinding = _db.Findings.Where(x => x.FindingID == getEndo.FindingID).FirstOrDefault();
+                        //Indication getIndication = _db.Indications.Where(x => x.IndicationID == getEndo.IndicationID).FirstOrDefault();
+                        //Speciman getSpecimen = _db.Specimen.Where(x => x.SpecimenID == getEndo.SpecimenID).FirstOrDefault();
+                        //Intervention getIntervention = _db.Interventions.Where(x => x.InterventionID == getEndo.InterventionID).FirstOrDefault();
                     }
                     else
                     {
+                        DateTime stampNow = System.DateTime.Now;
+
                         Endoscopic endoscopic = new Endoscopic()
                         {
                             PatientID = getPatient.PatientID,
                             IsSaved = false,
                             ProcedureID = _procedureId,
                             CreateBy = _id,
-                            CreateDate = System.DateTime.Now
+                            CreateDate = stampNow
                         };
                         _db.Endoscopics.Add(endoscopic);
 
-                        Finding finding = new Finding() { PatientID = getPatient.PatientID, CreateBy = _id, CreateDate = System.DateTime.Now };
+                        Finding finding = new Finding() { PatientID = getPatient.PatientID, CreateBy = _id, CreateDate = stampNow };
                         _db.Findings.Add(finding);
                         _db.SaveChanges();
 
-                        var endos = _db.Endoscopics.ToList();
-                        if (endos.Count > 0)
+                        var endo = _db.Endoscopics.OrderByDescending(x => x.EndoscopicID).FirstOrDefault();
+                        if (endo != null)
                         {
-                            Endoscopic endo = endos.OrderByDescending(x => x.EndoscopicID).FirstOrDefault();
                             _endoscopicId = endo.EndoscopicID;
                         }
                     }
@@ -135,12 +137,37 @@ namespace EndoscopicSystem.V2.Forms
             }
         }
 
+        private bool UpdateAllData(int appointmentId)
+        {
+            try
+            {
+                Appointment getAppointment = _db.Appointments.Where(w => w.AppointmentID == appointmentId).FirstOrDefault();
+                if (getAppointment != null && getAppointment.AppointmentID > 0)
+                {
+                    getAppointment.Instrument1ID = (int?)cbbInstrument1.SelectedValue;
+                    getAppointment.Instrument2ID = (int?)cbbInstrument2.SelectedValue;
+                }
+
+                _db.SaveChanges();
+
+                return true;
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+        }
+
         private void btnOk_Click(object sender, EventArgs e)
         {
+            bool isSave = UpdateAllData(_appointmentId);
+            if (!isSave)
+            {
+                MessageBox.Show("Update data is not completed.", "Save Form", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                return;
+            }
+
             this.Hide();
-            //FormLive formLive = new FormLive(_id, _hnNo, _procedureId, _endoscopicId, _appointmentId);
-            //formLive.ShowDialog();
-            //formLive = null;
 
             try
             {

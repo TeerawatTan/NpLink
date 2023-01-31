@@ -178,7 +178,7 @@
             // 
             this.txtHNNo.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.txtHNNo.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
-            this.txtHNNo.Location = new System.Drawing.Point(911, 401);
+            this.txtHNNo.Location = new System.Drawing.Point(890, 401);
             this.txtHNNo.Margin = new System.Windows.Forms.Padding(2);
             this.txtHNNo.MaxLength = 255;
             this.txtHNNo.Name = "txtHNNo";
@@ -211,7 +211,7 @@
             // 
             this.btnGotoEndoscope.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.btnGotoEndoscope.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
-            this.btnGotoEndoscope.Location = new System.Drawing.Point(1081, 394);
+            this.btnGotoEndoscope.Location = new System.Drawing.Point(1060, 394);
             this.btnGotoEndoscope.Margin = new System.Windows.Forms.Padding(2);
             this.btnGotoEndoscope.Name = "btnGotoEndoscope";
             this.btnGotoEndoscope.Size = new System.Drawing.Size(163, 41);
@@ -225,7 +225,7 @@
             this.label4.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
-            this.label4.Location = new System.Drawing.Point(773, 404);
+            this.label4.Location = new System.Drawing.Point(752, 404);
             this.label4.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label4.Name = "label4";
             this.label4.RightToLeft = System.Windows.Forms.RightToLeft.No;
@@ -324,7 +324,7 @@
             this.btnDeleteHn.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.btnDeleteHn.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
             this.btnDeleteHn.ForeColor = System.Drawing.Color.Red;
-            this.btnDeleteHn.Location = new System.Drawing.Point(1257, 394);
+            this.btnDeleteHn.Location = new System.Drawing.Point(1236, 394);
             this.btnDeleteHn.Margin = new System.Windows.Forms.Padding(2);
             this.btnDeleteHn.Name = "btnDeleteHn";
             this.btnDeleteHn.Size = new System.Drawing.Size(90, 41);

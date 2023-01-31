@@ -19,8 +19,6 @@ namespace EndoscopicSystem
         private int UserID;
         public string hnNo = "";
         public int procedureId = 0;
-        List<AppointmentModel> listData;
-        List<v_AppointmentDetails> appList;
         public int appointmentId = 0;
         public int endoscopicId = 0;
         private readonly DropdownListService _dropdownListService = new DropdownListService();
@@ -39,7 +37,7 @@ namespace EndoscopicSystem
             DropdownOrder();
             LoadChartCountProcedure((int)cbbMonth.SelectedValue, (int)cbbYear.SelectedItem);
             LoadData();
-            _dropdownListService.DropdownInstrument(cbbInstrument, 1);
+            _dropdownListService.DropdownInstrument(cbbInstrument, 0);
             btnDeleteHn.Hide();
         }
 
@@ -51,50 +49,67 @@ namespace EndoscopicSystem
                 string eDate = DateTime.Now.ToShortDateString() + " 23:59:59";
                 DateTime startDate = Convert.ToDateTime(sDate);
                 DateTime endDate = Convert.ToDateTime(eDate);
-                appList = db.v_AppointmentDetails != null ?
-                    db.v_AppointmentDetails
-                        .Where(x => x.AppointmentDate.Value >= startDate && x.AppointmentDate.Value <= endDate)
-                        .ToList() : new List<v_AppointmentDetails>();
-                if (appList == null) return;
+                //var viewAppointmentDetail = db.v_AppointmentDetails
+                //                .Where(x => x.AppointmentDate.Value >= startDate && x.AppointmentDate.Value <= endDate)
+                //                .AsQueryable();
+
+                var viewAppointmentDetail = (from a in db.Appointments
+                                             join p in db.Patients on a.PatientID equals p.PatientID
+                                             join e in db.Endoscopics on a.EndoscopicID equals e.EndoscopicID into lE
+                                             from e in lE.DefaultIfEmpty()
+                                             join pro in db.ProcedureLists on a.ProcedureID equals pro.ProcedureID into lPro
+                                             from pro in lPro.DefaultIfEmpty()
+                                             join r in db.Rooms on a.RoomID equals r.RoomID into lR
+                                             from r in lR.DefaultIfEmpty()
+                                             join d in db.Doctors on a.DoctorID equals d.DoctorID into lD
+                                             from d in lD.DefaultIfEmpty()
+                                             select new AppointmentModel
+                                             {
+                                                 AppointmentID = a.AppointmentID,
+                                                 HN = p.HN,
+                                                 Fullname = p.Fullname,
+                                                 Symptom = a.Symptom,
+                                                 ProcedureID = a.ProcedureID ?? 0,
+                                                 Procedure = pro.ProcedureName,
+                                                 EndoscopicRoom = r.NameTH ?? r.NameEN,
+                                                 Doctor = d.NameTH ?? d.NameEN,
+                                                 AppointmentDate = a.AppointmentDate,
+                                                 EndoscopicCheck = a.EndoscopicCheck ?? false,
+                                                 EndoscopicID = a.EndoscopicID
+                                             })
+                                             .Where(x => x.AppointmentDate.Value >= startDate && x.AppointmentDate.Value <= endDate)
+                                             .OrderBy(x => x.AppointmentDate)
+                                             .AsQueryable();
+
+                if (viewAppointmentDetail == null) return;
 
                 if (!string.IsNullOrWhiteSpace(hn))
                 {
-                    appList = appList.Where(x => x.HN.Contains(hn)).ToList();
+                    viewAppointmentDetail = viewAppointmentDetail.Where(x => x.HN.Contains(hn)).AsQueryable();
                 }
                 if (!string.IsNullOrWhiteSpace(fullName))
                 {
-                    appList = appList.Where(x => x.Fullname.Contains(fullName)).ToList();
+                    viewAppointmentDetail = viewAppointmentDetail.Where(x => x.Fullname.Contains(fullName)).AsQueryable();
                 }
-                listData = new List<AppointmentModel>();
-                if (appList.Count > 0)
+
+                List<AppointmentModel> listData = new List<AppointmentModel>();
+
+                if (viewAppointmentDetail.Count() > 0)
                 {
+                    listData = viewAppointmentDetail.ToList();
+
                     int i = 1;
-                    foreach (var item in appList.OrderBy(x => x.AppointmentDate))
-                    {
-                        var model = new AppointmentModel();
-                        model.No = i++;
-                        model.AppointmentID = item.AppointmentID;
-                        model.HN = item.HN;
-                        model.Fullname = item.Fullname;
-                        model.Symptom = item.Symptom;
-                        model.ProcedureID = item.ProcedureID.Value;
-                        model.Procedure = item.ProcedureName;
-                        model.EndoscopicRoom = item.EndoscopicRoom;
-                        model.Doctor = item.Doctor;
-                        model.EndoscopicCheck = item.EndoscopicCheck ?? false;
-                        model.AppointmentDate = item.AppointmentDate;
-                        model.EndoscopicID = item.EndoscopicID ?? 0;
-                        listData.Add(model);
-                    }
+                    listData.ForEach(model => model.No = i++);
                 }
+
                 gridQueue.DataSource = listData;
                 gridQueue.Columns["AppointmentID"].Visible = false;
                 gridQueue.Columns["ProcedureID"].Visible = false;
                 gridQueue.Columns["EndoscopicID"].Visible = false;
             }
-            catch (Exception)
+            catch (Exception ex)
             {
-
+                throw ex;
             }
         }
 
@@ -155,7 +170,11 @@ namespace EndoscopicSystem
                     V2.Forms.FormPatientConfirm formPatientConfirm = new V2.Forms.FormPatientConfirm(UserID, hnNo, procedureId, endoscopicId, appointmentId);
                     formPatientConfirm.ShowDialog();
                     formPatientConfirm = null;
+
                     this.Show();
+
+                    LoadChartCountProcedure((int)cbbMonth.SelectedValue, (int)cbbYear.SelectedItem);
+                    LoadData();
                 }
             }
             catch (Exception)
@@ -166,12 +185,8 @@ namespace EndoscopicSystem
 
         private void LoadChartCountInstrument(int instrumentId)
         {
-            List<ChartInstrumentModel> data = new List<ChartInstrumentModel>()
-            {
-                new ChartInstrumentModel() { InstrumentID = 1, CountInstrument = 5, InstrumentName = "Test1" },
-                new ChartInstrumentModel() { InstrumentID = 2, CountInstrument = 8, InstrumentName = "Test2" },
-                new ChartInstrumentModel() { InstrumentID = 3, CountInstrument = 2, InstrumentName = "Test3" },
-            };
+            List<ChartInstrumentModel> data = new List<ChartInstrumentModel>();
+            data = repo.GetChartInstruments(instrumentId);
             chart1.DataSource = data;
             chart1.Series["Patient"].XValueMember = "InstrumentName";
             chart1.Series["Patient"].YValueMembers = "CountInstrument";

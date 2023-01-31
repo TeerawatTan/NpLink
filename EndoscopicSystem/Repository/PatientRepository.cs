@@ -25,6 +25,22 @@ namespace EndoscopicSystem.Repository
             }
             return list;
         }
+
+        public List<ChartInstrumentModel> GetChartInstruments(int instrummentId)
+        {
+            var data = db.ChartInstrument(instrummentId).ToList();
+            List<ChartInstrumentModel> list = new List<ChartInstrumentModel>();
+            foreach (var item in data)
+            {
+                ChartInstrumentModel model = new ChartInstrumentModel();
+                model.InstrumentID = item.ID ?? 0;
+                model.InstruentCode = item.Code;
+                model.InstrumentName = item.Serail;
+                model.CountInstrument = item.CountAppoint ?? 0;
+                list.Add(model);
+            }
+            return list;
+        }
     }
     public class ChartModel
     {
@@ -38,6 +54,7 @@ namespace EndoscopicSystem.Repository
     public class ChartInstrumentModel
     {
         public int InstrumentID { get; set; }
+        public string InstruentCode { get; set; }
         public string InstrumentName { get; set; }
         public int CountInstrument { get; set; }
     }

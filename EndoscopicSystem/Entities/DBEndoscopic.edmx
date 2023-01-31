@@ -1241,6 +1241,9 @@ warning 6002: The table/view 'EndoscopicDb.dbo.v_PatientList' does not have a pr
           <Parameter Name="monthVal" Type="int" Mode="In" />
           <Parameter Name="yearVal" Type="int" Mode="In" />
         </Function>
+        <Function Name="ChartInstrument" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="instrumentVal" Type="int" Mode="In" />
+        </Function>
         <Function Name="CleanData" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
           <Parameter Name="IsSuperAdmin" Type="int" Mode="In" />
         </Function>
@@ -1536,6 +1539,9 @@ warning 6002: The table/view 'EndoscopicDb.dbo.v_PatientList' does not have a pr
           <EntitySet Name="Patients" EntityType="EndoscopicModel.Patient" />
           <EntitySet Name="Instruments" EntityType="EndoscopicModel.Instrument" />
           <EntitySet Name="Appointments" EntityType="EndoscopicModel.Appointment" />
+          <FunctionImport Name="ChartInstrument" ReturnType="Collection(EndoscopicModel.ChartInstrument_Result)">
+            <Parameter Name="instrumentVal" Mode="In" Type="Int32" />
+          </FunctionImport>
           </EntityContainer>
         <EntityType Name="Doctor">
           <Key>
@@ -2898,6 +2904,12 @@ warning 6002: The table/view 'EndoscopicDb.dbo.v_PatientList' does not have a pr
           <Property Name="Instrument1ID" Type="Int32" />
           <Property Name="Instrument2ID" Type="Int32" />
         </EntityType>
+        <ComplexType Name="ChartInstrument_Result">
+          <Property Type="Int32" Name="ID" Nullable="true" />
+          <Property Type="String" Name="Code" Nullable="true" MaxLength="250" />
+          <Property Type="String" Name="Serail" Nullable="true" MaxLength="250" />
+          <Property Type="Int32" Name="CountAppoint" Nullable="true" />
+        </ComplexType>
         </Schema>
     </edmx:ConceptualModels>
     <!-- C-S mapping content -->
@@ -4376,6 +4388,16 @@ warning 6002: The table/view 'EndoscopicDb.dbo.v_PatientList' does not have a pr
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
+          <FunctionImportMapping FunctionImportName="ChartInstrument" FunctionName="EndoscopicModel.Store.ChartInstrument">
+            <ResultMapping>
+              <ComplexTypeMapping TypeName="EndoscopicModel.ChartInstrument_Result">
+                <ScalarProperty Name="ID" ColumnName="ID" />
+                <ScalarProperty Name="Code" ColumnName="Code" />
+                <ScalarProperty Name="Serail" ColumnName="Serail" />
+                <ScalarProperty Name="CountAppoint" ColumnName="CountAppoint" />
+              </ComplexTypeMapping>
+            </ResultMapping>
+          </FunctionImportMapping>
           </EntityContainerMapping>
       </Mapping>
     </edmx:Mappings>
