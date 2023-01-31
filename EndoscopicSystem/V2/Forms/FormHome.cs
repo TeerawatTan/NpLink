@@ -5,6 +5,7 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.IO;
 using System.Linq;
 using System.Windows.Forms;
 
@@ -15,6 +16,10 @@ namespace EndoscopicSystem.V2.Forms
         readonly EndoscopicEntities _db = new EndoscopicEntities();
         private Label _currentLabel = null;
         private int _id = 0;
+        private string _pathFolderVideo = Application.StartupPath.Replace("\\bin\\Debug", "") + @"\VideoRecord\";
+        private string _pathFolderImage = Application.StartupPath.Replace("\\bin\\Debug", "") + @"\ImageCapture\";
+        private string _pathFolderDicom = Application.StartupPath.Replace("\\bin\\Debug", "") + @"\Dicom\";
+        private string _pathFolderPdf = Application.StartupPath.Replace("\\bin\\Debug", "") + @"\Pdf\";
         public FormHome(int id)
         {
             InitializeComponent();
@@ -29,6 +34,28 @@ namespace EndoscopicSystem.V2.Forms
             {
                 pictureBox_logo.ImageLocation = logo.HospitalLogoPath;
                 pictureBox_logo.SizeMode = PictureBoxSizeMode.StretchImage;
+            }
+
+            ConfigCreateFolder();
+        }
+
+        private void ConfigCreateFolder()
+        {
+            if (!Directory.Exists(_pathFolderVideo))
+            {
+                Directory.CreateDirectory(_pathFolderVideo);
+            }
+            if (!Directory.Exists(_pathFolderImage))
+            {
+                Directory.CreateDirectory(_pathFolderImage);
+            }
+            if (!Directory.Exists(_pathFolderDicom))
+            {
+                Directory.CreateDirectory(_pathFolderDicom);
+            }
+            if (!Directory.Exists(_pathFolderPdf))
+            {
+                Directory.CreateDirectory(_pathFolderPdf);
             }
         }
 
