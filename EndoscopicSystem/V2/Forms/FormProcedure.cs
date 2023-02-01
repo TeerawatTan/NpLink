@@ -26,6 +26,7 @@ namespace EndoscopicSystem.V2.Forms
 {
     public partial class FormProcedure : Form
     {
+        #region Variables
         private string _reportPath = Application.StartupPath.Replace("\\bin\\Debug", "") + @"\Report\";
         private string _pathFolderPDF = Application.StartupPath.Replace("\\bin\\Debug", "") + @"\Pdf\";
         private string _pathFolderDicom = Application.StartupPath.Replace("\\bin\\Debug", "") + @"\Dicom\";
@@ -45,6 +46,8 @@ namespace EndoscopicSystem.V2.Forms
         private List<FindingLabel> _findingLabels = new List<FindingLabel>();
         private List<ICD9> _iCD9s = new List<ICD9>();
         private List<ICD10> _iCD10s = new List<ICD10>();
+        #endregion
+
         public FormProcedure(int id, string hn, int procId, int appId, int endoId, string pathImg, string pathVdo)
         {
             InitializeComponent();
@@ -57,7 +60,6 @@ namespace EndoscopicSystem.V2.Forms
             this._pathFolderImageSave = pathImg;
             this._vdoPath = pathVdo;
         }
-
         private void FormProcedure_Load(object sender, EventArgs e)
         {
             btnReport.Visible = false;
@@ -97,7 +99,6 @@ namespace EndoscopicSystem.V2.Forms
             LoadICD9();
             LoadICD10();
         }
-
         private void cbbProcedureList_SelectedIndexChanged(object sender, EventArgs e)
         {
             if (cbbProcedureList.SelectedIndex <= 0)
@@ -2278,6 +2279,7 @@ namespace EndoscopicSystem.V2.Forms
 
         #endregion
 
+        #region Resizing Image
 
         private void pictureBoxRefresh()
         {
@@ -2471,6 +2473,7 @@ namespace EndoscopicSystem.V2.Forms
             return cropedImgPath;
         }
 
+        #endregion
 
         #region btnDeletePictureBoxSaved_Click
         private void btnDeletePictureBoxSaved1_Click(object sender, EventArgs e)
