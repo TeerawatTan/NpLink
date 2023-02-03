@@ -501,6 +501,7 @@
     <Compile Include="Forms\SnapshotForm.Designer.cs">
       <DependentUpon>SnapshotForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="Helpers\DatabaseHelper.cs" />
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -671,7 +672,29 @@
       <DependentUpon>FormWardSetting.cs</DependentUpon>
     </Compile>
     <Compile Include="V2\Forms\src\DropdownListService.cs" />
+    <Content Include="Images\1.jpg" />
+    <Content Include="Images\21.png" />
+    <Content Include="Images\22.png" />
+    <Content Include="Images\23.png" />
+    <Content Include="Images\24.png" />
+    <Content Include="Images\25.png" />
+    <Content Include="Images\26.png" />
+    <Content Include="Images\27.png" />
+    <Content Include="Images\28.png" />
+    <Content Include="Images\29.png" />
+    <Content Include="Images\30.png" />
+    <Content Include="Images\31.png" />
+    <Content Include="Images\32.png" />
+    <Content Include="Images\33.png" />
+    <Content Include="Images\34.png" />
+    <Content Include="Images\35.png" />
+    <Content Include="Images\36.png" />
+    <Content Include="Images\37.png" />
+    <Content Include="Images\38.png" />
+    <Content Include="Images\39.png" />
+    <Content Include="Images\40.png" />
     <Content Include="Images\GIF\loading-100.gif" />
+    <Content Include="Images\reload-icon-4.png" />
     <Content Include="Images\V2\iStock-1089688016.jpg" />
     <Content Include="Images\V2\iStock-1136980060.jpg" />
     <Content Include="Images\V2\iStock-1142818558.jpg" />
@@ -869,6 +892,7 @@
     <Folder Include="Connected Services\" />
     <Folder Include="Dicom\" />
     <Folder Include="ImageCapture\" />
+    <Folder Include="Images\Logo\" />
     <Folder Include="Images\Patient\" />
     <Folder Include="Pdf\" />
     <Folder Include="Upload\Files\" />
@@ -918,10 +942,6 @@
     <Content Include="Images\Img.png" />
     <None Include="Images\led_blinksred.gif" />
     <None Include="Images\led_blinksred mini.gif" />
-    <Content Include="Images\Logo\logo-080920201118.png" />
-    <Content Include="Images\Logo\logo-080925631359.png" />
-    <Content Include="Images\Logo\logo-180920201221.jpg" />
-    <Content Include="Images\Logo\logo-190925631129.jpg" />
     <Content Include="Images\nplink-03.ico" />
     <Content Include="Images\nplink-05.png" />
     <Content Include="Images\Upload.png" />
