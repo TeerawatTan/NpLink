@@ -36,9 +36,9 @@ namespace EndoscopicSystem.V2.Forms
                     return Constant.LOGIN_NOT_SUCCESS;
                 }
             }
-            catch (Exception e)
+            catch (Exception)
             {
-                return e.Message;
+                return Constant.STATUS_ERROR;
             }
         }
 
@@ -71,8 +71,8 @@ namespace EndoscopicSystem.V2.Forms
                 }
                 else
                 {
-                    ClearForm();
-                    MessageBox.Show(status);
+                    //ClearForm();
+                    //MessageBox.Show(status);
                 }
             }
         }
