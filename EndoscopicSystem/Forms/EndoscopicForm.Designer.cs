@@ -524,6 +524,7 @@
             this.pictureBoxRecording = new System.Windows.Forms.PictureBox();
             this.pictureBoxSnapshot = new System.Windows.Forms.PictureBox();
             this.btnPause = new System.Windows.Forms.Button();
+            this.btnSendToPacs = new System.Windows.Forms.Button();
             this.tabControl1.SuspendLayout();
             this.tabGeneralBronchoscopy.SuspendLayout();
             this.tabFindingBronchoscopy.SuspendLayout();
@@ -6901,13 +6902,27 @@
             this.btnPause.UseVisualStyleBackColor = false;
             this.btnPause.Click += new System.EventHandler(this.btnPause_Click);
             // 
+            // btnSendToPacs
+            // 
+            this.btnSendToPacs.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
+            this.btnSendToPacs.Location = new System.Drawing.Point(32, 896);
+            this.btnSendToPacs.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btnSendToPacs.Name = "btnSendToPacs";
+            this.btnSendToPacs.Size = new System.Drawing.Size(136, 44);
+            this.btnSendToPacs.TabIndex = 113;
+            this.btnSendToPacs.Text = "Send To PACS";
+            this.btnSendToPacs.UseVisualStyleBackColor = true;
+            this.btnSendToPacs.Visible = false;
+            this.btnSendToPacs.Click += new System.EventHandler(this.btnSendToPacs_Click);
+            // 
             // EndoscopicForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoScroll = true;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(233)))), ((int)(((byte)(242)))));
-            this.ClientSize = new System.Drawing.Size(1553, 959);
+            this.ClientSize = new System.Drawing.Size(1553, 966);
+            this.Controls.Add(this.btnSendToPacs);
             this.Controls.Add(this.btnPause);
             this.Controls.Add(this.pictureBoxRecording);
             this.Controls.Add(this.btnAllVideo);
@@ -7534,5 +7549,6 @@
         private System.Windows.Forms.ComboBox cbbFiETOrificeR;
         private System.Windows.Forms.Label label59;
         private System.Windows.Forms.TextBox txbFiETOrificeR;
+        private System.Windows.Forms.Button btnSendToPacs;
     }
 }

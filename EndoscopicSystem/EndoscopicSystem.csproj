@@ -786,6 +786,9 @@
     <PackageReference Include="EntityFramework">
       <Version>6.4.4</Version>
     </PackageReference>
+    <PackageReference Include="fo-dicom">
+      <Version>5.0.3</Version>
+    </PackageReference>
     <PackageReference Include="Microsoft.ReportViewer.WinForms">
       <Version>10.0.40219.1</Version>
     </PackageReference>

@@ -23,6 +23,9 @@ using System.Diagnostics;
 using CrystalDecisions.CrystalReports.Engine;
 using System.Configuration;
 using System.Drawing.Drawing2D;
+using FellowOakDicom;
+using FellowOakDicom.Network.Client;
+using FellowOakDicom.Network;
 
 namespace EndoscopicSystem
 {
@@ -3311,5 +3314,26 @@ namespace EndoscopicSystem
             cbbFiLES.SelectedIndex = 0;
         }
         #endregion
+
+        private async void btnSendToPacs_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                DicomFile dicomFile = DicomFile.Open("");
+
+                //dicomFile.Dataset.AddOrUpdate(DicomTag.PatientName, "Test");
+                //dicomFile.Dataset.AddOrUpdate(DicomTag.PatientID, "123456");
+                //dicomFile.Dataset.AddOrUpdate(DicomTag.PatientSex, "M");
+
+                //var client = DicomClientFactory.Create("192.168.3.120", 104, false, "NPLINK1ARAN", "PACSARAN");
+                //await client.AddRequestAsync(new DicomCStoreRequest(dicomFile));
+                //await client.SendAsync();
+
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+        }
     }
 }
