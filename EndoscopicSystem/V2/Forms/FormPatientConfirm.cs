@@ -47,6 +47,30 @@ namespace EndoscopicSystem.V2.Forms
             }
         }
 
+        private void cbbInstrument1_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if (string.IsNullOrWhiteSpace(cbbInstrument1.Text))
+                return;
+
+            string[] instruSplt = cbbInstrument1.Text.ToString().Split('-');
+            if (instruSplt.Length > 0)
+            {
+                SerialNumber1.Text = instruSplt[1].Trim() ?? "";
+            }
+        }
+
+        private void cbbInstrument2_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if (string.IsNullOrWhiteSpace(cbbInstrument2.Text))
+                return;
+
+            string[] instruSplt = cbbInstrument2.Text.ToString().Split('-');
+            if (instruSplt.Length > 0)
+            {
+                SerialNumber2.Text = instruSplt[1].Trim() ?? "";
+            }
+        }
+
         private void InitialData(string fullName, string hnNum, string doctorList, string nurseList)
         {
             // Initial data
@@ -172,9 +196,8 @@ namespace EndoscopicSystem.V2.Forms
             try
             {
                 // Form Panel
-                FormLive formLive = new FormLive(_id, _hnNo, _procedureId, _endoscopicId, _appointmentId);
-                FormProceed formProceed = new FormProceed(_id, _hnNo, _procedureId, _endoscopicId, _appointmentId, formLive);
-                formProceed.ShowDialog(this);
+                FormProceed formProceed = new FormProceed(_id, _hnNo, _procedureId, _endoscopicId, _appointmentId);
+                formProceed.ShowDialog();
                 formProceed = null;
             }
             catch (Exception ex)

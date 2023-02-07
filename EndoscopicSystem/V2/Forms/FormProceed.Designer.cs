@@ -65,6 +65,7 @@ namespace EndoscopicSystem.V2.Forms
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Proceed Page";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.FormProceed_FormClosing);
             this.Load += new System.EventHandler(this.FormProceed_Load);
             this.panelChild.ResumeLayout(false);
             this.panelChild.PerformLayout();

@@ -17,7 +17,6 @@ namespace EndoscopicSystem.V2.Forms
         private int _id = 0, _endoscopicId = 0, _procedureId = 0, _appointmentId = 0, _stepId = 0;
         private string _hn, _pathImage, _pathVideo;
         private Form _activeForm = null, _useFormShow = null;
-
         public FormProceed(int id, string hn, int procedureId, int endoscopicId, int appointmentId, Form formActive = null)
         {
             InitializeComponent();
@@ -33,6 +32,11 @@ namespace EndoscopicSystem.V2.Forms
 
         public void OpenChildForm(Form childForm)
         {
+            //if (childForm == null)
+            //{
+            //    return;
+            //}
+
             if (_activeForm != null)
                 _activeForm.Close();
             _activeForm = childForm;
@@ -47,15 +51,17 @@ namespace EndoscopicSystem.V2.Forms
 
         private void FormProceed_Load(object sender, EventArgs e)
         {
-            if (_useFormShow == null || _id == 0)
+            if (_id == 0)
             {
                 this.Close();
             }
 
+            _useFormShow = new FormLive(_id, _hn, _procedureId, _endoscopicId, _appointmentId);
+
             OpenChildForm(_useFormShow);
         }
 
-        private void textBox1_TextChanged(object sender, EventArgs e)
+        private async void textBox1_TextChanged(object sender, EventArgs e)
         {
             if (!string.IsNullOrEmpty(txbStep.Text) && txbStep.TextLength > 0)
             {
@@ -81,6 +87,11 @@ namespace EndoscopicSystem.V2.Forms
                     else
                     {
                         _useFormShow = null;
+                        if (_activeForm != null)
+                        {
+                            _activeForm.Close();
+                            _activeForm = null;
+                        }
                     }
                 }
                 catch (Exception ex)
@@ -90,5 +101,9 @@ namespace EndoscopicSystem.V2.Forms
             }
         }
 
+        private void FormProceed_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            FormProceed.Self.txbStep.Text = "0" + ",,";
+        }
     }
 }

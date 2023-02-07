@@ -323,6 +323,20 @@ namespace EndoscopicSystem.V2.Forms
             }
         }
 
+        private void FormLive_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            Disconnect();
+            if (videoSourcePlayer == null)
+            { return; }
+            if (videoSourcePlayer.IsRunning)
+            {
+                this.videoSourcePlayer.Stop();
+                _fileWriter.Close();
+            }
+
+            FormProceed.Self.txbStep.Text = "0" + ",,";
+        }
+
         private void txtHN_KeyDown(object sender, KeyEventArgs e)
         {
             if (e.KeyCode == Keys.Enter)
@@ -353,6 +367,12 @@ namespace EndoscopicSystem.V2.Forms
         {
             if (videoSourcePlayer.VideoSource != null)
             {
+                EnableConnectionControls(true);
+                SoundPlayer soundDisconnect = new SoundPlayer(_pathFolderSounds + @"\SoundCapture\Disconnecte.wav");
+                soundDisconnect.Play();
+
+                recordEndDate = DateTime.Now;
+
                 videoSourcePlayer.SignalToStop();
                 videoSourcePlayer.WaitForStop();
                 videoSourcePlayer.VideoSource = null;
@@ -361,12 +381,6 @@ namespace EndoscopicSystem.V2.Forms
                 {
                     _videoCaptureDevice.NewFrame -= new NewFrameEventHandler(videoSource_NewFrame);
                 }
-
-                EnableConnectionControls(true);
-                SoundPlayer soundDisconnect = new SoundPlayer(_pathFolderSounds + @"\SoundCapture\Disconnecte.wav");
-                soundDisconnect.Play();
-
-                recordEndDate = DateTime.Now;
             }
         }
 

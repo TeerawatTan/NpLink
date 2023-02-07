@@ -62,10 +62,11 @@ namespace EndoscopicSystem.V2.Forms
             // 
             // pictureBox_Statistic
             // 
+            this.pictureBox_Statistic.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.pictureBox_Statistic.BackColor = System.Drawing.Color.Transparent;
             this.pictureBox_Statistic.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.pictureBox_Statistic.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox_Statistic.Image")));
-            this.pictureBox_Statistic.Location = new System.Drawing.Point(935, 512);
+            this.pictureBox_Statistic.Location = new System.Drawing.Point(935, 448);
             this.pictureBox_Statistic.Name = "pictureBox_Statistic";
             this.pictureBox_Statistic.Size = new System.Drawing.Size(178, 163);
             this.pictureBox_Statistic.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -75,10 +76,11 @@ namespace EndoscopicSystem.V2.Forms
             // 
             // pictureBox_Setting
             // 
+            this.pictureBox_Setting.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.pictureBox_Setting.BackColor = System.Drawing.Color.Transparent;
             this.pictureBox_Setting.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.pictureBox_Setting.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox_Setting.Image")));
-            this.pictureBox_Setting.Location = new System.Drawing.Point(748, 512);
+            this.pictureBox_Setting.Location = new System.Drawing.Point(748, 448);
             this.pictureBox_Setting.Name = "pictureBox_Setting";
             this.pictureBox_Setting.Size = new System.Drawing.Size(178, 163);
             this.pictureBox_Setting.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -89,10 +91,11 @@ namespace EndoscopicSystem.V2.Forms
             // 
             // pictureBox_SeaarchPatient
             // 
+            this.pictureBox_SeaarchPatient.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.pictureBox_SeaarchPatient.BackColor = System.Drawing.Color.Transparent;
             this.pictureBox_SeaarchPatient.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.pictureBox_SeaarchPatient.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox_SeaarchPatient.Image")));
-            this.pictureBox_SeaarchPatient.Location = new System.Drawing.Point(564, 512);
+            this.pictureBox_SeaarchPatient.Location = new System.Drawing.Point(564, 448);
             this.pictureBox_SeaarchPatient.Name = "pictureBox_SeaarchPatient";
             this.pictureBox_SeaarchPatient.Size = new System.Drawing.Size(178, 163);
             this.pictureBox_SeaarchPatient.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -103,10 +106,11 @@ namespace EndoscopicSystem.V2.Forms
             // 
             // pictureBox_EndoscopyRoom
             // 
+            this.pictureBox_EndoscopyRoom.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.pictureBox_EndoscopyRoom.BackColor = System.Drawing.Color.Transparent;
             this.pictureBox_EndoscopyRoom.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.pictureBox_EndoscopyRoom.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox_EndoscopyRoom.Image")));
-            this.pictureBox_EndoscopyRoom.Location = new System.Drawing.Point(380, 512);
+            this.pictureBox_EndoscopyRoom.Location = new System.Drawing.Point(380, 448);
             this.pictureBox_EndoscopyRoom.Name = "pictureBox_EndoscopyRoom";
             this.pictureBox_EndoscopyRoom.Size = new System.Drawing.Size(178, 163);
             this.pictureBox_EndoscopyRoom.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -117,10 +121,11 @@ namespace EndoscopicSystem.V2.Forms
             // 
             // pictureBox_Patient
             // 
+            this.pictureBox_Patient.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.pictureBox_Patient.BackColor = System.Drawing.Color.Transparent;
             this.pictureBox_Patient.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.pictureBox_Patient.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox_Patient.Image")));
-            this.pictureBox_Patient.Location = new System.Drawing.Point(196, 512);
+            this.pictureBox_Patient.Location = new System.Drawing.Point(196, 448);
             this.pictureBox_Patient.Name = "pictureBox_Patient";
             this.pictureBox_Patient.Size = new System.Drawing.Size(178, 163);
             this.pictureBox_Patient.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -131,10 +136,11 @@ namespace EndoscopicSystem.V2.Forms
             // 
             // lb_Statistic
             // 
+            this.lb_Statistic.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.lb_Statistic.AutoSize = true;
             this.lb_Statistic.BackColor = System.Drawing.Color.Transparent;
             this.lb_Statistic.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
-            this.lb_Statistic.Location = new System.Drawing.Point(989, 678);
+            this.lb_Statistic.Location = new System.Drawing.Point(989, 614);
             this.lb_Statistic.Name = "lb_Statistic";
             this.lb_Statistic.Size = new System.Drawing.Size(75, 20);
             this.lb_Statistic.TabIndex = 18;
@@ -142,10 +148,11 @@ namespace EndoscopicSystem.V2.Forms
             // 
             // lb_Setting
             // 
+            this.lb_Setting.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.lb_Setting.AutoSize = true;
             this.lb_Setting.BackColor = System.Drawing.Color.Transparent;
             this.lb_Setting.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
-            this.lb_Setting.Location = new System.Drawing.Point(805, 678);
+            this.lb_Setting.Location = new System.Drawing.Point(805, 614);
             this.lb_Setting.Name = "lb_Setting";
             this.lb_Setting.Size = new System.Drawing.Size(67, 20);
             this.lb_Setting.TabIndex = 10;
@@ -153,10 +160,11 @@ namespace EndoscopicSystem.V2.Forms
             // 
             // lb_SearchPatient
             // 
+            this.lb_SearchPatient.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.lb_SearchPatient.AutoSize = true;
             this.lb_SearchPatient.BackColor = System.Drawing.Color.Transparent;
             this.lb_SearchPatient.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
-            this.lb_SearchPatient.Location = new System.Drawing.Point(589, 678);
+            this.lb_SearchPatient.Location = new System.Drawing.Point(589, 614);
             this.lb_SearchPatient.Name = "lb_SearchPatient";
             this.lb_SearchPatient.Size = new System.Drawing.Size(128, 20);
             this.lb_SearchPatient.TabIndex = 8;
@@ -164,10 +172,11 @@ namespace EndoscopicSystem.V2.Forms
             // 
             // lb_EndoscopyRoom
             // 
+            this.lb_EndoscopyRoom.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.lb_EndoscopyRoom.AutoSize = true;
             this.lb_EndoscopyRoom.BackColor = System.Drawing.Color.Transparent;
             this.lb_EndoscopyRoom.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
-            this.lb_EndoscopyRoom.Location = new System.Drawing.Point(394, 678);
+            this.lb_EndoscopyRoom.Location = new System.Drawing.Point(394, 614);
             this.lb_EndoscopyRoom.Name = "lb_EndoscopyRoom";
             this.lb_EndoscopyRoom.Size = new System.Drawing.Size(149, 20);
             this.lb_EndoscopyRoom.TabIndex = 6;
@@ -175,10 +184,11 @@ namespace EndoscopicSystem.V2.Forms
             // 
             // lb_Patient
             // 
+            this.lb_Patient.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.lb_Patient.AutoSize = true;
             this.lb_Patient.BackColor = System.Drawing.Color.Transparent;
             this.lb_Patient.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
-            this.lb_Patient.Location = new System.Drawing.Point(252, 678);
+            this.lb_Patient.Location = new System.Drawing.Point(252, 614);
             this.lb_Patient.Name = "lb_Patient";
             this.lb_Patient.Size = new System.Drawing.Size(66, 20);
             this.lb_Patient.TabIndex = 4;
@@ -186,10 +196,11 @@ namespace EndoscopicSystem.V2.Forms
             // 
             // lb_Dashboard
             // 
+            this.lb_Dashboard.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.lb_Dashboard.AutoSize = true;
             this.lb_Dashboard.BackColor = System.Drawing.Color.Transparent;
             this.lb_Dashboard.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
-            this.lb_Dashboard.Location = new System.Drawing.Point(48, 678);
+            this.lb_Dashboard.Location = new System.Drawing.Point(48, 614);
             this.lb_Dashboard.Name = "lb_Dashboard";
             this.lb_Dashboard.Size = new System.Drawing.Size(97, 20);
             this.lb_Dashboard.TabIndex = 2;
@@ -197,10 +208,11 @@ namespace EndoscopicSystem.V2.Forms
             // 
             // pictureBox_Dashboard
             // 
+            this.pictureBox_Dashboard.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.pictureBox_Dashboard.BackColor = System.Drawing.Color.Transparent;
             this.pictureBox_Dashboard.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.pictureBox_Dashboard.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox_Dashboard.Image")));
-            this.pictureBox_Dashboard.Location = new System.Drawing.Point(12, 512);
+            this.pictureBox_Dashboard.Location = new System.Drawing.Point(12, 448);
             this.pictureBox_Dashboard.Name = "pictureBox_Dashboard";
             this.pictureBox_Dashboard.Size = new System.Drawing.Size(178, 163);
             this.pictureBox_Dashboard.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -229,7 +241,7 @@ namespace EndoscopicSystem.V2.Forms
             this.pictureBox_logo.Image = global::EndoscopicSystem.Properties.Resources.nplink_05;
             this.pictureBox_logo.Location = new System.Drawing.Point(1, 0);
             this.pictureBox_logo.Name = "pictureBox_logo";
-            this.pictureBox_logo.Size = new System.Drawing.Size(211, 206);
+            this.pictureBox_logo.Size = new System.Drawing.Size(211, 227);
             this.pictureBox_logo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox_logo.TabIndex = 2;
             this.pictureBox_logo.TabStop = false;
@@ -276,7 +288,7 @@ namespace EndoscopicSystem.V2.Forms
             this.label3.BackColor = System.Drawing.Color.Transparent;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
             this.label3.ForeColor = System.Drawing.Color.DarkGray;
-            this.label3.Location = new System.Drawing.Point(830, 700);
+            this.label3.Location = new System.Drawing.Point(820, 634);
             this.label3.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(295, 17);
@@ -312,6 +324,7 @@ namespace EndoscopicSystem.V2.Forms
             this.Name = "FormHome";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Home Page";
+            this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.Load += new System.EventHandler(this.FormHome_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox_Statistic)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox_Setting)).EndInit();

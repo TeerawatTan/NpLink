@@ -251,17 +251,19 @@
             // 
             this.cbbYear.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.cbbYear.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cbbYear.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
             this.cbbYear.FormattingEnabled = true;
-            this.cbbYear.Location = new System.Drawing.Point(972, 25);
+            this.cbbYear.Location = new System.Drawing.Point(972, 20);
             this.cbbYear.Margin = new System.Windows.Forms.Padding(2);
             this.cbbYear.Name = "cbbYear";
-            this.cbbYear.Size = new System.Drawing.Size(94, 21);
+            this.cbbYear.Size = new System.Drawing.Size(94, 28);
             this.cbbYear.TabIndex = 31;
             // 
             // cbbMonth
             // 
             this.cbbMonth.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.cbbMonth.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cbbMonth.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
             this.cbbMonth.FormattingEnabled = true;
             this.cbbMonth.Items.AddRange(new object[] {
             "มกราคม",
@@ -276,21 +278,21 @@
             "ตุลาคม",
             "พฤศจิกายน",
             "ธันวาคม"});
-            this.cbbMonth.Location = new System.Drawing.Point(749, 25);
+            this.cbbMonth.Location = new System.Drawing.Point(749, 20);
             this.cbbMonth.Margin = new System.Windows.Forms.Padding(2);
             this.cbbMonth.Name = "cbbMonth";
-            this.cbbMonth.Size = new System.Drawing.Size(158, 21);
+            this.cbbMonth.Size = new System.Drawing.Size(158, 28);
             this.cbbMonth.TabIndex = 32;
             // 
             // label2
             // 
             this.label2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
-            this.label2.Location = new System.Drawing.Point(921, 27);
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
+            this.label2.Location = new System.Drawing.Point(913, 23);
             this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(45, 17);
+            this.label2.Size = new System.Drawing.Size(55, 20);
             this.label2.TabIndex = 33;
             this.label2.Text = "ปี พ.ศ.";
             // 
@@ -298,11 +300,11 @@
             // 
             this.label5.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
-            this.label5.Location = new System.Drawing.Point(704, 27);
+            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
+            this.label5.Location = new System.Drawing.Point(700, 23);
             this.label5.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(36, 17);
+            this.label5.Size = new System.Drawing.Size(45, 20);
             this.label5.TabIndex = 34;
             this.label5.Text = "เดือน";
             // 
@@ -337,11 +339,12 @@
             // 
             this.cbbOrder.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.cbbOrder.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cbbOrder.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
             this.cbbOrder.FormattingEnabled = true;
-            this.cbbOrder.Location = new System.Drawing.Point(1081, 25);
+            this.cbbOrder.Location = new System.Drawing.Point(1081, 20);
             this.cbbOrder.Margin = new System.Windows.Forms.Padding(2);
             this.cbbOrder.Name = "cbbOrder";
-            this.cbbOrder.Size = new System.Drawing.Size(158, 21);
+            this.cbbOrder.Size = new System.Drawing.Size(158, 28);
             this.cbbOrder.TabIndex = 37;
             this.cbbOrder.SelectedIndexChanged += new System.EventHandler(this.cbbOrder_SelectedIndexChanged);
             // 
@@ -363,6 +366,7 @@
             // 
             this.cbbInstrument.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.cbbInstrument.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cbbInstrument.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
             this.cbbInstrument.FormattingEnabled = true;
             this.cbbInstrument.Items.AddRange(new object[] {
             "มกราคม",
@@ -377,21 +381,21 @@
             "ตุลาคม",
             "พฤศจิกายน",
             "ธันวาคม"});
-            this.cbbInstrument.Location = new System.Drawing.Point(369, 25);
+            this.cbbInstrument.Location = new System.Drawing.Point(369, 20);
             this.cbbInstrument.Margin = new System.Windows.Forms.Padding(2);
             this.cbbInstrument.Name = "cbbInstrument";
-            this.cbbInstrument.Size = new System.Drawing.Size(158, 21);
+            this.cbbInstrument.Size = new System.Drawing.Size(158, 28);
             this.cbbInstrument.TabIndex = 39;
             // 
             // label6
             // 
             this.label6.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.label6.AutoSize = true;
-            this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
-            this.label6.Location = new System.Drawing.Point(213, 26);
+            this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
+            this.label6.Location = new System.Drawing.Point(172, 23);
             this.label6.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(152, 17);
+            this.label6.Size = new System.Drawing.Size(193, 20);
             this.label6.TabIndex = 40;
             this.label6.Text = "Procedure/Instrument :";
             // 
@@ -441,6 +445,7 @@
             this.Name = "DashboardForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Dashboard Page";
+            this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.Load += new System.EventHandler(this.DashboardForm_Load);
             ((System.ComponentModel.ISupportInitialize)(this.chart1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridQueue)).EndInit();

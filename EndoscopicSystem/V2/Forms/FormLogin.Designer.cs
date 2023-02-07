@@ -30,7 +30,6 @@ namespace EndoscopicSystem.V2.Forms
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormLogin));
-            this.panel1 = new System.Windows.Forms.Panel();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.btnLogin = new System.Windows.Forms.Button();
             this.txbPassword = new System.Windows.Forms.TextBox();
@@ -38,34 +37,18 @@ namespace EndoscopicSystem.V2.Forms
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
-            this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
-            // 
-            // panel1
-            // 
-            this.panel1.BackColor = System.Drawing.Color.Transparent;
-            this.panel1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.panel1.Controls.Add(this.pictureBox1);
-            this.panel1.Controls.Add(this.btnLogin);
-            this.panel1.Controls.Add(this.txbPassword);
-            this.panel1.Controls.Add(this.txbUsername);
-            this.panel1.Controls.Add(this.label2);
-            this.panel1.Controls.Add(this.label1);
-            this.panel1.Location = new System.Drawing.Point(51, 56);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(331, 413);
-            this.panel1.TabIndex = 0;
             // 
             // pictureBox1
             // 
             this.pictureBox1.BackColor = System.Drawing.Color.Transparent;
             this.pictureBox1.Image = global::EndoscopicSystem.Properties.Resources.nplink_05;
             this.pictureBox1.InitialImage = null;
-            this.pictureBox1.Location = new System.Drawing.Point(24, 14);
+            this.pictureBox1.Location = new System.Drawing.Point(108, 85);
             this.pictureBox1.Margin = new System.Windows.Forms.Padding(2);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(283, 231);
+            this.pictureBox1.Size = new System.Drawing.Size(211, 227);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox1.TabIndex = 1;
             this.pictureBox1.TabStop = false;
@@ -75,7 +58,7 @@ namespace EndoscopicSystem.V2.Forms
             // 
             this.btnLogin.FlatStyle = System.Windows.Forms.FlatStyle.System;
             this.btnLogin.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
-            this.btnLogin.Location = new System.Drawing.Point(17, 342);
+            this.btnLogin.Location = new System.Drawing.Point(63, 409);
             this.btnLogin.Margin = new System.Windows.Forms.Padding(2);
             this.btnLogin.Name = "btnLogin";
             this.btnLogin.Size = new System.Drawing.Size(288, 40);
@@ -88,7 +71,7 @@ namespace EndoscopicSystem.V2.Forms
             // 
             this.txbPassword.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
             this.txbPassword.ForeColor = System.Drawing.Color.Black;
-            this.txbPassword.Location = new System.Drawing.Point(130, 295);
+            this.txbPassword.Location = new System.Drawing.Point(176, 362);
             this.txbPassword.Name = "txbPassword";
             this.txbPassword.PasswordChar = '*';
             this.txbPassword.Size = new System.Drawing.Size(175, 29);
@@ -101,7 +84,7 @@ namespace EndoscopicSystem.V2.Forms
             // 
             this.txbUsername.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
             this.txbUsername.ForeColor = System.Drawing.Color.Black;
-            this.txbUsername.Location = new System.Drawing.Point(130, 250);
+            this.txbUsername.Location = new System.Drawing.Point(176, 317);
             this.txbUsername.Name = "txbUsername";
             this.txbUsername.Size = new System.Drawing.Size(175, 29);
             this.txbUsername.TabIndex = 1;
@@ -113,7 +96,7 @@ namespace EndoscopicSystem.V2.Forms
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
             this.label2.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.label2.Location = new System.Drawing.Point(18, 295);
+            this.label2.Location = new System.Drawing.Point(64, 362);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(112, 24);
             this.label2.TabIndex = 99;
@@ -124,7 +107,7 @@ namespace EndoscopicSystem.V2.Forms
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
             this.label1.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.label1.Location = new System.Drawing.Point(13, 252);
+            this.label1.Location = new System.Drawing.Point(59, 319);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(117, 24);
             this.label1.TabIndex = 98;
@@ -151,8 +134,13 @@ namespace EndoscopicSystem.V2.Forms
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(959, 610);
+            this.Controls.Add(this.pictureBox1);
+            this.Controls.Add(this.btnLogin);
             this.Controls.Add(this.label3);
-            this.Controls.Add(this.panel1);
+            this.Controls.Add(this.txbPassword);
+            this.Controls.Add(this.txbUsername);
+            this.Controls.Add(this.label1);
+            this.Controls.Add(this.label2);
             this.DoubleBuffered = true;
             this.MaximizeBox = false;
             this.MinimizeBox = false;
@@ -162,8 +150,6 @@ namespace EndoscopicSystem.V2.Forms
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.FormLogin_FormClosing);
             this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.FormLogin_FormClosed);
             this.Load += new System.EventHandler(this.FormLogin_Load);
-            this.panel1.ResumeLayout(false);
-            this.panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -171,8 +157,6 @@ namespace EndoscopicSystem.V2.Forms
         }
 
         #endregion
-
-        private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.TextBox txbPassword;
         private System.Windows.Forms.TextBox txbUsername;
         private System.Windows.Forms.Label label2;

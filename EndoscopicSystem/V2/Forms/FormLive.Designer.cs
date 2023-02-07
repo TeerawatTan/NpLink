@@ -496,6 +496,7 @@ namespace EndoscopicSystem.V2.Forms
             this.Text = "Live Page";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.FormLive_FormClosing);
+            this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.FormLive_FormClosed);
             this.Load += new System.EventHandler(this.FormLive_Load);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
