@@ -27,7 +27,7 @@ namespace EndoscopicSystem.V2.Forms
             if (_currentBtn != null)
             {
                 _currentBtn.BackColor = Color.FromArgb(51, 80, 139);
-                _currentBtn.ForeColor = Color.Black;
+                _currentBtn.ForeColor = Color.White;
             }
         }
 
@@ -37,7 +37,7 @@ namespace EndoscopicSystem.V2.Forms
             {
                 DisableMenuButton();
                 _currentBtn = (Button)senderBtn;
-                _currentBtn.BackColor = Color.FromArgb(153, 204, 255);
+                _currentBtn.BackColor = Color.WhiteSmoke;    //Color.FromArgb(153, 204, 255);
                 _currentBtn.ForeColor = Color.Orange;
             }
         }
@@ -119,6 +119,12 @@ namespace EndoscopicSystem.V2.Forms
         private void menuInstrumentSetting_Click(object sender, EventArgs e)
         {
             OpenChildForm(new FormInstrumentSetting(_id));
+            ActiveMenuButton(sender);
+        }
+
+        private void menuEndoscopicRoom_Click(object sender, EventArgs e)
+        {
+            OpenChildForm(new EndoscopyRoomForm(_id));
             ActiveMenuButton(sender);
         }
     }

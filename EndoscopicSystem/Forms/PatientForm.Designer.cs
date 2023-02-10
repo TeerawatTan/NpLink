@@ -28,9 +28,9 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle10 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle11 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle12 = new System.Windows.Forms.DataGridViewCellStyle();
             this.cbbSex = new System.Windows.Forms.ComboBox();
             this.txtCID = new System.Windows.Forms.TextBox();
             this.txtFullName = new System.Windows.Forms.TextBox();
@@ -42,7 +42,6 @@
             this.txtHN = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.cbbDoctorName = new System.Windows.Forms.ComboBox();
-            this.cbbStation = new System.Windows.Forms.ComboBox();
             this.cbbNurseName3 = new System.Windows.Forms.ComboBox();
             this.cbbNurseName2 = new System.Windows.Forms.ComboBox();
             this.cbbNurseName1 = new System.Windows.Forms.ComboBox();
@@ -68,22 +67,16 @@
             this.btnBrowse = new System.Windows.Forms.Button();
             this.openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.label19 = new System.Windows.Forms.Label();
+            this.dtBirthDate = new System.Windows.Forms.DateTimePicker();
             this.cbbFinancial = new System.Windows.Forms.ComboBox();
             this.label24 = new System.Windows.Forms.Label();
             this.label23 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
-            this.txbPreDiagnosis2ID = new System.Windows.Forms.TextBox();
-            this.txbPreDiagnosis1ID = new System.Windows.Forms.TextBox();
             this.label22 = new System.Windows.Forms.Label();
-            this.cbbPreDiagnosis2 = new System.Windows.Forms.ComboBox();
-            this.cbbPreDiagnosis1 = new System.Windows.Forms.ComboBox();
-            this.label21 = new System.Windows.Forms.Label();
             this.cbbIndication = new System.Windows.Forms.ComboBox();
             this.label20 = new System.Windows.Forms.Label();
-            this.cbbAnesthesiaMethod2 = new System.Windows.Forms.ComboBox();
-            this.cbbAnesthesiaMethod1 = new System.Windows.Forms.ComboBox();
-            this.label19 = new System.Windows.Forms.Label();
             this.txbRefer = new System.Windows.Forms.TextBox();
             this.chkRefer = new System.Windows.Forms.CheckBox();
             this.cbbWard = new System.Windows.Forms.ComboBox();
@@ -98,7 +91,16 @@
             this.label10 = new System.Windows.Forms.Label();
             this.chkFollowUpCase = new System.Windows.Forms.CheckBox();
             this.chkNewCase = new System.Windows.Forms.CheckBox();
+            this.cbbStation = new System.Windows.Forms.ComboBox();
             this.label6 = new System.Windows.Forms.Label();
+            this.txbPreDiag2ID = new System.Windows.Forms.TextBox();
+            this.txbPreDiag1ID = new System.Windows.Forms.TextBox();
+            this.txbPreDiag2Text = new System.Windows.Forms.TextBox();
+            this.label100 = new System.Windows.Forms.Label();
+            this.txbPreDiag2Code = new System.Windows.Forms.TextBox();
+            this.txbPreDiag1Text = new System.Windows.Forms.TextBox();
+            this.label99 = new System.Windows.Forms.Label();
+            this.txbPreDiag1Code = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.gridPatient)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panel1.SuspendLayout();
@@ -114,7 +116,7 @@
             "- Select Sex -",
             "Male",
             "FeMale"});
-            this.cbbSex.Location = new System.Drawing.Point(78, 81);
+            this.cbbSex.Location = new System.Drawing.Point(102, 116);
             this.cbbSex.Margin = new System.Windows.Forms.Padding(2);
             this.cbbSex.Name = "cbbSex";
             this.cbbSex.Size = new System.Drawing.Size(140, 28);
@@ -122,6 +124,7 @@
             // 
             // txtCID
             // 
+            this.txtCID.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.txtCID.CausesValidation = false;
             this.txtCID.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
             this.txtCID.Location = new System.Drawing.Point(574, 52);
@@ -134,6 +137,7 @@
             // 
             // txtFullName
             // 
+            this.txtFullName.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.txtFullName.CausesValidation = false;
             this.txtFullName.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
             this.txtFullName.Location = new System.Drawing.Point(574, 22);
@@ -146,78 +150,81 @@
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
-            this.label4.Location = new System.Drawing.Point(500, 53);
+            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
+            this.label4.Location = new System.Drawing.Point(494, 52);
             this.label4.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(68, 20);
+            this.label4.Size = new System.Drawing.Size(76, 20);
             this.label4.TabIndex = 0;
             this.label4.Text = "IDCard :";
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
-            this.label2.Location = new System.Drawing.Point(504, 25);
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
+            this.label2.Location = new System.Drawing.Point(478, 25);
             this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(59, 20);
+            this.label2.Size = new System.Drawing.Size(94, 20);
             this.label2.TabIndex = 0;
-            this.label2.Text = "Name :";
+            this.label2.Text = "FullName :";
             // 
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
-            this.label5.Location = new System.Drawing.Point(32, 84);
+            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
+            this.label5.Location = new System.Drawing.Point(49, 119);
             this.label5.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(44, 20);
+            this.label5.Size = new System.Drawing.Size(49, 20);
             this.label5.TabIndex = 0;
             this.label5.Text = "Sex :";
             // 
             // txtAge
             // 
+            this.txtAge.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.txtAge.CausesValidation = false;
             this.txtAge.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
-            this.txtAge.Location = new System.Drawing.Point(80, 52);
+            this.txtAge.Location = new System.Drawing.Point(102, 87);
             this.txtAge.Margin = new System.Windows.Forms.Padding(2);
             this.txtAge.MaxLength = 3;
             this.txtAge.Name = "txtAge";
-            this.txtAge.Size = new System.Drawing.Size(138, 26);
+            this.txtAge.ReadOnly = true;
+            this.txtAge.Size = new System.Drawing.Size(66, 26);
             this.txtAge.TabIndex = 3;
             this.txtAge.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtAge_KeyPress);
             // 
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
-            this.label3.Location = new System.Drawing.Point(30, 55);
+            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
+            this.label3.Location = new System.Drawing.Point(47, 89);
             this.label3.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(46, 20);
+            this.label3.Size = new System.Drawing.Size(51, 20);
             this.label3.TabIndex = 0;
             this.label3.Text = "Age :";
             // 
             // txtHN
             // 
+            this.txtHN.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.txtHN.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
-            this.txtHN.Location = new System.Drawing.Point(78, 22);
+            this.txtHN.Location = new System.Drawing.Point(102, 22);
             this.txtHN.Margin = new System.Windows.Forms.Padding(2);
             this.txtHN.MaxLength = 10;
             this.txtHN.Name = "txtHN";
-            this.txtHN.Size = new System.Drawing.Size(365, 26);
+            this.txtHN.Size = new System.Drawing.Size(313, 26);
             this.txtHN.TabIndex = 1;
             this.txtHN.KeyUp += new System.Windows.Forms.KeyEventHandler(this.txtHN_KeyUp);
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
-            this.label1.Location = new System.Drawing.Point(25, 25);
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
+            this.label1.Location = new System.Drawing.Point(54, 25);
             this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(40, 20);
+            this.label1.Size = new System.Drawing.Size(44, 20);
             this.label1.TabIndex = 0;
             this.label1.Text = "HN :";
             // 
@@ -229,19 +236,8 @@
             this.cbbDoctorName.Location = new System.Drawing.Point(789, 110);
             this.cbbDoctorName.Margin = new System.Windows.Forms.Padding(2);
             this.cbbDoctorName.Name = "cbbDoctorName";
-            this.cbbDoctorName.Size = new System.Drawing.Size(440, 28);
+            this.cbbDoctorName.Size = new System.Drawing.Size(446, 28);
             this.cbbDoctorName.TabIndex = 15;
-            // 
-            // cbbStation
-            // 
-            this.cbbStation.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cbbStation.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
-            this.cbbStation.FormattingEnabled = true;
-            this.cbbStation.Location = new System.Drawing.Point(192, 110);
-            this.cbbStation.Margin = new System.Windows.Forms.Padding(2);
-            this.cbbStation.Name = "cbbStation";
-            this.cbbStation.Size = new System.Drawing.Size(440, 28);
-            this.cbbStation.TabIndex = 14;
             // 
             // cbbNurseName3
             // 
@@ -278,13 +274,14 @@
             // 
             // txtStaffName
             // 
+            this.txtStaffName.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.txtStaffName.CausesValidation = false;
             this.txtStaffName.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
             this.txtStaffName.Location = new System.Drawing.Point(789, 142);
             this.txtStaffName.Margin = new System.Windows.Forms.Padding(2);
             this.txtStaffName.MaxLength = 255;
             this.txtStaffName.Name = "txtStaffName";
-            this.txtStaffName.Size = new System.Drawing.Size(440, 26);
+            this.txtStaffName.Size = new System.Drawing.Size(446, 26);
             this.txtStaffName.TabIndex = 19;
             // 
             // dtOperatingDate
@@ -348,49 +345,50 @@
             // label11
             // 
             this.label11.AutoSize = true;
-            this.label11.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
-            this.label11.Location = new System.Drawing.Point(720, 113);
+            this.label11.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
+            this.label11.Location = new System.Drawing.Point(712, 113);
             this.label11.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(65, 20);
+            this.label11.Size = new System.Drawing.Size(73, 20);
             this.label11.TabIndex = 0;
             this.label11.Text = "Doctor :";
             // 
             // label17
             // 
             this.label17.AutoSize = true;
-            this.label17.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
-            this.label17.Location = new System.Drawing.Point(733, 145);
+            this.label17.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
+            this.label17.Location = new System.Drawing.Point(726, 145);
             this.label17.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label17.Name = "label17";
-            this.label17.Size = new System.Drawing.Size(52, 20);
+            this.label17.Size = new System.Drawing.Size(59, 20);
             this.label17.TabIndex = 0;
             this.label17.Text = "Staff :";
             // 
             // label8
             // 
             this.label8.AutoSize = true;
-            this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
-            this.label8.Location = new System.Drawing.Point(29, 112);
+            this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
+            this.label8.Location = new System.Drawing.Point(24, 113);
             this.label8.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(147, 20);
+            this.label8.Size = new System.Drawing.Size(164, 20);
             this.label8.TabIndex = 0;
             this.label8.Text = "Endoscopic Room :";
             // 
             // label15
             // 
             this.label15.AutoSize = true;
-            this.label15.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
-            this.label15.Location = new System.Drawing.Point(117, 145);
+            this.label15.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
+            this.label15.Location = new System.Drawing.Point(122, 145);
             this.label15.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label15.Name = "label15";
-            this.label15.Size = new System.Drawing.Size(59, 20);
+            this.label15.Size = new System.Drawing.Size(66, 20);
             this.label15.TabIndex = 0;
             this.label15.Text = "Nurse :";
             // 
             // txtSymptom
             // 
+            this.txtSymptom.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.txtSymptom.CausesValidation = false;
             this.txtSymptom.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
             this.txtSymptom.Location = new System.Drawing.Point(192, 81);
@@ -403,33 +401,33 @@
             // label12
             // 
             this.label12.AutoSize = true;
-            this.label12.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
-            this.label12.Location = new System.Drawing.Point(92, 83);
+            this.label12.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
+            this.label12.Location = new System.Drawing.Point(95, 83);
             this.label12.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(84, 20);
+            this.label12.Size = new System.Drawing.Size(93, 20);
             this.label12.TabIndex = 0;
             this.label12.Text = "Symptom :";
             // 
             // label13
             // 
             this.label13.AutoSize = true;
-            this.label13.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
-            this.label13.Location = new System.Drawing.Point(51, 52);
+            this.label13.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
+            this.label13.Location = new System.Drawing.Point(47, 52);
             this.label13.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(125, 20);
+            this.label13.Size = new System.Drawing.Size(141, 20);
             this.label13.TabIndex = 0;
             this.label13.Text = "Operating Time :";
             // 
             // label14
             // 
             this.label14.AutoSize = true;
-            this.label14.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
-            this.label14.Location = new System.Drawing.Point(30, 19);
+            this.label14.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
+            this.label14.Location = new System.Drawing.Point(24, 18);
             this.label14.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label14.Name = "label14";
-            this.label14.Size = new System.Drawing.Size(146, 20);
+            this.label14.Size = new System.Drawing.Size(164, 20);
             this.label14.TabIndex = 0;
             this.label14.Text = "Appointment Time :";
             // 
@@ -495,35 +493,35 @@
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.gridPatient.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
-            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
-            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.gridPatient.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle10.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle10.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle10.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
+            dataGridViewCellStyle10.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle10.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle10.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle10.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.gridPatient.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle10;
             this.gridPatient.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
-            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.gridPatient.DefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle11.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle11.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle11.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
+            dataGridViewCellStyle11.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle11.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle11.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle11.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.gridPatient.DefaultCellStyle = dataGridViewCellStyle11;
             this.gridPatient.Location = new System.Drawing.Point(9, 620);
             this.gridPatient.Margin = new System.Windows.Forms.Padding(2);
             this.gridPatient.Name = "gridPatient";
             this.gridPatient.ReadOnly = true;
-            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle3.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle3.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
-            dataGridViewCellStyle3.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.gridPatient.RowHeadersDefaultCellStyle = dataGridViewCellStyle3;
+            dataGridViewCellStyle12.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle12.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle12.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
+            dataGridViewCellStyle12.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle12.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle12.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle12.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.gridPatient.RowHeadersDefaultCellStyle = dataGridViewCellStyle12;
             this.gridPatient.RowHeadersWidth = 51;
             this.gridPatient.RowTemplate.Height = 24;
             this.gridPatient.Size = new System.Drawing.Size(1248, 117);
@@ -561,6 +559,8 @@
             // 
             this.panel1.BackColor = System.Drawing.Color.White;
             this.panel1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panel1.Controls.Add(this.label19);
+            this.panel1.Controls.Add(this.dtBirthDate);
             this.panel1.Controls.Add(this.cbbFinancial);
             this.panel1.Controls.Add(this.label24);
             this.panel1.Controls.Add(this.label23);
@@ -580,6 +580,32 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(982, 161);
             this.panel1.TabIndex = 22;
+            // 
+            // label19
+            // 
+            this.label19.AutoSize = true;
+            this.label19.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
+            this.label19.Location = new System.Drawing.Point(2, 55);
+            this.label19.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label19.Name = "label19";
+            this.label19.Size = new System.Drawing.Size(96, 20);
+            this.label19.TabIndex = 108;
+            this.label19.Text = "BirthDate :";
+            // 
+            // dtBirthDate
+            // 
+            this.dtBirthDate.CausesValidation = false;
+            this.dtBirthDate.CustomFormat = "dd MMMM yyyy";
+            this.dtBirthDate.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
+            this.dtBirthDate.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
+            this.dtBirthDate.Location = new System.Drawing.Point(102, 52);
+            this.dtBirthDate.Margin = new System.Windows.Forms.Padding(2);
+            this.dtBirthDate.MinDate = new System.DateTime(1900, 1, 1, 0, 0, 0, 0);
+            this.dtBirthDate.Name = "dtBirthDate";
+            this.dtBirthDate.Size = new System.Drawing.Size(313, 29);
+            this.dtBirthDate.TabIndex = 109;
+            this.dtBirthDate.Value = new System.DateTime(2023, 2, 10, 0, 0, 0, 0);
+            this.dtBirthDate.ValueChanged += new System.EventHandler(this.dtBirthDate_ValueChanged);
             // 
             // cbbFinancial
             // 
@@ -611,7 +637,7 @@
             this.label23.BackColor = System.Drawing.Color.Transparent;
             this.label23.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
             this.label23.ForeColor = System.Drawing.Color.Red;
-            this.label23.Location = new System.Drawing.Point(58, 25);
+            this.label23.Location = new System.Drawing.Point(87, 25);
             this.label23.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label23.Name = "label23";
             this.label23.Size = new System.Drawing.Size(15, 20);
@@ -621,11 +647,11 @@
             // label7
             // 
             this.label7.AutoSize = true;
-            this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
-            this.label7.Location = new System.Drawing.Point(492, 84);
+            this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
+            this.label7.Location = new System.Drawing.Point(479, 85);
             this.label7.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(80, 20);
+            this.label7.Size = new System.Drawing.Size(91, 20);
             this.label7.TabIndex = 6;
             this.label7.Text = "Financial :";
             // 
@@ -635,17 +661,9 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.panel2.BackColor = System.Drawing.Color.White;
             this.panel2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.panel2.Controls.Add(this.txbPreDiagnosis2ID);
-            this.panel2.Controls.Add(this.txbPreDiagnosis1ID);
             this.panel2.Controls.Add(this.label22);
-            this.panel2.Controls.Add(this.cbbPreDiagnosis2);
-            this.panel2.Controls.Add(this.cbbPreDiagnosis1);
-            this.panel2.Controls.Add(this.label21);
             this.panel2.Controls.Add(this.cbbIndication);
             this.panel2.Controls.Add(this.label20);
-            this.panel2.Controls.Add(this.cbbAnesthesiaMethod2);
-            this.panel2.Controls.Add(this.cbbAnesthesiaMethod1);
-            this.panel2.Controls.Add(this.label19);
             this.panel2.Controls.Add(this.txbRefer);
             this.panel2.Controls.Add(this.chkRefer);
             this.panel2.Controls.Add(this.cbbWard);
@@ -679,36 +697,20 @@
             this.panel2.Controls.Add(this.dtAppointmentTime);
             this.panel2.Controls.Add(this.dtAppointmentDate);
             this.panel2.Controls.Add(this.label6);
+            this.panel2.Controls.Add(this.txbPreDiag2ID);
+            this.panel2.Controls.Add(this.txbPreDiag1ID);
+            this.panel2.Controls.Add(this.txbPreDiag2Text);
+            this.panel2.Controls.Add(this.label100);
+            this.panel2.Controls.Add(this.txbPreDiag2Code);
+            this.panel2.Controls.Add(this.txbPreDiag1Text);
+            this.panel2.Controls.Add(this.label99);
+            this.panel2.Controls.Add(this.txbPreDiag1Code);
             this.panel2.Cursor = System.Windows.Forms.Cursors.Default;
             this.panel2.Location = new System.Drawing.Point(9, 231);
             this.panel2.Margin = new System.Windows.Forms.Padding(2);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(1248, 370);
             this.panel2.TabIndex = 8;
-            // 
-            // txbPreDiagnosis2ID
-            // 
-            this.txbPreDiagnosis2ID.CausesValidation = false;
-            this.txbPreDiagnosis2ID.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
-            this.txbPreDiagnosis2ID.Location = new System.Drawing.Point(789, 327);
-            this.txbPreDiagnosis2ID.Margin = new System.Windows.Forms.Padding(2);
-            this.txbPreDiagnosis2ID.MaxLength = 255;
-            this.txbPreDiagnosis2ID.Name = "txbPreDiagnosis2ID";
-            this.txbPreDiagnosis2ID.Size = new System.Drawing.Size(21, 26);
-            this.txbPreDiagnosis2ID.TabIndex = 108;
-            this.txbPreDiagnosis2ID.Visible = false;
-            // 
-            // txbPreDiagnosis1ID
-            // 
-            this.txbPreDiagnosis1ID.CausesValidation = false;
-            this.txbPreDiagnosis1ID.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
-            this.txbPreDiagnosis1ID.Location = new System.Drawing.Point(789, 295);
-            this.txbPreDiagnosis1ID.Margin = new System.Windows.Forms.Padding(2);
-            this.txbPreDiagnosis1ID.MaxLength = 255;
-            this.txbPreDiagnosis1ID.Name = "txbPreDiagnosis1ID";
-            this.txbPreDiagnosis1ID.Size = new System.Drawing.Size(21, 26);
-            this.txbPreDiagnosis1ID.TabIndex = 107;
-            this.txbPreDiagnosis1ID.Visible = false;
             // 
             // label22
             // 
@@ -723,47 +725,12 @@
             this.label22.TabIndex = 106;
             this.label22.Text = "*";
             // 
-            // cbbPreDiagnosis2
-            // 
-            this.cbbPreDiagnosis2.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cbbPreDiagnosis2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
-            this.cbbPreDiagnosis2.FormattingEnabled = true;
-            this.cbbPreDiagnosis2.Location = new System.Drawing.Point(789, 327);
-            this.cbbPreDiagnosis2.Margin = new System.Windows.Forms.Padding(2);
-            this.cbbPreDiagnosis2.Name = "cbbPreDiagnosis2";
-            this.cbbPreDiagnosis2.Size = new System.Drawing.Size(440, 28);
-            this.cbbPreDiagnosis2.TabIndex = 105;
-            this.cbbPreDiagnosis2.SelectedIndexChanged += new System.EventHandler(this.cbbPreDiagnosis2_SelectedIndexChanged);
-            // 
-            // cbbPreDiagnosis1
-            // 
-            this.cbbPreDiagnosis1.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cbbPreDiagnosis1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
-            this.cbbPreDiagnosis1.FormattingEnabled = true;
-            this.cbbPreDiagnosis1.Location = new System.Drawing.Point(789, 295);
-            this.cbbPreDiagnosis1.Margin = new System.Windows.Forms.Padding(2);
-            this.cbbPreDiagnosis1.Name = "cbbPreDiagnosis1";
-            this.cbbPreDiagnosis1.Size = new System.Drawing.Size(440, 28);
-            this.cbbPreDiagnosis1.TabIndex = 104;
-            this.cbbPreDiagnosis1.SelectedIndexChanged += new System.EventHandler(this.cbbPreDiagnosis1_SelectedIndexChanged);
-            // 
-            // label21
-            // 
-            this.label21.AutoSize = true;
-            this.label21.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
-            this.label21.Location = new System.Drawing.Point(669, 298);
-            this.label21.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label21.Name = "label21";
-            this.label21.Size = new System.Drawing.Size(116, 20);
-            this.label21.TabIndex = 103;
-            this.label21.Text = "Pre-Diagnosis :";
-            // 
             // cbbIndication
             // 
             this.cbbIndication.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cbbIndication.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
             this.cbbIndication.FormattingEnabled = true;
-            this.cbbIndication.Location = new System.Drawing.Point(192, 327);
+            this.cbbIndication.Location = new System.Drawing.Point(192, 263);
             this.cbbIndication.Margin = new System.Windows.Forms.Padding(2);
             this.cbbIndication.Name = "cbbIndication";
             this.cbbIndication.Size = new System.Drawing.Size(440, 28);
@@ -772,52 +739,20 @@
             // label20
             // 
             this.label20.AutoSize = true;
-            this.label20.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
-            this.label20.Location = new System.Drawing.Point(90, 330);
+            this.label20.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
+            this.label20.Location = new System.Drawing.Point(83, 266);
             this.label20.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label20.Name = "label20";
-            this.label20.Size = new System.Drawing.Size(86, 20);
+            this.label20.Size = new System.Drawing.Size(98, 20);
             this.label20.TabIndex = 101;
             this.label20.Text = "Indication :";
             // 
-            // cbbAnesthesiaMethod2
-            // 
-            this.cbbAnesthesiaMethod2.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cbbAnesthesiaMethod2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
-            this.cbbAnesthesiaMethod2.FormattingEnabled = true;
-            this.cbbAnesthesiaMethod2.Location = new System.Drawing.Point(192, 295);
-            this.cbbAnesthesiaMethod2.Margin = new System.Windows.Forms.Padding(2);
-            this.cbbAnesthesiaMethod2.Name = "cbbAnesthesiaMethod2";
-            this.cbbAnesthesiaMethod2.Size = new System.Drawing.Size(440, 28);
-            this.cbbAnesthesiaMethod2.TabIndex = 100;
-            // 
-            // cbbAnesthesiaMethod1
-            // 
-            this.cbbAnesthesiaMethod1.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cbbAnesthesiaMethod1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
-            this.cbbAnesthesiaMethod1.FormattingEnabled = true;
-            this.cbbAnesthesiaMethod1.Location = new System.Drawing.Point(192, 263);
-            this.cbbAnesthesiaMethod1.Margin = new System.Windows.Forms.Padding(2);
-            this.cbbAnesthesiaMethod1.Name = "cbbAnesthesiaMethod1";
-            this.cbbAnesthesiaMethod1.Size = new System.Drawing.Size(440, 28);
-            this.cbbAnesthesiaMethod1.TabIndex = 99;
-            // 
-            // label19
-            // 
-            this.label19.AutoSize = true;
-            this.label19.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
-            this.label19.Location = new System.Drawing.Point(21, 266);
-            this.label19.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label19.Name = "label19";
-            this.label19.Size = new System.Drawing.Size(155, 20);
-            this.label19.TabIndex = 98;
-            this.label19.Text = "Anesthesia Method :";
-            // 
             // txbRefer
             // 
+            this.txbRefer.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.txbRefer.CausesValidation = false;
             this.txbRefer.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
-            this.txbRefer.Location = new System.Drawing.Point(861, 265);
+            this.txbRefer.Location = new System.Drawing.Point(867, 265);
             this.txbRefer.Margin = new System.Windows.Forms.Padding(2);
             this.txbRefer.MaxLength = 255;
             this.txbRefer.Name = "txbRefer";
@@ -828,11 +763,11 @@
             // chkRefer
             // 
             this.chkRefer.AutoSize = true;
-            this.chkRefer.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
-            this.chkRefer.Location = new System.Drawing.Point(789, 265);
+            this.chkRefer.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
+            this.chkRefer.Location = new System.Drawing.Point(790, 265);
             this.chkRefer.Margin = new System.Windows.Forms.Padding(2);
             this.chkRefer.Name = "chkRefer";
-            this.chkRefer.Size = new System.Drawing.Size(68, 24);
+            this.chkRefer.Size = new System.Drawing.Size(73, 24);
             this.chkRefer.TabIndex = 96;
             this.chkRefer.Text = "Refer";
             this.chkRefer.UseVisualStyleBackColor = true;
@@ -842,7 +777,7 @@
             this.cbbWard.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cbbWard.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
             this.cbbWard.FormattingEnabled = true;
-            this.cbbWard.Location = new System.Drawing.Point(861, 234);
+            this.cbbWard.Location = new System.Drawing.Point(867, 234);
             this.cbbWard.Margin = new System.Windows.Forms.Padding(2);
             this.cbbWard.Name = "cbbWard";
             this.cbbWard.Size = new System.Drawing.Size(368, 28);
@@ -852,11 +787,11 @@
             // chkWard
             // 
             this.chkWard.AutoSize = true;
-            this.chkWard.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
-            this.chkWard.Location = new System.Drawing.Point(789, 237);
+            this.chkWard.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
+            this.chkWard.Location = new System.Drawing.Point(790, 236);
             this.chkWard.Margin = new System.Windows.Forms.Padding(2);
             this.chkWard.Name = "chkWard";
-            this.chkWard.Size = new System.Drawing.Size(66, 24);
+            this.chkWard.Size = new System.Drawing.Size(70, 24);
             this.chkWard.TabIndex = 94;
             this.chkWard.Text = "Ward";
             this.chkWard.UseVisualStyleBackColor = true;
@@ -866,7 +801,7 @@
             this.cbbOPD.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cbbOPD.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
             this.cbbOPD.FormattingEnabled = true;
-            this.cbbOPD.Location = new System.Drawing.Point(861, 204);
+            this.cbbOPD.Location = new System.Drawing.Point(867, 204);
             this.cbbOPD.Margin = new System.Windows.Forms.Padding(2);
             this.cbbOPD.Name = "cbbOPD";
             this.cbbOPD.Size = new System.Drawing.Size(368, 28);
@@ -887,22 +822,22 @@
             // label9
             // 
             this.label9.AutoSize = true;
-            this.label9.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
-            this.label9.Location = new System.Drawing.Point(75, 234);
+            this.label9.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
+            this.label9.Location = new System.Drawing.Point(68, 234);
             this.label9.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(101, 20);
+            this.label9.Size = new System.Drawing.Size(114, 20);
             this.label9.TabIndex = 91;
             this.label9.Text = "Anesthesist :";
             // 
             // chkIPD
             // 
             this.chkIPD.AutoSize = true;
-            this.chkIPD.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
-            this.chkIPD.Location = new System.Drawing.Point(1045, 177);
+            this.chkIPD.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
+            this.chkIPD.Location = new System.Drawing.Point(1104, 178);
             this.chkIPD.Margin = new System.Windows.Forms.Padding(2);
             this.chkIPD.Name = "chkIPD";
-            this.chkIPD.Size = new System.Drawing.Size(55, 24);
+            this.chkIPD.Size = new System.Drawing.Size(58, 24);
             this.chkIPD.TabIndex = 89;
             this.chkIPD.Text = "IPD";
             this.chkIPD.UseVisualStyleBackColor = true;
@@ -911,11 +846,11 @@
             // chkOPD
             // 
             this.chkOPD.AutoSize = true;
-            this.chkOPD.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
-            this.chkOPD.Location = new System.Drawing.Point(789, 207);
+            this.chkOPD.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
+            this.chkOPD.Location = new System.Drawing.Point(789, 206);
             this.chkOPD.Margin = new System.Windows.Forms.Padding(2);
             this.chkOPD.Name = "chkOPD";
-            this.chkOPD.Size = new System.Drawing.Size(62, 24);
+            this.chkOPD.Size = new System.Drawing.Size(65, 24);
             this.chkOPD.TabIndex = 87;
             this.chkOPD.Text = "OPD";
             this.chkOPD.UseVisualStyleBackColor = true;
@@ -928,40 +863,41 @@
             this.cbbProcedureList.Location = new System.Drawing.Point(789, 80);
             this.cbbProcedureList.Margin = new System.Windows.Forms.Padding(2);
             this.cbbProcedureList.Name = "cbbProcedureList";
-            this.cbbProcedureList.Size = new System.Drawing.Size(440, 28);
+            this.cbbProcedureList.Size = new System.Drawing.Size(446, 28);
             this.cbbProcedureList.TabIndex = 85;
+            this.cbbProcedureList.SelectedIndexChanged += new System.EventHandler(this.cbbProcedureList_SelectedIndexChanged);
             // 
             // label18
             // 
             this.label18.AutoSize = true;
             this.label18.BackColor = System.Drawing.Color.Transparent;
-            this.label18.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
-            this.label18.Location = new System.Drawing.Point(657, 83);
+            this.label18.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
+            this.label18.Location = new System.Drawing.Point(650, 84);
             this.label18.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label18.Name = "label18";
-            this.label18.Size = new System.Drawing.Size(119, 20);
+            this.label18.Size = new System.Drawing.Size(135, 20);
             this.label18.TabIndex = 84;
             this.label18.Text = "Procedure List :";
             // 
             // label10
             // 
             this.label10.AutoSize = true;
-            this.label10.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
-            this.label10.Location = new System.Drawing.Point(731, 178);
+            this.label10.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
+            this.label10.Location = new System.Drawing.Point(726, 179);
             this.label10.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(54, 20);
+            this.label10.Size = new System.Drawing.Size(60, 20);
             this.label10.TabIndex = 81;
             this.label10.Text = "Case :";
             // 
             // chkFollowUpCase
             // 
             this.chkFollowUpCase.AutoSize = true;
-            this.chkFollowUpCase.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
-            this.chkFollowUpCase.Location = new System.Drawing.Point(894, 178);
+            this.chkFollowUpCase.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
+            this.chkFollowUpCase.Location = new System.Drawing.Point(924, 178);
             this.chkFollowUpCase.Margin = new System.Windows.Forms.Padding(2);
             this.chkFollowUpCase.Name = "chkFollowUpCase";
-            this.chkFollowUpCase.Size = new System.Drawing.Size(136, 24);
+            this.chkFollowUpCase.Size = new System.Drawing.Size(150, 24);
             this.chkFollowUpCase.TabIndex = 82;
             this.chkFollowUpCase.Text = "Follow up Case";
             this.chkFollowUpCase.UseVisualStyleBackColor = true;
@@ -969,14 +905,25 @@
             // chkNewCase
             // 
             this.chkNewCase.AutoSize = true;
-            this.chkNewCase.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
-            this.chkNewCase.Location = new System.Drawing.Point(789, 177);
+            this.chkNewCase.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
+            this.chkNewCase.Location = new System.Drawing.Point(790, 178);
             this.chkNewCase.Margin = new System.Windows.Forms.Padding(2);
             this.chkNewCase.Name = "chkNewCase";
-            this.chkNewCase.Size = new System.Drawing.Size(100, 24);
+            this.chkNewCase.Size = new System.Drawing.Size(108, 24);
             this.chkNewCase.TabIndex = 83;
             this.chkNewCase.Text = "New Case";
             this.chkNewCase.UseVisualStyleBackColor = true;
+            // 
+            // cbbStation
+            // 
+            this.cbbStation.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cbbStation.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
+            this.cbbStation.FormattingEnabled = true;
+            this.cbbStation.Location = new System.Drawing.Point(192, 110);
+            this.cbbStation.Margin = new System.Windows.Forms.Padding(2);
+            this.cbbStation.Name = "cbbStation";
+            this.cbbStation.Size = new System.Drawing.Size(440, 28);
+            this.cbbStation.TabIndex = 14;
             // 
             // label6
             // 
@@ -989,6 +936,116 @@
             this.label6.Size = new System.Drawing.Size(15, 20);
             this.label6.TabIndex = 90;
             this.label6.Text = "*";
+            // 
+            // txbPreDiag2ID
+            // 
+            this.txbPreDiag2ID.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.txbPreDiag2ID.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
+            this.txbPreDiag2ID.Location = new System.Drawing.Point(192, 322);
+            this.txbPreDiag2ID.Margin = new System.Windows.Forms.Padding(2);
+            this.txbPreDiag2ID.MaxLength = 200;
+            this.txbPreDiag2ID.Name = "txbPreDiag2ID";
+            this.txbPreDiag2ID.Size = new System.Drawing.Size(38, 23);
+            this.txbPreDiag2ID.TabIndex = 140;
+            this.txbPreDiag2ID.Visible = false;
+            // 
+            // txbPreDiag1ID
+            // 
+            this.txbPreDiag1ID.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.txbPreDiag1ID.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
+            this.txbPreDiag1ID.Location = new System.Drawing.Point(192, 295);
+            this.txbPreDiag1ID.Margin = new System.Windows.Forms.Padding(2);
+            this.txbPreDiag1ID.MaxLength = 200;
+            this.txbPreDiag1ID.Name = "txbPreDiag1ID";
+            this.txbPreDiag1ID.Size = new System.Drawing.Size(38, 23);
+            this.txbPreDiag1ID.TabIndex = 139;
+            this.txbPreDiag1ID.Visible = false;
+            // 
+            // txbPreDiag2Text
+            // 
+            this.txbPreDiag2Text.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.txbPreDiag2Text.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.txbPreDiag2Text.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.txbPreDiag2Text.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
+            this.txbPreDiag2Text.Location = new System.Drawing.Point(362, 322);
+            this.txbPreDiag2Text.Margin = new System.Windows.Forms.Padding(2);
+            this.txbPreDiag2Text.MaxLength = 200;
+            this.txbPreDiag2Text.Name = "txbPreDiag2Text";
+            this.txbPreDiag2Text.Size = new System.Drawing.Size(501, 23);
+            this.txbPreDiag2Text.TabIndex = 138;
+            // 
+            // label100
+            // 
+            this.label100.AutoSize = true;
+            this.label100.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
+            this.label100.Location = new System.Drawing.Point(19, 325);
+            this.label100.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label100.Name = "label100";
+            this.label100.Size = new System.Drawing.Size(169, 20);
+            this.label100.TabIndex = 137;
+            this.label100.Text = "Pre-Diagnosis (Dx2)";
+            // 
+            // txbPreDiag2Code
+            // 
+            this.txbPreDiag2Code.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.txbPreDiag2Code.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.Suggest;
+            this.txbPreDiag2Code.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.CustomSource;
+            this.txbPreDiag2Code.BackColor = System.Drawing.SystemColors.Window;
+            this.txbPreDiag2Code.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.txbPreDiag2Code.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
+            this.txbPreDiag2Code.Location = new System.Drawing.Point(192, 322);
+            this.txbPreDiag2Code.Margin = new System.Windows.Forms.Padding(2);
+            this.txbPreDiag2Code.MaxLength = 200;
+            this.txbPreDiag2Code.Name = "txbPreDiag2Code";
+            this.txbPreDiag2Code.Size = new System.Drawing.Size(166, 23);
+            this.txbPreDiag2Code.TabIndex = 136;
+            this.txbPreDiag2Code.TextChanged += new System.EventHandler(this.txbPreDiag2Code_TextChanged);
+            // 
+            // txbPreDiag1Text
+            // 
+            this.txbPreDiag1Text.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.txbPreDiag1Text.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.txbPreDiag1Text.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.txbPreDiag1Text.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
+            this.txbPreDiag1Text.Location = new System.Drawing.Point(362, 295);
+            this.txbPreDiag1Text.Margin = new System.Windows.Forms.Padding(2);
+            this.txbPreDiag1Text.MaxLength = 200;
+            this.txbPreDiag1Text.Name = "txbPreDiag1Text";
+            this.txbPreDiag1Text.Size = new System.Drawing.Size(501, 23);
+            this.txbPreDiag1Text.TabIndex = 135;
+            // 
+            // label99
+            // 
+            this.label99.AutoSize = true;
+            this.label99.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
+            this.label99.Location = new System.Drawing.Point(19, 298);
+            this.label99.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label99.Name = "label99";
+            this.label99.Size = new System.Drawing.Size(169, 20);
+            this.label99.TabIndex = 134;
+            this.label99.Text = "Pre-Diagnosis (Dx1)";
+            // 
+            // txbPreDiag1Code
+            // 
+            this.txbPreDiag1Code.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.txbPreDiag1Code.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.Suggest;
+            this.txbPreDiag1Code.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.CustomSource;
+            this.txbPreDiag1Code.BackColor = System.Drawing.SystemColors.Window;
+            this.txbPreDiag1Code.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.txbPreDiag1Code.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
+            this.txbPreDiag1Code.Location = new System.Drawing.Point(192, 295);
+            this.txbPreDiag1Code.Margin = new System.Windows.Forms.Padding(2);
+            this.txbPreDiag1Code.MaxLength = 200;
+            this.txbPreDiag1Code.Name = "txbPreDiag1Code";
+            this.txbPreDiag1Code.Size = new System.Drawing.Size(166, 23);
+            this.txbPreDiag1Code.TabIndex = 133;
+            this.txbPreDiag1Code.TextChanged += new System.EventHandler(this.txbPreDiag1Code_TextChanged);
             // 
             // PatientForm
             // 
@@ -1052,7 +1109,6 @@
         private System.Windows.Forms.DateTimePicker dtAppointmentTime;
         private System.Windows.Forms.DateTimePicker dtOperatingTime;
         private System.Windows.Forms.ComboBox cbbDoctorName;
-        private System.Windows.Forms.ComboBox cbbStation;
         private System.Windows.Forms.ComboBox cbbNurseName3;
         private System.Windows.Forms.ComboBox cbbNurseName2;
         private System.Windows.Forms.ComboBox cbbNurseName1;
@@ -1072,14 +1128,8 @@
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.ComboBox cbbAnesthesist;
         private System.Windows.Forms.Label label9;
-        private System.Windows.Forms.ComboBox cbbPreDiagnosis2;
-        private System.Windows.Forms.ComboBox cbbPreDiagnosis1;
-        private System.Windows.Forms.Label label21;
         private System.Windows.Forms.ComboBox cbbIndication;
         private System.Windows.Forms.Label label20;
-        private System.Windows.Forms.ComboBox cbbAnesthesiaMethod2;
-        private System.Windows.Forms.ComboBox cbbAnesthesiaMethod1;
-        private System.Windows.Forms.Label label19;
         private System.Windows.Forms.TextBox txbRefer;
         private System.Windows.Forms.CheckBox chkRefer;
         private System.Windows.Forms.ComboBox cbbWard;
@@ -1089,7 +1139,16 @@
         private System.Windows.Forms.Label label22;
         private System.Windows.Forms.Label label24;
         private System.Windows.Forms.ComboBox cbbFinancial;
-        private System.Windows.Forms.TextBox txbPreDiagnosis2ID;
-        private System.Windows.Forms.TextBox txbPreDiagnosis1ID;
+        private System.Windows.Forms.ComboBox cbbStation;
+        private System.Windows.Forms.TextBox txbPreDiag2ID;
+        private System.Windows.Forms.TextBox txbPreDiag1ID;
+        private System.Windows.Forms.TextBox txbPreDiag2Text;
+        private System.Windows.Forms.Label label100;
+        private System.Windows.Forms.TextBox txbPreDiag2Code;
+        private System.Windows.Forms.TextBox txbPreDiag1Text;
+        private System.Windows.Forms.Label label99;
+        private System.Windows.Forms.TextBox txbPreDiag1Code;
+        private System.Windows.Forms.Label label19;
+        private System.Windows.Forms.DateTimePicker dtBirthDate;
     }
 }

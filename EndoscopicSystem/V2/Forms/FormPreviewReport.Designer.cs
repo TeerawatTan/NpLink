@@ -241,7 +241,6 @@ namespace EndoscopicSystem.V2.Forms
             this.pictureBoxSaved5 = new System.Windows.Forms.PictureBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.btnSave = new System.Windows.Forms.Button();
-            this.btnDelete = new System.Windows.Forms.Button();
             this.btnReset = new System.Windows.Forms.Button();
             this.btnNext = new System.Windows.Forms.Button();
             this.listView1 = new System.Windows.Forms.ListView();
@@ -3071,19 +3070,6 @@ namespace EndoscopicSystem.V2.Forms
             this.btnSave.UseVisualStyleBackColor = false;
             this.btnSave.Click += new System.EventHandler(this.btnSave_Click);
             // 
-            // btnDelete
-            // 
-            this.btnDelete.BackColor = System.Drawing.Color.Red;
-            this.btnDelete.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
-            this.btnDelete.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.btnDelete.Location = new System.Drawing.Point(1228, 904);
-            this.btnDelete.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.btnDelete.Name = "btnDelete";
-            this.btnDelete.Size = new System.Drawing.Size(124, 78);
-            this.btnDelete.TabIndex = 110;
-            this.btnDelete.Text = "Delete";
-            this.btnDelete.UseVisualStyleBackColor = false;
-            // 
             // btnReset
             // 
             this.btnReset.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
@@ -3094,6 +3080,7 @@ namespace EndoscopicSystem.V2.Forms
             this.btnReset.TabIndex = 112;
             this.btnReset.Text = "Reset";
             this.btnReset.UseVisualStyleBackColor = true;
+            this.btnReset.Visible = false;
             // 
             // btnNext
             // 
@@ -3144,7 +3131,6 @@ namespace EndoscopicSystem.V2.Forms
             this.ClientSize = new System.Drawing.Size(1904, 1011);
             this.Controls.Add(this.btnNext);
             this.Controls.Add(this.btnSave);
-            this.Controls.Add(this.btnDelete);
             this.Controls.Add(this.btnReset);
             this.Controls.Add(this.panel3);
             this.Controls.Add(this.groupBox1);
@@ -3316,7 +3302,6 @@ namespace EndoscopicSystem.V2.Forms
         private System.Windows.Forms.Button btnEditPic9;
         private System.Windows.Forms.PictureBox pictureBoxSaved9;
         private System.Windows.Forms.Button btnSave;
-        private System.Windows.Forms.Button btnDelete;
         private System.Windows.Forms.Button btnReset;
         private System.Windows.Forms.Button btnNext;
         private System.Windows.Forms.Label label1;

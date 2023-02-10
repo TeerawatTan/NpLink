@@ -167,7 +167,6 @@ namespace EndoscopicSystem.V2.Forms
             LoadTextBoxAutoComplete(txtPictureBoxSaved8);
             LoadTextBoxAutoComplete(txtPictureBoxSaved9);
             LoadTextBoxAutoComplete(txtPictureBoxSaved10);
-            LoadTextBoxAutoComplete(txtPictureBoxSaved10);
             LoadTextBoxAutoComplete(txtPictureBoxSaved11);
             LoadTextBoxAutoComplete(txtPictureBoxSaved12);
             LoadTextBoxAutoComplete(txtPictureBoxSaved13);
@@ -1349,46 +1348,6 @@ namespace EndoscopicSystem.V2.Forms
 
             _db.SaveChanges();
         }
-
-        //private void SaveAllImage(int endoscopicID, int procedureID)
-        //{
-        //    int i = 0;
-        //    int seq = 1;
-        //    foreach (var item in _imgPath.Values)
-        //    {
-        //        var endoAllImgs = _db.EndoscopicAllImages.Where(x => x.EndoscopicID == endoscopicID && x.ProcedureID == procedureID && x.Seq == seq).FirstOrDefault();
-        //        if (item != null)
-        //        {
-        //            if (endoAllImgs != null)
-        //            {
-        //                endoAllImgs.ImagePath = item.ToString();
-        //                endoAllImgs.UpdateBy = _id;
-        //                endoAllImgs.UpdateDate = DateTime.Now;
-        //            }
-        //            else
-        //            {
-        //                EndoscopicAllImage endoscopicAllImage = new EndoscopicAllImage();
-        //                endoscopicAllImage.EndoscopicID = endoscopicID;
-        //                endoscopicAllImage.ProcedureID = procedureID;
-        //                endoscopicAllImage.ImagePath = item.ToString();
-        //                endoscopicAllImage.Seq = i + 1;
-        //                endoscopicAllImage.CreateBy = _id;
-        //                endoscopicAllImage.CreateDate = DateTime.Now;
-        //                endoscopicAllImage.UpdateBy = _id;
-        //                endoscopicAllImage.UpdateDate = DateTime.Now;
-        //                _db.EndoscopicAllImages.Add(endoscopicAllImage);
-        //            }
-        //            i++;
-        //            seq++;
-        //        }
-        //        else
-        //        {
-
-        //        }
-        //    }
-
-        //    _db.SaveChanges();
-        //}
 
         private void UpdateEndoscopic(int procedureId)
         {

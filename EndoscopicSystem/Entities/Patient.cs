@@ -52,5 +52,6 @@ namespace EndoscopicSystem.Entities
         public Nullable<int> OpdID { get; set; }
         public Nullable<int> AnesthesiaID { get; set; }
         public Nullable<int> InstrumentID { get; set; }
+        public Nullable<System.DateTime> BirthDate { get; set; }
     }
 }
