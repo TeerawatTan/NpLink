@@ -148,7 +148,7 @@ namespace EndoscopicSystem.V2.Forms
 
         private void FormPreviewReport_Load(object sender, EventArgs e)
         {
-            _isSave = false;
+            btnNext.Visible = false;
 
             cbbProcedureList.ValueMember = "ProcedureID";
             cbbProcedureList.DisplayMember = "ProcedureName";
@@ -248,47 +248,26 @@ namespace EndoscopicSystem.V2.Forms
                         _procedureId = getPatient.ProcedureID ?? 0;
                     }
 
-                    Appointment app = new Appointment();
-                    var apps = _db.Appointments.Where(x => x.PatientID == _patientId && txbHN.Text.Equals(x.HN) && x.ProcedureID == _procedureId).ToList();
-                    if (apps != null)
+                    var app = _db.Appointments.Where(x => x.PatientID == _patientId && txbHN.Text.Equals(x.HN) && x.ProcedureID == _procedureId && x.AppointmentID == _appointmentId).FirstOrDefault();
+                    if (app != null)
                     {
-                        if (_appointmentId > 0)
-                        {
-                            apps = apps.Where(w => w.AppointmentID == _appointmentId).ToList();
-                            app = apps.FirstOrDefault();
-                        }
-                        else
-                        {
-                            app = apps.OrderByDescending(o => o.AppointmentDate).FirstOrDefault();
-                            _appointmentId = app.AppointmentID;
-                        }
+                        _appointmentId = app.AppointmentID;
                         txbSymptom.Text = app.Symptom;
                     }
 
                     PushEndoscopicImage();
 
                     cbbProcedureList.SelectedValue = _procedureId;
-
-                    if (_procedureId > 0 && _appointmentId > 0)
-                    {
-                        btnNext.Visible = true;
-                    }
-                    else
-                    {
-                        btnNext.Visible = false;
-                    }
                 }
                 else
                 {
                     MessageBox.Show("ไม่พบข้อมูลผู้ป่วย", "Patient not found.", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                     this.Controls.ClearControls();
-                    btnNext.Enabled = false;
                 }
             }
             catch (Exception ex)
             {
                 MessageBox.Show(ex.Message);
-                btnNext.Enabled = false;
             }
         }
 
@@ -361,18 +340,33 @@ namespace EndoscopicSystem.V2.Forms
         {
             try
             {
-                if (_patientId > 0)
+                DialogResult dialogResult = MessageBox.Show("คุณบันทึกรูปภาพเสร็จแล้ว ?", "Save form", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+                if (dialogResult == DialogResult.Yes)
                 {
-                    UpdateEndoscopic(_procedureId);
-                    MessageBox.Show(Constant.STATUS_SUCCESS, "Save Form", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                    //btnSave.Enabled = false;
+                    if (_patientId > 0)
+                    {
+                        UpdateEndoscopic(_procedureId);
+                        btnSave.Visible = false;
 
-                    _isSave = true;
+                        _isSave = true;
+                        btnNext.Visible = true;
+                    }
+                    else
+                    {
+                        _isSave = false;
+                        btnNext.Visible = false;
+                    }
+                }
+                else
+                {
+                    return;
                 }
             }
             catch (Exception ex)
             {
-                MessageBox.Show(ex.Message, "Saved not success.");
+                _isSave = false;
+                btnSave.Visible = true;
+                MessageBox.Show(ex.Message, "Saved data error.", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
 
@@ -385,29 +379,20 @@ namespace EndoscopicSystem.V2.Forms
                     if (_patientId > 0)
                     {
                         UpdateEndoscopic(_procedureId);
-                        MessageBox.Show(Constant.STATUS_SUCCESS, "Save Form", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                        btnSave.Enabled = false;
-
                         _isSave = true;
-
                     }
                 }
                 catch (Exception ex)
                 {
-                    MessageBox.Show(ex.Message, "Saved not success.", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    _isSave = false;
+                    btnNext.Visible = false;
+                    btnSave.Visible = true;
+                    MessageBox.Show(ex.Message, "Saved data error.", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    return;
                 }
             }
 
-            //this.Hide();
-            //FormProcedure formProcedure = new FormProcedure(_id, _hnNo, _procedureId, _appointmentId, _endoscopicId, _pathFolderImageSave);
-            //formProcedure.ShowDialog();
-            //formProcedure = null;
-
-            //this.Show();
-
             FormProceed.Self.txbStep.Text = "2" + "," + _pathFolderImageSave + "," + _vdoPath;
-
-            //this.Close();
         }
 
         private void PictureBox_DragEnter(object sender, DragEventArgs e)
@@ -1193,25 +1178,15 @@ namespace EndoscopicSystem.V2.Forms
 
         private void UpdateAppointment(int? endoId)
         {
-            Appointment data = new Appointment();
-            var datas = _db.Appointments.Where(x => x.AppointmentID == _appointmentId && x.PatientID == _patientId).ToList();
-            if (datas != null && datas.Count > 0)
+            var data = _db.Appointments.Where(x => x.AppointmentID == _appointmentId && x.PatientID == _patientId).FirstOrDefault();
+            if (data != null)
             {
-                if (_appointmentId > 0)
-                {
-                    datas = datas.Where(w => w.AppointmentID == _appointmentId).ToList();
-                    data = datas.FirstOrDefault();
-                }
-                else
-                {
-                    data = datas.OrderByDescending(o => o.AppointmentDate).FirstOrDefault();
-                }
                 data.EndoscopicCheck = true;
                 data.UpdateBy = _id;
                 data.UpdateDate = DateTime.Now;
                 data.EndoscopicID = endoId;
+                _db.SaveChanges();
             }
-            _db.SaveChanges();
         }
 
         private void SaveVideo(int endoscopicID, int procedureID)
@@ -1351,7 +1326,6 @@ namespace EndoscopicSystem.V2.Forms
 
         private void UpdateEndoscopic(int procedureId)
         {
-            var trans = _db.Database.BeginTransaction();
             try
             {
                 Endoscopic endo = new Endoscopic();
@@ -1386,12 +1360,9 @@ namespace EndoscopicSystem.V2.Forms
                 SaveImage(endo.EndoscopicID, procedureId);
                 //SaveAllImage(endo.EndoscopicID, procedureId);
                 SaveVideo(endo.EndoscopicID, procedureId);
-
-                trans.Commit();
             }
             catch (Exception ex)
             {
-                trans.Rollback();
                 throw ex;
             }
         }

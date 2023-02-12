@@ -17,7 +17,7 @@ namespace EndoscopicSystem.V2.Forms
         private int _id = 0, _endoscopicId = 0, _procedureId = 0, _appointmentId = 0, _stepId = 0;
         private string _hn, _pathImage, _pathVideo;
         private Form _activeForm = null, _useFormShow = null;
-        public FormProceed(int id, string hn, int procedureId, int endoscopicId, int appointmentId, Form formActive = null)
+        public FormProceed(int id, string hn = null, int procedureId = 0, int endoscopicId = 0, int appointmentId = 0, Form formActive = null)
         {
             InitializeComponent();
 

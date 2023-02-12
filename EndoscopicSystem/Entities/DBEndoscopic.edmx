@@ -969,6 +969,15 @@ warning 6002: The table/view 'EndoscopicDb.dbo.ProcedureList' does not have a pr
           <Property Name="PosteriorWallID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
           <Property Name="PosteriorWallName" Type="varchar" MaxLength="255" />
         </EntityType>
+        <EntityType Name="ProcedureDetail">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Name" Type="nvarchar" MaxLength="250" />
+          <Property Name="IsTopic" Type="bit" />
+          <Property Name="IsActive" Type="bit" Nullable="false" />
+        </EntityType>
         <EntityType Name="Pylorus">
           <Key>
             <PropertyRef Name="PylorusID" />
@@ -1331,6 +1340,7 @@ warning 6002: The table/view 'EndoscopicDb.dbo.v_PatientList' does not have a pr
           <EntitySet Name="Postcricoid" EntityType="Self.Postcricoid" Schema="master" store:Type="Tables" />
           <EntitySet Name="PosteriorPharyngealWall" EntityType="Self.PosteriorPharyngealWall" Schema="master" store:Type="Tables" />
           <EntitySet Name="PosteriorWall" EntityType="Self.PosteriorWall" Schema="master" store:Type="Tables" />
+          <EntitySet Name="ProcedureDetail" EntityType="Self.ProcedureDetail" Schema="master" store:Type="Tables" />
           <EntitySet Name="Pylorus" EntityType="Self.Pylorus" Schema="master" store:Type="Tables" />
           <EntitySet Name="PyriformSinus" EntityType="Self.PyriformSinus" Schema="master" store:Type="Tables" />
           <EntitySet Name="Rectum" EntityType="Self.Rectum" Schema="master" store:Type="Tables" />
@@ -1543,6 +1553,7 @@ warning 6002: The table/view 'EndoscopicDb.dbo.v_PatientList' does not have a pr
           <Parameter Name="instrumentVal" Mode="In" Type="Int32" />
           </FunctionImport>
           <EntitySet Name="Patients" EntityType="EndoscopicModel.Patient" />
+          <EntitySet Name="ProcedureDetails" EntityType="EndoscopicModel.ProcedureDetail" />
           </EntityContainer>
         <EntityType Name="Doctor">
           <Key>
@@ -2911,6 +2922,15 @@ warning 6002: The table/view 'EndoscopicDb.dbo.v_PatientList' does not have a pr
           <Property Name="AnesthesiaID" Type="Int32" />
           <Property Name="InstrumentID" Type="Int32" />
           <Property Name="BirthDate" Type="DateTime" Precision="3" />
+        </EntityType>
+        <EntityType Name="ProcedureDetail">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Name" Type="String" MaxLength="250" FixedLength="false" Unicode="true" />
+          <Property Name="IsTopic" Type="Boolean" />
+          <Property Name="IsActive" Type="Boolean" Nullable="false" />
         </EntityType>
         </Schema>
     </edmx:ConceptualModels>
@@ -4398,6 +4418,16 @@ warning 6002: The table/view 'EndoscopicDb.dbo.v_PatientList' does not have a pr
                 <ScalarProperty Name="Firstname" ColumnName="Firstname" />
                 <ScalarProperty Name="HN" ColumnName="HN" />
                 <ScalarProperty Name="PatientID" ColumnName="PatientID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="ProcedureDetails">
+            <EntityTypeMapping TypeName="EndoscopicModel.ProcedureDetail">
+              <MappingFragment StoreEntitySet="ProcedureDetail">
+                <ScalarProperty Name="IsActive" ColumnName="IsActive" />
+                <ScalarProperty Name="IsTopic" ColumnName="IsTopic" />
+                <ScalarProperty Name="Name" ColumnName="Name" />
+                <ScalarProperty Name="ID" ColumnName="ID" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>

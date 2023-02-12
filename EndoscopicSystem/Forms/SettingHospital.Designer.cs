@@ -94,6 +94,7 @@
             this.btnUploadFile.TabIndex = 9;
             this.btnUploadFile.Text = "Upload File";
             this.btnUploadFile.UseVisualStyleBackColor = true;
+            this.btnUploadFile.Visible = false;
             this.btnUploadFile.Click += new System.EventHandler(this.btnUploadFile_Click);
             // 
             // txtHospitalNameTH
@@ -161,10 +162,10 @@
             this.btnSave.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
             this.btnSave.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
             this.btnSave.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.btnSave.Location = new System.Drawing.Point(606, 660);
+            this.btnSave.Location = new System.Drawing.Point(585, 660);
             this.btnSave.Margin = new System.Windows.Forms.Padding(2);
             this.btnSave.Name = "btnSave";
-            this.btnSave.Size = new System.Drawing.Size(104, 60);
+            this.btnSave.Size = new System.Drawing.Size(125, 60);
             this.btnSave.TabIndex = 9;
             this.btnSave.Text = "Save";
             this.btnSave.UseVisualStyleBackColor = false;

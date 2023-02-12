@@ -144,14 +144,28 @@ namespace EndoscopicSystem
                     if (endoscopicId <= 0)
                         return;
 
-                    this.Hide();
+                    //this.Hide();
 
-                    V2.Forms.FormLive formLive = new V2.Forms.FormLive(UserID, hnNo, procedureId, endoscopicId, appointmentId);
-                    formLive.ShowDialog();
+                    //V2.Forms.FormLive formLive = new V2.Forms.FormLive(UserID, hnNo, procedureId, endoscopicId, appointmentId);
+                    //formLive.ShowDialog();
 
-                    formLive = null;
+                    //formLive = null;
 
-                    this.Show();
+                    //this.Show();
+
+                    this.Close();
+
+                    try
+                    {
+                        // Form Panel
+                        V2.Forms.FormProceed formProceed = new V2.Forms.FormProceed(UserID, hnNo, procedureId, endoscopicId, appointmentId);
+                        formProceed.ShowDialog();
+                        formProceed = null;
+                    }
+                    catch (Exception ex)
+                    {
+                        throw ex;
+                    }
                 }
                 catch (Exception ex)
                 {

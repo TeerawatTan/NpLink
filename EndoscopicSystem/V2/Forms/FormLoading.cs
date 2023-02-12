@@ -13,42 +13,21 @@ namespace EndoscopicSystem.V2.Forms
 {
     public partial class FormLoading : Form
     {
-        private Timer _timer = new Timer();
-        public FormLoading()
+        public Action Worker { get; set; }
+
+        public FormLoading(Action worker)
         {
             InitializeComponent();
 
-            _timer.Interval = 80;
-            _timer.Enabled = true;
-            _timer.Tick += Timer_Tick;
+            if (Worker == null)
+                throw new ArgumentNullException();
+            Worker = worker;
         }
 
-        private void Timer_Tick(object sender, EventArgs e)
+        protected override void OnLoad(EventArgs e)
         {
-            if (progressBar1.Value < 100)
-            {
-                progressBar1.Value++;
-            }
-            else
-            {
-                _timer.Enabled = false;
-                //this.Hide();
-                //ReportEndoscopic reportForm = new ReportEndoscopic(_hnNo, _procedureId, _endoscopicId);
-                //reportForm.ShowDialog();
-                //reportForm = null;
-
-                this.Close();
-            }
-        }
-
-        private void Form1_Load(object sender, EventArgs e)
-        {
-            
-        }
-
-        private void Form1_FormClosed(object sender, FormClosedEventArgs e)
-        {
-            this.Close();
+            base.OnLoad(e);
+            Task.Factory.StartNew(Worker).ContinueWith(t => { this.Close(); }, TaskScheduler.FromCurrentSynchronizationContext());
         }
     }
 }

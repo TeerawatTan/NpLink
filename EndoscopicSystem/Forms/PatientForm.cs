@@ -345,7 +345,7 @@ namespace EndoscopicSystem
 
         private void SaveAppointment(string hn, Patient data)
         {
-            Appointment ap = _db.Appointments.Where(x => hn.Equals(x.HN) && x.ProcedureID == procedureId && x.AppointmentDate.HasValue && x.AppointmentDate == data.AppointmentDate).OrderByDescending(x => x.AppointmentID).FirstOrDefault();
+            Appointment ap = _db.Appointments.Where(x => x.HN == hn && x.ProcedureID == procedureId && x.AppointmentDate.HasValue && x.AppointmentDate.Value == data.AppointmentDate).OrderByDescending(x => x.AppointmentID).FirstOrDefault();
             if (ap != null)
             {
                 ap.PatientID = data.PatientID;

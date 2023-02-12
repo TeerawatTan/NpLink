@@ -103,14 +103,6 @@ namespace EndoscopicSystem.V2.Forms
 
         private void pictureBox_Patient_Click(object sender, EventArgs e)
         {
-            // Hide all forms except subForm
-            //foreach (Form form in Application.OpenForms)
-            //{
-            //    if (form != this)
-            //    {
-            //        form.Hide();
-            //    }
-            //}
             this.Hide();
             PatientForm patientForm = new PatientForm(_id);
             patientForm.ShowDialog();
@@ -121,32 +113,19 @@ namespace EndoscopicSystem.V2.Forms
 
         private void pictureBox_EndoscopyRoom_Click(object sender, EventArgs e)
         {
-            // Hide all forms except subForm
-            //foreach (Form form in Application.OpenForms)
-            //{
-            //    if (form != this)
-            //    {
-            //        form.Hide();
-            //    }
-            //}
             this.Hide();
-            FormLive formLive = new FormLive(_id);
-            formLive.ShowDialog();
-            formLive = null;
+            //FormLive formLive = new FormLive(_id);
+            //formLive.ShowDialog();
+            //formLive = null;
+            FormProceed formProceed = new FormProceed(_id);
+            formProceed.ShowDialog();
+            formProceed = null;
             this.Show();
             ActiveMenuLabel(lb_EndoscopyRoom);
         }
 
         private void pictureBox_SeaarchPatient_Click(object sender, EventArgs e)
         {
-            // Hide all forms except subForm
-            //foreach (Form form in Application.OpenForms)
-            //{
-            //    if (form != this)
-            //    {
-            //        form.Hide();
-            //    }
-            //}
             this.Hide();
             SearchPatientForm searchPatientForm = new SearchPatientForm(_id);
             searchPatientForm.ShowDialog();
@@ -157,14 +136,6 @@ namespace EndoscopicSystem.V2.Forms
 
         private void pictureBox_Setting_Click(object sender, EventArgs e)
         {
-            // Hide all forms except subForm
-            //foreach (Form form in Application.OpenForms)
-            //{
-            //    if (form != this)
-            //    {
-            //        form.Hide();
-            //    }
-            //}
             this.Hide();
             FormSetting formSetting = new FormSetting(_id);
             formSetting.ShowDialog();

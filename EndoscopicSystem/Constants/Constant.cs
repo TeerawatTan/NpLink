@@ -36,6 +36,7 @@ namespace EndoscopicSystem.Constants
 
         public const int Icd9 = 1;  // ICD-9
         public const int Icd10 = 2; // ICD-10
+        public const int ProcedureDetail = 3; //ProcedureDetail
     }
 
     public class MonthModel

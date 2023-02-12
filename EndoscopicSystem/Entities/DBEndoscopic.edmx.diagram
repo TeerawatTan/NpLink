@@ -97,6 +97,7 @@
         <EntityTypeShape EntityType="EndoscopicModel.Instrument" Width="1.5" PointX="28.375" PointY="6.75" />
         <EntityTypeShape EntityType="EndoscopicModel.Appointment" Width="1.5" PointX="28.375" PointY="26.75" />
         <EntityTypeShape EntityType="EndoscopicModel.Patient" Width="1.5" PointX="22.375" PointY="28.75" />
+        <EntityTypeShape EntityType="EndoscopicModel.ProcedureDetail" Width="1.5" PointX="0.75" PointY="9.75" />
       </Diagram>
     </edmx:Diagrams>
   </edmx:Designer>

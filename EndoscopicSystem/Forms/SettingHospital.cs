@@ -15,6 +15,7 @@ namespace EndoscopicSystem
     public partial class SettingHospitalForm : Form
     {
         private readonly int UserID;
+        private string _logoPath;
         public SettingHospitalForm(int userID)
         {
             InitializeComponent();
@@ -37,13 +38,23 @@ namespace EndoscopicSystem
                     if (openFileDialog1.CheckFileExists)
                     {
                         string path = System.IO.Path.GetFullPath(openFileDialog1.FileName);
-                        lblPath.Text = path;
-                        pictureBox1.Image = new Bitmap(openFileDialog1.FileName);
+                        string filenameExtension = System.IO.Path.GetExtension(path);
+
+                        string filename = "logo-" + DateTime.Now.ToString("ddMMyyyyHHss") + filenameExtension;
+                        string pathLocal = Application.StartupPath.Replace("\\bin\\Debug", "");
+                        string fullDir = pathLocal + "\\Images\\Logo\\";
+                        if (!Directory.Exists(fullDir))
+                        {
+                            Directory.CreateDirectory(fullDir);
+                        }
+                        System.IO.File.Copy(openFileDialog1.FileName, fullDir + filename);
+
+                        
+                        _logoPath = fullDir + filename;
+                        lblPath.Text = fullDir + filename;
+                        pictureBox1.Image = new Bitmap(fullDir + filename);
                         pictureBox1.SizeMode = PictureBoxSizeMode.StretchImage;
                     }
-                }
-                else
-                {
                 }
             }
             catch (Exception ex)
@@ -107,6 +118,7 @@ namespace EndoscopicSystem
 
             if (hospitalUpdate != null)
             {
+                hospitalUpdate.HospitalLogoPath = _logoPath;
                 hospitalUpdate.HospitalNameEN = txtHospitalNameEN.Text;
                 hospitalUpdate.HospitalNameTH = txtHospitalNameTH.Text;
                 hospitalUpdate.Address1 = txtAddress1.Text;
@@ -122,7 +134,7 @@ namespace EndoscopicSystem
             else
             {
                 Hospital hospital = new Hospital();
-
+                hospital.HospitalLogoPath = _logoPath;
                 hospital.HospitalNameEN = txtHospitalNameEN.Text;
                 hospital.HospitalNameTH = txtHospitalNameTH.Text;
                 hospital.Address1 = txtAddress1.Text;
@@ -135,7 +147,7 @@ namespace EndoscopicSystem
                 db.SaveChanges();
             }
 
-            MessageBox.Show("Save successfully.");
+            MessageBox.Show("Save successfully.", "Save form", MessageBoxButtons.OK, MessageBoxIcon.Information);
         }
 
         private void SettingHospitalForm_Load(object sender, EventArgs e)

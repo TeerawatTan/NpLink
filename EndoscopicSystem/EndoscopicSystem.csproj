@@ -334,6 +334,9 @@
     <Compile Include="Entities\PosteriorWall.cs">
       <DependentUpon>DBEndoscopic.tt</DependentUpon>
     </Compile>
+    <Compile Include="Entities\ProcedureDetail.cs">
+      <DependentUpon>DBEndoscopic.tt</DependentUpon>
+    </Compile>
     <Compile Include="Entities\ProcedureList.cs">
       <DependentUpon>DBEndoscopic.tt</DependentUpon>
     </Compile>
