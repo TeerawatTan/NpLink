@@ -145,7 +145,6 @@ namespace EndoscopicSystem
                         chkNewCase.Checked = app.IsNewCase ?? false;
                         chkFollowUpCase.Checked = app.IsFollowCase ?? false;
                         chkOPD.Checked = app.OPD ?? false;
-                        chkIPD.Checked = app.IPD ?? false;
                     }
 
                     var history = _db.v_HistoryEndoscopic
@@ -369,7 +368,6 @@ namespace EndoscopicSystem
                 ap.IsNewCase = chkNewCase.Checked;
                 ap.IsFollowCase = chkFollowUpCase.Checked;
                 ap.OPD = chkOPD.Checked;
-                ap.IPD = chkIPD.Checked;
                 ap.CreateDate = data.CreateDate;
                 ap.CreateBy = data.CreateBy;
                 ap.EndoscopicCheck = false;
@@ -398,7 +396,6 @@ namespace EndoscopicSystem
                 appointment.IsNewCase = chkNewCase.Checked;
                 appointment.IsFollowCase = chkFollowUpCase.Checked;
                 appointment.OPD = chkOPD.Checked;
-                appointment.IPD = chkIPD.Checked;
                 appointment.CreateDate = data.CreateDate;
                 appointment.CreateBy = data.CreateBy;
                 appointment.EndoscopicCheck = false;
@@ -719,12 +716,48 @@ namespace EndoscopicSystem
 
         private void txbPreDiag1Code_TextChanged(object sender, EventArgs e)
         {
-            //if ()
+            if (txbPreDiag1Code.TextLength > 0)
+            {
+                var selectedIcd10 = _iCD10s.Where(w => w.Code == txbPreDiag1Code.Text).FirstOrDefault();
+                if (selectedIcd10 != null)
+                {
+                    txbPreDiag1ID.Text = selectedIcd10.ID.ToString();
+                    txbPreDiag1Text.Text = selectedIcd10.Name;
+                }
+                else
+                {
+                    txbPreDiag1ID.Clear();
+                    txbPreDiag1Text.Clear();
+                }
+            }
+            else
+            {
+                txbPreDiag1ID.Clear();
+                txbPreDiag1Text.Clear();
+            }
         }
 
         private void txbPreDiag2Code_TextChanged(object sender, EventArgs e)
         {
-
+            if (txbPreDiag2Code.TextLength > 0)
+            {
+                var selectedIcd10 = _iCD10s.Where(w => w.Code == txbPreDiag2Code.Text).FirstOrDefault();
+                if (selectedIcd10 != null)
+                {
+                    txbPreDiag2ID.Text = selectedIcd10.ID.ToString();
+                    txbPreDiag2Text.Text = selectedIcd10.Name;
+                }
+                else
+                {
+                    txbPreDiag2ID.Clear();
+                    txbPreDiag2Text.Clear();
+                }
+            }
+            else
+            {
+                txbPreDiag2ID.Clear();
+                txbPreDiag2Text.Clear();
+            }
         }
     }
 

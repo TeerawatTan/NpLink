@@ -366,6 +366,7 @@
           <Property Name="Histopathology" Type="nvarchar" MaxLength="1000" />
           <Property Name="Recommendation" Type="nvarchar" MaxLength="1000" />
           <Property Name="Comment" Type="nvarchar" MaxLength="1000" />
+          <Property Name="RapidUreaseTest" Type="nvarchar" MaxLength="250" />
         </EntityType>
         <EntityType Name="History">
           <Key>
@@ -718,6 +719,14 @@ warning 6002: The table/view 'EndoscopicDb.dbo.ProcedureList' does not have a pr
           <Property Name="CreateDate" Type="datetime" />
           <Property Name="UpdateDate" Type="datetime" />
         </EntityType>
+        <EntityType Name="Complication">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Name" Type="nvarchar" MaxLength="250" />
+          <Property Name="IsActive" Type="bit" Nullable="false" />
+        </EntityType>
         <EntityType Name="DescendingColon">
           <Key>
             <PropertyRef Name="DescendingColonID" />
@@ -818,6 +827,14 @@ warning 6002: The table/view 'EndoscopicDb.dbo.ProcedureList' does not have a pr
           <Property Name="HepaticFlexureName" Type="nvarchar" MaxLength="200" />
           <Property Name="CreateDate" Type="datetime" />
           <Property Name="UpdateDate" Type="datetime" />
+        </EntityType>
+        <EntityType Name="Histopathology">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Name" Type="nvarchar" MaxLength="250" />
+          <Property Name="IsActive" Type="bit" Nullable="false" />
         </EntityType>
         <EntityType Name="ICD10">
           <Key>
@@ -993,6 +1010,22 @@ warning 6002: The table/view 'EndoscopicDb.dbo.ProcedureList' does not have a pr
           </Key>
           <Property Name="PyriformSinusID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
           <Property Name="PyriformSinusName" Type="varchar" MaxLength="255" />
+        </EntityType>
+        <EntityType Name="RapidUreaseTest">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Name" Type="nvarchar" MaxLength="250" />
+          <Property Name="IsActive" Type="bit" Nullable="false" />
+        </EntityType>
+        <EntityType Name="Recommendation">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Name" Type="nvarchar" MaxLength="250" />
+          <Property Name="IsActive" Type="bit" Nullable="false" />
         </EntityType>
         <EntityType Name="Rectum">
           <Key>
@@ -1310,6 +1343,7 @@ warning 6002: The table/view 'EndoscopicDb.dbo.v_PatientList' does not have a pr
           <EntitySet Name="Carina" EntityType="Self.Carina" Schema="master" store:Type="Tables" />
           <EntitySet Name="Cecum" EntityType="Self.Cecum" Schema="master" store:Type="Tables" />
           <EntitySet Name="Cholangiogram" EntityType="Self.Cholangiogram" Schema="master" store:Type="Tables" />
+          <EntitySet Name="Complication" EntityType="Self.Complication" Schema="master" store:Type="Tables" />
           <EntitySet Name="DescendingColon" EntityType="Self.DescendingColon" Schema="master" store:Type="Tables" />
           <EntitySet Name="DuodenalBulb" EntityType="Self.DuodenalBulb" Schema="master" store:Type="Tables" />
           <EntitySet Name="Duodenum" EntityType="Self.Duodenum" Schema="master" store:Type="Tables" />
@@ -1322,6 +1356,7 @@ warning 6002: The table/view 'EndoscopicDb.dbo.v_PatientList' does not have a pr
           <EntitySet Name="Fundus" EntityType="Self.Fundus" Schema="master" store:Type="Tables" />
           <EntitySet Name="Glottic" EntityType="Self.Glottic" Schema="master" store:Type="Tables" />
           <EntitySet Name="HepaticFlexure" EntityType="Self.HepaticFlexure" Schema="master" store:Type="Tables" />
+          <EntitySet Name="Histopathology" EntityType="Self.Histopathology" Schema="master" store:Type="Tables" />
           <EntitySet Name="ICD10" EntityType="Self.ICD10" Schema="master" store:Type="Tables" />
           <EntitySet Name="ICD9" EntityType="Self.ICD9" Schema="master" store:Type="Tables" />
           <EntitySet Name="IleocecalValve" EntityType="Self.IleocecalValve" Schema="master" store:Type="Tables" />
@@ -1343,6 +1378,8 @@ warning 6002: The table/view 'EndoscopicDb.dbo.v_PatientList' does not have a pr
           <EntitySet Name="ProcedureDetail" EntityType="Self.ProcedureDetail" Schema="master" store:Type="Tables" />
           <EntitySet Name="Pylorus" EntityType="Self.Pylorus" Schema="master" store:Type="Tables" />
           <EntitySet Name="PyriformSinus" EntityType="Self.PyriformSinus" Schema="master" store:Type="Tables" />
+          <EntitySet Name="RapidUreaseTest" EntityType="Self.RapidUreaseTest" Schema="master" store:Type="Tables" />
+          <EntitySet Name="Recommendation" EntityType="Self.Recommendation" Schema="master" store:Type="Tables" />
           <EntitySet Name="Rectum" EntityType="Self.Rectum" Schema="master" store:Type="Tables" />
           <EntitySet Name="RightIntermideate" EntityType="Self.RightIntermideate" Schema="master" store:Type="Tables" />
           <EntitySet Name="RightMain" EntityType="Self.RightMain" Schema="master" store:Type="Tables" />
@@ -1542,7 +1579,6 @@ warning 6002: The table/view 'EndoscopicDb.dbo.v_PatientList' does not have a pr
           <EntitySet Name="FindingLabels" EntityType="EndoscopicModel.FindingLabel" />
           <EntitySet Name="Financials" EntityType="EndoscopicModel.Financial" />
           <EntitySet Name="Endoscopics" EntityType="EndoscopicModel.Endoscopic" />
-          <EntitySet Name="Findings" EntityType="EndoscopicModel.Finding" />
           <EntitySet Name="v_PatientList" EntityType="EndoscopicModel.v_PatientList" />
           <EntitySet Name="ICD10" EntityType="EndoscopicModel.ICD10" />
           <EntitySet Name="ICD9" EntityType="EndoscopicModel.ICD9" />
@@ -1554,6 +1590,11 @@ warning 6002: The table/view 'EndoscopicDb.dbo.v_PatientList' does not have a pr
           </FunctionImport>
           <EntitySet Name="Patients" EntityType="EndoscopicModel.Patient" />
           <EntitySet Name="ProcedureDetails" EntityType="EndoscopicModel.ProcedureDetail" />
+          <EntitySet Name="Findings" EntityType="EndoscopicModel.Finding" />
+          <EntitySet Name="Complications" EntityType="EndoscopicModel.Complication" />
+          <EntitySet Name="Histopathologies" EntityType="EndoscopicModel.Histopathology" />
+          <EntitySet Name="RapidUreaseTests" EntityType="EndoscopicModel.RapidUreaseTest" />
+          <EntitySet Name="Recommendations" EntityType="EndoscopicModel.Recommendation" />
           </EntityContainer>
         <EntityType Name="Doctor">
           <Key>
@@ -2624,158 +2665,6 @@ warning 6002: The table/view 'EndoscopicDb.dbo.v_PatientList' does not have a pr
           <Property Name="BowelPreparationRegimen" Type="String" MaxLength="1000" FixedLength="false" Unicode="true" />
           <Property Name="BowelPreparationResult" Type="String" MaxLength="1000" FixedLength="false" Unicode="true" />
         </EntityType>
-        <EntityType Name="Finding">
-          <Key>
-            <PropertyRef Name="FindingID" />
-          </Key>
-          <Property Name="FindingID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-          <Property Name="PatientID" Type="Int32" />
-          <Property Name="VocalCord" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
-          <Property Name="Trachea" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
-          <Property Name="Carina" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
-          <Property Name="RightMain" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
-          <Property Name="RightIntermideate" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
-          <Property Name="RUL" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
-          <Property Name="RML" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
-          <Property Name="RLL" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
-          <Property Name="LeftMain" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
-          <Property Name="LUL" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
-          <Property Name="Lingular" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
-          <Property Name="LLL" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
-          <Property Name="AnalCanalID" Type="Int32" />
-          <Property Name="RectumID" Type="Int32" />
-          <Property Name="SigmoidColonID" Type="Int32" />
-          <Property Name="DescendingColonID" Type="Int32" />
-          <Property Name="SplenicFlexureID" Type="Int32" />
-          <Property Name="TransverseColonID" Type="Int32" />
-          <Property Name="HepaticFlexureID" Type="Int32" />
-          <Property Name="AscendingColonID" Type="Int32" />
-          <Property Name="IleocecalVolveID" Type="Int32" />
-          <Property Name="CecumID" Type="Int32" />
-          <Property Name="TerminalIleumID" Type="Int32" />
-          <Property Name="EsophagusID" Type="Int32" />
-          <Property Name="StomachID" Type="Int32" />
-          <Property Name="DuodenumID" Type="Int32" />
-          <Property Name="AmpullaOfVaterID" Type="Int32" />
-          <Property Name="CholangiogramID" Type="Int32" />
-          <Property Name="PancreatogramID" Type="Int32" />
-          <Property Name="OropharynxID" Type="Int32" />
-          <Property Name="EGJunctionID" Type="Int32" />
-          <Property Name="CardiaID" Type="Int32" />
-          <Property Name="FundusID" Type="Int32" />
-          <Property Name="BodyID" Type="Int32" />
-          <Property Name="AntrumID" Type="Int32" />
-          <Property Name="PylorusID" Type="Int32" />
-          <Property Name="DuodenalBulbID" Type="Int32" />
-          <Property Name="SecondPartID" Type="Int32" />
-          <Property Name="CreateDate" Type="DateTime" Precision="3" />
-          <Property Name="CreateBy" Type="Int32" />
-          <Property Name="UpdateDate" Type="DateTime" Precision="3" />
-          <Property Name="UpdateBy" Type="Int32" />
-          <Property Name="VocalCordID" Type="Int32" />
-          <Property Name="TracheaID" Type="Int32" />
-          <Property Name="CarinaID" Type="Int32" />
-          <Property Name="RightMainID" Type="Int32" />
-          <Property Name="RightIntermideateID" Type="Int32" />
-          <Property Name="RULID" Type="Int32" />
-          <Property Name="RMLID" Type="Int32" />
-          <Property Name="RLLID" Type="Int32" />
-          <Property Name="LeftMainID" Type="Int32" />
-          <Property Name="LULID" Type="Int32" />
-          <Property Name="LingularID" Type="Int32" />
-          <Property Name="LLLID" Type="Int32" />
-          <Property Name="AnalCanal" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
-          <Property Name="Rectum" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
-          <Property Name="SigmoidColon" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
-          <Property Name="DescendingColon" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
-          <Property Name="SplenicFlexure" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
-          <Property Name="TransverseColon" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
-          <Property Name="HepaticFlexure" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
-          <Property Name="AscendingColon" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
-          <Property Name="IleocecalVolve" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
-          <Property Name="Cecum" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
-          <Property Name="TerminalIleum" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
-          <Property Name="Esophagus" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
-          <Property Name="Stomach" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
-          <Property Name="Duodenum" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
-          <Property Name="AmpullaOfVater" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
-          <Property Name="Cholangiogram" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
-          <Property Name="Pancreatogram" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
-          <Property Name="Oropharynx" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
-          <Property Name="EGJunction" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
-          <Property Name="Cardia" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
-          <Property Name="Fundus" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
-          <Property Name="Body" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
-          <Property Name="Antrum" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
-          <Property Name="Pylorus" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
-          <Property Name="DuodenalBulb" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
-          <Property Name="SecondPart" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
-          <Property Name="NasalCavityLeftID" Type="Int32" />
-          <Property Name="NasalCavityLeft" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
-          <Property Name="NasalCavityRightID" Type="Int32" />
-          <Property Name="NasalCavityRight" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
-          <Property Name="SeptumID" Type="Int32" />
-          <Property Name="Septum" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
-          <Property Name="NasopharynxID" Type="Int32" />
-          <Property Name="Nasopharynx" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
-          <Property Name="RoofID" Type="Int32" />
-          <Property Name="Roof" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
-          <Property Name="PosteriorWallID" Type="Int32" />
-          <Property Name="PosteriorWall" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
-          <Property Name="RosenmullerFossaID" Type="Int32" />
-          <Property Name="RosenmullerFossa" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
-          <Property Name="EustachianTubeOrificeLeftID" Type="Int32" />
-          <Property Name="EustachianTubeOrificeLeft" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
-          <Property Name="EustachianTubeOrificeRightID" Type="Int32" />
-          <Property Name="EustachianTubeOrificeRight" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
-          <Property Name="SoftPalateID" Type="Int32" />
-          <Property Name="SoftPalate" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
-          <Property Name="UvulaID" Type="Int32" />
-          <Property Name="Uvula" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
-          <Property Name="TonsilID" Type="Int32" />
-          <Property Name="Tonsil" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
-          <Property Name="BaseOfTongueID" Type="Int32" />
-          <Property Name="BaseOfTongue" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
-          <Property Name="ValleculaID" Type="Int32" />
-          <Property Name="Vallecula" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
-          <Property Name="PyriformSinusLeftID" Type="Int32" />
-          <Property Name="PyriformSinusLeft" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
-          <Property Name="PyriformSinusRightID" Type="Int32" />
-          <Property Name="PyriformSinusRight" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
-          <Property Name="PostcricoidID" Type="Int32" />
-          <Property Name="Postcricoid" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
-          <Property Name="PosteriorPharyngealWallID" Type="Int32" />
-          <Property Name="PosteriorPharyngealWall" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
-          <Property Name="SupraglotticID" Type="Int32" />
-          <Property Name="Supraglottic" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
-          <Property Name="GlotticID" Type="Int32" />
-          <Property Name="Glottic" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
-          <Property Name="SubglotticID" Type="Int32" />
-          <Property Name="Subglottic" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
-          <Property Name="UESID" Type="Int32" />
-          <Property Name="UES" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
-          <Property Name="LESID" Type="Int32" />
-          <Property Name="LES" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
-          <Property Name="PrincipalProcedureID" Type="Int32" />
-          <Property Name="PrincipalProcedureDetail" Type="String" MaxLength="1000" FixedLength="false" Unicode="true" />
-          <Property Name="SupplementalProcedure1ID" Type="Int32" />
-          <Property Name="SupplementalProcedure1Detail" Type="String" MaxLength="1000" FixedLength="false" Unicode="true" />
-          <Property Name="SupplementalProcedure2ID" Type="Int32" />
-          <Property Name="SupplementalProcedure2Detail" Type="String" MaxLength="1000" FixedLength="false" Unicode="true" />
-          <Property Name="Procedure" Type="String" MaxLength="1000" FixedLength="false" Unicode="true" />
-          <Property Name="DxID1" Type="Int32" />
-          <Property Name="DxID1Detail" Type="String" MaxLength="1000" FixedLength="false" Unicode="true" />
-          <Property Name="DxID2" Type="Int32" />
-          <Property Name="DxID2Detail" Type="String" MaxLength="1000" FixedLength="false" Unicode="true" />
-          <Property Name="DxID3" Type="Int32" />
-          <Property Name="DxID3Detail" Type="String" MaxLength="1000" FixedLength="false" Unicode="true" />
-          <Property Name="DxID4" Type="Int32" />
-          <Property Name="DxID4Detail" Type="String" MaxLength="1000" FixedLength="false" Unicode="true" />
-          <Property Name="Complication" Type="String" MaxLength="1000" FixedLength="false" Unicode="true" />
-          <Property Name="Histopathology" Type="String" MaxLength="1000" FixedLength="false" Unicode="true" />
-          <Property Name="Recommendation" Type="String" MaxLength="1000" FixedLength="false" Unicode="true" />
-          <Property Name="Comment" Type="String" MaxLength="1000" FixedLength="false" Unicode="true" />
-        </EntityType>
         <EntityType Name="v_PatientList">
           <Key>
             <PropertyRef Name="PatientID" />
@@ -2930,6 +2819,191 @@ warning 6002: The table/view 'EndoscopicDb.dbo.v_PatientList' does not have a pr
           <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
           <Property Name="Name" Type="String" MaxLength="250" FixedLength="false" Unicode="true" />
           <Property Name="IsTopic" Type="Boolean" />
+          <Property Name="IsActive" Type="Boolean" Nullable="false" />
+        </EntityType>
+        <EntityType Name="Finding">
+          <Key>
+            <PropertyRef Name="FindingID" />
+          </Key>
+          <Property Name="FindingID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="PatientID" Type="Int32" />
+          <Property Name="VocalCord" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="Trachea" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="Carina" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="RightMain" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="RightIntermideate" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="RUL" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="RML" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="RLL" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="LeftMain" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="LUL" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="Lingular" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="LLL" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="AnalCanalID" Type="Int32" />
+          <Property Name="RectumID" Type="Int32" />
+          <Property Name="SigmoidColonID" Type="Int32" />
+          <Property Name="DescendingColonID" Type="Int32" />
+          <Property Name="SplenicFlexureID" Type="Int32" />
+          <Property Name="TransverseColonID" Type="Int32" />
+          <Property Name="HepaticFlexureID" Type="Int32" />
+          <Property Name="AscendingColonID" Type="Int32" />
+          <Property Name="IleocecalVolveID" Type="Int32" />
+          <Property Name="CecumID" Type="Int32" />
+          <Property Name="TerminalIleumID" Type="Int32" />
+          <Property Name="EsophagusID" Type="Int32" />
+          <Property Name="StomachID" Type="Int32" />
+          <Property Name="DuodenumID" Type="Int32" />
+          <Property Name="AmpullaOfVaterID" Type="Int32" />
+          <Property Name="CholangiogramID" Type="Int32" />
+          <Property Name="PancreatogramID" Type="Int32" />
+          <Property Name="OropharynxID" Type="Int32" />
+          <Property Name="EGJunctionID" Type="Int32" />
+          <Property Name="CardiaID" Type="Int32" />
+          <Property Name="FundusID" Type="Int32" />
+          <Property Name="BodyID" Type="Int32" />
+          <Property Name="AntrumID" Type="Int32" />
+          <Property Name="PylorusID" Type="Int32" />
+          <Property Name="DuodenalBulbID" Type="Int32" />
+          <Property Name="SecondPartID" Type="Int32" />
+          <Property Name="CreateDate" Type="DateTime" Precision="3" />
+          <Property Name="CreateBy" Type="Int32" />
+          <Property Name="UpdateDate" Type="DateTime" Precision="3" />
+          <Property Name="UpdateBy" Type="Int32" />
+          <Property Name="VocalCordID" Type="Int32" />
+          <Property Name="TracheaID" Type="Int32" />
+          <Property Name="CarinaID" Type="Int32" />
+          <Property Name="RightMainID" Type="Int32" />
+          <Property Name="RightIntermideateID" Type="Int32" />
+          <Property Name="RULID" Type="Int32" />
+          <Property Name="RMLID" Type="Int32" />
+          <Property Name="RLLID" Type="Int32" />
+          <Property Name="LeftMainID" Type="Int32" />
+          <Property Name="LULID" Type="Int32" />
+          <Property Name="LingularID" Type="Int32" />
+          <Property Name="LLLID" Type="Int32" />
+          <Property Name="AnalCanal" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+          <Property Name="Rectum" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+          <Property Name="SigmoidColon" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+          <Property Name="DescendingColon" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+          <Property Name="SplenicFlexure" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+          <Property Name="TransverseColon" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+          <Property Name="HepaticFlexure" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+          <Property Name="AscendingColon" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+          <Property Name="IleocecalVolve" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+          <Property Name="Cecum" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+          <Property Name="TerminalIleum" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+          <Property Name="Esophagus" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+          <Property Name="Stomach" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+          <Property Name="Duodenum" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+          <Property Name="AmpullaOfVater" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+          <Property Name="Cholangiogram" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+          <Property Name="Pancreatogram" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+          <Property Name="Oropharynx" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+          <Property Name="EGJunction" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+          <Property Name="Cardia" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+          <Property Name="Fundus" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+          <Property Name="Body" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+          <Property Name="Antrum" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+          <Property Name="Pylorus" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+          <Property Name="DuodenalBulb" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+          <Property Name="SecondPart" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+          <Property Name="NasalCavityLeftID" Type="Int32" />
+          <Property Name="NasalCavityLeft" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+          <Property Name="NasalCavityRightID" Type="Int32" />
+          <Property Name="NasalCavityRight" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+          <Property Name="SeptumID" Type="Int32" />
+          <Property Name="Septum" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+          <Property Name="NasopharynxID" Type="Int32" />
+          <Property Name="Nasopharynx" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+          <Property Name="RoofID" Type="Int32" />
+          <Property Name="Roof" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+          <Property Name="PosteriorWallID" Type="Int32" />
+          <Property Name="PosteriorWall" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+          <Property Name="RosenmullerFossaID" Type="Int32" />
+          <Property Name="RosenmullerFossa" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+          <Property Name="EustachianTubeOrificeLeftID" Type="Int32" />
+          <Property Name="EustachianTubeOrificeLeft" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+          <Property Name="EustachianTubeOrificeRightID" Type="Int32" />
+          <Property Name="EustachianTubeOrificeRight" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+          <Property Name="SoftPalateID" Type="Int32" />
+          <Property Name="SoftPalate" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+          <Property Name="UvulaID" Type="Int32" />
+          <Property Name="Uvula" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+          <Property Name="TonsilID" Type="Int32" />
+          <Property Name="Tonsil" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+          <Property Name="BaseOfTongueID" Type="Int32" />
+          <Property Name="BaseOfTongue" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+          <Property Name="ValleculaID" Type="Int32" />
+          <Property Name="Vallecula" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+          <Property Name="PyriformSinusLeftID" Type="Int32" />
+          <Property Name="PyriformSinusLeft" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+          <Property Name="PyriformSinusRightID" Type="Int32" />
+          <Property Name="PyriformSinusRight" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+          <Property Name="PostcricoidID" Type="Int32" />
+          <Property Name="Postcricoid" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+          <Property Name="PosteriorPharyngealWallID" Type="Int32" />
+          <Property Name="PosteriorPharyngealWall" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+          <Property Name="SupraglotticID" Type="Int32" />
+          <Property Name="Supraglottic" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+          <Property Name="GlotticID" Type="Int32" />
+          <Property Name="Glottic" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+          <Property Name="SubglotticID" Type="Int32" />
+          <Property Name="Subglottic" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+          <Property Name="UESID" Type="Int32" />
+          <Property Name="UES" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+          <Property Name="LESID" Type="Int32" />
+          <Property Name="LES" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+          <Property Name="PrincipalProcedureID" Type="Int32" />
+          <Property Name="PrincipalProcedureDetail" Type="String" MaxLength="1000" FixedLength="false" Unicode="true" />
+          <Property Name="SupplementalProcedure1ID" Type="Int32" />
+          <Property Name="SupplementalProcedure1Detail" Type="String" MaxLength="1000" FixedLength="false" Unicode="true" />
+          <Property Name="SupplementalProcedure2ID" Type="Int32" />
+          <Property Name="SupplementalProcedure2Detail" Type="String" MaxLength="1000" FixedLength="false" Unicode="true" />
+          <Property Name="Procedure" Type="String" MaxLength="1000" FixedLength="false" Unicode="true" />
+          <Property Name="DxID1" Type="Int32" />
+          <Property Name="DxID1Detail" Type="String" MaxLength="1000" FixedLength="false" Unicode="true" />
+          <Property Name="DxID2" Type="Int32" />
+          <Property Name="DxID2Detail" Type="String" MaxLength="1000" FixedLength="false" Unicode="true" />
+          <Property Name="DxID3" Type="Int32" />
+          <Property Name="DxID3Detail" Type="String" MaxLength="1000" FixedLength="false" Unicode="true" />
+          <Property Name="DxID4" Type="Int32" />
+          <Property Name="DxID4Detail" Type="String" MaxLength="1000" FixedLength="false" Unicode="true" />
+          <Property Name="Complication" Type="String" MaxLength="1000" FixedLength="false" Unicode="true" />
+          <Property Name="Histopathology" Type="String" MaxLength="1000" FixedLength="false" Unicode="true" />
+          <Property Name="Recommendation" Type="String" MaxLength="1000" FixedLength="false" Unicode="true" />
+          <Property Name="Comment" Type="String" MaxLength="1000" FixedLength="false" Unicode="true" />
+          <Property Name="RapidUreaseTest" Type="String" MaxLength="250" FixedLength="false" Unicode="true" />
+        </EntityType>
+        <EntityType Name="Complication">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Name" Type="String" MaxLength="250" FixedLength="false" Unicode="true" />
+          <Property Name="IsActive" Type="Boolean" Nullable="false" />
+        </EntityType>
+        <EntityType Name="Histopathology">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Name" Type="String" MaxLength="250" FixedLength="false" Unicode="true" />
+          <Property Name="IsActive" Type="Boolean" Nullable="false" />
+        </EntityType>
+        <EntityType Name="RapidUreaseTest">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Name" Type="String" MaxLength="250" FixedLength="false" Unicode="true" />
+          <Property Name="IsActive" Type="Boolean" Nullable="false" />
+        </EntityType>
+        <EntityType Name="Recommendation">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Name" Type="String" MaxLength="250" FixedLength="false" Unicode="true" />
           <Property Name="IsActive" Type="Boolean" Nullable="false" />
         </EntityType>
         </Schema>
@@ -4112,159 +4186,6 @@ warning 6002: The table/view 'EndoscopicDb.dbo.v_PatientList' does not have a pr
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
-          <EntitySetMapping Name="Findings">
-            <EntityTypeMapping TypeName="EndoscopicModel.Finding">
-              <MappingFragment StoreEntitySet="Finding">
-                <ScalarProperty Name="Comment" ColumnName="Comment" />
-                <ScalarProperty Name="Recommendation" ColumnName="Recommendation" />
-                <ScalarProperty Name="Histopathology" ColumnName="Histopathology" />
-                <ScalarProperty Name="Complication" ColumnName="Complication" />
-                <ScalarProperty Name="DxID4Detail" ColumnName="DxID4Detail" />
-                <ScalarProperty Name="DxID4" ColumnName="DxID4" />
-                <ScalarProperty Name="DxID3Detail" ColumnName="DxID3Detail" />
-                <ScalarProperty Name="DxID3" ColumnName="DxID3" />
-                <ScalarProperty Name="DxID2Detail" ColumnName="DxID2Detail" />
-                <ScalarProperty Name="DxID2" ColumnName="DxID2" />
-                <ScalarProperty Name="DxID1Detail" ColumnName="DxID1Detail" />
-                <ScalarProperty Name="DxID1" ColumnName="DxID1" />
-                <ScalarProperty Name="Procedure" ColumnName="Procedure" />
-                <ScalarProperty Name="SupplementalProcedure2Detail" ColumnName="SupplementalProcedure2Detail" />
-                <ScalarProperty Name="SupplementalProcedure2ID" ColumnName="SupplementalProcedure2ID" />
-                <ScalarProperty Name="SupplementalProcedure1Detail" ColumnName="SupplementalProcedure1Detail" />
-                <ScalarProperty Name="SupplementalProcedure1ID" ColumnName="SupplementalProcedure1ID" />
-                <ScalarProperty Name="PrincipalProcedureDetail" ColumnName="PrincipalProcedureDetail" />
-                <ScalarProperty Name="PrincipalProcedureID" ColumnName="PrincipalProcedureID" />
-                <ScalarProperty Name="LES" ColumnName="LES" />
-                <ScalarProperty Name="LESID" ColumnName="LESID" />
-                <ScalarProperty Name="UES" ColumnName="UES" />
-                <ScalarProperty Name="UESID" ColumnName="UESID" />
-                <ScalarProperty Name="Subglottic" ColumnName="Subglottic" />
-                <ScalarProperty Name="SubglotticID" ColumnName="SubglotticID" />
-                <ScalarProperty Name="Glottic" ColumnName="Glottic" />
-                <ScalarProperty Name="GlotticID" ColumnName="GlotticID" />
-                <ScalarProperty Name="Supraglottic" ColumnName="Supraglottic" />
-                <ScalarProperty Name="SupraglotticID" ColumnName="SupraglotticID" />
-                <ScalarProperty Name="PosteriorPharyngealWall" ColumnName="PosteriorPharyngealWall" />
-                <ScalarProperty Name="PosteriorPharyngealWallID" ColumnName="PosteriorPharyngealWallID" />
-                <ScalarProperty Name="Postcricoid" ColumnName="Postcricoid" />
-                <ScalarProperty Name="PostcricoidID" ColumnName="PostcricoidID" />
-                <ScalarProperty Name="PyriformSinusRight" ColumnName="PyriformSinusRight" />
-                <ScalarProperty Name="PyriformSinusRightID" ColumnName="PyriformSinusRightID" />
-                <ScalarProperty Name="PyriformSinusLeft" ColumnName="PyriformSinusLeft" />
-                <ScalarProperty Name="PyriformSinusLeftID" ColumnName="PyriformSinusLeftID" />
-                <ScalarProperty Name="Vallecula" ColumnName="Vallecula" />
-                <ScalarProperty Name="ValleculaID" ColumnName="ValleculaID" />
-                <ScalarProperty Name="BaseOfTongue" ColumnName="BaseOfTongue" />
-                <ScalarProperty Name="BaseOfTongueID" ColumnName="BaseOfTongueID" />
-                <ScalarProperty Name="Tonsil" ColumnName="Tonsil" />
-                <ScalarProperty Name="TonsilID" ColumnName="TonsilID" />
-                <ScalarProperty Name="Uvula" ColumnName="Uvula" />
-                <ScalarProperty Name="UvulaID" ColumnName="UvulaID" />
-                <ScalarProperty Name="SoftPalate" ColumnName="SoftPalate" />
-                <ScalarProperty Name="SoftPalateID" ColumnName="SoftPalateID" />
-                <ScalarProperty Name="EustachianTubeOrificeRight" ColumnName="EustachianTubeOrificeRight" />
-                <ScalarProperty Name="EustachianTubeOrificeRightID" ColumnName="EustachianTubeOrificeRightID" />
-                <ScalarProperty Name="EustachianTubeOrificeLeft" ColumnName="EustachianTubeOrificeLeft" />
-                <ScalarProperty Name="EustachianTubeOrificeLeftID" ColumnName="EustachianTubeOrificeLeftID" />
-                <ScalarProperty Name="RosenmullerFossa" ColumnName="RosenmullerFossa" />
-                <ScalarProperty Name="RosenmullerFossaID" ColumnName="RosenmullerFossaID" />
-                <ScalarProperty Name="PosteriorWall" ColumnName="PosteriorWall" />
-                <ScalarProperty Name="PosteriorWallID" ColumnName="PosteriorWallID" />
-                <ScalarProperty Name="Roof" ColumnName="Roof" />
-                <ScalarProperty Name="RoofID" ColumnName="RoofID" />
-                <ScalarProperty Name="Nasopharynx" ColumnName="Nasopharynx" />
-                <ScalarProperty Name="NasopharynxID" ColumnName="NasopharynxID" />
-                <ScalarProperty Name="Septum" ColumnName="Septum" />
-                <ScalarProperty Name="SeptumID" ColumnName="SeptumID" />
-                <ScalarProperty Name="NasalCavityRight" ColumnName="NasalCavityRight" />
-                <ScalarProperty Name="NasalCavityRightID" ColumnName="NasalCavityRightID" />
-                <ScalarProperty Name="NasalCavityLeft" ColumnName="NasalCavityLeft" />
-                <ScalarProperty Name="NasalCavityLeftID" ColumnName="NasalCavityLeftID" />
-                <ScalarProperty Name="SecondPart" ColumnName="SecondPart" />
-                <ScalarProperty Name="DuodenalBulb" ColumnName="DuodenalBulb" />
-                <ScalarProperty Name="Pylorus" ColumnName="Pylorus" />
-                <ScalarProperty Name="Antrum" ColumnName="Antrum" />
-                <ScalarProperty Name="Body" ColumnName="Body" />
-                <ScalarProperty Name="Fundus" ColumnName="Fundus" />
-                <ScalarProperty Name="Cardia" ColumnName="Cardia" />
-                <ScalarProperty Name="EGJunction" ColumnName="EGJunction" />
-                <ScalarProperty Name="Oropharynx" ColumnName="Oropharynx" />
-                <ScalarProperty Name="Pancreatogram" ColumnName="Pancreatogram" />
-                <ScalarProperty Name="Cholangiogram" ColumnName="Cholangiogram" />
-                <ScalarProperty Name="AmpullaOfVater" ColumnName="AmpullaOfVater" />
-                <ScalarProperty Name="Duodenum" ColumnName="Duodenum" />
-                <ScalarProperty Name="Stomach" ColumnName="Stomach" />
-                <ScalarProperty Name="Esophagus" ColumnName="Esophagus" />
-                <ScalarProperty Name="TerminalIleum" ColumnName="TerminalIleum" />
-                <ScalarProperty Name="Cecum" ColumnName="Cecum" />
-                <ScalarProperty Name="IleocecalVolve" ColumnName="IleocecalVolve" />
-                <ScalarProperty Name="AscendingColon" ColumnName="AscendingColon" />
-                <ScalarProperty Name="HepaticFlexure" ColumnName="HepaticFlexure" />
-                <ScalarProperty Name="TransverseColon" ColumnName="TransverseColon" />
-                <ScalarProperty Name="SplenicFlexure" ColumnName="SplenicFlexure" />
-                <ScalarProperty Name="DescendingColon" ColumnName="DescendingColon" />
-                <ScalarProperty Name="SigmoidColon" ColumnName="SigmoidColon" />
-                <ScalarProperty Name="Rectum" ColumnName="Rectum" />
-                <ScalarProperty Name="AnalCanal" ColumnName="AnalCanal" />
-                <ScalarProperty Name="LLLID" ColumnName="LLLID" />
-                <ScalarProperty Name="LingularID" ColumnName="LingularID" />
-                <ScalarProperty Name="LULID" ColumnName="LULID" />
-                <ScalarProperty Name="LeftMainID" ColumnName="LeftMainID" />
-                <ScalarProperty Name="RLLID" ColumnName="RLLID" />
-                <ScalarProperty Name="RMLID" ColumnName="RMLID" />
-                <ScalarProperty Name="RULID" ColumnName="RULID" />
-                <ScalarProperty Name="RightIntermideateID" ColumnName="RightIntermideateID" />
-                <ScalarProperty Name="RightMainID" ColumnName="RightMainID" />
-                <ScalarProperty Name="CarinaID" ColumnName="CarinaID" />
-                <ScalarProperty Name="TracheaID" ColumnName="TracheaID" />
-                <ScalarProperty Name="VocalCordID" ColumnName="VocalCordID" />
-                <ScalarProperty Name="UpdateBy" ColumnName="UpdateBy" />
-                <ScalarProperty Name="UpdateDate" ColumnName="UpdateDate" />
-                <ScalarProperty Name="CreateBy" ColumnName="CreateBy" />
-                <ScalarProperty Name="CreateDate" ColumnName="CreateDate" />
-                <ScalarProperty Name="SecondPartID" ColumnName="SecondPartID" />
-                <ScalarProperty Name="DuodenalBulbID" ColumnName="DuodenalBulbID" />
-                <ScalarProperty Name="PylorusID" ColumnName="PylorusID" />
-                <ScalarProperty Name="AntrumID" ColumnName="AntrumID" />
-                <ScalarProperty Name="BodyID" ColumnName="BodyID" />
-                <ScalarProperty Name="FundusID" ColumnName="FundusID" />
-                <ScalarProperty Name="CardiaID" ColumnName="CardiaID" />
-                <ScalarProperty Name="EGJunctionID" ColumnName="EGJunctionID" />
-                <ScalarProperty Name="OropharynxID" ColumnName="OropharynxID" />
-                <ScalarProperty Name="PancreatogramID" ColumnName="PancreatogramID" />
-                <ScalarProperty Name="CholangiogramID" ColumnName="CholangiogramID" />
-                <ScalarProperty Name="AmpullaOfVaterID" ColumnName="AmpullaOfVaterID" />
-                <ScalarProperty Name="DuodenumID" ColumnName="DuodenumID" />
-                <ScalarProperty Name="StomachID" ColumnName="StomachID" />
-                <ScalarProperty Name="EsophagusID" ColumnName="EsophagusID" />
-                <ScalarProperty Name="TerminalIleumID" ColumnName="TerminalIleumID" />
-                <ScalarProperty Name="CecumID" ColumnName="CecumID" />
-                <ScalarProperty Name="IleocecalVolveID" ColumnName="IleocecalVolveID" />
-                <ScalarProperty Name="AscendingColonID" ColumnName="AscendingColonID" />
-                <ScalarProperty Name="HepaticFlexureID" ColumnName="HepaticFlexureID" />
-                <ScalarProperty Name="TransverseColonID" ColumnName="TransverseColonID" />
-                <ScalarProperty Name="SplenicFlexureID" ColumnName="SplenicFlexureID" />
-                <ScalarProperty Name="DescendingColonID" ColumnName="DescendingColonID" />
-                <ScalarProperty Name="SigmoidColonID" ColumnName="SigmoidColonID" />
-                <ScalarProperty Name="RectumID" ColumnName="RectumID" />
-                <ScalarProperty Name="AnalCanalID" ColumnName="AnalCanalID" />
-                <ScalarProperty Name="LLL" ColumnName="LLL" />
-                <ScalarProperty Name="Lingular" ColumnName="Lingular" />
-                <ScalarProperty Name="LUL" ColumnName="LUL" />
-                <ScalarProperty Name="LeftMain" ColumnName="LeftMain" />
-                <ScalarProperty Name="RLL" ColumnName="RLL" />
-                <ScalarProperty Name="RML" ColumnName="RML" />
-                <ScalarProperty Name="RUL" ColumnName="RUL" />
-                <ScalarProperty Name="RightIntermideate" ColumnName="RightIntermideate" />
-                <ScalarProperty Name="RightMain" ColumnName="RightMain" />
-                <ScalarProperty Name="Carina" ColumnName="Carina" />
-                <ScalarProperty Name="Trachea" ColumnName="Trachea" />
-                <ScalarProperty Name="VocalCord" ColumnName="VocalCord" />
-                <ScalarProperty Name="PatientID" ColumnName="PatientID" />
-                <ScalarProperty Name="FindingID" ColumnName="FindingID" />
-              </MappingFragment>
-            </EntityTypeMapping>
-          </EntitySetMapping>
           <EntitySetMapping Name="v_PatientList">
             <EntityTypeMapping TypeName="EndoscopicModel.v_PatientList">
               <MappingFragment StoreEntitySet="v_PatientList">
@@ -4426,6 +4347,196 @@ warning 6002: The table/view 'EndoscopicDb.dbo.v_PatientList' does not have a pr
               <MappingFragment StoreEntitySet="ProcedureDetail">
                 <ScalarProperty Name="IsActive" ColumnName="IsActive" />
                 <ScalarProperty Name="IsTopic" ColumnName="IsTopic" />
+                <ScalarProperty Name="Name" ColumnName="Name" />
+                <ScalarProperty Name="ID" ColumnName="ID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Findings">
+            <EntityTypeMapping TypeName="EndoscopicModel.Finding">
+              <MappingFragment StoreEntitySet="Finding">
+                <ScalarProperty Name="RapidUreaseTest" ColumnName="RapidUreaseTest" />
+                <ScalarProperty Name="Comment" ColumnName="Comment" />
+                <ScalarProperty Name="Recommendation" ColumnName="Recommendation" />
+                <ScalarProperty Name="Histopathology" ColumnName="Histopathology" />
+                <ScalarProperty Name="Complication" ColumnName="Complication" />
+                <ScalarProperty Name="DxID4Detail" ColumnName="DxID4Detail" />
+                <ScalarProperty Name="DxID4" ColumnName="DxID4" />
+                <ScalarProperty Name="DxID3Detail" ColumnName="DxID3Detail" />
+                <ScalarProperty Name="DxID3" ColumnName="DxID3" />
+                <ScalarProperty Name="DxID2Detail" ColumnName="DxID2Detail" />
+                <ScalarProperty Name="DxID2" ColumnName="DxID2" />
+                <ScalarProperty Name="DxID1Detail" ColumnName="DxID1Detail" />
+                <ScalarProperty Name="DxID1" ColumnName="DxID1" />
+                <ScalarProperty Name="Procedure" ColumnName="Procedure" />
+                <ScalarProperty Name="SupplementalProcedure2Detail" ColumnName="SupplementalProcedure2Detail" />
+                <ScalarProperty Name="SupplementalProcedure2ID" ColumnName="SupplementalProcedure2ID" />
+                <ScalarProperty Name="SupplementalProcedure1Detail" ColumnName="SupplementalProcedure1Detail" />
+                <ScalarProperty Name="SupplementalProcedure1ID" ColumnName="SupplementalProcedure1ID" />
+                <ScalarProperty Name="PrincipalProcedureDetail" ColumnName="PrincipalProcedureDetail" />
+                <ScalarProperty Name="PrincipalProcedureID" ColumnName="PrincipalProcedureID" />
+                <ScalarProperty Name="LES" ColumnName="LES" />
+                <ScalarProperty Name="LESID" ColumnName="LESID" />
+                <ScalarProperty Name="UES" ColumnName="UES" />
+                <ScalarProperty Name="UESID" ColumnName="UESID" />
+                <ScalarProperty Name="Subglottic" ColumnName="Subglottic" />
+                <ScalarProperty Name="SubglotticID" ColumnName="SubglotticID" />
+                <ScalarProperty Name="Glottic" ColumnName="Glottic" />
+                <ScalarProperty Name="GlotticID" ColumnName="GlotticID" />
+                <ScalarProperty Name="Supraglottic" ColumnName="Supraglottic" />
+                <ScalarProperty Name="SupraglotticID" ColumnName="SupraglotticID" />
+                <ScalarProperty Name="PosteriorPharyngealWall" ColumnName="PosteriorPharyngealWall" />
+                <ScalarProperty Name="PosteriorPharyngealWallID" ColumnName="PosteriorPharyngealWallID" />
+                <ScalarProperty Name="Postcricoid" ColumnName="Postcricoid" />
+                <ScalarProperty Name="PostcricoidID" ColumnName="PostcricoidID" />
+                <ScalarProperty Name="PyriformSinusRight" ColumnName="PyriformSinusRight" />
+                <ScalarProperty Name="PyriformSinusRightID" ColumnName="PyriformSinusRightID" />
+                <ScalarProperty Name="PyriformSinusLeft" ColumnName="PyriformSinusLeft" />
+                <ScalarProperty Name="PyriformSinusLeftID" ColumnName="PyriformSinusLeftID" />
+                <ScalarProperty Name="Vallecula" ColumnName="Vallecula" />
+                <ScalarProperty Name="ValleculaID" ColumnName="ValleculaID" />
+                <ScalarProperty Name="BaseOfTongue" ColumnName="BaseOfTongue" />
+                <ScalarProperty Name="BaseOfTongueID" ColumnName="BaseOfTongueID" />
+                <ScalarProperty Name="Tonsil" ColumnName="Tonsil" />
+                <ScalarProperty Name="TonsilID" ColumnName="TonsilID" />
+                <ScalarProperty Name="Uvula" ColumnName="Uvula" />
+                <ScalarProperty Name="UvulaID" ColumnName="UvulaID" />
+                <ScalarProperty Name="SoftPalate" ColumnName="SoftPalate" />
+                <ScalarProperty Name="SoftPalateID" ColumnName="SoftPalateID" />
+                <ScalarProperty Name="EustachianTubeOrificeRight" ColumnName="EustachianTubeOrificeRight" />
+                <ScalarProperty Name="EustachianTubeOrificeRightID" ColumnName="EustachianTubeOrificeRightID" />
+                <ScalarProperty Name="EustachianTubeOrificeLeft" ColumnName="EustachianTubeOrificeLeft" />
+                <ScalarProperty Name="EustachianTubeOrificeLeftID" ColumnName="EustachianTubeOrificeLeftID" />
+                <ScalarProperty Name="RosenmullerFossa" ColumnName="RosenmullerFossa" />
+                <ScalarProperty Name="RosenmullerFossaID" ColumnName="RosenmullerFossaID" />
+                <ScalarProperty Name="PosteriorWall" ColumnName="PosteriorWall" />
+                <ScalarProperty Name="PosteriorWallID" ColumnName="PosteriorWallID" />
+                <ScalarProperty Name="Roof" ColumnName="Roof" />
+                <ScalarProperty Name="RoofID" ColumnName="RoofID" />
+                <ScalarProperty Name="Nasopharynx" ColumnName="Nasopharynx" />
+                <ScalarProperty Name="NasopharynxID" ColumnName="NasopharynxID" />
+                <ScalarProperty Name="Septum" ColumnName="Septum" />
+                <ScalarProperty Name="SeptumID" ColumnName="SeptumID" />
+                <ScalarProperty Name="NasalCavityRight" ColumnName="NasalCavityRight" />
+                <ScalarProperty Name="NasalCavityRightID" ColumnName="NasalCavityRightID" />
+                <ScalarProperty Name="NasalCavityLeft" ColumnName="NasalCavityLeft" />
+                <ScalarProperty Name="NasalCavityLeftID" ColumnName="NasalCavityLeftID" />
+                <ScalarProperty Name="SecondPart" ColumnName="SecondPart" />
+                <ScalarProperty Name="DuodenalBulb" ColumnName="DuodenalBulb" />
+                <ScalarProperty Name="Pylorus" ColumnName="Pylorus" />
+                <ScalarProperty Name="Antrum" ColumnName="Antrum" />
+                <ScalarProperty Name="Body" ColumnName="Body" />
+                <ScalarProperty Name="Fundus" ColumnName="Fundus" />
+                <ScalarProperty Name="Cardia" ColumnName="Cardia" />
+                <ScalarProperty Name="EGJunction" ColumnName="EGJunction" />
+                <ScalarProperty Name="Oropharynx" ColumnName="Oropharynx" />
+                <ScalarProperty Name="Pancreatogram" ColumnName="Pancreatogram" />
+                <ScalarProperty Name="Cholangiogram" ColumnName="Cholangiogram" />
+                <ScalarProperty Name="AmpullaOfVater" ColumnName="AmpullaOfVater" />
+                <ScalarProperty Name="Duodenum" ColumnName="Duodenum" />
+                <ScalarProperty Name="Stomach" ColumnName="Stomach" />
+                <ScalarProperty Name="Esophagus" ColumnName="Esophagus" />
+                <ScalarProperty Name="TerminalIleum" ColumnName="TerminalIleum" />
+                <ScalarProperty Name="Cecum" ColumnName="Cecum" />
+                <ScalarProperty Name="IleocecalVolve" ColumnName="IleocecalVolve" />
+                <ScalarProperty Name="AscendingColon" ColumnName="AscendingColon" />
+                <ScalarProperty Name="HepaticFlexure" ColumnName="HepaticFlexure" />
+                <ScalarProperty Name="TransverseColon" ColumnName="TransverseColon" />
+                <ScalarProperty Name="SplenicFlexure" ColumnName="SplenicFlexure" />
+                <ScalarProperty Name="DescendingColon" ColumnName="DescendingColon" />
+                <ScalarProperty Name="SigmoidColon" ColumnName="SigmoidColon" />
+                <ScalarProperty Name="Rectum" ColumnName="Rectum" />
+                <ScalarProperty Name="AnalCanal" ColumnName="AnalCanal" />
+                <ScalarProperty Name="LLLID" ColumnName="LLLID" />
+                <ScalarProperty Name="LingularID" ColumnName="LingularID" />
+                <ScalarProperty Name="LULID" ColumnName="LULID" />
+                <ScalarProperty Name="LeftMainID" ColumnName="LeftMainID" />
+                <ScalarProperty Name="RLLID" ColumnName="RLLID" />
+                <ScalarProperty Name="RMLID" ColumnName="RMLID" />
+                <ScalarProperty Name="RULID" ColumnName="RULID" />
+                <ScalarProperty Name="RightIntermideateID" ColumnName="RightIntermideateID" />
+                <ScalarProperty Name="RightMainID" ColumnName="RightMainID" />
+                <ScalarProperty Name="CarinaID" ColumnName="CarinaID" />
+                <ScalarProperty Name="TracheaID" ColumnName="TracheaID" />
+                <ScalarProperty Name="VocalCordID" ColumnName="VocalCordID" />
+                <ScalarProperty Name="UpdateBy" ColumnName="UpdateBy" />
+                <ScalarProperty Name="UpdateDate" ColumnName="UpdateDate" />
+                <ScalarProperty Name="CreateBy" ColumnName="CreateBy" />
+                <ScalarProperty Name="CreateDate" ColumnName="CreateDate" />
+                <ScalarProperty Name="SecondPartID" ColumnName="SecondPartID" />
+                <ScalarProperty Name="DuodenalBulbID" ColumnName="DuodenalBulbID" />
+                <ScalarProperty Name="PylorusID" ColumnName="PylorusID" />
+                <ScalarProperty Name="AntrumID" ColumnName="AntrumID" />
+                <ScalarProperty Name="BodyID" ColumnName="BodyID" />
+                <ScalarProperty Name="FundusID" ColumnName="FundusID" />
+                <ScalarProperty Name="CardiaID" ColumnName="CardiaID" />
+                <ScalarProperty Name="EGJunctionID" ColumnName="EGJunctionID" />
+                <ScalarProperty Name="OropharynxID" ColumnName="OropharynxID" />
+                <ScalarProperty Name="PancreatogramID" ColumnName="PancreatogramID" />
+                <ScalarProperty Name="CholangiogramID" ColumnName="CholangiogramID" />
+                <ScalarProperty Name="AmpullaOfVaterID" ColumnName="AmpullaOfVaterID" />
+                <ScalarProperty Name="DuodenumID" ColumnName="DuodenumID" />
+                <ScalarProperty Name="StomachID" ColumnName="StomachID" />
+                <ScalarProperty Name="EsophagusID" ColumnName="EsophagusID" />
+                <ScalarProperty Name="TerminalIleumID" ColumnName="TerminalIleumID" />
+                <ScalarProperty Name="CecumID" ColumnName="CecumID" />
+                <ScalarProperty Name="IleocecalVolveID" ColumnName="IleocecalVolveID" />
+                <ScalarProperty Name="AscendingColonID" ColumnName="AscendingColonID" />
+                <ScalarProperty Name="HepaticFlexureID" ColumnName="HepaticFlexureID" />
+                <ScalarProperty Name="TransverseColonID" ColumnName="TransverseColonID" />
+                <ScalarProperty Name="SplenicFlexureID" ColumnName="SplenicFlexureID" />
+                <ScalarProperty Name="DescendingColonID" ColumnName="DescendingColonID" />
+                <ScalarProperty Name="SigmoidColonID" ColumnName="SigmoidColonID" />
+                <ScalarProperty Name="RectumID" ColumnName="RectumID" />
+                <ScalarProperty Name="AnalCanalID" ColumnName="AnalCanalID" />
+                <ScalarProperty Name="LLL" ColumnName="LLL" />
+                <ScalarProperty Name="Lingular" ColumnName="Lingular" />
+                <ScalarProperty Name="LUL" ColumnName="LUL" />
+                <ScalarProperty Name="LeftMain" ColumnName="LeftMain" />
+                <ScalarProperty Name="RLL" ColumnName="RLL" />
+                <ScalarProperty Name="RML" ColumnName="RML" />
+                <ScalarProperty Name="RUL" ColumnName="RUL" />
+                <ScalarProperty Name="RightIntermideate" ColumnName="RightIntermideate" />
+                <ScalarProperty Name="RightMain" ColumnName="RightMain" />
+                <ScalarProperty Name="Carina" ColumnName="Carina" />
+                <ScalarProperty Name="Trachea" ColumnName="Trachea" />
+                <ScalarProperty Name="VocalCord" ColumnName="VocalCord" />
+                <ScalarProperty Name="PatientID" ColumnName="PatientID" />
+                <ScalarProperty Name="FindingID" ColumnName="FindingID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Complications">
+            <EntityTypeMapping TypeName="EndoscopicModel.Complication">
+              <MappingFragment StoreEntitySet="Complication">
+                <ScalarProperty Name="IsActive" ColumnName="IsActive" />
+                <ScalarProperty Name="Name" ColumnName="Name" />
+                <ScalarProperty Name="ID" ColumnName="ID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Histopathologies">
+            <EntityTypeMapping TypeName="EndoscopicModel.Histopathology">
+              <MappingFragment StoreEntitySet="Histopathology">
+                <ScalarProperty Name="IsActive" ColumnName="IsActive" />
+                <ScalarProperty Name="Name" ColumnName="Name" />
+                <ScalarProperty Name="ID" ColumnName="ID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="RapidUreaseTests">
+            <EntityTypeMapping TypeName="EndoscopicModel.RapidUreaseTest">
+              <MappingFragment StoreEntitySet="RapidUreaseTest">
+                <ScalarProperty Name="IsActive" ColumnName="IsActive" />
+                <ScalarProperty Name="Name" ColumnName="Name" />
+                <ScalarProperty Name="ID" ColumnName="ID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Recommendations">
+            <EntityTypeMapping TypeName="EndoscopicModel.Recommendation">
+              <MappingFragment StoreEntitySet="Recommendation">
+                <ScalarProperty Name="IsActive" ColumnName="IsActive" />
                 <ScalarProperty Name="Name" ColumnName="Name" />
                 <ScalarProperty Name="ID" ColumnName="ID" />
               </MappingFragment>

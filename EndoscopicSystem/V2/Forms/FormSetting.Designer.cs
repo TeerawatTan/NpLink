@@ -31,6 +31,7 @@ namespace EndoscopicSystem.V2.Forms
         {
             this.panelChild = new System.Windows.Forms.Panel();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.menuEndoscopicRoom = new System.Windows.Forms.Button();
             this.menuInstrumentSetting = new System.Windows.Forms.Button();
             this.menuFinancialSetting = new System.Windows.Forms.Button();
             this.menuPACSSetting = new System.Windows.Forms.Button();
@@ -44,7 +45,6 @@ namespace EndoscopicSystem.V2.Forms
             this.menuDoctor = new System.Windows.Forms.Button();
             this.menuUserManage = new System.Windows.Forms.Button();
             this.panelSidebar = new System.Windows.Forms.Panel();
-            this.menuEndoscopicRoom = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             this.panelSidebar.SuspendLayout();
             this.SuspendLayout();
@@ -79,6 +79,20 @@ namespace EndoscopicSystem.V2.Forms
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(279, 788);
             this.panel1.TabIndex = 0;
+            // 
+            // menuEndoscopicRoom
+            // 
+            this.menuEndoscopicRoom.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(80)))), ((int)(((byte)(139)))));
+            this.menuEndoscopicRoom.Dock = System.Windows.Forms.DockStyle.Top;
+            this.menuEndoscopicRoom.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
+            this.menuEndoscopicRoom.ForeColor = System.Drawing.Color.White;
+            this.menuEndoscopicRoom.Location = new System.Drawing.Point(0, 600);
+            this.menuEndoscopicRoom.Name = "menuEndoscopicRoom";
+            this.menuEndoscopicRoom.Size = new System.Drawing.Size(279, 50);
+            this.menuEndoscopicRoom.TabIndex = 19;
+            this.menuEndoscopicRoom.Text = "Room Setting";
+            this.menuEndoscopicRoom.UseVisualStyleBackColor = false;
+            this.menuEndoscopicRoom.Click += new System.EventHandler(this.menuEndoscopicRoom_Click);
             // 
             // menuInstrumentSetting
             // 
@@ -151,7 +165,7 @@ namespace EndoscopicSystem.V2.Forms
             // 
             // menuAnesthesistMethod
             // 
-            this.menuAnesthesistMethod.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(80)))), ((int)(((byte)(139)))));
+            this.menuAnesthesistMethod.BackColor = System.Drawing.Color.Silver;
             this.menuAnesthesistMethod.Dock = System.Windows.Forms.DockStyle.Top;
             this.menuAnesthesistMethod.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
             this.menuAnesthesistMethod.ForeColor = System.Drawing.Color.White;
@@ -161,6 +175,7 @@ namespace EndoscopicSystem.V2.Forms
             this.menuAnesthesistMethod.TabIndex = 13;
             this.menuAnesthesistMethod.Text = "Anesthesist Method";
             this.menuAnesthesistMethod.UseVisualStyleBackColor = false;
+            this.menuAnesthesistMethod.Visible = false;
             this.menuAnesthesistMethod.Click += new System.EventHandler(this.menuAnesthesistMethod_Click);
             // 
             // Anesthesist
@@ -256,20 +271,6 @@ namespace EndoscopicSystem.V2.Forms
             this.panelSidebar.Name = "panelSidebar";
             this.panelSidebar.Size = new System.Drawing.Size(297, 810);
             this.panelSidebar.TabIndex = 8;
-            // 
-            // menuEndoscopicRoom
-            // 
-            this.menuEndoscopicRoom.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(80)))), ((int)(((byte)(139)))));
-            this.menuEndoscopicRoom.Dock = System.Windows.Forms.DockStyle.Top;
-            this.menuEndoscopicRoom.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
-            this.menuEndoscopicRoom.ForeColor = System.Drawing.Color.White;
-            this.menuEndoscopicRoom.Location = new System.Drawing.Point(0, 600);
-            this.menuEndoscopicRoom.Name = "menuEndoscopicRoom";
-            this.menuEndoscopicRoom.Size = new System.Drawing.Size(279, 50);
-            this.menuEndoscopicRoom.TabIndex = 19;
-            this.menuEndoscopicRoom.Text = "Room Setting";
-            this.menuEndoscopicRoom.UseVisualStyleBackColor = false;
-            this.menuEndoscopicRoom.Click += new System.EventHandler(this.menuEndoscopicRoom_Click);
             // 
             // FormSetting
             // 

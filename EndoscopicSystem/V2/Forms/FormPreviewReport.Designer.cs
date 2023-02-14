@@ -2526,7 +2526,7 @@ namespace EndoscopicSystem.V2.Forms
             this.btnPictureBoxSaved9.Size = new System.Drawing.Size(29, 28);
             this.btnPictureBoxSaved9.TabIndex = 10;
             this.btnPictureBoxSaved9.UseVisualStyleBackColor = true;
-            this.btnPictureBoxSaved9.Click += new System.EventHandler(this.btnPictureBoxSaved8_Click);
+            this.btnPictureBoxSaved9.Click += new System.EventHandler(this.btnPictureBoxSaved9_Click);
             // 
             // txtPictureBoxSaved9
             // 
@@ -2552,7 +2552,7 @@ namespace EndoscopicSystem.V2.Forms
             this.btnDeletePictureBoxSaved9.Text = "X";
             this.btnDeletePictureBoxSaved9.UseVisualStyleBackColor = false;
             this.btnDeletePictureBoxSaved9.Visible = false;
-            this.btnDeletePictureBoxSaved9.Click += new System.EventHandler(this.btnDeletePictureBoxSaved8_Click);
+            this.btnDeletePictureBoxSaved9.Click += new System.EventHandler(this.btnDeletePictureBoxSaved9_Click);
             // 
             // btnEditPic9
             // 
@@ -2565,7 +2565,7 @@ namespace EndoscopicSystem.V2.Forms
             this.btnEditPic9.TabIndex = 16;
             this.btnEditPic9.UseVisualStyleBackColor = true;
             this.btnEditPic9.Visible = false;
-            this.btnEditPic9.Click += new System.EventHandler(this.btnEditPic8_Click);
+            this.btnEditPic9.Click += new System.EventHandler(this.btnEditPic9_Click);
             // 
             // pictureBoxSaved9
             // 
@@ -2604,7 +2604,7 @@ namespace EndoscopicSystem.V2.Forms
             this.btnPictureBoxSaved7.Size = new System.Drawing.Size(29, 28);
             this.btnPictureBoxSaved7.TabIndex = 10;
             this.btnPictureBoxSaved7.UseVisualStyleBackColor = true;
-            this.btnPictureBoxSaved7.Click += new System.EventHandler(this.btnPictureBoxSaved6_Click);
+            this.btnPictureBoxSaved7.Click += new System.EventHandler(this.btnPictureBoxSaved7_Click);
             // 
             // txtPictureBoxSaved7
             // 
@@ -2630,7 +2630,7 @@ namespace EndoscopicSystem.V2.Forms
             this.btnDeletePictureBoxSaved7.Text = "X";
             this.btnDeletePictureBoxSaved7.UseVisualStyleBackColor = false;
             this.btnDeletePictureBoxSaved7.Visible = false;
-            this.btnDeletePictureBoxSaved7.Click += new System.EventHandler(this.btnDeletePictureBoxSaved6_Click);
+            this.btnDeletePictureBoxSaved7.Click += new System.EventHandler(this.btnDeletePictureBoxSaved7_Click);
             // 
             // btnEditPic7
             // 
@@ -2643,7 +2643,7 @@ namespace EndoscopicSystem.V2.Forms
             this.btnEditPic7.TabIndex = 14;
             this.btnEditPic7.UseVisualStyleBackColor = true;
             this.btnEditPic7.Visible = false;
-            this.btnEditPic7.Click += new System.EventHandler(this.btnEditPic6_Click);
+            this.btnEditPic7.Click += new System.EventHandler(this.btnEditPic7_Click);
             // 
             // pictureBoxSaved7
             // 
@@ -2682,7 +2682,7 @@ namespace EndoscopicSystem.V2.Forms
             this.btnPictureBoxSaved8.Size = new System.Drawing.Size(29, 28);
             this.btnPictureBoxSaved8.TabIndex = 10;
             this.btnPictureBoxSaved8.UseVisualStyleBackColor = true;
-            this.btnPictureBoxSaved8.Click += new System.EventHandler(this.btnPictureBoxSaved7_Click);
+            this.btnPictureBoxSaved8.Click += new System.EventHandler(this.btnPictureBoxSaved8_Click);
             // 
             // txtPictureBoxSaved8
             // 
@@ -2708,7 +2708,7 @@ namespace EndoscopicSystem.V2.Forms
             this.btnDeletePictureBoxSaved8.Text = "X";
             this.btnDeletePictureBoxSaved8.UseVisualStyleBackColor = false;
             this.btnDeletePictureBoxSaved8.Visible = false;
-            this.btnDeletePictureBoxSaved8.Click += new System.EventHandler(this.btnDeletePictureBoxSaved7_Click);
+            this.btnDeletePictureBoxSaved8.Click += new System.EventHandler(this.btnDeletePictureBoxSaved8_Click);
             // 
             // btnEditPic8
             // 
@@ -2721,7 +2721,7 @@ namespace EndoscopicSystem.V2.Forms
             this.btnEditPic8.TabIndex = 15;
             this.btnEditPic8.UseVisualStyleBackColor = true;
             this.btnEditPic8.Visible = false;
-            this.btnEditPic8.Click += new System.EventHandler(this.btnEditPic7_Click);
+            this.btnEditPic8.Click += new System.EventHandler(this.btnEditPic8_Click);
             // 
             // pictureBoxSaved8
             // 

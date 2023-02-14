@@ -34,9 +34,28 @@ namespace EndoscopicSystem.Constants
             return months;
         }
 
-        public const int Icd9 = 1;  // ICD-9
-        public const int Icd10 = 2; // ICD-10
-        public const int ProcedureDetail = 3; //ProcedureDetail
+        public const int Icd9 = 1;
+        public const int Icd10 = 2;
+        public const int ProcedureDetail = 3;
+        public const int Complication = 4;
+        public const int Histopathology = 5;
+        public const int RapidUreaseTest = 6;
+        public const int Recommendation = 7;
+
+        public const string PREDX1 = "Pre-Dx1";
+        public const string PREDX2 = "Pre-Dx2";
+        public const string POSTDX1 = "Post-Dx1";
+        public const string POSTDX2 = "Post-Dx2";
+        public const string POSTDX3 = "Post-Dx3";
+        public const string POSTDX4 = "Post-Dx4";
+        public const string PRINCIPAL_PROCEDURE = "PrinncipalProcedure";
+        public const string SUPPLEMENTAL_PROCEDURE_1 = "SupplementalProcedure-1";
+        public const string SUPPLEMENTAL_PROCEDURE_2 = "SupplementalProcedure-2";
+        public const string PROCEDURE_DETAIL = "ProcedureDetail";
+        public const string COMPLICATION = "Complication";
+        public const string HISTOPATHOLOGY = "Histopathology";
+        public const string RAPIDUREASETEST = "RapidUreaseTest";
+        public const string RECOMMENDATION = "Recommendation";
     }
 
     public class MonthModel

@@ -181,6 +181,9 @@
     <Compile Include="Entities\ColonoscopyReport_Result.cs">
       <DependentUpon>DBEndoscopic.tt</DependentUpon>
     </Compile>
+    <Compile Include="Entities\Complication.cs">
+      <DependentUpon>DBEndoscopic.tt</DependentUpon>
+    </Compile>
     <Compile Include="Entities\DBEndoscopic.Context.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -257,6 +260,9 @@
       <DependentUpon>DBEndoscopic.tt</DependentUpon>
     </Compile>
     <Compile Include="Entities\HepaticFlexure.cs">
+      <DependentUpon>DBEndoscopic.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Entities\Histopathology.cs">
       <DependentUpon>DBEndoscopic.tt</DependentUpon>
     </Compile>
     <Compile Include="Entities\History.cs">
@@ -344,6 +350,12 @@
       <DependentUpon>DBEndoscopic.tt</DependentUpon>
     </Compile>
     <Compile Include="Entities\PyriformSinu.cs">
+      <DependentUpon>DBEndoscopic.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Entities\RapidUreaseTest.cs">
+      <DependentUpon>DBEndoscopic.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Entities\Recommendation.cs">
       <DependentUpon>DBEndoscopic.tt</DependentUpon>
     </Compile>
     <Compile Include="Entities\Rectum.cs">

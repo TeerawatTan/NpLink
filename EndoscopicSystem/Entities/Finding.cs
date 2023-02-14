@@ -161,5 +161,6 @@ namespace EndoscopicSystem.Entities
         public string Histopathology { get; set; }
         public string Recommendation { get; set; }
         public string Comment { get; set; }
+        public string RapidUreaseTest { get; set; }
     }
 }
