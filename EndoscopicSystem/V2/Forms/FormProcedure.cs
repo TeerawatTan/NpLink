@@ -707,13 +707,13 @@ namespace EndoscopicSystem.V2.Forms
         }
         private void txbFindingRapidUreaseTest_EGD_Click(object sender, EventArgs e)
         {
-            SetDataInListBox(Constant.ProcedureDetail);
+            SetDataInListBox(Constant.RapidUreaseTest);
             lastFocused = (TextBox)sender;
             _markField = Constant.RAPIDUREASETEST;
         }
         private void txbFindingRecommendation_EGD_Click(object sender, EventArgs e)
         {
-            SetDataInListBox(Constant.ProcedureDetail);
+            SetDataInListBox(Constant.Recommendation);
             lastFocused = (TextBox)sender;
             _markField = Constant.RECOMMENDATION;
         }
@@ -1801,11 +1801,11 @@ namespace EndoscopicSystem.V2.Forms
                 txbFullName_EGD.Text = patient.Fullname;
                 txbAge_EGD.Text = patient.BirthDate.HasValue ? (DateTime.Today.Year - patient.BirthDate.Value.Year).ToString() : "0";
                 txbSex_EGD.Text = patient.Sex.HasValue ? patient.Sex.Value ? Constant.Male : Constant.FeMale : string.Empty;
-                cbbGeneralOPD_EGD.SelectedIndex = patient.OpdID ?? 0;
+                cbbGeneralOPD_EGD.SelectedValue = patient.OpdID ?? 0;
                 chkNewCase_EGD.Checked = endoscopic.NewCase ?? false;
                 chkFollowUpCase_EGD.Checked = endoscopic.FollowUpCase ?? false;
                 chkOPD_EGD.Checked = patient.OpdID.HasValue && patient.OpdID.Value > 0 ? true : false;
-                cbbGeneralWard_EGD.SelectedIndex = patient.WardID ?? 0;
+                cbbGeneralWard_EGD.SelectedValue = patient.WardID ?? 0;
                 chkWard_EGD.Checked = patient.WardID.HasValue && patient.WardID.Value > 0 ? true : false;
                 cbbGeneralFinancial_EGD.SelectedValue = patient.FinancialID;
                 cbbGeneralDoctor_EGD.SelectedValue = patient.DoctorID ?? 0;
@@ -1979,11 +1979,11 @@ namespace EndoscopicSystem.V2.Forms
                 txbFullName_Colono.Text = patient.Fullname;
                 txbAge_Colono.Text = patient.Age.HasValue ? patient.Age.ToString() : "";
                 txbSex_Colono.Text = patient.Sex.HasValue ? patient.Sex.Value ? Constant.Male : Constant.FeMale : string.Empty;
-                cbbGeneralOPD_Colono.SelectedIndex = patient.OpdID ?? 0;
+                cbbGeneralOPD_Colono.SelectedValue = patient.OpdID ?? 0;
                 chkNewCase_Colono.Checked = endoscopic.NewCase ?? false;
                 chkFollowUpCase_Colono.Checked = endoscopic.FollowUpCase ?? false;
                 chkOPD_Colono.Checked = patient.OpdID.HasValue && patient.OpdID.Value > 0 ? true : false;
-                cbbGeneralWard_Colono.SelectedIndex = patient.WardID ?? 0;
+                cbbGeneralWard_Colono.SelectedValue = patient.WardID ?? 0;
                 chkWard_Colono.Checked = patient.WardID.HasValue && patient.WardID.Value > 0 ? true : false;
                 cbbGeneralFinancial_Colono.SelectedValue = patient.FinancialID;
                 cbbGeneralDoctor_Colono.SelectedValue = patient.DoctorID ?? 0;
@@ -2000,7 +2000,7 @@ namespace EndoscopicSystem.V2.Forms
                 {
                     txbGeneralSN_Colono.Text = _db.Instruments.FirstOrDefault(f => f.ID == appointment.Instrument1ID)?.SerialNumber;
                 }
-                cbbGeneralMedication_Colono.SelectedIndex = endoscopic.MedicationID ?? 0;
+                cbbGeneralMedication_Colono.SelectedValue = endoscopic.MedicationID ?? 0;
                 txbGeneralMedication_Colono.Text = endoscopic.MedicationOther;
                 if (patient.IndicationID != null)
                 {

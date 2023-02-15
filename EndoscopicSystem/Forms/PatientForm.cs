@@ -129,13 +129,13 @@ namespace EndoscopicSystem
                     cbbStation.SelectedValue = response.RoomID ?? 0;
                     pictureBox1.ImageLocation = response.PicturePath;
                     pictureBox1.SizeMode = PictureBoxSizeMode.StretchImage;
-                    cbbOPD.SelectedIndex = response.OpdID ?? 0;
+                    cbbOPD.SelectedValue = response.OpdID ?? 0;
                     chkWard.Checked = response.WardID != null && response.WardID > 0;
-                    cbbWard.SelectedIndex = response.WardID ?? 0;
+                    cbbWard.SelectedValue = response.WardID ?? 0;
                     chkRefer.Checked = response.ReferCheck ?? false;
                     txbRefer.Text = response.ReferDetail;
-                    cbbAnesthesist.SelectedIndex = response.AnesthesistID ?? 0;
-                    cbbIndication.SelectedIndex = response.IndicationID ?? 0;
+                    cbbAnesthesist.SelectedValue = response.AnesthesistID ?? 0;
+                    cbbIndication.SelectedValue = response.IndicationID ?? 0;
 
                     procedureId = response.ProcedureID ?? 0;
                     Appointment app = _db.Appointments.Where(x => txtHN.Text.Equals(x.HN) && x.ProcedureID == procedureId).OrderByDescending(x => x.AppointmentID).FirstOrDefault();
