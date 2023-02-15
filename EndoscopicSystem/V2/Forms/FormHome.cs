@@ -32,7 +32,7 @@ namespace EndoscopicSystem.V2.Forms
 
             if (logo != null)
             {
-                pictureBox_logo.ImageLocation = logo.HospitalLogoPath;
+                pictureBox_logo.Image = new Bitmap(logo.HospitalLogoPath);
                 pictureBox_logo.SizeMode = PictureBoxSizeMode.StretchImage;
             }
 

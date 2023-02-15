@@ -523,6 +523,7 @@
             this.gridPatient.RowHeadersDefaultCellStyle = dataGridViewCellStyle3;
             this.gridPatient.RowHeadersWidth = 51;
             this.gridPatient.RowTemplate.Height = 24;
+            this.gridPatient.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.gridPatient.Size = new System.Drawing.Size(1248, 117);
             this.gridPatient.TabIndex = 0;
             this.gridPatient.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.gridPatient_CellDoubleClick);

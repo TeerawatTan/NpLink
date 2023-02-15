@@ -16,6 +16,7 @@ namespace EndoscopicSystem.Entities
     {
         public int HospitalID { get; set; }
         public string HospitalLogoPath { get; set; }
+        public string HospitalLogoPathCopy { get; set; }
         public string HospitalNameTH { get; set; }
         public string HospitalNameEN { get; set; }
         public string Address1 { get; set; }

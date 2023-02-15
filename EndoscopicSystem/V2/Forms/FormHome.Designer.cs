@@ -241,7 +241,7 @@ namespace EndoscopicSystem.V2.Forms
             this.pictureBox_logo.Image = global::EndoscopicSystem.Properties.Resources.nplink_05;
             this.pictureBox_logo.Location = new System.Drawing.Point(1, 0);
             this.pictureBox_logo.Name = "pictureBox_logo";
-            this.pictureBox_logo.Size = new System.Drawing.Size(211, 210);
+            this.pictureBox_logo.Size = new System.Drawing.Size(190, 169);
             this.pictureBox_logo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox_logo.TabIndex = 2;
             this.pictureBox_logo.TabStop = false;

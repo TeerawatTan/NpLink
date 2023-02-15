@@ -15,7 +15,7 @@ namespace EndoscopicSystem
     public partial class SettingHospitalForm : Form
     {
         private readonly int UserID;
-        private string _logoPath;
+        private string _logoPath, _logoPathCopy;
         public SettingHospitalForm(int userID)
         {
             InitializeComponent();
@@ -49,8 +49,16 @@ namespace EndoscopicSystem
                         }
                         System.IO.File.Copy(openFileDialog1.FileName, fullDir + filename);
 
-                        
+                        string pathLocalCopy = Application.StartupPath.Replace("\\bin\\Debug", "");
+                        string fullDirCopy = pathLocalCopy + "\\Images\\Logo\\Copy\\";
+                        if (!Directory.Exists(fullDirCopy))
+                        {
+                            Directory.CreateDirectory(fullDirCopy);
+                        }
+                        System.IO.File.Copy(openFileDialog1.FileName, fullDirCopy + filename);
+
                         _logoPath = fullDir + filename;
+                        _logoPathCopy = fullDirCopy + filename;
                         lblPath.Text = fullDir + filename;
                         pictureBox1.Image = new Bitmap(fullDir + filename);
                         pictureBox1.SizeMode = PictureBoxSizeMode.StretchImage;
@@ -88,7 +96,8 @@ namespace EndoscopicSystem
 
                     if (logo != null)
                     {
-                        logo.HospitalLogoPath = path + @"\Images\Logo\" + filename;
+                        logo.HospitalLogoPath = _logoPath;
+                        logo.HospitalLogoPathCopy = _logoPathCopy;
                         logo.UpdateDate = DateTime.Now;
                         db.Entry(logo).State = System.Data.Entity.EntityState.Modified;
                         db.SaveChanges();
@@ -98,7 +107,8 @@ namespace EndoscopicSystem
                     {
                         Hospital Hospital = new Hospital();
                         Hospital.CreateDate = DateTime.Now;
-                        Hospital.HospitalLogoPath = path + @"\Images\Logo\" + filename;
+                        Hospital.HospitalLogoPath = _logoPath;
+                        Hospital.HospitalLogoPathCopy = _logoPathCopy;
                         db.Hospitals.Add(Hospital);
                         db.SaveChanges();
                     }

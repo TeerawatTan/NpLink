@@ -30,7 +30,6 @@ namespace EndoscopicSystem.Entities
         public virtual DbSet<Doctor> Doctors { get; set; }
         public virtual DbSet<EndoscopicImage> EndoscopicImages { get; set; }
         public virtual DbSet<EndoscopicVideo> EndoscopicVideos { get; set; }
-        public virtual DbSet<Hospital> Hospitals { get; set; }
         public virtual DbSet<Nurse> Nurses { get; set; }
         public virtual DbSet<Room> Rooms { get; set; }
         public virtual DbSet<AmpullaOfVater> AmpullaOfVaters { get; set; }
@@ -118,12 +117,13 @@ namespace EndoscopicSystem.Entities
         public virtual DbSet<Instrument> Instruments { get; set; }
         public virtual DbSet<Appointment> Appointments { get; set; }
         public virtual DbSet<Patient> Patients { get; set; }
-        public virtual DbSet<ProcedureDetail> ProcedureDetails { get; set; }
         public virtual DbSet<Finding> Findings { get; set; }
+        public virtual DbSet<RapidUreaseTest> RapidUreaseTests { get; set; }
         public virtual DbSet<Complication> Complications { get; set; }
         public virtual DbSet<Histopathology> Histopathologies { get; set; }
-        public virtual DbSet<RapidUreaseTest> RapidUreaseTests { get; set; }
+        public virtual DbSet<ProcedureDetail> ProcedureDetails { get; set; }
         public virtual DbSet<Recommendation> Recommendations { get; set; }
+        public virtual DbSet<Hospital> Hospitals { get; set; }
     
         public virtual ObjectResult<BrochoscopyReport_Result> BrochoscopyReport(string hn, Nullable<int> procedure, Nullable<int> endoscopicId)
         {

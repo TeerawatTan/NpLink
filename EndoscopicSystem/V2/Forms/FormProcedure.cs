@@ -368,15 +368,15 @@ namespace EndoscopicSystem.V2.Forms
         }
         private void LoadProcedureDetails()
         {
-            _procedureDetails = _db.ProcedureDetails.Where(w => w.IsActive).OrderBy(o => o.ID).ToList();
+            _procedureDetails = _db.ProcedureDetails.Where(w => w.IsActive && w.ProcedureId == _procedureId).OrderBy(o => o.ID).ToList();
         }
         private void LoadComplications()
         {
-            _complications = _db.Complications.Where(w => w.IsActive).OrderBy(o => o.ID).ToList();
+            _complications = _db.Complications.Where(w => w.IsActive && w.ProcedureId == _procedureId).OrderBy(o => o.ID).ToList();
         }
         private void LoadHistopathologies()
         {
-            _histopathologies = _db.Histopathologies.Where(w => w.IsActive).OrderBy(o => o.ID).ToList();
+            _histopathologies = _db.Histopathologies.Where(w => w.IsActive && w.ProcedureId == _procedureId).OrderBy(o => o.ID).ToList();
         }
         private void LoadRapidUreaseTests()
         {
@@ -384,7 +384,7 @@ namespace EndoscopicSystem.V2.Forms
         }
         private void LoadRecommendations()
         {
-            _recommendations = _db.Recommendations.Where(w => w.IsActive).OrderBy(o => o.ID).ToList();
+            _recommendations = _db.Recommendations.Where(w => w.IsActive && w.ProcedureId == _procedureId).OrderBy(o => o.ID).ToList();
         }
 
         #region Event Handler EGD
@@ -1024,6 +1024,24 @@ namespace EndoscopicSystem.V2.Forms
             lastFocused = (TextBox)sender;
             _markField = Constant.PROCEDURE_DETAIL;
         }
+        private void txbFindingComplication_Colono_Click(object sender, EventArgs e)
+        {
+            SetDataInListBox(Constant.Complication);
+            lastFocused = (TextBox)sender;
+            _markField = Constant.COMPLICATION;
+        }
+        private void txbFindingHistopathology_Colono_Click(object sender, EventArgs e)
+        {
+            SetDataInListBox(Constant.Histopathology);
+            lastFocused = (TextBox)sender;
+            _markField = Constant.HISTOPATHOLOGY;
+        }
+        private void txbFindingRecommendation_Colono_Click(object sender, EventArgs e)
+        {
+            SetDataInListBox(Constant.Recommendation);
+            lastFocused = (TextBox)sender;
+            _markField = Constant.RECOMMENDATION;
+        }
 
         #endregion
 
@@ -1231,6 +1249,24 @@ namespace EndoscopicSystem.V2.Forms
             lastFocused = (TextBox)sender;
             _markField = Constant.PROCEDURE_DETAIL;
         }
+        private void txbFindingComplication_ERCP_Click(object sender, EventArgs e)
+        {
+            SetDataInListBox(Constant.Complication);
+            lastFocused = (TextBox)sender;
+            _markField = Constant.COMPLICATION;
+        }
+        private void txbFindingHistopathology_ERCP_Click(object sender, EventArgs e)
+        {
+            SetDataInListBox(Constant.Histopathology);
+            lastFocused = (TextBox)sender;
+            _markField = Constant.HISTOPATHOLOGY;
+        }
+        private void txbFindingRecommendation_ERCP_Click(object sender, EventArgs e)
+        {
+            SetDataInListBox(Constant.Recommendation);
+            lastFocused = (TextBox)sender;
+            _markField = Constant.RECOMMENDATION;
+        }
 
         #endregion
 
@@ -1434,9 +1470,9 @@ namespace EndoscopicSystem.V2.Forms
         }
         private void txbFindingProcedure_Broncho_Click(object sender, EventArgs e)
         {
-            SetDataInListBox(Constant.ProcedureDetail);
-            lastFocused = (TextBox)sender;
-            _markField = Constant.PROCEDURE_DETAIL;
+            //SetDataInListBox(Constant.ProcedureDetail);
+            //lastFocused = (TextBox)sender;
+            //_markField = Constant.PROCEDURE_DETAIL;
         }
 
         #endregion
@@ -1785,7 +1821,7 @@ namespace EndoscopicSystem.V2.Forms
                 {
                     txtGeneralSn_EGD.Text = _db.Instruments.FirstOrDefault(f => f.ID == appointment.Instrument1ID)?.SerialNumber;
                 }
-                cbbGeneralMedication_EGD.SelectedIndex = endoscopic.MedicationID ?? 0;
+                cbbGeneralMedication_EGD.SelectedValue = endoscopic.MedicationID ?? 0;
                 txbGeneralMedication_EGD.Text = endoscopic.MedicationOther;
                 if (patient.IndicationID != null)
                 {
@@ -2389,6 +2425,28 @@ namespace EndoscopicSystem.V2.Forms
                 _db.SaveChanges();
             }
         }
+        private void UpdateAppointment(int? endoId)
+        {
+            Appointment data = _db.Appointments.Where(x => x.AppointmentID == _appointmentId && x.PatientID == _patientId && x.HN == _hnNo && x.ProcedureID == _procedureId).FirstOrDefault();
+            if (data != null)
+            {
+                if (_procedureId == 1 || _procedureId == 3)
+                {
+                    data.IsNewCase = chkNewCase_EGD.Checked;
+                    data.IsFollowCase = chkFollowUpCase_EGD.Checked;
+                }
+                else if (_procedureId == 2 || _procedureId == 4)
+                {
+                    data.IsNewCase = chkNewCase_Colono.Checked;
+                    data.IsFollowCase = chkFollowUpCase_Colono.Checked;
+                }
+                data.EndoscopicCheck = true;
+                data.UpdateBy = _id;
+                data.UpdateDate = DateTime.Now;
+                data.EndoscopicID = endoId;
+                _db.SaveChanges();
+            }
+        }
         private int SaveLogEndoscopic(Endoscopic en, int patientId, int procedureId)
         {
             if (en == null) return 0;
@@ -2644,7 +2702,7 @@ namespace EndoscopicSystem.V2.Forms
 
                 var patient = UpdatePatientInfo(patientId, procedureId);
                 UpdateFinding(procedureId);
-                //UpdateAppointment(endoscopicId);
+                UpdateAppointment(endoscopic.EndoscopicID);
                 SaveImage(endoscopic.EndoscopicID, procedureId);
                 SaveLogEndoscopic(endoscopic, patientId, procedureId);
                 SaveLogHistory(patientId, procedureId, patient.DoctorID, endoscopic.EndoscopicID);

@@ -270,11 +270,7 @@ namespace EndoscopicSystem.V2.Forms
                     _fileWriter.Close();
                 }
 
-                if (_item > 0)
-                    FormProceed.Self.txbStep.Text = "1" + "," + _pathFolderImageToSave + "," + _vdoPath;
-                else
-                    FormProceed.Self.txbStep.Text = "2" + "," + _pathFolderImageToSave + "," + _vdoPath;
-
+                FormProceed.Self.txbStep.Text = "1" + "," + _pathFolderImageToSave + "," + _vdoPath;
             }
             else
             {

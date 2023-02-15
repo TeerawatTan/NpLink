@@ -3558,6 +3558,7 @@ namespace EndoscopicSystem.V2.Forms
             this.txbFindingRecommendation_Colono.Name = "txbFindingRecommendation_Colono";
             this.txbFindingRecommendation_Colono.Size = new System.Drawing.Size(804, 44);
             this.txbFindingRecommendation_Colono.TabIndex = 175;
+            this.txbFindingRecommendation_Colono.Click += new System.EventHandler(this.txbFindingRecommendation_Colono_Click);
             // 
             // label127
             // 
@@ -3584,6 +3585,7 @@ namespace EndoscopicSystem.V2.Forms
             this.txbFindingHistopathology_Colono.Name = "txbFindingHistopathology_Colono";
             this.txbFindingHistopathology_Colono.Size = new System.Drawing.Size(804, 44);
             this.txbFindingHistopathology_Colono.TabIndex = 173;
+            this.txbFindingHistopathology_Colono.Click += new System.EventHandler(this.txbFindingHistopathology_Colono_Click);
             // 
             // label128
             // 
@@ -3917,6 +3919,7 @@ namespace EndoscopicSystem.V2.Forms
             this.txbFindingComplication_Colono.Name = "txbFindingComplication_Colono";
             this.txbFindingComplication_Colono.Size = new System.Drawing.Size(804, 44);
             this.txbFindingComplication_Colono.TabIndex = 147;
+            this.txbFindingComplication_Colono.Click += new System.EventHandler(this.txbFindingComplication_Colono_Click);
             // 
             // label137
             // 
@@ -4538,6 +4541,7 @@ namespace EndoscopicSystem.V2.Forms
             this.txbFindingRecommendation_ERCP.Name = "txbFindingRecommendation_ERCP";
             this.txbFindingRecommendation_ERCP.Size = new System.Drawing.Size(813, 44);
             this.txbFindingRecommendation_ERCP.TabIndex = 213;
+            this.txbFindingRecommendation_ERCP.Click += new System.EventHandler(this.txbFindingRecommendation_ERCP_Click);
             // 
             // label139
             // 
@@ -4564,6 +4568,7 @@ namespace EndoscopicSystem.V2.Forms
             this.txbFindingHistopathology_ERCP.Name = "txbFindingHistopathology_ERCP";
             this.txbFindingHistopathology_ERCP.Size = new System.Drawing.Size(813, 44);
             this.txbFindingHistopathology_ERCP.TabIndex = 211;
+            this.txbFindingHistopathology_ERCP.Click += new System.EventHandler(this.txbFindingHistopathology_ERCP_Click);
             // 
             // label140
             // 
@@ -4897,6 +4902,7 @@ namespace EndoscopicSystem.V2.Forms
             this.txbFindingComplication_ERCP.Name = "txbFindingComplication_ERCP";
             this.txbFindingComplication_ERCP.Size = new System.Drawing.Size(813, 44);
             this.txbFindingComplication_ERCP.TabIndex = 185;
+            this.txbFindingComplication_ERCP.Click += new System.EventHandler(this.txbFindingComplication_ERCP_Click);
             // 
             // label149
             // 
