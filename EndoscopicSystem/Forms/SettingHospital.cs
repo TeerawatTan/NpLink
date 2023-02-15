@@ -129,6 +129,7 @@ namespace EndoscopicSystem
             if (hospitalUpdate != null)
             {
                 hospitalUpdate.HospitalLogoPath = _logoPath;
+                hospitalUpdate.HospitalLogoPathCopy = _logoPathCopy;
                 hospitalUpdate.HospitalNameEN = txtHospitalNameEN.Text;
                 hospitalUpdate.HospitalNameTH = txtHospitalNameTH.Text;
                 hospitalUpdate.Address1 = txtAddress1.Text;
@@ -145,6 +146,7 @@ namespace EndoscopicSystem
             {
                 Hospital hospital = new Hospital();
                 hospital.HospitalLogoPath = _logoPath;
+                hospital.HospitalLogoPathCopy = _logoPathCopy;
                 hospital.HospitalNameEN = txtHospitalNameEN.Text;
                 hospital.HospitalNameTH = txtHospitalNameTH.Text;
                 hospital.Address1 = txtAddress1.Text;
