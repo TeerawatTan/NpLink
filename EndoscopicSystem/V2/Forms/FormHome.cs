@@ -30,7 +30,7 @@ namespace EndoscopicSystem.V2.Forms
         {
             var logo = _db.Hospitals.Where(c => c.HospitalID == 1).FirstOrDefault();
 
-            if (logo != null)
+            if (logo != null && logo.HospitalLogoPath != null)
             {
                 pictureBox_logo.Image = new Bitmap(logo.HospitalLogoPath);
                 pictureBox_logo.SizeMode = PictureBoxSizeMode.StretchImage;
