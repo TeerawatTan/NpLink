@@ -41,9 +41,9 @@ namespace EndoscopicSystem.Forms
 
         private void BtnLogin_Click(object sender, EventArgs e)
         {
-            if (!string.IsNullOrWhiteSpace(txtUsername.Text) && !string.IsNullOrWhiteSpace(txtPassword.Text))
+            if (!string.IsNullOrWhiteSpace(txtUserName.Text) && !string.IsNullOrWhiteSpace(txtPassword.Text))
             {
-                string status = CheckLogin(txtUsername.Text, txtPassword.Text);
+                string status = CheckLogin(txtUserName.Text, txtPassword.Text);
                 if (status.Equals(Constant.LOGIN_SUCCESS))
                 {
                     // V.2

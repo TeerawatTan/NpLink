@@ -256,3 +256,5 @@ ModelManifest.xml
 
 /EndoscopicSystem/ImageCapture
 /EndoscopicSystem/VideoRecord
+/EndoscopicSystem/Dicom
+/EndoscopicSystem/Pdf
