@@ -33,27 +33,31 @@ namespace EndoscopicSystem.Forms
                     return Constant.LOGIN_NOT_SUCCESS;
                 }
             }
-            catch (Exception e)
+            catch (Exception)
             {
-                return e.Message;
+                return Constant.STATUS_ERROR;
             }
         }
 
         private void BtnLogin_Click(object sender, EventArgs e)
         {
-            if (!txtUserName.Text.Equals("") && !txtPassword.Text.Equals(""))
+            if (!string.IsNullOrWhiteSpace(txtUsername.Text) && !string.IsNullOrWhiteSpace(txtPassword.Text))
             {
-                string status = CheckLogin(txtUserName.Text, txtPassword.Text);
+                string status = CheckLogin(txtUsername.Text, txtPassword.Text);
                 if (status.Equals(Constant.LOGIN_SUCCESS))
                 {
+                    // V.2
                     this.Hide();
-                    Home openHome = new Home(userID);
-                    openHome.ShowDialog();
+
+                    Home formHome = new Home(userID);
+                    formHome.ShowDialog();
+                    formHome = null;
+                    this.Show();
                 }
                 else
                 {
-                    ClearForm();
-                    MessageBox.Show(status);
+                    //ClearForm();
+                    //MessageBox.Show(status);
                 }
             }
         }
