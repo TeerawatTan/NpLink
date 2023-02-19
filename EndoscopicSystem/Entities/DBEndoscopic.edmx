@@ -130,6 +130,7 @@
           <Property Name="BriefHistory" Type="nvarchar" MaxLength="1000" />
           <Property Name="BowelPreparationRegimen" Type="nvarchar" MaxLength="1000" />
           <Property Name="BowelPreparationResult" Type="nvarchar" MaxLength="1000" />
+          <Property Name="AnesthesiaID" Type="int" />
         </EntityType>
         <EntityType Name="Endoscopic_Log">
           <Key>
@@ -367,6 +368,16 @@
           <Property Name="Recommendation" Type="nvarchar" MaxLength="1000" />
           <Property Name="Comment" Type="nvarchar" MaxLength="1000" />
           <Property Name="RapidUreaseTest" Type="nvarchar" MaxLength="250" />
+          <Property Name="PapillaMajorID" Type="int" />
+          <Property Name="PapillaMajor" Type="nvarchar" MaxLength="1000" />
+          <Property Name="PapillaMinorID" Type="int" />
+          <Property Name="PapillaMinor" Type="nvarchar" MaxLength="1000" />
+          <Property Name="PancreasID" Type="int" />
+          <Property Name="Pancreas" Type="nvarchar" MaxLength="1000" />
+          <Property Name="BiliarySystemID" Type="int" />
+          <Property Name="BiliarySystem" Type="nvarchar" MaxLength="1000" />
+          <Property Name="OtherID" Type="int" />
+          <Property Name="OtherDetail" Type="nvarchar" MaxLength="1000" />
         </EntityType>
         <EntityType Name="History">
           <Key>
@@ -1582,7 +1593,6 @@ warning 6002: The table/view 'EndoscopicDb.dbo.v_PatientList' does not have a pr
           <EntitySet Name="AnesthesistMethods" EntityType="EndoscopicModel.AnesthesistMethod" />
           <EntitySet Name="FindingLabels" EntityType="EndoscopicModel.FindingLabel" />
           <EntitySet Name="Financials" EntityType="EndoscopicModel.Financial" />
-          <EntitySet Name="Endoscopics" EntityType="EndoscopicModel.Endoscopic" />
           <EntitySet Name="v_PatientList" EntityType="EndoscopicModel.v_PatientList" />
           <EntitySet Name="ICD10" EntityType="EndoscopicModel.ICD10" />
           <EntitySet Name="ICD9" EntityType="EndoscopicModel.ICD9" />
@@ -1593,13 +1603,14 @@ warning 6002: The table/view 'EndoscopicDb.dbo.v_PatientList' does not have a pr
           <Parameter Name="instrumentVal" Mode="In" Type="Int32" />
           </FunctionImport>
           <EntitySet Name="Patients" EntityType="EndoscopicModel.Patient" />
-          <EntitySet Name="Findings" EntityType="EndoscopicModel.Finding" />
           <EntitySet Name="RapidUreaseTests" EntityType="EndoscopicModel.RapidUreaseTest" />
           <EntitySet Name="Complications" EntityType="EndoscopicModel.Complication" />
           <EntitySet Name="Histopathologies" EntityType="EndoscopicModel.Histopathology" />
           <EntitySet Name="ProcedureDetails" EntityType="EndoscopicModel.ProcedureDetail" />
           <EntitySet Name="Recommendations" EntityType="EndoscopicModel.Recommendation" />
           <EntitySet Name="Hospitals" EntityType="EndoscopicModel.Hospital" />
+          <EntitySet Name="Findings" EntityType="EndoscopicModel.Finding" />
+          <EntitySet Name="Endoscopics" EntityType="EndoscopicModel.Endoscopic" />
           </EntityContainer>
         <EntityType Name="Doctor">
           <Key>
@@ -2603,56 +2614,6 @@ warning 6002: The table/view 'EndoscopicDb.dbo.v_PatientList' does not have a pr
           <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
           <Property Name="Name" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
         </EntityType>
-        <EntityType Name="Endoscopic">
-          <Key>
-            <PropertyRef Name="EndoscopicID" />
-          </Key>
-          <Property Name="EndoscopicID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-          <Property Name="IsSaved" Type="Boolean" Nullable="false" />
-          <Property Name="PatientID" Type="Int32" />
-          <Property Name="ProcedureID" Type="Int32" />
-          <Property Name="NewCase" Type="Boolean" />
-          <Property Name="FollowUpCase" Type="Boolean" />
-          <Property Name="InCase" Type="Int32" />
-          <Property Name="Diagnosis" Type="String" MaxLength="1000" FixedLength="false" Unicode="true" />
-          <Property Name="Complication" Type="String" MaxLength="1000" FixedLength="false" Unicode="true" />
-          <Property Name="Comment" Type="String" MaxLength="1000" FixedLength="false" Unicode="true" />
-          <Property Name="ReferringPhysicain" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
-          <Property Name="EndoscopistID" Type="Int32" />
-          <Property Name="Arrive" Type="DateTime" Precision="3" />
-          <Property Name="Instrument" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
-          <Property Name="MedicationID" Type="Int32" />
-          <Property Name="FluDose" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
-          <Property Name="Intervention" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
-          <Property Name="History" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
-          <Property Name="NurseFirstID" Type="Int32" />
-          <Property Name="NurseSecondID" Type="Int32" />
-          <Property Name="NurseThirthID" Type="Int32" />
-          <Property Name="Assistant1" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
-          <Property Name="Assistant2" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
-          <Property Name="Anesthesia" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
-          <Property Name="Indication" Type="Int32" />
-          <Property Name="AnesNurse" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
-          <Property Name="FindingID" Type="Int32" />
-          <Property Name="IndicationID" Type="Int32" />
-          <Property Name="SpecimenID" Type="Int32" />
-          <Property Name="InterventionID" Type="Int32" />
-          <Property Name="StartRecordDate" Type="DateTime" Precision="3" />
-          <Property Name="EndRecordDate" Type="DateTime" Precision="3" />
-          <Property Name="CreateDate" Type="DateTime" Precision="3" />
-          <Property Name="CreateBy" Type="Int32" />
-          <Property Name="UpdateDate" Type="DateTime" Precision="3" />
-          <Property Name="UpdateBy" Type="Int32" />
-          <Property Name="MedicationOther" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
-          <Property Name="IndicationOther" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
-          <Property Name="DxId1" Type="Int32" />
-          <Property Name="DxId2" Type="Int32" />
-          <Property Name="DxId1Detail" Type="String" MaxLength="1000" FixedLength="false" Unicode="true" />
-          <Property Name="DxId2Detail" Type="String" MaxLength="1000" FixedLength="false" Unicode="true" />
-          <Property Name="BriefHistory" Type="String" MaxLength="1000" FixedLength="false" Unicode="true" />
-          <Property Name="BowelPreparationRegimen" Type="String" MaxLength="1000" FixedLength="false" Unicode="true" />
-          <Property Name="BowelPreparationResult" Type="String" MaxLength="1000" FixedLength="false" Unicode="true" />
-        </EntityType>
         <EntityType Name="v_PatientList">
           <Key>
             <PropertyRef Name="PatientID" />
@@ -2799,6 +2760,69 @@ warning 6002: The table/view 'EndoscopicDb.dbo.v_PatientList' does not have a pr
           <Property Name="AnesthesiaID" Type="Int32" />
           <Property Name="InstrumentID" Type="Int32" />
           <Property Name="BirthDate" Type="DateTime" Precision="3" />
+        </EntityType>
+        <EntityType Name="RapidUreaseTest">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Name" Type="String" MaxLength="250" FixedLength="false" Unicode="true" />
+          <Property Name="IsActive" Type="Boolean" Nullable="false" />
+        </EntityType>
+        <EntityType Name="Complication">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Name" Type="String" MaxLength="250" FixedLength="false" Unicode="true" />
+          <Property Name="IsActive" Type="Boolean" Nullable="false" />
+          <Property Name="ProcedureId" Type="Int32" />
+        </EntityType>
+        <EntityType Name="Histopathology">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Name" Type="String" MaxLength="250" FixedLength="false" Unicode="true" />
+          <Property Name="IsActive" Type="Boolean" Nullable="false" />
+          <Property Name="ProcedureId" Type="Int32" />
+        </EntityType>
+        <EntityType Name="ProcedureDetail">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Name" Type="String" MaxLength="250" FixedLength="false" Unicode="true" />
+          <Property Name="IsTopic" Type="Boolean" />
+          <Property Name="IsActive" Type="Boolean" Nullable="false" />
+          <Property Name="ProcedureId" Type="Int32" />
+        </EntityType>
+        <EntityType Name="Recommendation">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Name" Type="String" MaxLength="250" FixedLength="false" Unicode="true" />
+          <Property Name="IsActive" Type="Boolean" Nullable="false" />
+          <Property Name="ProcedureId" Type="Int32" />
+        </EntityType>
+        <EntityType Name="Hospital">
+          <Key>
+            <PropertyRef Name="HospitalID" />
+          </Key>
+          <Property Name="HospitalID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="HospitalLogoPath" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+          <Property Name="HospitalLogoPathCopy" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+          <Property Name="HospitalNameTH" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+          <Property Name="HospitalNameEN" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+          <Property Name="Address1" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+          <Property Name="Address2" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+          <Property Name="Address3" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+          <Property Name="Tel" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="CreateDate" Type="DateTime" Precision="3" />
+          <Property Name="CreateBy" Type="Int32" />
+          <Property Name="UpdateDate" Type="DateTime" Precision="3" />
+          <Property Name="UpdateBy" Type="Int32" />
         </EntityType>
         <EntityType Name="Finding">
           <Key>
@@ -2952,69 +2976,67 @@ warning 6002: The table/view 'EndoscopicDb.dbo.v_PatientList' does not have a pr
           <Property Name="Recommendation" Type="String" MaxLength="1000" FixedLength="false" Unicode="true" />
           <Property Name="Comment" Type="String" MaxLength="1000" FixedLength="false" Unicode="true" />
           <Property Name="RapidUreaseTest" Type="String" MaxLength="250" FixedLength="false" Unicode="true" />
+          <Property Name="PapillaMajorID" Type="Int32" />
+          <Property Name="PapillaMajor" Type="String" MaxLength="1000" FixedLength="false" Unicode="true" />
+          <Property Name="PapillaMinorID" Type="Int32" />
+          <Property Name="PapillaMinor" Type="String" MaxLength="1000" FixedLength="false" Unicode="true" />
+          <Property Name="PancreasID" Type="Int32" />
+          <Property Name="Pancreas" Type="String" MaxLength="1000" FixedLength="false" Unicode="true" />
+          <Property Name="BiliarySystemID" Type="Int32" />
+          <Property Name="BiliarySystem" Type="String" MaxLength="1000" FixedLength="false" Unicode="true" />
+          <Property Name="OtherID" Type="Int32" />
+          <Property Name="OtherDetail" Type="String" MaxLength="1000" FixedLength="false" Unicode="true" />
         </EntityType>
-        <EntityType Name="RapidUreaseTest">
+        <EntityType Name="Endoscopic">
           <Key>
-            <PropertyRef Name="ID" />
+            <PropertyRef Name="EndoscopicID" />
           </Key>
-          <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-          <Property Name="Name" Type="String" MaxLength="250" FixedLength="false" Unicode="true" />
-          <Property Name="IsActive" Type="Boolean" Nullable="false" />
-        </EntityType>
-        <EntityType Name="Complication">
-          <Key>
-            <PropertyRef Name="ID" />
-          </Key>
-          <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-          <Property Name="Name" Type="String" MaxLength="250" FixedLength="false" Unicode="true" />
-          <Property Name="IsActive" Type="Boolean" Nullable="false" />
-          <Property Name="ProcedureId" Type="Int32" />
-        </EntityType>
-        <EntityType Name="Histopathology">
-          <Key>
-            <PropertyRef Name="ID" />
-          </Key>
-          <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-          <Property Name="Name" Type="String" MaxLength="250" FixedLength="false" Unicode="true" />
-          <Property Name="IsActive" Type="Boolean" Nullable="false" />
-          <Property Name="ProcedureId" Type="Int32" />
-        </EntityType>
-        <EntityType Name="ProcedureDetail">
-          <Key>
-            <PropertyRef Name="ID" />
-          </Key>
-          <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-          <Property Name="Name" Type="String" MaxLength="250" FixedLength="false" Unicode="true" />
-          <Property Name="IsTopic" Type="Boolean" />
-          <Property Name="IsActive" Type="Boolean" Nullable="false" />
-          <Property Name="ProcedureId" Type="Int32" />
-        </EntityType>
-        <EntityType Name="Recommendation">
-          <Key>
-            <PropertyRef Name="ID" />
-          </Key>
-          <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-          <Property Name="Name" Type="String" MaxLength="250" FixedLength="false" Unicode="true" />
-          <Property Name="IsActive" Type="Boolean" Nullable="false" />
-          <Property Name="ProcedureId" Type="Int32" />
-        </EntityType>
-        <EntityType Name="Hospital">
-          <Key>
-            <PropertyRef Name="HospitalID" />
-          </Key>
-          <Property Name="HospitalID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-          <Property Name="HospitalLogoPath" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
-          <Property Name="HospitalLogoPathCopy" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
-          <Property Name="HospitalNameTH" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
-          <Property Name="HospitalNameEN" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
-          <Property Name="Address1" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
-          <Property Name="Address2" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
-          <Property Name="Address3" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
-          <Property Name="Tel" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="EndoscopicID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="IsSaved" Type="Boolean" Nullable="false" />
+          <Property Name="PatientID" Type="Int32" />
+          <Property Name="ProcedureID" Type="Int32" />
+          <Property Name="NewCase" Type="Boolean" />
+          <Property Name="FollowUpCase" Type="Boolean" />
+          <Property Name="InCase" Type="Int32" />
+          <Property Name="Diagnosis" Type="String" MaxLength="1000" FixedLength="false" Unicode="true" />
+          <Property Name="Complication" Type="String" MaxLength="1000" FixedLength="false" Unicode="true" />
+          <Property Name="Comment" Type="String" MaxLength="1000" FixedLength="false" Unicode="true" />
+          <Property Name="ReferringPhysicain" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+          <Property Name="EndoscopistID" Type="Int32" />
+          <Property Name="Arrive" Type="DateTime" Precision="3" />
+          <Property Name="Instrument" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+          <Property Name="MedicationID" Type="Int32" />
+          <Property Name="FluDose" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+          <Property Name="Intervention" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+          <Property Name="History" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+          <Property Name="NurseFirstID" Type="Int32" />
+          <Property Name="NurseSecondID" Type="Int32" />
+          <Property Name="NurseThirthID" Type="Int32" />
+          <Property Name="Assistant1" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+          <Property Name="Assistant2" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+          <Property Name="Anesthesia" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+          <Property Name="Indication" Type="Int32" />
+          <Property Name="AnesNurse" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+          <Property Name="FindingID" Type="Int32" />
+          <Property Name="IndicationID" Type="Int32" />
+          <Property Name="SpecimenID" Type="Int32" />
+          <Property Name="InterventionID" Type="Int32" />
+          <Property Name="StartRecordDate" Type="DateTime" Precision="3" />
+          <Property Name="EndRecordDate" Type="DateTime" Precision="3" />
           <Property Name="CreateDate" Type="DateTime" Precision="3" />
           <Property Name="CreateBy" Type="Int32" />
           <Property Name="UpdateDate" Type="DateTime" Precision="3" />
           <Property Name="UpdateBy" Type="Int32" />
+          <Property Name="MedicationOther" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+          <Property Name="IndicationOther" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+          <Property Name="DxId1" Type="Int32" />
+          <Property Name="DxId2" Type="Int32" />
+          <Property Name="DxId1Detail" Type="String" MaxLength="1000" FixedLength="false" Unicode="true" />
+          <Property Name="DxId2Detail" Type="String" MaxLength="1000" FixedLength="false" Unicode="true" />
+          <Property Name="BriefHistory" Type="String" MaxLength="1000" FixedLength="false" Unicode="true" />
+          <Property Name="BowelPreparationRegimen" Type="String" MaxLength="1000" FixedLength="false" Unicode="true" />
+          <Property Name="BowelPreparationResult" Type="String" MaxLength="1000" FixedLength="false" Unicode="true" />
+          <Property Name="AnesthesiaID" Type="Int32" />
         </EntityType>
         </Schema>
     </edmx:ConceptualModels>
@@ -4127,57 +4149,6 @@ warning 6002: The table/view 'EndoscopicDb.dbo.v_PatientList' does not have a pr
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
-          <EntitySetMapping Name="Endoscopics">
-            <EntityTypeMapping TypeName="EndoscopicModel.Endoscopic">
-              <MappingFragment StoreEntitySet="Endoscopic">
-                <ScalarProperty Name="BowelPreparationResult" ColumnName="BowelPreparationResult" />
-                <ScalarProperty Name="BowelPreparationRegimen" ColumnName="BowelPreparationRegimen" />
-                <ScalarProperty Name="BriefHistory" ColumnName="BriefHistory" />
-                <ScalarProperty Name="DxId2Detail" ColumnName="DxId2Detail" />
-                <ScalarProperty Name="DxId1Detail" ColumnName="DxId1Detail" />
-                <ScalarProperty Name="DxId2" ColumnName="DxId2" />
-                <ScalarProperty Name="DxId1" ColumnName="DxId1" />
-                <ScalarProperty Name="IndicationOther" ColumnName="IndicationOther" />
-                <ScalarProperty Name="MedicationOther" ColumnName="MedicationOther" />
-                <ScalarProperty Name="UpdateBy" ColumnName="UpdateBy" />
-                <ScalarProperty Name="UpdateDate" ColumnName="UpdateDate" />
-                <ScalarProperty Name="CreateBy" ColumnName="CreateBy" />
-                <ScalarProperty Name="CreateDate" ColumnName="CreateDate" />
-                <ScalarProperty Name="EndRecordDate" ColumnName="EndRecordDate" />
-                <ScalarProperty Name="StartRecordDate" ColumnName="StartRecordDate" />
-                <ScalarProperty Name="InterventionID" ColumnName="InterventionID" />
-                <ScalarProperty Name="SpecimenID" ColumnName="SpecimenID" />
-                <ScalarProperty Name="IndicationID" ColumnName="IndicationID" />
-                <ScalarProperty Name="FindingID" ColumnName="FindingID" />
-                <ScalarProperty Name="AnesNurse" ColumnName="AnesNurse" />
-                <ScalarProperty Name="Indication" ColumnName="Indication" />
-                <ScalarProperty Name="Anesthesia" ColumnName="Anesthesia" />
-                <ScalarProperty Name="Assistant2" ColumnName="Assistant2" />
-                <ScalarProperty Name="Assistant1" ColumnName="Assistant1" />
-                <ScalarProperty Name="NurseThirthID" ColumnName="NurseThirthID" />
-                <ScalarProperty Name="NurseSecondID" ColumnName="NurseSecondID" />
-                <ScalarProperty Name="NurseFirstID" ColumnName="NurseFirstID" />
-                <ScalarProperty Name="History" ColumnName="History" />
-                <ScalarProperty Name="Intervention" ColumnName="Intervention" />
-                <ScalarProperty Name="FluDose" ColumnName="FluDose" />
-                <ScalarProperty Name="MedicationID" ColumnName="MedicationID" />
-                <ScalarProperty Name="Instrument" ColumnName="Instrument" />
-                <ScalarProperty Name="Arrive" ColumnName="Arrive" />
-                <ScalarProperty Name="EndoscopistID" ColumnName="EndoscopistID" />
-                <ScalarProperty Name="ReferringPhysicain" ColumnName="ReferringPhysicain" />
-                <ScalarProperty Name="Comment" ColumnName="Comment" />
-                <ScalarProperty Name="Complication" ColumnName="Complication" />
-                <ScalarProperty Name="Diagnosis" ColumnName="Diagnosis" />
-                <ScalarProperty Name="InCase" ColumnName="InCase" />
-                <ScalarProperty Name="FollowUpCase" ColumnName="FollowUpCase" />
-                <ScalarProperty Name="NewCase" ColumnName="NewCase" />
-                <ScalarProperty Name="ProcedureID" ColumnName="ProcedureID" />
-                <ScalarProperty Name="PatientID" ColumnName="PatientID" />
-                <ScalarProperty Name="IsSaved" ColumnName="IsSaved" />
-                <ScalarProperty Name="EndoscopicID" ColumnName="EndoscopicID" />
-              </MappingFragment>
-            </EntityTypeMapping>
-          </EntitySetMapping>
           <EntitySetMapping Name="v_PatientList">
             <EntityTypeMapping TypeName="EndoscopicModel.v_PatientList">
               <MappingFragment StoreEntitySet="v_PatientList">
@@ -4334,9 +4305,88 @@ warning 6002: The table/view 'EndoscopicDb.dbo.v_PatientList' does not have a pr
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
+          <EntitySetMapping Name="RapidUreaseTests">
+            <EntityTypeMapping TypeName="EndoscopicModel.RapidUreaseTest">
+              <MappingFragment StoreEntitySet="RapidUreaseTest">
+                <ScalarProperty Name="IsActive" ColumnName="IsActive" />
+                <ScalarProperty Name="Name" ColumnName="Name" />
+                <ScalarProperty Name="ID" ColumnName="ID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Complications">
+            <EntityTypeMapping TypeName="EndoscopicModel.Complication">
+              <MappingFragment StoreEntitySet="Complication">
+                <ScalarProperty Name="ProcedureId" ColumnName="ProcedureId" />
+                <ScalarProperty Name="IsActive" ColumnName="IsActive" />
+                <ScalarProperty Name="Name" ColumnName="Name" />
+                <ScalarProperty Name="ID" ColumnName="ID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Histopathologies">
+            <EntityTypeMapping TypeName="EndoscopicModel.Histopathology">
+              <MappingFragment StoreEntitySet="Histopathology">
+                <ScalarProperty Name="ProcedureId" ColumnName="ProcedureId" />
+                <ScalarProperty Name="IsActive" ColumnName="IsActive" />
+                <ScalarProperty Name="Name" ColumnName="Name" />
+                <ScalarProperty Name="ID" ColumnName="ID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="ProcedureDetails">
+            <EntityTypeMapping TypeName="EndoscopicModel.ProcedureDetail">
+              <MappingFragment StoreEntitySet="ProcedureDetail">
+                <ScalarProperty Name="ProcedureId" ColumnName="ProcedureId" />
+                <ScalarProperty Name="IsActive" ColumnName="IsActive" />
+                <ScalarProperty Name="IsTopic" ColumnName="IsTopic" />
+                <ScalarProperty Name="Name" ColumnName="Name" />
+                <ScalarProperty Name="ID" ColumnName="ID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Recommendations">
+            <EntityTypeMapping TypeName="EndoscopicModel.Recommendation">
+              <MappingFragment StoreEntitySet="Recommendation">
+                <ScalarProperty Name="ProcedureId" ColumnName="ProcedureId" />
+                <ScalarProperty Name="IsActive" ColumnName="IsActive" />
+                <ScalarProperty Name="Name" ColumnName="Name" />
+                <ScalarProperty Name="ID" ColumnName="ID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Hospitals">
+            <EntityTypeMapping TypeName="EndoscopicModel.Hospital">
+              <MappingFragment StoreEntitySet="Hospital">
+                <ScalarProperty Name="UpdateBy" ColumnName="UpdateBy" />
+                <ScalarProperty Name="UpdateDate" ColumnName="UpdateDate" />
+                <ScalarProperty Name="CreateBy" ColumnName="CreateBy" />
+                <ScalarProperty Name="CreateDate" ColumnName="CreateDate" />
+                <ScalarProperty Name="Tel" ColumnName="Tel" />
+                <ScalarProperty Name="Address3" ColumnName="Address3" />
+                <ScalarProperty Name="Address2" ColumnName="Address2" />
+                <ScalarProperty Name="Address1" ColumnName="Address1" />
+                <ScalarProperty Name="HospitalNameEN" ColumnName="HospitalNameEN" />
+                <ScalarProperty Name="HospitalNameTH" ColumnName="HospitalNameTH" />
+                <ScalarProperty Name="HospitalLogoPathCopy" ColumnName="HospitalLogoPathCopy" />
+                <ScalarProperty Name="HospitalLogoPath" ColumnName="HospitalLogoPath" />
+                <ScalarProperty Name="HospitalID" ColumnName="HospitalID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
           <EntitySetMapping Name="Findings">
             <EntityTypeMapping TypeName="EndoscopicModel.Finding">
               <MappingFragment StoreEntitySet="Finding">
+                <ScalarProperty Name="OtherDetail" ColumnName="OtherDetail" />
+                <ScalarProperty Name="OtherID" ColumnName="OtherID" />
+                <ScalarProperty Name="BiliarySystem" ColumnName="BiliarySystem" />
+                <ScalarProperty Name="BiliarySystemID" ColumnName="BiliarySystemID" />
+                <ScalarProperty Name="Pancreas" ColumnName="Pancreas" />
+                <ScalarProperty Name="PancreasID" ColumnName="PancreasID" />
+                <ScalarProperty Name="PapillaMinor" ColumnName="PapillaMinor" />
+                <ScalarProperty Name="PapillaMinorID" ColumnName="PapillaMinorID" />
+                <ScalarProperty Name="PapillaMajor" ColumnName="PapillaMajor" />
+                <ScalarProperty Name="PapillaMajorID" ColumnName="PapillaMajorID" />
                 <ScalarProperty Name="RapidUreaseTest" ColumnName="RapidUreaseTest" />
                 <ScalarProperty Name="Comment" ColumnName="Comment" />
                 <ScalarProperty Name="Recommendation" ColumnName="Recommendation" />
@@ -4488,72 +4538,55 @@ warning 6002: The table/view 'EndoscopicDb.dbo.v_PatientList' does not have a pr
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
-          <EntitySetMapping Name="RapidUreaseTests">
-            <EntityTypeMapping TypeName="EndoscopicModel.RapidUreaseTest">
-              <MappingFragment StoreEntitySet="RapidUreaseTest">
-                <ScalarProperty Name="IsActive" ColumnName="IsActive" />
-                <ScalarProperty Name="Name" ColumnName="Name" />
-                <ScalarProperty Name="ID" ColumnName="ID" />
-              </MappingFragment>
-            </EntityTypeMapping>
-          </EntitySetMapping>
-          <EntitySetMapping Name="Complications">
-            <EntityTypeMapping TypeName="EndoscopicModel.Complication">
-              <MappingFragment StoreEntitySet="Complication">
-                <ScalarProperty Name="ProcedureId" ColumnName="ProcedureId" />
-                <ScalarProperty Name="IsActive" ColumnName="IsActive" />
-                <ScalarProperty Name="Name" ColumnName="Name" />
-                <ScalarProperty Name="ID" ColumnName="ID" />
-              </MappingFragment>
-            </EntityTypeMapping>
-          </EntitySetMapping>
-          <EntitySetMapping Name="Histopathologies">
-            <EntityTypeMapping TypeName="EndoscopicModel.Histopathology">
-              <MappingFragment StoreEntitySet="Histopathology">
-                <ScalarProperty Name="ProcedureId" ColumnName="ProcedureId" />
-                <ScalarProperty Name="IsActive" ColumnName="IsActive" />
-                <ScalarProperty Name="Name" ColumnName="Name" />
-                <ScalarProperty Name="ID" ColumnName="ID" />
-              </MappingFragment>
-            </EntityTypeMapping>
-          </EntitySetMapping>
-          <EntitySetMapping Name="ProcedureDetails">
-            <EntityTypeMapping TypeName="EndoscopicModel.ProcedureDetail">
-              <MappingFragment StoreEntitySet="ProcedureDetail">
-                <ScalarProperty Name="ProcedureId" ColumnName="ProcedureId" />
-                <ScalarProperty Name="IsActive" ColumnName="IsActive" />
-                <ScalarProperty Name="IsTopic" ColumnName="IsTopic" />
-                <ScalarProperty Name="Name" ColumnName="Name" />
-                <ScalarProperty Name="ID" ColumnName="ID" />
-              </MappingFragment>
-            </EntityTypeMapping>
-          </EntitySetMapping>
-          <EntitySetMapping Name="Recommendations">
-            <EntityTypeMapping TypeName="EndoscopicModel.Recommendation">
-              <MappingFragment StoreEntitySet="Recommendation">
-                <ScalarProperty Name="ProcedureId" ColumnName="ProcedureId" />
-                <ScalarProperty Name="IsActive" ColumnName="IsActive" />
-                <ScalarProperty Name="Name" ColumnName="Name" />
-                <ScalarProperty Name="ID" ColumnName="ID" />
-              </MappingFragment>
-            </EntityTypeMapping>
-          </EntitySetMapping>
-          <EntitySetMapping Name="Hospitals">
-            <EntityTypeMapping TypeName="EndoscopicModel.Hospital">
-              <MappingFragment StoreEntitySet="Hospital">
+          <EntitySetMapping Name="Endoscopics">
+            <EntityTypeMapping TypeName="EndoscopicModel.Endoscopic">
+              <MappingFragment StoreEntitySet="Endoscopic">
+                <ScalarProperty Name="AnesthesiaID" ColumnName="AnesthesiaID" />
+                <ScalarProperty Name="BowelPreparationResult" ColumnName="BowelPreparationResult" />
+                <ScalarProperty Name="BowelPreparationRegimen" ColumnName="BowelPreparationRegimen" />
+                <ScalarProperty Name="BriefHistory" ColumnName="BriefHistory" />
+                <ScalarProperty Name="DxId2Detail" ColumnName="DxId2Detail" />
+                <ScalarProperty Name="DxId1Detail" ColumnName="DxId1Detail" />
+                <ScalarProperty Name="DxId2" ColumnName="DxId2" />
+                <ScalarProperty Name="DxId1" ColumnName="DxId1" />
+                <ScalarProperty Name="IndicationOther" ColumnName="IndicationOther" />
+                <ScalarProperty Name="MedicationOther" ColumnName="MedicationOther" />
                 <ScalarProperty Name="UpdateBy" ColumnName="UpdateBy" />
                 <ScalarProperty Name="UpdateDate" ColumnName="UpdateDate" />
                 <ScalarProperty Name="CreateBy" ColumnName="CreateBy" />
                 <ScalarProperty Name="CreateDate" ColumnName="CreateDate" />
-                <ScalarProperty Name="Tel" ColumnName="Tel" />
-                <ScalarProperty Name="Address3" ColumnName="Address3" />
-                <ScalarProperty Name="Address2" ColumnName="Address2" />
-                <ScalarProperty Name="Address1" ColumnName="Address1" />
-                <ScalarProperty Name="HospitalNameEN" ColumnName="HospitalNameEN" />
-                <ScalarProperty Name="HospitalNameTH" ColumnName="HospitalNameTH" />
-                <ScalarProperty Name="HospitalLogoPathCopy" ColumnName="HospitalLogoPathCopy" />
-                <ScalarProperty Name="HospitalLogoPath" ColumnName="HospitalLogoPath" />
-                <ScalarProperty Name="HospitalID" ColumnName="HospitalID" />
+                <ScalarProperty Name="EndRecordDate" ColumnName="EndRecordDate" />
+                <ScalarProperty Name="StartRecordDate" ColumnName="StartRecordDate" />
+                <ScalarProperty Name="InterventionID" ColumnName="InterventionID" />
+                <ScalarProperty Name="SpecimenID" ColumnName="SpecimenID" />
+                <ScalarProperty Name="IndicationID" ColumnName="IndicationID" />
+                <ScalarProperty Name="FindingID" ColumnName="FindingID" />
+                <ScalarProperty Name="AnesNurse" ColumnName="AnesNurse" />
+                <ScalarProperty Name="Indication" ColumnName="Indication" />
+                <ScalarProperty Name="Anesthesia" ColumnName="Anesthesia" />
+                <ScalarProperty Name="Assistant2" ColumnName="Assistant2" />
+                <ScalarProperty Name="Assistant1" ColumnName="Assistant1" />
+                <ScalarProperty Name="NurseThirthID" ColumnName="NurseThirthID" />
+                <ScalarProperty Name="NurseSecondID" ColumnName="NurseSecondID" />
+                <ScalarProperty Name="NurseFirstID" ColumnName="NurseFirstID" />
+                <ScalarProperty Name="History" ColumnName="History" />
+                <ScalarProperty Name="Intervention" ColumnName="Intervention" />
+                <ScalarProperty Name="FluDose" ColumnName="FluDose" />
+                <ScalarProperty Name="MedicationID" ColumnName="MedicationID" />
+                <ScalarProperty Name="Instrument" ColumnName="Instrument" />
+                <ScalarProperty Name="Arrive" ColumnName="Arrive" />
+                <ScalarProperty Name="EndoscopistID" ColumnName="EndoscopistID" />
+                <ScalarProperty Name="ReferringPhysicain" ColumnName="ReferringPhysicain" />
+                <ScalarProperty Name="Comment" ColumnName="Comment" />
+                <ScalarProperty Name="Complication" ColumnName="Complication" />
+                <ScalarProperty Name="Diagnosis" ColumnName="Diagnosis" />
+                <ScalarProperty Name="InCase" ColumnName="InCase" />
+                <ScalarProperty Name="FollowUpCase" ColumnName="FollowUpCase" />
+                <ScalarProperty Name="NewCase" ColumnName="NewCase" />
+                <ScalarProperty Name="ProcedureID" ColumnName="ProcedureID" />
+                <ScalarProperty Name="PatientID" ColumnName="PatientID" />
+                <ScalarProperty Name="IsSaved" ColumnName="IsSaved" />
+                <ScalarProperty Name="EndoscopicID" ColumnName="EndoscopicID" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>

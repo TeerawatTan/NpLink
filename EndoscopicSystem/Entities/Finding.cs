@@ -162,5 +162,15 @@ namespace EndoscopicSystem.Entities
         public string Recommendation { get; set; }
         public string Comment { get; set; }
         public string RapidUreaseTest { get; set; }
+        public Nullable<int> PapillaMajorID { get; set; }
+        public string PapillaMajor { get; set; }
+        public Nullable<int> PapillaMinorID { get; set; }
+        public string PapillaMinor { get; set; }
+        public Nullable<int> PancreasID { get; set; }
+        public string Pancreas { get; set; }
+        public Nullable<int> BiliarySystemID { get; set; }
+        public string BiliarySystem { get; set; }
+        public Nullable<int> OtherID { get; set; }
+        public string OtherDetail { get; set; }
     }
 }
