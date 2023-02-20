@@ -298,9 +298,25 @@ namespace EndoscopicSystem.V2.Forms
             videoSourcePlayer.VideoSource = _videoCaptureDevice;
             videoSourcePlayer.Start();
 
-            SoundPlayer soundPlayer = new SoundPlayer();
-            soundPlayer.SoundLocation = _pathFolderSounds + @"\SoundCapture\Connect.wav";
-            soundPlayer.Play();
+            //SoundPlayer soundPlayer = new SoundPlayer();
+            //soundPlayer.SoundLocation = _pathFolderSounds + @"\SoundCapture\Connect.wav";
+            //soundPlayer.Play();
+
+            Task.Run(() =>
+            {
+                // Create a new SoundPlayer instance
+                using (var player = new System.Media.SoundPlayer())
+                {
+                    // Set the location of the sound file
+                    player.SoundLocation = _pathFolderSounds + @"\SoundCapture\Connect.wav";
+
+                    // Load the sound file into memory
+                    player.Load();
+
+                    // Play the sound file
+                    player.PlaySync();
+                }
+            });
 
             btnCapture.Enabled = true;
             btnCapture.BackColor = Color.FromArgb(0, 192, 0);
@@ -365,9 +381,26 @@ namespace EndoscopicSystem.V2.Forms
             if (videoSourcePlayer.VideoSource != null)
             {
                 EnableConnectionControls(true);
-                SoundPlayer soundPlayer = new SoundPlayer();
-                soundPlayer.SoundLocation = _pathFolderSounds + @"\SoundCapture\Disconnecte.wav";
-                soundPlayer.Play();
+
+                //SoundPlayer soundPlayer = new SoundPlayer();
+                //soundPlayer.SoundLocation = _pathFolderSounds + @"\SoundCapture\Disconnecte.wav";
+                //soundPlayer.Play();
+
+                Task.Run(() =>
+                {
+                    // Create a new SoundPlayer instance
+                    using (var player = new System.Media.SoundPlayer())
+                    {
+                        // Set the location of the sound file
+                        player.SoundLocation = _pathFolderSounds + @"\SoundCapture\Disconnecte.wav";
+
+                        // Load the sound file into memory
+                        player.Load();
+
+                        // Play the sound file
+                        player.PlaySync();
+                    }
+                });
 
                 recordEndDate = DateTime.Now;
 
@@ -403,22 +436,70 @@ namespace EndoscopicSystem.V2.Forms
                     captureSoundPath = _pathFolderSounds + $@"\SoundCapture\{_item}.wav";
                     if (File.Exists(captureSoundPath))
                     {
-                        SoundPlayer soundCapture = new SoundPlayer();
-                        soundCapture.SoundLocation = captureSoundPath;
-                        soundCapture.Play();
+                        //SoundPlayer soundCapture = new SoundPlayer();
+                        //soundCapture.SoundLocation = captureSoundPath;
+                        //soundCapture.Play();
+
+                        Task.Run(() =>
+                        {
+                            // Create a new SoundPlayer instance
+                            using (var player = new System.Media.SoundPlayer())
+                            {
+                                // Set the location of the sound file
+                                player.SoundLocation = captureSoundPath;
+
+                                // Load the sound file into memory
+                                player.Load();
+
+                                // Play the sound file
+                                player.PlaySync();
+                            }
+                        });
                     }
                     else
                     {
-                        SoundPlayer soundCapture = new SoundPlayer();
-                        soundCapture.SoundLocation = _pathFolderSounds + "capture.wav";
-                        soundCapture.Play();
+                        //SoundPlayer soundCapture = new SoundPlayer();
+                        //soundCapture.SoundLocation = _pathFolderSounds + "capture.wav";
+                        //soundCapture.Play();
+
+                        Task.Run(() =>
+                        {
+                            // Create a new SoundPlayer instance
+                            using (var player = new System.Media.SoundPlayer())
+                            {
+                                // Set the location of the sound file
+                                player.SoundLocation = _pathFolderSounds + "capture.wav";
+
+                                // Load the sound file into memory
+                                player.Load();
+
+                                // Play the sound file
+                                player.PlaySync();
+                            }
+                        });
                     }
                 }
                 else
                 {
-                    SoundPlayer soundCapture = new SoundPlayer();
-                    soundCapture.SoundLocation = _pathFolderSounds + "capture.wav";
-                    soundCapture.Play();
+                    //SoundPlayer soundCapture = new SoundPlayer();
+                    //soundCapture.SoundLocation = _pathFolderSounds + "capture.wav";
+                    //soundCapture.Play();
+
+                    Task.Run(() =>
+                    {
+                        // Create a new SoundPlayer instance
+                        using (var player = new System.Media.SoundPlayer())
+                        {
+                            // Set the location of the sound file
+                            player.SoundLocation = _pathFolderSounds + "capture.wav";
+
+                            // Load the sound file into memory
+                            player.Load();
+
+                            // Play the sound file
+                            player.PlaySync();
+                        }
+                    });
                 }
 
                 //soundCapture.Play();
@@ -577,9 +658,25 @@ namespace EndoscopicSystem.V2.Forms
             {
                 t.Stop();
 
-                SoundPlayer soundPlayer = new SoundPlayer();
-                soundPlayer.SoundLocation = _pathFolderSounds + @"\SoundCapture\Pause.wav";
-                soundPlayer.Play();
+                //SoundPlayer soundPlayer = new SoundPlayer();
+                //soundPlayer.SoundLocation = _pathFolderSounds + @"\SoundCapture\Pause.wav";
+                //soundPlayer.Play();
+
+                Task.Run(() =>
+                {
+                    // Create a new SoundPlayer instance
+                    using (var player = new System.Media.SoundPlayer())
+                    {
+                        // Set the location of the sound file
+                        player.SoundLocation = _pathFolderSounds + @"\SoundCapture\Pause.wav";
+
+                        // Load the sound file into memory
+                        player.Load();
+
+                        // Play the sound file
+                        player.PlaySync();
+                    }
+                });
 
                 pictureBoxRecording.Visible = false;
                 btnPause.Text = "Resume";
@@ -588,9 +685,25 @@ namespace EndoscopicSystem.V2.Forms
             {
                 t.Start();
 
-                SoundPlayer soundPlayer = new SoundPlayer();
-                soundPlayer.SoundLocation = _pathFolderSounds + @"\SoundCapture\Record.wav";
-                soundPlayer.Play();
+                //SoundPlayer soundPlayer = new SoundPlayer();
+                //soundPlayer.SoundLocation = _pathFolderSounds + @"\SoundCapture\Record.wav";
+                //soundPlayer.Play();
+
+                Task.Run(() =>
+                {
+                    // Create a new SoundPlayer instance
+                    using (var player = new System.Media.SoundPlayer())
+                    {
+                        // Set the location of the sound file
+                        player.SoundLocation = _pathFolderSounds + @"\SoundCapture\Record.wav";
+
+                        // Load the sound file into memory
+                        player.Load();
+
+                        // Play the sound file
+                        player.PlaySync();
+                    }
+                });
 
                 pictureBoxRecording.Visible = true;
                 btnPause.Text = "Pause";
@@ -604,9 +717,25 @@ namespace EndoscopicSystem.V2.Forms
             _isRecord = true;
             _isPause = false;
 
-            SoundPlayer soundPlayer = new SoundPlayer();
-            soundPlayer.SoundLocation = _pathFolderSounds + @"\SoundCapture\Record.wav";
-            soundPlayer.Play();
+            //SoundPlayer soundPlayer = new SoundPlayer();
+            //soundPlayer.SoundLocation = _pathFolderSounds + @"\SoundCapture\Record.wav";
+            //soundPlayer.Play();
+
+            Task.Run(() =>
+            {
+                // Create a new SoundPlayer instance
+                using (var player = new System.Media.SoundPlayer())
+                {
+                    // Set the location of the sound file
+                    player.SoundLocation = _pathFolderSounds + @"\SoundCapture\Record.wav";
+
+                    // Load the sound file into memory
+                    player.Load();
+
+                    // Play the sound file
+                    player.PlaySync();
+                }
+            });
 
             int h = _videoCaptureDevice.VideoResolution.FrameSize.Height;
             int w = _videoCaptureDevice.VideoResolution.FrameSize.Width;
@@ -678,9 +807,25 @@ namespace EndoscopicSystem.V2.Forms
 
         private void btnStop_Click(object sender, EventArgs e)
         {
-            SoundPlayer soundPlayer = new SoundPlayer();
-            soundPlayer.SoundLocation = _pathFolderSounds + @"\SoundCapture\Stop.wav";
-            soundPlayer.Play();
+            //SoundPlayer soundPlayer = new SoundPlayer();
+            //soundPlayer.SoundLocation = _pathFolderSounds + @"\SoundCapture\Stop.wav";
+            //soundPlayer.Play();
+
+            Task.Run(() =>
+            {
+                // Create a new SoundPlayer instance
+                using (var player = new System.Media.SoundPlayer())
+                {
+                    // Set the location of the sound file
+                    player.SoundLocation = _pathFolderSounds + @"\SoundCapture\Stop.wav";
+
+                    // Load the sound file into memory
+                    player.Load();
+
+                    // Play the sound file
+                    player.PlaySync();
+                }
+            });
 
             _isStopRecord = true;
             _isRecord = false;
