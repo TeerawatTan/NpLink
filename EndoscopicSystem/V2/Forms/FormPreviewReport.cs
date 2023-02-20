@@ -218,7 +218,7 @@ namespace EndoscopicSystem.V2.Forms
 
                 for (int i = 0; i < imageList.Count; i++)
                 {
-                    ListViewItem item = new ListViewItem($"Image_{imageList.Count - i}", i);
+                    ListViewItem item = new ListViewItem($"Image_{i+1}", i);
                     listView1.Items.Add(item);
                 }
             }
@@ -588,7 +588,7 @@ namespace EndoscopicSystem.V2.Forms
 
         private void LoadTextBoxAutoComplete(TextBox textBox)
         {
-            var findingList = _repo.GetFindingLabels(_procedureId);
+            var findingList = _repo.GetFindingLabels(_procedureId).ToList();
             if (findingList != null && findingList.Count > 0)
             {
                 AutoCompleteStringCollection ac = new AutoCompleteStringCollection();

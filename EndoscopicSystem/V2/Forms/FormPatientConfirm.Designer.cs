@@ -47,9 +47,9 @@ namespace EndoscopicSystem.V2.Forms
             this.lbName = new System.Windows.Forms.Label();
             this.cbbInstrument1 = new System.Windows.Forms.ComboBox();
             this.cbbInstrument2 = new System.Windows.Forms.ComboBox();
-            this.SerialNumber2 = new System.Windows.Forms.Label();
             this.label10 = new System.Windows.Forms.Label();
-            this.textBox3 = new System.Windows.Forms.TextBox();
+            this.SerialNumber2 = new System.Windows.Forms.TextBox();
+            this.label9 = new System.Windows.Forms.Label();
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -249,17 +249,6 @@ namespace EndoscopicSystem.V2.Forms
             this.cbbInstrument2.Visible = false;
             this.cbbInstrument2.SelectedIndexChanged += new System.EventHandler(this.cbbInstrument2_SelectedIndexChanged);
             // 
-            // SerialNumber2
-            // 
-            this.SerialNumber2.AutoSize = true;
-            this.SerialNumber2.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
-            this.SerialNumber2.Location = new System.Drawing.Point(331, 594);
-            this.SerialNumber2.Name = "SerialNumber2";
-            this.SerialNumber2.Size = new System.Drawing.Size(38, 24);
-            this.SerialNumber2.TabIndex = 101;
-            this.SerialNumber2.Text = "S/n";
-            this.SerialNumber2.Visible = false;
-            // 
             // label10
             // 
             this.label10.AutoSize = true;
@@ -271,25 +260,36 @@ namespace EndoscopicSystem.V2.Forms
             this.label10.Text = "รุ่น";
             this.label10.Visible = false;
             // 
-            // textBox3
+            // SerialNumber2
             // 
-            this.textBox3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
-            this.textBox3.Location = new System.Drawing.Point(335, 630);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.ReadOnly = true;
-            this.textBox3.Size = new System.Drawing.Size(286, 26);
-            this.textBox3.TabIndex = 99;
-            this.textBox3.Visible = false;
+            this.SerialNumber2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
+            this.SerialNumber2.Location = new System.Drawing.Point(335, 630);
+            this.SerialNumber2.Name = "SerialNumber2";
+            this.SerialNumber2.ReadOnly = true;
+            this.SerialNumber2.Size = new System.Drawing.Size(286, 26);
+            this.SerialNumber2.TabIndex = 99;
+            this.SerialNumber2.Visible = false;
+            // 
+            // label9
+            // 
+            this.label9.AutoSize = true;
+            this.label9.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
+            this.label9.Location = new System.Drawing.Point(331, 603);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(38, 24);
+            this.label9.TabIndex = 103;
+            this.label9.Text = "S/n";
+            this.label9.Visible = false;
             // 
             // FormPatientConfirm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(679, 744);
+            this.Controls.Add(this.label9);
             this.Controls.Add(this.cbbInstrument2);
-            this.Controls.Add(this.SerialNumber2);
             this.Controls.Add(this.label10);
-            this.Controls.Add(this.textBox3);
+            this.Controls.Add(this.SerialNumber2);
             this.Controls.Add(this.cbbInstrument1);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.label8);
@@ -332,8 +332,8 @@ namespace EndoscopicSystem.V2.Forms
         private System.Windows.Forms.Label lbName;
         private System.Windows.Forms.ComboBox cbbInstrument1;
         private System.Windows.Forms.ComboBox cbbInstrument2;
-        private System.Windows.Forms.Label SerialNumber2;
         private System.Windows.Forms.Label label10;
-        private System.Windows.Forms.TextBox textBox3;
+        private System.Windows.Forms.TextBox SerialNumber2;
+        private System.Windows.Forms.Label label9;
     }
 }

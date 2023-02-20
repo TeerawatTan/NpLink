@@ -154,6 +154,9 @@
     <Compile Include="Entities\BaseOfTongue.cs">
       <DependentUpon>DBEndoscopic.tt</DependentUpon>
     </Compile>
+    <Compile Include="Entities\BiliarySystem.cs">
+      <DependentUpon>DBEndoscopic.tt</DependentUpon>
+    </Compile>
     <Compile Include="Entities\Body.cs">
       <DependentUpon>DBEndoscopic.tt</DependentUpon>
     </Compile>
@@ -325,7 +328,19 @@
     <Compile Include="Entities\Oropharynx.cs">
       <DependentUpon>DBEndoscopic.tt</DependentUpon>
     </Compile>
+    <Compile Include="Entities\Other.cs">
+      <DependentUpon>DBEndoscopic.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Entities\Pancrea.cs">
+      <DependentUpon>DBEndoscopic.tt</DependentUpon>
+    </Compile>
     <Compile Include="Entities\Pancreatogram.cs">
+      <DependentUpon>DBEndoscopic.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Entities\PapillaMajor.cs">
+      <DependentUpon>DBEndoscopic.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Entities\PapillaMinor.cs">
       <DependentUpon>DBEndoscopic.tt</DependentUpon>
     </Compile>
     <Compile Include="Entities\Patient.cs">

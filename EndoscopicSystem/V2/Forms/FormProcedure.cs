@@ -344,7 +344,7 @@ namespace EndoscopicSystem.V2.Forms
 
         private void LoadFinding()
         {
-            _findingLabels = _dropdownRepo.GetFindingLabels(_procedureId);
+            _findingLabels = _dropdownRepo.GetFindingLabels(_procedureId).ToList();
         }
         private void LoadICD9()
         {
@@ -2730,12 +2730,12 @@ namespace EndoscopicSystem.V2.Forms
                 {
                     tabControl1.TabPages.Add(tabFindingERCP);
 
-                    _dropdownListService.DropdownEsophagus(cbbFindingPapillaMajor_ERCP);
-                    _dropdownListService.DropdownStomach(cbbFindingPapillaMinor_ERCP);
                     _dropdownListService.DropdownDuodenum(cbbFindingDuodenum_ERCP);
-                    _dropdownListService.DropdownAmpulla(cbbFindingBiliarySystem_ERCP);
-                    //_dropdownListService.DropdownCholangiogram(cbbFindingCholangiogram_ERCP);
-                    //_dropdownListService.DropdownPancreatogram(cbbFindingPancreatogram_ERCP);
+                    _dropdownListService.DropdownPapillaMajor(cbbFindingPapillaMajor_ERCP);
+                    _dropdownListService.DropdownPapillaMinor(cbbFindingPapillaMinor_ERCP);
+                    _dropdownListService.DropdownPancrea(cbbFindingPancreas_ERCP);
+                    _dropdownListService.DropdownBiliarySystem(cbbFindingBiliarySystem_ERCP);
+                    _dropdownListService.DropdownOther(cbbFindingOther_ERCP);
                 }
             }
             else if (procedureId == 2 || procedureId == 4)  // Colonoscopy, Bronchoscopy

@@ -686,6 +686,13 @@ warning 6002: The table/view 'EndoscopicDb.dbo.ProcedureList' does not have a pr
           <Property Name="BaseOfTongueID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
           <Property Name="BaseOfTongueName" Type="varchar" MaxLength="255" />
         </EntityType>
+        <EntityType Name="BiliarySystem">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Name" Type="nvarchar" MaxLength="250" />
+        </EntityType>
         <EntityType Name="Body">
           <Key>
             <PropertyRef Name="BodyID" />
@@ -970,6 +977,20 @@ warning 6002: The table/view 'EndoscopicDb.dbo.ProcedureList' does not have a pr
           <Property Name="CreateDate" Type="datetime" />
           <Property Name="UpdateDate" Type="datetime" />
         </EntityType>
+        <EntityType Name="Other">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Name" Type="nvarchar" MaxLength="250" />
+        </EntityType>
+        <EntityType Name="Pancreas">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Name" Type="nvarchar" MaxLength="250" />
+        </EntityType>
         <EntityType Name="Pancreatogram">
           <Key>
             <PropertyRef Name="PancreatogramID" />
@@ -978,6 +999,20 @@ warning 6002: The table/view 'EndoscopicDb.dbo.ProcedureList' does not have a pr
           <Property Name="PancreatogramName" Type="nvarchar" MaxLength="200" />
           <Property Name="CreateDate" Type="datetime" />
           <Property Name="UpdateDate" Type="datetime" />
+        </EntityType>
+        <EntityType Name="PapillaMajor">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Name" Type="nvarchar" MaxLength="250" />
+        </EntityType>
+        <EntityType Name="PapillaMinor">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Name" Type="nvarchar" MaxLength="250" />
         </EntityType>
         <EntityType Name="Postcricoid">
           <Key>
@@ -1354,6 +1389,7 @@ warning 6002: The table/view 'EndoscopicDb.dbo.v_PatientList' does not have a pr
           <EntitySet Name="Antrum" EntityType="Self.Antrum" Schema="master" store:Type="Tables" />
           <EntitySet Name="AscendingColon" EntityType="Self.AscendingColon" Schema="master" store:Type="Tables" />
           <EntitySet Name="BaseOfTongue" EntityType="Self.BaseOfTongue" Schema="master" store:Type="Tables" />
+          <EntitySet Name="BiliarySystem" EntityType="Self.BiliarySystem" Schema="master" store:Type="Tables" />
           <EntitySet Name="Body" EntityType="Self.Body" Schema="master" store:Type="Tables" />
           <EntitySet Name="Cardia" EntityType="Self.Cardia" Schema="master" store:Type="Tables" />
           <EntitySet Name="Carina" EntityType="Self.Carina" Schema="master" store:Type="Tables" />
@@ -1387,7 +1423,11 @@ warning 6002: The table/view 'EndoscopicDb.dbo.v_PatientList' does not have a pr
           <EntitySet Name="NasalCavity" EntityType="Self.NasalCavity" Schema="master" store:Type="Tables" />
           <EntitySet Name="Nasopharynx" EntityType="Self.Nasopharynx" Schema="master" store:Type="Tables" />
           <EntitySet Name="Oropharynx" EntityType="Self.Oropharynx" Schema="master" store:Type="Tables" />
+          <EntitySet Name="Other" EntityType="Self.Other" Schema="master" store:Type="Tables" />
+          <EntitySet Name="Pancreas" EntityType="Self.Pancreas" Schema="master" store:Type="Tables" />
           <EntitySet Name="Pancreatogram" EntityType="Self.Pancreatogram" Schema="master" store:Type="Tables" />
+          <EntitySet Name="PapillaMajor" EntityType="Self.PapillaMajor" Schema="master" store:Type="Tables" />
+          <EntitySet Name="PapillaMinor" EntityType="Self.PapillaMinor" Schema="master" store:Type="Tables" />
           <EntitySet Name="Postcricoid" EntityType="Self.Postcricoid" Schema="master" store:Type="Tables" />
           <EntitySet Name="PosteriorPharyngealWall" EntityType="Self.PosteriorPharyngealWall" Schema="master" store:Type="Tables" />
           <EntitySet Name="PosteriorWall" EntityType="Self.PosteriorWall" Schema="master" store:Type="Tables" />
@@ -1611,6 +1651,11 @@ warning 6002: The table/view 'EndoscopicDb.dbo.v_PatientList' does not have a pr
           <EntitySet Name="Hospitals" EntityType="EndoscopicModel.Hospital" />
           <EntitySet Name="Findings" EntityType="EndoscopicModel.Finding" />
           <EntitySet Name="Endoscopics" EntityType="EndoscopicModel.Endoscopic" />
+          <EntitySet Name="BiliarySystems" EntityType="EndoscopicModel.BiliarySystem" />
+          <EntitySet Name="Other" EntityType="EndoscopicModel.Other" />
+          <EntitySet Name="Pancreas" EntityType="EndoscopicModel.Pancrea" />
+          <EntitySet Name="PapillaMajors" EntityType="EndoscopicModel.PapillaMajor" />
+          <EntitySet Name="PapillaMinors" EntityType="EndoscopicModel.PapillaMinor" />
           </EntityContainer>
         <EntityType Name="Doctor">
           <Key>
@@ -3037,6 +3082,41 @@ warning 6002: The table/view 'EndoscopicDb.dbo.v_PatientList' does not have a pr
           <Property Name="BowelPreparationRegimen" Type="String" MaxLength="1000" FixedLength="false" Unicode="true" />
           <Property Name="BowelPreparationResult" Type="String" MaxLength="1000" FixedLength="false" Unicode="true" />
           <Property Name="AnesthesiaID" Type="Int32" />
+        </EntityType>
+        <EntityType Name="BiliarySystem">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Name" Type="String" MaxLength="250" FixedLength="false" Unicode="true" />
+        </EntityType>
+        <EntityType Name="Other">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Name" Type="String" MaxLength="250" FixedLength="false" Unicode="true" />
+        </EntityType>
+        <EntityType Name="Pancrea">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Name" Type="String" MaxLength="250" FixedLength="false" Unicode="true" />
+        </EntityType>
+        <EntityType Name="PapillaMajor">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Name" Type="String" MaxLength="250" FixedLength="false" Unicode="true" />
+        </EntityType>
+        <EntityType Name="PapillaMinor">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Name" Type="String" MaxLength="250" FixedLength="false" Unicode="true" />
         </EntityType>
         </Schema>
     </edmx:ConceptualModels>
@@ -4587,6 +4667,46 @@ warning 6002: The table/view 'EndoscopicDb.dbo.v_PatientList' does not have a pr
                 <ScalarProperty Name="PatientID" ColumnName="PatientID" />
                 <ScalarProperty Name="IsSaved" ColumnName="IsSaved" />
                 <ScalarProperty Name="EndoscopicID" ColumnName="EndoscopicID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="BiliarySystems">
+            <EntityTypeMapping TypeName="EndoscopicModel.BiliarySystem">
+              <MappingFragment StoreEntitySet="BiliarySystem">
+                <ScalarProperty Name="Name" ColumnName="Name" />
+                <ScalarProperty Name="ID" ColumnName="ID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Other">
+            <EntityTypeMapping TypeName="EndoscopicModel.Other">
+              <MappingFragment StoreEntitySet="Other">
+                <ScalarProperty Name="Name" ColumnName="Name" />
+                <ScalarProperty Name="ID" ColumnName="ID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Pancreas">
+            <EntityTypeMapping TypeName="EndoscopicModel.Pancrea">
+              <MappingFragment StoreEntitySet="Pancreas">
+                <ScalarProperty Name="Name" ColumnName="Name" />
+                <ScalarProperty Name="ID" ColumnName="ID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="PapillaMajors">
+            <EntityTypeMapping TypeName="EndoscopicModel.PapillaMajor">
+              <MappingFragment StoreEntitySet="PapillaMajor">
+                <ScalarProperty Name="Name" ColumnName="Name" />
+                <ScalarProperty Name="ID" ColumnName="ID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="PapillaMinors">
+            <EntityTypeMapping TypeName="EndoscopicModel.PapillaMinor">
+              <MappingFragment StoreEntitySet="PapillaMinor">
+                <ScalarProperty Name="Name" ColumnName="Name" />
+                <ScalarProperty Name="ID" ColumnName="ID" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>

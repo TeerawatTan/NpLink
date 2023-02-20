@@ -102,6 +102,11 @@
         <EntityTypeShape EntityType="EndoscopicModel.Hospital" Width="1.5" PointX="30.375" PointY="3.75" />
         <EntityTypeShape EntityType="EndoscopicModel.Finding" Width="1.5" PointX="19.375" PointY="28.75" />
         <EntityTypeShape EntityType="EndoscopicModel.Endoscopic" Width="1.5" PointX="0.75" PointY="23.75" />
+        <EntityTypeShape EntityType="EndoscopicModel.BiliarySystem" Width="1.5" PointX="7.375" PointY="30.75" />
+        <EntityTypeShape EntityType="EndoscopicModel.Other" Width="1.5" PointX="9.375" PointY="30.75" />
+        <EntityTypeShape EntityType="EndoscopicModel.Pancrea" Width="1.5" PointX="11.375" PointY="30.75" />
+        <EntityTypeShape EntityType="EndoscopicModel.PapillaMajor" Width="1.5" PointX="13.375" PointY="30.75" />
+        <EntityTypeShape EntityType="EndoscopicModel.PapillaMinor" Width="1.5" PointX="30.375" PointY="15.75" />
       </Diagram>
     </edmx:Diagrams>
   </edmx:Designer>

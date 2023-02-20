@@ -40,10 +40,14 @@ namespace EndoscopicSystem.V2.Forms
             {
                 InitialData(defaultData, defaultData, defaultData, defaultData);
             }
-            _dropdownListService.DropdownInstrument(cbbInstrument1, 1);
+            _dropdownListService.DropdownInstrumentIdAndCode(cbbInstrument1, 1);
             if (_procedureId == 6)
             {
-                _dropdownListService.DropdownInstrument(cbbInstrument2, 1);
+                _dropdownListService.DropdownInstrumentIdAndCode(cbbInstrument2, 1);
+                label10.Visible = true;
+                cbbInstrument2.Visible = true;
+                label9.Visible = true;
+                SerialNumber2.Visible = true;
             }
         }
 
@@ -52,10 +56,14 @@ namespace EndoscopicSystem.V2.Forms
             if (string.IsNullOrWhiteSpace(cbbInstrument1.Text))
                 return;
 
-            string[] instruSplt = cbbInstrument1.Text.ToString().Split('-');
-            if (instruSplt.Length > 0)
+            string instruDdl = cbbInstrument1.Text.ToString().Trim();
+            if (!string.IsNullOrWhiteSpace(instruDdl))
             {
-                SerialNumber1.Text = instruSplt[1].Trim() ?? "";
+                var instrument = _db.Instruments.Where(w => w.Code == instruDdl).FirstOrDefault();
+                if (instrument != null)
+                    SerialNumber1.Text = instrument.SerialNumber;
+                else
+                    SerialNumber1.Clear();
             }
         }
 
@@ -64,10 +72,14 @@ namespace EndoscopicSystem.V2.Forms
             if (string.IsNullOrWhiteSpace(cbbInstrument2.Text))
                 return;
 
-            string[] instruSplt = cbbInstrument2.Text.ToString().Split('-');
-            if (instruSplt.Length > 0)
+            string instruDdl = cbbInstrument2.Text.ToString().Trim();
+            if (!string.IsNullOrWhiteSpace(instruDdl))
             {
-                SerialNumber2.Text = instruSplt[1].Trim() ?? "";
+                var instrument = _db.Instruments.Where(w => w.Code == instruDdl).FirstOrDefault();
+                if (instrument != null)
+                    SerialNumber2.Text = instrument.SerialNumber;
+                else
+                    SerialNumber2.Clear();
             }
         }
 
