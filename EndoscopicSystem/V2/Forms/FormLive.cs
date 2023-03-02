@@ -35,8 +35,8 @@ namespace EndoscopicSystem.V2.Forms
         private FilterInfoCollection _filterInfoCollection;
         private VideoCaptureDevice _videoCaptureDevice;
         private Bitmap video;
-        private string _pathFolderVideo = Application.StartupPath.Replace("\\bin\\Debug", "") + @"\VideoRecord\";
-        private string _pathFolderImage = Application.StartupPath.Replace("\\bin\\Debug", "") + @"\ImageCapture\";
+        private string _pathFolderVideo = ConfigurationManager.AppSettings["pathSaveVideo"];
+        private string _pathFolderImage = ConfigurationManager.AppSettings["pathSaveImageCapture"];
         private string _pathFolderSounds = Application.StartupPath.Replace("\\bin\\Debug", "") + @"\Sounds\";
         private VideoFileWriter _fileWriter = new VideoFileWriter();
         private DateTime? _firstFrameTime, recordStartDate, recordEndDate;

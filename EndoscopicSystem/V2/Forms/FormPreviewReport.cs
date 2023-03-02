@@ -4,6 +4,7 @@ using EndoscopicSystem.Repository;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
+using System.Configuration;
 using System.Data;
 using System.Drawing;
 using System.Drawing.Drawing2D;
@@ -18,7 +19,7 @@ namespace EndoscopicSystem.V2.Forms
 {
     public partial class FormPreviewReport : Form
     {
-        private readonly string _pathFolderImage = Application.StartupPath.Replace("\\bin\\Debug", "") + @"\ImageCapture\";
+        private readonly string _pathFolderImage = ConfigurationManager.AppSettings["pathSaveImageCapture"];
         private string _pathFolderImageSave, _hnNo, _pathImg, _fileName = ".jpg", _vdoPath;
         private readonly string _initialDirectoryUpload = "C://Desktop";
         private readonly string _titleUpload = "Select image to be upload.";

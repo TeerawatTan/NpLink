@@ -1,8 +1,6 @@
 ﻿using EndoscopicSystem.Entities;
-using EndoscopicSystem.Forms;
 using System;
-using System.Collections.Generic;
-using System.ComponentModel;
+using System.Configuration;
 using System.Data;
 using System.Drawing;
 using System.IO;
@@ -16,10 +14,10 @@ namespace EndoscopicSystem.V2.Forms
         readonly EndoscopicEntities _db = new EndoscopicEntities();
         private Label _currentLabel = null;
         private int _id = 0;
-        private string _pathFolderVideo = Application.StartupPath.Replace("\\bin\\Debug", "") + @"\VideoRecord\";
-        private string _pathFolderImage = Application.StartupPath.Replace("\\bin\\Debug", "") + @"\ImageCapture\";
-        private string _pathFolderDicom = Application.StartupPath.Replace("\\bin\\Debug", "") + @"\Dicom\";
-        private string _pathFolderPdf = Application.StartupPath.Replace("\\bin\\Debug", "") + @"\Pdf\";
+        private string _pathFolderVideo = ConfigurationManager.AppSettings["pathSaveVideo"];
+        private string _pathFolderImageCapture = ConfigurationManager.AppSettings["pathSaveImageCapture"];
+        //private string _pathFolderDicom = ConfigurationManager.AppSettings["pathSaveDicom"];
+        private string _pathFolderPdf = ConfigurationManager.AppSettings["pathSavePdf"];
         public FormHome(int id)
         {
             InitializeComponent();
@@ -45,14 +43,14 @@ namespace EndoscopicSystem.V2.Forms
             {
                 Directory.CreateDirectory(_pathFolderVideo);
             }
-            if (!Directory.Exists(_pathFolderImage))
+            if (!Directory.Exists(_pathFolderImageCapture))
             {
-                Directory.CreateDirectory(_pathFolderImage);
+                Directory.CreateDirectory(_pathFolderImageCapture);
             }
-            if (!Directory.Exists(_pathFolderDicom))
-            {
-                Directory.CreateDirectory(_pathFolderDicom);
-            }
+            //if (!Directory.Exists(_pathFolderDicom))
+            //{
+            //    Directory.CreateDirectory(_pathFolderDicom);
+            //}
             if (!Directory.Exists(_pathFolderPdf))
             {
                 Directory.CreateDirectory(_pathFolderPdf);

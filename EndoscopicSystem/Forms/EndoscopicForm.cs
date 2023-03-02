@@ -33,11 +33,11 @@ namespace EndoscopicSystem
         private FilterInfoCollection _filterInfoCollection;
         private VideoCaptureDevice _videoCaptureDevice;
         private Bitmap video;
-        private string _pathFolderVideo = Application.StartupPath.Replace("\\bin\\Debug", "") + @"\VideoRecord\";
-        private string _pathFolderImage = Application.StartupPath.Replace("\\bin\\Debug", "") + @"\ImageCapture\";
+        private string _pathFolderVideo = ConfigurationManager.AppSettings["pathSaveVideo"];
+        private string _pathFolderImage = ConfigurationManager.AppSettings["pathSaveImageCapture"];
         private string _pathFolderSounds = Application.StartupPath.Replace("\\bin\\Debug", "") + @"\Sounds\";
-        private string _pathFolderPDF = Application.StartupPath.Replace("\\bin\\Debug", "") + @"\Pdf\";
-        private string _pathFolderDicom = Application.StartupPath.Replace("\\bin\\Debug", "") + @"\Dicom\";
+        private string _pathFolderPDF = ConfigurationManager.AppSettings["pathSavePdf"];
+        private string _pathFolderDicom = ConfigurationManager.AppSettings["pathSaveDicom"];
         string reportPath = Application.StartupPath.Replace("\\bin\\Debug", "") + @"\Report\";
         private string _initialDirectoryUpload = "C://Desktop";
         private string _titleUpload = "Select image to be upload.";

@@ -15,7 +15,7 @@ namespace EndoscopicSystem.Forms
         private int endoscopicId;
         protected EndoscopicEntities db = new EndoscopicEntities();
         private string _reportPath = Application.StartupPath.Replace("\\bin\\Debug", "") + @"\Report\";
-        private string _pathFolderPDF = Application.StartupPath.Replace("\\bin\\Debug", "") + @"\Pdf\";
+        private string _pathFolderPDF = ConfigurationManager.AppSettings["pathSavePdf"];
         public ReportEndoscopic(string hn, int proc, int endosId)
         {
             InitializeComponent();

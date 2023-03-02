@@ -28,14 +28,10 @@ namespace EndoscopicSystem.V2.Forms
     public partial class FormProcedure : Form
     {
         #region Variables
-        private string _reportPath = Application.StartupPath.Replace("\\bin\\Debug", "") + @"\Report\";
-        private string _pathFolderPDF = Application.StartupPath.Replace("\\bin\\Debug", "") + @"\Pdf\";
-        private string _pathFolderDicom = Application.StartupPath.Replace("\\bin\\Debug", "") + @"\Dicom\";
-        private string _pathFolderReportJpg = Application.StartupPath.Replace("\\bin\\Debug", "") + @"\JPEG\";
         private readonly string _initialDirectoryUpload = "C://Desktop";
         private readonly string _titleUpload = "Select image to be upload.";
         private readonly string _filterUpload = "Image Only(*.jpg; *.jpeg; *.gif; *.bmp; *.png)|*.jpg; *.jpeg; *.gif; *.bmp; *.png";
-        private readonly string _pathFolderImage = Application.StartupPath.Replace("\\bin\\Debug", "") + @"\ImageCapture\";
+        private readonly string _pathFolderImage = ConfigurationManager.AppSettings["pathSaveImageCapture"];
         private string _pathFolderImageSave, _hnNo, _pathImg, _fileName = ".jpg", _vdoPath, _markField;
         private int _id, _procedureId, _appointmentId, _patientId, _endoscopicId, _item, _aspectRatioID = 1;
         private bool isSaved = false;
