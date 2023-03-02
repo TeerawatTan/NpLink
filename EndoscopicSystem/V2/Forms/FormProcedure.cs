@@ -31,13 +31,14 @@ namespace EndoscopicSystem.V2.Forms
         private string _reportPath = Application.StartupPath.Replace("\\bin\\Debug", "") + @"\Report\";
         private string _pathFolderPDF = Application.StartupPath.Replace("\\bin\\Debug", "") + @"\Pdf\";
         private string _pathFolderDicom = Application.StartupPath.Replace("\\bin\\Debug", "") + @"\Dicom\";
+        private string _pathFolderReportJpg = Application.StartupPath.Replace("\\bin\\Debug", "") + @"\JPEG\";
         private readonly string _initialDirectoryUpload = "C://Desktop";
         private readonly string _titleUpload = "Select image to be upload.";
         private readonly string _filterUpload = "Image Only(*.jpg; *.jpeg; *.gif; *.bmp; *.png)|*.jpg; *.jpeg; *.gif; *.bmp; *.png";
         private readonly string _pathFolderImage = Application.StartupPath.Replace("\\bin\\Debug", "") + @"\ImageCapture\";
         private string _pathFolderImageSave, _hnNo, _pathImg, _fileName = ".jpg", _vdoPath, _markField;
         private int _id, _procedureId, _appointmentId, _patientId, _endoscopicId, _item, _aspectRatioID = 1;
-        private bool isSaved = false, isExport = false;
+        private bool isSaved = false;
         private readonly GetDropdownList _dropdownRepo = new GetDropdownList();
         private readonly EndoscopicEntities _db = new EndoscopicEntities();
         private DropdownListService _dropdownListService = new DropdownListService();
@@ -80,53 +81,67 @@ namespace EndoscopicSystem.V2.Forms
 
             listBox1.Items.Clear();
 
-            LoadTextBoxAutoComplete(txtPictureBoxSaved1);
-            LoadTextBoxAutoComplete(txtPictureBoxSaved2);
-            LoadTextBoxAutoComplete(txtPictureBoxSaved3);
-            LoadTextBoxAutoComplete(txtPictureBoxSaved4);
-            LoadTextBoxAutoComplete(txtPictureBoxSaved5);
-            LoadTextBoxAutoComplete(txtPictureBoxSaved6);
-            LoadTextBoxAutoComplete(txtPictureBoxSaved7);
-            LoadTextBoxAutoComplete(txtPictureBoxSaved8);
-            LoadTextBoxAutoComplete(txtPictureBoxSaved9);
-            LoadTextBoxAutoComplete(txtPictureBoxSaved10);
-            LoadTextBoxAutoComplete(txtPictureBoxSaved11);
-            LoadTextBoxAutoComplete(txtPictureBoxSaved12);
-            LoadTextBoxAutoComplete(txtPictureBoxSaved13);
-            LoadTextBoxAutoComplete(txtPictureBoxSaved14);
-            LoadTextBoxAutoComplete(txtPictureBoxSaved15);
-            LoadTextBoxAutoComplete(txtPictureBoxSaved16);
-            LoadTextBoxAutoComplete(txtPictureBoxSaved17);
-            LoadTextBoxAutoComplete(txtPictureBoxSaved18);
-            LoadTextBoxAutoComplete(txtPictureBoxSaved19);
-            LoadTextBoxAutoComplete(txtPictureBoxSaved20);
-            LoadTextBoxAutoComplete(txtPictureBoxSaved21);
-            LoadTextBoxAutoComplete(txtPictureBoxSaved22);
-            LoadTextBoxAutoComplete(txtPictureBoxSaved23);
-            LoadTextBoxAutoComplete(txtPictureBoxSaved24);
-            LoadTextBoxAutoComplete(txtPictureBoxSaved25);
-            LoadTextBoxAutoComplete(txtPictureBoxSaved26);
-            LoadTextBoxAutoComplete(txtPictureBoxSaved27);
-            LoadTextBoxAutoComplete(txtPictureBoxSaved28);
-            LoadTextBoxAutoComplete(txtPictureBoxSaved29);
-            LoadTextBoxAutoComplete(txtPictureBoxSaved30);
-            LoadTextBoxAutoComplete(txtPictureBoxSaved31);
-            LoadTextBoxAutoComplete(txtPictureBoxSaved32);
+            if (_procedureId != 8)
+            {
+                LoadTextBoxAutoComplete(txtPictureBoxSaved1);
+                LoadTextBoxAutoComplete(txtPictureBoxSaved2);
+                LoadTextBoxAutoComplete(txtPictureBoxSaved3);
+                LoadTextBoxAutoComplete(txtPictureBoxSaved4);
+                LoadTextBoxAutoComplete(txtPictureBoxSaved5);
+                LoadTextBoxAutoComplete(txtPictureBoxSaved6);
+                LoadTextBoxAutoComplete(txtPictureBoxSaved7);
+                LoadTextBoxAutoComplete(txtPictureBoxSaved8);
+                LoadTextBoxAutoComplete(txtPictureBoxSaved9);
+                LoadTextBoxAutoComplete(txtPictureBoxSaved10);
+                LoadTextBoxAutoComplete(txtPictureBoxSaved11);
+                LoadTextBoxAutoComplete(txtPictureBoxSaved12);
+                LoadTextBoxAutoComplete(txtPictureBoxSaved13);
+                LoadTextBoxAutoComplete(txtPictureBoxSaved14);
+                LoadTextBoxAutoComplete(txtPictureBoxSaved15);
+                LoadTextBoxAutoComplete(txtPictureBoxSaved16);
+                LoadTextBoxAutoComplete(txtPictureBoxSaved17);
+                LoadTextBoxAutoComplete(txtPictureBoxSaved18);
+                LoadTextBoxAutoComplete(txtPictureBoxSaved19);
+                LoadTextBoxAutoComplete(txtPictureBoxSaved20);
+                LoadTextBoxAutoComplete(txtPictureBoxSaved21);
+                LoadTextBoxAutoComplete(txtPictureBoxSaved22);
+                LoadTextBoxAutoComplete(txtPictureBoxSaved23);
+                LoadTextBoxAutoComplete(txtPictureBoxSaved24);
+                LoadTextBoxAutoComplete(txtPictureBoxSaved25);
+                LoadTextBoxAutoComplete(txtPictureBoxSaved26);
+                LoadTextBoxAutoComplete(txtPictureBoxSaved27);
+                LoadTextBoxAutoComplete(txtPictureBoxSaved28);
+                LoadTextBoxAutoComplete(txtPictureBoxSaved29);
+                LoadTextBoxAutoComplete(txtPictureBoxSaved30);
+                LoadTextBoxAutoComplete(txtPictureBoxSaved31);
+                LoadTextBoxAutoComplete(txtPictureBoxSaved32);
 
-            LoadFinding();
-            LoadICD9();
-            LoadICD10();
-            LoadProcedureDetails();
-            LoadComplications();
-            LoadHistopathologies();
-            LoadRapidUreaseTests();
-            LoadRecommendations();
+                LoadFinding();
+                LoadICD9();
+                LoadICD10();
+                LoadProcedureDetails();
+                LoadComplications();
+                LoadHistopathologies();
+                LoadRapidUreaseTests();
+                LoadRecommendations();
+            }
 
             SearchHN(_hnNo, _procedureId);
+
+            if (_procedureId == 8)
+                SetDisablePictureBox(5, 32);
+        }
+        private void SetDisablePictureBox(int start, int end)
+        {
+            for (int i = start; i <= end; i++)
+            {
+                GroupBox groupBox = (GroupBox)this.Controls.Find("gb" + i.ToString(), true)[0];
+                groupBox.Visible = false;
+            }
         }
         private void cbbProcedureList_SelectedIndexChanged(object sender, EventArgs e)
         {
-            if (cbbProcedureList.SelectedIndex <= 0)
+            if (cbbProcedureList.SelectedIndex <= 0 || (int?)cbbProcedureList.SelectedValue == null)
             {
                 RemoveTabPage();
                 btnSave.Visible = false;
@@ -134,7 +149,7 @@ namespace EndoscopicSystem.V2.Forms
             }
             else
             {
-                OpenTabPage(cbbProcedureList.SelectedIndex);
+                OpenTabPage((int)cbbProcedureList.SelectedValue);
                 btnSave.Visible = true;
             }
         }
@@ -162,7 +177,6 @@ namespace EndoscopicSystem.V2.Forms
                 lastFocused.AppendText(", ");
             }
         }
-
         private void listBox1_SelectedIndexChanged(object sender, EventArgs e)
         {
             string curItem = listBox1.SelectedItem.ToString();
@@ -183,91 +197,6 @@ namespace EndoscopicSystem.V2.Forms
 
             listBox1.Items.Clear();
         }
-        private bool ExportEndoscopic(string hn, int proc, int endosId)
-        {
-            try
-            {
-                ReportDocument rprt = new ReportDocument();
-                TableLogOnInfos crtableLogoninfos = new TableLogOnInfos();
-                TableLogOnInfo crtableLogoninfo = new TableLogOnInfo();
-                ConnectionInfo crConnectionInfo = new ConnectionInfo();
-                Tables CrTables;
-
-                crConnectionInfo.ServerName = ConfigurationManager.AppSettings["dataSource"];
-                crConnectionInfo.DatabaseName = ConfigurationManager.AppSettings["catalog"];
-                crConnectionInfo.UserID = ConfigurationManager.AppSettings["loginUser"];
-                crConnectionInfo.Password = ConfigurationManager.AppSettings["loginPassword"];
-
-                if (proc == 1)
-                {
-                    rprt.Load(_reportPath + "GastroscoryReport.rpt");
-                }
-                else if (proc == 2)
-                {
-                    rprt.Load(_reportPath + "ColonoscopyReport.rpt");
-                }
-                else if (proc == 3)
-                {
-                    rprt.Load(_reportPath + "EndoscopicReport.rpt");
-                }
-                else if (proc == 4)
-                {
-                    rprt.Load(_reportPath + "BronchoscopyReport.rpt");
-                }
-                else if (proc == 5)
-                {
-                    rprt.Load(_reportPath + "EntReport.rpt");
-                }
-                else if (proc == 6)
-                {
-                    rprt.Load(_reportPath + "LaparoscopicReport.rpt");
-                }
-                else
-                {
-                    throw new Exception("Error : Not found report.");
-                }
-
-                CrTables = rprt.Database.Tables;
-                foreach (Table CrTable in CrTables)
-                {
-                    crtableLogoninfo = CrTable.LogOnInfo;
-                    crtableLogoninfo.ConnectionInfo = crConnectionInfo;
-                    CrTable.ApplyLogOnInfo(crtableLogoninfo);
-                }
-                rprt.SetParameterValue("@hn", hn);
-                rprt.SetParameterValue("@procedure", proc);
-                rprt.SetParameterValue("@endoscopicId", endosId);
-
-                string _pathFolderPDFToSave = _pathFolderPDF + _hnNo + @"\" + DateTime.Now.ToString("yyyyMMdd") + @"\";
-                if (!Directory.Exists(_pathFolderPDFToSave))
-                {
-                    Directory.CreateDirectory(_pathFolderPDFToSave);
-                }
-                string fileNamePDF = DateTime.Now.ToString("yyyyMMddHHmmssfff");
-                string namaPDF = "pdf";
-                string nameSave = namaPDF + "_" + fileNamePDF + ".pdf";
-                string path = _pathFolderPDFToSave + nameSave;
-                rprt.ExportToDisk(CrystalDecisions.Shared.ExportFormatType.PortableDocFormat, path);
-
-                string _pathFolderDicomSave = _pathFolderDicom + _hnNo + @"\" + DateTime.Now.ToString("yyyyMMdd") + @"\";
-                if (!Directory.Exists(_pathFolderDicomSave))
-                {
-                    Directory.CreateDirectory(_pathFolderDicomSave);
-                }
-                string namaDicom = "dicom";
-                string nameDicomSave = namaDicom + "_" + fileNamePDF + ".dcm";
-                string pathDicom = _pathFolderDicomSave + nameDicomSave;
-                rprt.ExportToDisk(CrystalDecisions.Shared.ExportFormatType.PortableDocFormat, pathDicom);
-
-                isExport = true;
-
-                return isExport;
-            }
-            catch (Exception ex)
-            {
-                throw ex;
-            }
-        }
         private void btnSave_Click(object sender, EventArgs e)
         {
             DialogResult dialogResult = MessageBox.Show("คุณบันทึกข้อมูลเสร็จแล้ว ?", "Save form", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
@@ -280,8 +209,6 @@ namespace EndoscopicSystem.V2.Forms
                     if (isSave)
                     {
                         isSaved = true;
-                        isExport = ExportEndoscopic(_hnNo, _procedureId, _endoscopicId);
-
                         btnReport.Visible = true;
                         btnSave.Enabled = false;
                     }
@@ -306,14 +233,7 @@ namespace EndoscopicSystem.V2.Forms
             {
                 btnSave.Enabled = true;
 
-                if (isExport)
-                {
-                    FormProceed.Self.txbStep.Text = "3,,";
-                }
-                else
-                {
-                    btnReport.Visible = false;
-                }
+                FormProceed.Self.txbStep.Text = "3,,";
             }
             else
             {
@@ -1580,10 +1500,10 @@ namespace EndoscopicSystem.V2.Forms
                                     getEndo.NewCase = app.IsNewCase ?? false;
                                     _endoscopicId = getEndo.EndoscopicID;
                                     Finding getFinding = _db.Findings.Where(x => x.FindingID == getEndo.FindingID).FirstOrDefault();
-                                    Indication getIndication = _db.Indications.Where(x => x.IndicationID == getEndo.IndicationID).FirstOrDefault();
-                                    Speciman getSpecimen = _db.Specimen.Where(x => x.SpecimenID == getEndo.SpecimenID).FirstOrDefault();
-                                    Intervention getIntervention = _db.Interventions.Where(x => x.InterventionID == getEndo.InterventionID).FirstOrDefault();
-                                    PushEndoscopicData(_procedureId, getPatient, app, getEndo, getFinding, getIndication, getSpecimen, getIntervention);
+                                    //Indication getIndication = _db.Indications.Where(x => x.IndicationID == getEndo.IndicationID).FirstOrDefault();
+                                    //Speciman getSpecimen = _db.Specimen.Where(x => x.SpecimenID == getEndo.SpecimenID).FirstOrDefault();
+                                    //Intervention getIntervention = _db.Interventions.Where(x => x.InterventionID == getEndo.InterventionID).FirstOrDefault();
+                                    PushEndoscopicData(_procedureId, getPatient, app, getEndo, getFinding);
                                 }
                                 else
                                 {
@@ -1645,34 +1565,37 @@ namespace EndoscopicSystem.V2.Forms
             SetPictureBox(pictureBoxSaved2, txtPictureBoxSaved2, 2);
             SetPictureBox(pictureBoxSaved3, txtPictureBoxSaved3, 3);
             SetPictureBox(pictureBoxSaved4, txtPictureBoxSaved4, 4);
-            SetPictureBox(pictureBoxSaved5, txtPictureBoxSaved5, 5);
-            SetPictureBox(pictureBoxSaved6, txtPictureBoxSaved6, 6);
-            SetPictureBox(pictureBoxSaved7, txtPictureBoxSaved7, 7);
-            SetPictureBox(pictureBoxSaved8, txtPictureBoxSaved8, 8);
-            SetPictureBox(pictureBoxSaved9, txtPictureBoxSaved9, 9);
-            SetPictureBox(pictureBoxSaved10, txtPictureBoxSaved10, 10);
-            SetPictureBox(pictureBoxSaved11, txtPictureBoxSaved11, 11);
-            SetPictureBox(pictureBoxSaved12, txtPictureBoxSaved12, 12);
-            SetPictureBox(pictureBoxSaved13, txtPictureBoxSaved13, 13);
-            SetPictureBox(pictureBoxSaved14, txtPictureBoxSaved14, 14);
-            SetPictureBox(pictureBoxSaved15, txtPictureBoxSaved15, 15);
-            SetPictureBox(pictureBoxSaved16, txtPictureBoxSaved16, 16);
-            SetPictureBox(pictureBoxSaved17, txtPictureBoxSaved17, 17);
-            SetPictureBox(pictureBoxSaved18, txtPictureBoxSaved18, 18);
-            SetPictureBox(pictureBoxSaved19, txtPictureBoxSaved19, 19);
-            SetPictureBox(pictureBoxSaved20, txtPictureBoxSaved20, 20);
-            SetPictureBox(pictureBoxSaved21, txtPictureBoxSaved21, 21);
-            SetPictureBox(pictureBoxSaved22, txtPictureBoxSaved22, 22);
-            SetPictureBox(pictureBoxSaved23, txtPictureBoxSaved23, 23);
-            SetPictureBox(pictureBoxSaved24, txtPictureBoxSaved24, 24);
-            SetPictureBox(pictureBoxSaved25, txtPictureBoxSaved25, 25);
-            SetPictureBox(pictureBoxSaved26, txtPictureBoxSaved26, 26);
-            SetPictureBox(pictureBoxSaved27, txtPictureBoxSaved27, 27);
-            SetPictureBox(pictureBoxSaved28, txtPictureBoxSaved28, 28);
-            SetPictureBox(pictureBoxSaved29, txtPictureBoxSaved29, 29);
-            SetPictureBox(pictureBoxSaved30, txtPictureBoxSaved30, 30);
-            SetPictureBox(pictureBoxSaved31, txtPictureBoxSaved31, 31);
-            SetPictureBox(pictureBoxSaved32, txtPictureBoxSaved32, 32);
+            if (_procedureId != 8)
+            {
+                SetPictureBox(pictureBoxSaved5, txtPictureBoxSaved5, 5);
+                SetPictureBox(pictureBoxSaved6, txtPictureBoxSaved6, 6);
+                SetPictureBox(pictureBoxSaved7, txtPictureBoxSaved7, 7);
+                SetPictureBox(pictureBoxSaved8, txtPictureBoxSaved8, 8);
+                SetPictureBox(pictureBoxSaved9, txtPictureBoxSaved9, 9);
+                SetPictureBox(pictureBoxSaved10, txtPictureBoxSaved10, 10);
+                SetPictureBox(pictureBoxSaved11, txtPictureBoxSaved11, 11);
+                SetPictureBox(pictureBoxSaved12, txtPictureBoxSaved12, 12);
+                SetPictureBox(pictureBoxSaved13, txtPictureBoxSaved13, 13);
+                SetPictureBox(pictureBoxSaved14, txtPictureBoxSaved14, 14);
+                SetPictureBox(pictureBoxSaved15, txtPictureBoxSaved15, 15);
+                SetPictureBox(pictureBoxSaved16, txtPictureBoxSaved16, 16);
+                SetPictureBox(pictureBoxSaved17, txtPictureBoxSaved17, 17);
+                SetPictureBox(pictureBoxSaved18, txtPictureBoxSaved18, 18);
+                SetPictureBox(pictureBoxSaved19, txtPictureBoxSaved19, 19);
+                SetPictureBox(pictureBoxSaved20, txtPictureBoxSaved20, 20);
+                SetPictureBox(pictureBoxSaved21, txtPictureBoxSaved21, 21);
+                SetPictureBox(pictureBoxSaved22, txtPictureBoxSaved22, 22);
+                SetPictureBox(pictureBoxSaved23, txtPictureBoxSaved23, 23);
+                SetPictureBox(pictureBoxSaved24, txtPictureBoxSaved24, 24);
+                SetPictureBox(pictureBoxSaved25, txtPictureBoxSaved25, 25);
+                SetPictureBox(pictureBoxSaved26, txtPictureBoxSaved26, 26);
+                SetPictureBox(pictureBoxSaved27, txtPictureBoxSaved27, 27);
+                SetPictureBox(pictureBoxSaved28, txtPictureBoxSaved28, 28);
+                SetPictureBox(pictureBoxSaved29, txtPictureBoxSaved29, 29);
+                SetPictureBox(pictureBoxSaved30, txtPictureBoxSaved30, 30);
+                SetPictureBox(pictureBoxSaved31, txtPictureBoxSaved31, 31);
+                SetPictureBox(pictureBoxSaved32, txtPictureBoxSaved32, 32);
+            }
             //SetAllPicture();
         }
         private void SetPictureBox(PictureBox pictureBox, TextBox textBox, int num)
@@ -1702,9 +1625,9 @@ namespace EndoscopicSystem.V2.Forms
             appointment = appointment ?? new Appointment();
             endoscopic = endoscopic ?? new Endoscopic();
             finding = finding ?? new Finding();
-            indication = indication ?? new Indication();
-            speciman = speciman ?? new Speciman();
-            intervention = intervention ?? new Intervention();
+            //indication = indication ?? new Indication();
+            //speciman = speciman ?? new Speciman();
+            //intervention = intervention ?? new Intervention();
 
             if (procId == 1 || procId == 3 || procId == 5) // EGD, ERCP, ENT
             {
@@ -1933,7 +1856,7 @@ namespace EndoscopicSystem.V2.Forms
                 cbbGeneralNurse2_Colono.SelectedValue = patient.NurseSecondID ?? 0;
                 cbbGeneralNurse3_Colono.SelectedValue = patient.NurseThirthID ?? 0;
                 dpGeneralFrom_Colono.Value = endoscopic.StartRecordDate ?? DateTime.Now;
-                dpGeneralTo_Colono.Value = endoscopic.EndRecordDate ?? DateTime.Now;
+                dpGeneralTo_Colono.Value = endoscopic.EndRecordDate ?? DateTime.Now.AddMinutes(1);
                 cbbGeneralIndication_Colono.SelectedValue = patient.IndicationID ?? 0;
                 cbbInstrument_Colono.SelectedValue = appointment.Instrument1ID ?? 0;
                 if (appointment.Instrument1ID > 0)
@@ -2076,6 +1999,33 @@ namespace EndoscopicSystem.V2.Forms
                     txbFindingComment_Broncho.Text = finding.Comment;
                 }
             }
+            else if (procId == 8)
+            {
+                // General
+                txbHn_Lap.Text = patient.HN;
+                txbFullName_Lap.Text = patient.Fullname;
+                txbAge_Lap.Text = patient.Age.HasValue ? patient.Age.ToString() : "";
+                txbSex_Lap.Text = patient.Sex.HasValue ? patient.Sex.Value ? Constant.Male : Constant.FeMale : string.Empty;
+                chkNewCase_Lap.Checked = endoscopic.NewCase ?? false;
+                chkFollowUpCase_Lap.Checked = endoscopic.FollowUpCase ?? false;
+                cbbGeneralOPD_Lap.SelectedValue = patient.OpdID ?? 0;
+                chkOPD_Lap.Checked = patient.OpdID.HasValue && patient.OpdID.Value > 0 ? true : false;
+                cbbGeneralWard_Lap.SelectedValue = patient.WardID ?? 0;
+                chkWard_Lap.Checked = patient.WardID.HasValue && patient.WardID.Value > 0 ? true : false;
+                cbbGeneralFinancial_Lap.SelectedValue = patient.FinancialID;
+                cbbGeneralDoctor_Lap.SelectedValue = patient.DoctorID ?? 0;
+                cbbGeneralAnesthesist_Lap.SelectedValue = patient.AnesthesistID ?? 0;
+                cbbGeneralNurse1_Lap.SelectedValue = patient.NurseFirstID ?? 0;
+                cbbGeneralNurse2_Lap.SelectedValue = patient.NurseSecondID ?? 0;
+                cbbGeneralNurse3_Lap.SelectedValue = patient.NurseThirthID ?? 0;
+                dpGeneralFrom_Lap.Value = endoscopic.StartRecordDate ?? DateTime.Now;
+                dpGeneralTo_Lap.Value = endoscopic.EndRecordDate ?? DateTime.Now.AddMinutes(1);
+                cbbGeneralInstrument_Lap.SelectedValue = appointment.Instrument1ID ?? 0;
+                if (appointment.Instrument1ID > 0)
+                {
+                    txbGeneralSN_Lap.Text = _db.Instruments.FirstOrDefault(f => f.ID == appointment.Instrument1ID)?.SerialNumber;
+                }
+            }
 
             //if (endoscopic.StartRecordDate.HasValue) recordStartDate = endoscopic.StartRecordDate.Value;
             //if (endoscopic.EndRecordDate.HasValue) recordEndDate = endoscopic.EndRecordDate.Value;
@@ -2120,6 +2070,18 @@ namespace EndoscopicSystem.V2.Forms
                     patient.AnesthesistID = (int?)cbbGeneralAnesthesist_Colono.SelectedValue;
                     patient.PreDiagnosisFirstID = !string.IsNullOrWhiteSpace(txbGeneralDx1ID_Colono.Text) ? Convert.ToInt32(txbGeneralDx1ID_Colono.Text) : 0;
                     patient.PreDiagnosisSecondID = !string.IsNullOrWhiteSpace(txbGeneralDx2ID_Colono.Text) ? Convert.ToInt32(txbGeneralDx2ID_Colono.Text) : 0;
+                }
+                else if (procedureId == 8)
+                {
+                    patient.Fullname = txbFullName_Lap.Text;
+                    patient.OpdID = (int?)cbbGeneralOPD_Lap.SelectedValue;
+                    patient.WardID = (int?)cbbGeneralWard_Lap.SelectedValue;
+                    patient.FinancialID = (int?)cbbGeneralFinancial_Lap.SelectedValue;
+                    patient.DoctorID = (int?)cbbGeneralDoctor_Lap.SelectedValue;
+                    patient.NurseFirstID = (int?)cbbGeneralNurse1_Lap.SelectedValue;
+                    patient.NurseSecondID = (int?)cbbGeneralNurse2_Lap.SelectedValue;
+                    patient.NurseThirthID = (int?)cbbGeneralNurse3_Lap.SelectedValue;
+                    patient.AnesthesistID = (int?)cbbGeneralAnesthesist_Lap.SelectedValue;
                 }
                 _db.SaveChanges();
             }
@@ -2366,6 +2328,11 @@ namespace EndoscopicSystem.V2.Forms
                     data.IsNewCase = chkNewCase_Colono.Checked;
                     data.IsFollowCase = chkFollowUpCase_Colono.Checked;
                 }
+                else if (_procedureId == 8)
+                {
+                    data.IsNewCase = chkNewCase_Lap.Checked;
+                    data.IsFollowCase = chkFollowUpCase_Lap.Checked;
+                }
                 data.EndoscopicCheck = true;
                 data.UpdateBy = _id;
                 data.UpdateDate = DateTime.Now;
@@ -2483,7 +2450,7 @@ namespace EndoscopicSystem.V2.Forms
                     pictureBoxSaved30,
                     pictureBoxSaved31,
                     pictureBoxSaved32
-                };
+            };
             System.Windows.Forms.TextBox[] texts =
             {
                     txtPictureBoxSaved1,
@@ -2518,6 +2485,54 @@ namespace EndoscopicSystem.V2.Forms
                     txtPictureBoxSaved30,
                     txtPictureBoxSaved31,
                     txtPictureBoxSaved32
+            };
+            int i = 0;
+            int seq = 1;
+            foreach (var item in texts)
+            {
+                string Imgpath = boxes[i].ImageLocation != null ? boxes[i].ImageLocation.ToString() : "";
+                var endoImgs = _db.EndoscopicImages.Where(x => x.EndoscopicID == endoscopicID && x.ProcedureID == procedureID && x.Seq == seq).FirstOrDefault();
+                if (endoImgs != null)
+                {
+                    endoImgs.ImagePath = string.IsNullOrWhiteSpace(Imgpath) ? null : Imgpath;
+                    endoImgs.ImageComment = item.Text;
+                    endoImgs.Seq = i + 1;
+                    endoImgs.UpdateBy = _id;
+                    endoImgs.UpdateDate = DateTime.Now;
+                }
+                else
+                {
+                    EndoscopicImage endoscopicImage = new EndoscopicImage();
+                    endoscopicImage.EndoscopicID = endoscopicID;
+                    endoscopicImage.ProcedureID = procedureID;
+                    endoscopicImage.ImagePath = string.IsNullOrWhiteSpace(Imgpath) ? null : Imgpath;
+                    endoscopicImage.ImageComment = string.IsNullOrWhiteSpace(item.Text) ? null : item.Text;
+                    endoscopicImage.Seq = i + 1;
+                    endoscopicImage.CreateBy = _id;
+                    endoscopicImage.CreateDate = DateTime.Now;
+                    endoscopicImage.UpdateBy = _id;
+                    endoscopicImage.UpdateDate = DateTime.Now;
+                    _db.EndoscopicImages.Add(endoscopicImage);
+                }
+                i++;
+                seq++;
+            }
+        }
+        private void SaveImageForLaparoscopy(int endoscopicID, int procedureID)
+        {
+            System.Windows.Forms.PictureBox[] boxes =
+            {
+                    pictureBoxSaved1,
+                    pictureBoxSaved2,
+                    pictureBoxSaved3,
+                    pictureBoxSaved4
+                };
+            System.Windows.Forms.TextBox[] texts =
+            {
+                    txtPictureBoxSaved1,
+                    txtPictureBoxSaved2,
+                    txtPictureBoxSaved3,
+                    txtPictureBoxSaved4
                 };
             int i = 0;
             int seq = 1;
@@ -2562,8 +2577,6 @@ namespace EndoscopicSystem.V2.Forms
                 if (procedureId == 1 || procedureId == 3)
                 {
                     endoscopic.EndoscopistID = (int?)cbbGeneralDoctor_EGD.SelectedValue;
-                    endoscopic.Arrive = dpGeneralFrom_EGD.Value;
-                    
                     endoscopic.NurseFirstID = (int?)cbbGeneralNurse1_EGD.SelectedValue;
                     endoscopic.NurseSecondID = (int?)cbbGeneralNurse2_EGD.SelectedValue;
                     endoscopic.NurseThirthID = (int?)cbbGeneralNurse3_EGD.SelectedValue;
@@ -2596,7 +2609,6 @@ namespace EndoscopicSystem.V2.Forms
                 else if (procedureId == 2 || procedureId == 4)
                 {
                     endoscopic.EndoscopistID = (int?)cbbGeneralDoctor_Colono.SelectedValue;
-                    endoscopic.Arrive = dpGeneralFrom_Colono.Value;
                     endoscopic.NurseFirstID = (int?)cbbGeneralNurse1_Colono.SelectedValue;
                     endoscopic.NurseSecondID = (int?)cbbGeneralNurse2_Colono.SelectedValue;
                     endoscopic.NurseThirthID = (int?)cbbGeneralNurse3_Colono.SelectedValue;
@@ -2629,13 +2641,42 @@ namespace EndoscopicSystem.V2.Forms
                     endoscopic.BowelPreparationResult = txbGeneralBowelPreparationResult_colono.Text;
 
                 }
+                else if (procedureId == 8)
+                {
+                    endoscopic.EndoscopistID = (int?)cbbGeneralDoctor_Lap.SelectedValue;
+                    endoscopic.NurseFirstID = (int?)cbbGeneralNurse1_Colono.SelectedValue;
+                    endoscopic.NurseSecondID = (int?)cbbGeneralNurse2_Colono.SelectedValue;
+                    endoscopic.NurseThirthID = (int?)cbbGeneralNurse3_Colono.SelectedValue;
+                    endoscopic.StartRecordDate = new DateTime(
+                            dpGeneralFrom_Colono.Value.Year,
+                            dpGeneralFrom_Colono.Value.Month,
+                            dpGeneralFrom_Colono.Value.Day,
+                            dpGeneralFrom_Colono.Value.Hour,
+                            dpGeneralFrom_Colono.Value.Minute,
+                            dpGeneralFrom_Colono.Value.Second);
+                    endoscopic.EndRecordDate = new DateTime(
+                            dpGeneralTo_Colono.Value.Year,
+                            dpGeneralTo_Colono.Value.Month,
+                            dpGeneralTo_Colono.Value.Day,
+                            dpGeneralTo_Colono.Value.Hour,
+                            dpGeneralTo_Colono.Value.Minute,
+                            dpGeneralTo_Colono.Value.Second);
+                    endoscopic.AnesthesiaID = (int?)cbbGeneralAnesthesia_Colono.SelectedValue;
+                }
                 endoscopic.UpdateDate = System.DateTime.Now;
                 endoscopic.UpdateBy = _id;
 
                 var patient = UpdatePatientInfo(patientId, procedureId);
                 UpdateFinding(procedureId);
                 UpdateAppointment(endoscopic.EndoscopicID);
-                SaveImage(endoscopic.EndoscopicID, procedureId);
+                if (procedureId == 8)
+                {
+                    SaveImageForLaparoscopy(endoscopic.EndoscopicID, procedureId);
+                }
+                else
+                {
+                    SaveImage(endoscopic.EndoscopicID, procedureId);
+                }
                 SaveLogEndoscopic(endoscopic, patientId, procedureId);
                 SaveLogHistory(patientId, procedureId, patient.DoctorID, endoscopic.EndoscopicID);
                 _db.SaveChanges();
@@ -2790,6 +2831,21 @@ namespace EndoscopicSystem.V2.Forms
                     _dropdownListService.DropdownLLL(cbbFindingLLL_Broncho);
                 }
             }
+            else if (procedureId == 8) // Laparoscopy
+            {
+                tabControl1.TabPages.Add(tabGeneralLab);
+
+                // General Tab
+                _dropdownListService.DropdownOPD(cbbGeneralOPD_Lap);
+                _dropdownListService.DropdownWard(cbbGeneralWard_Lap);
+                _dropdownListService.DropdownDoctor(cbbGeneralDoctor_Lap);
+                _dropdownListService.DropdownAnesthesist(cbbGeneralAnesthesist_Lap);
+                _dropdownListService.DropdownNurse(cbbGeneralNurse1_Lap);
+                _dropdownListService.DropdownNurse(cbbGeneralNurse2_Lap);
+                _dropdownListService.DropdownNurse(cbbGeneralNurse3_Lap);
+                _dropdownListService.DropdownFinancial(cbbGeneralFinancial_Lap);
+                _dropdownListService.DropdownInstrument(cbbGeneralInstrument_Lap);
+            }
             else
             {
                 RemoveTabPage();
@@ -2896,7 +2952,6 @@ namespace EndoscopicSystem.V2.Forms
             }
             return await Task.FromResult(destImage);
         }
-
         private async Task<Image> ResizeImg(Image img, int x, int y, int width, int height, bool isFullScreen)
         {
             Bitmap reImg = await ResizeImgToPictureBox(img, pictureBoxSnapshot.Width, pictureBoxSnapshot.Height);
@@ -2917,7 +2972,6 @@ namespace EndoscopicSystem.V2.Forms
             }
             return (Image)crpImg;
         }
-
         private async Task<string> saveImageFile(Bitmap img, int num)
         {
             string ImgPath = null;
@@ -2977,7 +3031,6 @@ namespace EndoscopicSystem.V2.Forms
 
             return ImgPath;
         }
-
         private async Task<string> uploadImageFile(int num)
         {
             openFileDialog1.InitialDirectory = _initialDirectoryUpload;

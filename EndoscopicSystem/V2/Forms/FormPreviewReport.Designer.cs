@@ -47,193 +47,193 @@ namespace EndoscopicSystem.V2.Forms
             this.label6 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.panel3 = new System.Windows.Forms.Panel();
-            this.groupBox33 = new System.Windows.Forms.GroupBox();
+            this.gb32 = new System.Windows.Forms.GroupBox();
             this.btnEditPic32 = new System.Windows.Forms.Button();
             this.btnPictureBoxSaved32 = new System.Windows.Forms.Button();
             this.btnDeletePictureBoxSaved32 = new System.Windows.Forms.Button();
             this.txtPictureBoxSaved32 = new System.Windows.Forms.TextBox();
             this.pictureBoxSaved32 = new System.Windows.Forms.PictureBox();
-            this.groupBox32 = new System.Windows.Forms.GroupBox();
+            this.gb31 = new System.Windows.Forms.GroupBox();
             this.btnEditPic31 = new System.Windows.Forms.Button();
             this.btnPictureBoxSaved31 = new System.Windows.Forms.Button();
             this.btnDeletePictureBoxSaved31 = new System.Windows.Forms.Button();
             this.txtPictureBoxSaved31 = new System.Windows.Forms.TextBox();
             this.pictureBoxSaved31 = new System.Windows.Forms.PictureBox();
-            this.groupBox31 = new System.Windows.Forms.GroupBox();
+            this.gb30 = new System.Windows.Forms.GroupBox();
             this.btnEditPic30 = new System.Windows.Forms.Button();
             this.btnPictureBoxSaved30 = new System.Windows.Forms.Button();
             this.btnDeletePictureBoxSaved30 = new System.Windows.Forms.Button();
             this.txtPictureBoxSaved30 = new System.Windows.Forms.TextBox();
             this.pictureBoxSaved30 = new System.Windows.Forms.PictureBox();
-            this.groupBox30 = new System.Windows.Forms.GroupBox();
+            this.gb29 = new System.Windows.Forms.GroupBox();
             this.btnEditPic29 = new System.Windows.Forms.Button();
             this.btnPictureBoxSaved29 = new System.Windows.Forms.Button();
             this.btnDeletePictureBoxSaved29 = new System.Windows.Forms.Button();
             this.txtPictureBoxSaved29 = new System.Windows.Forms.TextBox();
             this.pictureBoxSaved29 = new System.Windows.Forms.PictureBox();
-            this.groupBox29 = new System.Windows.Forms.GroupBox();
+            this.gb28 = new System.Windows.Forms.GroupBox();
             this.btnEditPic28 = new System.Windows.Forms.Button();
             this.btnPictureBoxSaved28 = new System.Windows.Forms.Button();
             this.btnDeletePictureBoxSaved28 = new System.Windows.Forms.Button();
             this.txtPictureBoxSaved28 = new System.Windows.Forms.TextBox();
             this.pictureBoxSaved28 = new System.Windows.Forms.PictureBox();
-            this.groupBox28 = new System.Windows.Forms.GroupBox();
+            this.gb27 = new System.Windows.Forms.GroupBox();
             this.btnEditPic27 = new System.Windows.Forms.Button();
             this.btnPictureBoxSaved27 = new System.Windows.Forms.Button();
             this.btnDeletePictureBoxSaved27 = new System.Windows.Forms.Button();
             this.txtPictureBoxSaved27 = new System.Windows.Forms.TextBox();
             this.pictureBoxSaved27 = new System.Windows.Forms.PictureBox();
-            this.groupBox27 = new System.Windows.Forms.GroupBox();
+            this.gb26 = new System.Windows.Forms.GroupBox();
             this.btnEditPic26 = new System.Windows.Forms.Button();
             this.btnPictureBoxSaved26 = new System.Windows.Forms.Button();
             this.btnDeletePictureBoxSaved26 = new System.Windows.Forms.Button();
             this.txtPictureBoxSaved26 = new System.Windows.Forms.TextBox();
             this.pictureBoxSaved26 = new System.Windows.Forms.PictureBox();
-            this.groupBox26 = new System.Windows.Forms.GroupBox();
+            this.gb25 = new System.Windows.Forms.GroupBox();
             this.btnEditPic25 = new System.Windows.Forms.Button();
             this.btnPictureBoxSaved25 = new System.Windows.Forms.Button();
             this.btnDeletePictureBoxSaved25 = new System.Windows.Forms.Button();
             this.txtPictureBoxSaved25 = new System.Windows.Forms.TextBox();
             this.pictureBoxSaved25 = new System.Windows.Forms.PictureBox();
-            this.groupBox25 = new System.Windows.Forms.GroupBox();
+            this.gb24 = new System.Windows.Forms.GroupBox();
             this.btnEditPic24 = new System.Windows.Forms.Button();
             this.btnPictureBoxSaved24 = new System.Windows.Forms.Button();
             this.btnDeletePictureBoxSaved24 = new System.Windows.Forms.Button();
             this.txtPictureBoxSaved24 = new System.Windows.Forms.TextBox();
             this.pictureBoxSaved24 = new System.Windows.Forms.PictureBox();
-            this.groupBox24 = new System.Windows.Forms.GroupBox();
+            this.gb23 = new System.Windows.Forms.GroupBox();
             this.btnEditPic23 = new System.Windows.Forms.Button();
             this.btnPictureBoxSaved23 = new System.Windows.Forms.Button();
             this.btnDeletePictureBoxSaved23 = new System.Windows.Forms.Button();
             this.txtPictureBoxSaved23 = new System.Windows.Forms.TextBox();
             this.pictureBoxSaved23 = new System.Windows.Forms.PictureBox();
-            this.groupBox23 = new System.Windows.Forms.GroupBox();
+            this.gb22 = new System.Windows.Forms.GroupBox();
             this.btnEditPic22 = new System.Windows.Forms.Button();
             this.btnPictureBoxSaved22 = new System.Windows.Forms.Button();
             this.btnDeletePictureBoxSaved22 = new System.Windows.Forms.Button();
             this.txtPictureBoxSaved22 = new System.Windows.Forms.TextBox();
             this.pictureBoxSaved22 = new System.Windows.Forms.PictureBox();
-            this.groupBox22 = new System.Windows.Forms.GroupBox();
+            this.gb21 = new System.Windows.Forms.GroupBox();
             this.btnEditPic21 = new System.Windows.Forms.Button();
             this.btnPictureBoxSaved21 = new System.Windows.Forms.Button();
             this.btnDeletePictureBoxSaved21 = new System.Windows.Forms.Button();
             this.txtPictureBoxSaved21 = new System.Windows.Forms.TextBox();
             this.pictureBoxSaved21 = new System.Windows.Forms.PictureBox();
-            this.groupBox21 = new System.Windows.Forms.GroupBox();
+            this.gb20 = new System.Windows.Forms.GroupBox();
             this.btnEditPic20 = new System.Windows.Forms.Button();
             this.btnPictureBoxSaved20 = new System.Windows.Forms.Button();
             this.btnDeletePictureBoxSaved20 = new System.Windows.Forms.Button();
             this.txtPictureBoxSaved20 = new System.Windows.Forms.TextBox();
             this.pictureBoxSaved20 = new System.Windows.Forms.PictureBox();
-            this.groupBox20 = new System.Windows.Forms.GroupBox();
+            this.gb19 = new System.Windows.Forms.GroupBox();
             this.btnEditPic19 = new System.Windows.Forms.Button();
             this.btnPictureBoxSaved19 = new System.Windows.Forms.Button();
             this.btnDeletePictureBoxSaved19 = new System.Windows.Forms.Button();
             this.txtPictureBoxSaved19 = new System.Windows.Forms.TextBox();
             this.pictureBoxSaved19 = new System.Windows.Forms.PictureBox();
-            this.groupBox19 = new System.Windows.Forms.GroupBox();
+            this.gb6 = new System.Windows.Forms.GroupBox();
             this.btnPictureBoxSaved6 = new System.Windows.Forms.Button();
             this.txtPictureBoxSaved6 = new System.Windows.Forms.TextBox();
             this.btnDeletePictureBoxSaved6 = new System.Windows.Forms.Button();
             this.btnEditPic6 = new System.Windows.Forms.Button();
             this.pictureBoxSaved6 = new System.Windows.Forms.PictureBox();
-            this.groupBox14 = new System.Windows.Forms.GroupBox();
+            this.gb18 = new System.Windows.Forms.GroupBox();
             this.btnEditPic18 = new System.Windows.Forms.Button();
             this.btnPictureBoxSaved18 = new System.Windows.Forms.Button();
             this.btnDeletePictureBoxSaved18 = new System.Windows.Forms.Button();
             this.txtPictureBoxSaved18 = new System.Windows.Forms.TextBox();
             this.pictureBoxSaved18 = new System.Windows.Forms.PictureBox();
-            this.groupBox3 = new System.Windows.Forms.GroupBox();
+            this.gb17 = new System.Windows.Forms.GroupBox();
             this.btnPictureBoxSaved17 = new System.Windows.Forms.Button();
             this.btnEditPic17 = new System.Windows.Forms.Button();
             this.txtPictureBoxSaved17 = new System.Windows.Forms.TextBox();
             this.btnDeletePictureBoxSaved17 = new System.Windows.Forms.Button();
             this.pictureBoxSaved17 = new System.Windows.Forms.PictureBox();
-            this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.gb16 = new System.Windows.Forms.GroupBox();
             this.btnPictureBoxSaved16 = new System.Windows.Forms.Button();
             this.txtPictureBoxSaved16 = new System.Windows.Forms.TextBox();
             this.btnEditPic16 = new System.Windows.Forms.Button();
             this.btnDeletePictureBoxSaved16 = new System.Windows.Forms.Button();
             this.pictureBoxSaved16 = new System.Windows.Forms.PictureBox();
-            this.groupBox4 = new System.Windows.Forms.GroupBox();
+            this.gb15 = new System.Windows.Forms.GroupBox();
             this.btnPictureBoxSaved15 = new System.Windows.Forms.Button();
             this.txtPictureBoxSaved15 = new System.Windows.Forms.TextBox();
             this.btnDeletePictureBoxSaved15 = new System.Windows.Forms.Button();
             this.btnEditPic15 = new System.Windows.Forms.Button();
             this.pictureBoxSaved15 = new System.Windows.Forms.PictureBox();
-            this.groupBox5 = new System.Windows.Forms.GroupBox();
+            this.gb14 = new System.Windows.Forms.GroupBox();
             this.btnPictureBoxSaved14 = new System.Windows.Forms.Button();
             this.txtPictureBoxSaved14 = new System.Windows.Forms.TextBox();
             this.btnDeletePictureBoxSaved14 = new System.Windows.Forms.Button();
             this.btnEditPic14 = new System.Windows.Forms.Button();
             this.pictureBoxSaved14 = new System.Windows.Forms.PictureBox();
-            this.groupBox6 = new System.Windows.Forms.GroupBox();
+            this.gb13 = new System.Windows.Forms.GroupBox();
             this.btnPictureBoxSaved13 = new System.Windows.Forms.Button();
             this.txtPictureBoxSaved13 = new System.Windows.Forms.TextBox();
             this.btnDeletePictureBoxSaved13 = new System.Windows.Forms.Button();
             this.btnEditPic13 = new System.Windows.Forms.Button();
             this.pictureBoxSaved13 = new System.Windows.Forms.PictureBox();
-            this.groupBox8 = new System.Windows.Forms.GroupBox();
+            this.gb11 = new System.Windows.Forms.GroupBox();
             this.btnPictureBoxSaved11 = new System.Windows.Forms.Button();
             this.txtPictureBoxSaved11 = new System.Windows.Forms.TextBox();
             this.btnDeletePictureBoxSaved11 = new System.Windows.Forms.Button();
             this.btnEditPic11 = new System.Windows.Forms.Button();
             this.pictureBoxSaved11 = new System.Windows.Forms.PictureBox();
-            this.groupBox7 = new System.Windows.Forms.GroupBox();
+            this.gb12 = new System.Windows.Forms.GroupBox();
             this.btnPictureBoxSaved12 = new System.Windows.Forms.Button();
             this.txtPictureBoxSaved12 = new System.Windows.Forms.TextBox();
             this.btnDeletePictureBoxSaved12 = new System.Windows.Forms.Button();
             this.btnEditPic12 = new System.Windows.Forms.Button();
             this.pictureBoxSaved12 = new System.Windows.Forms.PictureBox();
-            this.groupBox9 = new System.Windows.Forms.GroupBox();
+            this.gb10 = new System.Windows.Forms.GroupBox();
             this.btnPictureBoxSaved10 = new System.Windows.Forms.Button();
             this.txtPictureBoxSaved10 = new System.Windows.Forms.TextBox();
             this.btnDeletePictureBoxSaved10 = new System.Windows.Forms.Button();
             this.btnEditPic10 = new System.Windows.Forms.Button();
             this.pictureBoxSaved10 = new System.Windows.Forms.PictureBox();
-            this.groupBox18 = new System.Windows.Forms.GroupBox();
+            this.gb1 = new System.Windows.Forms.GroupBox();
             this.btnPictureBoxSaved1 = new System.Windows.Forms.Button();
             this.btnDeletePictureBoxSaved1 = new System.Windows.Forms.Button();
             this.txtPictureBoxSaved1 = new System.Windows.Forms.TextBox();
             this.btnEditPic1 = new System.Windows.Forms.Button();
             this.pictureBoxSaved1 = new System.Windows.Forms.PictureBox();
-            this.groupBox10 = new System.Windows.Forms.GroupBox();
+            this.gb9 = new System.Windows.Forms.GroupBox();
             this.btnPictureBoxSaved9 = new System.Windows.Forms.Button();
             this.txtPictureBoxSaved9 = new System.Windows.Forms.TextBox();
             this.btnDeletePictureBoxSaved9 = new System.Windows.Forms.Button();
             this.btnEditPic9 = new System.Windows.Forms.Button();
             this.pictureBoxSaved9 = new System.Windows.Forms.PictureBox();
-            this.groupBox12 = new System.Windows.Forms.GroupBox();
+            this.gb7 = new System.Windows.Forms.GroupBox();
             this.btnPictureBoxSaved7 = new System.Windows.Forms.Button();
             this.txtPictureBoxSaved7 = new System.Windows.Forms.TextBox();
             this.btnDeletePictureBoxSaved7 = new System.Windows.Forms.Button();
             this.btnEditPic7 = new System.Windows.Forms.Button();
             this.pictureBoxSaved7 = new System.Windows.Forms.PictureBox();
-            this.groupBox11 = new System.Windows.Forms.GroupBox();
+            this.gb8 = new System.Windows.Forms.GroupBox();
             this.btnPictureBoxSaved8 = new System.Windows.Forms.Button();
             this.txtPictureBoxSaved8 = new System.Windows.Forms.TextBox();
             this.btnDeletePictureBoxSaved8 = new System.Windows.Forms.Button();
             this.btnEditPic8 = new System.Windows.Forms.Button();
             this.pictureBoxSaved8 = new System.Windows.Forms.PictureBox();
-            this.groupBox17 = new System.Windows.Forms.GroupBox();
+            this.gb2 = new System.Windows.Forms.GroupBox();
             this.btnPictureBoxSaved2 = new System.Windows.Forms.Button();
             this.btnDeletePictureBoxSaved2 = new System.Windows.Forms.Button();
             this.txtPictureBoxSaved2 = new System.Windows.Forms.TextBox();
             this.btnEditPic2 = new System.Windows.Forms.Button();
             this.pictureBoxSaved2 = new System.Windows.Forms.PictureBox();
-            this.groupBox16 = new System.Windows.Forms.GroupBox();
+            this.gb3 = new System.Windows.Forms.GroupBox();
             this.btnPictureBoxSaved3 = new System.Windows.Forms.Button();
             this.txtPictureBoxSaved3 = new System.Windows.Forms.TextBox();
             this.btnDeletePictureBoxSaved3 = new System.Windows.Forms.Button();
             this.btnEditPic3 = new System.Windows.Forms.Button();
             this.pictureBoxSaved3 = new System.Windows.Forms.PictureBox();
-            this.groupBox15 = new System.Windows.Forms.GroupBox();
+            this.gb4 = new System.Windows.Forms.GroupBox();
             this.btnPictureBoxSaved4 = new System.Windows.Forms.Button();
             this.btnDeletePictureBoxSaved4 = new System.Windows.Forms.Button();
             this.txtPictureBoxSaved4 = new System.Windows.Forms.TextBox();
             this.btnEditPic4 = new System.Windows.Forms.Button();
             this.pictureBoxSaved4 = new System.Windows.Forms.PictureBox();
-            this.groupBox13 = new System.Windows.Forms.GroupBox();
+            this.gb5 = new System.Windows.Forms.GroupBox();
             this.btnPictureBoxSaved5 = new System.Windows.Forms.Button();
             this.txtPictureBoxSaved5 = new System.Windows.Forms.TextBox();
             this.btnDeletePictureBoxSaved5 = new System.Windows.Forms.Button();
@@ -248,69 +248,69 @@ namespace EndoscopicSystem.V2.Forms
             this.pictureBoxSnapshot = new System.Windows.Forms.PictureBox();
             this.groupBox1.SuspendLayout();
             this.panel3.SuspendLayout();
-            this.groupBox33.SuspendLayout();
+            this.gb32.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxSaved32)).BeginInit();
-            this.groupBox32.SuspendLayout();
+            this.gb31.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxSaved31)).BeginInit();
-            this.groupBox31.SuspendLayout();
+            this.gb30.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxSaved30)).BeginInit();
-            this.groupBox30.SuspendLayout();
+            this.gb29.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxSaved29)).BeginInit();
-            this.groupBox29.SuspendLayout();
+            this.gb28.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxSaved28)).BeginInit();
-            this.groupBox28.SuspendLayout();
+            this.gb27.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxSaved27)).BeginInit();
-            this.groupBox27.SuspendLayout();
+            this.gb26.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxSaved26)).BeginInit();
-            this.groupBox26.SuspendLayout();
+            this.gb25.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxSaved25)).BeginInit();
-            this.groupBox25.SuspendLayout();
+            this.gb24.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxSaved24)).BeginInit();
-            this.groupBox24.SuspendLayout();
+            this.gb23.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxSaved23)).BeginInit();
-            this.groupBox23.SuspendLayout();
+            this.gb22.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxSaved22)).BeginInit();
-            this.groupBox22.SuspendLayout();
+            this.gb21.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxSaved21)).BeginInit();
-            this.groupBox21.SuspendLayout();
+            this.gb20.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxSaved20)).BeginInit();
-            this.groupBox20.SuspendLayout();
+            this.gb19.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxSaved19)).BeginInit();
-            this.groupBox19.SuspendLayout();
+            this.gb6.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxSaved6)).BeginInit();
-            this.groupBox14.SuspendLayout();
+            this.gb18.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxSaved18)).BeginInit();
-            this.groupBox3.SuspendLayout();
+            this.gb17.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxSaved17)).BeginInit();
-            this.groupBox2.SuspendLayout();
+            this.gb16.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxSaved16)).BeginInit();
-            this.groupBox4.SuspendLayout();
+            this.gb15.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxSaved15)).BeginInit();
-            this.groupBox5.SuspendLayout();
+            this.gb14.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxSaved14)).BeginInit();
-            this.groupBox6.SuspendLayout();
+            this.gb13.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxSaved13)).BeginInit();
-            this.groupBox8.SuspendLayout();
+            this.gb11.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxSaved11)).BeginInit();
-            this.groupBox7.SuspendLayout();
+            this.gb12.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxSaved12)).BeginInit();
-            this.groupBox9.SuspendLayout();
+            this.gb10.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxSaved10)).BeginInit();
-            this.groupBox18.SuspendLayout();
+            this.gb1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxSaved1)).BeginInit();
-            this.groupBox10.SuspendLayout();
+            this.gb9.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxSaved9)).BeginInit();
-            this.groupBox12.SuspendLayout();
+            this.gb7.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxSaved7)).BeginInit();
-            this.groupBox11.SuspendLayout();
+            this.gb8.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxSaved8)).BeginInit();
-            this.groupBox17.SuspendLayout();
+            this.gb2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxSaved2)).BeginInit();
-            this.groupBox16.SuspendLayout();
+            this.gb3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxSaved3)).BeginInit();
-            this.groupBox15.SuspendLayout();
+            this.gb4.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxSaved4)).BeginInit();
-            this.groupBox13.SuspendLayout();
+            this.gb5.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxSaved5)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxSnapshot)).BeginInit();
@@ -514,56 +514,56 @@ namespace EndoscopicSystem.V2.Forms
             | System.Windows.Forms.AnchorStyles.Right)));
             this.panel3.AutoScroll = true;
             this.panel3.BackColor = System.Drawing.Color.White;
-            this.panel3.Controls.Add(this.groupBox33);
-            this.panel3.Controls.Add(this.groupBox32);
-            this.panel3.Controls.Add(this.groupBox31);
-            this.panel3.Controls.Add(this.groupBox30);
-            this.panel3.Controls.Add(this.groupBox29);
-            this.panel3.Controls.Add(this.groupBox28);
-            this.panel3.Controls.Add(this.groupBox27);
-            this.panel3.Controls.Add(this.groupBox26);
-            this.panel3.Controls.Add(this.groupBox25);
-            this.panel3.Controls.Add(this.groupBox24);
-            this.panel3.Controls.Add(this.groupBox23);
-            this.panel3.Controls.Add(this.groupBox22);
-            this.panel3.Controls.Add(this.groupBox21);
-            this.panel3.Controls.Add(this.groupBox20);
-            this.panel3.Controls.Add(this.groupBox19);
-            this.panel3.Controls.Add(this.groupBox14);
-            this.panel3.Controls.Add(this.groupBox3);
-            this.panel3.Controls.Add(this.groupBox2);
-            this.panel3.Controls.Add(this.groupBox4);
-            this.panel3.Controls.Add(this.groupBox5);
-            this.panel3.Controls.Add(this.groupBox6);
-            this.panel3.Controls.Add(this.groupBox8);
-            this.panel3.Controls.Add(this.groupBox7);
-            this.panel3.Controls.Add(this.groupBox9);
-            this.panel3.Controls.Add(this.groupBox18);
-            this.panel3.Controls.Add(this.groupBox10);
-            this.panel3.Controls.Add(this.groupBox12);
-            this.panel3.Controls.Add(this.groupBox11);
-            this.panel3.Controls.Add(this.groupBox17);
-            this.panel3.Controls.Add(this.groupBox16);
-            this.panel3.Controls.Add(this.groupBox15);
-            this.panel3.Controls.Add(this.groupBox13);
+            this.panel3.Controls.Add(this.gb32);
+            this.panel3.Controls.Add(this.gb31);
+            this.panel3.Controls.Add(this.gb30);
+            this.panel3.Controls.Add(this.gb29);
+            this.panel3.Controls.Add(this.gb28);
+            this.panel3.Controls.Add(this.gb27);
+            this.panel3.Controls.Add(this.gb26);
+            this.panel3.Controls.Add(this.gb25);
+            this.panel3.Controls.Add(this.gb24);
+            this.panel3.Controls.Add(this.gb23);
+            this.panel3.Controls.Add(this.gb22);
+            this.panel3.Controls.Add(this.gb21);
+            this.panel3.Controls.Add(this.gb20);
+            this.panel3.Controls.Add(this.gb19);
+            this.panel3.Controls.Add(this.gb6);
+            this.panel3.Controls.Add(this.gb18);
+            this.panel3.Controls.Add(this.gb17);
+            this.panel3.Controls.Add(this.gb16);
+            this.panel3.Controls.Add(this.gb15);
+            this.panel3.Controls.Add(this.gb14);
+            this.panel3.Controls.Add(this.gb13);
+            this.panel3.Controls.Add(this.gb11);
+            this.panel3.Controls.Add(this.gb12);
+            this.panel3.Controls.Add(this.gb10);
+            this.panel3.Controls.Add(this.gb1);
+            this.panel3.Controls.Add(this.gb9);
+            this.panel3.Controls.Add(this.gb7);
+            this.panel3.Controls.Add(this.gb8);
+            this.panel3.Controls.Add(this.gb2);
+            this.panel3.Controls.Add(this.gb3);
+            this.panel3.Controls.Add(this.gb4);
+            this.panel3.Controls.Add(this.gb5);
             this.panel3.Location = new System.Drawing.Point(1446, 118);
             this.panel3.Margin = new System.Windows.Forms.Padding(2);
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(447, 763);
             this.panel3.TabIndex = 109;
             // 
-            // groupBox33
+            // gb32
             // 
-            this.groupBox33.Controls.Add(this.btnEditPic32);
-            this.groupBox33.Controls.Add(this.btnPictureBoxSaved32);
-            this.groupBox33.Controls.Add(this.btnDeletePictureBoxSaved32);
-            this.groupBox33.Controls.Add(this.txtPictureBoxSaved32);
-            this.groupBox33.Controls.Add(this.pictureBoxSaved32);
-            this.groupBox33.Location = new System.Drawing.Point(10, 10223);
-            this.groupBox33.Name = "groupBox33";
-            this.groupBox33.Size = new System.Drawing.Size(397, 324);
-            this.groupBox33.TabIndex = 98;
-            this.groupBox33.TabStop = false;
+            this.gb32.Controls.Add(this.btnEditPic32);
+            this.gb32.Controls.Add(this.btnPictureBoxSaved32);
+            this.gb32.Controls.Add(this.btnDeletePictureBoxSaved32);
+            this.gb32.Controls.Add(this.txtPictureBoxSaved32);
+            this.gb32.Controls.Add(this.pictureBoxSaved32);
+            this.gb32.Location = new System.Drawing.Point(10, 10223);
+            this.gb32.Name = "gb32";
+            this.gb32.Size = new System.Drawing.Size(397, 324);
+            this.gb32.TabIndex = 98;
+            this.gb32.TabStop = false;
             // 
             // btnEditPic32
             // 
@@ -630,18 +630,18 @@ namespace EndoscopicSystem.V2.Forms
             this.pictureBoxSaved32.TabIndex = 57;
             this.pictureBoxSaved32.TabStop = false;
             // 
-            // groupBox32
+            // gb31
             // 
-            this.groupBox32.Controls.Add(this.btnEditPic31);
-            this.groupBox32.Controls.Add(this.btnPictureBoxSaved31);
-            this.groupBox32.Controls.Add(this.btnDeletePictureBoxSaved31);
-            this.groupBox32.Controls.Add(this.txtPictureBoxSaved31);
-            this.groupBox32.Controls.Add(this.pictureBoxSaved31);
-            this.groupBox32.Location = new System.Drawing.Point(10, 9893);
-            this.groupBox32.Name = "groupBox32";
-            this.groupBox32.Size = new System.Drawing.Size(397, 324);
-            this.groupBox32.TabIndex = 97;
-            this.groupBox32.TabStop = false;
+            this.gb31.Controls.Add(this.btnEditPic31);
+            this.gb31.Controls.Add(this.btnPictureBoxSaved31);
+            this.gb31.Controls.Add(this.btnDeletePictureBoxSaved31);
+            this.gb31.Controls.Add(this.txtPictureBoxSaved31);
+            this.gb31.Controls.Add(this.pictureBoxSaved31);
+            this.gb31.Location = new System.Drawing.Point(10, 9893);
+            this.gb31.Name = "gb31";
+            this.gb31.Size = new System.Drawing.Size(397, 324);
+            this.gb31.TabIndex = 97;
+            this.gb31.TabStop = false;
             // 
             // btnEditPic31
             // 
@@ -708,18 +708,18 @@ namespace EndoscopicSystem.V2.Forms
             this.pictureBoxSaved31.TabIndex = 57;
             this.pictureBoxSaved31.TabStop = false;
             // 
-            // groupBox31
+            // gb30
             // 
-            this.groupBox31.Controls.Add(this.btnEditPic30);
-            this.groupBox31.Controls.Add(this.btnPictureBoxSaved30);
-            this.groupBox31.Controls.Add(this.btnDeletePictureBoxSaved30);
-            this.groupBox31.Controls.Add(this.txtPictureBoxSaved30);
-            this.groupBox31.Controls.Add(this.pictureBoxSaved30);
-            this.groupBox31.Location = new System.Drawing.Point(10, 9563);
-            this.groupBox31.Name = "groupBox31";
-            this.groupBox31.Size = new System.Drawing.Size(397, 324);
-            this.groupBox31.TabIndex = 96;
-            this.groupBox31.TabStop = false;
+            this.gb30.Controls.Add(this.btnEditPic30);
+            this.gb30.Controls.Add(this.btnPictureBoxSaved30);
+            this.gb30.Controls.Add(this.btnDeletePictureBoxSaved30);
+            this.gb30.Controls.Add(this.txtPictureBoxSaved30);
+            this.gb30.Controls.Add(this.pictureBoxSaved30);
+            this.gb30.Location = new System.Drawing.Point(10, 9563);
+            this.gb30.Name = "gb30";
+            this.gb30.Size = new System.Drawing.Size(397, 324);
+            this.gb30.TabIndex = 96;
+            this.gb30.TabStop = false;
             // 
             // btnEditPic30
             // 
@@ -786,18 +786,18 @@ namespace EndoscopicSystem.V2.Forms
             this.pictureBoxSaved30.TabIndex = 57;
             this.pictureBoxSaved30.TabStop = false;
             // 
-            // groupBox30
+            // gb29
             // 
-            this.groupBox30.Controls.Add(this.btnEditPic29);
-            this.groupBox30.Controls.Add(this.btnPictureBoxSaved29);
-            this.groupBox30.Controls.Add(this.btnDeletePictureBoxSaved29);
-            this.groupBox30.Controls.Add(this.txtPictureBoxSaved29);
-            this.groupBox30.Controls.Add(this.pictureBoxSaved29);
-            this.groupBox30.Location = new System.Drawing.Point(10, 9233);
-            this.groupBox30.Name = "groupBox30";
-            this.groupBox30.Size = new System.Drawing.Size(397, 324);
-            this.groupBox30.TabIndex = 95;
-            this.groupBox30.TabStop = false;
+            this.gb29.Controls.Add(this.btnEditPic29);
+            this.gb29.Controls.Add(this.btnPictureBoxSaved29);
+            this.gb29.Controls.Add(this.btnDeletePictureBoxSaved29);
+            this.gb29.Controls.Add(this.txtPictureBoxSaved29);
+            this.gb29.Controls.Add(this.pictureBoxSaved29);
+            this.gb29.Location = new System.Drawing.Point(10, 9233);
+            this.gb29.Name = "gb29";
+            this.gb29.Size = new System.Drawing.Size(397, 324);
+            this.gb29.TabIndex = 95;
+            this.gb29.TabStop = false;
             // 
             // btnEditPic29
             // 
@@ -864,18 +864,18 @@ namespace EndoscopicSystem.V2.Forms
             this.pictureBoxSaved29.TabIndex = 57;
             this.pictureBoxSaved29.TabStop = false;
             // 
-            // groupBox29
+            // gb28
             // 
-            this.groupBox29.Controls.Add(this.btnEditPic28);
-            this.groupBox29.Controls.Add(this.btnPictureBoxSaved28);
-            this.groupBox29.Controls.Add(this.btnDeletePictureBoxSaved28);
-            this.groupBox29.Controls.Add(this.txtPictureBoxSaved28);
-            this.groupBox29.Controls.Add(this.pictureBoxSaved28);
-            this.groupBox29.Location = new System.Drawing.Point(10, 8903);
-            this.groupBox29.Name = "groupBox29";
-            this.groupBox29.Size = new System.Drawing.Size(397, 324);
-            this.groupBox29.TabIndex = 94;
-            this.groupBox29.TabStop = false;
+            this.gb28.Controls.Add(this.btnEditPic28);
+            this.gb28.Controls.Add(this.btnPictureBoxSaved28);
+            this.gb28.Controls.Add(this.btnDeletePictureBoxSaved28);
+            this.gb28.Controls.Add(this.txtPictureBoxSaved28);
+            this.gb28.Controls.Add(this.pictureBoxSaved28);
+            this.gb28.Location = new System.Drawing.Point(10, 8903);
+            this.gb28.Name = "gb28";
+            this.gb28.Size = new System.Drawing.Size(397, 324);
+            this.gb28.TabIndex = 94;
+            this.gb28.TabStop = false;
             // 
             // btnEditPic28
             // 
@@ -942,18 +942,18 @@ namespace EndoscopicSystem.V2.Forms
             this.pictureBoxSaved28.TabIndex = 57;
             this.pictureBoxSaved28.TabStop = false;
             // 
-            // groupBox28
+            // gb27
             // 
-            this.groupBox28.Controls.Add(this.btnEditPic27);
-            this.groupBox28.Controls.Add(this.btnPictureBoxSaved27);
-            this.groupBox28.Controls.Add(this.btnDeletePictureBoxSaved27);
-            this.groupBox28.Controls.Add(this.txtPictureBoxSaved27);
-            this.groupBox28.Controls.Add(this.pictureBoxSaved27);
-            this.groupBox28.Location = new System.Drawing.Point(10, 8573);
-            this.groupBox28.Name = "groupBox28";
-            this.groupBox28.Size = new System.Drawing.Size(397, 324);
-            this.groupBox28.TabIndex = 93;
-            this.groupBox28.TabStop = false;
+            this.gb27.Controls.Add(this.btnEditPic27);
+            this.gb27.Controls.Add(this.btnPictureBoxSaved27);
+            this.gb27.Controls.Add(this.btnDeletePictureBoxSaved27);
+            this.gb27.Controls.Add(this.txtPictureBoxSaved27);
+            this.gb27.Controls.Add(this.pictureBoxSaved27);
+            this.gb27.Location = new System.Drawing.Point(10, 8573);
+            this.gb27.Name = "gb27";
+            this.gb27.Size = new System.Drawing.Size(397, 324);
+            this.gb27.TabIndex = 93;
+            this.gb27.TabStop = false;
             // 
             // btnEditPic27
             // 
@@ -1020,18 +1020,18 @@ namespace EndoscopicSystem.V2.Forms
             this.pictureBoxSaved27.TabIndex = 57;
             this.pictureBoxSaved27.TabStop = false;
             // 
-            // groupBox27
+            // gb26
             // 
-            this.groupBox27.Controls.Add(this.btnEditPic26);
-            this.groupBox27.Controls.Add(this.btnPictureBoxSaved26);
-            this.groupBox27.Controls.Add(this.btnDeletePictureBoxSaved26);
-            this.groupBox27.Controls.Add(this.txtPictureBoxSaved26);
-            this.groupBox27.Controls.Add(this.pictureBoxSaved26);
-            this.groupBox27.Location = new System.Drawing.Point(10, 8243);
-            this.groupBox27.Name = "groupBox27";
-            this.groupBox27.Size = new System.Drawing.Size(397, 324);
-            this.groupBox27.TabIndex = 92;
-            this.groupBox27.TabStop = false;
+            this.gb26.Controls.Add(this.btnEditPic26);
+            this.gb26.Controls.Add(this.btnPictureBoxSaved26);
+            this.gb26.Controls.Add(this.btnDeletePictureBoxSaved26);
+            this.gb26.Controls.Add(this.txtPictureBoxSaved26);
+            this.gb26.Controls.Add(this.pictureBoxSaved26);
+            this.gb26.Location = new System.Drawing.Point(10, 8243);
+            this.gb26.Name = "gb26";
+            this.gb26.Size = new System.Drawing.Size(397, 324);
+            this.gb26.TabIndex = 92;
+            this.gb26.TabStop = false;
             // 
             // btnEditPic26
             // 
@@ -1098,18 +1098,18 @@ namespace EndoscopicSystem.V2.Forms
             this.pictureBoxSaved26.TabIndex = 57;
             this.pictureBoxSaved26.TabStop = false;
             // 
-            // groupBox26
+            // gb25
             // 
-            this.groupBox26.Controls.Add(this.btnEditPic25);
-            this.groupBox26.Controls.Add(this.btnPictureBoxSaved25);
-            this.groupBox26.Controls.Add(this.btnDeletePictureBoxSaved25);
-            this.groupBox26.Controls.Add(this.txtPictureBoxSaved25);
-            this.groupBox26.Controls.Add(this.pictureBoxSaved25);
-            this.groupBox26.Location = new System.Drawing.Point(10, 7913);
-            this.groupBox26.Name = "groupBox26";
-            this.groupBox26.Size = new System.Drawing.Size(397, 324);
-            this.groupBox26.TabIndex = 91;
-            this.groupBox26.TabStop = false;
+            this.gb25.Controls.Add(this.btnEditPic25);
+            this.gb25.Controls.Add(this.btnPictureBoxSaved25);
+            this.gb25.Controls.Add(this.btnDeletePictureBoxSaved25);
+            this.gb25.Controls.Add(this.txtPictureBoxSaved25);
+            this.gb25.Controls.Add(this.pictureBoxSaved25);
+            this.gb25.Location = new System.Drawing.Point(10, 7913);
+            this.gb25.Name = "gb25";
+            this.gb25.Size = new System.Drawing.Size(397, 324);
+            this.gb25.TabIndex = 91;
+            this.gb25.TabStop = false;
             // 
             // btnEditPic25
             // 
@@ -1176,18 +1176,18 @@ namespace EndoscopicSystem.V2.Forms
             this.pictureBoxSaved25.TabIndex = 57;
             this.pictureBoxSaved25.TabStop = false;
             // 
-            // groupBox25
+            // gb24
             // 
-            this.groupBox25.Controls.Add(this.btnEditPic24);
-            this.groupBox25.Controls.Add(this.btnPictureBoxSaved24);
-            this.groupBox25.Controls.Add(this.btnDeletePictureBoxSaved24);
-            this.groupBox25.Controls.Add(this.txtPictureBoxSaved24);
-            this.groupBox25.Controls.Add(this.pictureBoxSaved24);
-            this.groupBox25.Location = new System.Drawing.Point(10, 7583);
-            this.groupBox25.Name = "groupBox25";
-            this.groupBox25.Size = new System.Drawing.Size(397, 324);
-            this.groupBox25.TabIndex = 90;
-            this.groupBox25.TabStop = false;
+            this.gb24.Controls.Add(this.btnEditPic24);
+            this.gb24.Controls.Add(this.btnPictureBoxSaved24);
+            this.gb24.Controls.Add(this.btnDeletePictureBoxSaved24);
+            this.gb24.Controls.Add(this.txtPictureBoxSaved24);
+            this.gb24.Controls.Add(this.pictureBoxSaved24);
+            this.gb24.Location = new System.Drawing.Point(10, 7583);
+            this.gb24.Name = "gb24";
+            this.gb24.Size = new System.Drawing.Size(397, 324);
+            this.gb24.TabIndex = 90;
+            this.gb24.TabStop = false;
             // 
             // btnEditPic24
             // 
@@ -1254,18 +1254,18 @@ namespace EndoscopicSystem.V2.Forms
             this.pictureBoxSaved24.TabIndex = 57;
             this.pictureBoxSaved24.TabStop = false;
             // 
-            // groupBox24
+            // gb23
             // 
-            this.groupBox24.Controls.Add(this.btnEditPic23);
-            this.groupBox24.Controls.Add(this.btnPictureBoxSaved23);
-            this.groupBox24.Controls.Add(this.btnDeletePictureBoxSaved23);
-            this.groupBox24.Controls.Add(this.txtPictureBoxSaved23);
-            this.groupBox24.Controls.Add(this.pictureBoxSaved23);
-            this.groupBox24.Location = new System.Drawing.Point(10, 7253);
-            this.groupBox24.Name = "groupBox24";
-            this.groupBox24.Size = new System.Drawing.Size(397, 324);
-            this.groupBox24.TabIndex = 89;
-            this.groupBox24.TabStop = false;
+            this.gb23.Controls.Add(this.btnEditPic23);
+            this.gb23.Controls.Add(this.btnPictureBoxSaved23);
+            this.gb23.Controls.Add(this.btnDeletePictureBoxSaved23);
+            this.gb23.Controls.Add(this.txtPictureBoxSaved23);
+            this.gb23.Controls.Add(this.pictureBoxSaved23);
+            this.gb23.Location = new System.Drawing.Point(10, 7253);
+            this.gb23.Name = "gb23";
+            this.gb23.Size = new System.Drawing.Size(397, 324);
+            this.gb23.TabIndex = 89;
+            this.gb23.TabStop = false;
             // 
             // btnEditPic23
             // 
@@ -1332,18 +1332,18 @@ namespace EndoscopicSystem.V2.Forms
             this.pictureBoxSaved23.TabIndex = 57;
             this.pictureBoxSaved23.TabStop = false;
             // 
-            // groupBox23
+            // gb22
             // 
-            this.groupBox23.Controls.Add(this.btnEditPic22);
-            this.groupBox23.Controls.Add(this.btnPictureBoxSaved22);
-            this.groupBox23.Controls.Add(this.btnDeletePictureBoxSaved22);
-            this.groupBox23.Controls.Add(this.txtPictureBoxSaved22);
-            this.groupBox23.Controls.Add(this.pictureBoxSaved22);
-            this.groupBox23.Location = new System.Drawing.Point(10, 6923);
-            this.groupBox23.Name = "groupBox23";
-            this.groupBox23.Size = new System.Drawing.Size(397, 324);
-            this.groupBox23.TabIndex = 88;
-            this.groupBox23.TabStop = false;
+            this.gb22.Controls.Add(this.btnEditPic22);
+            this.gb22.Controls.Add(this.btnPictureBoxSaved22);
+            this.gb22.Controls.Add(this.btnDeletePictureBoxSaved22);
+            this.gb22.Controls.Add(this.txtPictureBoxSaved22);
+            this.gb22.Controls.Add(this.pictureBoxSaved22);
+            this.gb22.Location = new System.Drawing.Point(10, 6923);
+            this.gb22.Name = "gb22";
+            this.gb22.Size = new System.Drawing.Size(397, 324);
+            this.gb22.TabIndex = 88;
+            this.gb22.TabStop = false;
             // 
             // btnEditPic22
             // 
@@ -1410,18 +1410,18 @@ namespace EndoscopicSystem.V2.Forms
             this.pictureBoxSaved22.TabIndex = 57;
             this.pictureBoxSaved22.TabStop = false;
             // 
-            // groupBox22
+            // gb21
             // 
-            this.groupBox22.Controls.Add(this.btnEditPic21);
-            this.groupBox22.Controls.Add(this.btnPictureBoxSaved21);
-            this.groupBox22.Controls.Add(this.btnDeletePictureBoxSaved21);
-            this.groupBox22.Controls.Add(this.txtPictureBoxSaved21);
-            this.groupBox22.Controls.Add(this.pictureBoxSaved21);
-            this.groupBox22.Location = new System.Drawing.Point(10, 6593);
-            this.groupBox22.Name = "groupBox22";
-            this.groupBox22.Size = new System.Drawing.Size(397, 324);
-            this.groupBox22.TabIndex = 87;
-            this.groupBox22.TabStop = false;
+            this.gb21.Controls.Add(this.btnEditPic21);
+            this.gb21.Controls.Add(this.btnPictureBoxSaved21);
+            this.gb21.Controls.Add(this.btnDeletePictureBoxSaved21);
+            this.gb21.Controls.Add(this.txtPictureBoxSaved21);
+            this.gb21.Controls.Add(this.pictureBoxSaved21);
+            this.gb21.Location = new System.Drawing.Point(10, 6593);
+            this.gb21.Name = "gb21";
+            this.gb21.Size = new System.Drawing.Size(397, 324);
+            this.gb21.TabIndex = 87;
+            this.gb21.TabStop = false;
             // 
             // btnEditPic21
             // 
@@ -1488,18 +1488,18 @@ namespace EndoscopicSystem.V2.Forms
             this.pictureBoxSaved21.TabIndex = 57;
             this.pictureBoxSaved21.TabStop = false;
             // 
-            // groupBox21
+            // gb20
             // 
-            this.groupBox21.Controls.Add(this.btnEditPic20);
-            this.groupBox21.Controls.Add(this.btnPictureBoxSaved20);
-            this.groupBox21.Controls.Add(this.btnDeletePictureBoxSaved20);
-            this.groupBox21.Controls.Add(this.txtPictureBoxSaved20);
-            this.groupBox21.Controls.Add(this.pictureBoxSaved20);
-            this.groupBox21.Location = new System.Drawing.Point(10, 6263);
-            this.groupBox21.Name = "groupBox21";
-            this.groupBox21.Size = new System.Drawing.Size(397, 324);
-            this.groupBox21.TabIndex = 86;
-            this.groupBox21.TabStop = false;
+            this.gb20.Controls.Add(this.btnEditPic20);
+            this.gb20.Controls.Add(this.btnPictureBoxSaved20);
+            this.gb20.Controls.Add(this.btnDeletePictureBoxSaved20);
+            this.gb20.Controls.Add(this.txtPictureBoxSaved20);
+            this.gb20.Controls.Add(this.pictureBoxSaved20);
+            this.gb20.Location = new System.Drawing.Point(10, 6263);
+            this.gb20.Name = "gb20";
+            this.gb20.Size = new System.Drawing.Size(397, 324);
+            this.gb20.TabIndex = 86;
+            this.gb20.TabStop = false;
             // 
             // btnEditPic20
             // 
@@ -1566,18 +1566,18 @@ namespace EndoscopicSystem.V2.Forms
             this.pictureBoxSaved20.TabIndex = 57;
             this.pictureBoxSaved20.TabStop = false;
             // 
-            // groupBox20
+            // gb19
             // 
-            this.groupBox20.Controls.Add(this.btnEditPic19);
-            this.groupBox20.Controls.Add(this.btnPictureBoxSaved19);
-            this.groupBox20.Controls.Add(this.btnDeletePictureBoxSaved19);
-            this.groupBox20.Controls.Add(this.txtPictureBoxSaved19);
-            this.groupBox20.Controls.Add(this.pictureBoxSaved19);
-            this.groupBox20.Location = new System.Drawing.Point(10, 5933);
-            this.groupBox20.Name = "groupBox20";
-            this.groupBox20.Size = new System.Drawing.Size(397, 324);
-            this.groupBox20.TabIndex = 85;
-            this.groupBox20.TabStop = false;
+            this.gb19.Controls.Add(this.btnEditPic19);
+            this.gb19.Controls.Add(this.btnPictureBoxSaved19);
+            this.gb19.Controls.Add(this.btnDeletePictureBoxSaved19);
+            this.gb19.Controls.Add(this.txtPictureBoxSaved19);
+            this.gb19.Controls.Add(this.pictureBoxSaved19);
+            this.gb19.Location = new System.Drawing.Point(10, 5933);
+            this.gb19.Name = "gb19";
+            this.gb19.Size = new System.Drawing.Size(397, 324);
+            this.gb19.TabIndex = 85;
+            this.gb19.TabStop = false;
             // 
             // btnEditPic19
             // 
@@ -1644,18 +1644,18 @@ namespace EndoscopicSystem.V2.Forms
             this.pictureBoxSaved19.TabIndex = 57;
             this.pictureBoxSaved19.TabStop = false;
             // 
-            // groupBox19
+            // gb6
             // 
-            this.groupBox19.Controls.Add(this.btnPictureBoxSaved6);
-            this.groupBox19.Controls.Add(this.txtPictureBoxSaved6);
-            this.groupBox19.Controls.Add(this.btnDeletePictureBoxSaved6);
-            this.groupBox19.Controls.Add(this.btnEditPic6);
-            this.groupBox19.Controls.Add(this.pictureBoxSaved6);
-            this.groupBox19.Location = new System.Drawing.Point(10, 1653);
-            this.groupBox19.Name = "groupBox19";
-            this.groupBox19.Size = new System.Drawing.Size(397, 324);
-            this.groupBox19.TabIndex = 79;
-            this.groupBox19.TabStop = false;
+            this.gb6.Controls.Add(this.btnPictureBoxSaved6);
+            this.gb6.Controls.Add(this.txtPictureBoxSaved6);
+            this.gb6.Controls.Add(this.btnDeletePictureBoxSaved6);
+            this.gb6.Controls.Add(this.btnEditPic6);
+            this.gb6.Controls.Add(this.pictureBoxSaved6);
+            this.gb6.Location = new System.Drawing.Point(10, 1653);
+            this.gb6.Name = "gb6";
+            this.gb6.Size = new System.Drawing.Size(397, 324);
+            this.gb6.TabIndex = 79;
+            this.gb6.TabStop = false;
             // 
             // btnPictureBoxSaved6
             // 
@@ -1722,18 +1722,18 @@ namespace EndoscopicSystem.V2.Forms
             this.pictureBoxSaved6.TabIndex = 0;
             this.pictureBoxSaved6.TabStop = false;
             // 
-            // groupBox14
+            // gb18
             // 
-            this.groupBox14.Controls.Add(this.btnEditPic18);
-            this.groupBox14.Controls.Add(this.btnPictureBoxSaved18);
-            this.groupBox14.Controls.Add(this.btnDeletePictureBoxSaved18);
-            this.groupBox14.Controls.Add(this.txtPictureBoxSaved18);
-            this.groupBox14.Controls.Add(this.pictureBoxSaved18);
-            this.groupBox14.Location = new System.Drawing.Point(10, 5603);
-            this.groupBox14.Name = "groupBox14";
-            this.groupBox14.Size = new System.Drawing.Size(397, 324);
-            this.groupBox14.TabIndex = 84;
-            this.groupBox14.TabStop = false;
+            this.gb18.Controls.Add(this.btnEditPic18);
+            this.gb18.Controls.Add(this.btnPictureBoxSaved18);
+            this.gb18.Controls.Add(this.btnDeletePictureBoxSaved18);
+            this.gb18.Controls.Add(this.txtPictureBoxSaved18);
+            this.gb18.Controls.Add(this.pictureBoxSaved18);
+            this.gb18.Location = new System.Drawing.Point(10, 5603);
+            this.gb18.Name = "gb18";
+            this.gb18.Size = new System.Drawing.Size(397, 324);
+            this.gb18.TabIndex = 84;
+            this.gb18.TabStop = false;
             // 
             // btnEditPic18
             // 
@@ -1800,18 +1800,18 @@ namespace EndoscopicSystem.V2.Forms
             this.pictureBoxSaved18.TabIndex = 57;
             this.pictureBoxSaved18.TabStop = false;
             // 
-            // groupBox3
+            // gb17
             // 
-            this.groupBox3.Controls.Add(this.btnPictureBoxSaved17);
-            this.groupBox3.Controls.Add(this.btnEditPic17);
-            this.groupBox3.Controls.Add(this.txtPictureBoxSaved17);
-            this.groupBox3.Controls.Add(this.btnDeletePictureBoxSaved17);
-            this.groupBox3.Controls.Add(this.pictureBoxSaved17);
-            this.groupBox3.Location = new System.Drawing.Point(10, 5273);
-            this.groupBox3.Name = "groupBox3";
-            this.groupBox3.Size = new System.Drawing.Size(397, 324);
-            this.groupBox3.TabIndex = 69;
-            this.groupBox3.TabStop = false;
+            this.gb17.Controls.Add(this.btnPictureBoxSaved17);
+            this.gb17.Controls.Add(this.btnEditPic17);
+            this.gb17.Controls.Add(this.txtPictureBoxSaved17);
+            this.gb17.Controls.Add(this.btnDeletePictureBoxSaved17);
+            this.gb17.Controls.Add(this.pictureBoxSaved17);
+            this.gb17.Location = new System.Drawing.Point(10, 5273);
+            this.gb17.Name = "gb17";
+            this.gb17.Size = new System.Drawing.Size(397, 324);
+            this.gb17.TabIndex = 69;
+            this.gb17.TabStop = false;
             // 
             // btnPictureBoxSaved17
             // 
@@ -1878,18 +1878,18 @@ namespace EndoscopicSystem.V2.Forms
             this.pictureBoxSaved17.TabIndex = 52;
             this.pictureBoxSaved17.TabStop = false;
             // 
-            // groupBox2
+            // gb16
             // 
-            this.groupBox2.Controls.Add(this.btnPictureBoxSaved16);
-            this.groupBox2.Controls.Add(this.txtPictureBoxSaved16);
-            this.groupBox2.Controls.Add(this.btnEditPic16);
-            this.groupBox2.Controls.Add(this.btnDeletePictureBoxSaved16);
-            this.groupBox2.Controls.Add(this.pictureBoxSaved16);
-            this.groupBox2.Location = new System.Drawing.Point(10, 4943);
-            this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(397, 324);
-            this.groupBox2.TabIndex = 83;
-            this.groupBox2.TabStop = false;
+            this.gb16.Controls.Add(this.btnPictureBoxSaved16);
+            this.gb16.Controls.Add(this.txtPictureBoxSaved16);
+            this.gb16.Controls.Add(this.btnEditPic16);
+            this.gb16.Controls.Add(this.btnDeletePictureBoxSaved16);
+            this.gb16.Controls.Add(this.pictureBoxSaved16);
+            this.gb16.Location = new System.Drawing.Point(10, 4943);
+            this.gb16.Name = "gb16";
+            this.gb16.Size = new System.Drawing.Size(397, 324);
+            this.gb16.TabIndex = 83;
+            this.gb16.TabStop = false;
             // 
             // btnPictureBoxSaved16
             // 
@@ -1956,18 +1956,18 @@ namespace EndoscopicSystem.V2.Forms
             this.pictureBoxSaved16.TabIndex = 47;
             this.pictureBoxSaved16.TabStop = false;
             // 
-            // groupBox4
+            // gb15
             // 
-            this.groupBox4.Controls.Add(this.btnPictureBoxSaved15);
-            this.groupBox4.Controls.Add(this.txtPictureBoxSaved15);
-            this.groupBox4.Controls.Add(this.btnDeletePictureBoxSaved15);
-            this.groupBox4.Controls.Add(this.btnEditPic15);
-            this.groupBox4.Controls.Add(this.pictureBoxSaved15);
-            this.groupBox4.Location = new System.Drawing.Point(10, 4613);
-            this.groupBox4.Name = "groupBox4";
-            this.groupBox4.Size = new System.Drawing.Size(397, 324);
-            this.groupBox4.TabIndex = 71;
-            this.groupBox4.TabStop = false;
+            this.gb15.Controls.Add(this.btnPictureBoxSaved15);
+            this.gb15.Controls.Add(this.txtPictureBoxSaved15);
+            this.gb15.Controls.Add(this.btnDeletePictureBoxSaved15);
+            this.gb15.Controls.Add(this.btnEditPic15);
+            this.gb15.Controls.Add(this.pictureBoxSaved15);
+            this.gb15.Location = new System.Drawing.Point(10, 4613);
+            this.gb15.Name = "gb15";
+            this.gb15.Size = new System.Drawing.Size(397, 324);
+            this.gb15.TabIndex = 71;
+            this.gb15.TabStop = false;
             // 
             // btnPictureBoxSaved15
             // 
@@ -2034,18 +2034,18 @@ namespace EndoscopicSystem.V2.Forms
             this.pictureBoxSaved15.TabIndex = 42;
             this.pictureBoxSaved15.TabStop = false;
             // 
-            // groupBox5
+            // gb14
             // 
-            this.groupBox5.Controls.Add(this.btnPictureBoxSaved14);
-            this.groupBox5.Controls.Add(this.txtPictureBoxSaved14);
-            this.groupBox5.Controls.Add(this.btnDeletePictureBoxSaved14);
-            this.groupBox5.Controls.Add(this.btnEditPic14);
-            this.groupBox5.Controls.Add(this.pictureBoxSaved14);
-            this.groupBox5.Location = new System.Drawing.Point(10, 4283);
-            this.groupBox5.Name = "groupBox5";
-            this.groupBox5.Size = new System.Drawing.Size(397, 324);
-            this.groupBox5.TabIndex = 82;
-            this.groupBox5.TabStop = false;
+            this.gb14.Controls.Add(this.btnPictureBoxSaved14);
+            this.gb14.Controls.Add(this.txtPictureBoxSaved14);
+            this.gb14.Controls.Add(this.btnDeletePictureBoxSaved14);
+            this.gb14.Controls.Add(this.btnEditPic14);
+            this.gb14.Controls.Add(this.pictureBoxSaved14);
+            this.gb14.Location = new System.Drawing.Point(10, 4283);
+            this.gb14.Name = "gb14";
+            this.gb14.Size = new System.Drawing.Size(397, 324);
+            this.gb14.TabIndex = 82;
+            this.gb14.TabStop = false;
             // 
             // btnPictureBoxSaved14
             // 
@@ -2112,18 +2112,18 @@ namespace EndoscopicSystem.V2.Forms
             this.pictureBoxSaved14.TabIndex = 37;
             this.pictureBoxSaved14.TabStop = false;
             // 
-            // groupBox6
+            // gb13
             // 
-            this.groupBox6.Controls.Add(this.btnPictureBoxSaved13);
-            this.groupBox6.Controls.Add(this.txtPictureBoxSaved13);
-            this.groupBox6.Controls.Add(this.btnDeletePictureBoxSaved13);
-            this.groupBox6.Controls.Add(this.btnEditPic13);
-            this.groupBox6.Controls.Add(this.pictureBoxSaved13);
-            this.groupBox6.Location = new System.Drawing.Point(10, 3953);
-            this.groupBox6.Name = "groupBox6";
-            this.groupBox6.Size = new System.Drawing.Size(397, 324);
-            this.groupBox6.TabIndex = 73;
-            this.groupBox6.TabStop = false;
+            this.gb13.Controls.Add(this.btnPictureBoxSaved13);
+            this.gb13.Controls.Add(this.txtPictureBoxSaved13);
+            this.gb13.Controls.Add(this.btnDeletePictureBoxSaved13);
+            this.gb13.Controls.Add(this.btnEditPic13);
+            this.gb13.Controls.Add(this.pictureBoxSaved13);
+            this.gb13.Location = new System.Drawing.Point(10, 3953);
+            this.gb13.Name = "gb13";
+            this.gb13.Size = new System.Drawing.Size(397, 324);
+            this.gb13.TabIndex = 73;
+            this.gb13.TabStop = false;
             // 
             // btnPictureBoxSaved13
             // 
@@ -2190,18 +2190,18 @@ namespace EndoscopicSystem.V2.Forms
             this.pictureBoxSaved13.TabIndex = 32;
             this.pictureBoxSaved13.TabStop = false;
             // 
-            // groupBox8
+            // gb11
             // 
-            this.groupBox8.Controls.Add(this.btnPictureBoxSaved11);
-            this.groupBox8.Controls.Add(this.txtPictureBoxSaved11);
-            this.groupBox8.Controls.Add(this.btnDeletePictureBoxSaved11);
-            this.groupBox8.Controls.Add(this.btnEditPic11);
-            this.groupBox8.Controls.Add(this.pictureBoxSaved11);
-            this.groupBox8.Location = new System.Drawing.Point(10, 3293);
-            this.groupBox8.Name = "groupBox8";
-            this.groupBox8.Size = new System.Drawing.Size(397, 324);
-            this.groupBox8.TabIndex = 80;
-            this.groupBox8.TabStop = false;
+            this.gb11.Controls.Add(this.btnPictureBoxSaved11);
+            this.gb11.Controls.Add(this.txtPictureBoxSaved11);
+            this.gb11.Controls.Add(this.btnDeletePictureBoxSaved11);
+            this.gb11.Controls.Add(this.btnEditPic11);
+            this.gb11.Controls.Add(this.pictureBoxSaved11);
+            this.gb11.Location = new System.Drawing.Point(10, 3293);
+            this.gb11.Name = "gb11";
+            this.gb11.Size = new System.Drawing.Size(397, 324);
+            this.gb11.TabIndex = 80;
+            this.gb11.TabStop = false;
             // 
             // btnPictureBoxSaved11
             // 
@@ -2268,18 +2268,18 @@ namespace EndoscopicSystem.V2.Forms
             this.pictureBoxSaved11.TabIndex = 22;
             this.pictureBoxSaved11.TabStop = false;
             // 
-            // groupBox7
+            // gb12
             // 
-            this.groupBox7.Controls.Add(this.btnPictureBoxSaved12);
-            this.groupBox7.Controls.Add(this.txtPictureBoxSaved12);
-            this.groupBox7.Controls.Add(this.btnDeletePictureBoxSaved12);
-            this.groupBox7.Controls.Add(this.btnEditPic12);
-            this.groupBox7.Controls.Add(this.pictureBoxSaved12);
-            this.groupBox7.Location = new System.Drawing.Point(10, 3623);
-            this.groupBox7.Name = "groupBox7";
-            this.groupBox7.Size = new System.Drawing.Size(397, 324);
-            this.groupBox7.TabIndex = 81;
-            this.groupBox7.TabStop = false;
+            this.gb12.Controls.Add(this.btnPictureBoxSaved12);
+            this.gb12.Controls.Add(this.txtPictureBoxSaved12);
+            this.gb12.Controls.Add(this.btnDeletePictureBoxSaved12);
+            this.gb12.Controls.Add(this.btnEditPic12);
+            this.gb12.Controls.Add(this.pictureBoxSaved12);
+            this.gb12.Location = new System.Drawing.Point(10, 3623);
+            this.gb12.Name = "gb12";
+            this.gb12.Size = new System.Drawing.Size(397, 324);
+            this.gb12.TabIndex = 81;
+            this.gb12.TabStop = false;
             // 
             // btnPictureBoxSaved12
             // 
@@ -2346,18 +2346,18 @@ namespace EndoscopicSystem.V2.Forms
             this.pictureBoxSaved12.TabIndex = 27;
             this.pictureBoxSaved12.TabStop = false;
             // 
-            // groupBox9
+            // gb10
             // 
-            this.groupBox9.Controls.Add(this.btnPictureBoxSaved10);
-            this.groupBox9.Controls.Add(this.txtPictureBoxSaved10);
-            this.groupBox9.Controls.Add(this.btnDeletePictureBoxSaved10);
-            this.groupBox9.Controls.Add(this.btnEditPic10);
-            this.groupBox9.Controls.Add(this.pictureBoxSaved10);
-            this.groupBox9.Location = new System.Drawing.Point(10, 2963);
-            this.groupBox9.Name = "groupBox9";
-            this.groupBox9.Size = new System.Drawing.Size(397, 324);
-            this.groupBox9.TabIndex = 76;
-            this.groupBox9.TabStop = false;
+            this.gb10.Controls.Add(this.btnPictureBoxSaved10);
+            this.gb10.Controls.Add(this.txtPictureBoxSaved10);
+            this.gb10.Controls.Add(this.btnDeletePictureBoxSaved10);
+            this.gb10.Controls.Add(this.btnEditPic10);
+            this.gb10.Controls.Add(this.pictureBoxSaved10);
+            this.gb10.Location = new System.Drawing.Point(10, 2963);
+            this.gb10.Name = "gb10";
+            this.gb10.Size = new System.Drawing.Size(397, 324);
+            this.gb10.TabIndex = 76;
+            this.gb10.TabStop = false;
             // 
             // btnPictureBoxSaved10
             // 
@@ -2424,18 +2424,18 @@ namespace EndoscopicSystem.V2.Forms
             this.pictureBoxSaved10.TabIndex = 17;
             this.pictureBoxSaved10.TabStop = false;
             // 
-            // groupBox18
+            // gb1
             // 
-            this.groupBox18.Controls.Add(this.btnPictureBoxSaved1);
-            this.groupBox18.Controls.Add(this.btnDeletePictureBoxSaved1);
-            this.groupBox18.Controls.Add(this.txtPictureBoxSaved1);
-            this.groupBox18.Controls.Add(this.btnEditPic1);
-            this.groupBox18.Controls.Add(this.pictureBoxSaved1);
-            this.groupBox18.Location = new System.Drawing.Point(10, 3);
-            this.groupBox18.Name = "groupBox18";
-            this.groupBox18.Size = new System.Drawing.Size(397, 324);
-            this.groupBox18.TabIndex = 67;
-            this.groupBox18.TabStop = false;
+            this.gb1.Controls.Add(this.btnPictureBoxSaved1);
+            this.gb1.Controls.Add(this.btnDeletePictureBoxSaved1);
+            this.gb1.Controls.Add(this.txtPictureBoxSaved1);
+            this.gb1.Controls.Add(this.btnEditPic1);
+            this.gb1.Controls.Add(this.pictureBoxSaved1);
+            this.gb1.Location = new System.Drawing.Point(10, 3);
+            this.gb1.Name = "gb1";
+            this.gb1.Size = new System.Drawing.Size(397, 324);
+            this.gb1.TabIndex = 67;
+            this.gb1.TabStop = false;
             // 
             // btnPictureBoxSaved1
             // 
@@ -2502,18 +2502,18 @@ namespace EndoscopicSystem.V2.Forms
             this.pictureBoxSaved1.TabIndex = 0;
             this.pictureBoxSaved1.TabStop = false;
             // 
-            // groupBox10
+            // gb9
             // 
-            this.groupBox10.Controls.Add(this.btnPictureBoxSaved9);
-            this.groupBox10.Controls.Add(this.txtPictureBoxSaved9);
-            this.groupBox10.Controls.Add(this.btnDeletePictureBoxSaved9);
-            this.groupBox10.Controls.Add(this.btnEditPic9);
-            this.groupBox10.Controls.Add(this.pictureBoxSaved9);
-            this.groupBox10.Location = new System.Drawing.Point(10, 2633);
-            this.groupBox10.Name = "groupBox10";
-            this.groupBox10.Size = new System.Drawing.Size(397, 324);
-            this.groupBox10.TabIndex = 76;
-            this.groupBox10.TabStop = false;
+            this.gb9.Controls.Add(this.btnPictureBoxSaved9);
+            this.gb9.Controls.Add(this.txtPictureBoxSaved9);
+            this.gb9.Controls.Add(this.btnDeletePictureBoxSaved9);
+            this.gb9.Controls.Add(this.btnEditPic9);
+            this.gb9.Controls.Add(this.pictureBoxSaved9);
+            this.gb9.Location = new System.Drawing.Point(10, 2633);
+            this.gb9.Name = "gb9";
+            this.gb9.Size = new System.Drawing.Size(397, 324);
+            this.gb9.TabIndex = 76;
+            this.gb9.TabStop = false;
             // 
             // btnPictureBoxSaved9
             // 
@@ -2580,18 +2580,18 @@ namespace EndoscopicSystem.V2.Forms
             this.pictureBoxSaved9.TabIndex = 0;
             this.pictureBoxSaved9.TabStop = false;
             // 
-            // groupBox12
+            // gb7
             // 
-            this.groupBox12.Controls.Add(this.btnPictureBoxSaved7);
-            this.groupBox12.Controls.Add(this.txtPictureBoxSaved7);
-            this.groupBox12.Controls.Add(this.btnDeletePictureBoxSaved7);
-            this.groupBox12.Controls.Add(this.btnEditPic7);
-            this.groupBox12.Controls.Add(this.pictureBoxSaved7);
-            this.groupBox12.Location = new System.Drawing.Point(10, 1983);
-            this.groupBox12.Name = "groupBox12";
-            this.groupBox12.Size = new System.Drawing.Size(397, 324);
-            this.groupBox12.TabIndex = 78;
-            this.groupBox12.TabStop = false;
+            this.gb7.Controls.Add(this.btnPictureBoxSaved7);
+            this.gb7.Controls.Add(this.txtPictureBoxSaved7);
+            this.gb7.Controls.Add(this.btnDeletePictureBoxSaved7);
+            this.gb7.Controls.Add(this.btnEditPic7);
+            this.gb7.Controls.Add(this.pictureBoxSaved7);
+            this.gb7.Location = new System.Drawing.Point(10, 1983);
+            this.gb7.Name = "gb7";
+            this.gb7.Size = new System.Drawing.Size(397, 324);
+            this.gb7.TabIndex = 78;
+            this.gb7.TabStop = false;
             // 
             // btnPictureBoxSaved7
             // 
@@ -2658,18 +2658,18 @@ namespace EndoscopicSystem.V2.Forms
             this.pictureBoxSaved7.TabIndex = 0;
             this.pictureBoxSaved7.TabStop = false;
             // 
-            // groupBox11
+            // gb8
             // 
-            this.groupBox11.Controls.Add(this.btnPictureBoxSaved8);
-            this.groupBox11.Controls.Add(this.txtPictureBoxSaved8);
-            this.groupBox11.Controls.Add(this.btnDeletePictureBoxSaved8);
-            this.groupBox11.Controls.Add(this.btnEditPic8);
-            this.groupBox11.Controls.Add(this.pictureBoxSaved8);
-            this.groupBox11.Location = new System.Drawing.Point(10, 2313);
-            this.groupBox11.Name = "groupBox11";
-            this.groupBox11.Size = new System.Drawing.Size(397, 324);
-            this.groupBox11.TabIndex = 77;
-            this.groupBox11.TabStop = false;
+            this.gb8.Controls.Add(this.btnPictureBoxSaved8);
+            this.gb8.Controls.Add(this.txtPictureBoxSaved8);
+            this.gb8.Controls.Add(this.btnDeletePictureBoxSaved8);
+            this.gb8.Controls.Add(this.btnEditPic8);
+            this.gb8.Controls.Add(this.pictureBoxSaved8);
+            this.gb8.Location = new System.Drawing.Point(10, 2313);
+            this.gb8.Name = "gb8";
+            this.gb8.Size = new System.Drawing.Size(397, 324);
+            this.gb8.TabIndex = 77;
+            this.gb8.TabStop = false;
             // 
             // btnPictureBoxSaved8
             // 
@@ -2736,18 +2736,18 @@ namespace EndoscopicSystem.V2.Forms
             this.pictureBoxSaved8.TabIndex = 0;
             this.pictureBoxSaved8.TabStop = false;
             // 
-            // groupBox17
+            // gb2
             // 
-            this.groupBox17.Controls.Add(this.btnPictureBoxSaved2);
-            this.groupBox17.Controls.Add(this.btnDeletePictureBoxSaved2);
-            this.groupBox17.Controls.Add(this.txtPictureBoxSaved2);
-            this.groupBox17.Controls.Add(this.btnEditPic2);
-            this.groupBox17.Controls.Add(this.pictureBoxSaved2);
-            this.groupBox17.Location = new System.Drawing.Point(10, 333);
-            this.groupBox17.Name = "groupBox17";
-            this.groupBox17.Size = new System.Drawing.Size(397, 324);
-            this.groupBox17.TabIndex = 67;
-            this.groupBox17.TabStop = false;
+            this.gb2.Controls.Add(this.btnPictureBoxSaved2);
+            this.gb2.Controls.Add(this.btnDeletePictureBoxSaved2);
+            this.gb2.Controls.Add(this.txtPictureBoxSaved2);
+            this.gb2.Controls.Add(this.btnEditPic2);
+            this.gb2.Controls.Add(this.pictureBoxSaved2);
+            this.gb2.Location = new System.Drawing.Point(10, 333);
+            this.gb2.Name = "gb2";
+            this.gb2.Size = new System.Drawing.Size(397, 324);
+            this.gb2.TabIndex = 67;
+            this.gb2.TabStop = false;
             // 
             // btnPictureBoxSaved2
             // 
@@ -2814,18 +2814,18 @@ namespace EndoscopicSystem.V2.Forms
             this.pictureBoxSaved2.TabIndex = 0;
             this.pictureBoxSaved2.TabStop = false;
             // 
-            // groupBox16
+            // gb3
             // 
-            this.groupBox16.Controls.Add(this.btnPictureBoxSaved3);
-            this.groupBox16.Controls.Add(this.txtPictureBoxSaved3);
-            this.groupBox16.Controls.Add(this.btnDeletePictureBoxSaved3);
-            this.groupBox16.Controls.Add(this.btnEditPic3);
-            this.groupBox16.Controls.Add(this.pictureBoxSaved3);
-            this.groupBox16.Location = new System.Drawing.Point(10, 663);
-            this.groupBox16.Name = "groupBox16";
-            this.groupBox16.Size = new System.Drawing.Size(397, 324);
-            this.groupBox16.TabIndex = 67;
-            this.groupBox16.TabStop = false;
+            this.gb3.Controls.Add(this.btnPictureBoxSaved3);
+            this.gb3.Controls.Add(this.txtPictureBoxSaved3);
+            this.gb3.Controls.Add(this.btnDeletePictureBoxSaved3);
+            this.gb3.Controls.Add(this.btnEditPic3);
+            this.gb3.Controls.Add(this.pictureBoxSaved3);
+            this.gb3.Location = new System.Drawing.Point(10, 663);
+            this.gb3.Name = "gb3";
+            this.gb3.Size = new System.Drawing.Size(397, 324);
+            this.gb3.TabIndex = 67;
+            this.gb3.TabStop = false;
             // 
             // btnPictureBoxSaved3
             // 
@@ -2892,18 +2892,18 @@ namespace EndoscopicSystem.V2.Forms
             this.pictureBoxSaved3.TabIndex = 0;
             this.pictureBoxSaved3.TabStop = false;
             // 
-            // groupBox15
+            // gb4
             // 
-            this.groupBox15.Controls.Add(this.btnPictureBoxSaved4);
-            this.groupBox15.Controls.Add(this.btnDeletePictureBoxSaved4);
-            this.groupBox15.Controls.Add(this.txtPictureBoxSaved4);
-            this.groupBox15.Controls.Add(this.btnEditPic4);
-            this.groupBox15.Controls.Add(this.pictureBoxSaved4);
-            this.groupBox15.Location = new System.Drawing.Point(10, 993);
-            this.groupBox15.Name = "groupBox15";
-            this.groupBox15.Size = new System.Drawing.Size(397, 324);
-            this.groupBox15.TabIndex = 67;
-            this.groupBox15.TabStop = false;
+            this.gb4.Controls.Add(this.btnPictureBoxSaved4);
+            this.gb4.Controls.Add(this.btnDeletePictureBoxSaved4);
+            this.gb4.Controls.Add(this.txtPictureBoxSaved4);
+            this.gb4.Controls.Add(this.btnEditPic4);
+            this.gb4.Controls.Add(this.pictureBoxSaved4);
+            this.gb4.Location = new System.Drawing.Point(10, 993);
+            this.gb4.Name = "gb4";
+            this.gb4.Size = new System.Drawing.Size(397, 324);
+            this.gb4.TabIndex = 67;
+            this.gb4.TabStop = false;
             // 
             // btnPictureBoxSaved4
             // 
@@ -2970,18 +2970,18 @@ namespace EndoscopicSystem.V2.Forms
             this.pictureBoxSaved4.TabIndex = 0;
             this.pictureBoxSaved4.TabStop = false;
             // 
-            // groupBox13
+            // gb5
             // 
-            this.groupBox13.Controls.Add(this.btnPictureBoxSaved5);
-            this.groupBox13.Controls.Add(this.txtPictureBoxSaved5);
-            this.groupBox13.Controls.Add(this.btnDeletePictureBoxSaved5);
-            this.groupBox13.Controls.Add(this.btnEditPic5);
-            this.groupBox13.Controls.Add(this.pictureBoxSaved5);
-            this.groupBox13.Location = new System.Drawing.Point(10, 1323);
-            this.groupBox13.Name = "groupBox13";
-            this.groupBox13.Size = new System.Drawing.Size(397, 324);
-            this.groupBox13.TabIndex = 79;
-            this.groupBox13.TabStop = false;
+            this.gb5.Controls.Add(this.btnPictureBoxSaved5);
+            this.gb5.Controls.Add(this.txtPictureBoxSaved5);
+            this.gb5.Controls.Add(this.btnDeletePictureBoxSaved5);
+            this.gb5.Controls.Add(this.btnEditPic5);
+            this.gb5.Controls.Add(this.pictureBoxSaved5);
+            this.gb5.Location = new System.Drawing.Point(10, 1323);
+            this.gb5.Name = "gb5";
+            this.gb5.Size = new System.Drawing.Size(397, 324);
+            this.gb5.TabIndex = 79;
+            this.gb5.TabStop = false;
             // 
             // btnPictureBoxSaved5
             // 
@@ -3149,101 +3149,101 @@ namespace EndoscopicSystem.V2.Forms
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             this.panel3.ResumeLayout(false);
-            this.groupBox33.ResumeLayout(false);
-            this.groupBox33.PerformLayout();
+            this.gb32.ResumeLayout(false);
+            this.gb32.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxSaved32)).EndInit();
-            this.groupBox32.ResumeLayout(false);
-            this.groupBox32.PerformLayout();
+            this.gb31.ResumeLayout(false);
+            this.gb31.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxSaved31)).EndInit();
-            this.groupBox31.ResumeLayout(false);
-            this.groupBox31.PerformLayout();
+            this.gb30.ResumeLayout(false);
+            this.gb30.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxSaved30)).EndInit();
-            this.groupBox30.ResumeLayout(false);
-            this.groupBox30.PerformLayout();
+            this.gb29.ResumeLayout(false);
+            this.gb29.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxSaved29)).EndInit();
-            this.groupBox29.ResumeLayout(false);
-            this.groupBox29.PerformLayout();
+            this.gb28.ResumeLayout(false);
+            this.gb28.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxSaved28)).EndInit();
-            this.groupBox28.ResumeLayout(false);
-            this.groupBox28.PerformLayout();
+            this.gb27.ResumeLayout(false);
+            this.gb27.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxSaved27)).EndInit();
-            this.groupBox27.ResumeLayout(false);
-            this.groupBox27.PerformLayout();
+            this.gb26.ResumeLayout(false);
+            this.gb26.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxSaved26)).EndInit();
-            this.groupBox26.ResumeLayout(false);
-            this.groupBox26.PerformLayout();
+            this.gb25.ResumeLayout(false);
+            this.gb25.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxSaved25)).EndInit();
-            this.groupBox25.ResumeLayout(false);
-            this.groupBox25.PerformLayout();
+            this.gb24.ResumeLayout(false);
+            this.gb24.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxSaved24)).EndInit();
-            this.groupBox24.ResumeLayout(false);
-            this.groupBox24.PerformLayout();
+            this.gb23.ResumeLayout(false);
+            this.gb23.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxSaved23)).EndInit();
-            this.groupBox23.ResumeLayout(false);
-            this.groupBox23.PerformLayout();
+            this.gb22.ResumeLayout(false);
+            this.gb22.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxSaved22)).EndInit();
-            this.groupBox22.ResumeLayout(false);
-            this.groupBox22.PerformLayout();
+            this.gb21.ResumeLayout(false);
+            this.gb21.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxSaved21)).EndInit();
-            this.groupBox21.ResumeLayout(false);
-            this.groupBox21.PerformLayout();
+            this.gb20.ResumeLayout(false);
+            this.gb20.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxSaved20)).EndInit();
-            this.groupBox20.ResumeLayout(false);
-            this.groupBox20.PerformLayout();
+            this.gb19.ResumeLayout(false);
+            this.gb19.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxSaved19)).EndInit();
-            this.groupBox19.ResumeLayout(false);
-            this.groupBox19.PerformLayout();
+            this.gb6.ResumeLayout(false);
+            this.gb6.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxSaved6)).EndInit();
-            this.groupBox14.ResumeLayout(false);
-            this.groupBox14.PerformLayout();
+            this.gb18.ResumeLayout(false);
+            this.gb18.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxSaved18)).EndInit();
-            this.groupBox3.ResumeLayout(false);
-            this.groupBox3.PerformLayout();
+            this.gb17.ResumeLayout(false);
+            this.gb17.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxSaved17)).EndInit();
-            this.groupBox2.ResumeLayout(false);
-            this.groupBox2.PerformLayout();
+            this.gb16.ResumeLayout(false);
+            this.gb16.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxSaved16)).EndInit();
-            this.groupBox4.ResumeLayout(false);
-            this.groupBox4.PerformLayout();
+            this.gb15.ResumeLayout(false);
+            this.gb15.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxSaved15)).EndInit();
-            this.groupBox5.ResumeLayout(false);
-            this.groupBox5.PerformLayout();
+            this.gb14.ResumeLayout(false);
+            this.gb14.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxSaved14)).EndInit();
-            this.groupBox6.ResumeLayout(false);
-            this.groupBox6.PerformLayout();
+            this.gb13.ResumeLayout(false);
+            this.gb13.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxSaved13)).EndInit();
-            this.groupBox8.ResumeLayout(false);
-            this.groupBox8.PerformLayout();
+            this.gb11.ResumeLayout(false);
+            this.gb11.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxSaved11)).EndInit();
-            this.groupBox7.ResumeLayout(false);
-            this.groupBox7.PerformLayout();
+            this.gb12.ResumeLayout(false);
+            this.gb12.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxSaved12)).EndInit();
-            this.groupBox9.ResumeLayout(false);
-            this.groupBox9.PerformLayout();
+            this.gb10.ResumeLayout(false);
+            this.gb10.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxSaved10)).EndInit();
-            this.groupBox18.ResumeLayout(false);
-            this.groupBox18.PerformLayout();
+            this.gb1.ResumeLayout(false);
+            this.gb1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxSaved1)).EndInit();
-            this.groupBox10.ResumeLayout(false);
-            this.groupBox10.PerformLayout();
+            this.gb9.ResumeLayout(false);
+            this.gb9.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxSaved9)).EndInit();
-            this.groupBox12.ResumeLayout(false);
-            this.groupBox12.PerformLayout();
+            this.gb7.ResumeLayout(false);
+            this.gb7.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxSaved7)).EndInit();
-            this.groupBox11.ResumeLayout(false);
-            this.groupBox11.PerformLayout();
+            this.gb8.ResumeLayout(false);
+            this.gb8.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxSaved8)).EndInit();
-            this.groupBox17.ResumeLayout(false);
-            this.groupBox17.PerformLayout();
+            this.gb2.ResumeLayout(false);
+            this.gb2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxSaved2)).EndInit();
-            this.groupBox16.ResumeLayout(false);
-            this.groupBox16.PerformLayout();
+            this.gb3.ResumeLayout(false);
+            this.gb3.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxSaved3)).EndInit();
-            this.groupBox15.ResumeLayout(false);
-            this.groupBox15.PerformLayout();
+            this.gb4.ResumeLayout(false);
+            this.gb4.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxSaved4)).EndInit();
-            this.groupBox13.ResumeLayout(false);
-            this.groupBox13.PerformLayout();
+            this.gb5.ResumeLayout(false);
+            this.gb5.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxSaved5)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxSnapshot)).EndInit();
@@ -3256,47 +3256,47 @@ namespace EndoscopicSystem.V2.Forms
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.Panel panel3;
-        private System.Windows.Forms.GroupBox groupBox18;
+        private System.Windows.Forms.GroupBox gb1;
         private System.Windows.Forms.Button btnPictureBoxSaved1;
         private System.Windows.Forms.Button btnDeletePictureBoxSaved1;
         private System.Windows.Forms.TextBox txtPictureBoxSaved1;
         private System.Windows.Forms.PictureBox pictureBoxSaved1;
-        private System.Windows.Forms.GroupBox groupBox17;
+        private System.Windows.Forms.GroupBox gb2;
         private System.Windows.Forms.Button btnPictureBoxSaved2;
         private System.Windows.Forms.Button btnDeletePictureBoxSaved2;
         private System.Windows.Forms.TextBox txtPictureBoxSaved2;
         private System.Windows.Forms.PictureBox pictureBoxSaved2;
-        private System.Windows.Forms.GroupBox groupBox16;
+        private System.Windows.Forms.GroupBox gb3;
         private System.Windows.Forms.Button btnPictureBoxSaved3;
         private System.Windows.Forms.TextBox txtPictureBoxSaved3;
         private System.Windows.Forms.Button btnDeletePictureBoxSaved3;
         private System.Windows.Forms.Button btnEditPic3;
         private System.Windows.Forms.PictureBox pictureBoxSaved3;
-        private System.Windows.Forms.GroupBox groupBox15;
+        private System.Windows.Forms.GroupBox gb4;
         private System.Windows.Forms.Button btnPictureBoxSaved4;
         private System.Windows.Forms.Button btnDeletePictureBoxSaved4;
         private System.Windows.Forms.TextBox txtPictureBoxSaved4;
         private System.Windows.Forms.Button btnEditPic4;
         private System.Windows.Forms.PictureBox pictureBoxSaved4;
-        private System.Windows.Forms.GroupBox groupBox13;
+        private System.Windows.Forms.GroupBox gb5;
         private System.Windows.Forms.Button btnPictureBoxSaved5;
         private System.Windows.Forms.TextBox txtPictureBoxSaved5;
         private System.Windows.Forms.Button btnDeletePictureBoxSaved5;
         private System.Windows.Forms.Button btnEditPic5;
         private System.Windows.Forms.PictureBox pictureBoxSaved5;
-        private System.Windows.Forms.GroupBox groupBox12;
+        private System.Windows.Forms.GroupBox gb7;
         private System.Windows.Forms.Button btnPictureBoxSaved7;
         private System.Windows.Forms.TextBox txtPictureBoxSaved7;
         private System.Windows.Forms.Button btnDeletePictureBoxSaved7;
         private System.Windows.Forms.Button btnEditPic7;
         private System.Windows.Forms.PictureBox pictureBoxSaved7;
-        private System.Windows.Forms.GroupBox groupBox11;
+        private System.Windows.Forms.GroupBox gb8;
         private System.Windows.Forms.Button btnPictureBoxSaved8;
         private System.Windows.Forms.TextBox txtPictureBoxSaved8;
         private System.Windows.Forms.Button btnDeletePictureBoxSaved8;
         private System.Windows.Forms.Button btnEditPic8;
         private System.Windows.Forms.PictureBox pictureBoxSaved8;
-        private System.Windows.Forms.GroupBox groupBox10;
+        private System.Windows.Forms.GroupBox gb9;
         private System.Windows.Forms.Button btnPictureBoxSaved9;
         private System.Windows.Forms.TextBox txtPictureBoxSaved9;
         private System.Windows.Forms.Button btnDeletePictureBoxSaved9;
@@ -3306,55 +3306,55 @@ namespace EndoscopicSystem.V2.Forms
         private System.Windows.Forms.Button btnReset;
         private System.Windows.Forms.Button btnNext;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.GroupBox groupBox9;
+        private System.Windows.Forms.GroupBox gb10;
         private System.Windows.Forms.Button btnPictureBoxSaved10;
         private System.Windows.Forms.TextBox txtPictureBoxSaved10;
         private System.Windows.Forms.Button btnDeletePictureBoxSaved10;
         private System.Windows.Forms.Button btnEditPic10;
         private System.Windows.Forms.PictureBox pictureBoxSaved10;
-        private System.Windows.Forms.GroupBox groupBox8;
+        private System.Windows.Forms.GroupBox gb11;
         private System.Windows.Forms.Button btnPictureBoxSaved11;
         private System.Windows.Forms.TextBox txtPictureBoxSaved11;
         private System.Windows.Forms.Button btnDeletePictureBoxSaved11;
         private System.Windows.Forms.Button btnEditPic11;
         private System.Windows.Forms.PictureBox pictureBoxSaved11;
-        private System.Windows.Forms.GroupBox groupBox7;
+        private System.Windows.Forms.GroupBox gb12;
         private System.Windows.Forms.Button btnPictureBoxSaved12;
         private System.Windows.Forms.TextBox txtPictureBoxSaved12;
         private System.Windows.Forms.Button btnDeletePictureBoxSaved12;
         private System.Windows.Forms.Button btnEditPic12;
         private System.Windows.Forms.PictureBox pictureBoxSaved12;
-        private System.Windows.Forms.GroupBox groupBox6;
+        private System.Windows.Forms.GroupBox gb13;
         private System.Windows.Forms.Button btnPictureBoxSaved13;
         private System.Windows.Forms.TextBox txtPictureBoxSaved13;
         private System.Windows.Forms.Button btnDeletePictureBoxSaved13;
         private System.Windows.Forms.Button btnEditPic13;
         private System.Windows.Forms.PictureBox pictureBoxSaved13;
-        private System.Windows.Forms.GroupBox groupBox5;
+        private System.Windows.Forms.GroupBox gb14;
         private System.Windows.Forms.Button btnPictureBoxSaved14;
         private System.Windows.Forms.TextBox txtPictureBoxSaved14;
         private System.Windows.Forms.Button btnDeletePictureBoxSaved14;
         private System.Windows.Forms.Button btnEditPic14;
         private System.Windows.Forms.PictureBox pictureBoxSaved14;
-        private System.Windows.Forms.GroupBox groupBox4;
+        private System.Windows.Forms.GroupBox gb15;
         private System.Windows.Forms.Button btnPictureBoxSaved15;
         private System.Windows.Forms.TextBox txtPictureBoxSaved15;
         private System.Windows.Forms.Button btnDeletePictureBoxSaved15;
         private System.Windows.Forms.Button btnEditPic15;
         private System.Windows.Forms.PictureBox pictureBoxSaved15;
-        private System.Windows.Forms.GroupBox groupBox2;
+        private System.Windows.Forms.GroupBox gb16;
         private System.Windows.Forms.Button btnPictureBoxSaved16;
         private System.Windows.Forms.TextBox txtPictureBoxSaved16;
         private System.Windows.Forms.Button btnEditPic16;
         private System.Windows.Forms.Button btnDeletePictureBoxSaved16;
         private System.Windows.Forms.PictureBox pictureBoxSaved16;
-        private System.Windows.Forms.GroupBox groupBox3;
+        private System.Windows.Forms.GroupBox gb17;
         private System.Windows.Forms.Button btnPictureBoxSaved17;
         private System.Windows.Forms.Button btnEditPic17;
         private System.Windows.Forms.TextBox txtPictureBoxSaved17;
         private System.Windows.Forms.Button btnDeletePictureBoxSaved17;
         private System.Windows.Forms.PictureBox pictureBoxSaved17;
-        private System.Windows.Forms.GroupBox groupBox14;
+        private System.Windows.Forms.GroupBox gb18;
         private System.Windows.Forms.Button btnEditPic18;
         private System.Windows.Forms.Button btnPictureBoxSaved18;
         private System.Windows.Forms.Button btnDeletePictureBoxSaved18;
@@ -3379,91 +3379,91 @@ namespace EndoscopicSystem.V2.Forms
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.TextBox txbDoctor;
-        private System.Windows.Forms.GroupBox groupBox19;
+        private System.Windows.Forms.GroupBox gb6;
         private System.Windows.Forms.Button btnPictureBoxSaved6;
         private System.Windows.Forms.TextBox txtPictureBoxSaved6;
         private System.Windows.Forms.Button btnDeletePictureBoxSaved6;
         private System.Windows.Forms.Button btnEditPic6;
         private System.Windows.Forms.PictureBox pictureBoxSaved6;
-        private System.Windows.Forms.GroupBox groupBox33;
+        private System.Windows.Forms.GroupBox gb32;
         private System.Windows.Forms.Button btnEditPic32;
         private System.Windows.Forms.Button btnPictureBoxSaved32;
         private System.Windows.Forms.Button btnDeletePictureBoxSaved32;
         private System.Windows.Forms.TextBox txtPictureBoxSaved32;
         private System.Windows.Forms.PictureBox pictureBoxSaved32;
-        private System.Windows.Forms.GroupBox groupBox32;
+        private System.Windows.Forms.GroupBox gb31;
         private System.Windows.Forms.Button btnEditPic31;
         private System.Windows.Forms.Button btnPictureBoxSaved31;
         private System.Windows.Forms.Button btnDeletePictureBoxSaved31;
         private System.Windows.Forms.TextBox txtPictureBoxSaved31;
         private System.Windows.Forms.PictureBox pictureBoxSaved31;
-        private System.Windows.Forms.GroupBox groupBox31;
+        private System.Windows.Forms.GroupBox gb30;
         private System.Windows.Forms.Button btnEditPic30;
         private System.Windows.Forms.Button btnPictureBoxSaved30;
         private System.Windows.Forms.Button btnDeletePictureBoxSaved30;
         private System.Windows.Forms.TextBox txtPictureBoxSaved30;
         private System.Windows.Forms.PictureBox pictureBoxSaved30;
-        private System.Windows.Forms.GroupBox groupBox30;
+        private System.Windows.Forms.GroupBox gb29;
         private System.Windows.Forms.Button btnEditPic29;
         private System.Windows.Forms.Button btnPictureBoxSaved29;
         private System.Windows.Forms.Button btnDeletePictureBoxSaved29;
         private System.Windows.Forms.TextBox txtPictureBoxSaved29;
         private System.Windows.Forms.PictureBox pictureBoxSaved29;
-        private System.Windows.Forms.GroupBox groupBox29;
+        private System.Windows.Forms.GroupBox gb28;
         private System.Windows.Forms.Button btnEditPic28;
         private System.Windows.Forms.Button btnPictureBoxSaved28;
         private System.Windows.Forms.Button btnDeletePictureBoxSaved28;
         private System.Windows.Forms.TextBox txtPictureBoxSaved28;
         private System.Windows.Forms.PictureBox pictureBoxSaved28;
-        private System.Windows.Forms.GroupBox groupBox28;
+        private System.Windows.Forms.GroupBox gb27;
         private System.Windows.Forms.Button btnEditPic27;
         private System.Windows.Forms.Button btnPictureBoxSaved27;
         private System.Windows.Forms.Button btnDeletePictureBoxSaved27;
         private System.Windows.Forms.TextBox txtPictureBoxSaved27;
         private System.Windows.Forms.PictureBox pictureBoxSaved27;
-        private System.Windows.Forms.GroupBox groupBox27;
+        private System.Windows.Forms.GroupBox gb26;
         private System.Windows.Forms.Button btnEditPic26;
         private System.Windows.Forms.Button btnPictureBoxSaved26;
         private System.Windows.Forms.Button btnDeletePictureBoxSaved26;
         private System.Windows.Forms.TextBox txtPictureBoxSaved26;
         private System.Windows.Forms.PictureBox pictureBoxSaved26;
-        private System.Windows.Forms.GroupBox groupBox26;
+        private System.Windows.Forms.GroupBox gb25;
         private System.Windows.Forms.Button btnEditPic25;
         private System.Windows.Forms.Button btnPictureBoxSaved25;
         private System.Windows.Forms.Button btnDeletePictureBoxSaved25;
         private System.Windows.Forms.TextBox txtPictureBoxSaved25;
         private System.Windows.Forms.PictureBox pictureBoxSaved25;
-        private System.Windows.Forms.GroupBox groupBox25;
+        private System.Windows.Forms.GroupBox gb24;
         private System.Windows.Forms.Button btnEditPic24;
         private System.Windows.Forms.Button btnPictureBoxSaved24;
         private System.Windows.Forms.Button btnDeletePictureBoxSaved24;
         private System.Windows.Forms.TextBox txtPictureBoxSaved24;
         private System.Windows.Forms.PictureBox pictureBoxSaved24;
-        private System.Windows.Forms.GroupBox groupBox24;
+        private System.Windows.Forms.GroupBox gb23;
         private System.Windows.Forms.Button btnEditPic23;
         private System.Windows.Forms.Button btnPictureBoxSaved23;
         private System.Windows.Forms.Button btnDeletePictureBoxSaved23;
         private System.Windows.Forms.TextBox txtPictureBoxSaved23;
         private System.Windows.Forms.PictureBox pictureBoxSaved23;
-        private System.Windows.Forms.GroupBox groupBox23;
+        private System.Windows.Forms.GroupBox gb22;
         private System.Windows.Forms.Button btnEditPic22;
         private System.Windows.Forms.Button btnPictureBoxSaved22;
         private System.Windows.Forms.Button btnDeletePictureBoxSaved22;
         private System.Windows.Forms.TextBox txtPictureBoxSaved22;
         private System.Windows.Forms.PictureBox pictureBoxSaved22;
-        private System.Windows.Forms.GroupBox groupBox22;
+        private System.Windows.Forms.GroupBox gb21;
         private System.Windows.Forms.Button btnEditPic21;
         private System.Windows.Forms.Button btnPictureBoxSaved21;
         private System.Windows.Forms.Button btnDeletePictureBoxSaved21;
         private System.Windows.Forms.TextBox txtPictureBoxSaved21;
         private System.Windows.Forms.PictureBox pictureBoxSaved21;
-        private System.Windows.Forms.GroupBox groupBox21;
+        private System.Windows.Forms.GroupBox gb20;
         private System.Windows.Forms.Button btnEditPic20;
         private System.Windows.Forms.Button btnPictureBoxSaved20;
         private System.Windows.Forms.Button btnDeletePictureBoxSaved20;
         private System.Windows.Forms.TextBox txtPictureBoxSaved20;
         private System.Windows.Forms.PictureBox pictureBoxSaved20;
-        private System.Windows.Forms.GroupBox groupBox20;
+        private System.Windows.Forms.GroupBox gb19;
         private System.Windows.Forms.Button btnEditPic19;
         private System.Windows.Forms.Button btnPictureBoxSaved19;
         private System.Windows.Forms.Button btnDeletePictureBoxSaved19;

@@ -490,6 +490,12 @@
     <Compile Include="Forms\EndoscopyRoom.Designer.cs">
       <DependentUpon>EndoscopyRoom.cs</DependentUpon>
     </Compile>
+    <Compile Include="Forms\FormReport2.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\FormReport2.Designer.cs">
+      <DependentUpon>FormReport2.cs</DependentUpon>
+    </Compile>
     <Compile Include="Forms\LoginForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -817,6 +823,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\EndoscopyRoom.resx">
       <DependentUpon>EndoscopyRoom.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\FormReport2.resx">
+      <DependentUpon>FormReport2.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\LoginForm.resx">
       <DependentUpon>LoginForm.cs</DependentUpon>

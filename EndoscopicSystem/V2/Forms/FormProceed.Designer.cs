@@ -31,12 +31,14 @@ namespace EndoscopicSystem.V2.Forms
         {
             this.panelChild = new System.Windows.Forms.Panel();
             this.txbStep = new System.Windows.Forms.TextBox();
+            this.txbCheckHasEgdAndColono = new System.Windows.Forms.TextBox();
             this.panelChild.SuspendLayout();
             this.SuspendLayout();
             // 
             // panelChild
             // 
             this.panelChild.BackColor = System.Drawing.Color.DarkGray;
+            this.panelChild.Controls.Add(this.txbCheckHasEgdAndColono);
             this.panelChild.Controls.Add(this.txbStep);
             this.panelChild.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panelChild.Location = new System.Drawing.Point(0, 0);
@@ -52,6 +54,14 @@ namespace EndoscopicSystem.V2.Forms
             this.txbStep.TabIndex = 0;
             this.txbStep.Visible = false;
             this.txbStep.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
+            // 
+            // txbCheckHasEgdAndColono
+            // 
+            this.txbCheckHasEgdAndColono.Location = new System.Drawing.Point(12, 38);
+            this.txbCheckHasEgdAndColono.Name = "txbCheckHasEgdAndColono";
+            this.txbCheckHasEgdAndColono.Size = new System.Drawing.Size(34, 20);
+            this.txbCheckHasEgdAndColono.TabIndex = 1;
+            this.txbCheckHasEgdAndColono.Visible = false;
             // 
             // FormProceed
             // 
@@ -77,5 +87,6 @@ namespace EndoscopicSystem.V2.Forms
 
         private System.Windows.Forms.Panel panelChild;
         public System.Windows.Forms.TextBox txbStep;
+        public System.Windows.Forms.TextBox txbCheckHasEgdAndColono;
     }
 }

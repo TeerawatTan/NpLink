@@ -18,7 +18,7 @@ namespace EndoscopicSystem
         protected readonly GetDropdownList list = new GetDropdownList();
         private readonly int UserID;
         public string hnNo = "";
-        public int procedureId = 0, endoscopicId = 0, appointmentId = 0;
+        public int patientId = 0, procedureId = 0, endoscopicId = 0, appointmentId = 0;
         public SearchPatientForm(int userID)
         {
             InitializeComponent();
@@ -133,6 +133,7 @@ namespace EndoscopicSystem
                 try
                 {
                     hnNo = gridPatient.CurrentRow.Cells["HN"].Value.ToString();
+                    patientId = (int?)gridPatient.CurrentRow.Cells["PatientID"].Value ?? 0;
                     procedureId = (int?)gridPatient.CurrentRow.Cells["ProcedureID"].Value ?? 0;
                     endoscopicId = (int?)gridPatient.CurrentRow.Cells["EndoscopicID"].Value ?? 0;
                     appointmentId = (int?)gridPatient.CurrentRow.Cells["AppointmentID"].Value ?? 0;

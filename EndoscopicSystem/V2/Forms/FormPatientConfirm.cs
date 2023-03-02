@@ -18,6 +18,7 @@ namespace EndoscopicSystem.V2.Forms
         private string _hnNo, defaultData = "......";
         private readonly EndoscopicEntities _db = new EndoscopicEntities();
         private readonly DropdownListService _dropdownListService = new DropdownListService();
+        private bool _isEgdAndColono = false;
 
         public FormPatientConfirm(int userID, string hn = "", int procId = 0, int endoId = 0, int apId = 0)
         {
@@ -34,7 +35,7 @@ namespace EndoscopicSystem.V2.Forms
             var v = _db.Users.Where(x => x.Id == _id).Select(x => new { x.AspectRatioID, x.PositionCrop }).FirstOrDefault();
             if (!string.IsNullOrWhiteSpace(_hnNo) && _procedureId > 0)
             {
-                SearchHN(_hnNo, _procedureId);
+                SearchHN(_hnNo);
             }
             else
             {
@@ -43,6 +44,8 @@ namespace EndoscopicSystem.V2.Forms
             _dropdownListService.DropdownInstrumentIdAndCode(cbbInstrument1, 1);
             if (_procedureId == 6)
             {
+                _isEgdAndColono = true;
+
                 _dropdownListService.DropdownInstrumentIdAndCode(cbbInstrument2, 1);
                 label10.Visible = true;
                 cbbInstrument2.Visible = true;
@@ -53,34 +56,30 @@ namespace EndoscopicSystem.V2.Forms
 
         private void cbbInstrument1_SelectedIndexChanged(object sender, EventArgs e)
         {
-            if (string.IsNullOrWhiteSpace(cbbInstrument1.Text))
+            int? instruDdlId = (int?)cbbInstrument1.SelectedValue;
+
+            if (instruDdlId == null || instruDdlId < 0)
                 return;
 
-            string instruDdl = cbbInstrument1.Text.ToString().Trim();
-            if (!string.IsNullOrWhiteSpace(instruDdl))
-            {
-                var instrument = _db.Instruments.Where(w => w.Code == instruDdl).FirstOrDefault();
-                if (instrument != null)
-                    SerialNumber1.Text = instrument.SerialNumber;
-                else
-                    SerialNumber1.Clear();
-            }
+            var instrument = _db.Instruments.Where(w => w.ID == instruDdlId).FirstOrDefault();
+            if (instrument != null)
+                SerialNumber1.Text = instrument.SerialNumber;
+            else
+                SerialNumber1.Clear();
         }
 
         private void cbbInstrument2_SelectedIndexChanged(object sender, EventArgs e)
         {
-            if (string.IsNullOrWhiteSpace(cbbInstrument2.Text))
+            int? instruDdlId = (int?)cbbInstrument2.SelectedValue;
+
+            if (instruDdlId == null || instruDdlId < 0)
                 return;
 
-            string instruDdl = cbbInstrument2.Text.ToString().Trim();
-            if (!string.IsNullOrWhiteSpace(instruDdl))
-            {
-                var instrument = _db.Instruments.Where(w => w.Code == instruDdl).FirstOrDefault();
-                if (instrument != null)
-                    SerialNumber2.Text = instrument.SerialNumber;
-                else
-                    SerialNumber2.Clear();
-            }
+            var instrument = _db.Instruments.Where(w => w.ID == instruDdlId).FirstOrDefault();
+            if (instrument != null)
+                SerialNumber2.Text = instrument.SerialNumber;
+            else
+                SerialNumber2.Clear();
         }
 
         private void InitialData(string fullName, string hnNum, string doctorList, string nurseList)
@@ -92,7 +91,7 @@ namespace EndoscopicSystem.V2.Forms
             lbNurseList.Text = nurseList;
         }
 
-        private void SearchHN(string hn, int procId = 0)
+        private void SearchHN(string hn)
         {
             bool hasData = true;
             string doctorName = "";
@@ -208,7 +207,7 @@ namespace EndoscopicSystem.V2.Forms
             try
             {
                 // Form Panel
-                FormProceed formProceed = new FormProceed(_id, _hnNo, _procedureId, _endoscopicId, _appointmentId);
+                FormProceed formProceed = new FormProceed(_id, _hnNo, _patientId, _procedureId, _endoscopicId, _appointmentId, null, _isEgdAndColono);
                 formProceed.ShowDialog();
                 formProceed = null;
             }
