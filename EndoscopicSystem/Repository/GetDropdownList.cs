@@ -114,7 +114,7 @@ namespace EndoscopicSystem.Repository
         public List<Instrument> GetInstrumentsIdAndCode(int startIdx = 0)
         {
             var list = db.Instruments.Where(w => w.IsActive).ToList();
-            if (startIdx == 0)
+            if (startIdx == 0 || list == null || list.Count == 0)
                 list.Insert(0, new Instrument() { ID = 0, Code = "", SerialNumber = "" });
 
             return list;
