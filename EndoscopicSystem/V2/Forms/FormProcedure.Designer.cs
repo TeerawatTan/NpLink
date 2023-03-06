@@ -515,6 +515,41 @@ namespace EndoscopicSystem.V2.Forms
             this.txbFiPostcricoid = new System.Windows.Forms.TextBox();
             this.txbFiPyrSinusR = new System.Windows.Forms.TextBox();
             this.txbFiPyrSinusL = new System.Windows.Forms.TextBox();
+            this.tabGeneralLab = new System.Windows.Forms.TabPage();
+            this.cbbGeneralInstrument_Lap = new System.Windows.Forms.ComboBox();
+            this.cbbGeneralFinancial_Lap = new System.Windows.Forms.ComboBox();
+            this.chkFollowUpCase_Lap = new System.Windows.Forms.CheckBox();
+            this.chkNewCase_Lap = new System.Windows.Forms.CheckBox();
+            this.cbbGeneralAnesthesist_Lap = new System.Windows.Forms.ComboBox();
+            this.label24 = new System.Windows.Forms.Label();
+            this.txbGeneralSN_Lap = new System.Windows.Forms.TextBox();
+            this.label40 = new System.Windows.Forms.Label();
+            this.dpGeneralTo_Lap = new System.Windows.Forms.DateTimePicker();
+            this.label62 = new System.Windows.Forms.Label();
+            this.dpGeneralFrom_Lap = new System.Windows.Forms.DateTimePicker();
+            this.label65 = new System.Windows.Forms.Label();
+            this.cbbGeneralWard_Lap = new System.Windows.Forms.ComboBox();
+            this.chkWard_Lap = new System.Windows.Forms.CheckBox();
+            this.cbbGeneralOPD_Lap = new System.Windows.Forms.ComboBox();
+            this.chkOPD_Lap = new System.Windows.Forms.CheckBox();
+            this.txbHn_Lap = new System.Windows.Forms.TextBox();
+            this.txbAge_Lap = new System.Windows.Forms.TextBox();
+            this.label66 = new System.Windows.Forms.Label();
+            this.txbSex_Lap = new System.Windows.Forms.TextBox();
+            this.label106 = new System.Windows.Forms.Label();
+            this.txbFullName_Lap = new System.Windows.Forms.TextBox();
+            this.label129 = new System.Windows.Forms.Label();
+            this.label141 = new System.Windows.Forms.Label();
+            this.cbbGeneralNurse3_Lap = new System.Windows.Forms.ComboBox();
+            this.label165 = new System.Windows.Forms.Label();
+            this.cbbGeneralNurse2_Lap = new System.Windows.Forms.ComboBox();
+            this.cbbGeneralNurse1_Lap = new System.Windows.Forms.ComboBox();
+            this.label178 = new System.Windows.Forms.Label();
+            this.cbbGeneralDoctor_Lap = new System.Windows.Forms.ComboBox();
+            this.label180 = new System.Windows.Forms.Label();
+            this.label181 = new System.Windows.Forms.Label();
+            this.label183 = new System.Windows.Forms.Label();
+            this.label184 = new System.Windows.Forms.Label();
             this.pictureBoxSnapshot = new System.Windows.Forms.PictureBox();
             this.cbbProcedureList = new System.Windows.Forms.ComboBox();
             this.label5 = new System.Windows.Forms.Label();
@@ -716,41 +751,24 @@ namespace EndoscopicSystem.V2.Forms
             this.openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
             this.btnSave = new System.Windows.Forms.Button();
             this.btnBackForm = new System.Windows.Forms.Button();
-            this.tabGeneralLab = new System.Windows.Forms.TabPage();
-            this.cbbGeneralInstrument_Lap = new System.Windows.Forms.ComboBox();
-            this.cbbGeneralFinancial_Lap = new System.Windows.Forms.ComboBox();
-            this.chkFollowUpCase_Lap = new System.Windows.Forms.CheckBox();
-            this.chkNewCase_Lap = new System.Windows.Forms.CheckBox();
-            this.cbbGeneralAnesthesist_Lap = new System.Windows.Forms.ComboBox();
-            this.label24 = new System.Windows.Forms.Label();
-            this.txbGeneralSN_Lap = new System.Windows.Forms.TextBox();
-            this.label40 = new System.Windows.Forms.Label();
-            this.dpGeneralTo_Lap = new System.Windows.Forms.DateTimePicker();
-            this.label62 = new System.Windows.Forms.Label();
-            this.dpGeneralFrom_Lap = new System.Windows.Forms.DateTimePicker();
-            this.label65 = new System.Windows.Forms.Label();
-            this.cbbGeneralWard_Lap = new System.Windows.Forms.ComboBox();
-            this.chkWard_Lap = new System.Windows.Forms.CheckBox();
-            this.cbbGeneralOPD_Lap = new System.Windows.Forms.ComboBox();
-            this.chkOPD_Lap = new System.Windows.Forms.CheckBox();
-            this.txbHn_Lap = new System.Windows.Forms.TextBox();
-            this.txbAge_Lap = new System.Windows.Forms.TextBox();
-            this.label66 = new System.Windows.Forms.Label();
-            this.txbSex_Lap = new System.Windows.Forms.TextBox();
-            this.label106 = new System.Windows.Forms.Label();
-            this.txbFullName_Lap = new System.Windows.Forms.TextBox();
-            this.label129 = new System.Windows.Forms.Label();
-            this.label141 = new System.Windows.Forms.Label();
-            this.cbbGeneralNurse3_Lap = new System.Windows.Forms.ComboBox();
-            this.label165 = new System.Windows.Forms.Label();
-            this.cbbGeneralNurse2_Lap = new System.Windows.Forms.ComboBox();
-            this.cbbGeneralNurse1_Lap = new System.Windows.Forms.ComboBox();
-            this.label178 = new System.Windows.Forms.Label();
-            this.cbbGeneralDoctor_Lap = new System.Windows.Forms.ComboBox();
-            this.label180 = new System.Windows.Forms.Label();
-            this.label181 = new System.Windows.Forms.Label();
-            this.label183 = new System.Windows.Forms.Label();
-            this.label184 = new System.Windows.Forms.Label();
+            this.tabFindingLab = new System.Windows.Forms.TabPage();
+            this.txbFindingDiagnosis_Lap = new System.Windows.Forms.TextBox();
+            this.label36 = new System.Windows.Forms.Label();
+            this.txbGeneralAnesthesia_Lap = new System.Windows.Forms.TextBox();
+            this.cbbGeneralAnesthesia_Lap = new System.Windows.Forms.ComboBox();
+            this.label37 = new System.Windows.Forms.Label();
+            this.txbGeneralBriefHistory_Lap = new System.Windows.Forms.TextBox();
+            this.txbGeneralIndication_Lap = new System.Windows.Forms.TextBox();
+            this.cbbGeneralIndication_Lap = new System.Windows.Forms.ComboBox();
+            this.label38 = new System.Windows.Forms.Label();
+            this.txbGeneralMedication_Lap = new System.Windows.Forms.TextBox();
+            this.cbbGeneralMedication_Lap = new System.Windows.Forms.ComboBox();
+            this.label39 = new System.Windows.Forms.Label();
+            this.label179 = new System.Windows.Forms.Label();
+            this.txbFindingOperative_Lap = new System.Windows.Forms.TextBox();
+            this.label182 = new System.Windows.Forms.Label();
+            this.txbFindingComment_Lap = new System.Windows.Forms.TextBox();
+            this.label185 = new System.Windows.Forms.Label();
             this.tabControl1.SuspendLayout();
             this.tabGeneralEGD.SuspendLayout();
             this.tabFindingEGD.SuspendLayout();
@@ -761,6 +779,7 @@ namespace EndoscopicSystem.V2.Forms
             this.tabFindingGastroscopy.SuspendLayout();
             this.tabFindingENT.SuspendLayout();
             this.tabFindingENT2.SuspendLayout();
+            this.tabGeneralLab.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxSnapshot)).BeginInit();
             this.panel3.SuspendLayout();
             this.gb32.SuspendLayout();
@@ -827,7 +846,7 @@ namespace EndoscopicSystem.V2.Forms
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxSaved4)).BeginInit();
             this.gb5.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxSaved5)).BeginInit();
-            this.tabGeneralLab.SuspendLayout();
+            this.tabFindingLab.SuspendLayout();
             this.SuspendLayout();
             // 
             // tabControl1
@@ -842,6 +861,7 @@ namespace EndoscopicSystem.V2.Forms
             this.tabControl1.Controls.Add(this.tabFindingENT);
             this.tabControl1.Controls.Add(this.tabFindingENT2);
             this.tabControl1.Controls.Add(this.tabGeneralLab);
+            this.tabControl1.Controls.Add(this.tabFindingLab);
             this.tabControl1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
             this.tabControl1.ItemSize = new System.Drawing.Size(60, 30);
             this.tabControl1.Location = new System.Drawing.Point(445, 66);
@@ -7382,6 +7402,466 @@ namespace EndoscopicSystem.V2.Forms
             this.txbFiPyrSinusL.Size = new System.Drawing.Size(314, 23);
             this.txbFiPyrSinusL.TabIndex = 125;
             // 
+            // tabGeneralLab
+            // 
+            this.tabGeneralLab.BackColor = System.Drawing.Color.LightGray;
+            this.tabGeneralLab.Controls.Add(this.txbGeneralAnesthesia_Lap);
+            this.tabGeneralLab.Controls.Add(this.cbbGeneralAnesthesia_Lap);
+            this.tabGeneralLab.Controls.Add(this.label37);
+            this.tabGeneralLab.Controls.Add(this.txbGeneralBriefHistory_Lap);
+            this.tabGeneralLab.Controls.Add(this.txbGeneralIndication_Lap);
+            this.tabGeneralLab.Controls.Add(this.cbbGeneralIndication_Lap);
+            this.tabGeneralLab.Controls.Add(this.label38);
+            this.tabGeneralLab.Controls.Add(this.txbGeneralMedication_Lap);
+            this.tabGeneralLab.Controls.Add(this.cbbGeneralMedication_Lap);
+            this.tabGeneralLab.Controls.Add(this.label39);
+            this.tabGeneralLab.Controls.Add(this.label179);
+            this.tabGeneralLab.Controls.Add(this.cbbGeneralInstrument_Lap);
+            this.tabGeneralLab.Controls.Add(this.cbbGeneralFinancial_Lap);
+            this.tabGeneralLab.Controls.Add(this.chkFollowUpCase_Lap);
+            this.tabGeneralLab.Controls.Add(this.chkNewCase_Lap);
+            this.tabGeneralLab.Controls.Add(this.cbbGeneralAnesthesist_Lap);
+            this.tabGeneralLab.Controls.Add(this.label24);
+            this.tabGeneralLab.Controls.Add(this.txbGeneralSN_Lap);
+            this.tabGeneralLab.Controls.Add(this.label40);
+            this.tabGeneralLab.Controls.Add(this.dpGeneralTo_Lap);
+            this.tabGeneralLab.Controls.Add(this.label62);
+            this.tabGeneralLab.Controls.Add(this.dpGeneralFrom_Lap);
+            this.tabGeneralLab.Controls.Add(this.label65);
+            this.tabGeneralLab.Controls.Add(this.cbbGeneralWard_Lap);
+            this.tabGeneralLab.Controls.Add(this.chkWard_Lap);
+            this.tabGeneralLab.Controls.Add(this.cbbGeneralOPD_Lap);
+            this.tabGeneralLab.Controls.Add(this.chkOPD_Lap);
+            this.tabGeneralLab.Controls.Add(this.txbHn_Lap);
+            this.tabGeneralLab.Controls.Add(this.txbAge_Lap);
+            this.tabGeneralLab.Controls.Add(this.label66);
+            this.tabGeneralLab.Controls.Add(this.txbSex_Lap);
+            this.tabGeneralLab.Controls.Add(this.label106);
+            this.tabGeneralLab.Controls.Add(this.txbFullName_Lap);
+            this.tabGeneralLab.Controls.Add(this.label129);
+            this.tabGeneralLab.Controls.Add(this.label141);
+            this.tabGeneralLab.Controls.Add(this.cbbGeneralNurse3_Lap);
+            this.tabGeneralLab.Controls.Add(this.label165);
+            this.tabGeneralLab.Controls.Add(this.cbbGeneralNurse2_Lap);
+            this.tabGeneralLab.Controls.Add(this.cbbGeneralNurse1_Lap);
+            this.tabGeneralLab.Controls.Add(this.label178);
+            this.tabGeneralLab.Controls.Add(this.cbbGeneralDoctor_Lap);
+            this.tabGeneralLab.Controls.Add(this.label180);
+            this.tabGeneralLab.Controls.Add(this.label181);
+            this.tabGeneralLab.Controls.Add(this.label183);
+            this.tabGeneralLab.Controls.Add(this.label184);
+            this.tabGeneralLab.Location = new System.Drawing.Point(4, 34);
+            this.tabGeneralLab.Name = "tabGeneralLab";
+            this.tabGeneralLab.Padding = new System.Windows.Forms.Padding(3);
+            this.tabGeneralLab.Size = new System.Drawing.Size(993, 847);
+            this.tabGeneralLab.TabIndex = 19;
+            this.tabGeneralLab.Text = "General";
+            // 
+            // cbbGeneralInstrument_Lap
+            // 
+            this.cbbGeneralInstrument_Lap.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cbbGeneralInstrument_Lap.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F);
+            this.cbbGeneralInstrument_Lap.FormattingEnabled = true;
+            this.cbbGeneralInstrument_Lap.Location = new System.Drawing.Point(146, 366);
+            this.cbbGeneralInstrument_Lap.Margin = new System.Windows.Forms.Padding(2);
+            this.cbbGeneralInstrument_Lap.Name = "cbbGeneralInstrument_Lap";
+            this.cbbGeneralInstrument_Lap.Size = new System.Drawing.Size(318, 23);
+            this.cbbGeneralInstrument_Lap.TabIndex = 186;
+            // 
+            // cbbGeneralFinancial_Lap
+            // 
+            this.cbbGeneralFinancial_Lap.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.cbbGeneralFinancial_Lap.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cbbGeneralFinancial_Lap.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
+            this.cbbGeneralFinancial_Lap.FormattingEnabled = true;
+            this.cbbGeneralFinancial_Lap.Location = new System.Drawing.Point(145, 177);
+            this.cbbGeneralFinancial_Lap.Margin = new System.Windows.Forms.Padding(2);
+            this.cbbGeneralFinancial_Lap.Name = "cbbGeneralFinancial_Lap";
+            this.cbbGeneralFinancial_Lap.Size = new System.Drawing.Size(460, 23);
+            this.cbbGeneralFinancial_Lap.TabIndex = 183;
+            // 
+            // chkFollowUpCase_Lap
+            // 
+            this.chkFollowUpCase_Lap.AutoSize = true;
+            this.chkFollowUpCase_Lap.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
+            this.chkFollowUpCase_Lap.Location = new System.Drawing.Point(56, 94);
+            this.chkFollowUpCase_Lap.Margin = new System.Windows.Forms.Padding(2);
+            this.chkFollowUpCase_Lap.Name = "chkFollowUpCase_Lap";
+            this.chkFollowUpCase_Lap.Size = new System.Drawing.Size(150, 24);
+            this.chkFollowUpCase_Lap.TabIndex = 182;
+            this.chkFollowUpCase_Lap.Text = "Follow up Case";
+            this.chkFollowUpCase_Lap.UseVisualStyleBackColor = true;
+            // 
+            // chkNewCase_Lap
+            // 
+            this.chkNewCase_Lap.AutoSize = true;
+            this.chkNewCase_Lap.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
+            this.chkNewCase_Lap.Location = new System.Drawing.Point(56, 69);
+            this.chkNewCase_Lap.Margin = new System.Windows.Forms.Padding(2);
+            this.chkNewCase_Lap.Name = "chkNewCase_Lap";
+            this.chkNewCase_Lap.Size = new System.Drawing.Size(108, 24);
+            this.chkNewCase_Lap.TabIndex = 181;
+            this.chkNewCase_Lap.Text = "New Case";
+            this.chkNewCase_Lap.UseVisualStyleBackColor = true;
+            // 
+            // cbbGeneralAnesthesist_Lap
+            // 
+            this.cbbGeneralAnesthesist_Lap.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.cbbGeneralAnesthesist_Lap.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cbbGeneralAnesthesist_Lap.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
+            this.cbbGeneralAnesthesist_Lap.FormattingEnabled = true;
+            this.cbbGeneralAnesthesist_Lap.Location = new System.Drawing.Point(146, 231);
+            this.cbbGeneralAnesthesist_Lap.Margin = new System.Windows.Forms.Padding(2);
+            this.cbbGeneralAnesthesist_Lap.Name = "cbbGeneralAnesthesist_Lap";
+            this.cbbGeneralAnesthesist_Lap.Size = new System.Drawing.Size(460, 23);
+            this.cbbGeneralAnesthesist_Lap.TabIndex = 179;
+            // 
+            // label24
+            // 
+            this.label24.AutoSize = true;
+            this.label24.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
+            this.label24.Location = new System.Drawing.Point(18, 180);
+            this.label24.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label24.Name = "label24";
+            this.label24.Size = new System.Drawing.Size(81, 20);
+            this.label24.TabIndex = 178;
+            this.label24.Text = "Financial";
+            // 
+            // txbGeneralSN_Lap
+            // 
+            this.txbGeneralSN_Lap.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.txbGeneralSN_Lap.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.txbGeneralSN_Lap.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
+            this.txbGeneralSN_Lap.Location = new System.Drawing.Point(585, 367);
+            this.txbGeneralSN_Lap.Margin = new System.Windows.Forms.Padding(2);
+            this.txbGeneralSN_Lap.MaxLength = 65;
+            this.txbGeneralSN_Lap.Name = "txbGeneralSN_Lap";
+            this.txbGeneralSN_Lap.ReadOnly = true;
+            this.txbGeneralSN_Lap.Size = new System.Drawing.Size(396, 23);
+            this.txbGeneralSN_Lap.TabIndex = 166;
+            // 
+            // label40
+            // 
+            this.label40.AutoSize = true;
+            this.label40.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
+            this.label40.Location = new System.Drawing.Point(541, 369);
+            this.label40.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label40.Name = "label40";
+            this.label40.Size = new System.Drawing.Size(38, 20);
+            this.label40.TabIndex = 165;
+            this.label40.Text = "S/N";
+            // 
+            // dpGeneralTo_Lap
+            // 
+            this.dpGeneralTo_Lap.CustomFormat = "dd/MM/yyyy HH:mm";
+            this.dpGeneralTo_Lap.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
+            this.dpGeneralTo_Lap.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
+            this.dpGeneralTo_Lap.Location = new System.Drawing.Point(585, 339);
+            this.dpGeneralTo_Lap.MinDate = new System.DateTime(2022, 10, 22, 0, 0, 0, 0);
+            this.dpGeneralTo_Lap.Name = "dpGeneralTo_Lap";
+            this.dpGeneralTo_Lap.Size = new System.Drawing.Size(182, 22);
+            this.dpGeneralTo_Lap.TabIndex = 164;
+            // 
+            // label62
+            // 
+            this.label62.AutoSize = true;
+            this.label62.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
+            this.label62.Location = new System.Drawing.Point(541, 340);
+            this.label62.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label62.Name = "label62";
+            this.label62.Size = new System.Drawing.Size(29, 20);
+            this.label62.TabIndex = 163;
+            this.label62.Text = "To";
+            // 
+            // dpGeneralFrom_Lap
+            // 
+            this.dpGeneralFrom_Lap.CustomFormat = "dd/MM/yyyy HH:mm";
+            this.dpGeneralFrom_Lap.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
+            this.dpGeneralFrom_Lap.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
+            this.dpGeneralFrom_Lap.Location = new System.Drawing.Point(146, 340);
+            this.dpGeneralFrom_Lap.MinDate = new System.DateTime(2022, 10, 22, 0, 0, 0, 0);
+            this.dpGeneralFrom_Lap.Name = "dpGeneralFrom_Lap";
+            this.dpGeneralFrom_Lap.Size = new System.Drawing.Size(182, 22);
+            this.dpGeneralFrom_Lap.TabIndex = 162;
+            // 
+            // label65
+            // 
+            this.label65.AutoSize = true;
+            this.label65.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
+            this.label65.Location = new System.Drawing.Point(19, 344);
+            this.label65.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label65.Name = "label65";
+            this.label65.Size = new System.Drawing.Size(86, 20);
+            this.label65.TabIndex = 161;
+            this.label65.Text = "DateTime";
+            // 
+            // cbbGeneralWard_Lap
+            // 
+            this.cbbGeneralWard_Lap.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cbbGeneralWard_Lap.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
+            this.cbbGeneralWard_Lap.FormattingEnabled = true;
+            this.cbbGeneralWard_Lap.Location = new System.Drawing.Point(146, 150);
+            this.cbbGeneralWard_Lap.Margin = new System.Windows.Forms.Padding(2);
+            this.cbbGeneralWard_Lap.Name = "cbbGeneralWard_Lap";
+            this.cbbGeneralWard_Lap.Size = new System.Drawing.Size(460, 24);
+            this.cbbGeneralWard_Lap.TabIndex = 160;
+            // 
+            // chkWard_Lap
+            // 
+            this.chkWard_Lap.AutoSize = true;
+            this.chkWard_Lap.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
+            this.chkWard_Lap.Location = new System.Drawing.Point(56, 149);
+            this.chkWard_Lap.Margin = new System.Windows.Forms.Padding(2);
+            this.chkWard_Lap.Name = "chkWard_Lap";
+            this.chkWard_Lap.Size = new System.Drawing.Size(70, 24);
+            this.chkWard_Lap.TabIndex = 159;
+            this.chkWard_Lap.Text = "Ward";
+            this.chkWard_Lap.UseVisualStyleBackColor = true;
+            // 
+            // cbbGeneralOPD_Lap
+            // 
+            this.cbbGeneralOPD_Lap.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cbbGeneralOPD_Lap.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
+            this.cbbGeneralOPD_Lap.FormattingEnabled = true;
+            this.cbbGeneralOPD_Lap.Location = new System.Drawing.Point(145, 122);
+            this.cbbGeneralOPD_Lap.Margin = new System.Windows.Forms.Padding(2);
+            this.cbbGeneralOPD_Lap.Name = "cbbGeneralOPD_Lap";
+            this.cbbGeneralOPD_Lap.Size = new System.Drawing.Size(460, 24);
+            this.cbbGeneralOPD_Lap.TabIndex = 158;
+            // 
+            // chkOPD_Lap
+            // 
+            this.chkOPD_Lap.AutoSize = true;
+            this.chkOPD_Lap.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
+            this.chkOPD_Lap.Location = new System.Drawing.Point(56, 121);
+            this.chkOPD_Lap.Margin = new System.Windows.Forms.Padding(2);
+            this.chkOPD_Lap.Name = "chkOPD_Lap";
+            this.chkOPD_Lap.Size = new System.Drawing.Size(65, 24);
+            this.chkOPD_Lap.TabIndex = 157;
+            this.chkOPD_Lap.Text = "OPD";
+            this.chkOPD_Lap.UseVisualStyleBackColor = true;
+            // 
+            // txbHn_Lap
+            // 
+            this.txbHn_Lap.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.txbHn_Lap.BackColor = System.Drawing.Color.LightCyan;
+            this.txbHn_Lap.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.txbHn_Lap.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
+            this.txbHn_Lap.Location = new System.Drawing.Point(73, 39);
+            this.txbHn_Lap.Margin = new System.Windows.Forms.Padding(2);
+            this.txbHn_Lap.MaxLength = 200;
+            this.txbHn_Lap.Name = "txbHn_Lap";
+            this.txbHn_Lap.ReadOnly = true;
+            this.txbHn_Lap.Size = new System.Drawing.Size(233, 26);
+            this.txbHn_Lap.TabIndex = 156;
+            // 
+            // txbAge_Lap
+            // 
+            this.txbAge_Lap.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.txbAge_Lap.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.txbAge_Lap.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
+            this.txbAge_Lap.Location = new System.Drawing.Point(698, 12);
+            this.txbAge_Lap.Margin = new System.Windows.Forms.Padding(2);
+            this.txbAge_Lap.MaxLength = 200;
+            this.txbAge_Lap.Name = "txbAge_Lap";
+            this.txbAge_Lap.ReadOnly = true;
+            this.txbAge_Lap.Size = new System.Drawing.Size(63, 23);
+            this.txbAge_Lap.TabIndex = 155;
+            // 
+            // label66
+            // 
+            this.label66.AutoSize = true;
+            this.label66.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
+            this.label66.Location = new System.Drawing.Point(653, 12);
+            this.label66.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label66.Name = "label66";
+            this.label66.Size = new System.Drawing.Size(41, 20);
+            this.label66.TabIndex = 154;
+            this.label66.Text = "Age";
+            // 
+            // txbSex_Lap
+            // 
+            this.txbSex_Lap.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.txbSex_Lap.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.txbSex_Lap.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
+            this.txbSex_Lap.Location = new System.Drawing.Point(584, 12);
+            this.txbSex_Lap.Margin = new System.Windows.Forms.Padding(2);
+            this.txbSex_Lap.MaxLength = 200;
+            this.txbSex_Lap.Name = "txbSex_Lap";
+            this.txbSex_Lap.ReadOnly = true;
+            this.txbSex_Lap.Size = new System.Drawing.Size(63, 23);
+            this.txbSex_Lap.TabIndex = 153;
+            // 
+            // label106
+            // 
+            this.label106.AutoSize = true;
+            this.label106.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
+            this.label106.Location = new System.Drawing.Point(535, 15);
+            this.label106.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label106.Name = "label106";
+            this.label106.Size = new System.Drawing.Size(45, 20);
+            this.label106.TabIndex = 152;
+            this.label106.Text = "SEX";
+            // 
+            // txbFullName_Lap
+            // 
+            this.txbFullName_Lap.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.txbFullName_Lap.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.txbFullName_Lap.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
+            this.txbFullName_Lap.Location = new System.Drawing.Point(73, 12);
+            this.txbFullName_Lap.Margin = new System.Windows.Forms.Padding(2);
+            this.txbFullName_Lap.MaxLength = 200;
+            this.txbFullName_Lap.Name = "txbFullName_Lap";
+            this.txbFullName_Lap.Size = new System.Drawing.Size(450, 23);
+            this.txbFullName_Lap.TabIndex = 151;
+            // 
+            // label129
+            // 
+            this.label129.AutoSize = true;
+            this.label129.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
+            this.label129.Location = new System.Drawing.Point(14, 39);
+            this.label129.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label129.Name = "label129";
+            this.label129.Size = new System.Drawing.Size(34, 20);
+            this.label129.TabIndex = 150;
+            this.label129.Text = "HN";
+            // 
+            // label141
+            // 
+            this.label141.AutoSize = true;
+            this.label141.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
+            this.label141.Location = new System.Drawing.Point(14, 12);
+            this.label141.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label141.Name = "label141";
+            this.label141.Size = new System.Drawing.Size(55, 20);
+            this.label141.TabIndex = 149;
+            this.label141.Text = "Name";
+            // 
+            // cbbGeneralNurse3_Lap
+            // 
+            this.cbbGeneralNurse3_Lap.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.cbbGeneralNurse3_Lap.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cbbGeneralNurse3_Lap.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
+            this.cbbGeneralNurse3_Lap.FormattingEnabled = true;
+            this.cbbGeneralNurse3_Lap.Location = new System.Drawing.Point(146, 312);
+            this.cbbGeneralNurse3_Lap.Margin = new System.Windows.Forms.Padding(2);
+            this.cbbGeneralNurse3_Lap.Name = "cbbGeneralNurse3_Lap";
+            this.cbbGeneralNurse3_Lap.Size = new System.Drawing.Size(460, 23);
+            this.cbbGeneralNurse3_Lap.TabIndex = 147;
+            // 
+            // label165
+            // 
+            this.label165.AutoSize = true;
+            this.label165.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
+            this.label165.Location = new System.Drawing.Point(19, 317);
+            this.label165.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label165.Name = "label165";
+            this.label165.Size = new System.Drawing.Size(71, 20);
+            this.label165.TabIndex = 146;
+            this.label165.Text = "Nurse 3";
+            // 
+            // cbbGeneralNurse2_Lap
+            // 
+            this.cbbGeneralNurse2_Lap.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.cbbGeneralNurse2_Lap.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cbbGeneralNurse2_Lap.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
+            this.cbbGeneralNurse2_Lap.FormattingEnabled = true;
+            this.cbbGeneralNurse2_Lap.Location = new System.Drawing.Point(146, 285);
+            this.cbbGeneralNurse2_Lap.Margin = new System.Windows.Forms.Padding(2);
+            this.cbbGeneralNurse2_Lap.Name = "cbbGeneralNurse2_Lap";
+            this.cbbGeneralNurse2_Lap.Size = new System.Drawing.Size(460, 23);
+            this.cbbGeneralNurse2_Lap.TabIndex = 145;
+            // 
+            // cbbGeneralNurse1_Lap
+            // 
+            this.cbbGeneralNurse1_Lap.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.cbbGeneralNurse1_Lap.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cbbGeneralNurse1_Lap.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
+            this.cbbGeneralNurse1_Lap.FormattingEnabled = true;
+            this.cbbGeneralNurse1_Lap.Location = new System.Drawing.Point(146, 258);
+            this.cbbGeneralNurse1_Lap.Margin = new System.Windows.Forms.Padding(2);
+            this.cbbGeneralNurse1_Lap.Name = "cbbGeneralNurse1_Lap";
+            this.cbbGeneralNurse1_Lap.Size = new System.Drawing.Size(460, 23);
+            this.cbbGeneralNurse1_Lap.TabIndex = 144;
+            // 
+            // label178
+            // 
+            this.label178.AutoSize = true;
+            this.label178.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
+            this.label178.Location = new System.Drawing.Point(19, 234);
+            this.label178.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label178.Name = "label178";
+            this.label178.Size = new System.Drawing.Size(104, 20);
+            this.label178.TabIndex = 143;
+            this.label178.Text = "Anesthesist";
+            // 
+            // cbbGeneralDoctor_Lap
+            // 
+            this.cbbGeneralDoctor_Lap.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.cbbGeneralDoctor_Lap.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cbbGeneralDoctor_Lap.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
+            this.cbbGeneralDoctor_Lap.FormattingEnabled = true;
+            this.cbbGeneralDoctor_Lap.Location = new System.Drawing.Point(145, 204);
+            this.cbbGeneralDoctor_Lap.Margin = new System.Windows.Forms.Padding(2);
+            this.cbbGeneralDoctor_Lap.Name = "cbbGeneralDoctor_Lap";
+            this.cbbGeneralDoctor_Lap.Size = new System.Drawing.Size(460, 23);
+            this.cbbGeneralDoctor_Lap.TabIndex = 142;
+            // 
+            // label180
+            // 
+            this.label180.AutoSize = true;
+            this.label180.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
+            this.label180.Location = new System.Drawing.Point(19, 288);
+            this.label180.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label180.Name = "label180";
+            this.label180.Size = new System.Drawing.Size(71, 20);
+            this.label180.TabIndex = 139;
+            this.label180.Text = "Nurse 2";
+            // 
+            // label181
+            // 
+            this.label181.AutoSize = true;
+            this.label181.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
+            this.label181.Location = new System.Drawing.Point(19, 261);
+            this.label181.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label181.Name = "label181";
+            this.label181.Size = new System.Drawing.Size(71, 20);
+            this.label181.TabIndex = 138;
+            this.label181.Text = "Nurse 1";
+            // 
+            // label183
+            // 
+            this.label183.AutoSize = true;
+            this.label183.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
+            this.label183.Location = new System.Drawing.Point(19, 371);
+            this.label183.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label183.Name = "label183";
+            this.label183.Size = new System.Drawing.Size(96, 20);
+            this.label183.TabIndex = 136;
+            this.label183.Text = "Instrument";
+            // 
+            // label184
+            // 
+            this.label184.AutoSize = true;
+            this.label184.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
+            this.label184.Location = new System.Drawing.Point(18, 207);
+            this.label184.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label184.Name = "label184";
+            this.label184.Size = new System.Drawing.Size(63, 20);
+            this.label184.TabIndex = 135;
+            this.label184.Text = "Doctor";
+            // 
             // pictureBoxSnapshot
             // 
             this.pictureBoxSnapshot.BackColor = System.Drawing.Color.Silver;
@@ -9998,454 +10478,231 @@ namespace EndoscopicSystem.V2.Forms
             this.btnBackForm.UseVisualStyleBackColor = false;
             this.btnBackForm.Click += new System.EventHandler(this.btnBackForm_Click);
             // 
-            // tabGeneralLab
+            // tabFindingLab
             // 
-            this.tabGeneralLab.BackColor = System.Drawing.Color.LightGray;
-            this.tabGeneralLab.Controls.Add(this.cbbGeneralInstrument_Lap);
-            this.tabGeneralLab.Controls.Add(this.cbbGeneralFinancial_Lap);
-            this.tabGeneralLab.Controls.Add(this.chkFollowUpCase_Lap);
-            this.tabGeneralLab.Controls.Add(this.chkNewCase_Lap);
-            this.tabGeneralLab.Controls.Add(this.cbbGeneralAnesthesist_Lap);
-            this.tabGeneralLab.Controls.Add(this.label24);
-            this.tabGeneralLab.Controls.Add(this.txbGeneralSN_Lap);
-            this.tabGeneralLab.Controls.Add(this.label40);
-            this.tabGeneralLab.Controls.Add(this.dpGeneralTo_Lap);
-            this.tabGeneralLab.Controls.Add(this.label62);
-            this.tabGeneralLab.Controls.Add(this.dpGeneralFrom_Lap);
-            this.tabGeneralLab.Controls.Add(this.label65);
-            this.tabGeneralLab.Controls.Add(this.cbbGeneralWard_Lap);
-            this.tabGeneralLab.Controls.Add(this.chkWard_Lap);
-            this.tabGeneralLab.Controls.Add(this.cbbGeneralOPD_Lap);
-            this.tabGeneralLab.Controls.Add(this.chkOPD_Lap);
-            this.tabGeneralLab.Controls.Add(this.txbHn_Lap);
-            this.tabGeneralLab.Controls.Add(this.txbAge_Lap);
-            this.tabGeneralLab.Controls.Add(this.label66);
-            this.tabGeneralLab.Controls.Add(this.txbSex_Lap);
-            this.tabGeneralLab.Controls.Add(this.label106);
-            this.tabGeneralLab.Controls.Add(this.txbFullName_Lap);
-            this.tabGeneralLab.Controls.Add(this.label129);
-            this.tabGeneralLab.Controls.Add(this.label141);
-            this.tabGeneralLab.Controls.Add(this.cbbGeneralNurse3_Lap);
-            this.tabGeneralLab.Controls.Add(this.label165);
-            this.tabGeneralLab.Controls.Add(this.cbbGeneralNurse2_Lap);
-            this.tabGeneralLab.Controls.Add(this.cbbGeneralNurse1_Lap);
-            this.tabGeneralLab.Controls.Add(this.label178);
-            this.tabGeneralLab.Controls.Add(this.cbbGeneralDoctor_Lap);
-            this.tabGeneralLab.Controls.Add(this.label180);
-            this.tabGeneralLab.Controls.Add(this.label181);
-            this.tabGeneralLab.Controls.Add(this.label183);
-            this.tabGeneralLab.Controls.Add(this.label184);
-            this.tabGeneralLab.Location = new System.Drawing.Point(4, 34);
-            this.tabGeneralLab.Name = "tabGeneralLab";
-            this.tabGeneralLab.Padding = new System.Windows.Forms.Padding(3);
-            this.tabGeneralLab.Size = new System.Drawing.Size(993, 847);
-            this.tabGeneralLab.TabIndex = 19;
-            this.tabGeneralLab.Text = "General";
+            this.tabFindingLab.BackColor = System.Drawing.Color.LightGray;
+            this.tabFindingLab.Controls.Add(this.txbFindingComment_Lap);
+            this.tabFindingLab.Controls.Add(this.label185);
+            this.tabFindingLab.Controls.Add(this.txbFindingOperative_Lap);
+            this.tabFindingLab.Controls.Add(this.label182);
+            this.tabFindingLab.Controls.Add(this.txbFindingDiagnosis_Lap);
+            this.tabFindingLab.Controls.Add(this.label36);
+            this.tabFindingLab.Location = new System.Drawing.Point(4, 34);
+            this.tabFindingLab.Name = "tabFindingLab";
+            this.tabFindingLab.Size = new System.Drawing.Size(993, 847);
+            this.tabFindingLab.TabIndex = 20;
+            this.tabFindingLab.Text = "Finding";
             // 
-            // cbbGeneralInstrument_Lap
+            // txbFindingDiagnosis_Lap
             // 
-            this.cbbGeneralInstrument_Lap.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cbbGeneralInstrument_Lap.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F);
-            this.cbbGeneralInstrument_Lap.FormattingEnabled = true;
-            this.cbbGeneralInstrument_Lap.Location = new System.Drawing.Point(146, 366);
-            this.cbbGeneralInstrument_Lap.Margin = new System.Windows.Forms.Padding(2);
-            this.cbbGeneralInstrument_Lap.Name = "cbbGeneralInstrument_Lap";
-            this.cbbGeneralInstrument_Lap.Size = new System.Drawing.Size(318, 23);
-            this.cbbGeneralInstrument_Lap.TabIndex = 186;
-            // 
-            // cbbGeneralFinancial_Lap
-            // 
-            this.cbbGeneralFinancial_Lap.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            this.txbFindingDiagnosis_Lap.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.cbbGeneralFinancial_Lap.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cbbGeneralFinancial_Lap.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
-            this.cbbGeneralFinancial_Lap.FormattingEnabled = true;
-            this.cbbGeneralFinancial_Lap.Location = new System.Drawing.Point(145, 177);
-            this.cbbGeneralFinancial_Lap.Margin = new System.Windows.Forms.Padding(2);
-            this.cbbGeneralFinancial_Lap.Name = "cbbGeneralFinancial_Lap";
-            this.cbbGeneralFinancial_Lap.Size = new System.Drawing.Size(460, 23);
-            this.cbbGeneralFinancial_Lap.TabIndex = 183;
+            this.txbFindingDiagnosis_Lap.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.txbFindingDiagnosis_Lap.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
+            this.txbFindingDiagnosis_Lap.Location = new System.Drawing.Point(106, 29);
+            this.txbFindingDiagnosis_Lap.Margin = new System.Windows.Forms.Padding(2);
+            this.txbFindingDiagnosis_Lap.MaxLength = 1000;
+            this.txbFindingDiagnosis_Lap.Multiline = true;
+            this.txbFindingDiagnosis_Lap.Name = "txbFindingDiagnosis_Lap";
+            this.txbFindingDiagnosis_Lap.Size = new System.Drawing.Size(871, 102);
+            this.txbFindingDiagnosis_Lap.TabIndex = 88;
             // 
-            // chkFollowUpCase_Lap
+            // label36
             // 
-            this.chkFollowUpCase_Lap.AutoSize = true;
-            this.chkFollowUpCase_Lap.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
-            this.chkFollowUpCase_Lap.Location = new System.Drawing.Point(56, 94);
-            this.chkFollowUpCase_Lap.Margin = new System.Windows.Forms.Padding(2);
-            this.chkFollowUpCase_Lap.Name = "chkFollowUpCase_Lap";
-            this.chkFollowUpCase_Lap.Size = new System.Drawing.Size(150, 24);
-            this.chkFollowUpCase_Lap.TabIndex = 182;
-            this.chkFollowUpCase_Lap.Text = "Follow up Case";
-            this.chkFollowUpCase_Lap.UseVisualStyleBackColor = true;
+            this.label36.AutoSize = true;
+            this.label36.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold);
+            this.label36.Location = new System.Drawing.Point(14, 29);
+            this.label36.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label36.Name = "label36";
+            this.label36.Size = new System.Drawing.Size(88, 20);
+            this.label36.TabIndex = 87;
+            this.label36.Text = "Diagnosis";
             // 
-            // chkNewCase_Lap
+            // txbGeneralAnesthesia_Lap
             // 
-            this.chkNewCase_Lap.AutoSize = true;
-            this.chkNewCase_Lap.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
-            this.chkNewCase_Lap.Location = new System.Drawing.Point(56, 69);
-            this.chkNewCase_Lap.Margin = new System.Windows.Forms.Padding(2);
-            this.chkNewCase_Lap.Name = "chkNewCase_Lap";
-            this.chkNewCase_Lap.Size = new System.Drawing.Size(108, 24);
-            this.chkNewCase_Lap.TabIndex = 181;
-            this.chkNewCase_Lap.Text = "New Case";
-            this.chkNewCase_Lap.UseVisualStyleBackColor = true;
-            // 
-            // cbbGeneralAnesthesist_Lap
-            // 
-            this.cbbGeneralAnesthesist_Lap.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            this.txbGeneralAnesthesia_Lap.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.cbbGeneralAnesthesist_Lap.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cbbGeneralAnesthesist_Lap.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
-            this.cbbGeneralAnesthesist_Lap.FormattingEnabled = true;
-            this.cbbGeneralAnesthesist_Lap.Location = new System.Drawing.Point(146, 231);
-            this.cbbGeneralAnesthesist_Lap.Margin = new System.Windows.Forms.Padding(2);
-            this.cbbGeneralAnesthesist_Lap.Name = "cbbGeneralAnesthesist_Lap";
-            this.cbbGeneralAnesthesist_Lap.Size = new System.Drawing.Size(460, 23);
-            this.cbbGeneralAnesthesist_Lap.TabIndex = 179;
+            this.txbGeneralAnesthesia_Lap.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.txbGeneralAnesthesia_Lap.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
+            this.txbGeneralAnesthesia_Lap.Location = new System.Drawing.Point(468, 394);
+            this.txbGeneralAnesthesia_Lap.Margin = new System.Windows.Forms.Padding(2);
+            this.txbGeneralAnesthesia_Lap.MaxLength = 36;
+            this.txbGeneralAnesthesia_Lap.Name = "txbGeneralAnesthesia_Lap";
+            this.txbGeneralAnesthesia_Lap.Size = new System.Drawing.Size(513, 23);
+            this.txbGeneralAnesthesia_Lap.TabIndex = 197;
             // 
-            // label24
+            // cbbGeneralAnesthesia_Lap
             // 
-            this.label24.AutoSize = true;
-            this.label24.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
-            this.label24.Location = new System.Drawing.Point(18, 180);
-            this.label24.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label24.Name = "label24";
-            this.label24.Size = new System.Drawing.Size(81, 20);
-            this.label24.TabIndex = 178;
-            this.label24.Text = "Financial";
-            // 
-            // txbGeneralSN_Lap
-            // 
-            this.txbGeneralSN_Lap.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            this.cbbGeneralAnesthesia_Lap.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.txbGeneralSN_Lap.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.txbGeneralSN_Lap.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
-            this.txbGeneralSN_Lap.Location = new System.Drawing.Point(585, 367);
-            this.txbGeneralSN_Lap.Margin = new System.Windows.Forms.Padding(2);
-            this.txbGeneralSN_Lap.MaxLength = 65;
-            this.txbGeneralSN_Lap.Name = "txbGeneralSN_Lap";
-            this.txbGeneralSN_Lap.ReadOnly = true;
-            this.txbGeneralSN_Lap.Size = new System.Drawing.Size(396, 23);
-            this.txbGeneralSN_Lap.TabIndex = 166;
+            this.cbbGeneralAnesthesia_Lap.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cbbGeneralAnesthesia_Lap.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
+            this.cbbGeneralAnesthesia_Lap.FormattingEnabled = true;
+            this.cbbGeneralAnesthesia_Lap.Location = new System.Drawing.Point(146, 393);
+            this.cbbGeneralAnesthesia_Lap.Margin = new System.Windows.Forms.Padding(2);
+            this.cbbGeneralAnesthesia_Lap.Name = "cbbGeneralAnesthesia_Lap";
+            this.cbbGeneralAnesthesia_Lap.Size = new System.Drawing.Size(318, 23);
+            this.cbbGeneralAnesthesia_Lap.TabIndex = 196;
             // 
-            // label40
+            // label37
             // 
-            this.label40.AutoSize = true;
-            this.label40.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
-            this.label40.Location = new System.Drawing.Point(541, 369);
-            this.label40.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label40.Name = "label40";
-            this.label40.Size = new System.Drawing.Size(38, 20);
-            this.label40.TabIndex = 165;
-            this.label40.Text = "S/N";
+            this.label37.AutoSize = true;
+            this.label37.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
+            this.label37.Location = new System.Drawing.Point(18, 477);
+            this.label37.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label37.Name = "label37";
+            this.label37.Size = new System.Drawing.Size(108, 20);
+            this.label37.TabIndex = 195;
+            this.label37.Text = "Brief History";
             // 
-            // dpGeneralTo_Lap
+            // txbGeneralBriefHistory_Lap
             // 
-            this.dpGeneralTo_Lap.CustomFormat = "dd/MM/yyyy HH:mm";
-            this.dpGeneralTo_Lap.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
-            this.dpGeneralTo_Lap.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.dpGeneralTo_Lap.Location = new System.Drawing.Point(585, 339);
-            this.dpGeneralTo_Lap.MinDate = new System.DateTime(2022, 10, 22, 0, 0, 0, 0);
-            this.dpGeneralTo_Lap.Name = "dpGeneralTo_Lap";
-            this.dpGeneralTo_Lap.Size = new System.Drawing.Size(182, 22);
-            this.dpGeneralTo_Lap.TabIndex = 164;
-            // 
-            // label62
-            // 
-            this.label62.AutoSize = true;
-            this.label62.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
-            this.label62.Location = new System.Drawing.Point(541, 340);
-            this.label62.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label62.Name = "label62";
-            this.label62.Size = new System.Drawing.Size(29, 20);
-            this.label62.TabIndex = 163;
-            this.label62.Text = "To";
-            // 
-            // dpGeneralFrom_Lap
-            // 
-            this.dpGeneralFrom_Lap.CustomFormat = "dd/MM/yyyy HH:mm";
-            this.dpGeneralFrom_Lap.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
-            this.dpGeneralFrom_Lap.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.dpGeneralFrom_Lap.Location = new System.Drawing.Point(146, 340);
-            this.dpGeneralFrom_Lap.MinDate = new System.DateTime(2022, 10, 22, 0, 0, 0, 0);
-            this.dpGeneralFrom_Lap.Name = "dpGeneralFrom_Lap";
-            this.dpGeneralFrom_Lap.Size = new System.Drawing.Size(182, 22);
-            this.dpGeneralFrom_Lap.TabIndex = 162;
-            // 
-            // label65
-            // 
-            this.label65.AutoSize = true;
-            this.label65.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
-            this.label65.Location = new System.Drawing.Point(19, 344);
-            this.label65.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label65.Name = "label65";
-            this.label65.Size = new System.Drawing.Size(86, 20);
-            this.label65.TabIndex = 161;
-            this.label65.Text = "DateTime";
-            // 
-            // cbbGeneralWard_Lap
-            // 
-            this.cbbGeneralWard_Lap.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cbbGeneralWard_Lap.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
-            this.cbbGeneralWard_Lap.FormattingEnabled = true;
-            this.cbbGeneralWard_Lap.Location = new System.Drawing.Point(146, 150);
-            this.cbbGeneralWard_Lap.Margin = new System.Windows.Forms.Padding(2);
-            this.cbbGeneralWard_Lap.Name = "cbbGeneralWard_Lap";
-            this.cbbGeneralWard_Lap.Size = new System.Drawing.Size(460, 24);
-            this.cbbGeneralWard_Lap.TabIndex = 160;
-            // 
-            // chkWard_Lap
-            // 
-            this.chkWard_Lap.AutoSize = true;
-            this.chkWard_Lap.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
-            this.chkWard_Lap.Location = new System.Drawing.Point(56, 149);
-            this.chkWard_Lap.Margin = new System.Windows.Forms.Padding(2);
-            this.chkWard_Lap.Name = "chkWard_Lap";
-            this.chkWard_Lap.Size = new System.Drawing.Size(70, 24);
-            this.chkWard_Lap.TabIndex = 159;
-            this.chkWard_Lap.Text = "Ward";
-            this.chkWard_Lap.UseVisualStyleBackColor = true;
-            // 
-            // cbbGeneralOPD_Lap
-            // 
-            this.cbbGeneralOPD_Lap.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cbbGeneralOPD_Lap.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
-            this.cbbGeneralOPD_Lap.FormattingEnabled = true;
-            this.cbbGeneralOPD_Lap.Location = new System.Drawing.Point(145, 122);
-            this.cbbGeneralOPD_Lap.Margin = new System.Windows.Forms.Padding(2);
-            this.cbbGeneralOPD_Lap.Name = "cbbGeneralOPD_Lap";
-            this.cbbGeneralOPD_Lap.Size = new System.Drawing.Size(460, 24);
-            this.cbbGeneralOPD_Lap.TabIndex = 158;
-            // 
-            // chkOPD_Lap
-            // 
-            this.chkOPD_Lap.AutoSize = true;
-            this.chkOPD_Lap.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
-            this.chkOPD_Lap.Location = new System.Drawing.Point(56, 121);
-            this.chkOPD_Lap.Margin = new System.Windows.Forms.Padding(2);
-            this.chkOPD_Lap.Name = "chkOPD_Lap";
-            this.chkOPD_Lap.Size = new System.Drawing.Size(65, 24);
-            this.chkOPD_Lap.TabIndex = 157;
-            this.chkOPD_Lap.Text = "OPD";
-            this.chkOPD_Lap.UseVisualStyleBackColor = true;
-            // 
-            // txbHn_Lap
-            // 
-            this.txbHn_Lap.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            this.txbGeneralBriefHistory_Lap.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.txbHn_Lap.BackColor = System.Drawing.Color.LightCyan;
-            this.txbHn_Lap.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.txbHn_Lap.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
-            this.txbHn_Lap.Location = new System.Drawing.Point(73, 39);
-            this.txbHn_Lap.Margin = new System.Windows.Forms.Padding(2);
-            this.txbHn_Lap.MaxLength = 200;
-            this.txbHn_Lap.Name = "txbHn_Lap";
-            this.txbHn_Lap.ReadOnly = true;
-            this.txbHn_Lap.Size = new System.Drawing.Size(233, 26);
-            this.txbHn_Lap.TabIndex = 156;
+            this.txbGeneralBriefHistory_Lap.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.txbGeneralBriefHistory_Lap.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
+            this.txbGeneralBriefHistory_Lap.Location = new System.Drawing.Point(145, 474);
+            this.txbGeneralBriefHistory_Lap.Margin = new System.Windows.Forms.Padding(2);
+            this.txbGeneralBriefHistory_Lap.MaxLength = 200;
+            this.txbGeneralBriefHistory_Lap.Multiline = true;
+            this.txbGeneralBriefHistory_Lap.Name = "txbGeneralBriefHistory_Lap";
+            this.txbGeneralBriefHistory_Lap.Size = new System.Drawing.Size(836, 118);
+            this.txbGeneralBriefHistory_Lap.TabIndex = 194;
             // 
-            // txbAge_Lap
+            // txbGeneralIndication_Lap
             // 
-            this.txbAge_Lap.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            this.txbGeneralIndication_Lap.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.txbAge_Lap.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.txbAge_Lap.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
-            this.txbAge_Lap.Location = new System.Drawing.Point(698, 12);
-            this.txbAge_Lap.Margin = new System.Windows.Forms.Padding(2);
-            this.txbAge_Lap.MaxLength = 200;
-            this.txbAge_Lap.Name = "txbAge_Lap";
-            this.txbAge_Lap.ReadOnly = true;
-            this.txbAge_Lap.Size = new System.Drawing.Size(63, 23);
-            this.txbAge_Lap.TabIndex = 155;
+            this.txbGeneralIndication_Lap.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.txbGeneralIndication_Lap.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
+            this.txbGeneralIndication_Lap.Location = new System.Drawing.Point(468, 447);
+            this.txbGeneralIndication_Lap.Margin = new System.Windows.Forms.Padding(2);
+            this.txbGeneralIndication_Lap.MaxLength = 36;
+            this.txbGeneralIndication_Lap.Name = "txbGeneralIndication_Lap";
+            this.txbGeneralIndication_Lap.Size = new System.Drawing.Size(514, 23);
+            this.txbGeneralIndication_Lap.TabIndex = 193;
             // 
-            // label66
+            // cbbGeneralIndication_Lap
             // 
-            this.label66.AutoSize = true;
-            this.label66.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
-            this.label66.Location = new System.Drawing.Point(653, 12);
-            this.label66.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label66.Name = "label66";
-            this.label66.Size = new System.Drawing.Size(41, 20);
-            this.label66.TabIndex = 154;
-            this.label66.Text = "Age";
-            // 
-            // txbSex_Lap
-            // 
-            this.txbSex_Lap.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            this.cbbGeneralIndication_Lap.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.txbSex_Lap.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.txbSex_Lap.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
-            this.txbSex_Lap.Location = new System.Drawing.Point(584, 12);
-            this.txbSex_Lap.Margin = new System.Windows.Forms.Padding(2);
-            this.txbSex_Lap.MaxLength = 200;
-            this.txbSex_Lap.Name = "txbSex_Lap";
-            this.txbSex_Lap.ReadOnly = true;
-            this.txbSex_Lap.Size = new System.Drawing.Size(63, 23);
-            this.txbSex_Lap.TabIndex = 153;
+            this.cbbGeneralIndication_Lap.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cbbGeneralIndication_Lap.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
+            this.cbbGeneralIndication_Lap.FormattingEnabled = true;
+            this.cbbGeneralIndication_Lap.Location = new System.Drawing.Point(146, 447);
+            this.cbbGeneralIndication_Lap.Margin = new System.Windows.Forms.Padding(2);
+            this.cbbGeneralIndication_Lap.Name = "cbbGeneralIndication_Lap";
+            this.cbbGeneralIndication_Lap.Size = new System.Drawing.Size(318, 23);
+            this.cbbGeneralIndication_Lap.TabIndex = 192;
             // 
-            // label106
+            // label38
             // 
-            this.label106.AutoSize = true;
-            this.label106.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
-            this.label106.Location = new System.Drawing.Point(535, 15);
-            this.label106.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label106.Name = "label106";
-            this.label106.Size = new System.Drawing.Size(45, 20);
-            this.label106.TabIndex = 152;
-            this.label106.Text = "SEX";
+            this.label38.AutoSize = true;
+            this.label38.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
+            this.label38.Location = new System.Drawing.Point(19, 451);
+            this.label38.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label38.Name = "label38";
+            this.label38.Size = new System.Drawing.Size(88, 20);
+            this.label38.TabIndex = 191;
+            this.label38.Text = "Indication";
             // 
-            // txbFullName_Lap
+            // txbGeneralMedication_Lap
             // 
-            this.txbFullName_Lap.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            this.txbGeneralMedication_Lap.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.txbFullName_Lap.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.txbFullName_Lap.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
-            this.txbFullName_Lap.Location = new System.Drawing.Point(73, 12);
-            this.txbFullName_Lap.Margin = new System.Windows.Forms.Padding(2);
-            this.txbFullName_Lap.MaxLength = 200;
-            this.txbFullName_Lap.Name = "txbFullName_Lap";
-            this.txbFullName_Lap.Size = new System.Drawing.Size(450, 23);
-            this.txbFullName_Lap.TabIndex = 151;
+            this.txbGeneralMedication_Lap.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.txbGeneralMedication_Lap.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
+            this.txbGeneralMedication_Lap.Location = new System.Drawing.Point(468, 420);
+            this.txbGeneralMedication_Lap.Margin = new System.Windows.Forms.Padding(2);
+            this.txbGeneralMedication_Lap.MaxLength = 36;
+            this.txbGeneralMedication_Lap.Name = "txbGeneralMedication_Lap";
+            this.txbGeneralMedication_Lap.Size = new System.Drawing.Size(514, 23);
+            this.txbGeneralMedication_Lap.TabIndex = 190;
             // 
-            // label129
+            // cbbGeneralMedication_Lap
             // 
-            this.label129.AutoSize = true;
-            this.label129.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
-            this.label129.Location = new System.Drawing.Point(14, 39);
-            this.label129.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label129.Name = "label129";
-            this.label129.Size = new System.Drawing.Size(34, 20);
-            this.label129.TabIndex = 150;
-            this.label129.Text = "HN";
-            // 
-            // label141
-            // 
-            this.label141.AutoSize = true;
-            this.label141.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
-            this.label141.Location = new System.Drawing.Point(14, 12);
-            this.label141.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label141.Name = "label141";
-            this.label141.Size = new System.Drawing.Size(55, 20);
-            this.label141.TabIndex = 149;
-            this.label141.Text = "Name";
-            // 
-            // cbbGeneralNurse3_Lap
-            // 
-            this.cbbGeneralNurse3_Lap.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            this.cbbGeneralMedication_Lap.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.cbbGeneralNurse3_Lap.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cbbGeneralNurse3_Lap.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
-            this.cbbGeneralNurse3_Lap.FormattingEnabled = true;
-            this.cbbGeneralNurse3_Lap.Location = new System.Drawing.Point(146, 312);
-            this.cbbGeneralNurse3_Lap.Margin = new System.Windows.Forms.Padding(2);
-            this.cbbGeneralNurse3_Lap.Name = "cbbGeneralNurse3_Lap";
-            this.cbbGeneralNurse3_Lap.Size = new System.Drawing.Size(460, 23);
-            this.cbbGeneralNurse3_Lap.TabIndex = 147;
+            this.cbbGeneralMedication_Lap.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cbbGeneralMedication_Lap.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
+            this.cbbGeneralMedication_Lap.FormattingEnabled = true;
+            this.cbbGeneralMedication_Lap.Location = new System.Drawing.Point(146, 420);
+            this.cbbGeneralMedication_Lap.Margin = new System.Windows.Forms.Padding(2);
+            this.cbbGeneralMedication_Lap.Name = "cbbGeneralMedication_Lap";
+            this.cbbGeneralMedication_Lap.Size = new System.Drawing.Size(318, 23);
+            this.cbbGeneralMedication_Lap.TabIndex = 189;
             // 
-            // label165
+            // label39
             // 
-            this.label165.AutoSize = true;
-            this.label165.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
-            this.label165.Location = new System.Drawing.Point(19, 317);
-            this.label165.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label165.Name = "label165";
-            this.label165.Size = new System.Drawing.Size(71, 20);
-            this.label165.TabIndex = 146;
-            this.label165.Text = "Nurse 3";
+            this.label39.AutoSize = true;
+            this.label39.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
+            this.label39.Location = new System.Drawing.Point(19, 396);
+            this.label39.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label39.Name = "label39";
+            this.label39.Size = new System.Drawing.Size(99, 20);
+            this.label39.TabIndex = 188;
+            this.label39.Text = "Anesthesia";
             // 
-            // cbbGeneralNurse2_Lap
+            // label179
             // 
-            this.cbbGeneralNurse2_Lap.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            this.label179.AutoSize = true;
+            this.label179.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
+            this.label179.Location = new System.Drawing.Point(19, 424);
+            this.label179.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label179.Name = "label179";
+            this.label179.Size = new System.Drawing.Size(96, 20);
+            this.label179.TabIndex = 187;
+            this.label179.Text = "Medication";
+            // 
+            // txbFindingOperative_Lap
+            // 
+            this.txbFindingOperative_Lap.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.cbbGeneralNurse2_Lap.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cbbGeneralNurse2_Lap.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
-            this.cbbGeneralNurse2_Lap.FormattingEnabled = true;
-            this.cbbGeneralNurse2_Lap.Location = new System.Drawing.Point(146, 285);
-            this.cbbGeneralNurse2_Lap.Margin = new System.Windows.Forms.Padding(2);
-            this.cbbGeneralNurse2_Lap.Name = "cbbGeneralNurse2_Lap";
-            this.cbbGeneralNurse2_Lap.Size = new System.Drawing.Size(460, 23);
-            this.cbbGeneralNurse2_Lap.TabIndex = 145;
+            this.txbFindingOperative_Lap.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.txbFindingOperative_Lap.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
+            this.txbFindingOperative_Lap.Location = new System.Drawing.Point(106, 162);
+            this.txbFindingOperative_Lap.Margin = new System.Windows.Forms.Padding(2);
+            this.txbFindingOperative_Lap.MaxLength = 1000;
+            this.txbFindingOperative_Lap.Multiline = true;
+            this.txbFindingOperative_Lap.Name = "txbFindingOperative_Lap";
+            this.txbFindingOperative_Lap.Size = new System.Drawing.Size(871, 102);
+            this.txbFindingOperative_Lap.TabIndex = 90;
             // 
-            // cbbGeneralNurse1_Lap
+            // label182
             // 
-            this.cbbGeneralNurse1_Lap.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            this.label182.AutoSize = true;
+            this.label182.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold);
+            this.label182.Location = new System.Drawing.Point(14, 137);
+            this.label182.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label182.Name = "label182";
+            this.label182.Size = new System.Drawing.Size(234, 20);
+            this.label182.TabIndex = 89;
+            this.label182.Text = "Gernaral Operative Findings";
+            // 
+            // txbFindingComment_Lap
+            // 
+            this.txbFindingComment_Lap.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.cbbGeneralNurse1_Lap.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cbbGeneralNurse1_Lap.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
-            this.cbbGeneralNurse1_Lap.FormattingEnabled = true;
-            this.cbbGeneralNurse1_Lap.Location = new System.Drawing.Point(146, 258);
-            this.cbbGeneralNurse1_Lap.Margin = new System.Windows.Forms.Padding(2);
-            this.cbbGeneralNurse1_Lap.Name = "cbbGeneralNurse1_Lap";
-            this.cbbGeneralNurse1_Lap.Size = new System.Drawing.Size(460, 23);
-            this.cbbGeneralNurse1_Lap.TabIndex = 144;
+            this.txbFindingComment_Lap.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.txbFindingComment_Lap.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
+            this.txbFindingComment_Lap.Location = new System.Drawing.Point(106, 288);
+            this.txbFindingComment_Lap.Margin = new System.Windows.Forms.Padding(2);
+            this.txbFindingComment_Lap.MaxLength = 1000;
+            this.txbFindingComment_Lap.Multiline = true;
+            this.txbFindingComment_Lap.Name = "txbFindingComment_Lap";
+            this.txbFindingComment_Lap.Size = new System.Drawing.Size(871, 102);
+            this.txbFindingComment_Lap.TabIndex = 92;
             // 
-            // label178
+            // label185
             // 
-            this.label178.AutoSize = true;
-            this.label178.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
-            this.label178.Location = new System.Drawing.Point(19, 234);
-            this.label178.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label178.Name = "label178";
-            this.label178.Size = new System.Drawing.Size(104, 20);
-            this.label178.TabIndex = 143;
-            this.label178.Text = "Anesthesist";
-            // 
-            // cbbGeneralDoctor_Lap
-            // 
-            this.cbbGeneralDoctor_Lap.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.cbbGeneralDoctor_Lap.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cbbGeneralDoctor_Lap.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
-            this.cbbGeneralDoctor_Lap.FormattingEnabled = true;
-            this.cbbGeneralDoctor_Lap.Location = new System.Drawing.Point(145, 204);
-            this.cbbGeneralDoctor_Lap.Margin = new System.Windows.Forms.Padding(2);
-            this.cbbGeneralDoctor_Lap.Name = "cbbGeneralDoctor_Lap";
-            this.cbbGeneralDoctor_Lap.Size = new System.Drawing.Size(460, 23);
-            this.cbbGeneralDoctor_Lap.TabIndex = 142;
-            // 
-            // label180
-            // 
-            this.label180.AutoSize = true;
-            this.label180.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
-            this.label180.Location = new System.Drawing.Point(19, 288);
-            this.label180.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label180.Name = "label180";
-            this.label180.Size = new System.Drawing.Size(71, 20);
-            this.label180.TabIndex = 139;
-            this.label180.Text = "Nurse 2";
-            // 
-            // label181
-            // 
-            this.label181.AutoSize = true;
-            this.label181.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
-            this.label181.Location = new System.Drawing.Point(19, 261);
-            this.label181.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label181.Name = "label181";
-            this.label181.Size = new System.Drawing.Size(71, 20);
-            this.label181.TabIndex = 138;
-            this.label181.Text = "Nurse 1";
-            // 
-            // label183
-            // 
-            this.label183.AutoSize = true;
-            this.label183.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
-            this.label183.Location = new System.Drawing.Point(19, 371);
-            this.label183.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label183.Name = "label183";
-            this.label183.Size = new System.Drawing.Size(96, 20);
-            this.label183.TabIndex = 136;
-            this.label183.Text = "Instrument";
-            // 
-            // label184
-            // 
-            this.label184.AutoSize = true;
-            this.label184.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
-            this.label184.Location = new System.Drawing.Point(18, 207);
-            this.label184.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label184.Name = "label184";
-            this.label184.Size = new System.Drawing.Size(63, 20);
-            this.label184.TabIndex = 135;
-            this.label184.Text = "Doctor";
+            this.label185.AutoSize = true;
+            this.label185.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold);
+            this.label185.Location = new System.Drawing.Point(14, 288);
+            this.label185.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label185.Name = "label185";
+            this.label185.Size = new System.Drawing.Size(85, 20);
+            this.label185.TabIndex = 91;
+            this.label185.Text = "Comment";
             // 
             // FormProcedure
             // 
@@ -10487,6 +10744,8 @@ namespace EndoscopicSystem.V2.Forms
             this.tabFindingENT.PerformLayout();
             this.tabFindingENT2.ResumeLayout(false);
             this.tabFindingENT2.PerformLayout();
+            this.tabGeneralLab.ResumeLayout(false);
+            this.tabGeneralLab.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxSnapshot)).EndInit();
             this.panel3.ResumeLayout(false);
             this.gb32.ResumeLayout(false);
@@ -10585,8 +10844,8 @@ namespace EndoscopicSystem.V2.Forms
             this.gb5.ResumeLayout(false);
             this.gb5.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxSaved5)).EndInit();
-            this.tabGeneralLab.ResumeLayout(false);
-            this.tabGeneralLab.PerformLayout();
+            this.tabFindingLab.ResumeLayout(false);
+            this.tabFindingLab.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -11314,5 +11573,23 @@ namespace EndoscopicSystem.V2.Forms
         private System.Windows.Forms.Label label181;
         private System.Windows.Forms.Label label183;
         private System.Windows.Forms.Label label184;
+        private System.Windows.Forms.TextBox txbGeneralAnesthesia_Lap;
+        private System.Windows.Forms.ComboBox cbbGeneralAnesthesia_Lap;
+        private System.Windows.Forms.Label label37;
+        private System.Windows.Forms.TextBox txbGeneralBriefHistory_Lap;
+        private System.Windows.Forms.TextBox txbGeneralIndication_Lap;
+        private System.Windows.Forms.ComboBox cbbGeneralIndication_Lap;
+        private System.Windows.Forms.Label label38;
+        private System.Windows.Forms.TextBox txbGeneralMedication_Lap;
+        private System.Windows.Forms.ComboBox cbbGeneralMedication_Lap;
+        private System.Windows.Forms.Label label39;
+        private System.Windows.Forms.Label label179;
+        private System.Windows.Forms.TabPage tabFindingLab;
+        private System.Windows.Forms.TextBox txbFindingComment_Lap;
+        private System.Windows.Forms.Label label185;
+        private System.Windows.Forms.TextBox txbFindingOperative_Lap;
+        private System.Windows.Forms.Label label182;
+        private System.Windows.Forms.TextBox txbFindingDiagnosis_Lap;
+        private System.Windows.Forms.Label label36;
     }
 }

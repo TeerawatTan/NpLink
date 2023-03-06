@@ -123,12 +123,12 @@ namespace EndoscopicSystem.Entities
         public virtual DbSet<Recommendation> Recommendations { get; set; }
         public virtual DbSet<Hospital> Hospitals { get; set; }
         public virtual DbSet<Finding> Findings { get; set; }
-        public virtual DbSet<Endoscopic> Endoscopics { get; set; }
         public virtual DbSet<BiliarySystem> BiliarySystems { get; set; }
         public virtual DbSet<Other> Other { get; set; }
         public virtual DbSet<Pancrea> Pancreas { get; set; }
         public virtual DbSet<PapillaMajor> PapillaMajors { get; set; }
         public virtual DbSet<PapillaMinor> PapillaMinors { get; set; }
+        public virtual DbSet<Endoscopic> Endoscopics { get; set; }
     
         public virtual ObjectResult<BrochoscopyReport_Result> BrochoscopyReport(string hn, Nullable<int> procedure, Nullable<int> endoscopicId)
         {

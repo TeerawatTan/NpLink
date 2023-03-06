@@ -774,16 +774,23 @@ namespace EndoscopicSystem.V2.Forms
 
         private void FormLive_FormClosing(object sender, FormClosingEventArgs e)
         {
-            base.OnFormClosing(e);
-            UnhookWindowsHookEx(_hookID);
-
-            Disconnect();
-            if (videoSourcePlayer == null)
-            { return; }
-            if (videoSourcePlayer.IsRunning)
+            try
             {
-                this.videoSourcePlayer.Stop();
-                _fileWriter.Close();
+                // base.OnFormClosing(e);
+                UnhookWindowsHookEx(_hookID);
+
+                Disconnect();
+                if (videoSourcePlayer == null)
+                { return; }
+                if (videoSourcePlayer.IsRunning)
+                {
+                    this.videoSourcePlayer.Stop();
+                    _fileWriter.Close();
+                }
+            }
+            catch (Exception)
+            {
+
             }
         }
 
