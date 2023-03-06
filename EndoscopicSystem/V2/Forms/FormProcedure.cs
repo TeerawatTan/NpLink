@@ -2027,17 +2027,17 @@ namespace EndoscopicSystem.V2.Forms
                 txbGeneralMedication_Lap.Text = endoscopic.MedicationOther;
                 if (patient.IndicationID != null)
                 {
-                    cbbGeneralIndication_Colono.SelectedValue = patient.IndicationID;
+                    cbbGeneralIndication_Lap.SelectedValue = patient.IndicationID;
                 }
                 else
                 {
                     if (endoscopic.IndicationID != null)
                     {
-                        cbbGeneralIndication_Colono.SelectedValue = endoscopic.IndicationID;
+                        cbbGeneralIndication_Lap.SelectedValue = endoscopic.IndicationID;
                     }
                     else
                     {
-                        cbbGeneralIndication_Colono.SelectedValue = 0;
+                        cbbGeneralIndication_Lap.SelectedValue = 0;
                     }
                 }
                 txbGeneralBriefHistory_Lap.Text = endoscopic.BriefHistory;
