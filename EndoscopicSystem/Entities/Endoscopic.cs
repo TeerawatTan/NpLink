@@ -60,5 +60,6 @@ namespace EndoscopicSystem.Entities
         public string BowelPreparationRegimen { get; set; }
         public string BowelPreparationResult { get; set; }
         public Nullable<int> AnesthesiaID { get; set; }
+        public string GeneralOperativeFinding { get; set; }
     }
 }

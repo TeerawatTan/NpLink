@@ -49,7 +49,7 @@ namespace EndoscopicSystem.V2.Forms
             {
                 this._procedureId = procId;
             }
-            
+
             this._appointmentId = appId;
             this._endoscopicId = endoId;
             this._patientId = patientId;
@@ -64,12 +64,12 @@ namespace EndoscopicSystem.V2.Forms
             pictureBoxSaved2.AllowDrop = true;
             pictureBoxSaved3.AllowDrop = true;
             pictureBoxSaved4.AllowDrop = true;
+            pictureBoxSaved5.AllowDrop = true;
+            pictureBoxSaved6.AllowDrop = true;
+            pictureBoxSaved7.AllowDrop = true;
+            pictureBoxSaved8.AllowDrop = true;
             if (_procedureId != 8)
             {
-                pictureBoxSaved5.AllowDrop = true;
-                pictureBoxSaved6.AllowDrop = true;
-                pictureBoxSaved7.AllowDrop = true;
-                pictureBoxSaved8.AllowDrop = true;
                 pictureBoxSaved9.AllowDrop = true;
                 pictureBoxSaved10.AllowDrop = true;
                 pictureBoxSaved11.AllowDrop = true;
@@ -100,12 +100,12 @@ namespace EndoscopicSystem.V2.Forms
             pictureBoxSaved2.DragDrop += new System.Windows.Forms.DragEventHandler(PictureBox_DragDrop);
             pictureBoxSaved3.DragDrop += new System.Windows.Forms.DragEventHandler(PictureBox_DragDrop);
             pictureBoxSaved4.DragDrop += new System.Windows.Forms.DragEventHandler(PictureBox_DragDrop);
+            pictureBoxSaved5.DragDrop += new System.Windows.Forms.DragEventHandler(PictureBox_DragDrop);
+            pictureBoxSaved6.DragDrop += new System.Windows.Forms.DragEventHandler(PictureBox_DragDrop);
+            pictureBoxSaved7.DragDrop += new System.Windows.Forms.DragEventHandler(PictureBox_DragDrop);
+            pictureBoxSaved8.DragDrop += new System.Windows.Forms.DragEventHandler(PictureBox_DragDrop);
             if (_procedureId != 8)
             {
-                pictureBoxSaved5.DragDrop += new System.Windows.Forms.DragEventHandler(PictureBox_DragDrop);
-                pictureBoxSaved6.DragDrop += new System.Windows.Forms.DragEventHandler(PictureBox_DragDrop);
-                pictureBoxSaved7.DragDrop += new System.Windows.Forms.DragEventHandler(PictureBox_DragDrop);
-                pictureBoxSaved8.DragDrop += new System.Windows.Forms.DragEventHandler(PictureBox_DragDrop);
                 pictureBoxSaved9.DragDrop += new System.Windows.Forms.DragEventHandler(PictureBox_DragDrop);
                 pictureBoxSaved10.DragDrop += new System.Windows.Forms.DragEventHandler(PictureBox_DragDrop);
                 pictureBoxSaved11.DragDrop += new System.Windows.Forms.DragEventHandler(PictureBox_DragDrop);
@@ -136,12 +136,12 @@ namespace EndoscopicSystem.V2.Forms
             pictureBoxSaved2.DragEnter += new System.Windows.Forms.DragEventHandler(PictureBox_DragEnter);
             pictureBoxSaved3.DragEnter += new System.Windows.Forms.DragEventHandler(PictureBox_DragEnter);
             pictureBoxSaved4.DragEnter += new System.Windows.Forms.DragEventHandler(PictureBox_DragEnter);
+            pictureBoxSaved5.DragEnter += new System.Windows.Forms.DragEventHandler(PictureBox_DragEnter);
+            pictureBoxSaved6.DragEnter += new System.Windows.Forms.DragEventHandler(PictureBox_DragEnter);
+            pictureBoxSaved7.DragEnter += new System.Windows.Forms.DragEventHandler(PictureBox_DragEnter);
+            pictureBoxSaved8.DragEnter += new System.Windows.Forms.DragEventHandler(PictureBox_DragEnter);
             if (_procedureId != 8)
             {
-                pictureBoxSaved5.DragEnter += new System.Windows.Forms.DragEventHandler(PictureBox_DragEnter);
-                pictureBoxSaved6.DragEnter += new System.Windows.Forms.DragEventHandler(PictureBox_DragEnter);
-                pictureBoxSaved7.DragEnter += new System.Windows.Forms.DragEventHandler(PictureBox_DragEnter);
-                pictureBoxSaved8.DragEnter += new System.Windows.Forms.DragEventHandler(PictureBox_DragEnter);
                 pictureBoxSaved9.DragEnter += new System.Windows.Forms.DragEventHandler(PictureBox_DragEnter);
                 pictureBoxSaved10.DragEnter += new System.Windows.Forms.DragEventHandler(PictureBox_DragEnter);
                 pictureBoxSaved11.DragEnter += new System.Windows.Forms.DragEventHandler(PictureBox_DragEnter);
@@ -244,7 +244,7 @@ namespace EndoscopicSystem.V2.Forms
 
                 for (int i = 0; i < imageList.Count; i++)
                 {
-                    ListViewItem item = new ListViewItem($"Image_{i+1}", i);
+                    ListViewItem item = new ListViewItem($"Image_{i + 1}", i);
                     listView1.Items.Add(item);
                 }
             }
@@ -254,8 +254,8 @@ namespace EndoscopicSystem.V2.Forms
             SearchHN(_hnNo, _procedureId);
 
             if (_procedureId == 8)
-                SetDisablePictureBox(5, 32);
-            
+                SetDisablePictureBox(9, 32);
+
         }
         private void SearchHN(string hn, int procId = 0)
         {
@@ -328,12 +328,12 @@ namespace EndoscopicSystem.V2.Forms
             SetPictureBox(pictureBoxSaved2, txtPictureBoxSaved2, 2);
             SetPictureBox(pictureBoxSaved3, txtPictureBoxSaved3, 3);
             SetPictureBox(pictureBoxSaved4, txtPictureBoxSaved4, 4);
+            SetPictureBox(pictureBoxSaved5, txtPictureBoxSaved5, 5);
+            SetPictureBox(pictureBoxSaved6, txtPictureBoxSaved6, 6);
+            SetPictureBox(pictureBoxSaved7, txtPictureBoxSaved7, 7);
+            SetPictureBox(pictureBoxSaved8, txtPictureBoxSaved8, 8);
             if (_procedureId != 8)
             {
-                SetPictureBox(pictureBoxSaved5, txtPictureBoxSaved5, 5);
-                SetPictureBox(pictureBoxSaved6, txtPictureBoxSaved6, 6);
-                SetPictureBox(pictureBoxSaved7, txtPictureBoxSaved7, 7);
-                SetPictureBox(pictureBoxSaved8, txtPictureBoxSaved8, 8);
                 SetPictureBox(pictureBoxSaved9, txtPictureBoxSaved9, 9);
                 SetPictureBox(pictureBoxSaved10, txtPictureBoxSaved10, 10);
                 SetPictureBox(pictureBoxSaved11, txtPictureBoxSaved11, 11);
@@ -647,44 +647,44 @@ namespace EndoscopicSystem.V2.Forms
         }
         private void pictureBoxRefresh()
         {
-        //    pictureBoxSaved1.ImageLocation = pictureBoxSaved1.ImageLocation;
-        //    pictureBoxSaved1.Refresh();
-        //    pictureBoxSaved2.ImageLocation = pictureBoxSaved2.ImageLocation;
-        //    pictureBoxSaved2.Refresh();
-        //    pictureBoxSaved3.ImageLocation = pictureBoxSaved3.ImageLocation;
-        //    pictureBoxSaved3.Refresh();
-        //    pictureBoxSaved4.ImageLocation = pictureBoxSaved4.ImageLocation;
-        //    pictureBoxSaved4.Refresh();
-        //    pictureBoxSaved5.ImageLocation = pictureBoxSaved5.ImageLocation;
-        //    pictureBoxSaved5.Refresh();
-        //    pictureBoxSaved6.ImageLocation = pictureBoxSaved6.ImageLocation;
-        //    pictureBoxSaved6.Refresh();
-        //    pictureBoxSaved7.ImageLocation = pictureBoxSaved7.ImageLocation;
-        //    pictureBoxSaved7.Refresh();
-        //    pictureBoxSaved8.ImageLocation = pictureBoxSaved8.ImageLocation;
-        //    pictureBoxSaved8.Refresh();
-        //    pictureBoxSaved9.ImageLocation = pictureBoxSaved9.ImageLocation;
-        //    pictureBoxSaved9.Refresh();
-        //    pictureBoxSaved9.ImageLocation = pictureBoxSaved9.ImageLocation;
-        //    pictureBoxSaved9.Refresh();
-        //    pictureBoxSaved10.ImageLocation = pictureBoxSaved10.ImageLocation;
-        //    pictureBoxSaved10.Refresh();
-        //    pictureBoxSaved11.ImageLocation = pictureBoxSaved11.ImageLocation;
-        //    pictureBoxSaved11.Refresh();
-        //    pictureBoxSaved12.ImageLocation = pictureBoxSaved12.ImageLocation;
-        //    pictureBoxSaved12.Refresh();
-        //    pictureBoxSaved13.ImageLocation = pictureBoxSaved13.ImageLocation;
-        //    pictureBoxSaved13.Refresh();
-        //    pictureBoxSaved14.ImageLocation = pictureBoxSaved14.ImageLocation;
-        //    pictureBoxSaved14.Refresh();
-        //    pictureBoxSaved15.ImageLocation = pictureBoxSaved15.ImageLocation;
-        //    pictureBoxSaved15.Refresh();
-        //    pictureBoxSaved16.ImageLocation = pictureBoxSaved16.ImageLocation;
-        //    pictureBoxSaved16.Refresh();
-        //    pictureBoxSaved17.ImageLocation = pictureBoxSaved17.ImageLocation;
-        //    pictureBoxSaved17.Refresh();
-        //    pictureBoxSaved18.ImageLocation = pictureBoxSaved18.ImageLocation;
-        //    pictureBoxSaved18.Refresh();
+            //    pictureBoxSaved1.ImageLocation = pictureBoxSaved1.ImageLocation;
+            //    pictureBoxSaved1.Refresh();
+            //    pictureBoxSaved2.ImageLocation = pictureBoxSaved2.ImageLocation;
+            //    pictureBoxSaved2.Refresh();
+            //    pictureBoxSaved3.ImageLocation = pictureBoxSaved3.ImageLocation;
+            //    pictureBoxSaved3.Refresh();
+            //    pictureBoxSaved4.ImageLocation = pictureBoxSaved4.ImageLocation;
+            //    pictureBoxSaved4.Refresh();
+            //    pictureBoxSaved5.ImageLocation = pictureBoxSaved5.ImageLocation;
+            //    pictureBoxSaved5.Refresh();
+            //    pictureBoxSaved6.ImageLocation = pictureBoxSaved6.ImageLocation;
+            //    pictureBoxSaved6.Refresh();
+            //    pictureBoxSaved7.ImageLocation = pictureBoxSaved7.ImageLocation;
+            //    pictureBoxSaved7.Refresh();
+            //    pictureBoxSaved8.ImageLocation = pictureBoxSaved8.ImageLocation;
+            //    pictureBoxSaved8.Refresh();
+            //    pictureBoxSaved9.ImageLocation = pictureBoxSaved9.ImageLocation;
+            //    pictureBoxSaved9.Refresh();
+            //    pictureBoxSaved9.ImageLocation = pictureBoxSaved9.ImageLocation;
+            //    pictureBoxSaved9.Refresh();
+            //    pictureBoxSaved10.ImageLocation = pictureBoxSaved10.ImageLocation;
+            //    pictureBoxSaved10.Refresh();
+            //    pictureBoxSaved11.ImageLocation = pictureBoxSaved11.ImageLocation;
+            //    pictureBoxSaved11.Refresh();
+            //    pictureBoxSaved12.ImageLocation = pictureBoxSaved12.ImageLocation;
+            //    pictureBoxSaved12.Refresh();
+            //    pictureBoxSaved13.ImageLocation = pictureBoxSaved13.ImageLocation;
+            //    pictureBoxSaved13.Refresh();
+            //    pictureBoxSaved14.ImageLocation = pictureBoxSaved14.ImageLocation;
+            //    pictureBoxSaved14.Refresh();
+            //    pictureBoxSaved15.ImageLocation = pictureBoxSaved15.ImageLocation;
+            //    pictureBoxSaved15.Refresh();
+            //    pictureBoxSaved16.ImageLocation = pictureBoxSaved16.ImageLocation;
+            //    pictureBoxSaved16.Refresh();
+            //    pictureBoxSaved17.ImageLocation = pictureBoxSaved17.ImageLocation;
+            //    pictureBoxSaved17.Refresh();
+            //    pictureBoxSaved18.ImageLocation = pictureBoxSaved18.ImageLocation;
+            //    pictureBoxSaved18.Refresh();
 
             foreach (var i in formPopup.Controls)
             {
@@ -1369,18 +1369,26 @@ namespace EndoscopicSystem.V2.Forms
         private void SaveImageForLaparoscopy(int endoscopicID, int procedureID)
         {
             System.Windows.Forms.PictureBox[] boxes =
-            {
+           {
                     pictureBoxSaved1,
                     pictureBoxSaved2,
                     pictureBoxSaved3,
-                    pictureBoxSaved4
+                    pictureBoxSaved4,
+                    pictureBoxSaved5,
+                    pictureBoxSaved6,
+                    pictureBoxSaved7,
+                    pictureBoxSaved8
                 };
             System.Windows.Forms.TextBox[] texts =
             {
                     txtPictureBoxSaved1,
                     txtPictureBoxSaved2,
                     txtPictureBoxSaved3,
-                    txtPictureBoxSaved4
+                    txtPictureBoxSaved4,
+                    txtPictureBoxSaved5,
+                    txtPictureBoxSaved6,
+                    txtPictureBoxSaved7,
+                    txtPictureBoxSaved8
                 };
             int i = 0;
             int seq = 1;

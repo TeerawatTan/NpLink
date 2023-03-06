@@ -125,7 +125,7 @@ namespace EndoscopicSystem.V2.Forms
             SearchHN(_hnNo, _procedureId);
 
             if (_procedureId == 8)
-                SetDisablePictureBox(5, 32);
+                SetDisablePictureBox(9, 32);
         }
         private void SetDisablePictureBox(int start, int end)
         {
@@ -1561,12 +1561,12 @@ namespace EndoscopicSystem.V2.Forms
             SetPictureBox(pictureBoxSaved2, txtPictureBoxSaved2, 2);
             SetPictureBox(pictureBoxSaved3, txtPictureBoxSaved3, 3);
             SetPictureBox(pictureBoxSaved4, txtPictureBoxSaved4, 4);
+            SetPictureBox(pictureBoxSaved5, txtPictureBoxSaved5, 5);
+            SetPictureBox(pictureBoxSaved6, txtPictureBoxSaved6, 6);
+            SetPictureBox(pictureBoxSaved7, txtPictureBoxSaved7, 7);
+            SetPictureBox(pictureBoxSaved8, txtPictureBoxSaved8, 8);
             if (_procedureId != 8)
             {
-                SetPictureBox(pictureBoxSaved5, txtPictureBoxSaved5, 5);
-                SetPictureBox(pictureBoxSaved6, txtPictureBoxSaved6, 6);
-                SetPictureBox(pictureBoxSaved7, txtPictureBoxSaved7, 7);
-                SetPictureBox(pictureBoxSaved8, txtPictureBoxSaved8, 8);
                 SetPictureBox(pictureBoxSaved9, txtPictureBoxSaved9, 9);
                 SetPictureBox(pictureBoxSaved10, txtPictureBoxSaved10, 10);
                 SetPictureBox(pictureBoxSaved11, txtPictureBoxSaved11, 11);
@@ -2021,6 +2021,31 @@ namespace EndoscopicSystem.V2.Forms
                 {
                     txbGeneralSN_Lap.Text = _db.Instruments.FirstOrDefault(f => f.ID == appointment.Instrument1ID)?.SerialNumber;
                 }
+                cbbGeneralAnesthesia_Lap.SelectedValue = endoscopic.AnesthesiaID ?? 0;
+                txbGeneralAnesthesia_Lap.Text = endoscopic.Anesthesia;
+                cbbGeneralMedication_Lap.SelectedValue = endoscopic.MedicationID ?? 0;
+                txbGeneralMedication_Lap.Text = endoscopic.MedicationOther;
+                if (patient.IndicationID != null)
+                {
+                    cbbGeneralIndication_Lap.SelectedValue = patient.IndicationID;
+                }
+                else
+                {
+                    if (endoscopic.IndicationID != null)
+                    {
+                        cbbGeneralIndication_Lap.SelectedValue = endoscopic.IndicationID;
+                    }
+                    else
+                    {
+                        cbbGeneralIndication_Lap.SelectedValue = 0;
+                    }
+                }
+                txbGeneralBriefHistory_Lap.Text = endoscopic.BriefHistory;
+
+                // Finding
+                txbFindingDiagnosis_Lap.Text = endoscopic.Diagnosis;
+                txbFindingOperative_Lap.Text = endoscopic.GeneralOperativeFinding;
+                txbFindingComment_Lap.Text = endoscopic.Comment;
             }
 
             //if (endoscopic.StartRecordDate.HasValue) recordStartDate = endoscopic.StartRecordDate.Value;
@@ -2521,14 +2546,22 @@ namespace EndoscopicSystem.V2.Forms
                     pictureBoxSaved1,
                     pictureBoxSaved2,
                     pictureBoxSaved3,
-                    pictureBoxSaved4
+                    pictureBoxSaved4,
+                    pictureBoxSaved5,
+                    pictureBoxSaved6,
+                    pictureBoxSaved7,
+                    pictureBoxSaved8
                 };
             System.Windows.Forms.TextBox[] texts =
             {
                     txtPictureBoxSaved1,
                     txtPictureBoxSaved2,
                     txtPictureBoxSaved3,
-                    txtPictureBoxSaved4
+                    txtPictureBoxSaved4,
+                    txtPictureBoxSaved5,
+                    txtPictureBoxSaved6,
+                    txtPictureBoxSaved7,
+                    txtPictureBoxSaved8
                 };
             int i = 0;
             int seq = 1;
@@ -2657,7 +2690,17 @@ namespace EndoscopicSystem.V2.Forms
                             dpGeneralTo_Colono.Value.Hour,
                             dpGeneralTo_Colono.Value.Minute,
                             dpGeneralTo_Colono.Value.Second);
-                    endoscopic.AnesthesiaID = (int?)cbbGeneralAnesthesia_Colono.SelectedValue;
+                    endoscopic.AnesthesiaID = (int?)cbbGeneralAnesthesia_Lap.SelectedValue;
+                    endoscopic.MedicationID = (int?)cbbGeneralMedication_Lap.SelectedValue;
+                    endoscopic.IndicationID = (int?)cbbGeneralIndication_Lap.SelectedValue;
+                    endoscopic.Anesthesia = txbGeneralAnesthesia_Lap.Text;
+                    endoscopic.MedicationOther = txbGeneralMedication_Lap.Text;
+                    endoscopic.IndicationOther = txbGeneralIndication_Lap.Text;
+                    endoscopic.AnesthesiaID = (int?)cbbGeneralAnesthesia_Lap.SelectedValue;
+                    endoscopic.BriefHistory = txbGeneralBriefHistory_Lap.Text;
+                    endoscopic.Diagnosis = txbFindingDiagnosis_Lap.Text;
+                    endoscopic.GeneralOperativeFinding = txbFindingOperative_Lap.Text;
+                    endoscopic.Comment = txbFindingComment_Lap.Text;
                 }
                 endoscopic.UpdateDate = System.DateTime.Now;
                 endoscopic.UpdateBy = _id;
@@ -2830,6 +2873,7 @@ namespace EndoscopicSystem.V2.Forms
             else if (procedureId == 8) // Laparoscopy
             {
                 tabControl1.TabPages.Add(tabGeneralLab);
+                tabControl1.TabPages.Add(tabFindingLab);
 
                 // General Tab
                 _dropdownListService.DropdownOPD(cbbGeneralOPD_Lap);
@@ -2841,6 +2885,9 @@ namespace EndoscopicSystem.V2.Forms
                 _dropdownListService.DropdownNurse(cbbGeneralNurse3_Lap);
                 _dropdownListService.DropdownFinancial(cbbGeneralFinancial_Lap);
                 _dropdownListService.DropdownInstrument(cbbGeneralInstrument_Lap);
+                _dropdownListService.DropdownAnesthesia(cbbGeneralAnesthesia_Lap);
+                _dropdownListService.DropdownMedication(cbbGeneralMedication_Lap);
+                _dropdownListService.DropdownIndication(cbbGeneralIndication_Lap);
             }
             else
             {
