@@ -68,33 +68,30 @@ namespace EndoscopicSystem.V2.Forms
             pictureBoxSaved6.AllowDrop = true;
             pictureBoxSaved7.AllowDrop = true;
             pictureBoxSaved8.AllowDrop = true;
-            if (_procedureId != 8)
-            {
-                pictureBoxSaved9.AllowDrop = true;
-                pictureBoxSaved10.AllowDrop = true;
-                pictureBoxSaved11.AllowDrop = true;
-                pictureBoxSaved12.AllowDrop = true;
-                pictureBoxSaved13.AllowDrop = true;
-                pictureBoxSaved14.AllowDrop = true;
-                pictureBoxSaved15.AllowDrop = true;
-                pictureBoxSaved16.AllowDrop = true;
-                pictureBoxSaved17.AllowDrop = true;
-                pictureBoxSaved18.AllowDrop = true;
-                pictureBoxSaved19.AllowDrop = true;
-                pictureBoxSaved20.AllowDrop = true;
-                pictureBoxSaved21.AllowDrop = true;
-                pictureBoxSaved22.AllowDrop = true;
-                pictureBoxSaved23.AllowDrop = true;
-                pictureBoxSaved24.AllowDrop = true;
-                pictureBoxSaved25.AllowDrop = true;
-                pictureBoxSaved26.AllowDrop = true;
-                pictureBoxSaved27.AllowDrop = true;
-                pictureBoxSaved28.AllowDrop = true;
-                pictureBoxSaved29.AllowDrop = true;
-                pictureBoxSaved30.AllowDrop = true;
-                pictureBoxSaved31.AllowDrop = true;
-                pictureBoxSaved32.AllowDrop = true;
-            }
+            pictureBoxSaved9.AllowDrop = true;
+            pictureBoxSaved10.AllowDrop = true;
+            pictureBoxSaved11.AllowDrop = true;
+            pictureBoxSaved12.AllowDrop = true;
+            pictureBoxSaved13.AllowDrop = true;
+            pictureBoxSaved14.AllowDrop = true;
+            pictureBoxSaved15.AllowDrop = true;
+            pictureBoxSaved16.AllowDrop = true;
+            pictureBoxSaved17.AllowDrop = true;
+            pictureBoxSaved18.AllowDrop = true;
+            pictureBoxSaved19.AllowDrop = true;
+            pictureBoxSaved20.AllowDrop = true;
+            pictureBoxSaved21.AllowDrop = true;
+            pictureBoxSaved22.AllowDrop = true;
+            pictureBoxSaved23.AllowDrop = true;
+            pictureBoxSaved24.AllowDrop = true;
+            pictureBoxSaved25.AllowDrop = true;
+            pictureBoxSaved26.AllowDrop = true;
+            pictureBoxSaved27.AllowDrop = true;
+            pictureBoxSaved28.AllowDrop = true;
+            pictureBoxSaved29.AllowDrop = true;
+            pictureBoxSaved30.AllowDrop = true;
+            pictureBoxSaved31.AllowDrop = true;
+            pictureBoxSaved32.AllowDrop = true;
 
             pictureBoxSaved1.DragDrop += new System.Windows.Forms.DragEventHandler(PictureBox_DragDrop);
             pictureBoxSaved2.DragDrop += new System.Windows.Forms.DragEventHandler(PictureBox_DragDrop);
@@ -104,33 +101,30 @@ namespace EndoscopicSystem.V2.Forms
             pictureBoxSaved6.DragDrop += new System.Windows.Forms.DragEventHandler(PictureBox_DragDrop);
             pictureBoxSaved7.DragDrop += new System.Windows.Forms.DragEventHandler(PictureBox_DragDrop);
             pictureBoxSaved8.DragDrop += new System.Windows.Forms.DragEventHandler(PictureBox_DragDrop);
-            if (_procedureId != 8)
-            {
-                pictureBoxSaved9.DragDrop += new System.Windows.Forms.DragEventHandler(PictureBox_DragDrop);
-                pictureBoxSaved10.DragDrop += new System.Windows.Forms.DragEventHandler(PictureBox_DragDrop);
-                pictureBoxSaved11.DragDrop += new System.Windows.Forms.DragEventHandler(PictureBox_DragDrop);
-                pictureBoxSaved12.DragDrop += new System.Windows.Forms.DragEventHandler(PictureBox_DragDrop);
-                pictureBoxSaved13.DragDrop += new System.Windows.Forms.DragEventHandler(PictureBox_DragDrop);
-                pictureBoxSaved14.DragDrop += new System.Windows.Forms.DragEventHandler(PictureBox_DragDrop);
-                pictureBoxSaved15.DragDrop += new System.Windows.Forms.DragEventHandler(PictureBox_DragDrop);
-                pictureBoxSaved16.DragDrop += new System.Windows.Forms.DragEventHandler(PictureBox_DragDrop);
-                pictureBoxSaved17.DragDrop += new System.Windows.Forms.DragEventHandler(PictureBox_DragDrop);
-                pictureBoxSaved18.DragDrop += new System.Windows.Forms.DragEventHandler(PictureBox_DragDrop);
-                pictureBoxSaved19.DragDrop += new System.Windows.Forms.DragEventHandler(PictureBox_DragDrop);
-                pictureBoxSaved20.DragDrop += new System.Windows.Forms.DragEventHandler(PictureBox_DragDrop);
-                pictureBoxSaved21.DragDrop += new System.Windows.Forms.DragEventHandler(PictureBox_DragDrop);
-                pictureBoxSaved22.DragDrop += new System.Windows.Forms.DragEventHandler(PictureBox_DragDrop);
-                pictureBoxSaved23.DragDrop += new System.Windows.Forms.DragEventHandler(PictureBox_DragDrop);
-                pictureBoxSaved24.DragDrop += new System.Windows.Forms.DragEventHandler(PictureBox_DragDrop);
-                pictureBoxSaved25.DragDrop += new System.Windows.Forms.DragEventHandler(PictureBox_DragDrop);
-                pictureBoxSaved26.DragDrop += new System.Windows.Forms.DragEventHandler(PictureBox_DragDrop);
-                pictureBoxSaved27.DragDrop += new System.Windows.Forms.DragEventHandler(PictureBox_DragDrop);
-                pictureBoxSaved28.DragDrop += new System.Windows.Forms.DragEventHandler(PictureBox_DragDrop);
-                pictureBoxSaved29.DragDrop += new System.Windows.Forms.DragEventHandler(PictureBox_DragDrop);
-                pictureBoxSaved30.DragDrop += new System.Windows.Forms.DragEventHandler(PictureBox_DragDrop);
-                pictureBoxSaved31.DragDrop += new System.Windows.Forms.DragEventHandler(PictureBox_DragDrop);
-                pictureBoxSaved32.DragDrop += new System.Windows.Forms.DragEventHandler(PictureBox_DragDrop);
-            }
+            pictureBoxSaved9.DragDrop += new System.Windows.Forms.DragEventHandler(PictureBox_DragDrop);
+            pictureBoxSaved10.DragDrop += new System.Windows.Forms.DragEventHandler(PictureBox_DragDrop);
+            pictureBoxSaved11.DragDrop += new System.Windows.Forms.DragEventHandler(PictureBox_DragDrop);
+            pictureBoxSaved12.DragDrop += new System.Windows.Forms.DragEventHandler(PictureBox_DragDrop);
+            pictureBoxSaved13.DragDrop += new System.Windows.Forms.DragEventHandler(PictureBox_DragDrop);
+            pictureBoxSaved14.DragDrop += new System.Windows.Forms.DragEventHandler(PictureBox_DragDrop);
+            pictureBoxSaved15.DragDrop += new System.Windows.Forms.DragEventHandler(PictureBox_DragDrop);
+            pictureBoxSaved16.DragDrop += new System.Windows.Forms.DragEventHandler(PictureBox_DragDrop);
+            pictureBoxSaved17.DragDrop += new System.Windows.Forms.DragEventHandler(PictureBox_DragDrop);
+            pictureBoxSaved18.DragDrop += new System.Windows.Forms.DragEventHandler(PictureBox_DragDrop);
+            pictureBoxSaved19.DragDrop += new System.Windows.Forms.DragEventHandler(PictureBox_DragDrop);
+            pictureBoxSaved20.DragDrop += new System.Windows.Forms.DragEventHandler(PictureBox_DragDrop);
+            pictureBoxSaved21.DragDrop += new System.Windows.Forms.DragEventHandler(PictureBox_DragDrop);
+            pictureBoxSaved22.DragDrop += new System.Windows.Forms.DragEventHandler(PictureBox_DragDrop);
+            pictureBoxSaved23.DragDrop += new System.Windows.Forms.DragEventHandler(PictureBox_DragDrop);
+            pictureBoxSaved24.DragDrop += new System.Windows.Forms.DragEventHandler(PictureBox_DragDrop);
+            pictureBoxSaved25.DragDrop += new System.Windows.Forms.DragEventHandler(PictureBox_DragDrop);
+            pictureBoxSaved26.DragDrop += new System.Windows.Forms.DragEventHandler(PictureBox_DragDrop);
+            pictureBoxSaved27.DragDrop += new System.Windows.Forms.DragEventHandler(PictureBox_DragDrop);
+            pictureBoxSaved28.DragDrop += new System.Windows.Forms.DragEventHandler(PictureBox_DragDrop);
+            pictureBoxSaved29.DragDrop += new System.Windows.Forms.DragEventHandler(PictureBox_DragDrop);
+            pictureBoxSaved30.DragDrop += new System.Windows.Forms.DragEventHandler(PictureBox_DragDrop);
+            pictureBoxSaved31.DragDrop += new System.Windows.Forms.DragEventHandler(PictureBox_DragDrop);
+            pictureBoxSaved32.DragDrop += new System.Windows.Forms.DragEventHandler(PictureBox_DragDrop);
 
             pictureBoxSaved1.DragEnter += new System.Windows.Forms.DragEventHandler(PictureBox_DragEnter);
             pictureBoxSaved2.DragEnter += new System.Windows.Forms.DragEventHandler(PictureBox_DragEnter);
@@ -140,33 +134,30 @@ namespace EndoscopicSystem.V2.Forms
             pictureBoxSaved6.DragEnter += new System.Windows.Forms.DragEventHandler(PictureBox_DragEnter);
             pictureBoxSaved7.DragEnter += new System.Windows.Forms.DragEventHandler(PictureBox_DragEnter);
             pictureBoxSaved8.DragEnter += new System.Windows.Forms.DragEventHandler(PictureBox_DragEnter);
-            if (_procedureId != 8)
-            {
-                pictureBoxSaved9.DragEnter += new System.Windows.Forms.DragEventHandler(PictureBox_DragEnter);
-                pictureBoxSaved10.DragEnter += new System.Windows.Forms.DragEventHandler(PictureBox_DragEnter);
-                pictureBoxSaved11.DragEnter += new System.Windows.Forms.DragEventHandler(PictureBox_DragEnter);
-                pictureBoxSaved12.DragEnter += new System.Windows.Forms.DragEventHandler(PictureBox_DragEnter);
-                pictureBoxSaved13.DragEnter += new System.Windows.Forms.DragEventHandler(PictureBox_DragEnter);
-                pictureBoxSaved14.DragEnter += new System.Windows.Forms.DragEventHandler(PictureBox_DragEnter);
-                pictureBoxSaved15.DragEnter += new System.Windows.Forms.DragEventHandler(PictureBox_DragEnter);
-                pictureBoxSaved16.DragEnter += new System.Windows.Forms.DragEventHandler(PictureBox_DragEnter);
-                pictureBoxSaved17.DragEnter += new System.Windows.Forms.DragEventHandler(PictureBox_DragEnter);
-                pictureBoxSaved18.DragEnter += new System.Windows.Forms.DragEventHandler(PictureBox_DragEnter);
-                pictureBoxSaved19.DragEnter += new System.Windows.Forms.DragEventHandler(PictureBox_DragEnter);
-                pictureBoxSaved20.DragEnter += new System.Windows.Forms.DragEventHandler(PictureBox_DragEnter);
-                pictureBoxSaved21.DragEnter += new System.Windows.Forms.DragEventHandler(PictureBox_DragEnter);
-                pictureBoxSaved22.DragEnter += new System.Windows.Forms.DragEventHandler(PictureBox_DragEnter);
-                pictureBoxSaved23.DragEnter += new System.Windows.Forms.DragEventHandler(PictureBox_DragEnter);
-                pictureBoxSaved24.DragEnter += new System.Windows.Forms.DragEventHandler(PictureBox_DragEnter);
-                pictureBoxSaved25.DragEnter += new System.Windows.Forms.DragEventHandler(PictureBox_DragEnter);
-                pictureBoxSaved26.DragEnter += new System.Windows.Forms.DragEventHandler(PictureBox_DragEnter);
-                pictureBoxSaved27.DragEnter += new System.Windows.Forms.DragEventHandler(PictureBox_DragEnter);
-                pictureBoxSaved28.DragEnter += new System.Windows.Forms.DragEventHandler(PictureBox_DragEnter);
-                pictureBoxSaved29.DragEnter += new System.Windows.Forms.DragEventHandler(PictureBox_DragEnter);
-                pictureBoxSaved30.DragEnter += new System.Windows.Forms.DragEventHandler(PictureBox_DragEnter);
-                pictureBoxSaved31.DragEnter += new System.Windows.Forms.DragEventHandler(PictureBox_DragEnter);
-                pictureBoxSaved32.DragEnter += new System.Windows.Forms.DragEventHandler(PictureBox_DragEnter);
-            }
+            pictureBoxSaved9.DragEnter += new System.Windows.Forms.DragEventHandler(PictureBox_DragEnter);
+            pictureBoxSaved10.DragEnter += new System.Windows.Forms.DragEventHandler(PictureBox_DragEnter);
+            pictureBoxSaved11.DragEnter += new System.Windows.Forms.DragEventHandler(PictureBox_DragEnter);
+            pictureBoxSaved12.DragEnter += new System.Windows.Forms.DragEventHandler(PictureBox_DragEnter);
+            pictureBoxSaved13.DragEnter += new System.Windows.Forms.DragEventHandler(PictureBox_DragEnter);
+            pictureBoxSaved14.DragEnter += new System.Windows.Forms.DragEventHandler(PictureBox_DragEnter);
+            pictureBoxSaved15.DragEnter += new System.Windows.Forms.DragEventHandler(PictureBox_DragEnter);
+            pictureBoxSaved16.DragEnter += new System.Windows.Forms.DragEventHandler(PictureBox_DragEnter);
+            pictureBoxSaved17.DragEnter += new System.Windows.Forms.DragEventHandler(PictureBox_DragEnter);
+            pictureBoxSaved18.DragEnter += new System.Windows.Forms.DragEventHandler(PictureBox_DragEnter);
+            pictureBoxSaved19.DragEnter += new System.Windows.Forms.DragEventHandler(PictureBox_DragEnter);
+            pictureBoxSaved20.DragEnter += new System.Windows.Forms.DragEventHandler(PictureBox_DragEnter);
+            pictureBoxSaved21.DragEnter += new System.Windows.Forms.DragEventHandler(PictureBox_DragEnter);
+            pictureBoxSaved22.DragEnter += new System.Windows.Forms.DragEventHandler(PictureBox_DragEnter);
+            pictureBoxSaved23.DragEnter += new System.Windows.Forms.DragEventHandler(PictureBox_DragEnter);
+            pictureBoxSaved24.DragEnter += new System.Windows.Forms.DragEventHandler(PictureBox_DragEnter);
+            pictureBoxSaved25.DragEnter += new System.Windows.Forms.DragEventHandler(PictureBox_DragEnter);
+            pictureBoxSaved26.DragEnter += new System.Windows.Forms.DragEventHandler(PictureBox_DragEnter);
+            pictureBoxSaved27.DragEnter += new System.Windows.Forms.DragEventHandler(PictureBox_DragEnter);
+            pictureBoxSaved28.DragEnter += new System.Windows.Forms.DragEventHandler(PictureBox_DragEnter);
+            pictureBoxSaved29.DragEnter += new System.Windows.Forms.DragEventHandler(PictureBox_DragEnter);
+            pictureBoxSaved30.DragEnter += new System.Windows.Forms.DragEventHandler(PictureBox_DragEnter);
+            pictureBoxSaved31.DragEnter += new System.Windows.Forms.DragEventHandler(PictureBox_DragEnter);
+            pictureBoxSaved32.DragEnter += new System.Windows.Forms.DragEventHandler(PictureBox_DragEnter);
         }
 
         private void FormPreviewReport_Load(object sender, EventArgs e)
@@ -180,41 +171,38 @@ namespace EndoscopicSystem.V2.Forms
 
             SetAllowDragDropInPictureBox();
 
-            if (_procedureId != 8)
-            {
-                LoadTextBoxAutoComplete(txtPictureBoxSaved1);
-                LoadTextBoxAutoComplete(txtPictureBoxSaved2);
-                LoadTextBoxAutoComplete(txtPictureBoxSaved3);
-                LoadTextBoxAutoComplete(txtPictureBoxSaved4);
-                LoadTextBoxAutoComplete(txtPictureBoxSaved5);
-                LoadTextBoxAutoComplete(txtPictureBoxSaved6);
-                LoadTextBoxAutoComplete(txtPictureBoxSaved7);
-                LoadTextBoxAutoComplete(txtPictureBoxSaved8);
-                LoadTextBoxAutoComplete(txtPictureBoxSaved9);
-                LoadTextBoxAutoComplete(txtPictureBoxSaved10);
-                LoadTextBoxAutoComplete(txtPictureBoxSaved11);
-                LoadTextBoxAutoComplete(txtPictureBoxSaved12);
-                LoadTextBoxAutoComplete(txtPictureBoxSaved13);
-                LoadTextBoxAutoComplete(txtPictureBoxSaved14);
-                LoadTextBoxAutoComplete(txtPictureBoxSaved15);
-                LoadTextBoxAutoComplete(txtPictureBoxSaved16);
-                LoadTextBoxAutoComplete(txtPictureBoxSaved17);
-                LoadTextBoxAutoComplete(txtPictureBoxSaved18);
-                LoadTextBoxAutoComplete(txtPictureBoxSaved19);
-                LoadTextBoxAutoComplete(txtPictureBoxSaved20);
-                LoadTextBoxAutoComplete(txtPictureBoxSaved21);
-                LoadTextBoxAutoComplete(txtPictureBoxSaved22);
-                LoadTextBoxAutoComplete(txtPictureBoxSaved23);
-                LoadTextBoxAutoComplete(txtPictureBoxSaved24);
-                LoadTextBoxAutoComplete(txtPictureBoxSaved25);
-                LoadTextBoxAutoComplete(txtPictureBoxSaved26);
-                LoadTextBoxAutoComplete(txtPictureBoxSaved27);
-                LoadTextBoxAutoComplete(txtPictureBoxSaved28);
-                LoadTextBoxAutoComplete(txtPictureBoxSaved29);
-                LoadTextBoxAutoComplete(txtPictureBoxSaved30);
-                LoadTextBoxAutoComplete(txtPictureBoxSaved31);
-                LoadTextBoxAutoComplete(txtPictureBoxSaved32);
-            }
+            LoadTextBoxAutoComplete(txtPictureBoxSaved1);
+            LoadTextBoxAutoComplete(txtPictureBoxSaved2);
+            LoadTextBoxAutoComplete(txtPictureBoxSaved3);
+            LoadTextBoxAutoComplete(txtPictureBoxSaved4);
+            LoadTextBoxAutoComplete(txtPictureBoxSaved5);
+            LoadTextBoxAutoComplete(txtPictureBoxSaved6);
+            LoadTextBoxAutoComplete(txtPictureBoxSaved7);
+            LoadTextBoxAutoComplete(txtPictureBoxSaved8);
+            LoadTextBoxAutoComplete(txtPictureBoxSaved9);
+            LoadTextBoxAutoComplete(txtPictureBoxSaved10);
+            LoadTextBoxAutoComplete(txtPictureBoxSaved11);
+            LoadTextBoxAutoComplete(txtPictureBoxSaved12);
+            LoadTextBoxAutoComplete(txtPictureBoxSaved13);
+            LoadTextBoxAutoComplete(txtPictureBoxSaved14);
+            LoadTextBoxAutoComplete(txtPictureBoxSaved15);
+            LoadTextBoxAutoComplete(txtPictureBoxSaved16);
+            LoadTextBoxAutoComplete(txtPictureBoxSaved17);
+            LoadTextBoxAutoComplete(txtPictureBoxSaved18);
+            LoadTextBoxAutoComplete(txtPictureBoxSaved19);
+            LoadTextBoxAutoComplete(txtPictureBoxSaved20);
+            LoadTextBoxAutoComplete(txtPictureBoxSaved21);
+            LoadTextBoxAutoComplete(txtPictureBoxSaved22);
+            LoadTextBoxAutoComplete(txtPictureBoxSaved23);
+            LoadTextBoxAutoComplete(txtPictureBoxSaved24);
+            LoadTextBoxAutoComplete(txtPictureBoxSaved25);
+            LoadTextBoxAutoComplete(txtPictureBoxSaved26);
+            LoadTextBoxAutoComplete(txtPictureBoxSaved27);
+            LoadTextBoxAutoComplete(txtPictureBoxSaved28);
+            LoadTextBoxAutoComplete(txtPictureBoxSaved29);
+            LoadTextBoxAutoComplete(txtPictureBoxSaved30);
+            LoadTextBoxAutoComplete(txtPictureBoxSaved31);
+            LoadTextBoxAutoComplete(txtPictureBoxSaved32);
 
             #region Set ListView
 
@@ -252,10 +240,6 @@ namespace EndoscopicSystem.V2.Forms
             #endregion
 
             SearchHN(_hnNo, _procedureId);
-
-            if (_procedureId == 8)
-                SetDisablePictureBox(9, 32);
-
         }
         private void SearchHN(string hn, int procId = 0)
         {
@@ -299,29 +283,29 @@ namespace EndoscopicSystem.V2.Forms
                 MessageBox.Show(ex.Message);
             }
         }
-        private void SetDisablePictureBox(int start, int end)
-        {
-            for (int i = start; i <= end; i++)
-            {
-                GroupBox groupBox = (GroupBox)this.Controls.Find("gb" + i.ToString(), true)[0];
-                groupBox.Visible = false;
+        //private void SetDisablePictureBox(int start, int end)
+        //{
+        //    for (int i = start; i <= end; i++)
+        //    {
+        //        GroupBox groupBox = (GroupBox)this.Controls.Find("gb" + i.ToString(), true)[0];
+        //        groupBox.Visible = false;
 
-                //PictureBox pictureBox = (PictureBox)this.Controls.Find("pictureBoxSaved" + i.ToString(), true)[0];
-                //pictureBox.Visible = false;
+        //        //PictureBox pictureBox = (PictureBox)this.Controls.Find("pictureBoxSaved" + i.ToString(), true)[0];
+        //        //pictureBox.Visible = false;
 
-                //Button btnDelete = (Button)this.Controls.Find("btnDeletePictureBoxSaved" + i.ToString(), true)[0];
-                //btnDelete.Visible = false;
+        //        //Button btnDelete = (Button)this.Controls.Find("btnDeletePictureBoxSaved" + i.ToString(), true)[0];
+        //        //btnDelete.Visible = false;
 
-                //Button btnEdit = (Button)this.Controls.Find("btnEditPic" + i.ToString(), true)[0];
-                //btnEdit.Visible = false;
+        //        //Button btnEdit = (Button)this.Controls.Find("btnEditPic" + i.ToString(), true)[0];
+        //        //btnEdit.Visible = false;
 
-                //Button btnUpload = (Button)this.Controls.Find("btnPictureBoxSaved" + i.ToString(), true)[0];
-                //btnUpload.Visible = false;
+        //        //Button btnUpload = (Button)this.Controls.Find("btnPictureBoxSaved" + i.ToString(), true)[0];
+        //        //btnUpload.Visible = false;
 
-                //TextBox txbPix = (TextBox)this.Controls.Find("txtPictureBoxSaved" + i.ToString(), true)[0];
-                //txbPix.Visible = false;
-            }
-        }
+        //        //TextBox txbPix = (TextBox)this.Controls.Find("txtPictureBoxSaved" + i.ToString(), true)[0];
+        //        //txbPix.Visible = false;
+        //    }
+        //}
         private void PushEndoscopicImage()
         {
             SetPictureBox(pictureBoxSaved1, txtPictureBoxSaved1, 1);
@@ -332,33 +316,30 @@ namespace EndoscopicSystem.V2.Forms
             SetPictureBox(pictureBoxSaved6, txtPictureBoxSaved6, 6);
             SetPictureBox(pictureBoxSaved7, txtPictureBoxSaved7, 7);
             SetPictureBox(pictureBoxSaved8, txtPictureBoxSaved8, 8);
-            if (_procedureId != 8)
-            {
-                SetPictureBox(pictureBoxSaved9, txtPictureBoxSaved9, 9);
-                SetPictureBox(pictureBoxSaved10, txtPictureBoxSaved10, 10);
-                SetPictureBox(pictureBoxSaved11, txtPictureBoxSaved11, 11);
-                SetPictureBox(pictureBoxSaved12, txtPictureBoxSaved12, 12);
-                SetPictureBox(pictureBoxSaved13, txtPictureBoxSaved13, 13);
-                SetPictureBox(pictureBoxSaved14, txtPictureBoxSaved14, 14);
-                SetPictureBox(pictureBoxSaved15, txtPictureBoxSaved15, 15);
-                SetPictureBox(pictureBoxSaved16, txtPictureBoxSaved16, 16);
-                SetPictureBox(pictureBoxSaved17, txtPictureBoxSaved17, 17);
-                SetPictureBox(pictureBoxSaved18, txtPictureBoxSaved18, 18);
-                SetPictureBox(pictureBoxSaved19, txtPictureBoxSaved19, 19);
-                SetPictureBox(pictureBoxSaved20, txtPictureBoxSaved20, 20);
-                SetPictureBox(pictureBoxSaved21, txtPictureBoxSaved21, 21);
-                SetPictureBox(pictureBoxSaved22, txtPictureBoxSaved22, 22);
-                SetPictureBox(pictureBoxSaved23, txtPictureBoxSaved23, 23);
-                SetPictureBox(pictureBoxSaved24, txtPictureBoxSaved24, 24);
-                SetPictureBox(pictureBoxSaved25, txtPictureBoxSaved25, 25);
-                SetPictureBox(pictureBoxSaved26, txtPictureBoxSaved26, 26);
-                SetPictureBox(pictureBoxSaved27, txtPictureBoxSaved27, 27);
-                SetPictureBox(pictureBoxSaved28, txtPictureBoxSaved28, 28);
-                SetPictureBox(pictureBoxSaved29, txtPictureBoxSaved29, 29);
-                SetPictureBox(pictureBoxSaved30, txtPictureBoxSaved30, 30);
-                SetPictureBox(pictureBoxSaved31, txtPictureBoxSaved31, 31);
-                SetPictureBox(pictureBoxSaved32, txtPictureBoxSaved32, 32);
-            }
+            SetPictureBox(pictureBoxSaved9, txtPictureBoxSaved9, 9);
+            SetPictureBox(pictureBoxSaved10, txtPictureBoxSaved10, 10);
+            SetPictureBox(pictureBoxSaved11, txtPictureBoxSaved11, 11);
+            SetPictureBox(pictureBoxSaved12, txtPictureBoxSaved12, 12);
+            SetPictureBox(pictureBoxSaved13, txtPictureBoxSaved13, 13);
+            SetPictureBox(pictureBoxSaved14, txtPictureBoxSaved14, 14);
+            SetPictureBox(pictureBoxSaved15, txtPictureBoxSaved15, 15);
+            SetPictureBox(pictureBoxSaved16, txtPictureBoxSaved16, 16);
+            SetPictureBox(pictureBoxSaved17, txtPictureBoxSaved17, 17);
+            SetPictureBox(pictureBoxSaved18, txtPictureBoxSaved18, 18);
+            SetPictureBox(pictureBoxSaved19, txtPictureBoxSaved19, 19);
+            SetPictureBox(pictureBoxSaved20, txtPictureBoxSaved20, 20);
+            SetPictureBox(pictureBoxSaved21, txtPictureBoxSaved21, 21);
+            SetPictureBox(pictureBoxSaved22, txtPictureBoxSaved22, 22);
+            SetPictureBox(pictureBoxSaved23, txtPictureBoxSaved23, 23);
+            SetPictureBox(pictureBoxSaved24, txtPictureBoxSaved24, 24);
+            SetPictureBox(pictureBoxSaved25, txtPictureBoxSaved25, 25);
+            SetPictureBox(pictureBoxSaved26, txtPictureBoxSaved26, 26);
+            SetPictureBox(pictureBoxSaved27, txtPictureBoxSaved27, 27);
+            SetPictureBox(pictureBoxSaved28, txtPictureBoxSaved28, 28);
+            SetPictureBox(pictureBoxSaved29, txtPictureBoxSaved29, 29);
+            SetPictureBox(pictureBoxSaved30, txtPictureBoxSaved30, 30);
+            SetPictureBox(pictureBoxSaved31, txtPictureBoxSaved31, 31);
+            SetPictureBox(pictureBoxSaved32, txtPictureBoxSaved32, 32);
         }
         private void SetPictureBox(PictureBox pictureBox, TextBox textBox, int num)
         {
@@ -1366,64 +1347,64 @@ namespace EndoscopicSystem.V2.Forms
 
             _db.SaveChanges();
         }
-        private void SaveImageForLaparoscopy(int endoscopicID, int procedureID)
-        {
-            System.Windows.Forms.PictureBox[] boxes =
-           {
-                    pictureBoxSaved1,
-                    pictureBoxSaved2,
-                    pictureBoxSaved3,
-                    pictureBoxSaved4,
-                    pictureBoxSaved5,
-                    pictureBoxSaved6,
-                    pictureBoxSaved7,
-                    pictureBoxSaved8
-                };
-            System.Windows.Forms.TextBox[] texts =
-            {
-                    txtPictureBoxSaved1,
-                    txtPictureBoxSaved2,
-                    txtPictureBoxSaved3,
-                    txtPictureBoxSaved4,
-                    txtPictureBoxSaved5,
-                    txtPictureBoxSaved6,
-                    txtPictureBoxSaved7,
-                    txtPictureBoxSaved8
-                };
-            int i = 0;
-            int seq = 1;
-            foreach (var item in texts)
-            {
-                String Imgpath = boxes[i].ImageLocation != null ? boxes[i].ImageLocation.ToString() : "";
-                var endoImgs = _db.EndoscopicImages.Where(x => x.EndoscopicID == endoscopicID && x.ProcedureID == procedureID && x.Seq == seq).FirstOrDefault();
-                if (endoImgs != null)
-                {
-                    endoImgs.ImagePath = Imgpath;
-                    endoImgs.ImageComment = item.Text;
-                    endoImgs.Seq = i + 1;
-                    endoImgs.UpdateBy = _id;
-                    endoImgs.UpdateDate = DateTime.Now;
-                }
-                else
-                {
-                    EndoscopicImage endoscopicImage = new EndoscopicImage();
-                    endoscopicImage.EndoscopicID = endoscopicID;
-                    endoscopicImage.ProcedureID = procedureID;
-                    endoscopicImage.ImagePath = Imgpath;
-                    endoscopicImage.ImageComment = item.Text;
-                    endoscopicImage.Seq = i + 1;
-                    endoscopicImage.CreateBy = _id;
-                    endoscopicImage.CreateDate = DateTime.Now;
-                    endoscopicImage.UpdateBy = _id;
-                    endoscopicImage.UpdateDate = DateTime.Now;
-                    _db.EndoscopicImages.Add(endoscopicImage);
-                }
-                i++;
-                seq++;
-            }
+        //private void SaveImageForLaparoscopy(int endoscopicID, int procedureID)
+        //{
+        //    System.Windows.Forms.PictureBox[] boxes =
+        //   {
+        //            pictureBoxSaved1,
+        //            pictureBoxSaved2,
+        //            pictureBoxSaved3,
+        //            pictureBoxSaved4,
+        //            pictureBoxSaved5,
+        //            pictureBoxSaved6,
+        //            pictureBoxSaved7,
+        //            pictureBoxSaved8
+        //        };
+        //    System.Windows.Forms.TextBox[] texts =
+        //    {
+        //            txtPictureBoxSaved1,
+        //            txtPictureBoxSaved2,
+        //            txtPictureBoxSaved3,
+        //            txtPictureBoxSaved4,
+        //            txtPictureBoxSaved5,
+        //            txtPictureBoxSaved6,
+        //            txtPictureBoxSaved7,
+        //            txtPictureBoxSaved8
+        //        };
+        //    int i = 0;
+        //    int seq = 1;
+        //    foreach (var item in texts)
+        //    {
+        //        String Imgpath = boxes[i].ImageLocation != null ? boxes[i].ImageLocation.ToString() : "";
+        //        var endoImgs = _db.EndoscopicImages.Where(x => x.EndoscopicID == endoscopicID && x.ProcedureID == procedureID && x.Seq == seq).FirstOrDefault();
+        //        if (endoImgs != null)
+        //        {
+        //            endoImgs.ImagePath = Imgpath;
+        //            endoImgs.ImageComment = item.Text;
+        //            endoImgs.Seq = i + 1;
+        //            endoImgs.UpdateBy = _id;
+        //            endoImgs.UpdateDate = DateTime.Now;
+        //        }
+        //        else
+        //        {
+        //            EndoscopicImage endoscopicImage = new EndoscopicImage();
+        //            endoscopicImage.EndoscopicID = endoscopicID;
+        //            endoscopicImage.ProcedureID = procedureID;
+        //            endoscopicImage.ImagePath = Imgpath;
+        //            endoscopicImage.ImageComment = item.Text;
+        //            endoscopicImage.Seq = i + 1;
+        //            endoscopicImage.CreateBy = _id;
+        //            endoscopicImage.CreateDate = DateTime.Now;
+        //            endoscopicImage.UpdateBy = _id;
+        //            endoscopicImage.UpdateDate = DateTime.Now;
+        //            _db.EndoscopicImages.Add(endoscopicImage);
+        //        }
+        //        i++;
+        //        seq++;
+        //    }
 
-            _db.SaveChanges();
-        }
+        //    _db.SaveChanges();
+        //}
         private void UpdateEndoscopic(int procedureId)
         {
             try
@@ -1457,14 +1438,14 @@ namespace EndoscopicSystem.V2.Forms
                 }
 
                 UpdateAppointment(endo.EndoscopicID);
-                if (procedureId == 8)
-                {
-                    SaveImageForLaparoscopy(endo.EndoscopicID, procedureId);
-                }
-                else
-                {
-                    SaveImage(endo.EndoscopicID, procedureId);
-                }
+                //if (procedureId == 8)
+                //{
+                //    SaveImageForLaparoscopy(endo.EndoscopicID, procedureId);
+                //}
+                //else
+                //{
+                SaveImage(endo.EndoscopicID, procedureId);
+                //}
                 //SaveAllImage(endo.EndoscopicID, procedureId);
                 SaveVideo(endo.EndoscopicID, procedureId);
             }

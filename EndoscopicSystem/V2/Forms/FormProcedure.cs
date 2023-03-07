@@ -77,64 +77,58 @@ namespace EndoscopicSystem.V2.Forms
 
             listBox1.Items.Clear();
 
-            if (_procedureId != 8)
-            {
-                LoadTextBoxAutoComplete(txtPictureBoxSaved1);
-                LoadTextBoxAutoComplete(txtPictureBoxSaved2);
-                LoadTextBoxAutoComplete(txtPictureBoxSaved3);
-                LoadTextBoxAutoComplete(txtPictureBoxSaved4);
-                LoadTextBoxAutoComplete(txtPictureBoxSaved5);
-                LoadTextBoxAutoComplete(txtPictureBoxSaved6);
-                LoadTextBoxAutoComplete(txtPictureBoxSaved7);
-                LoadTextBoxAutoComplete(txtPictureBoxSaved8);
-                LoadTextBoxAutoComplete(txtPictureBoxSaved9);
-                LoadTextBoxAutoComplete(txtPictureBoxSaved10);
-                LoadTextBoxAutoComplete(txtPictureBoxSaved11);
-                LoadTextBoxAutoComplete(txtPictureBoxSaved12);
-                LoadTextBoxAutoComplete(txtPictureBoxSaved13);
-                LoadTextBoxAutoComplete(txtPictureBoxSaved14);
-                LoadTextBoxAutoComplete(txtPictureBoxSaved15);
-                LoadTextBoxAutoComplete(txtPictureBoxSaved16);
-                LoadTextBoxAutoComplete(txtPictureBoxSaved17);
-                LoadTextBoxAutoComplete(txtPictureBoxSaved18);
-                LoadTextBoxAutoComplete(txtPictureBoxSaved19);
-                LoadTextBoxAutoComplete(txtPictureBoxSaved20);
-                LoadTextBoxAutoComplete(txtPictureBoxSaved21);
-                LoadTextBoxAutoComplete(txtPictureBoxSaved22);
-                LoadTextBoxAutoComplete(txtPictureBoxSaved23);
-                LoadTextBoxAutoComplete(txtPictureBoxSaved24);
-                LoadTextBoxAutoComplete(txtPictureBoxSaved25);
-                LoadTextBoxAutoComplete(txtPictureBoxSaved26);
-                LoadTextBoxAutoComplete(txtPictureBoxSaved27);
-                LoadTextBoxAutoComplete(txtPictureBoxSaved28);
-                LoadTextBoxAutoComplete(txtPictureBoxSaved29);
-                LoadTextBoxAutoComplete(txtPictureBoxSaved30);
-                LoadTextBoxAutoComplete(txtPictureBoxSaved31);
-                LoadTextBoxAutoComplete(txtPictureBoxSaved32);
+            LoadTextBoxAutoComplete(txtPictureBoxSaved1);
+            LoadTextBoxAutoComplete(txtPictureBoxSaved2);
+            LoadTextBoxAutoComplete(txtPictureBoxSaved3);
+            LoadTextBoxAutoComplete(txtPictureBoxSaved4);
+            LoadTextBoxAutoComplete(txtPictureBoxSaved5);
+            LoadTextBoxAutoComplete(txtPictureBoxSaved6);
+            LoadTextBoxAutoComplete(txtPictureBoxSaved7);
+            LoadTextBoxAutoComplete(txtPictureBoxSaved8);
+            LoadTextBoxAutoComplete(txtPictureBoxSaved9);
+            LoadTextBoxAutoComplete(txtPictureBoxSaved10);
+            LoadTextBoxAutoComplete(txtPictureBoxSaved11);
+            LoadTextBoxAutoComplete(txtPictureBoxSaved12);
+            LoadTextBoxAutoComplete(txtPictureBoxSaved13);
+            LoadTextBoxAutoComplete(txtPictureBoxSaved14);
+            LoadTextBoxAutoComplete(txtPictureBoxSaved15);
+            LoadTextBoxAutoComplete(txtPictureBoxSaved16);
+            LoadTextBoxAutoComplete(txtPictureBoxSaved17);
+            LoadTextBoxAutoComplete(txtPictureBoxSaved18);
+            LoadTextBoxAutoComplete(txtPictureBoxSaved19);
+            LoadTextBoxAutoComplete(txtPictureBoxSaved20);
+            LoadTextBoxAutoComplete(txtPictureBoxSaved21);
+            LoadTextBoxAutoComplete(txtPictureBoxSaved22);
+            LoadTextBoxAutoComplete(txtPictureBoxSaved23);
+            LoadTextBoxAutoComplete(txtPictureBoxSaved24);
+            LoadTextBoxAutoComplete(txtPictureBoxSaved25);
+            LoadTextBoxAutoComplete(txtPictureBoxSaved26);
+            LoadTextBoxAutoComplete(txtPictureBoxSaved27);
+            LoadTextBoxAutoComplete(txtPictureBoxSaved28);
+            LoadTextBoxAutoComplete(txtPictureBoxSaved29);
+            LoadTextBoxAutoComplete(txtPictureBoxSaved30);
+            LoadTextBoxAutoComplete(txtPictureBoxSaved31);
+            LoadTextBoxAutoComplete(txtPictureBoxSaved32);
 
-                LoadFinding();
-                LoadICD9();
-                LoadICD10();
-                LoadProcedureDetails();
-                LoadComplications();
-                LoadHistopathologies();
-                LoadRapidUreaseTests();
-                LoadRecommendations();
-            }
+            LoadFinding();
+            LoadICD9();
+            LoadICD10();
+            LoadProcedureDetails();
+            LoadComplications();
+            LoadHistopathologies();
+            LoadRapidUreaseTests();
+            LoadRecommendations();
 
             SearchHN(_hnNo, _procedureId);
-
-            if (_procedureId == 8)
-                SetDisablePictureBox(9, 32);
         }
-        private void SetDisablePictureBox(int start, int end)
-        {
-            for (int i = start; i <= end; i++)
-            {
-                GroupBox groupBox = (GroupBox)this.Controls.Find("gb" + i.ToString(), true)[0];
-                groupBox.Visible = false;
-            }
-        }
+        //private void SetDisablePictureBox(int start, int end)
+        //{
+        //    for (int i = start; i <= end; i++)
+        //    {
+        //        GroupBox groupBox = (GroupBox)this.Controls.Find("gb" + i.ToString(), true)[0];
+        //        groupBox.Visible = false;
+        //    }
+        //}
         private void cbbProcedureList_SelectedIndexChanged(object sender, EventArgs e)
         {
             if (cbbProcedureList.SelectedIndex <= 0 || (int?)cbbProcedureList.SelectedValue == null)
@@ -302,6 +296,7 @@ namespace EndoscopicSystem.V2.Forms
         {
             _recommendations = _db.Recommendations.Where(w => w.IsActive && w.ProcedureId == _procedureId).OrderBy(o => o.ID).ToList();
         }
+
 
         #region Event Handler EGD
         private void txbGeneralDx1ID_EGD_TextChanged(object sender, EventArgs e)
@@ -1565,34 +1560,30 @@ namespace EndoscopicSystem.V2.Forms
             SetPictureBox(pictureBoxSaved6, txtPictureBoxSaved6, 6);
             SetPictureBox(pictureBoxSaved7, txtPictureBoxSaved7, 7);
             SetPictureBox(pictureBoxSaved8, txtPictureBoxSaved8, 8);
-            if (_procedureId != 8)
-            {
-                SetPictureBox(pictureBoxSaved9, txtPictureBoxSaved9, 9);
-                SetPictureBox(pictureBoxSaved10, txtPictureBoxSaved10, 10);
-                SetPictureBox(pictureBoxSaved11, txtPictureBoxSaved11, 11);
-                SetPictureBox(pictureBoxSaved12, txtPictureBoxSaved12, 12);
-                SetPictureBox(pictureBoxSaved13, txtPictureBoxSaved13, 13);
-                SetPictureBox(pictureBoxSaved14, txtPictureBoxSaved14, 14);
-                SetPictureBox(pictureBoxSaved15, txtPictureBoxSaved15, 15);
-                SetPictureBox(pictureBoxSaved16, txtPictureBoxSaved16, 16);
-                SetPictureBox(pictureBoxSaved17, txtPictureBoxSaved17, 17);
-                SetPictureBox(pictureBoxSaved18, txtPictureBoxSaved18, 18);
-                SetPictureBox(pictureBoxSaved19, txtPictureBoxSaved19, 19);
-                SetPictureBox(pictureBoxSaved20, txtPictureBoxSaved20, 20);
-                SetPictureBox(pictureBoxSaved21, txtPictureBoxSaved21, 21);
-                SetPictureBox(pictureBoxSaved22, txtPictureBoxSaved22, 22);
-                SetPictureBox(pictureBoxSaved23, txtPictureBoxSaved23, 23);
-                SetPictureBox(pictureBoxSaved24, txtPictureBoxSaved24, 24);
-                SetPictureBox(pictureBoxSaved25, txtPictureBoxSaved25, 25);
-                SetPictureBox(pictureBoxSaved26, txtPictureBoxSaved26, 26);
-                SetPictureBox(pictureBoxSaved27, txtPictureBoxSaved27, 27);
-                SetPictureBox(pictureBoxSaved28, txtPictureBoxSaved28, 28);
-                SetPictureBox(pictureBoxSaved29, txtPictureBoxSaved29, 29);
-                SetPictureBox(pictureBoxSaved30, txtPictureBoxSaved30, 30);
-                SetPictureBox(pictureBoxSaved31, txtPictureBoxSaved31, 31);
-                SetPictureBox(pictureBoxSaved32, txtPictureBoxSaved32, 32);
-            }
-            //SetAllPicture();
+            SetPictureBox(pictureBoxSaved9, txtPictureBoxSaved9, 9);
+            SetPictureBox(pictureBoxSaved10, txtPictureBoxSaved10, 10);
+            SetPictureBox(pictureBoxSaved11, txtPictureBoxSaved11, 11);
+            SetPictureBox(pictureBoxSaved12, txtPictureBoxSaved12, 12);
+            SetPictureBox(pictureBoxSaved13, txtPictureBoxSaved13, 13);
+            SetPictureBox(pictureBoxSaved14, txtPictureBoxSaved14, 14);
+            SetPictureBox(pictureBoxSaved15, txtPictureBoxSaved15, 15);
+            SetPictureBox(pictureBoxSaved16, txtPictureBoxSaved16, 16);
+            SetPictureBox(pictureBoxSaved17, txtPictureBoxSaved17, 17);
+            SetPictureBox(pictureBoxSaved18, txtPictureBoxSaved18, 18);
+            SetPictureBox(pictureBoxSaved19, txtPictureBoxSaved19, 19);
+            SetPictureBox(pictureBoxSaved20, txtPictureBoxSaved20, 20);
+            SetPictureBox(pictureBoxSaved21, txtPictureBoxSaved21, 21);
+            SetPictureBox(pictureBoxSaved22, txtPictureBoxSaved22, 22);
+            SetPictureBox(pictureBoxSaved23, txtPictureBoxSaved23, 23);
+            SetPictureBox(pictureBoxSaved24, txtPictureBoxSaved24, 24);
+            SetPictureBox(pictureBoxSaved25, txtPictureBoxSaved25, 25);
+            SetPictureBox(pictureBoxSaved26, txtPictureBoxSaved26, 26);
+            SetPictureBox(pictureBoxSaved27, txtPictureBoxSaved27, 27);
+            SetPictureBox(pictureBoxSaved28, txtPictureBoxSaved28, 28);
+            SetPictureBox(pictureBoxSaved29, txtPictureBoxSaved29, 29);
+            SetPictureBox(pictureBoxSaved30, txtPictureBoxSaved30, 30);
+            SetPictureBox(pictureBoxSaved31, txtPictureBoxSaved31, 31);
+            SetPictureBox(pictureBoxSaved32, txtPictureBoxSaved32, 32);
         }
         private void SetPictureBox(PictureBox pictureBox, TextBox textBox, int num)
         {
@@ -2539,62 +2530,62 @@ namespace EndoscopicSystem.V2.Forms
                 seq++;
             }
         }
-        private void SaveImageForLaparoscopy(int endoscopicID, int procedureID)
-        {
-            System.Windows.Forms.PictureBox[] boxes =
-            {
-                    pictureBoxSaved1,
-                    pictureBoxSaved2,
-                    pictureBoxSaved3,
-                    pictureBoxSaved4,
-                    pictureBoxSaved5,
-                    pictureBoxSaved6,
-                    pictureBoxSaved7,
-                    pictureBoxSaved8
-                };
-            System.Windows.Forms.TextBox[] texts =
-            {
-                    txtPictureBoxSaved1,
-                    txtPictureBoxSaved2,
-                    txtPictureBoxSaved3,
-                    txtPictureBoxSaved4,
-                    txtPictureBoxSaved5,
-                    txtPictureBoxSaved6,
-                    txtPictureBoxSaved7,
-                    txtPictureBoxSaved8
-                };
-            int i = 0;
-            int seq = 1;
-            foreach (var item in texts)
-            {
-                string Imgpath = boxes[i].ImageLocation != null ? boxes[i].ImageLocation.ToString() : "";
-                var endoImgs = _db.EndoscopicImages.Where(x => x.EndoscopicID == endoscopicID && x.ProcedureID == procedureID && x.Seq == seq).FirstOrDefault();
-                if (endoImgs != null)
-                {
-                    endoImgs.ImagePath = string.IsNullOrWhiteSpace(Imgpath) ? null : Imgpath;
-                    endoImgs.ImageComment = item.Text;
-                    endoImgs.Seq = i + 1;
-                    endoImgs.UpdateBy = _id;
-                    endoImgs.UpdateDate = DateTime.Now;
-                }
-                else
-                {
-                    EndoscopicImage endoscopicImage = new EndoscopicImage();
-                    endoscopicImage.EndoscopicID = endoscopicID;
-                    endoscopicImage.ProcedureID = procedureID;
-                    endoscopicImage.ImagePath = string.IsNullOrWhiteSpace(Imgpath) ? null : Imgpath;
-                    endoscopicImage.ImageComment = string.IsNullOrWhiteSpace(item.Text) ? null : item.Text;
-                    endoscopicImage.Seq = i + 1;
-                    endoscopicImage.CreateBy = _id;
-                    endoscopicImage.CreateDate = DateTime.Now;
-                    endoscopicImage.UpdateBy = _id;
-                    endoscopicImage.UpdateDate = DateTime.Now;
-                    _db.EndoscopicImages.Add(endoscopicImage);
-                }
-                i++;
-                seq++;
-            }
-        }
+        //private void SaveImageForLaparoscopy(int endoscopicID, int procedureID)
+        //{
+        //    System.Windows.Forms.PictureBox[] boxes =
+        //    {
+        //            pictureBoxSaved1,
+        //            pictureBoxSaved2,
+        //            pictureBoxSaved3,
+        //            pictureBoxSaved4,
+        //            pictureBoxSaved5,
+        //            pictureBoxSaved6,
+        //            pictureBoxSaved7,
+        //            pictureBoxSaved8
+        //        };
+        //    System.Windows.Forms.TextBox[] texts =
+        //    {
+        //            txtPictureBoxSaved1,
+        //            txtPictureBoxSaved2,
+        //            txtPictureBoxSaved3,
+        //            txtPictureBoxSaved4,
+        //            txtPictureBoxSaved5,
+        //            txtPictureBoxSaved6,
+        //            txtPictureBoxSaved7,
+        //            txtPictureBoxSaved8
+        //        };
+        //    int i = 0;
+        //    int seq = 1;
+        //    foreach (var item in texts)
+        //    {
+        //        string Imgpath = boxes[i].ImageLocation != null ? boxes[i].ImageLocation.ToString() : "";
+        //        var endoImgs = _db.EndoscopicImages.Where(x => x.EndoscopicID == endoscopicID && x.ProcedureID == procedureID && x.Seq == seq).FirstOrDefault();
+        //        if (endoImgs != null)
+        //        {
+        //            endoImgs.ImagePath = string.IsNullOrWhiteSpace(Imgpath) ? null : Imgpath;
+        //            endoImgs.ImageComment = item.Text;
+        //            endoImgs.Seq = i + 1;
+        //            endoImgs.UpdateBy = _id;
+        //            endoImgs.UpdateDate = DateTime.Now;
+        //        }
+        //        else
+        //        {
+        //            EndoscopicImage endoscopicImage = new EndoscopicImage();
+        //            endoscopicImage.EndoscopicID = endoscopicID;
+        //            endoscopicImage.ProcedureID = procedureID;
+        //            endoscopicImage.ImagePath = string.IsNullOrWhiteSpace(Imgpath) ? null : Imgpath;
+        //            endoscopicImage.ImageComment = string.IsNullOrWhiteSpace(item.Text) ? null : item.Text;
+        //            endoscopicImage.Seq = i + 1;
+        //            endoscopicImage.CreateBy = _id;
+        //            endoscopicImage.CreateDate = DateTime.Now;
+        //            endoscopicImage.UpdateBy = _id;
+        //            endoscopicImage.UpdateDate = DateTime.Now;
+        //            _db.EndoscopicImages.Add(endoscopicImage);
+        //        }
+        //        i++;
+        //        seq++;
+        //    }
+        //}
         private void UpdateDataAll(int procedureId, int patientId, Endoscopic endoscopic)
         {
             try
@@ -2708,14 +2699,14 @@ namespace EndoscopicSystem.V2.Forms
                 var patient = UpdatePatientInfo(patientId, procedureId);
                 UpdateFinding(procedureId);
                 UpdateAppointment(endoscopic.EndoscopicID);
-                if (procedureId == 8)
-                {
-                    SaveImageForLaparoscopy(endoscopic.EndoscopicID, procedureId);
-                }
-                else
-                {
-                    SaveImage(endoscopic.EndoscopicID, procedureId);
-                }
+                //if (procedureId == 8)
+                //{
+                //    SaveImageForLaparoscopy(endoscopic.EndoscopicID, procedureId);
+                //}
+                //else
+                //{
+                SaveImage(endoscopic.EndoscopicID, procedureId);
+                //}
                 SaveLogEndoscopic(endoscopic, patientId, procedureId);
                 SaveLogHistory(patientId, procedureId, patient.DoctorID, endoscopic.EndoscopicID);
                 _db.SaveChanges();
