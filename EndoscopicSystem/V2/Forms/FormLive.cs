@@ -49,12 +49,6 @@ namespace EndoscopicSystem.V2.Forms
         public Dictionary<int, string> ImgPath = new Dictionary<int, string>();
         public Form formPopup = new Form(), formPopupVdo = new Form();
         private System.Timers.Timer t;
-        private SoundPlayer _soundConnect = new SoundPlayer();
-        private SoundPlayer _soundDisconnect = new SoundPlayer();
-        private SoundPlayer _soundCapture = new SoundPlayer();
-        private SoundPlayer _soundPause = new SoundPlayer();
-        private SoundPlayer _soundRecord = new SoundPlayer();
-        private SoundPlayer _soundStopRecord = new SoundPlayer();
 
         private const int WH_KEYBOARD_LL = 13;
         private const int WM_KEYDOWN = 0x0100;
@@ -345,10 +339,12 @@ namespace EndoscopicSystem.V2.Forms
             videoSourcePlayer.VideoSource = _videoCaptureDevice;
             videoSourcePlayer.Start();
 
-
-            _soundConnect.SoundLocation = _pathFolderSounds + @"\SoundCapture\Connect.wav";
+            SoundPlayer _soundConnect = new SoundPlayer
+            {
+                SoundLocation = _pathFolderSounds + @"\SoundCapture\Connect.wav"
+            };
             _soundConnect.Play();
-            _soundConnect.Stop();
+            //_soundConnect.Stop();
 
             btnCapture.Enabled = true;
             btnCapture.BackColor = Color.FromArgb(0, 192, 0);
@@ -412,9 +408,11 @@ namespace EndoscopicSystem.V2.Forms
             {
                 EnableConnectionControls(true);
 
-                _soundDisconnect.SoundLocation = _pathFolderSounds + @"\SoundCapture\Disconnecte.wav";
+                SoundPlayer _soundDisconnect = new SoundPlayer
+                {
+                    SoundLocation = _pathFolderSounds + @"\SoundCapture\Disconnecte.wav"
+                };
                 _soundDisconnect.Play();
-                _soundDisconnect.Stop();
 
                 recordEndDate = DateTime.Now;
 
@@ -450,25 +448,22 @@ namespace EndoscopicSystem.V2.Forms
                     captureSoundPath = _pathFolderSounds + $@"\SoundCapture\{_item}.wav";
                     if (File.Exists(captureSoundPath))
                     {
-
+                        SoundPlayer _soundCapture = new SoundPlayer();
                         _soundCapture.SoundLocation = captureSoundPath;
                         _soundCapture.Play();
-                        _soundCapture.Stop();
                     }
                     else
                     {
-                        //oundPlayer soundCapture = new SoundPlayer();
-                        _soundCapture.SoundLocation = _pathFolderSounds + "capture.wav";
-                        _soundCapture.Play();
-                        _soundCapture.Stop();
+                        SoundPlayer soundCapture = new SoundPlayer();
+                        soundCapture.SoundLocation = _pathFolderSounds + "capture.wav";
+                        soundCapture.Play();
                     }
                 }
                 else
                 {
-                    //SoundPlayer soundCapture = new SoundPlayer();
-                    _soundCapture.SoundLocation = _pathFolderSounds + "capture.wav";
-                    _soundCapture.Play();
-                    _soundCapture.Stop();
+                    SoundPlayer soundCapture = new SoundPlayer();
+                    soundCapture.SoundLocation = _pathFolderSounds + "capture.wav";
+                    soundCapture.Play();
                 }
 
                 //soundCapture.Play();
@@ -627,9 +622,9 @@ namespace EndoscopicSystem.V2.Forms
             {
                 t.Stop();
 
+                SoundPlayer _soundPause = new SoundPlayer();
                 _soundPause.SoundLocation = _pathFolderSounds + @"\SoundCapture\Pause.wav";
                 _soundPause.Play();
-                _soundPause.Stop();
 
                 pictureBoxRecording.Visible = false;
                 btnPause.Text = "Resume";
@@ -638,9 +633,9 @@ namespace EndoscopicSystem.V2.Forms
             {
                 t.Start();
 
+                SoundPlayer _soundRecord = new SoundPlayer();
                 _soundRecord.SoundLocation = _pathFolderSounds + @"\SoundCapture\Record.wav";
                 _soundRecord.Play();
-                _soundRecord.Stop();
 
                 pictureBoxRecording.Visible = true;
                 btnPause.Text = "Pause";
@@ -654,9 +649,9 @@ namespace EndoscopicSystem.V2.Forms
             _isRecord = true;
             _isPause = false;
 
+            SoundPlayer _soundRecord = new SoundPlayer();
             _soundRecord.SoundLocation = _pathFolderSounds + @"\SoundCapture\Record.wav";
             _soundRecord.Play();
-            _soundRecord.Stop();
 
             int h = _videoCaptureDevice.VideoResolution.FrameSize.Height;
             int w = _videoCaptureDevice.VideoResolution.FrameSize.Width;
@@ -728,9 +723,9 @@ namespace EndoscopicSystem.V2.Forms
 
         private void btnStop_Click(object sender, EventArgs e)
         {
+            SoundPlayer _soundStopRecord = new SoundPlayer();
             _soundStopRecord.SoundLocation = _pathFolderSounds + @"\SoundCapture\Stop.wav";
             _soundStopRecord.Play();
-            _soundStopRecord.Stop();
 
             _isStopRecord = true;
             _isRecord = false;
