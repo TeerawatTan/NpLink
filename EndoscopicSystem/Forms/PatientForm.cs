@@ -185,7 +185,8 @@ namespace EndoscopicSystem
 
         private void btnSave_Click(object sender, EventArgs e)
         {
-            if ((int)cbbProcedureList.SelectedValue == 0)
+            int? procedureSelected = (int?)cbbProcedureList.SelectedValue;
+            if (procedureSelected == null || procedureSelected == 0)
             {
                 MessageBox.Show("กรุณาเลือก Procedure List", "Procedure List", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 return;
