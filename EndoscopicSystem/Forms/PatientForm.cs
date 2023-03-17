@@ -691,10 +691,10 @@ namespace EndoscopicSystem
             }
         }
 
-        private void dtBirthDate_ValueChanged(object sender, EventArgs e)
-        {
-            txtAge.Text = (DateTime.Today.Year - dtBirthDate.Value.Year).ToString();
-        }
+        //private void dtBirthDate_ValueChanged(object sender, EventArgs e)
+        //{
+        //    txtAge.Text = (DateTime.Today.Year - dtBirthDate.Value.Year).ToString();
+        //}
 
         private void LoadTextBoxAutoComplete(TextBox textBox)
         {
