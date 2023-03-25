@@ -60,7 +60,7 @@ namespace EndoscopicSystem.V2.Forms
             this.btnRecord = new System.Windows.Forms.Button();
             this.btnPause = new System.Windows.Forms.Button();
             this.pictureBoxSnapshot = new System.Windows.Forms.PictureBox();
-            this.listView1 = new System.Windows.Forms.ListView();
+            this.panel1 = new System.Windows.Forms.Panel();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxRecording)).BeginInit();
@@ -392,7 +392,7 @@ namespace EndoscopicSystem.V2.Forms
             this.pictureBoxRecording.BackColor = System.Drawing.Color.Black;
             this.pictureBoxRecording.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.pictureBoxRecording.Image = global::EndoscopicSystem.Properties.Resources.led_blinksred_mini;
-            this.pictureBoxRecording.Location = new System.Drawing.Point(1134, 134);
+            this.pictureBoxRecording.Location = new System.Drawing.Point(1040, 133);
             this.pictureBoxRecording.Margin = new System.Windows.Forms.Padding(2);
             this.pictureBoxRecording.Name = "pictureBoxRecording";
             this.pictureBoxRecording.Size = new System.Drawing.Size(33, 29);
@@ -458,24 +458,21 @@ namespace EndoscopicSystem.V2.Forms
             this.pictureBoxSnapshot.TabStop = false;
             this.pictureBoxSnapshot.Visible = false;
             // 
-            // listView1
+            // panel1
             // 
-            this.listView1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.listView1.HideSelection = false;
-            this.listView1.Location = new System.Drawing.Point(1096, 119);
-            this.listView1.Name = "listView1";
-            this.listView1.Size = new System.Drawing.Size(796, 755);
-            this.listView1.TabIndex = 117;
-            this.listView1.UseCompatibleStateImageBehavior = false;
+            this.panel1.AutoScroll = true;
+            this.panel1.Location = new System.Drawing.Point(1103, 119);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(796, 755);
+            this.panel1.TabIndex = 118;
             // 
             // FormLive
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1904, 1011);
+            this.Controls.Add(this.panel1);
             this.Controls.Add(this.groupBox1);
-            this.Controls.Add(this.listView1);
             this.Controls.Add(this.btnPause);
             this.Controls.Add(this.btnStop);
             this.Controls.Add(this.btnRecord);
@@ -536,11 +533,11 @@ namespace EndoscopicSystem.V2.Forms
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.ComboBox cbbProcedureList;
         private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.ListView listView1;
         private System.Windows.Forms.TextBox txbSex;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.TextBox txbDoctor;
         private System.Windows.Forms.Label label9;
+        private System.Windows.Forms.Panel panel1;
     }
 }
