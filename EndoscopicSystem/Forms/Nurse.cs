@@ -61,6 +61,8 @@ namespace EndoscopicSystem
                         MessageBox.Show("Save successfully.");
 
                         GetData();
+
+                        chkEnable.Checked = true;
                     }
                     else
                     {

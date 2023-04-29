@@ -8,6 +8,7 @@ namespace EndoscopicSystem.Repository
     public interface IUserRepository
     {
         User GetUserLogin(string userName);
+        int CountUser();
     }
 
     public class UserRepository : IUserRepository
@@ -52,6 +53,14 @@ namespace EndoscopicSystem.Repository
             }
             
             return user;
+        }
+
+        public int CountUser()
+        {
+            using (var context = new EndoscopicEntities())
+            {
+                return context.Users.Count();
+            }
         }
     }
 }

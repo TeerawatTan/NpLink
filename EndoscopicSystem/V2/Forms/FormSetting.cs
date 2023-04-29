@@ -10,16 +10,27 @@ namespace EndoscopicSystem.V2.Forms
         private int _id = 0;
         private Form _activeForm = null;
         private Button _currentBtn = null;
+        private bool _checkInstrument = false;
 
-        public FormSetting(int id)
+        public FormSetting(int id, bool? checkInstrument = null)
         {
             InitializeComponent();
             _id = id;
+
+            if (checkInstrument.HasValue)
+            {
+                _checkInstrument = checkInstrument.Value;
+            }
         }
 
         private void FormSetting_Load(object sender, EventArgs e)
         {
             DisableMenuButton();
+
+            if (_checkInstrument)
+            {
+                menuInstrumentSetting_Click(this.menuInstrumentSetting, e);
+            }
         }
 
         private void DisableMenuButton()

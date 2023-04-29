@@ -73,6 +73,7 @@ namespace EndoscopicSystem.V2.Forms
             this.pictureBox_Statistic.TabIndex = 28;
             this.pictureBox_Statistic.TabStop = false;
             this.pictureBox_Statistic.WaitOnLoad = true;
+            this.pictureBox_Statistic.Click += new System.EventHandler(this.pictureBox_Statistic_Click);
             // 
             // pictureBox_Setting
             // 
@@ -325,6 +326,7 @@ namespace EndoscopicSystem.V2.Forms
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Home Page";
             this.Load += new System.EventHandler(this.FormHome_Load);
+            this.Shown += new System.EventHandler(this.FormHome_Shown);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox_Statistic)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox_Setting)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox_SeaarchPatient)).EndInit();

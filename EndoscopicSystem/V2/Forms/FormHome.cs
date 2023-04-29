@@ -18,6 +18,8 @@ namespace EndoscopicSystem.V2.Forms
         private string _pathFolderImageCapture = ConfigurationManager.AppSettings["pathSaveImageCapture"];
         //private string _pathFolderDicom = ConfigurationManager.AppSettings["pathSaveDicom"];
         private string _pathFolderPdf = ConfigurationManager.AppSettings["pathSavePdf"];
+        private bool? _checkInstrument = null;
+
         public FormHome(int id)
         {
             InitializeComponent();
@@ -35,6 +37,23 @@ namespace EndoscopicSystem.V2.Forms
             }
 
             ConfigCreateFolder();
+        }
+
+        private bool CheckInputInstrument(EventArgs e)
+        {
+            var instruments = _db.Instruments.AsQueryable();
+            if (instruments.Count() == 0)
+            {
+                MessageBox.Show("กรุณาตั้งค่า Instrument | Please enter instruments.", "Warning !", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                _checkInstrument = true;
+                pictureBox_Setting_Click(this.pictureBox_Setting, e);
+                return false;
+            }
+            else
+            {
+                _checkInstrument = false;
+                return true;
+            }
         }
 
         private void ConfigCreateFolder()
@@ -82,6 +101,9 @@ namespace EndoscopicSystem.V2.Forms
 
         private void pictureBox_Dashboard_Click(object sender, EventArgs e)
         {
+            if (!CheckInputInstrument(e))
+                return;
+
             // Hide all forms except subForm
             //foreach (Form form in Application.OpenForms)
             //{
@@ -101,6 +123,9 @@ namespace EndoscopicSystem.V2.Forms
 
         private void pictureBox_Patient_Click(object sender, EventArgs e)
         {
+            if (!CheckInputInstrument(e))
+                return;
+
             this.Hide();
             PatientForm patientForm = new PatientForm(_id);
             patientForm.ShowDialog();
@@ -111,6 +136,9 @@ namespace EndoscopicSystem.V2.Forms
 
         private void pictureBox_EndoscopyRoom_Click(object sender, EventArgs e)
         {
+            if (!CheckInputInstrument(e))
+                return;
+
             this.Hide();
             //FormLive formLive = new FormLive(_id);
             //formLive.ShowDialog();
@@ -124,6 +152,9 @@ namespace EndoscopicSystem.V2.Forms
 
         private void pictureBox_SeaarchPatient_Click(object sender, EventArgs e)
         {
+            if (!CheckInputInstrument(e))
+                return;
+
             this.Hide();
             SearchPatientForm searchPatientForm = new SearchPatientForm(_id);
             searchPatientForm.ShowDialog();
@@ -135,11 +166,22 @@ namespace EndoscopicSystem.V2.Forms
         private void pictureBox_Setting_Click(object sender, EventArgs e)
         {
             this.Hide();
-            FormSetting formSetting = new FormSetting(_id);
+            FormSetting formSetting = new FormSetting(_id, _checkInstrument);
             formSetting.ShowDialog();
             formSetting = null;
             this.Show();
             ActiveMenuLabel(lb_Setting);
+        }
+
+        private void FormHome_Shown(object sender, EventArgs e)
+        {
+            CheckInputInstrument(e);
+        }
+
+        private void pictureBox_Statistic_Click(object sender, EventArgs e)
+        {
+            if (!CheckInputInstrument(e))
+                return;
         }
     }
 }

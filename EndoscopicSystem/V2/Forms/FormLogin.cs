@@ -1,4 +1,5 @@
 ﻿using EndoscopicSystem.Constants;
+using EndoscopicSystem.Helpers;
 using EndoscopicSystem.Repository;
 using System;
 using System.Windows.Forms;
@@ -25,8 +26,15 @@ namespace EndoscopicSystem.V2.Forms
         {
             try
             {
+                var checkUser = userRepo.CountUser();
+                if (checkUser == 0)
+                {
+                    FormRegister formRegister = new FormRegister();
+                    formRegister.ShowDialog();
+                }
+
                 var user = userRepo.GetUserLogin(userName);
-                if (user != null && user.PasswordHash.Equals(password))
+                if (user != null && EncriptHelper.VerifyPassword(password, user.PasswordHash))
                 {
                     userID = user.Id;
                     return Constant.LOGIN_SUCCESS;
@@ -103,6 +111,27 @@ namespace EndoscopicSystem.V2.Forms
         {
             //Application.Exit();
             //Application.ExitThread();
+        }
+
+        private void label4_Click(object sender, EventArgs e)
+        {
+            FormRegister formRegister = new FormRegister();
+            formRegister.ShowDialog();
+        }
+
+        private void label4_MouseHover(object sender, EventArgs e)
+        {
+            this.Cursor = Cursors.Hand;
+        }
+
+        private void label4_MouseLeave(object sender, EventArgs e)
+        {
+            this.Cursor = Cursors.Default;
+        }
+
+        private void pictureBox2_Click(object sender, EventArgs e)
+        {
+            txbPassword.UseSystemPasswordChar = !txbPassword.UseSystemPasswordChar;
         }
     }
 }
