@@ -134,6 +134,7 @@ namespace EndoscopicSystem.V2.Forms
             // label4
             // 
             this.label4.AutoSize = true;
+            this.label4.BackColor = System.Drawing.Color.Transparent;
             this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
             this.label4.ForeColor = System.Drawing.Color.MediumBlue;
             this.label4.Location = new System.Drawing.Point(13, 572);
