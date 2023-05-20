@@ -248,18 +248,12 @@ namespace EndoscopicSystem.V2.Forms
             if (_procedureId > 0 && _appointmentId > 0)
             {
                 // Stop VdoSourcePlayer
+                btnStop_Click(sender, e);
                 Disconnect();
-                if (videoSourcePlayer == null)
-                    return;
-                if (videoSourcePlayer.IsRunning)
-                {
-                    this.videoSourcePlayer.Stop();
-                    _fileWriter.Close();
-                }
 
                 FormProceed.Self.txbStep.Text = "0" + ",,";
 
-                Task.Delay(1000);
+                Task.Delay(5000);
 
                 if (_procedureId == 1 && _isEgdAndColonoDone)
                 {
@@ -588,8 +582,8 @@ namespace EndoscopicSystem.V2.Forms
             _soundRecord.SoundLocation = _pathFolderSounds + @"\SoundCapture\Record.wav";
             _soundRecord.Play();
 
-            int h = _videoCaptureDevice.VideoResolution.FrameSize.Height;
-            int w = _videoCaptureDevice.VideoResolution.FrameSize.Width;
+            int height = _videoCaptureDevice.VideoResolution.FrameSize.Height;
+            int width = _videoCaptureDevice.VideoResolution.FrameSize.Width;
 
             string nameImage = "Video"; //HN
             string _pathFolderVideoToSave = _pathFolderVideo + @"\" + _hnNo + @"\" + DateTime.Now.ToString("yyyyMMdd") + @"\";
@@ -601,15 +595,15 @@ namespace EndoscopicSystem.V2.Forms
             }
 
             _fileWriter.Flush();
-            _fileWriter.Open(nameCapture, w, h, 25, VideoCodec.MPEG4, 2879000);
+            _fileWriter.Open(nameCapture, width, height, 30, VideoCodec.MPEG4, 2879000);
 
             try
             {
                 _fileWriter.WriteVideoFrame(video);
             }
-            catch (Exception)
+            catch (Exception ex)
             {
-                //throw;
+                throw new Exception(ex.Message);
             }
 
             _isStopRecord = false;
@@ -627,6 +621,9 @@ namespace EndoscopicSystem.V2.Forms
             t.Enabled = true;
             t.AutoReset = true;
             t.Interval = 1000;
+            h = 0;
+            m = 0;
+            s = 0;
             t.Elapsed += OnTimeEvent;
         }
 
@@ -685,21 +682,21 @@ namespace EndoscopicSystem.V2.Forms
             pictureBoxRecording.Visible = false;
 
             t.Stop();
-            h = 0;
-            m = 0;
-            s = 0;
+            //h = 0;
+            //m = 0;
+            //s = 0;
             lbTime.Text = String.Format("{0}:{1}:{2}", h.ToString().PadLeft(2, '0'), m.ToString().PadLeft(2, '0'), s.ToString().PadLeft(2, '0'));
         }
 
         public Bitmap CloneBitmap(Bitmap bitmap)
         {
-            Image bi;
+            //Image bi;
             MemoryStream ms = new MemoryStream();
             bitmap.Save(ms, System.Drawing.Imaging.ImageFormat.Jpeg);
             ms.Seek(0, SeekOrigin.Begin);
-            bi = Image.FromStream(ms);
+            //bi = Image.FromStream(ms);
             ms.Close();
-            return (Bitmap)bi;
+            return bitmap;
         }
 
         private void FormLive_FormClosing(object sender, FormClosingEventArgs e)
@@ -728,19 +725,25 @@ namespace EndoscopicSystem.V2.Forms
         {
             if (_isRecord)
             {
-                Bitmap videoRecord = null;
-                videoRecord = CloneBitmap((Bitmap)eventArgs.Frame.Clone());
-
                 try
                 {
+                    Bitmap videoRecord = CloneBitmap((Bitmap)eventArgs.Frame.Clone());
+
                     if (!_isPause)
                     {
-                        _fileWriter.WriteVideoFrame(videoRecord);
+                        if (videoRecord != null)
+                        {
+                            _fileWriter.WriteVideoFrame(videoRecord);
+                        }
+                    }
+                    else
+                    {
+                        _fileWriter.Close();
                     }
                 }
                 catch (Exception)
                 {
-
+                    //throw new Exception(ex.Message);
                 }
             }
             else
