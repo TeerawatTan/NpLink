@@ -1,4 +1,5 @@
-﻿using EndoscopicSystem.Entities;
+﻿using EndoscopicSystem.Constants;
+using EndoscopicSystem.Entities;
 using EndoscopicSystem.Forms;
 using System;
 using System.ComponentModel;
@@ -106,7 +107,7 @@ namespace EndoscopicSystem
 
         private void menuSearchPatient_Click(object sender, EventArgs e)
         {
-            OpenChildForm(new SearchPatientForm(UserID));
+            OpenChildForm(new SearchPatientForm(UserID, Constant.PageName.SEARCH_PATIENT_PAGE));
             ActiveMenuButton(sender);
         }
 

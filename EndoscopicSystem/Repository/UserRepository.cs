@@ -40,7 +40,7 @@ namespace EndoscopicSystem.Repository
                     }
                     break;
                 }
-                catch (Exception)
+                catch (Exception ex)
                 {
                     if (++retryCount >= MaxRetries)
                     {

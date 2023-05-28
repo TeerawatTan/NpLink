@@ -1,4 +1,5 @@
-﻿using EndoscopicSystem.Entities;
+﻿using EndoscopicSystem.Constants;
+using EndoscopicSystem.Entities;
 using EndoscopicSystem.Repository;
 using System;
 using System.Collections.Generic;
@@ -17,12 +18,13 @@ namespace EndoscopicSystem
         readonly EndoscopicEntities db = new EndoscopicEntities();
         protected readonly GetDropdownList list = new GetDropdownList();
         private readonly int UserID;
-        public string hnNo = "";
+        public string hnNo = "", _pageName = "";
         public int patientId = 0, procedureId = 0, endoscopicId = 0, appointmentId = 0;
-        public SearchPatientForm(int userID)
+        public SearchPatientForm(int userID, string page)
         {
             InitializeComponent();
             UserID = userID;
+            _pageName = page;
         }
 
         private void SearchPatientForm_Load(object sender, EventArgs e)
@@ -98,8 +100,18 @@ namespace EndoscopicSystem
             DataGridViewButtonColumn btn = new DataGridViewButtonColumn();
             gridPatient.Columns.Add(btn);
             btn.HeaderText = "";
-            btn.Text = "Endoscopic Room";
-            btn.Name = "btnGotoEndoscopicRoom";
+
+            if (_pageName == Constant.PageName.SEARCH_PATIENT_PAGE)
+            {
+                btn.Text = "Endoscopic Room";
+                btn.Name = "btnGotoEndoscopicRoom";
+            }
+            else
+            {
+                btn.Text = "Send To PACS";
+                btn.Name = "btnGotoSendToPACS";
+            }
+
             btn.UseColumnTextForButtonValue = true;
         }
 
@@ -112,8 +124,21 @@ namespace EndoscopicSystem
                     hnNo = gridPatient.CurrentRow.Cells["HN"].Value.ToString();
                     procedureId = (int)gridPatient.CurrentRow.Cells["ProcedureID"].Value;
 
-                    PatientForm patient = new PatientForm(UserID, hnNo, procedureId);
-                    patient.Show();
+                    if (_pageName == Constant.PageName.SEARCH_PATIENT_PAGE)
+                    {
+                        PatientForm patient = new PatientForm(UserID, hnNo, procedureId);
+                        patient.ShowDialog();
+                    }
+                    else if (_pageName == Constant.PageName.SEND_PACS_PAGE)
+                    {
+                        V2.Forms.FormSendPACS formSendPACS = new V2.Forms.FormSendPACS(UserID, hnNo);
+                        formSendPACS.ShowDialog();
+                        formSendPACS = null;
+                    }
+                    else
+                    {
+
+                    }
                 }
             }
             catch (Exception ex)
@@ -145,23 +170,23 @@ namespace EndoscopicSystem
                     if (endoscopicId <= 0)
                         return;
 
-                    //this.Hide();
-
-                    //V2.Forms.FormLive formLive = new V2.Forms.FormLive(UserID, hnNo, procedureId, endoscopicId, appointmentId);
-                    //formLive.ShowDialog();
-
-                    //formLive = null;
-
-                    //this.Show();
-
                     this.Close();
 
                     try
                     {
-                        // Form Panel
-                        V2.Forms.FormProceed formProceed = new V2.Forms.FormProceed(UserID, hnNo, procedureId, endoscopicId, appointmentId);
-                        formProceed.ShowDialog();
-                        formProceed = null;
+                        if (_pageName == Constant.PageName.SEARCH_PATIENT_PAGE)
+                        {
+                            // Form Panel
+                            V2.Forms.FormProceed formProceed = new V2.Forms.FormProceed(UserID, hnNo, procedureId, endoscopicId, appointmentId);
+                            formProceed.ShowDialog();
+                            formProceed = null;
+                        }
+                        else if (_pageName == Constant.PageName.SEND_PACS_PAGE)
+                        {
+                            V2.Forms.FormSendPACS formSendPACS = new V2.Forms.FormSendPACS(UserID, hnNo);
+                            formSendPACS.ShowDialog();
+                            formSendPACS = null;
+                        }
                     }
                     catch (Exception ex)
                     {

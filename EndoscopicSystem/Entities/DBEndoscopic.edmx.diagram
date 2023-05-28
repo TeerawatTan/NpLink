@@ -57,7 +57,6 @@
         <EntityTypeShape EntityType="EndoscopicModel.RUL" Width="1.5" PointX="3.375" PointY="22.75" />
         <EntityTypeShape EntityType="EndoscopicModel.Trachea" Width="1.5" PointX="5.375" PointY="22.75" />
         <EntityTypeShape EntityType="EndoscopicModel.VocalCord" Width="1.5" PointX="7.375" PointY="22.75" />
-        <EntityTypeShape EntityType="EndoscopicModel.v_HistoryEndoscopic" Width="1.5" PointX="11.375" PointY="0.75" />
         <EntityTypeShape EntityType="EndoscopicModel.Endoscopic_Log" Width="1.5" PointX="23.375" PointY="11.75" />
         <EntityTypeShape EntityType="EndoscopicModel.v_AppointmentDetails" Width="1.5" PointX="23.375" PointY="20.75" />
         <EntityTypeShape EntityType="EndoscopicModel.User" Width="1.5" PointX="9.375" PointY="24.75" />
@@ -107,6 +106,7 @@
         <EntityTypeShape EntityType="EndoscopicModel.PapillaMajor" Width="1.5" PointX="13.375" PointY="30.75" />
         <EntityTypeShape EntityType="EndoscopicModel.PapillaMinor" Width="1.5" PointX="30.375" PointY="15.75" />
         <EntityTypeShape EntityType="EndoscopicModel.Endoscopic" Width="1.5" PointX="0.75" PointY="23.75" />
+        <EntityTypeShape EntityType="EndoscopicModel.v_HistoryEndoscopic" Width="1.5" PointX="9.375" PointY="0.75" />
       </Diagram>
     </edmx:Diagrams>
   </edmx:Designer>

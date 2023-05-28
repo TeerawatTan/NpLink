@@ -95,7 +95,7 @@ namespace EndoscopicSystem.V2.Forms
                     }
                     else if (_stepId == 3)
                     {
-                        OpenChildForm(new ReportEndoscopic(_hn, _procedureId, _endoscopicId));
+                        OpenChildForm(new ReportEndoscopic(_hn, _procedureId, _endoscopicId, _appointmentId));
                         if (_procedureId == 6)
                         {
                             FormReport2 formReport2 = new FormReport2(_hn, _procedureId, _endoscopicId);

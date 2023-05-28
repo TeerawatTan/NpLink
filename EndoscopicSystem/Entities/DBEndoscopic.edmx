@@ -1298,18 +1298,18 @@ warning 6002: The table/view 'EndoscopicDb.dbo.v_AppointmentDetails' does not ha
 warning 6002: The table/view 'EndoscopicDb.dbo.v_HistoryEndoscopic' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
         <EntityType Name="v_HistoryEndoscopic">
           <Key>
-            <PropertyRef Name="HistorieID" />
+            <PropertyRef Name="AppointmentID" />
           </Key>
-          <Property Name="HistorieID" Type="int" Nullable="false" />
           <Property Name="PatientID" Type="int" />
           <Property Name="EndoscopicID" Type="int" />
-          <Property Name="CreateDate" Type="datetime" />
           <Property Name="Symptom" Type="nvarchar" MaxLength="250" />
           <Property Name="DoctorID" Type="int" />
           <Property Name="Doctor" Type="nvarchar" MaxLength="200" />
           <Property Name="ProcedureID" Type="int" />
           <Property Name="ProcedureName" Type="nvarchar" MaxLength="250" />
           <Property Name="Diagnosis" Type="nvarchar" MaxLength="1000" />
+          <Property Name="AppointmentID" Type="int" Nullable="false" />
+          <Property Name="OperationDate" Type="datetime" />
         </EntityType>
         <!--Errors Found During Generation:
 warning 6002: The table/view 'EndoscopicDb.dbo.v_PatientList' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
@@ -1490,16 +1490,16 @@ warning 6002: The table/view 'EndoscopicDb.dbo.v_PatientList' does not have a pr
           </EntitySet>
           <EntitySet Name="v_HistoryEndoscopic" EntityType="Self.v_HistoryEndoscopic" store:Type="Views" store:Schema="dbo">
             <DefiningQuery>SELECT 
-    [v_HistoryEndoscopic].[HistorieID] AS [HistorieID], 
     [v_HistoryEndoscopic].[PatientID] AS [PatientID], 
     [v_HistoryEndoscopic].[EndoscopicID] AS [EndoscopicID], 
-    [v_HistoryEndoscopic].[CreateDate] AS [CreateDate], 
     [v_HistoryEndoscopic].[Symptom] AS [Symptom], 
     [v_HistoryEndoscopic].[DoctorID] AS [DoctorID], 
     [v_HistoryEndoscopic].[Doctor] AS [Doctor], 
     [v_HistoryEndoscopic].[ProcedureID] AS [ProcedureID], 
     [v_HistoryEndoscopic].[ProcedureName] AS [ProcedureName], 
-    [v_HistoryEndoscopic].[Diagnosis] AS [Diagnosis]
+    [v_HistoryEndoscopic].[Diagnosis] AS [Diagnosis], 
+    [v_HistoryEndoscopic].[AppointmentID] AS [AppointmentID], 
+    [v_HistoryEndoscopic].[OperationDate] AS [OperationDate]
     FROM [dbo].[v_HistoryEndoscopic] AS [v_HistoryEndoscopic]</DefiningQuery>
           </EntitySet>
           <EntitySet Name="v_PatientList" EntityType="Self.v_PatientList" store:Type="Views" store:Schema="dbo">
@@ -1597,7 +1597,6 @@ warning 6002: The table/view 'EndoscopicDb.dbo.v_PatientList' does not have a pr
           <EntitySet Name="RULs" EntityType="EndoscopicModel.RUL" />
           <EntitySet Name="Tracheas" EntityType="EndoscopicModel.Trachea" />
           <EntitySet Name="VocalCords" EntityType="EndoscopicModel.VocalCord" />
-          <EntitySet Name="v_HistoryEndoscopic" EntityType="EndoscopicModel.v_HistoryEndoscopic" />
           <EntitySet Name="Endoscopic_Log" EntityType="EndoscopicModel.Endoscopic_Log" />
           <FunctionImport Name="Chart" ReturnType="Collection(EndoscopicModel.Chart_Result)">
             <Parameter Name="monthVal" Mode="In" Type="Int32" />
@@ -1657,6 +1656,7 @@ warning 6002: The table/view 'EndoscopicDb.dbo.v_PatientList' does not have a pr
           <EntitySet Name="PapillaMajors" EntityType="EndoscopicModel.PapillaMajor" />
           <EntitySet Name="PapillaMinors" EntityType="EndoscopicModel.PapillaMinor" />
           <EntitySet Name="Endoscopics" EntityType="EndoscopicModel.Endoscopic" />
+          <EntitySet Name="v_HistoryEndoscopic" EntityType="EndoscopicModel.v_HistoryEndoscopic" />
           </EntityContainer>
         <EntityType Name="Doctor">
           <Key>
@@ -2356,21 +2356,6 @@ warning 6002: The table/view 'EndoscopicDb.dbo.v_PatientList' does not have a pr
           <Property Name="VocalCordName" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
           <Property Name="CreateDate" Type="DateTime" Precision="3" />
           <Property Name="UpdateDate" Type="DateTime" Precision="3" />
-        </EntityType>
-        <EntityType Name="v_HistoryEndoscopic">
-          <Key>
-            <PropertyRef Name="HistorieID" />
-          </Key>
-          <Property Name="HistorieID" Type="Int32" Nullable="false" />
-          <Property Name="PatientID" Type="Int32" />
-          <Property Name="EndoscopicID" Type="Int32" />
-          <Property Name="CreateDate" Type="DateTime" Precision="3" />
-          <Property Name="Symptom" Type="String" MaxLength="250" FixedLength="false" Unicode="true" />
-          <Property Name="DoctorID" Type="Int32" />
-          <Property Name="Doctor" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
-          <Property Name="ProcedureID" Type="Int32" />
-          <Property Name="ProcedureName" Type="String" MaxLength="250" FixedLength="false" Unicode="true" />
-          <Property Name="Diagnosis" Type="String" MaxLength="1000" FixedLength="false" Unicode="true" />
         </EntityType>
         <EntityType Name="Endoscopic_Log">
           <Key>
@@ -3119,6 +3104,21 @@ warning 6002: The table/view 'EndoscopicDb.dbo.v_PatientList' does not have a pr
           <Property Name="BowelPreparationResult" Type="String" MaxLength="1000" FixedLength="false" Unicode="true" />
           <Property Name="AnesthesiaID" Type="Int32" />
           <Property Name="GeneralOperativeFinding" Type="String" MaxLength="1000" FixedLength="false" Unicode="true" />
+        </EntityType>
+        <EntityType Name="v_HistoryEndoscopic">
+          <Key>
+            <PropertyRef Name="AppointmentID" />
+          </Key>
+          <Property Name="PatientID" Type="Int32" />
+          <Property Name="EndoscopicID" Type="Int32" />
+          <Property Name="Symptom" Type="String" MaxLength="250" FixedLength="false" Unicode="true" />
+          <Property Name="DoctorID" Type="Int32" />
+          <Property Name="Doctor" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+          <Property Name="ProcedureID" Type="Int32" />
+          <Property Name="ProcedureName" Type="String" MaxLength="250" FixedLength="false" Unicode="true" />
+          <Property Name="Diagnosis" Type="String" MaxLength="1000" FixedLength="false" Unicode="true" />
+          <Property Name="AppointmentID" Type="Int32" Nullable="false" />
+          <Property Name="OperationDate" Type="DateTime" Precision="3" />
         </EntityType>
         </Schema>
     </edmx:ConceptualModels>
@@ -3890,22 +3890,6 @@ warning 6002: The table/view 'EndoscopicDb.dbo.v_PatientList' does not have a pr
                 <ScalarProperty Name="CreateDate" ColumnName="CreateDate" />
                 <ScalarProperty Name="VocalCordName" ColumnName="VocalCordName" />
                 <ScalarProperty Name="VocalCordID" ColumnName="VocalCordID" />
-              </MappingFragment>
-            </EntityTypeMapping>
-          </EntitySetMapping>
-          <EntitySetMapping Name="v_HistoryEndoscopic">
-            <EntityTypeMapping TypeName="EndoscopicModel.v_HistoryEndoscopic">
-              <MappingFragment StoreEntitySet="v_HistoryEndoscopic">
-                <ScalarProperty Name="Diagnosis" ColumnName="Diagnosis" />
-                <ScalarProperty Name="ProcedureName" ColumnName="ProcedureName" />
-                <ScalarProperty Name="ProcedureID" ColumnName="ProcedureID" />
-                <ScalarProperty Name="Doctor" ColumnName="Doctor" />
-                <ScalarProperty Name="DoctorID" ColumnName="DoctorID" />
-                <ScalarProperty Name="Symptom" ColumnName="Symptom" />
-                <ScalarProperty Name="CreateDate" ColumnName="CreateDate" />
-                <ScalarProperty Name="EndoscopicID" ColumnName="EndoscopicID" />
-                <ScalarProperty Name="PatientID" ColumnName="PatientID" />
-                <ScalarProperty Name="HistorieID" ColumnName="HistorieID" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
@@ -4710,6 +4694,22 @@ warning 6002: The table/view 'EndoscopicDb.dbo.v_PatientList' does not have a pr
                 <ScalarProperty Name="PatientID" ColumnName="PatientID" />
                 <ScalarProperty Name="IsSaved" ColumnName="IsSaved" />
                 <ScalarProperty Name="EndoscopicID" ColumnName="EndoscopicID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="v_HistoryEndoscopic">
+            <EntityTypeMapping TypeName="EndoscopicModel.v_HistoryEndoscopic">
+              <MappingFragment StoreEntitySet="v_HistoryEndoscopic">
+                <ScalarProperty Name="OperationDate" ColumnName="OperationDate" />
+                <ScalarProperty Name="AppointmentID" ColumnName="AppointmentID" />
+                <ScalarProperty Name="Diagnosis" ColumnName="Diagnosis" />
+                <ScalarProperty Name="ProcedureName" ColumnName="ProcedureName" />
+                <ScalarProperty Name="ProcedureID" ColumnName="ProcedureID" />
+                <ScalarProperty Name="Doctor" ColumnName="Doctor" />
+                <ScalarProperty Name="DoctorID" ColumnName="DoctorID" />
+                <ScalarProperty Name="Symptom" ColumnName="Symptom" />
+                <ScalarProperty Name="EndoscopicID" ColumnName="EndoscopicID" />
+                <ScalarProperty Name="PatientID" ColumnName="PatientID" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>

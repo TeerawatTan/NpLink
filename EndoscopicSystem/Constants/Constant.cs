@@ -56,6 +56,12 @@ namespace EndoscopicSystem.Constants
         public const string HISTOPATHOLOGY = "Histopathology";
         public const string RAPIDUREASETEST = "RapidUreaseTest";
         public const string RECOMMENDATION = "Recommendation";
+
+        public class PageName
+        {
+            public const string SEARCH_PATIENT_PAGE = "Search Patient Page";
+            public const string SEND_PACS_PAGE = "Send Pacs Page";
+        }
     }
 
     public class MonthModel

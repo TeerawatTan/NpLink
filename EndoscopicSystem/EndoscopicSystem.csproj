@@ -92,6 +92,10 @@
     <Reference Include="CrystalDecisions.Windows.Forms">
       <HintPath>..\..\..\program files (x86)\sap businessobjects\crystal reports for .net framework 4.0\common\sap businessobjects enterprise xi 4.0\win32_x86\dotnet\CrystalDecisions.Windows.Forms.dll</HintPath>
     </Reference>
+    <Reference Include="PQScan.PDFToImage, Version=6.3.0.41116, Culture=neutral, PublicKeyToken=7cc657bf9afce61f, processorArchitecture=x86">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\Keen_Work\งาน NpLink\V.2\pqScan.PDFToImage-41116\pqScan.PDFToImage\x64\.net4.5\PQScan.PDFToImage.dll</HintPath>
+    </Reference>
     <Reference Include="System">
       <HintPath>..\..\..\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.7.2\System.dll</HintPath>
     </Reference>
@@ -613,6 +617,12 @@
     <Compile Include="Repository\ProcedureListRepository.cs" />
     <Compile Include="Repository\UserRepository.cs" />
     <Compile Include="Settings.cs" />
+    <Compile Include="V2\Forms\FormDashboardStatistic.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="V2\Forms\FormDashboardStatistic.Designer.cs">
+      <DependentUpon>FormDashboardStatistic.cs</DependentUpon>
+    </Compile>
     <Compile Include="V2\Forms\FormLoading.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -696,6 +706,12 @@
     </Compile>
     <Compile Include="V2\Forms\FormProceed.Designer.cs">
       <DependentUpon>FormProceed.cs</DependentUpon>
+    </Compile>
+    <Compile Include="V2\Forms\FormSendPACS.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="V2\Forms\FormSendPACS.Designer.cs">
+      <DependentUpon>FormSendPACS.cs</DependentUpon>
     </Compile>
     <Compile Include="V2\Forms\FormSetting.cs">
       <SubType>Form</SubType>
@@ -904,6 +920,9 @@
       <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
       <LastGenOutput>LaparoscopicReport.cs</LastGenOutput>
     </Content>
+    <EmbeddedResource Include="V2\Forms\FormDashboardStatistic.resx">
+      <DependentUpon>FormDashboardStatistic.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="V2\Forms\FormLoading.resx">
       <DependentUpon>FormLoading.cs</DependentUpon>
     </EmbeddedResource>
@@ -946,6 +965,9 @@
     <EmbeddedResource Include="V2\Forms\FormProceed.resx">
       <DependentUpon>FormProceed.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="V2\Forms\FormSendPACS.resx">
+      <DependentUpon>FormSendPACS.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="V2\Forms\FormSetting.resx">
       <DependentUpon>FormSetting.cs</DependentUpon>
     </EmbeddedResource>
@@ -982,7 +1004,6 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="Connected Services\" />
     <Folder Include="Dicom\" />
     <Folder Include="ImageCapture\" />
     <Folder Include="Images\Logo\" />
@@ -1114,9 +1135,15 @@
     <PackageReference Include="EntityFramework">
       <Version>6.4.4</Version>
     </PackageReference>
+    <PackageReference Include="fo-dicom">
+      <Version>5.1.0</Version>
+    </PackageReference>
     <PackageReference Include="Microsoft.ReportViewer.WinForms">
       <Version>10.0.40219.1</Version>
     </PackageReference>
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Connected Services\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

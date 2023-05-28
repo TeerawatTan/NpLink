@@ -79,7 +79,6 @@ namespace EndoscopicSystem.Entities
         public virtual DbSet<RUL> RULs { get; set; }
         public virtual DbSet<Trachea> Tracheas { get; set; }
         public virtual DbSet<VocalCord> VocalCords { get; set; }
-        public virtual DbSet<v_HistoryEndoscopic> v_HistoryEndoscopic { get; set; }
         public virtual DbSet<Endoscopic_Log> Endoscopic_Log { get; set; }
         public virtual DbSet<v_AppointmentDetails> v_AppointmentDetails { get; set; }
         public virtual DbSet<User> Users { get; set; }
@@ -129,6 +128,7 @@ namespace EndoscopicSystem.Entities
         public virtual DbSet<PapillaMajor> PapillaMajors { get; set; }
         public virtual DbSet<PapillaMinor> PapillaMinors { get; set; }
         public virtual DbSet<Endoscopic> Endoscopics { get; set; }
+        public virtual DbSet<v_HistoryEndoscopic> v_HistoryEndoscopic { get; set; }
     
         public virtual ObjectResult<BrochoscopyReport_Result> BrochoscopyReport(string hn, Nullable<int> procedure, Nullable<int> endoscopicId)
         {

@@ -3132,8 +3132,8 @@ namespace EndoscopicSystem.V2.Forms
             this.Controls.Add(this.btnReset);
             this.Controls.Add(this.panel3);
             this.Controls.Add(this.groupBox1);
-            this.Controls.Add(this.pictureBoxSnapshot);
             this.Controls.Add(this.pictureBox1);
+            this.Controls.Add(this.pictureBoxSnapshot);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.MaximizeBox = false;
             this.MinimizeBox = false;
