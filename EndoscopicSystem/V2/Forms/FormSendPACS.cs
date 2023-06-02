@@ -164,8 +164,8 @@ namespace EndoscopicSystem.V2.Forms
 
             string splitImgPath = ImageHelper.GetUntilOrEmpty(imgPathOrigin, "Image_");
 
-            DirectoryInfo dinfo = new DirectoryInfo($@"{splitImgPath}");
-            FileInfo[] files = (FileInfo[])dinfo.GetFiles("*.jpg").Where(w => w.Name.StartsWith("Image")).ToArray();
+            DirectoryInfo dinfo = new DirectoryInfo(@"C:\Keen\NpLink\EndoscopicSystem\ImageCapture\101\20230602\EGD\13");    //$@"{splitImgPath}");
+            FileInfo[] files = (FileInfo[])dinfo.GetFiles("*.jpg").ToArray();
             var pathOriginImgList = files.OrderBy(o => o.CreationTime).Select(s => s.FullName).ToList();
 
             GeneratePictureBoxWwithImages(pathOriginImgList);
@@ -220,9 +220,9 @@ namespace EndoscopicSystem.V2.Forms
 
                 return true;
             }
-            catch (Exception)
+            catch (Exception ex)
             {
-                return false;
+                throw ex;
             }
         }
     }
