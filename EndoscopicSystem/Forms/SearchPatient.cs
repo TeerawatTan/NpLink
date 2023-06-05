@@ -131,7 +131,7 @@ namespace EndoscopicSystem
                     }
                     else if (_pageName == Constant.PageName.SEND_PACS_PAGE)
                     {
-                        V2.Forms.FormSendPACS formSendPACS = new V2.Forms.FormSendPACS(UserID, hnNo);
+                        V2.Forms.FormSendPACS formSendPACS = new V2.Forms.FormSendPACS(UserID, appointmentId, hnNo);
                         formSendPACS.ShowDialog();
                         formSendPACS = null;
                     }
@@ -183,7 +183,7 @@ namespace EndoscopicSystem
                         }
                         else if (_pageName == Constant.PageName.SEND_PACS_PAGE)
                         {
-                            V2.Forms.FormSendPACS formSendPACS = new V2.Forms.FormSendPACS(UserID, hnNo);
+                            V2.Forms.FormSendPACS formSendPACS = new V2.Forms.FormSendPACS(UserID, appointmentId, hnNo);
                             formSendPACS.ShowDialog();
                             formSendPACS = null;
                         }

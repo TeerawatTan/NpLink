@@ -1,6 +1,9 @@
 ﻿using EndoscopicSystem.Entities;
 using EndoscopicSystem.Helpers;
+using EndoscopicSystem.Repository;
 using FellowOakDicom;
+using FellowOakDicom.Imaging;
+using FellowOakDicom.IO.Buffer;
 using FellowOakDicom.Network;
 using FellowOakDicom.Network.Client;
 using System;
@@ -19,18 +22,21 @@ namespace EndoscopicSystem.V2.Forms
     {
         private readonly EndoscopicEntities _db = new EndoscopicEntities();
         private Patient _patient = new Patient();
-        private int _id, _item, _count;
-        private string _hnNo;
+        private readonly GetDropdownList _dropdownRepo = new GetDropdownList();
+        private int _id, _appointmentId, _item, _count;
+        private string _hnNo, _procedureName;
         private string _dicomPath = ConfigurationManager.AppSettings["pathSaveDicom"];
         private string _hostPACS = ConfigurationManager.AppSettings["hostPACS"];
         private string _port = ConfigurationManager.AppSettings["portPACS"];
         private string _source = ConfigurationManager.AppSettings["sourcePACS"];
         private string _destination = ConfigurationManager.AppSettings["destinationPACS"];
+        private string _pathFolderImage = ConfigurationManager.AppSettings["pathSaveImageCapture"];
 
-        public FormSendPACS(int userId, string hn)
+        public FormSendPACS(int userId, int appointmentId, string hn)
         {
             InitializeComponent();
             this._id = userId;
+            this._appointmentId = appointmentId;
             this._hnNo = hn;
         }
 
@@ -136,13 +142,20 @@ namespace EndoscopicSystem.V2.Forms
         {
             // Send to PACS
 
+            bool isSend = false;
+
             List<string> imgList = listBox1.Items.Cast<string>().ToList();
             for (int i = 0; i < imgList.Count; i++)
             {
-                ConvertToDicomFile(i, imgList[i]);
-                bool isSend = await SendToPACS(imgList[i]);
+                string dicomfile = ConvertToDicomFile(i, imgList[i]);
+                isSend = await SendToPACS(dicomfile);
+
+                // Fail handle.
+
             }
 
+            if (isSend)
+                MessageBox.Show("Successfully");
         }
 
         private void FormSendPACS_Load(object sender, EventArgs e)
@@ -156,37 +169,91 @@ namespace EndoscopicSystem.V2.Forms
 
             txbPatitientId.Text = _patient.HN;
             txbPatitentName.Text = _patient.Fullname;
+            _procedureName = _dropdownRepo.GetProcedureList().Where(w => w.ProcedureID == _patient.ProcedureID).FirstOrDefault().ProcedureName;
 
             string imgPathOrigin = (from a in _db.Appointments
                                     join en in _db.EndoscopicImages on a.EndoscopicID equals en.EndoscopicID
                                     where a.PatientID == _patient.PatientID && a.ProcedureID == _patient.ProcedureID && en.ImagePath != null
+                                    orderby en.EndoscopicImageID descending
                                     select en.ImagePath).FirstOrDefault();
 
             string splitImgPath = ImageHelper.GetUntilOrEmpty(imgPathOrigin, "Image_");
 
-            DirectoryInfo dinfo = new DirectoryInfo(@"C:\Keen\NpLink\EndoscopicSystem\ImageCapture\101\20230602\EGD\13");    //$@"{splitImgPath}");
+            DirectoryInfo dinfo = new DirectoryInfo($@"{splitImgPath}");
             FileInfo[] files = (FileInfo[])dinfo.GetFiles("*.jpg").ToArray();
             var pathOriginImgList = files.OrderBy(o => o.CreationTime).Select(s => s.FullName).ToList();
 
             GeneratePictureBoxWwithImages(pathOriginImgList);
         }
 
-        private void ConvertToDicomFile(int i, string img)
+        public DicomDataset CreateMultiFrameDataset(int columns, int rows, byte[] images)
         {
+            var dataset = new DicomDataset(DicomTransferSyntax.JPEGProcess1);
+            dataset.Add(DicomTag.SOPClassUID, DicomUID.SecondaryCaptureImageStorage);
+            dataset.Add(DicomTag.SOPInstanceUID, DicomUID.Generate());
+            dataset.Add(DicomTag.StudyInstanceUID, DicomUID.Generate());
+            dataset.Add(DicomTag.SeriesInstanceUID, DicomUID.Generate());
+            dataset.Add(DicomTag.LossyImageCompression, "01");
+            dataset.Add(DicomTag.LossyImageCompressionMethod, "ISO_10918_1");
+            dataset.Add(DicomTag.PhotometricInterpretation, PhotometricInterpretation.Rgb.Value);;
+            dataset.Add(DicomTag.StudyDate, DateTime.Now.ToString("yyyyMMdd"));
+            dataset.Add(DicomTag.StudyTime, DateTime.Now.ToString("HHmmss"));
+            dataset.Add(DicomTag.StudyDescription, "Snapshot");
+            //dataset.Add(DicomTag.DerivationDescription, "1");
+            dataset.Add(DicomTag.BitsAllocated, (ushort)8);
+            dataset.Add(DicomTag.BitsStored, (ushort)8);
+            dataset.Add(DicomTag.HighBit, (ushort)7);
+            dataset.Add(DicomTag.PixelRepresentation, (ushort)0); // unsigned
+            dataset.Add(DicomTag.SamplesPerPixel, (ushort)3); // RGB
+            // Patient Details
+            dataset.Add(DicomTag.PatientName, _patient.Fullname);
+            dataset.Add(DicomTag.PatientID, _patient.HN);
+            dataset.Add(DicomTag.PatientSex, _patient.Sex.HasValue ? _patient.Sex.Value ? "M" : "F" : "");
+            dataset.Add(DicomTag.Modality, "DX");
+
+
+            var pixelData = DicomPixelData.Create(dataset, true);
+            pixelData.BitsStored = 8;
+            pixelData.SamplesPerPixel = 3;
+            pixelData.HighBit = 7;
+            pixelData.PixelRepresentation = PixelRepresentation.Unsigned;
+            pixelData.PlanarConfiguration = PlanarConfiguration.Interleaved;
+
+            var fragment = new DicomOtherByteFragment(DicomTag.PixelData);
+            fragment.Fragments.Add(EvenLengthBuffer.Create(new MemoryByteBuffer(images)));
+            pixelData.AddFrame(new CompositeByteBuffer(fragment));
+
+            return dataset;
+        }
+
+        private string ConvertToDicomFile(int i, string img)
+        {
+            string newPathFileDicom;
             try
             {
-                DicomFile dicomFile = DicomFile.Open(img);
+                Bitmap bitmap = new Bitmap(img);
+                byte[] byteArray = bitmap.ToByteArray();
+                var dataset = CreateMultiFrameDataset(
+                    bitmap.Width,
+                    bitmap.Height,
+                    byteArray
+                );
+                var dicomFile = new DicomFile(dataset);
 
                 // Save the dataset to a DICOM file
-                string pathFolderDicomToSave = _dicomPath + _hnNo + @"\" + DateTime.Now.ToString("yyyyMMdd") + @"\";
-                if (!Directory.Exists(pathFolderDicomToSave))
+                string pathSaved = _pathFolderImage + _hnNo + @"\" + DateTime.Now.ToString("yyyyMMdd") + @"\" + _procedureName + @"\" + _appointmentId + @"\";
+                if (!Directory.Exists(pathSaved))
                 {
-                    Directory.CreateDirectory(pathFolderDicomToSave);
+                    Directory.CreateDirectory(pathSaved);
                 }
-                string newPathFileDicom = $"{_dicomPath}_{i}.dcm";
+
+                string fileName = DateTime.Now.ToString("yyyyMMddHHmmssfff");
+                newPathFileDicom = $"{pathSaved}dicom_{fileName}_{i}.dcm";
                 dicomFile.Save(newPathFileDicom);
 
                 listBox2.Items.Add(newPathFileDicom);
+
+                return newPathFileDicom;
             }
             catch (Exception ex)
             {
@@ -194,7 +261,7 @@ namespace EndoscopicSystem.V2.Forms
             }
         }
 
-        private async Task<bool> SendToPACS(string img)
+        private async Task<bool> SendToPACS(string dicomPath)
         {
             try
             {
@@ -203,17 +270,9 @@ namespace EndoscopicSystem.V2.Forms
                     return false;
                 }
 
-                DicomFile dicomFile = DicomFile.Open(img);
+                //string path = @"C:\Users\RoyKeen\Downloads\dicom-00001.dcm";
 
-                dicomFile.Dataset.AddOrUpdate(DicomTag.PatientName, _patient.Fullname);
-                dicomFile.Dataset.AddOrUpdate(DicomTag.PatientID, _patient.HN);
-                dicomFile.Dataset.AddOrUpdate(DicomTag.PatientSex, _patient.Sex.HasValue ? _patient.Sex.Value ? "M" : "F" : "");
-                dicomFile.Dataset.AddOrUpdate(DicomTag.SOPClassUID, DicomUID.SecondaryCaptureImageStorage);
-                dicomFile.Dataset.AddOrUpdate(DicomTag.SOPInstanceUID, DicomUID.Generate());
-                dicomFile.Dataset.AddOrUpdate(DicomTag.StudyDate, DateTime.Now.ToString("yyyyMMdd"));
-                dicomFile.Dataset.AddOrUpdate(DicomTag.StudyTime, DateTime.Now.ToString("HHmmss"));
-                dicomFile.Dataset.AddOrUpdate(DicomTag.StudyDescription, "Snapshot");
-
+                DicomFile dicomFile = DicomFile.Open(dicomPath);
                 var client = DicomClientFactory.Create(_hostPACS, int.Parse(_port), false, _source, _destination);
                 await client.AddRequestAsync(new DicomCStoreRequest(dicomFile));
                 await client.SendAsync();
