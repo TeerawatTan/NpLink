@@ -85,9 +85,13 @@ namespace EndoscopicSystem.V2.Forms
                     this._pathVideo = splitParam[2];
                     string hasEgdAndColonoStep = txbCheckHasEgdAndColono.Text.Trim();
 
+                    DateTime? dtNull = null;
+                    DateTime? dateStartRec = !string.IsNullOrEmpty(txbStartRec.Text) ? DateTime.Parse(txbStartRec.Text) : dtNull;
+                    DateTime? dateEndRec = !string.IsNullOrEmpty(txbEndRec.Text) ? DateTime.Parse(txbEndRec.Text) : dtNull;
+
                     if (_stepId == 1)
                     {
-                        OpenChildForm(new FormPreviewReport(_id, _hn, _procedureId, _appointmentId, _endoscopicId, _patientId, _pathImage, _pathVideo, true));
+                        OpenChildForm(new FormPreviewReport(_id, _hn, _procedureId, _appointmentId, _endoscopicId, _patientId, _pathImage, _pathVideo, true, dateStartRec, dateEndRec));
                     }
                     else if (_stepId == 2)
                     {
@@ -107,7 +111,7 @@ namespace EndoscopicSystem.V2.Forms
                         if (hasEgdAndColonoStep.Equals("1"))
                             OpenChildForm(new FormLive(_id, _hn, _procedureId, _endoscopicId, _appointmentId, true));
                         else if (hasEgdAndColonoStep.Equals("2"))
-                            OpenChildForm(new FormPreviewReport(_id, _hn, _procedureId, _appointmentId, _endoscopicId, _patientId, _pathImage, _pathVideo, false));
+                            OpenChildForm(new FormPreviewReport(_id, _hn, _procedureId, _appointmentId, _endoscopicId, _patientId, _pathImage, _pathVideo, false, dateStartRec, dateEndRec));
                     }
                     else
                     {

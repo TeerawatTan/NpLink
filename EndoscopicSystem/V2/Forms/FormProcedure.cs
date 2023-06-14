@@ -121,14 +121,6 @@ namespace EndoscopicSystem.V2.Forms
 
             SearchHN(_hnNo, _procedureId);
         }
-        //private void SetDisablePictureBox(int start, int end)
-        //{
-        //    for (int i = start; i <= end; i++)
-        //    {
-        //        GroupBox groupBox = (GroupBox)this.Controls.Find("gb" + i.ToString(), true)[0];
-        //        groupBox.Visible = false;
-        //    }
-        //}
         private void cbbProcedureList_SelectedIndexChanged(object sender, EventArgs e)
         {
             if (cbbProcedureList.SelectedIndex <= 0 || (int?)cbbProcedureList.SelectedValue == null)
@@ -169,6 +161,11 @@ namespace EndoscopicSystem.V2.Forms
         }
         private void listBox1_SelectedIndexChanged(object sender, EventArgs e)
         {
+            if (listBox1 == null || listBox1.SelectedItem == null)
+            {
+                return;
+            }
+
             string curItem = listBox1.SelectedItem.ToString();
             int index = listBox1.FindString(curItem);
             string[] subStrItem = curItem.Split('-');
@@ -2697,62 +2694,6 @@ namespace EndoscopicSystem.V2.Forms
                 seq++;
             }
         }
-        //private void SaveImageForLaparoscopy(int endoscopicID, int procedureID)
-        //{
-        //    System.Windows.Forms.PictureBox[] boxes =
-        //    {
-        //            pictureBoxSaved1,
-        //            pictureBoxSaved2,
-        //            pictureBoxSaved3,
-        //            pictureBoxSaved4,
-        //            pictureBoxSaved5,
-        //            pictureBoxSaved6,
-        //            pictureBoxSaved7,
-        //            pictureBoxSaved8
-        //        };
-        //    System.Windows.Forms.TextBox[] texts =
-        //    {
-        //            txtPictureBoxSaved1,
-        //            txtPictureBoxSaved2,
-        //            txtPictureBoxSaved3,
-        //            txtPictureBoxSaved4,
-        //            txtPictureBoxSaved5,
-        //            txtPictureBoxSaved6,
-        //            txtPictureBoxSaved7,
-        //            txtPictureBoxSaved8
-        //        };
-        //    int i = 0;
-        //    int seq = 1;
-        //    foreach (var item in texts)
-        //    {
-        //        string Imgpath = boxes[i].ImageLocation != null ? boxes[i].ImageLocation.ToString() : "";
-        //        var endoImgs = _db.EndoscopicImages.Where(x => x.EndoscopicID == endoscopicID && x.ProcedureID == procedureID && x.Seq == seq).FirstOrDefault();
-        //        if (endoImgs != null)
-        //        {
-        //            endoImgs.ImagePath = string.IsNullOrWhiteSpace(Imgpath) ? null : Imgpath;
-        //            endoImgs.ImageComment = item.Text;
-        //            endoImgs.Seq = i + 1;
-        //            endoImgs.UpdateBy = _id;
-        //            endoImgs.UpdateDate = DateTime.Now;
-        //        }
-        //        else
-        //        {
-        //            EndoscopicImage endoscopicImage = new EndoscopicImage();
-        //            endoscopicImage.EndoscopicID = endoscopicID;
-        //            endoscopicImage.ProcedureID = procedureID;
-        //            endoscopicImage.ImagePath = string.IsNullOrWhiteSpace(Imgpath) ? null : Imgpath;
-        //            endoscopicImage.ImageComment = string.IsNullOrWhiteSpace(item.Text) ? null : item.Text;
-        //            endoscopicImage.Seq = i + 1;
-        //            endoscopicImage.CreateBy = _id;
-        //            endoscopicImage.CreateDate = DateTime.Now;
-        //            endoscopicImage.UpdateBy = _id;
-        //            endoscopicImage.UpdateDate = DateTime.Now;
-        //            _db.EndoscopicImages.Add(endoscopicImage);
-        //        }
-        //        i++;
-        //        seq++;
-        //    }
-        //}
         private bool OnSave(string hn, int patientId, int procedureId, int endoscopicId)
         {
             if (string.IsNullOrWhiteSpace(hn) || patientId <= 0 || procedureId <= 0 || endoscopicId <= 0)
@@ -3803,6 +3744,72 @@ namespace EndoscopicSystem.V2.Forms
             }
         }
         #endregion
+
+        //private void SetDisablePictureBox(int start, int end)
+        //{
+        //    for (int i = start; i <= end; i++)
+        //    {
+        //        GroupBox groupBox = (GroupBox)this.Controls.Find("gb" + i.ToString(), true)[0];
+        //        groupBox.Visible = false;
+        //    }
+        //}
+        //private void SaveImageForLaparoscopy(int endoscopicID, int procedureID)
+        //{
+        //    System.Windows.Forms.PictureBox[] boxes =
+        //    {
+        //            pictureBoxSaved1,
+        //            pictureBoxSaved2,
+        //            pictureBoxSaved3,
+        //            pictureBoxSaved4,
+        //            pictureBoxSaved5,
+        //            pictureBoxSaved6,
+        //            pictureBoxSaved7,
+        //            pictureBoxSaved8
+        //        };
+        //    System.Windows.Forms.TextBox[] texts =
+        //    {
+        //            txtPictureBoxSaved1,
+        //            txtPictureBoxSaved2,
+        //            txtPictureBoxSaved3,
+        //            txtPictureBoxSaved4,
+        //            txtPictureBoxSaved5,
+        //            txtPictureBoxSaved6,
+        //            txtPictureBoxSaved7,
+        //            txtPictureBoxSaved8
+        //        };
+        //    int i = 0;
+        //    int seq = 1;
+        //    foreach (var item in texts)
+        //    {
+        //        string Imgpath = boxes[i].ImageLocation != null ? boxes[i].ImageLocation.ToString() : "";
+        //        var endoImgs = _db.EndoscopicImages.Where(x => x.EndoscopicID == endoscopicID && x.ProcedureID == procedureID && x.Seq == seq).FirstOrDefault();
+        //        if (endoImgs != null)
+        //        {
+        //            endoImgs.ImagePath = string.IsNullOrWhiteSpace(Imgpath) ? null : Imgpath;
+        //            endoImgs.ImageComment = item.Text;
+        //            endoImgs.Seq = i + 1;
+        //            endoImgs.UpdateBy = _id;
+        //            endoImgs.UpdateDate = DateTime.Now;
+        //        }
+        //        else
+        //        {
+        //            EndoscopicImage endoscopicImage = new EndoscopicImage();
+        //            endoscopicImage.EndoscopicID = endoscopicID;
+        //            endoscopicImage.ProcedureID = procedureID;
+        //            endoscopicImage.ImagePath = string.IsNullOrWhiteSpace(Imgpath) ? null : Imgpath;
+        //            endoscopicImage.ImageComment = string.IsNullOrWhiteSpace(item.Text) ? null : item.Text;
+        //            endoscopicImage.Seq = i + 1;
+        //            endoscopicImage.CreateBy = _id;
+        //            endoscopicImage.CreateDate = DateTime.Now;
+        //            endoscopicImage.UpdateBy = _id;
+        //            endoscopicImage.UpdateDate = DateTime.Now;
+        //            _db.EndoscopicImages.Add(endoscopicImage);
+        //        }
+        //        i++;
+        //        seq++;
+        //    }
+        //}
+
 
     }
 }

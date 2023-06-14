@@ -53,13 +53,17 @@ namespace EndoscopicSystem.V2.Forms
             {
                 _item = img.Count;
 
+                string[] pathArray = img[i].Split('\\');
+                string fileName = pathArray[pathArray.Length - 1];
+
                 // Create a new PictureBox
                 System.Windows.Forms.PictureBox pictureBox = new System.Windows.Forms.PictureBox();
                 pictureBox.Name = "pictureBox" + i;
                 pictureBox.Size = new Size(200, 140);
-                pictureBox.SizeMode = PictureBoxSizeMode.StretchImage;
+                pictureBox.SizeMode = fileName.StartsWith("pdf") ? PictureBoxSizeMode.Zoom : PictureBoxSizeMode.StretchImage;
                 pictureBox.ImageLocation = img[i];
                 pictureBox.BorderStyle = BorderStyle.FixedSingle;
+                pictureBox.Tag = fileName;
 
                 // Calculate the location of the PictureBox based on its position in the grid
                 int maxHeight = pictureBox.Bottom + 50;
@@ -67,10 +71,7 @@ namespace EndoscopicSystem.V2.Forms
                 int col = i % numCols;
                 int x = col * (maxWidth + spacing);
                 int y = row * (maxHeight + spacing);
-                pictureBox.Location = new Point(x, y);
-
-                string[] pathArray = img[i].Split('\\');
-                string fileName = pathArray[pathArray.Length - 1];
+                pictureBox.Location = new Point(x + 10, y + 10);
 
                 CheckBox checkBox = new CheckBox();
                 checkBox.Name = "checkBox" + i;
@@ -119,7 +120,7 @@ namespace EndoscopicSystem.V2.Forms
             if (pictureBox != null && e.Button == MouseButtons.Left)
             {
                 pictureBox1.ImageLocation = pictureBox.ImageLocation;
-                pictureBox1.SizeMode = PictureBoxSizeMode.StretchImage;
+                pictureBox1.SizeMode = pictureBox.Tag.ToString().StartsWith("pdf") ? PictureBoxSizeMode.Zoom : PictureBoxSizeMode.StretchImage;
                 pictureBox1.Update();
             }
         }
@@ -136,6 +137,9 @@ namespace EndoscopicSystem.V2.Forms
             }
             _count = 0;
             lbCountSelected.Text = _count.ToString();
+
+            pictureBox1.ImageLocation = null;
+            pictureBox1.Refresh();
         }
 
         private async void button2_Click(object sender, EventArgs e)
@@ -147,15 +151,22 @@ namespace EndoscopicSystem.V2.Forms
             List<string> imgList = listBox1.Items.Cast<string>().ToList();
             for (int i = 0; i < imgList.Count; i++)
             {
-                string dicomfile = ConvertToDicomFile(i, imgList[i]);
-                isSend = await SendToPACS(dicomfile);
+                try
+                {
+                    string dicomfile = ConvertToDicomFile(i, imgList[i]);
+                    isSend = await SendToPACS(dicomfile);
 
-                // Fail handle.
-
+                    if (!isSend)
+                        MessageBox.Show("Send to PACS not success !!", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show(ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
             }
 
             if (isSend)
-                MessageBox.Show("Successfully");
+                MessageBox.Show("Send to PACS completed.", "successful", MessageBoxButtons.OK);
         }
 
         private void FormSendPACS_Load(object sender, EventArgs e)
@@ -171,11 +182,15 @@ namespace EndoscopicSystem.V2.Forms
             txbPatitentName.Text = _patient.Fullname;
             _procedureName = _dropdownRepo.GetProcedureList().Where(w => w.ProcedureID == _patient.ProcedureID).FirstOrDefault().ProcedureName;
 
-            string imgPathOrigin = (from a in _db.Appointments
-                                    join en in _db.EndoscopicImages on a.EndoscopicID equals en.EndoscopicID
-                                    where a.PatientID == _patient.PatientID && a.ProcedureID == _patient.ProcedureID && en.ImagePath != null
-                                    orderby en.EndoscopicImageID descending
-                                    select en.ImagePath).FirstOrDefault();
+            var query = _db.v_GetImageCapturePath.FirstOrDefault(f => f.AppointmentID == _appointmentId);
+
+            if (query is null)
+            {
+                MessageBox.Show("File not found !!", "Warning", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                this.Close();
+            }
+
+            string imgPathOrigin = query.ImagePath;
 
             string splitImgPath = ImageHelper.GetUntilOrEmpty(imgPathOrigin, "Image_");
 
@@ -186,31 +201,35 @@ namespace EndoscopicSystem.V2.Forms
             GeneratePictureBoxWwithImages(pathOriginImgList);
         }
 
-        public DicomDataset CreateMultiFrameDataset(int columns, int rows, byte[] images)
+        private DicomDataset CreateFrameDataset(int width, int height, Bitmap bitmap)
         {
-            var dataset = new DicomDataset(DicomTransferSyntax.JPEGProcess1);
+            var dataset = new DicomDataset(DicomTransferSyntax.ExplicitVRLittleEndian);
+            dataset.Add(DicomTag.Columns, (ushort)width);
+            dataset.Add(DicomTag.Rows, (ushort)height);
             dataset.Add(DicomTag.SOPClassUID, DicomUID.SecondaryCaptureImageStorage);
             dataset.Add(DicomTag.SOPInstanceUID, DicomUID.Generate());
             dataset.Add(DicomTag.StudyInstanceUID, DicomUID.Generate());
             dataset.Add(DicomTag.SeriesInstanceUID, DicomUID.Generate());
             dataset.Add(DicomTag.LossyImageCompression, "01");
             dataset.Add(DicomTag.LossyImageCompressionMethod, "ISO_10918_1");
-            dataset.Add(DicomTag.PhotometricInterpretation, PhotometricInterpretation.Rgb.Value);;
+            dataset.Add(DicomTag.PhotometricInterpretation, PhotometricInterpretation.Rgb.Value); ;
             dataset.Add(DicomTag.StudyDate, DateTime.Now.ToString("yyyyMMdd"));
             dataset.Add(DicomTag.StudyTime, DateTime.Now.ToString("HHmmss"));
             dataset.Add(DicomTag.StudyDescription, "Snapshot");
-            //dataset.Add(DicomTag.DerivationDescription, "1");
             dataset.Add(DicomTag.BitsAllocated, (ushort)8);
-            dataset.Add(DicomTag.BitsStored, (ushort)8);
-            dataset.Add(DicomTag.HighBit, (ushort)7);
-            dataset.Add(DicomTag.PixelRepresentation, (ushort)0); // unsigned
+            dataset.Add(DicomTag.PixelRepresentation, (ushort)PixelRepresentation.Unsigned);
             dataset.Add(DicomTag.SamplesPerPixel, (ushort)3); // RGB
+            dataset.Add(DicomTag.PlanarConfiguration, (ushort)PlanarConfiguration.Interleaved);
             // Patient Details
             dataset.Add(DicomTag.PatientName, _patient.Fullname);
             dataset.Add(DicomTag.PatientID, _patient.HN);
             dataset.Add(DicomTag.PatientSex, _patient.Sex.HasValue ? _patient.Sex.Value ? "M" : "F" : "");
             dataset.Add(DicomTag.Modality, "DX");
-
+            dataset.Add(DicomTag.RescaleSlope, "1");
+            dataset.Add(DicomTag.StudyID, "1");
+            dataset.Add(DicomTag.SeriesNumber, "1");
+            dataset.Add(DicomTag.InstanceNumber, "1");
+            dataset.Add(DicomTag.Laterality, "L");
 
             var pixelData = DicomPixelData.Create(dataset, true);
             pixelData.BitsStored = 8;
@@ -219,9 +238,22 @@ namespace EndoscopicSystem.V2.Forms
             pixelData.PixelRepresentation = PixelRepresentation.Unsigned;
             pixelData.PlanarConfiguration = PlanarConfiguration.Interleaved;
 
-            var fragment = new DicomOtherByteFragment(DicomTag.PixelData);
-            fragment.Fragments.Add(EvenLengthBuffer.Create(new MemoryByteBuffer(images)));
-            pixelData.AddFrame(new CompositeByteBuffer(fragment));
+            byte[] pixels = new byte[width * height * 3];
+
+            for (int y = 0; y < height; y++)
+            {
+                for (int x = 0; x < width; x++)
+                {
+                    Color color = bitmap.GetPixel(x, y);
+                    int index = (y * width + x) * 3;
+
+                    pixels[index] = color.R;
+                    pixels[index + 1] = color.G;
+                    pixels[index + 2] = color.B;
+                }
+            }
+
+            pixelData.AddFrame(new MemoryByteBuffer(pixels));
 
             return dataset;
         }
@@ -232,16 +264,15 @@ namespace EndoscopicSystem.V2.Forms
             try
             {
                 Bitmap bitmap = new Bitmap(img);
-                byte[] byteArray = bitmap.ToByteArray();
-                var dataset = CreateMultiFrameDataset(
+                var dataset = CreateFrameDataset(
                     bitmap.Width,
                     bitmap.Height,
-                    byteArray
+                    bitmap
                 );
                 var dicomFile = new DicomFile(dataset);
 
                 // Save the dataset to a DICOM file
-                string pathSaved = _pathFolderImage + _hnNo + @"\" + DateTime.Now.ToString("yyyyMMdd") + @"\" + _procedureName + @"\" + _appointmentId + @"\";
+                string pathSaved = _dicomPath + _hnNo + @"\" + DateTime.Now.ToString("yyyyMMdd") + @"\" + _procedureName + @"\" + _appointmentId + @"\";
                 if (!Directory.Exists(pathSaved))
                 {
                     Directory.CreateDirectory(pathSaved);

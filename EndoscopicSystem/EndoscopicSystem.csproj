@@ -461,6 +461,9 @@
     <Compile Include="Entities\v_AppointmentDetails.cs">
       <DependentUpon>DBEndoscopic.tt</DependentUpon>
     </Compile>
+    <Compile Include="Entities\v_GetImageCapturePath.cs">
+      <DependentUpon>DBEndoscopic.tt</DependentUpon>
+    </Compile>
     <Compile Include="Entities\v_HistoryEndoscopic.cs">
       <DependentUpon>DBEndoscopic.tt</DependentUpon>
     </Compile>
@@ -822,13 +825,6 @@
     <Content Include="Sounds\SoundCapture\Record.wav" />
     <Content Include="Sounds\SoundCapture\Shutter.wav" />
     <Content Include="Sounds\SoundCapture\Stop.wav" />
-    <Content Include="V2\Database\Database1.mdf">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </Content>
-    <Content Include="V2\Database\Database1_log.ldf">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-      <DependentUpon>Database1.mdf</DependentUpon>
-    </Content>
     <EmbeddedResource Include="Forms\Dashboard.resx">
       <DependentUpon>Dashboard.cs</DependentUpon>
     </EmbeddedResource>
@@ -1140,6 +1136,15 @@
     </PackageReference>
     <PackageReference Include="Microsoft.ReportViewer.WinForms">
       <Version>10.0.40219.1</Version>
+    </PackageReference>
+    <PackageReference Include="PdfiumViewer">
+      <Version>2.13.0</Version>
+    </PackageReference>
+    <PackageReference Include="PdfiumViewer.Native.x86.v8-xfa">
+      <Version>2018.4.8.256</Version>
+    </PackageReference>
+    <PackageReference Include="PdfiumViewer.Native.x86_64.v8-xfa">
+      <Version>2018.4.8.256</Version>
     </PackageReference>
   </ItemGroup>
   <ItemGroup>

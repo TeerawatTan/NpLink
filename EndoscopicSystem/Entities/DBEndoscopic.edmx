@@ -1299,6 +1299,17 @@ warning 6002: The table/view 'EndoscopicDb.dbo.v_AppointmentDetails' does not ha
           <Property Name="EndoscopicID" Type="int" />
         </EntityType>
         <!--Errors Found During Generation:
+warning 6002: The table/view 'EndoscopicDb.dbo.v_GetImageCapturePath' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+        <EntityType Name="v_GetImageCapturePath">
+          <Key>
+            <PropertyRef Name="EndoscopicImageID" />
+            <PropertyRef Name="AppointmentID" />
+          </Key>
+          <Property Name="EndoscopicImageID" Type="int" Nullable="false" />
+          <Property Name="ImagePath" Type="nvarchar" MaxLength="500" />
+          <Property Name="AppointmentID" Type="int" Nullable="false" />
+        </EntityType>
+        <!--Errors Found During Generation:
 warning 6002: The table/view 'EndoscopicDb.dbo.v_HistoryEndoscopic' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
         <EntityType Name="v_HistoryEndoscopic">
           <Key>
@@ -1492,6 +1503,13 @@ warning 6002: The table/view 'EndoscopicDb.dbo.v_PatientList' does not have a pr
     [v_AppointmentDetails].[EndoscopicID] AS [EndoscopicID]
     FROM [dbo].[v_AppointmentDetails] AS [v_AppointmentDetails]</DefiningQuery>
           </EntitySet>
+          <EntitySet Name="v_GetImageCapturePath" EntityType="Self.v_GetImageCapturePath" store:Type="Views" store:Schema="dbo">
+            <DefiningQuery>SELECT 
+    [v_GetImageCapturePath].[EndoscopicImageID] AS [EndoscopicImageID], 
+    [v_GetImageCapturePath].[ImagePath] AS [ImagePath], 
+    [v_GetImageCapturePath].[AppointmentID] AS [AppointmentID]
+    FROM [dbo].[v_GetImageCapturePath] AS [v_GetImageCapturePath]</DefiningQuery>
+          </EntitySet>
           <EntitySet Name="v_HistoryEndoscopic" EntityType="Self.v_HistoryEndoscopic" store:Type="Views" store:Schema="dbo">
             <DefiningQuery>SELECT 
     [v_HistoryEndoscopic].[PatientID] AS [PatientID], 
@@ -1637,7 +1655,6 @@ warning 6002: The table/view 'EndoscopicDb.dbo.v_PatientList' does not have a pr
           <EntitySet Name="AnesthesistMethods" EntityType="EndoscopicModel.AnesthesistMethod" />
           <EntitySet Name="FindingLabels" EntityType="EndoscopicModel.FindingLabel" />
           <EntitySet Name="Financials" EntityType="EndoscopicModel.Financial" />
-          <EntitySet Name="v_PatientList" EntityType="EndoscopicModel.v_PatientList" />
           <EntitySet Name="ICD10" EntityType="EndoscopicModel.ICD10" />
           <EntitySet Name="ICD9" EntityType="EndoscopicModel.ICD9" />
           <EntitySet Name="ProcedureLists" EntityType="EndoscopicModel.ProcedureList" />
@@ -1661,6 +1678,8 @@ warning 6002: The table/view 'EndoscopicDb.dbo.v_PatientList' does not have a pr
           <EntitySet Name="Endoscopics" EntityType="EndoscopicModel.Endoscopic" />
           <EntitySet Name="v_HistoryEndoscopic" EntityType="EndoscopicModel.v_HistoryEndoscopic" />
           <EntitySet Name="Findings" EntityType="EndoscopicModel.Finding" />
+          <EntitySet Name="v_GetImageCapturePath" EntityType="EndoscopicModel.v_GetImageCapturePath" />
+          <EntitySet Name="v_PatientList" EntityType="EndoscopicModel.v_PatientList" />
           </EntityContainer>
         <EntityType Name="Doctor">
           <Key>
@@ -2649,25 +2668,6 @@ warning 6002: The table/view 'EndoscopicDb.dbo.v_PatientList' does not have a pr
           <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
           <Property Name="Name" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
         </EntityType>
-        <EntityType Name="v_PatientList">
-          <Key>
-            <PropertyRef Name="PatientID" />
-            <PropertyRef Name="AppointmentID" />
-          </Key>
-          <Property Name="PatientID" Type="Int32" Nullable="false" />
-          <Property Name="AppointmentDate" Type="DateTime" Precision="3" />
-          <Property Name="HN" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
-          <Property Name="Symptom" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
-          <Property Name="Fullname" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
-          <Property Name="DoctorID" Type="Int32" />
-          <Property Name="DoctorName" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
-          <Property Name="ProcedureID" Type="Int32" />
-          <Property Name="ProcedureName" Type="String" MaxLength="250" FixedLength="false" Unicode="true" />
-          <Property Name="RoomID" Type="Int32" />
-          <Property Name="RoomName" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
-          <Property Name="EndoscopicID" Type="Int32" />
-          <Property Name="AppointmentID" Type="Int32" Nullable="false" />
-        </EntityType>
         <EntityType Name="ICD10">
           <Key>
             <PropertyRef Name="ID" />
@@ -3127,6 +3127,34 @@ warning 6002: The table/view 'EndoscopicDb.dbo.v_PatientList' does not have a pr
           <Property Name="Nose" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
           <Property Name="PyriformID" Type="Int32" />
           <Property Name="Pyriform" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+        </EntityType>
+        <EntityType Name="v_GetImageCapturePath">
+          <Key>
+            <PropertyRef Name="EndoscopicImageID" />
+            <PropertyRef Name="AppointmentID" />
+          </Key>
+          <Property Name="EndoscopicImageID" Type="Int32" Nullable="false" />
+          <Property Name="ImagePath" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+          <Property Name="AppointmentID" Type="Int32" Nullable="false" />
+        </EntityType>
+        <EntityType Name="v_PatientList">
+          <Key>
+            <PropertyRef Name="PatientID" />
+            <PropertyRef Name="AppointmentID" />
+          </Key>
+          <Property Name="PatientID" Type="Int32" Nullable="false" />
+          <Property Name="AppointmentDate" Type="DateTime" Precision="3" />
+          <Property Name="HN" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Symptom" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="Fullname" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+          <Property Name="DoctorID" Type="Int32" />
+          <Property Name="DoctorName" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+          <Property Name="ProcedureID" Type="Int32" />
+          <Property Name="ProcedureName" Type="String" MaxLength="250" FixedLength="false" Unicode="true" />
+          <Property Name="RoomID" Type="Int32" />
+          <Property Name="RoomName" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+          <Property Name="EndoscopicID" Type="Int32" />
+          <Property Name="AppointmentID" Type="Int32" Nullable="false" />
         </EntityType>
         </Schema>
     </edmx:ConceptualModels>
@@ -4223,25 +4251,6 @@ warning 6002: The table/view 'EndoscopicDb.dbo.v_PatientList' does not have a pr
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
-          <EntitySetMapping Name="v_PatientList">
-            <EntityTypeMapping TypeName="EndoscopicModel.v_PatientList">
-              <MappingFragment StoreEntitySet="v_PatientList">
-                <ScalarProperty Name="AppointmentID" ColumnName="AppointmentID" />
-                <ScalarProperty Name="EndoscopicID" ColumnName="EndoscopicID" />
-                <ScalarProperty Name="RoomName" ColumnName="RoomName" />
-                <ScalarProperty Name="RoomID" ColumnName="RoomID" />
-                <ScalarProperty Name="ProcedureName" ColumnName="ProcedureName" />
-                <ScalarProperty Name="ProcedureID" ColumnName="ProcedureID" />
-                <ScalarProperty Name="DoctorName" ColumnName="DoctorName" />
-                <ScalarProperty Name="DoctorID" ColumnName="DoctorID" />
-                <ScalarProperty Name="Fullname" ColumnName="Fullname" />
-                <ScalarProperty Name="Symptom" ColumnName="Symptom" />
-                <ScalarProperty Name="HN" ColumnName="HN" />
-                <ScalarProperty Name="AppointmentDate" ColumnName="AppointmentDate" />
-                <ScalarProperty Name="PatientID" ColumnName="PatientID" />
-              </MappingFragment>
-            </EntityTypeMapping>
-          </EntitySetMapping>
           <EntitySetMapping Name="ICD10">
             <EntityTypeMapping TypeName="EndoscopicModel.ICD10">
               <MappingFragment StoreEntitySet="ICD10">
@@ -4722,6 +4731,34 @@ warning 6002: The table/view 'EndoscopicDb.dbo.v_PatientList' does not have a pr
                 <ScalarProperty Name="VocalCord" ColumnName="VocalCord" />
                 <ScalarProperty Name="PatientID" ColumnName="PatientID" />
                 <ScalarProperty Name="FindingID" ColumnName="FindingID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="v_GetImageCapturePath">
+            <EntityTypeMapping TypeName="EndoscopicModel.v_GetImageCapturePath">
+              <MappingFragment StoreEntitySet="v_GetImageCapturePath">
+                <ScalarProperty Name="AppointmentID" ColumnName="AppointmentID" />
+                <ScalarProperty Name="ImagePath" ColumnName="ImagePath" />
+                <ScalarProperty Name="EndoscopicImageID" ColumnName="EndoscopicImageID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="v_PatientList">
+            <EntityTypeMapping TypeName="EndoscopicModel.v_PatientList">
+              <MappingFragment StoreEntitySet="v_PatientList">
+                <ScalarProperty Name="AppointmentID" ColumnName="AppointmentID" />
+                <ScalarProperty Name="EndoscopicID" ColumnName="EndoscopicID" />
+                <ScalarProperty Name="RoomName" ColumnName="RoomName" />
+                <ScalarProperty Name="RoomID" ColumnName="RoomID" />
+                <ScalarProperty Name="ProcedureName" ColumnName="ProcedureName" />
+                <ScalarProperty Name="ProcedureID" ColumnName="ProcedureID" />
+                <ScalarProperty Name="DoctorName" ColumnName="DoctorName" />
+                <ScalarProperty Name="DoctorID" ColumnName="DoctorID" />
+                <ScalarProperty Name="Fullname" ColumnName="Fullname" />
+                <ScalarProperty Name="Symptom" ColumnName="Symptom" />
+                <ScalarProperty Name="HN" ColumnName="HN" />
+                <ScalarProperty Name="AppointmentDate" ColumnName="AppointmentDate" />
+                <ScalarProperty Name="PatientID" ColumnName="PatientID" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
