@@ -1796,18 +1796,12 @@ namespace EndoscopicSystem.V2.Forms
            Patient patient = null,
            Appointment appointment = null,
            Endoscopic endoscopic = null,
-           Finding finding = null,
-           Indication indication = null,
-           Speciman speciman = null,
-           Intervention intervention = null)
+           Finding finding = null)
         {
             patient = patient ?? new Patient();
             appointment = appointment ?? new Appointment();
             endoscopic = endoscopic ?? new Endoscopic();
             finding = finding ?? new Finding();
-            //indication = indication ?? new Indication();
-            //speciman = speciman ?? new Speciman();
-            //intervention = intervention ?? new Intervention();
 
             if (procId == 1 || procId == 3 || procId == 5) // EGD, ERCP, ENT
             {
@@ -2027,7 +2021,6 @@ namespace EndoscopicSystem.V2.Forms
                 cbbGeneralNurse3_Colono.SelectedValue = patient.NurseThirthID ?? 0;
                 dpGeneralFrom_Colono.Value = endoscopic.StartRecordDate ?? DateTime.Now;
                 dpGeneralTo_Colono.Value = endoscopic.EndRecordDate ?? DateTime.Now.AddMinutes(1);
-                cbbGeneralIndication_Colono.SelectedValue = patient.IndicationID ?? 0;
                 cbbInstrument_Colono.SelectedValue = appointment.Instrument1ID ?? 0;
                 if (appointment.Instrument1ID > 0)
                 {
@@ -2046,6 +2039,7 @@ namespace EndoscopicSystem.V2.Forms
                     if (endoscopic.IndicationID != null)
                     {
                         cbbGeneralIndication_Colono.SelectedValue = endoscopic.IndicationID;
+                        txbGeneralIndication_Colono.Text = endoscopic.IndicationOther;
                     }
                     else
                     {

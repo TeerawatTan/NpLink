@@ -143,13 +143,7 @@ namespace EndoscopicSystem.V2.Forms
 
             var query = _db.v_GetImageCapturePath.FirstOrDefault(f => f.AppointmentID == _appointmentId);
 
-            if (query is null)
-            {
-                MessageBox.Show("File not found !!", "Warning", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                this.Close();
-            }
-
-            string imgPathOrigin = query.ImagePath;
+            string imgPathOrigin = query?.ImagePath;
 
             if (!string.IsNullOrEmpty(imgPathOrigin))
             {
