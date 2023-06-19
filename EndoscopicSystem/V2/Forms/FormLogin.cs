@@ -72,7 +72,7 @@ namespace EndoscopicSystem.V2.Forms
                 else
                 {
                     //ClearForm();
-                    MessageBox.Show(status);
+                    MessageBox.Show("Please contact support.", "Error : " + status, MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
             }
         }

@@ -32,6 +32,17 @@ namespace EndoscopicSystem.V2.Forms
 
         private void FormPatientConfirm_Load(object sender, EventArgs e)
         {
+            // Check Instrument
+            var instruments = _db.Instruments.ToList();
+            if (instruments is null || instruments.Count == 0)
+            {
+                this.Hide();
+                FormSetting formSetting = new FormSetting(_id, "menuInstrumentSetting");
+                formSetting.ShowDialog();
+                formSetting = null;
+                this.Show();
+            }
+
             var v = _db.Users.Where(x => x.Id == _id).Select(x => new { x.AspectRatioID, x.PositionCrop }).FirstOrDefault();
             if (!string.IsNullOrWhiteSpace(_hnNo) && _procedureId > 0)
             {

@@ -78,6 +78,9 @@ namespace EndoscopicSystem.Forms
             else if (procedureId == 6) // EGD + Colonoscopy Report
             {
                 rprt.Load(_reportPath + "GastroscoryReport.rpt");
+
+                ReportDocument subReport = new ReportDocument();
+                subReport.Load(_reportPath + "ColonoscopyReport.rpt");
             }
             else if (procedureId == 7) // EUS Report
             {
