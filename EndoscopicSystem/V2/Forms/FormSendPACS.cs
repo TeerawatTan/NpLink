@@ -38,13 +38,6 @@ namespace EndoscopicSystem.V2.Forms
             this._id = userId;
             this._appointmentId = appointmentId;
             this._hnNo = hn;
-
-            if (string.IsNullOrEmpty(_hostPACS) || string.IsNullOrEmpty(_source) || string.IsNullOrEmpty(_destination))
-            {
-                MessageBox.Show("Please setting connection PACS Server.", "Warning !", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                this.Close();
-                return;
-            }
         }
 
         private void GeneratePictureBoxWwithImages(List<string> img)
@@ -178,6 +171,13 @@ namespace EndoscopicSystem.V2.Forms
 
         private void FormSendPACS_Load(object sender, EventArgs e)
         {
+            if (string.IsNullOrEmpty(_hostPACS) || string.IsNullOrEmpty(_source) || string.IsNullOrEmpty(_destination))
+            {
+                MessageBox.Show("Please setting connection PACS Server.", "Warning !", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                this.Close();
+                return;
+            }
+
             _patient = _db.Patients.FirstOrDefault(f => f.HN == _hnNo);
 
             if (_patient == null)
