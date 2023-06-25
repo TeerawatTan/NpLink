@@ -4301,7 +4301,7 @@ namespace EndoscopicSystem.V2.Forms
             this.txbFindingStomach_Ent.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
             this.txbFindingStomach_Ent.Location = new System.Drawing.Point(388, 170);
             this.txbFindingStomach_Ent.Margin = new System.Windows.Forms.Padding(2);
-            this.txbFindingStomach_Ent.MaxLength = 70;
+            this.txbFindingStomach_Ent.MaxLength = 100;
             this.txbFindingStomach_Ent.Name = "txbFindingStomach_Ent";
             this.txbFindingStomach_Ent.Size = new System.Drawing.Size(590, 23);
             this.txbFindingStomach_Ent.TabIndex = 233;
@@ -4314,7 +4314,7 @@ namespace EndoscopicSystem.V2.Forms
             this.txbFindingEsophagus_Ent.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
             this.txbFindingEsophagus_Ent.Location = new System.Drawing.Point(388, 144);
             this.txbFindingEsophagus_Ent.Margin = new System.Windows.Forms.Padding(2);
-            this.txbFindingEsophagus_Ent.MaxLength = 70;
+            this.txbFindingEsophagus_Ent.MaxLength = 100;
             this.txbFindingEsophagus_Ent.Name = "txbFindingEsophagus_Ent";
             this.txbFindingEsophagus_Ent.Size = new System.Drawing.Size(590, 23);
             this.txbFindingEsophagus_Ent.TabIndex = 232;
@@ -4327,7 +4327,7 @@ namespace EndoscopicSystem.V2.Forms
             this.txbFindingPyriform_Ent.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
             this.txbFindingPyriform_Ent.Location = new System.Drawing.Point(388, 118);
             this.txbFindingPyriform_Ent.Margin = new System.Windows.Forms.Padding(2);
-            this.txbFindingPyriform_Ent.MaxLength = 70;
+            this.txbFindingPyriform_Ent.MaxLength = 100;
             this.txbFindingPyriform_Ent.Name = "txbFindingPyriform_Ent";
             this.txbFindingPyriform_Ent.Size = new System.Drawing.Size(590, 23);
             this.txbFindingPyriform_Ent.TabIndex = 231;
@@ -4340,7 +4340,7 @@ namespace EndoscopicSystem.V2.Forms
             this.txbFindingSupraglottic_Ent.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
             this.txbFindingSupraglottic_Ent.Location = new System.Drawing.Point(388, 92);
             this.txbFindingSupraglottic_Ent.Margin = new System.Windows.Forms.Padding(2);
-            this.txbFindingSupraglottic_Ent.MaxLength = 70;
+            this.txbFindingSupraglottic_Ent.MaxLength = 100;
             this.txbFindingSupraglottic_Ent.Name = "txbFindingSupraglottic_Ent";
             this.txbFindingSupraglottic_Ent.Size = new System.Drawing.Size(590, 23);
             this.txbFindingSupraglottic_Ent.TabIndex = 230;
@@ -4353,7 +4353,7 @@ namespace EndoscopicSystem.V2.Forms
             this.txbFindingBaseOfTongue_Ent.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
             this.txbFindingBaseOfTongue_Ent.Location = new System.Drawing.Point(388, 66);
             this.txbFindingBaseOfTongue_Ent.Margin = new System.Windows.Forms.Padding(2);
-            this.txbFindingBaseOfTongue_Ent.MaxLength = 70;
+            this.txbFindingBaseOfTongue_Ent.MaxLength = 100;
             this.txbFindingBaseOfTongue_Ent.Name = "txbFindingBaseOfTongue_Ent";
             this.txbFindingBaseOfTongue_Ent.Size = new System.Drawing.Size(590, 23);
             this.txbFindingBaseOfTongue_Ent.TabIndex = 229;
@@ -4366,7 +4366,7 @@ namespace EndoscopicSystem.V2.Forms
             this.txbFindingNasopharynx_Ent.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
             this.txbFindingNasopharynx_Ent.Location = new System.Drawing.Point(388, 40);
             this.txbFindingNasopharynx_Ent.Margin = new System.Windows.Forms.Padding(2);
-            this.txbFindingNasopharynx_Ent.MaxLength = 70;
+            this.txbFindingNasopharynx_Ent.MaxLength = 100;
             this.txbFindingNasopharynx_Ent.Name = "txbFindingNasopharynx_Ent";
             this.txbFindingNasopharynx_Ent.Size = new System.Drawing.Size(590, 23);
             this.txbFindingNasopharynx_Ent.TabIndex = 228;
@@ -4379,7 +4379,7 @@ namespace EndoscopicSystem.V2.Forms
             this.txbFindingNose_Ent.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
             this.txbFindingNose_Ent.Location = new System.Drawing.Point(388, 14);
             this.txbFindingNose_Ent.Margin = new System.Windows.Forms.Padding(2);
-            this.txbFindingNose_Ent.MaxLength = 70;
+            this.txbFindingNose_Ent.MaxLength = 100;
             this.txbFindingNose_Ent.Name = "txbFindingNose_Ent";
             this.txbFindingNose_Ent.Size = new System.Drawing.Size(590, 23);
             this.txbFindingNose_Ent.TabIndex = 227;
@@ -4392,7 +4392,7 @@ namespace EndoscopicSystem.V2.Forms
             this.txbFindingRecommendation_Ent.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
             this.txbFindingRecommendation_Ent.Location = new System.Drawing.Point(224, 440);
             this.txbFindingRecommendation_Ent.Margin = new System.Windows.Forms.Padding(2);
-            this.txbFindingRecommendation_Ent.MaxLength = 82;
+            this.txbFindingRecommendation_Ent.MaxLength = 120;
             this.txbFindingRecommendation_Ent.Name = "txbFindingRecommendation_Ent";
             this.txbFindingRecommendation_Ent.Size = new System.Drawing.Size(757, 23);
             this.txbFindingRecommendation_Ent.TabIndex = 211;
@@ -4406,7 +4406,7 @@ namespace EndoscopicSystem.V2.Forms
             this.txbFindingHistopathology_Ent.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
             this.txbFindingHistopathology_Ent.Location = new System.Drawing.Point(224, 413);
             this.txbFindingHistopathology_Ent.Margin = new System.Windows.Forms.Padding(2);
-            this.txbFindingHistopathology_Ent.MaxLength = 82;
+            this.txbFindingHistopathology_Ent.MaxLength = 120;
             this.txbFindingHistopathology_Ent.Name = "txbFindingHistopathology_Ent";
             this.txbFindingHistopathology_Ent.Size = new System.Drawing.Size(757, 23);
             this.txbFindingHistopathology_Ent.TabIndex = 209;
@@ -4420,7 +4420,7 @@ namespace EndoscopicSystem.V2.Forms
             this.txbFindingDx3Text_Ent.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
             this.txbFindingDx3Text_Ent.Location = new System.Drawing.Point(405, 359);
             this.txbFindingDx3Text_Ent.Margin = new System.Windows.Forms.Padding(2);
-            this.txbFindingDx3Text_Ent.MaxLength = 80;
+            this.txbFindingDx3Text_Ent.MaxLength = 116;
             this.txbFindingDx3Text_Ent.Name = "txbFindingDx3Text_Ent";
             this.txbFindingDx3Text_Ent.Size = new System.Drawing.Size(573, 23);
             this.txbFindingDx3Text_Ent.TabIndex = 204;
@@ -4448,7 +4448,7 @@ namespace EndoscopicSystem.V2.Forms
             this.txbFindingDx2Text_Ent.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
             this.txbFindingDx2Text_Ent.Location = new System.Drawing.Point(405, 332);
             this.txbFindingDx2Text_Ent.Margin = new System.Windows.Forms.Padding(2);
-            this.txbFindingDx2Text_Ent.MaxLength = 80;
+            this.txbFindingDx2Text_Ent.MaxLength = 116;
             this.txbFindingDx2Text_Ent.Name = "txbFindingDx2Text_Ent";
             this.txbFindingDx2Text_Ent.Size = new System.Drawing.Size(573, 23);
             this.txbFindingDx2Text_Ent.TabIndex = 202;
@@ -4476,7 +4476,7 @@ namespace EndoscopicSystem.V2.Forms
             this.txbFindingDx1Text_Ent.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
             this.txbFindingDx1Text_Ent.Location = new System.Drawing.Point(405, 305);
             this.txbFindingDx1Text_Ent.Margin = new System.Windows.Forms.Padding(2);
-            this.txbFindingDx1Text_Ent.MaxLength = 80;
+            this.txbFindingDx1Text_Ent.MaxLength = 116;
             this.txbFindingDx1Text_Ent.Name = "txbFindingDx1Text_Ent";
             this.txbFindingDx1Text_Ent.Size = new System.Drawing.Size(573, 23);
             this.txbFindingDx1Text_Ent.TabIndex = 200;
@@ -4504,7 +4504,7 @@ namespace EndoscopicSystem.V2.Forms
             this.txbFindingProcedure_Ent.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
             this.txbFindingProcedure_Ent.Location = new System.Drawing.Point(224, 278);
             this.txbFindingProcedure_Ent.Margin = new System.Windows.Forms.Padding(2);
-            this.txbFindingProcedure_Ent.MaxLength = 85;
+            this.txbFindingProcedure_Ent.MaxLength = 130;
             this.txbFindingProcedure_Ent.Name = "txbFindingProcedure_Ent";
             this.txbFindingProcedure_Ent.Size = new System.Drawing.Size(754, 23);
             this.txbFindingProcedure_Ent.TabIndex = 198;
@@ -4518,7 +4518,7 @@ namespace EndoscopicSystem.V2.Forms
             this.txbFindingSupplementalProcedureText2_Ent.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
             this.txbFindingSupplementalProcedureText2_Ent.Location = new System.Drawing.Point(405, 251);
             this.txbFindingSupplementalProcedureText2_Ent.Margin = new System.Windows.Forms.Padding(2);
-            this.txbFindingSupplementalProcedureText2_Ent.MaxLength = 78;
+            this.txbFindingSupplementalProcedureText2_Ent.MaxLength = 110;
             this.txbFindingSupplementalProcedureText2_Ent.Name = "txbFindingSupplementalProcedureText2_Ent";
             this.txbFindingSupplementalProcedureText2_Ent.Size = new System.Drawing.Size(573, 23);
             this.txbFindingSupplementalProcedureText2_Ent.TabIndex = 196;
@@ -4546,7 +4546,7 @@ namespace EndoscopicSystem.V2.Forms
             this.txbFindingSupplementalProcedureText_Ent.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
             this.txbFindingSupplementalProcedureText_Ent.Location = new System.Drawing.Point(405, 224);
             this.txbFindingSupplementalProcedureText_Ent.Margin = new System.Windows.Forms.Padding(2);
-            this.txbFindingSupplementalProcedureText_Ent.MaxLength = 78;
+            this.txbFindingSupplementalProcedureText_Ent.MaxLength = 110;
             this.txbFindingSupplementalProcedureText_Ent.Name = "txbFindingSupplementalProcedureText_Ent";
             this.txbFindingSupplementalProcedureText_Ent.Size = new System.Drawing.Size(573, 23);
             this.txbFindingSupplementalProcedureText_Ent.TabIndex = 193;
@@ -4574,7 +4574,7 @@ namespace EndoscopicSystem.V2.Forms
             this.txbFindingPrinncipalProcedureText_Ent.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
             this.txbFindingPrinncipalProcedureText_Ent.Location = new System.Drawing.Point(405, 197);
             this.txbFindingPrinncipalProcedureText_Ent.Margin = new System.Windows.Forms.Padding(2);
-            this.txbFindingPrinncipalProcedureText_Ent.MaxLength = 80;
+            this.txbFindingPrinncipalProcedureText_Ent.MaxLength = 110;
             this.txbFindingPrinncipalProcedureText_Ent.Name = "txbFindingPrinncipalProcedureText_Ent";
             this.txbFindingPrinncipalProcedureText_Ent.Size = new System.Drawing.Size(573, 23);
             this.txbFindingPrinncipalProcedureText_Ent.TabIndex = 190;
@@ -4602,7 +4602,7 @@ namespace EndoscopicSystem.V2.Forms
             this.txbFindingComplication_Ent.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
             this.txbFindingComplication_Ent.Location = new System.Drawing.Point(224, 386);
             this.txbFindingComplication_Ent.Margin = new System.Windows.Forms.Padding(2);
-            this.txbFindingComplication_Ent.MaxLength = 82;
+            this.txbFindingComplication_Ent.MaxLength = 120;
             this.txbFindingComplication_Ent.Name = "txbFindingComplication_Ent";
             this.txbFindingComplication_Ent.Size = new System.Drawing.Size(757, 23);
             this.txbFindingComplication_Ent.TabIndex = 186;
@@ -4616,7 +4616,7 @@ namespace EndoscopicSystem.V2.Forms
             this.txbFindingComment_Ent.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
             this.txbFindingComment_Ent.Location = new System.Drawing.Point(224, 467);
             this.txbFindingComment_Ent.Margin = new System.Windows.Forms.Padding(2);
-            this.txbFindingComment_Ent.MaxLength = 82;
+            this.txbFindingComment_Ent.MaxLength = 120;
             this.txbFindingComment_Ent.Name = "txbFindingComment_Ent";
             this.txbFindingComment_Ent.Size = new System.Drawing.Size(757, 23);
             this.txbFindingComment_Ent.TabIndex = 187;
@@ -4760,7 +4760,7 @@ namespace EndoscopicSystem.V2.Forms
             this.label58.AutoSize = true;
             this.label58.BackColor = System.Drawing.Color.Transparent;
             this.label58.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
-            this.label58.Location = new System.Drawing.Point(13, 446);
+            this.label58.Location = new System.Drawing.Point(13, 442);
             this.label58.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label58.Name = "label58";
             this.label58.Size = new System.Drawing.Size(149, 20);
@@ -4772,7 +4772,7 @@ namespace EndoscopicSystem.V2.Forms
             this.label59.AutoSize = true;
             this.label59.BackColor = System.Drawing.Color.Transparent;
             this.label59.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
-            this.label59.Location = new System.Drawing.Point(13, 419);
+            this.label59.Location = new System.Drawing.Point(13, 416);
             this.label59.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label59.Name = "label59";
             this.label59.Size = new System.Drawing.Size(129, 20);
@@ -4868,7 +4868,7 @@ namespace EndoscopicSystem.V2.Forms
             this.label78.AutoSize = true;
             this.label78.BackColor = System.Drawing.Color.Transparent;
             this.label78.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
-            this.label78.Location = new System.Drawing.Point(13, 474);
+            this.label78.Location = new System.Drawing.Point(13, 470);
             this.label78.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label78.Name = "label78";
             this.label78.Size = new System.Drawing.Size(85, 20);
@@ -4880,7 +4880,7 @@ namespace EndoscopicSystem.V2.Forms
             this.label79.AutoSize = true;
             this.label79.BackColor = System.Drawing.Color.Transparent;
             this.label79.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
-            this.label79.Location = new System.Drawing.Point(13, 396);
+            this.label79.Location = new System.Drawing.Point(13, 389);
             this.label79.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label79.Name = "label79";
             this.label79.Size = new System.Drawing.Size(112, 20);
@@ -5059,7 +5059,7 @@ namespace EndoscopicSystem.V2.Forms
             this.txbFindingRecommendation_Broncho.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
             this.txbFindingRecommendation_Broncho.Location = new System.Drawing.Point(221, 581);
             this.txbFindingRecommendation_Broncho.Margin = new System.Windows.Forms.Padding(2);
-            this.txbFindingRecommendation_Broncho.MaxLength = 82;
+            this.txbFindingRecommendation_Broncho.MaxLength = 120;
             this.txbFindingRecommendation_Broncho.Name = "txbFindingRecommendation_Broncho";
             this.txbFindingRecommendation_Broncho.Size = new System.Drawing.Size(748, 23);
             this.txbFindingRecommendation_Broncho.TabIndex = 213;
@@ -5072,7 +5072,7 @@ namespace EndoscopicSystem.V2.Forms
             this.txbFindingHistopathology_Broncho.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
             this.txbFindingHistopathology_Broncho.Location = new System.Drawing.Point(221, 554);
             this.txbFindingHistopathology_Broncho.Margin = new System.Windows.Forms.Padding(2);
-            this.txbFindingHistopathology_Broncho.MaxLength = 82;
+            this.txbFindingHistopathology_Broncho.MaxLength = 120;
             this.txbFindingHistopathology_Broncho.Name = "txbFindingHistopathology_Broncho";
             this.txbFindingHistopathology_Broncho.Size = new System.Drawing.Size(748, 23);
             this.txbFindingHistopathology_Broncho.TabIndex = 211;
@@ -5085,7 +5085,7 @@ namespace EndoscopicSystem.V2.Forms
             this.txbFindingDx3Text_Broncho.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
             this.txbFindingDx3Text_Broncho.Location = new System.Drawing.Point(377, 500);
             this.txbFindingDx3Text_Broncho.Margin = new System.Windows.Forms.Padding(2);
-            this.txbFindingDx3Text_Broncho.MaxLength = 80;
+            this.txbFindingDx3Text_Broncho.MaxLength = 116;
             this.txbFindingDx3Text_Broncho.Name = "txbFindingDx3Text_Broncho";
             this.txbFindingDx3Text_Broncho.Size = new System.Drawing.Size(592, 23);
             this.txbFindingDx3Text_Broncho.TabIndex = 203;
@@ -5111,7 +5111,7 @@ namespace EndoscopicSystem.V2.Forms
             this.txbFindingDx2Text_Broncho.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
             this.txbFindingDx2Text_Broncho.Location = new System.Drawing.Point(377, 473);
             this.txbFindingDx2Text_Broncho.Margin = new System.Windows.Forms.Padding(2);
-            this.txbFindingDx2Text_Broncho.MaxLength = 80;
+            this.txbFindingDx2Text_Broncho.MaxLength = 116;
             this.txbFindingDx2Text_Broncho.Name = "txbFindingDx2Text_Broncho";
             this.txbFindingDx2Text_Broncho.Size = new System.Drawing.Size(592, 23);
             this.txbFindingDx2Text_Broncho.TabIndex = 201;
@@ -5137,7 +5137,7 @@ namespace EndoscopicSystem.V2.Forms
             this.txbFindingDx1Text_Broncho.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
             this.txbFindingDx1Text_Broncho.Location = new System.Drawing.Point(377, 446);
             this.txbFindingDx1Text_Broncho.Margin = new System.Windows.Forms.Padding(2);
-            this.txbFindingDx1Text_Broncho.MaxLength = 80;
+            this.txbFindingDx1Text_Broncho.MaxLength = 116;
             this.txbFindingDx1Text_Broncho.Name = "txbFindingDx1Text_Broncho";
             this.txbFindingDx1Text_Broncho.Size = new System.Drawing.Size(592, 23);
             this.txbFindingDx1Text_Broncho.TabIndex = 199;
@@ -5163,7 +5163,7 @@ namespace EndoscopicSystem.V2.Forms
             this.txbFindingProcedure_Broncho.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
             this.txbFindingProcedure_Broncho.Location = new System.Drawing.Point(221, 419);
             this.txbFindingProcedure_Broncho.Margin = new System.Windows.Forms.Padding(2);
-            this.txbFindingProcedure_Broncho.MaxLength = 85;
+            this.txbFindingProcedure_Broncho.MaxLength = 130;
             this.txbFindingProcedure_Broncho.Name = "txbFindingProcedure_Broncho";
             this.txbFindingProcedure_Broncho.Size = new System.Drawing.Size(748, 23);
             this.txbFindingProcedure_Broncho.TabIndex = 197;
@@ -5177,7 +5177,7 @@ namespace EndoscopicSystem.V2.Forms
             this.txbFindingSupplementalProcedure2Text_Broncho.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
             this.txbFindingSupplementalProcedure2Text_Broncho.Location = new System.Drawing.Point(377, 392);
             this.txbFindingSupplementalProcedure2Text_Broncho.Margin = new System.Windows.Forms.Padding(2);
-            this.txbFindingSupplementalProcedure2Text_Broncho.MaxLength = 78;
+            this.txbFindingSupplementalProcedure2Text_Broncho.MaxLength = 110;
             this.txbFindingSupplementalProcedure2Text_Broncho.Name = "txbFindingSupplementalProcedure2Text_Broncho";
             this.txbFindingSupplementalProcedure2Text_Broncho.Size = new System.Drawing.Size(592, 23);
             this.txbFindingSupplementalProcedure2Text_Broncho.TabIndex = 195;
@@ -5203,7 +5203,7 @@ namespace EndoscopicSystem.V2.Forms
             this.txbFindingSupplementalProcedureText_Broncho.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
             this.txbFindingSupplementalProcedureText_Broncho.Location = new System.Drawing.Point(377, 365);
             this.txbFindingSupplementalProcedureText_Broncho.Margin = new System.Windows.Forms.Padding(2);
-            this.txbFindingSupplementalProcedureText_Broncho.MaxLength = 78;
+            this.txbFindingSupplementalProcedureText_Broncho.MaxLength = 110;
             this.txbFindingSupplementalProcedureText_Broncho.Name = "txbFindingSupplementalProcedureText_Broncho";
             this.txbFindingSupplementalProcedureText_Broncho.Size = new System.Drawing.Size(592, 23);
             this.txbFindingSupplementalProcedureText_Broncho.TabIndex = 192;
@@ -5229,7 +5229,7 @@ namespace EndoscopicSystem.V2.Forms
             this.txbFindingPrinncipalProcedureText_Broncho.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
             this.txbFindingPrinncipalProcedureText_Broncho.Location = new System.Drawing.Point(377, 338);
             this.txbFindingPrinncipalProcedureText_Broncho.Margin = new System.Windows.Forms.Padding(2);
-            this.txbFindingPrinncipalProcedureText_Broncho.MaxLength = 80;
+            this.txbFindingPrinncipalProcedureText_Broncho.MaxLength = 110;
             this.txbFindingPrinncipalProcedureText_Broncho.Name = "txbFindingPrinncipalProcedureText_Broncho";
             this.txbFindingPrinncipalProcedureText_Broncho.Size = new System.Drawing.Size(592, 23);
             this.txbFindingPrinncipalProcedureText_Broncho.TabIndex = 189;
@@ -5255,7 +5255,7 @@ namespace EndoscopicSystem.V2.Forms
             this.txbFindingComplication_Broncho.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
             this.txbFindingComplication_Broncho.Location = new System.Drawing.Point(221, 527);
             this.txbFindingComplication_Broncho.Margin = new System.Windows.Forms.Padding(2);
-            this.txbFindingComplication_Broncho.MaxLength = 82;
+            this.txbFindingComplication_Broncho.MaxLength = 120;
             this.txbFindingComplication_Broncho.Name = "txbFindingComplication_Broncho";
             this.txbFindingComplication_Broncho.Size = new System.Drawing.Size(748, 23);
             this.txbFindingComplication_Broncho.TabIndex = 185;
@@ -5268,7 +5268,7 @@ namespace EndoscopicSystem.V2.Forms
             this.txbFindingComment_Broncho.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
             this.txbFindingComment_Broncho.Location = new System.Drawing.Point(221, 608);
             this.txbFindingComment_Broncho.Margin = new System.Windows.Forms.Padding(2);
-            this.txbFindingComment_Broncho.MaxLength = 82;
+            this.txbFindingComment_Broncho.MaxLength = 120;
             this.txbFindingComment_Broncho.Name = "txbFindingComment_Broncho";
             this.txbFindingComment_Broncho.Size = new System.Drawing.Size(748, 23);
             this.txbFindingComment_Broncho.TabIndex = 186;
@@ -5281,7 +5281,7 @@ namespace EndoscopicSystem.V2.Forms
             this.txbFindingLLL_Broncho.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
             this.txbFindingLLL_Broncho.Location = new System.Drawing.Point(383, 310);
             this.txbFindingLLL_Broncho.Margin = new System.Windows.Forms.Padding(2);
-            this.txbFindingLLL_Broncho.MaxLength = 70;
+            this.txbFindingLLL_Broncho.MaxLength = 100;
             this.txbFindingLLL_Broncho.Name = "txbFindingLLL_Broncho";
             this.txbFindingLLL_Broncho.Size = new System.Drawing.Size(586, 23);
             this.txbFindingLLL_Broncho.TabIndex = 104;
@@ -5294,7 +5294,7 @@ namespace EndoscopicSystem.V2.Forms
             this.txbFindingLingular_Broncho.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
             this.txbFindingLingular_Broncho.Location = new System.Drawing.Point(383, 283);
             this.txbFindingLingular_Broncho.Margin = new System.Windows.Forms.Padding(2);
-            this.txbFindingLingular_Broncho.MaxLength = 70;
+            this.txbFindingLingular_Broncho.MaxLength = 100;
             this.txbFindingLingular_Broncho.Name = "txbFindingLingular_Broncho";
             this.txbFindingLingular_Broncho.Size = new System.Drawing.Size(586, 23);
             this.txbFindingLingular_Broncho.TabIndex = 103;
@@ -5307,7 +5307,7 @@ namespace EndoscopicSystem.V2.Forms
             this.txbFindingLUL_Broncho.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
             this.txbFindingLUL_Broncho.Location = new System.Drawing.Point(383, 256);
             this.txbFindingLUL_Broncho.Margin = new System.Windows.Forms.Padding(2);
-            this.txbFindingLUL_Broncho.MaxLength = 70;
+            this.txbFindingLUL_Broncho.MaxLength = 100;
             this.txbFindingLUL_Broncho.Name = "txbFindingLUL_Broncho";
             this.txbFindingLUL_Broncho.Size = new System.Drawing.Size(586, 23);
             this.txbFindingLUL_Broncho.TabIndex = 102;
@@ -5320,7 +5320,7 @@ namespace EndoscopicSystem.V2.Forms
             this.txbFindingLeftMain_Broncho.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
             this.txbFindingLeftMain_Broncho.Location = new System.Drawing.Point(383, 229);
             this.txbFindingLeftMain_Broncho.Margin = new System.Windows.Forms.Padding(2);
-            this.txbFindingLeftMain_Broncho.MaxLength = 70;
+            this.txbFindingLeftMain_Broncho.MaxLength = 100;
             this.txbFindingLeftMain_Broncho.Name = "txbFindingLeftMain_Broncho";
             this.txbFindingLeftMain_Broncho.Size = new System.Drawing.Size(586, 23);
             this.txbFindingLeftMain_Broncho.TabIndex = 101;
@@ -5333,7 +5333,7 @@ namespace EndoscopicSystem.V2.Forms
             this.txbFindingRLL_Broncho.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
             this.txbFindingRLL_Broncho.Location = new System.Drawing.Point(383, 202);
             this.txbFindingRLL_Broncho.Margin = new System.Windows.Forms.Padding(2);
-            this.txbFindingRLL_Broncho.MaxLength = 70;
+            this.txbFindingRLL_Broncho.MaxLength = 100;
             this.txbFindingRLL_Broncho.Name = "txbFindingRLL_Broncho";
             this.txbFindingRLL_Broncho.Size = new System.Drawing.Size(586, 23);
             this.txbFindingRLL_Broncho.TabIndex = 96;
@@ -5346,7 +5346,7 @@ namespace EndoscopicSystem.V2.Forms
             this.txbFindingRML_Broncho.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
             this.txbFindingRML_Broncho.Location = new System.Drawing.Point(383, 175);
             this.txbFindingRML_Broncho.Margin = new System.Windows.Forms.Padding(2);
-            this.txbFindingRML_Broncho.MaxLength = 70;
+            this.txbFindingRML_Broncho.MaxLength = 100;
             this.txbFindingRML_Broncho.Name = "txbFindingRML_Broncho";
             this.txbFindingRML_Broncho.Size = new System.Drawing.Size(586, 23);
             this.txbFindingRML_Broncho.TabIndex = 94;
@@ -5359,7 +5359,7 @@ namespace EndoscopicSystem.V2.Forms
             this.txbFindingRUL_Broncho.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
             this.txbFindingRUL_Broncho.Location = new System.Drawing.Point(383, 148);
             this.txbFindingRUL_Broncho.Margin = new System.Windows.Forms.Padding(2);
-            this.txbFindingRUL_Broncho.MaxLength = 70;
+            this.txbFindingRUL_Broncho.MaxLength = 100;
             this.txbFindingRUL_Broncho.Name = "txbFindingRUL_Broncho";
             this.txbFindingRUL_Broncho.Size = new System.Drawing.Size(586, 23);
             this.txbFindingRUL_Broncho.TabIndex = 92;
@@ -5372,7 +5372,7 @@ namespace EndoscopicSystem.V2.Forms
             this.txbFindingIntermideate_Broncho.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
             this.txbFindingIntermideate_Broncho.Location = new System.Drawing.Point(383, 121);
             this.txbFindingIntermideate_Broncho.Margin = new System.Windows.Forms.Padding(2);
-            this.txbFindingIntermideate_Broncho.MaxLength = 70;
+            this.txbFindingIntermideate_Broncho.MaxLength = 100;
             this.txbFindingIntermideate_Broncho.Name = "txbFindingIntermideate_Broncho";
             this.txbFindingIntermideate_Broncho.Size = new System.Drawing.Size(586, 23);
             this.txbFindingIntermideate_Broncho.TabIndex = 91;
@@ -5385,7 +5385,7 @@ namespace EndoscopicSystem.V2.Forms
             this.txbFindingRightMain_Broncho.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
             this.txbFindingRightMain_Broncho.Location = new System.Drawing.Point(383, 94);
             this.txbFindingRightMain_Broncho.Margin = new System.Windows.Forms.Padding(2);
-            this.txbFindingRightMain_Broncho.MaxLength = 70;
+            this.txbFindingRightMain_Broncho.MaxLength = 100;
             this.txbFindingRightMain_Broncho.Name = "txbFindingRightMain_Broncho";
             this.txbFindingRightMain_Broncho.Size = new System.Drawing.Size(586, 23);
             this.txbFindingRightMain_Broncho.TabIndex = 90;
@@ -5398,7 +5398,7 @@ namespace EndoscopicSystem.V2.Forms
             this.txbFindingCarina_Broncho.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
             this.txbFindingCarina_Broncho.Location = new System.Drawing.Point(383, 67);
             this.txbFindingCarina_Broncho.Margin = new System.Windows.Forms.Padding(2);
-            this.txbFindingCarina_Broncho.MaxLength = 70;
+            this.txbFindingCarina_Broncho.MaxLength = 100;
             this.txbFindingCarina_Broncho.Name = "txbFindingCarina_Broncho";
             this.txbFindingCarina_Broncho.Size = new System.Drawing.Size(586, 23);
             this.txbFindingCarina_Broncho.TabIndex = 89;
@@ -5411,7 +5411,7 @@ namespace EndoscopicSystem.V2.Forms
             this.txbFindingTrachea_Broncho.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
             this.txbFindingTrachea_Broncho.Location = new System.Drawing.Point(383, 40);
             this.txbFindingTrachea_Broncho.Margin = new System.Windows.Forms.Padding(2);
-            this.txbFindingTrachea_Broncho.MaxLength = 70;
+            this.txbFindingTrachea_Broncho.MaxLength = 100;
             this.txbFindingTrachea_Broncho.Name = "txbFindingTrachea_Broncho";
             this.txbFindingTrachea_Broncho.Size = new System.Drawing.Size(586, 23);
             this.txbFindingTrachea_Broncho.TabIndex = 88;
@@ -5424,7 +5424,7 @@ namespace EndoscopicSystem.V2.Forms
             this.txbFindingVocalCord_Broncho.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
             this.txbFindingVocalCord_Broncho.Location = new System.Drawing.Point(383, 13);
             this.txbFindingVocalCord_Broncho.Margin = new System.Windows.Forms.Padding(2);
-            this.txbFindingVocalCord_Broncho.MaxLength = 70;
+            this.txbFindingVocalCord_Broncho.MaxLength = 100;
             this.txbFindingVocalCord_Broncho.Name = "txbFindingVocalCord_Broncho";
             this.txbFindingVocalCord_Broncho.Size = new System.Drawing.Size(586, 23);
             this.txbFindingVocalCord_Broncho.TabIndex = 87;
@@ -5921,9 +5921,9 @@ namespace EndoscopicSystem.V2.Forms
             | System.Windows.Forms.AnchorStyles.Right)));
             this.txbFindingOther_ERCP.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.txbFindingOther_ERCP.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
-            this.txbFindingOther_ERCP.Location = new System.Drawing.Point(383, 161);
+            this.txbFindingOther_ERCP.Location = new System.Drawing.Point(383, 149);
             this.txbFindingOther_ERCP.Margin = new System.Windows.Forms.Padding(2);
-            this.txbFindingOther_ERCP.MaxLength = 70;
+            this.txbFindingOther_ERCP.MaxLength = 100;
             this.txbFindingOther_ERCP.Name = "txbFindingOther_ERCP";
             this.txbFindingOther_ERCP.Size = new System.Drawing.Size(598, 23);
             this.txbFindingOther_ERCP.TabIndex = 226;
@@ -5934,9 +5934,9 @@ namespace EndoscopicSystem.V2.Forms
             | System.Windows.Forms.AnchorStyles.Right)));
             this.txbFindingPancreas_ERCP.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.txbFindingPancreas_ERCP.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
-            this.txbFindingPancreas_ERCP.Location = new System.Drawing.Point(383, 107);
+            this.txbFindingPancreas_ERCP.Location = new System.Drawing.Point(383, 95);
             this.txbFindingPancreas_ERCP.Margin = new System.Windows.Forms.Padding(2);
-            this.txbFindingPancreas_ERCP.MaxLength = 70;
+            this.txbFindingPancreas_ERCP.MaxLength = 100;
             this.txbFindingPancreas_ERCP.Name = "txbFindingPancreas_ERCP";
             this.txbFindingPancreas_ERCP.Size = new System.Drawing.Size(598, 23);
             this.txbFindingPancreas_ERCP.TabIndex = 223;
@@ -5947,7 +5947,7 @@ namespace EndoscopicSystem.V2.Forms
             | System.Windows.Forms.AnchorStyles.Right)));
             this.txbFindingDx3ID_ERCP.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.txbFindingDx3ID_ERCP.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
-            this.txbFindingDx3ID_ERCP.Location = new System.Drawing.Point(189, 446);
+            this.txbFindingDx3ID_ERCP.Location = new System.Drawing.Point(189, 434);
             this.txbFindingDx3ID_ERCP.Margin = new System.Windows.Forms.Padding(2);
             this.txbFindingDx3ID_ERCP.MaxLength = 200;
             this.txbFindingDx3ID_ERCP.Name = "txbFindingDx3ID_ERCP";
@@ -5961,7 +5961,7 @@ namespace EndoscopicSystem.V2.Forms
             | System.Windows.Forms.AnchorStyles.Right)));
             this.txbFindingDx2ID_ERCP.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.txbFindingDx2ID_ERCP.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
-            this.txbFindingDx2ID_ERCP.Location = new System.Drawing.Point(189, 419);
+            this.txbFindingDx2ID_ERCP.Location = new System.Drawing.Point(189, 407);
             this.txbFindingDx2ID_ERCP.Margin = new System.Windows.Forms.Padding(2);
             this.txbFindingDx2ID_ERCP.MaxLength = 200;
             this.txbFindingDx2ID_ERCP.Name = "txbFindingDx2ID_ERCP";
@@ -5975,7 +5975,7 @@ namespace EndoscopicSystem.V2.Forms
             | System.Windows.Forms.AnchorStyles.Right)));
             this.txbFindingDx1ID_ERCP.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.txbFindingDx1ID_ERCP.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
-            this.txbFindingDx1ID_ERCP.Location = new System.Drawing.Point(189, 392);
+            this.txbFindingDx1ID_ERCP.Location = new System.Drawing.Point(189, 380);
             this.txbFindingDx1ID_ERCP.Margin = new System.Windows.Forms.Padding(2);
             this.txbFindingDx1ID_ERCP.MaxLength = 200;
             this.txbFindingDx1ID_ERCP.Name = "txbFindingDx1ID_ERCP";
@@ -5989,7 +5989,7 @@ namespace EndoscopicSystem.V2.Forms
             | System.Windows.Forms.AnchorStyles.Right)));
             this.txbFindingSupplementalProcedure2ID_ERCP.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.txbFindingSupplementalProcedure2ID_ERCP.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
-            this.txbFindingSupplementalProcedure2ID_ERCP.Location = new System.Drawing.Point(221, 338);
+            this.txbFindingSupplementalProcedure2ID_ERCP.Location = new System.Drawing.Point(221, 326);
             this.txbFindingSupplementalProcedure2ID_ERCP.Margin = new System.Windows.Forms.Padding(2);
             this.txbFindingSupplementalProcedure2ID_ERCP.MaxLength = 200;
             this.txbFindingSupplementalProcedure2ID_ERCP.Name = "txbFindingSupplementalProcedure2ID_ERCP";
@@ -6003,7 +6003,7 @@ namespace EndoscopicSystem.V2.Forms
             | System.Windows.Forms.AnchorStyles.Right)));
             this.txbFindingSupplementalProcedureID_ERCP.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.txbFindingSupplementalProcedureID_ERCP.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
-            this.txbFindingSupplementalProcedureID_ERCP.Location = new System.Drawing.Point(221, 311);
+            this.txbFindingSupplementalProcedureID_ERCP.Location = new System.Drawing.Point(221, 299);
             this.txbFindingSupplementalProcedureID_ERCP.Margin = new System.Windows.Forms.Padding(2);
             this.txbFindingSupplementalProcedureID_ERCP.MaxLength = 200;
             this.txbFindingSupplementalProcedureID_ERCP.Name = "txbFindingSupplementalProcedureID_ERCP";
@@ -6017,7 +6017,7 @@ namespace EndoscopicSystem.V2.Forms
             | System.Windows.Forms.AnchorStyles.Right)));
             this.txbFindingPrinncipalProcedureID_ERCP.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.txbFindingPrinncipalProcedureID_ERCP.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
-            this.txbFindingPrinncipalProcedureID_ERCP.Location = new System.Drawing.Point(221, 284);
+            this.txbFindingPrinncipalProcedureID_ERCP.Location = new System.Drawing.Point(221, 272);
             this.txbFindingPrinncipalProcedureID_ERCP.Margin = new System.Windows.Forms.Padding(2);
             this.txbFindingPrinncipalProcedureID_ERCP.MaxLength = 200;
             this.txbFindingPrinncipalProcedureID_ERCP.Name = "txbFindingPrinncipalProcedureID_ERCP";
@@ -6031,9 +6031,9 @@ namespace EndoscopicSystem.V2.Forms
             | System.Windows.Forms.AnchorStyles.Right)));
             this.txbFindingRecommendation_ERCP.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.txbFindingRecommendation_ERCP.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
-            this.txbFindingRecommendation_ERCP.Location = new System.Drawing.Point(221, 527);
+            this.txbFindingRecommendation_ERCP.Location = new System.Drawing.Point(221, 515);
             this.txbFindingRecommendation_ERCP.Margin = new System.Windows.Forms.Padding(2);
-            this.txbFindingRecommendation_ERCP.MaxLength = 82;
+            this.txbFindingRecommendation_ERCP.MaxLength = 120;
             this.txbFindingRecommendation_ERCP.Name = "txbFindingRecommendation_ERCP";
             this.txbFindingRecommendation_ERCP.Size = new System.Drawing.Size(760, 23);
             this.txbFindingRecommendation_ERCP.TabIndex = 213;
@@ -6045,9 +6045,9 @@ namespace EndoscopicSystem.V2.Forms
             | System.Windows.Forms.AnchorStyles.Right)));
             this.txbFindingHistopathology_ERCP.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.txbFindingHistopathology_ERCP.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
-            this.txbFindingHistopathology_ERCP.Location = new System.Drawing.Point(221, 500);
+            this.txbFindingHistopathology_ERCP.Location = new System.Drawing.Point(221, 488);
             this.txbFindingHistopathology_ERCP.Margin = new System.Windows.Forms.Padding(2);
-            this.txbFindingHistopathology_ERCP.MaxLength = 82;
+            this.txbFindingHistopathology_ERCP.MaxLength = 120;
             this.txbFindingHistopathology_ERCP.Name = "txbFindingHistopathology_ERCP";
             this.txbFindingHistopathology_ERCP.Size = new System.Drawing.Size(760, 23);
             this.txbFindingHistopathology_ERCP.TabIndex = 211;
@@ -6059,9 +6059,9 @@ namespace EndoscopicSystem.V2.Forms
             | System.Windows.Forms.AnchorStyles.Right)));
             this.txbFindingDx3Text_ERCP.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.txbFindingDx3Text_ERCP.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
-            this.txbFindingDx3Text_ERCP.Location = new System.Drawing.Point(373, 446);
+            this.txbFindingDx3Text_ERCP.Location = new System.Drawing.Point(373, 434);
             this.txbFindingDx3Text_ERCP.Margin = new System.Windows.Forms.Padding(2);
-            this.txbFindingDx3Text_ERCP.MaxLength = 80;
+            this.txbFindingDx3Text_ERCP.MaxLength = 116;
             this.txbFindingDx3Text_ERCP.Name = "txbFindingDx3Text_ERCP";
             this.txbFindingDx3Text_ERCP.Size = new System.Drawing.Size(608, 23);
             this.txbFindingDx3Text_ERCP.TabIndex = 203;
@@ -6072,7 +6072,7 @@ namespace EndoscopicSystem.V2.Forms
             | System.Windows.Forms.AnchorStyles.Right)));
             this.txbFindingDx3Code_ERCP.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.txbFindingDx3Code_ERCP.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
-            this.txbFindingDx3Code_ERCP.Location = new System.Drawing.Point(221, 446);
+            this.txbFindingDx3Code_ERCP.Location = new System.Drawing.Point(221, 434);
             this.txbFindingDx3Code_ERCP.Margin = new System.Windows.Forms.Padding(2);
             this.txbFindingDx3Code_ERCP.MaxLength = 200;
             this.txbFindingDx3Code_ERCP.Name = "txbFindingDx3Code_ERCP";
@@ -6087,9 +6087,9 @@ namespace EndoscopicSystem.V2.Forms
             | System.Windows.Forms.AnchorStyles.Right)));
             this.txbFindingDx2Text_ERCP.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.txbFindingDx2Text_ERCP.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
-            this.txbFindingDx2Text_ERCP.Location = new System.Drawing.Point(373, 419);
+            this.txbFindingDx2Text_ERCP.Location = new System.Drawing.Point(373, 407);
             this.txbFindingDx2Text_ERCP.Margin = new System.Windows.Forms.Padding(2);
-            this.txbFindingDx2Text_ERCP.MaxLength = 80;
+            this.txbFindingDx2Text_ERCP.MaxLength = 116;
             this.txbFindingDx2Text_ERCP.Name = "txbFindingDx2Text_ERCP";
             this.txbFindingDx2Text_ERCP.Size = new System.Drawing.Size(608, 23);
             this.txbFindingDx2Text_ERCP.TabIndex = 201;
@@ -6100,7 +6100,7 @@ namespace EndoscopicSystem.V2.Forms
             | System.Windows.Forms.AnchorStyles.Right)));
             this.txbFindingDx2Code_ERCP.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.txbFindingDx2Code_ERCP.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
-            this.txbFindingDx2Code_ERCP.Location = new System.Drawing.Point(221, 419);
+            this.txbFindingDx2Code_ERCP.Location = new System.Drawing.Point(221, 407);
             this.txbFindingDx2Code_ERCP.Margin = new System.Windows.Forms.Padding(2);
             this.txbFindingDx2Code_ERCP.MaxLength = 200;
             this.txbFindingDx2Code_ERCP.Name = "txbFindingDx2Code_ERCP";
@@ -6115,9 +6115,9 @@ namespace EndoscopicSystem.V2.Forms
             | System.Windows.Forms.AnchorStyles.Right)));
             this.txbFindingDx1Text_ERCP.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.txbFindingDx1Text_ERCP.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
-            this.txbFindingDx1Text_ERCP.Location = new System.Drawing.Point(373, 392);
+            this.txbFindingDx1Text_ERCP.Location = new System.Drawing.Point(373, 380);
             this.txbFindingDx1Text_ERCP.Margin = new System.Windows.Forms.Padding(2);
-            this.txbFindingDx1Text_ERCP.MaxLength = 80;
+            this.txbFindingDx1Text_ERCP.MaxLength = 116;
             this.txbFindingDx1Text_ERCP.Name = "txbFindingDx1Text_ERCP";
             this.txbFindingDx1Text_ERCP.Size = new System.Drawing.Size(608, 23);
             this.txbFindingDx1Text_ERCP.TabIndex = 199;
@@ -6128,7 +6128,7 @@ namespace EndoscopicSystem.V2.Forms
             | System.Windows.Forms.AnchorStyles.Right)));
             this.txbFindingDx1Code_ERCP.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.txbFindingDx1Code_ERCP.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
-            this.txbFindingDx1Code_ERCP.Location = new System.Drawing.Point(221, 392);
+            this.txbFindingDx1Code_ERCP.Location = new System.Drawing.Point(221, 380);
             this.txbFindingDx1Code_ERCP.Margin = new System.Windows.Forms.Padding(2);
             this.txbFindingDx1Code_ERCP.MaxLength = 200;
             this.txbFindingDx1Code_ERCP.Name = "txbFindingDx1Code_ERCP";
@@ -6143,9 +6143,9 @@ namespace EndoscopicSystem.V2.Forms
             | System.Windows.Forms.AnchorStyles.Right)));
             this.txbFindingProcedure_ERCP.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.txbFindingProcedure_ERCP.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
-            this.txbFindingProcedure_ERCP.Location = new System.Drawing.Point(221, 365);
+            this.txbFindingProcedure_ERCP.Location = new System.Drawing.Point(221, 353);
             this.txbFindingProcedure_ERCP.Margin = new System.Windows.Forms.Padding(2);
-            this.txbFindingProcedure_ERCP.MaxLength = 85;
+            this.txbFindingProcedure_ERCP.MaxLength = 130;
             this.txbFindingProcedure_ERCP.Name = "txbFindingProcedure_ERCP";
             this.txbFindingProcedure_ERCP.Size = new System.Drawing.Size(760, 23);
             this.txbFindingProcedure_ERCP.TabIndex = 197;
@@ -6157,9 +6157,9 @@ namespace EndoscopicSystem.V2.Forms
             | System.Windows.Forms.AnchorStyles.Right)));
             this.txbFindingSupplementalProcedure2Text_ERCP.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.txbFindingSupplementalProcedure2Text_ERCP.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
-            this.txbFindingSupplementalProcedure2Text_ERCP.Location = new System.Drawing.Point(373, 338);
+            this.txbFindingSupplementalProcedure2Text_ERCP.Location = new System.Drawing.Point(373, 326);
             this.txbFindingSupplementalProcedure2Text_ERCP.Margin = new System.Windows.Forms.Padding(2);
-            this.txbFindingSupplementalProcedure2Text_ERCP.MaxLength = 78;
+            this.txbFindingSupplementalProcedure2Text_ERCP.MaxLength = 110;
             this.txbFindingSupplementalProcedure2Text_ERCP.Name = "txbFindingSupplementalProcedure2Text_ERCP";
             this.txbFindingSupplementalProcedure2Text_ERCP.Size = new System.Drawing.Size(608, 23);
             this.txbFindingSupplementalProcedure2Text_ERCP.TabIndex = 195;
@@ -6170,7 +6170,7 @@ namespace EndoscopicSystem.V2.Forms
             | System.Windows.Forms.AnchorStyles.Right)));
             this.txbFindingSupplementalProcedure2Code_ERCP.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.txbFindingSupplementalProcedure2Code_ERCP.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
-            this.txbFindingSupplementalProcedure2Code_ERCP.Location = new System.Drawing.Point(221, 338);
+            this.txbFindingSupplementalProcedure2Code_ERCP.Location = new System.Drawing.Point(221, 326);
             this.txbFindingSupplementalProcedure2Code_ERCP.Margin = new System.Windows.Forms.Padding(2);
             this.txbFindingSupplementalProcedure2Code_ERCP.MaxLength = 200;
             this.txbFindingSupplementalProcedure2Code_ERCP.Name = "txbFindingSupplementalProcedure2Code_ERCP";
@@ -6185,9 +6185,9 @@ namespace EndoscopicSystem.V2.Forms
             | System.Windows.Forms.AnchorStyles.Right)));
             this.txbFindingSupplementalProcedureText_ERCP.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.txbFindingSupplementalProcedureText_ERCP.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
-            this.txbFindingSupplementalProcedureText_ERCP.Location = new System.Drawing.Point(373, 311);
+            this.txbFindingSupplementalProcedureText_ERCP.Location = new System.Drawing.Point(373, 299);
             this.txbFindingSupplementalProcedureText_ERCP.Margin = new System.Windows.Forms.Padding(2);
-            this.txbFindingSupplementalProcedureText_ERCP.MaxLength = 78;
+            this.txbFindingSupplementalProcedureText_ERCP.MaxLength = 110;
             this.txbFindingSupplementalProcedureText_ERCP.Name = "txbFindingSupplementalProcedureText_ERCP";
             this.txbFindingSupplementalProcedureText_ERCP.Size = new System.Drawing.Size(608, 23);
             this.txbFindingSupplementalProcedureText_ERCP.TabIndex = 192;
@@ -6198,7 +6198,7 @@ namespace EndoscopicSystem.V2.Forms
             | System.Windows.Forms.AnchorStyles.Right)));
             this.txbFindingSupplementalProcedureCode_ERCP.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.txbFindingSupplementalProcedureCode_ERCP.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
-            this.txbFindingSupplementalProcedureCode_ERCP.Location = new System.Drawing.Point(221, 311);
+            this.txbFindingSupplementalProcedureCode_ERCP.Location = new System.Drawing.Point(221, 299);
             this.txbFindingSupplementalProcedureCode_ERCP.Margin = new System.Windows.Forms.Padding(2);
             this.txbFindingSupplementalProcedureCode_ERCP.MaxLength = 200;
             this.txbFindingSupplementalProcedureCode_ERCP.Name = "txbFindingSupplementalProcedureCode_ERCP";
@@ -6213,9 +6213,9 @@ namespace EndoscopicSystem.V2.Forms
             | System.Windows.Forms.AnchorStyles.Right)));
             this.txbFindingPrinncipalProcedureText_ERCP.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.txbFindingPrinncipalProcedureText_ERCP.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
-            this.txbFindingPrinncipalProcedureText_ERCP.Location = new System.Drawing.Point(373, 284);
+            this.txbFindingPrinncipalProcedureText_ERCP.Location = new System.Drawing.Point(373, 272);
             this.txbFindingPrinncipalProcedureText_ERCP.Margin = new System.Windows.Forms.Padding(2);
-            this.txbFindingPrinncipalProcedureText_ERCP.MaxLength = 80;
+            this.txbFindingPrinncipalProcedureText_ERCP.MaxLength = 110;
             this.txbFindingPrinncipalProcedureText_ERCP.Name = "txbFindingPrinncipalProcedureText_ERCP";
             this.txbFindingPrinncipalProcedureText_ERCP.Size = new System.Drawing.Size(608, 23);
             this.txbFindingPrinncipalProcedureText_ERCP.TabIndex = 189;
@@ -6226,7 +6226,7 @@ namespace EndoscopicSystem.V2.Forms
             | System.Windows.Forms.AnchorStyles.Right)));
             this.txbFindingPrinncipalProcedureCode_ERCP.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.txbFindingPrinncipalProcedureCode_ERCP.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
-            this.txbFindingPrinncipalProcedureCode_ERCP.Location = new System.Drawing.Point(221, 284);
+            this.txbFindingPrinncipalProcedureCode_ERCP.Location = new System.Drawing.Point(221, 272);
             this.txbFindingPrinncipalProcedureCode_ERCP.Margin = new System.Windows.Forms.Padding(2);
             this.txbFindingPrinncipalProcedureCode_ERCP.MaxLength = 200;
             this.txbFindingPrinncipalProcedureCode_ERCP.Name = "txbFindingPrinncipalProcedureCode_ERCP";
@@ -6241,9 +6241,9 @@ namespace EndoscopicSystem.V2.Forms
             | System.Windows.Forms.AnchorStyles.Right)));
             this.txbFindingComplication_ERCP.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.txbFindingComplication_ERCP.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
-            this.txbFindingComplication_ERCP.Location = new System.Drawing.Point(221, 473);
+            this.txbFindingComplication_ERCP.Location = new System.Drawing.Point(221, 461);
             this.txbFindingComplication_ERCP.Margin = new System.Windows.Forms.Padding(2);
-            this.txbFindingComplication_ERCP.MaxLength = 82;
+            this.txbFindingComplication_ERCP.MaxLength = 120;
             this.txbFindingComplication_ERCP.Name = "txbFindingComplication_ERCP";
             this.txbFindingComplication_ERCP.Size = new System.Drawing.Size(760, 23);
             this.txbFindingComplication_ERCP.TabIndex = 185;
@@ -6255,9 +6255,9 @@ namespace EndoscopicSystem.V2.Forms
             | System.Windows.Forms.AnchorStyles.Right)));
             this.txbFindingComment_ERCP.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.txbFindingComment_ERCP.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
-            this.txbFindingComment_ERCP.Location = new System.Drawing.Point(221, 554);
+            this.txbFindingComment_ERCP.Location = new System.Drawing.Point(221, 542);
             this.txbFindingComment_ERCP.Margin = new System.Windows.Forms.Padding(2);
-            this.txbFindingComment_ERCP.MaxLength = 82;
+            this.txbFindingComment_ERCP.MaxLength = 120;
             this.txbFindingComment_ERCP.Name = "txbFindingComment_ERCP";
             this.txbFindingComment_ERCP.Size = new System.Drawing.Size(760, 23);
             this.txbFindingComment_ERCP.TabIndex = 186;
@@ -6268,7 +6268,7 @@ namespace EndoscopicSystem.V2.Forms
             | System.Windows.Forms.AnchorStyles.Right)));
             this.txbFindingPancreatogram_ERCP.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.txbFindingPancreatogram_ERCP.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
-            this.txbFindingPancreatogram_ERCP.Location = new System.Drawing.Point(152, 236);
+            this.txbFindingPancreatogram_ERCP.Location = new System.Drawing.Point(152, 224);
             this.txbFindingPancreatogram_ERCP.Margin = new System.Windows.Forms.Padding(2);
             this.txbFindingPancreatogram_ERCP.MaxLength = 1000;
             this.txbFindingPancreatogram_ERCP.Multiline = true;
@@ -6282,7 +6282,7 @@ namespace EndoscopicSystem.V2.Forms
             | System.Windows.Forms.AnchorStyles.Right)));
             this.txbFindingCholangiogram_ERCP.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.txbFindingCholangiogram_ERCP.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
-            this.txbFindingCholangiogram_ERCP.Location = new System.Drawing.Point(152, 188);
+            this.txbFindingCholangiogram_ERCP.Location = new System.Drawing.Point(152, 176);
             this.txbFindingCholangiogram_ERCP.Margin = new System.Windows.Forms.Padding(2);
             this.txbFindingCholangiogram_ERCP.MaxLength = 1000;
             this.txbFindingCholangiogram_ERCP.Multiline = true;
@@ -6296,9 +6296,9 @@ namespace EndoscopicSystem.V2.Forms
             | System.Windows.Forms.AnchorStyles.Right)));
             this.txbFindingBiliarySystem_ERCP.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.txbFindingBiliarySystem_ERCP.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
-            this.txbFindingBiliarySystem_ERCP.Location = new System.Drawing.Point(383, 134);
+            this.txbFindingBiliarySystem_ERCP.Location = new System.Drawing.Point(383, 122);
             this.txbFindingBiliarySystem_ERCP.Margin = new System.Windows.Forms.Padding(2);
-            this.txbFindingBiliarySystem_ERCP.MaxLength = 70;
+            this.txbFindingBiliarySystem_ERCP.MaxLength = 100;
             this.txbFindingBiliarySystem_ERCP.Name = "txbFindingBiliarySystem_ERCP";
             this.txbFindingBiliarySystem_ERCP.Size = new System.Drawing.Size(598, 23);
             this.txbFindingBiliarySystem_ERCP.TabIndex = 85;
@@ -6309,9 +6309,9 @@ namespace EndoscopicSystem.V2.Forms
             | System.Windows.Forms.AnchorStyles.Right)));
             this.txbFindingDuodenum_ERCP.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.txbFindingDuodenum_ERCP.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
-            this.txbFindingDuodenum_ERCP.Location = new System.Drawing.Point(383, 26);
+            this.txbFindingDuodenum_ERCP.Location = new System.Drawing.Point(383, 14);
             this.txbFindingDuodenum_ERCP.Margin = new System.Windows.Forms.Padding(2);
-            this.txbFindingDuodenum_ERCP.MaxLength = 70;
+            this.txbFindingDuodenum_ERCP.MaxLength = 100;
             this.txbFindingDuodenum_ERCP.Name = "txbFindingDuodenum_ERCP";
             this.txbFindingDuodenum_ERCP.Size = new System.Drawing.Size(598, 23);
             this.txbFindingDuodenum_ERCP.TabIndex = 84;
@@ -6322,9 +6322,9 @@ namespace EndoscopicSystem.V2.Forms
             | System.Windows.Forms.AnchorStyles.Right)));
             this.txbFindingPapillaMinor_ERCP.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.txbFindingPapillaMinor_ERCP.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
-            this.txbFindingPapillaMinor_ERCP.Location = new System.Drawing.Point(383, 80);
+            this.txbFindingPapillaMinor_ERCP.Location = new System.Drawing.Point(383, 68);
             this.txbFindingPapillaMinor_ERCP.Margin = new System.Windows.Forms.Padding(2);
-            this.txbFindingPapillaMinor_ERCP.MaxLength = 70;
+            this.txbFindingPapillaMinor_ERCP.MaxLength = 100;
             this.txbFindingPapillaMinor_ERCP.Name = "txbFindingPapillaMinor_ERCP";
             this.txbFindingPapillaMinor_ERCP.Size = new System.Drawing.Size(598, 23);
             this.txbFindingPapillaMinor_ERCP.TabIndex = 83;
@@ -6335,9 +6335,9 @@ namespace EndoscopicSystem.V2.Forms
             | System.Windows.Forms.AnchorStyles.Right)));
             this.txbFindingPapillaMajor_ERCP.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.txbFindingPapillaMajor_ERCP.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
-            this.txbFindingPapillaMajor_ERCP.Location = new System.Drawing.Point(383, 53);
+            this.txbFindingPapillaMajor_ERCP.Location = new System.Drawing.Point(383, 41);
             this.txbFindingPapillaMajor_ERCP.Margin = new System.Windows.Forms.Padding(2);
-            this.txbFindingPapillaMajor_ERCP.MaxLength = 70;
+            this.txbFindingPapillaMajor_ERCP.MaxLength = 100;
             this.txbFindingPapillaMajor_ERCP.Name = "txbFindingPapillaMajor_ERCP";
             this.txbFindingPapillaMajor_ERCP.Size = new System.Drawing.Size(598, 23);
             this.txbFindingPapillaMajor_ERCP.TabIndex = 82;
@@ -6349,7 +6349,7 @@ namespace EndoscopicSystem.V2.Forms
             this.cbbFindingOther_ERCP.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cbbFindingOther_ERCP.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
             this.cbbFindingOther_ERCP.FormattingEnabled = true;
-            this.cbbFindingOther_ERCP.Location = new System.Drawing.Point(179, 161);
+            this.cbbFindingOther_ERCP.Location = new System.Drawing.Point(179, 149);
             this.cbbFindingOther_ERCP.Margin = new System.Windows.Forms.Padding(2);
             this.cbbFindingOther_ERCP.Name = "cbbFindingOther_ERCP";
             this.cbbFindingOther_ERCP.Size = new System.Drawing.Size(200, 23);
@@ -6359,7 +6359,7 @@ namespace EndoscopicSystem.V2.Forms
             // 
             this.label177.AutoSize = true;
             this.label177.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold);
-            this.label177.Location = new System.Drawing.Point(7, 161);
+            this.label177.Location = new System.Drawing.Point(7, 149);
             this.label177.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label177.Name = "label177";
             this.label177.Size = new System.Drawing.Size(54, 20);
@@ -6373,7 +6373,7 @@ namespace EndoscopicSystem.V2.Forms
             this.cbbFindingPancreas_ERCP.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cbbFindingPancreas_ERCP.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
             this.cbbFindingPancreas_ERCP.FormattingEnabled = true;
-            this.cbbFindingPancreas_ERCP.Location = new System.Drawing.Point(179, 107);
+            this.cbbFindingPancreas_ERCP.Location = new System.Drawing.Point(179, 95);
             this.cbbFindingPancreas_ERCP.Margin = new System.Windows.Forms.Padding(2);
             this.cbbFindingPancreas_ERCP.Name = "cbbFindingPancreas_ERCP";
             this.cbbFindingPancreas_ERCP.Size = new System.Drawing.Size(200, 23);
@@ -6383,7 +6383,7 @@ namespace EndoscopicSystem.V2.Forms
             // 
             this.label176.AutoSize = true;
             this.label176.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold);
-            this.label176.Location = new System.Drawing.Point(7, 107);
+            this.label176.Location = new System.Drawing.Point(7, 95);
             this.label176.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label176.Name = "label176";
             this.label176.Size = new System.Drawing.Size(84, 20);
@@ -6395,7 +6395,7 @@ namespace EndoscopicSystem.V2.Forms
             this.label139.AutoSize = true;
             this.label139.BackColor = System.Drawing.Color.Transparent;
             this.label139.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
-            this.label139.Location = new System.Drawing.Point(7, 529);
+            this.label139.Location = new System.Drawing.Point(7, 517);
             this.label139.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label139.Name = "label139";
             this.label139.Size = new System.Drawing.Size(149, 20);
@@ -6407,7 +6407,7 @@ namespace EndoscopicSystem.V2.Forms
             this.label140.AutoSize = true;
             this.label140.BackColor = System.Drawing.Color.Transparent;
             this.label140.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
-            this.label140.Location = new System.Drawing.Point(7, 502);
+            this.label140.Location = new System.Drawing.Point(7, 490);
             this.label140.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label140.Name = "label140";
             this.label140.Size = new System.Drawing.Size(129, 20);
@@ -6419,7 +6419,7 @@ namespace EndoscopicSystem.V2.Forms
             this.label142.AutoSize = true;
             this.label142.BackColor = System.Drawing.Color.Transparent;
             this.label142.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
-            this.label142.Location = new System.Drawing.Point(7, 449);
+            this.label142.Location = new System.Drawing.Point(7, 437);
             this.label142.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label142.Name = "label142";
             this.label142.Size = new System.Drawing.Size(178, 20);
@@ -6431,7 +6431,7 @@ namespace EndoscopicSystem.V2.Forms
             this.label143.AutoSize = true;
             this.label143.BackColor = System.Drawing.Color.Transparent;
             this.label143.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
-            this.label143.Location = new System.Drawing.Point(7, 422);
+            this.label143.Location = new System.Drawing.Point(7, 410);
             this.label143.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label143.Name = "label143";
             this.label143.Size = new System.Drawing.Size(178, 20);
@@ -6443,7 +6443,7 @@ namespace EndoscopicSystem.V2.Forms
             this.label144.AutoSize = true;
             this.label144.BackColor = System.Drawing.Color.Transparent;
             this.label144.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
-            this.label144.Location = new System.Drawing.Point(7, 395);
+            this.label144.Location = new System.Drawing.Point(7, 383);
             this.label144.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label144.Name = "label144";
             this.label144.Size = new System.Drawing.Size(178, 20);
@@ -6455,7 +6455,7 @@ namespace EndoscopicSystem.V2.Forms
             this.label145.AutoSize = true;
             this.label145.BackColor = System.Drawing.Color.Transparent;
             this.label145.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
-            this.label145.Location = new System.Drawing.Point(7, 368);
+            this.label145.Location = new System.Drawing.Point(7, 356);
             this.label145.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label145.Name = "label145";
             this.label145.Size = new System.Drawing.Size(91, 20);
@@ -6467,7 +6467,7 @@ namespace EndoscopicSystem.V2.Forms
             this.label146.AutoSize = true;
             this.label146.BackColor = System.Drawing.Color.Transparent;
             this.label146.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
-            this.label146.Location = new System.Drawing.Point(7, 341);
+            this.label146.Location = new System.Drawing.Point(7, 329);
             this.label146.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label146.Name = "label146";
             this.label146.Size = new System.Drawing.Size(206, 20);
@@ -6479,7 +6479,7 @@ namespace EndoscopicSystem.V2.Forms
             this.label147.AutoSize = true;
             this.label147.BackColor = System.Drawing.Color.Transparent;
             this.label147.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
-            this.label147.Location = new System.Drawing.Point(7, 314);
+            this.label147.Location = new System.Drawing.Point(7, 302);
             this.label147.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label147.Name = "label147";
             this.label147.Size = new System.Drawing.Size(206, 20);
@@ -6491,7 +6491,7 @@ namespace EndoscopicSystem.V2.Forms
             this.label148.AutoSize = true;
             this.label148.BackColor = System.Drawing.Color.Transparent;
             this.label148.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
-            this.label148.Location = new System.Drawing.Point(7, 287);
+            this.label148.Location = new System.Drawing.Point(7, 275);
             this.label148.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label148.Name = "label148";
             this.label148.Size = new System.Drawing.Size(164, 20);
@@ -6503,7 +6503,7 @@ namespace EndoscopicSystem.V2.Forms
             this.label149.AutoSize = true;
             this.label149.BackColor = System.Drawing.Color.Transparent;
             this.label149.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
-            this.label149.Location = new System.Drawing.Point(7, 556);
+            this.label149.Location = new System.Drawing.Point(7, 544);
             this.label149.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label149.Name = "label149";
             this.label149.Size = new System.Drawing.Size(85, 20);
@@ -6515,7 +6515,7 @@ namespace EndoscopicSystem.V2.Forms
             this.label150.AutoSize = true;
             this.label150.BackColor = System.Drawing.Color.Transparent;
             this.label150.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
-            this.label150.Location = new System.Drawing.Point(7, 475);
+            this.label150.Location = new System.Drawing.Point(7, 463);
             this.label150.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label150.Name = "label150";
             this.label150.Size = new System.Drawing.Size(112, 20);
@@ -6526,7 +6526,7 @@ namespace EndoscopicSystem.V2.Forms
             // 
             this.label68.AutoSize = true;
             this.label68.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold);
-            this.label68.Location = new System.Drawing.Point(7, 236);
+            this.label68.Location = new System.Drawing.Point(7, 224);
             this.label68.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label68.Name = "label68";
             this.label68.Size = new System.Drawing.Size(131, 20);
@@ -6537,7 +6537,7 @@ namespace EndoscopicSystem.V2.Forms
             // 
             this.label69.AutoSize = true;
             this.label69.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold);
-            this.label69.Location = new System.Drawing.Point(7, 188);
+            this.label69.Location = new System.Drawing.Point(7, 176);
             this.label69.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label69.Name = "label69";
             this.label69.Size = new System.Drawing.Size(129, 20);
@@ -6551,7 +6551,7 @@ namespace EndoscopicSystem.V2.Forms
             this.cbbFindingBiliarySystem_ERCP.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cbbFindingBiliarySystem_ERCP.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
             this.cbbFindingBiliarySystem_ERCP.FormattingEnabled = true;
-            this.cbbFindingBiliarySystem_ERCP.Location = new System.Drawing.Point(179, 134);
+            this.cbbFindingBiliarySystem_ERCP.Location = new System.Drawing.Point(179, 122);
             this.cbbFindingBiliarySystem_ERCP.Margin = new System.Windows.Forms.Padding(2);
             this.cbbFindingBiliarySystem_ERCP.Name = "cbbFindingBiliarySystem_ERCP";
             this.cbbFindingBiliarySystem_ERCP.Size = new System.Drawing.Size(200, 23);
@@ -6564,7 +6564,7 @@ namespace EndoscopicSystem.V2.Forms
             this.cbbFindingDuodenum_ERCP.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cbbFindingDuodenum_ERCP.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
             this.cbbFindingDuodenum_ERCP.FormattingEnabled = true;
-            this.cbbFindingDuodenum_ERCP.Location = new System.Drawing.Point(179, 26);
+            this.cbbFindingDuodenum_ERCP.Location = new System.Drawing.Point(179, 14);
             this.cbbFindingDuodenum_ERCP.Margin = new System.Windows.Forms.Padding(2);
             this.cbbFindingDuodenum_ERCP.Name = "cbbFindingDuodenum_ERCP";
             this.cbbFindingDuodenum_ERCP.Size = new System.Drawing.Size(200, 23);
@@ -6574,7 +6574,7 @@ namespace EndoscopicSystem.V2.Forms
             // 
             this.label70.AutoSize = true;
             this.label70.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold);
-            this.label70.Location = new System.Drawing.Point(7, 134);
+            this.label70.Location = new System.Drawing.Point(7, 122);
             this.label70.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label70.Name = "label70";
             this.label70.Size = new System.Drawing.Size(121, 20);
@@ -6585,7 +6585,7 @@ namespace EndoscopicSystem.V2.Forms
             // 
             this.label71.AutoSize = true;
             this.label71.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold);
-            this.label71.Location = new System.Drawing.Point(7, 27);
+            this.label71.Location = new System.Drawing.Point(7, 15);
             this.label71.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label71.Name = "label71";
             this.label71.Size = new System.Drawing.Size(96, 20);
@@ -6599,7 +6599,7 @@ namespace EndoscopicSystem.V2.Forms
             this.cbbFindingPapillaMinor_ERCP.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cbbFindingPapillaMinor_ERCP.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
             this.cbbFindingPapillaMinor_ERCP.FormattingEnabled = true;
-            this.cbbFindingPapillaMinor_ERCP.Location = new System.Drawing.Point(179, 80);
+            this.cbbFindingPapillaMinor_ERCP.Location = new System.Drawing.Point(179, 68);
             this.cbbFindingPapillaMinor_ERCP.Margin = new System.Windows.Forms.Padding(2);
             this.cbbFindingPapillaMinor_ERCP.Name = "cbbFindingPapillaMinor_ERCP";
             this.cbbFindingPapillaMinor_ERCP.Size = new System.Drawing.Size(200, 23);
@@ -6612,7 +6612,7 @@ namespace EndoscopicSystem.V2.Forms
             this.cbbFindingPapillaMajor_ERCP.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cbbFindingPapillaMajor_ERCP.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
             this.cbbFindingPapillaMajor_ERCP.FormattingEnabled = true;
-            this.cbbFindingPapillaMajor_ERCP.Location = new System.Drawing.Point(179, 53);
+            this.cbbFindingPapillaMajor_ERCP.Location = new System.Drawing.Point(179, 41);
             this.cbbFindingPapillaMajor_ERCP.Margin = new System.Windows.Forms.Padding(2);
             this.cbbFindingPapillaMajor_ERCP.Name = "cbbFindingPapillaMajor_ERCP";
             this.cbbFindingPapillaMajor_ERCP.Size = new System.Drawing.Size(200, 23);
@@ -6622,7 +6622,7 @@ namespace EndoscopicSystem.V2.Forms
             // 
             this.label72.AutoSize = true;
             this.label72.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold);
-            this.label72.Location = new System.Drawing.Point(7, 80);
+            this.label72.Location = new System.Drawing.Point(7, 68);
             this.label72.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label72.Name = "label72";
             this.label72.Size = new System.Drawing.Size(111, 20);
@@ -6633,7 +6633,7 @@ namespace EndoscopicSystem.V2.Forms
             // 
             this.label73.AutoSize = true;
             this.label73.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold);
-            this.label73.Location = new System.Drawing.Point(7, 54);
+            this.label73.Location = new System.Drawing.Point(7, 42);
             this.label73.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label73.Name = "label73";
             this.label73.Size = new System.Drawing.Size(111, 20);
@@ -6810,7 +6810,7 @@ namespace EndoscopicSystem.V2.Forms
             this.txbFindingRecommendation_Colono.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
             this.txbFindingRecommendation_Colono.Location = new System.Drawing.Point(226, 543);
             this.txbFindingRecommendation_Colono.Margin = new System.Windows.Forms.Padding(2);
-            this.txbFindingRecommendation_Colono.MaxLength = 82;
+            this.txbFindingRecommendation_Colono.MaxLength = 120;
             this.txbFindingRecommendation_Colono.Name = "txbFindingRecommendation_Colono";
             this.txbFindingRecommendation_Colono.Size = new System.Drawing.Size(751, 23);
             this.txbFindingRecommendation_Colono.TabIndex = 175;
@@ -6824,7 +6824,7 @@ namespace EndoscopicSystem.V2.Forms
             this.txbFindingHistopathology_Colono.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
             this.txbFindingHistopathology_Colono.Location = new System.Drawing.Point(226, 516);
             this.txbFindingHistopathology_Colono.Margin = new System.Windows.Forms.Padding(2);
-            this.txbFindingHistopathology_Colono.MaxLength = 82;
+            this.txbFindingHistopathology_Colono.MaxLength = 120;
             this.txbFindingHistopathology_Colono.Name = "txbFindingHistopathology_Colono";
             this.txbFindingHistopathology_Colono.Size = new System.Drawing.Size(751, 23);
             this.txbFindingHistopathology_Colono.TabIndex = 173;
@@ -6838,7 +6838,7 @@ namespace EndoscopicSystem.V2.Forms
             this.txbFindingDx3Text_Colono.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
             this.txbFindingDx3Text_Colono.Location = new System.Drawing.Point(388, 462);
             this.txbFindingDx3Text_Colono.Margin = new System.Windows.Forms.Padding(2);
-            this.txbFindingDx3Text_Colono.MaxLength = 80;
+            this.txbFindingDx3Text_Colono.MaxLength = 116;
             this.txbFindingDx3Text_Colono.Name = "txbFindingDx3Text_Colono";
             this.txbFindingDx3Text_Colono.Size = new System.Drawing.Size(589, 23);
             this.txbFindingDx3Text_Colono.TabIndex = 165;
@@ -6866,7 +6866,7 @@ namespace EndoscopicSystem.V2.Forms
             this.txbFindingDx2Text_Colono.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
             this.txbFindingDx2Text_Colono.Location = new System.Drawing.Point(388, 435);
             this.txbFindingDx2Text_Colono.Margin = new System.Windows.Forms.Padding(2);
-            this.txbFindingDx2Text_Colono.MaxLength = 80;
+            this.txbFindingDx2Text_Colono.MaxLength = 116;
             this.txbFindingDx2Text_Colono.Name = "txbFindingDx2Text_Colono";
             this.txbFindingDx2Text_Colono.Size = new System.Drawing.Size(589, 23);
             this.txbFindingDx2Text_Colono.TabIndex = 163;
@@ -6894,7 +6894,7 @@ namespace EndoscopicSystem.V2.Forms
             this.txbFindingDx1Text_Colono.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
             this.txbFindingDx1Text_Colono.Location = new System.Drawing.Point(388, 408);
             this.txbFindingDx1Text_Colono.Margin = new System.Windows.Forms.Padding(2);
-            this.txbFindingDx1Text_Colono.MaxLength = 80;
+            this.txbFindingDx1Text_Colono.MaxLength = 116;
             this.txbFindingDx1Text_Colono.Name = "txbFindingDx1Text_Colono";
             this.txbFindingDx1Text_Colono.Size = new System.Drawing.Size(589, 23);
             this.txbFindingDx1Text_Colono.TabIndex = 161;
@@ -6922,7 +6922,7 @@ namespace EndoscopicSystem.V2.Forms
             this.txbFindingProcedure_Colono.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
             this.txbFindingProcedure_Colono.Location = new System.Drawing.Point(226, 381);
             this.txbFindingProcedure_Colono.Margin = new System.Windows.Forms.Padding(2);
-            this.txbFindingProcedure_Colono.MaxLength = 85;
+            this.txbFindingProcedure_Colono.MaxLength = 130;
             this.txbFindingProcedure_Colono.Name = "txbFindingProcedure_Colono";
             this.txbFindingProcedure_Colono.Size = new System.Drawing.Size(751, 23);
             this.txbFindingProcedure_Colono.TabIndex = 159;
@@ -6936,7 +6936,7 @@ namespace EndoscopicSystem.V2.Forms
             this.txbFindingSupplementalProcedure2Text_Colono.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
             this.txbFindingSupplementalProcedure2Text_Colono.Location = new System.Drawing.Point(388, 354);
             this.txbFindingSupplementalProcedure2Text_Colono.Margin = new System.Windows.Forms.Padding(2);
-            this.txbFindingSupplementalProcedure2Text_Colono.MaxLength = 78;
+            this.txbFindingSupplementalProcedure2Text_Colono.MaxLength = 110;
             this.txbFindingSupplementalProcedure2Text_Colono.Name = "txbFindingSupplementalProcedure2Text_Colono";
             this.txbFindingSupplementalProcedure2Text_Colono.Size = new System.Drawing.Size(589, 23);
             this.txbFindingSupplementalProcedure2Text_Colono.TabIndex = 157;
@@ -6964,7 +6964,7 @@ namespace EndoscopicSystem.V2.Forms
             this.txbFindingSupplementalProcedureText_Colono.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
             this.txbFindingSupplementalProcedureText_Colono.Location = new System.Drawing.Point(388, 327);
             this.txbFindingSupplementalProcedureText_Colono.Margin = new System.Windows.Forms.Padding(2);
-            this.txbFindingSupplementalProcedureText_Colono.MaxLength = 78;
+            this.txbFindingSupplementalProcedureText_Colono.MaxLength = 110;
             this.txbFindingSupplementalProcedureText_Colono.Name = "txbFindingSupplementalProcedureText_Colono";
             this.txbFindingSupplementalProcedureText_Colono.Size = new System.Drawing.Size(589, 23);
             this.txbFindingSupplementalProcedureText_Colono.TabIndex = 154;
@@ -6992,7 +6992,7 @@ namespace EndoscopicSystem.V2.Forms
             this.txbFindingPrinncipalProcedureText_Colono.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
             this.txbFindingPrinncipalProcedureText_Colono.Location = new System.Drawing.Point(388, 300);
             this.txbFindingPrinncipalProcedureText_Colono.Margin = new System.Windows.Forms.Padding(2);
-            this.txbFindingPrinncipalProcedureText_Colono.MaxLength = 80;
+            this.txbFindingPrinncipalProcedureText_Colono.MaxLength = 110;
             this.txbFindingPrinncipalProcedureText_Colono.Name = "txbFindingPrinncipalProcedureText_Colono";
             this.txbFindingPrinncipalProcedureText_Colono.Size = new System.Drawing.Size(589, 23);
             this.txbFindingPrinncipalProcedureText_Colono.TabIndex = 151;
@@ -7020,7 +7020,7 @@ namespace EndoscopicSystem.V2.Forms
             this.txbFindingComplication_Colono.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
             this.txbFindingComplication_Colono.Location = new System.Drawing.Point(226, 489);
             this.txbFindingComplication_Colono.Margin = new System.Windows.Forms.Padding(2);
-            this.txbFindingComplication_Colono.MaxLength = 82;
+            this.txbFindingComplication_Colono.MaxLength = 120;
             this.txbFindingComplication_Colono.Name = "txbFindingComplication_Colono";
             this.txbFindingComplication_Colono.Size = new System.Drawing.Size(751, 23);
             this.txbFindingComplication_Colono.TabIndex = 147;
@@ -7034,7 +7034,7 @@ namespace EndoscopicSystem.V2.Forms
             this.txbFindingComment_Colono.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
             this.txbFindingComment_Colono.Location = new System.Drawing.Point(226, 570);
             this.txbFindingComment_Colono.Margin = new System.Windows.Forms.Padding(2);
-            this.txbFindingComment_Colono.MaxLength = 82;
+            this.txbFindingComment_Colono.MaxLength = 120;
             this.txbFindingComment_Colono.Name = "txbFindingComment_Colono";
             this.txbFindingComment_Colono.Size = new System.Drawing.Size(751, 23);
             this.txbFindingComment_Colono.TabIndex = 148;
@@ -7047,7 +7047,7 @@ namespace EndoscopicSystem.V2.Forms
             this.txtFindingTerminal_Colono.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
             this.txtFindingTerminal_Colono.Location = new System.Drawing.Point(377, 274);
             this.txtFindingTerminal_Colono.Margin = new System.Windows.Forms.Padding(2);
-            this.txtFindingTerminal_Colono.MaxLength = 70;
+            this.txtFindingTerminal_Colono.MaxLength = 100;
             this.txtFindingTerminal_Colono.Name = "txtFindingTerminal_Colono";
             this.txtFindingTerminal_Colono.Size = new System.Drawing.Size(600, 23);
             this.txtFindingTerminal_Colono.TabIndex = 81;
@@ -7060,7 +7060,7 @@ namespace EndoscopicSystem.V2.Forms
             this.txtFindingCecum_Colono.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
             this.txtFindingCecum_Colono.Location = new System.Drawing.Point(377, 248);
             this.txtFindingCecum_Colono.Margin = new System.Windows.Forms.Padding(2);
-            this.txtFindingCecum_Colono.MaxLength = 70;
+            this.txtFindingCecum_Colono.MaxLength = 100;
             this.txtFindingCecum_Colono.Name = "txtFindingCecum_Colono";
             this.txtFindingCecum_Colono.Size = new System.Drawing.Size(600, 23);
             this.txtFindingCecum_Colono.TabIndex = 79;
@@ -7073,7 +7073,7 @@ namespace EndoscopicSystem.V2.Forms
             this.txtFindingIleocecal_Colono.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
             this.txtFindingIleocecal_Colono.Location = new System.Drawing.Point(377, 222);
             this.txtFindingIleocecal_Colono.Margin = new System.Windows.Forms.Padding(2);
-            this.txtFindingIleocecal_Colono.MaxLength = 70;
+            this.txtFindingIleocecal_Colono.MaxLength = 100;
             this.txtFindingIleocecal_Colono.Name = "txtFindingIleocecal_Colono";
             this.txtFindingIleocecal_Colono.Size = new System.Drawing.Size(600, 23);
             this.txtFindingIleocecal_Colono.TabIndex = 78;
@@ -7086,7 +7086,7 @@ namespace EndoscopicSystem.V2.Forms
             this.txtFindingAscending_Colono.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
             this.txtFindingAscending_Colono.Location = new System.Drawing.Point(377, 196);
             this.txtFindingAscending_Colono.Margin = new System.Windows.Forms.Padding(2);
-            this.txtFindingAscending_Colono.MaxLength = 70;
+            this.txtFindingAscending_Colono.MaxLength = 100;
             this.txtFindingAscending_Colono.Name = "txtFindingAscending_Colono";
             this.txtFindingAscending_Colono.Size = new System.Drawing.Size(600, 23);
             this.txtFindingAscending_Colono.TabIndex = 77;
@@ -7099,7 +7099,7 @@ namespace EndoscopicSystem.V2.Forms
             this.txtFindingHepatic_Colono.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
             this.txtFindingHepatic_Colono.Location = new System.Drawing.Point(377, 170);
             this.txtFindingHepatic_Colono.Margin = new System.Windows.Forms.Padding(2);
-            this.txtFindingHepatic_Colono.MaxLength = 70;
+            this.txtFindingHepatic_Colono.MaxLength = 100;
             this.txtFindingHepatic_Colono.Name = "txtFindingHepatic_Colono";
             this.txtFindingHepatic_Colono.Size = new System.Drawing.Size(600, 23);
             this.txtFindingHepatic_Colono.TabIndex = 76;
@@ -7112,7 +7112,7 @@ namespace EndoscopicSystem.V2.Forms
             this.txtFindingTransverse_Colono.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
             this.txtFindingTransverse_Colono.Location = new System.Drawing.Point(377, 144);
             this.txtFindingTransverse_Colono.Margin = new System.Windows.Forms.Padding(2);
-            this.txtFindingTransverse_Colono.MaxLength = 70;
+            this.txtFindingTransverse_Colono.MaxLength = 100;
             this.txtFindingTransverse_Colono.Name = "txtFindingTransverse_Colono";
             this.txtFindingTransverse_Colono.Size = new System.Drawing.Size(600, 23);
             this.txtFindingTransverse_Colono.TabIndex = 75;
@@ -7125,7 +7125,7 @@ namespace EndoscopicSystem.V2.Forms
             this.txtFindingFlexure_Colono.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
             this.txtFindingFlexure_Colono.Location = new System.Drawing.Point(377, 118);
             this.txtFindingFlexure_Colono.Margin = new System.Windows.Forms.Padding(2);
-            this.txtFindingFlexure_Colono.MaxLength = 70;
+            this.txtFindingFlexure_Colono.MaxLength = 100;
             this.txtFindingFlexure_Colono.Name = "txtFindingFlexure_Colono";
             this.txtFindingFlexure_Colono.Size = new System.Drawing.Size(600, 23);
             this.txtFindingFlexure_Colono.TabIndex = 74;
@@ -7138,7 +7138,7 @@ namespace EndoscopicSystem.V2.Forms
             this.txtFindingDescending_Colono.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
             this.txtFindingDescending_Colono.Location = new System.Drawing.Point(377, 92);
             this.txtFindingDescending_Colono.Margin = new System.Windows.Forms.Padding(2);
-            this.txtFindingDescending_Colono.MaxLength = 70;
+            this.txtFindingDescending_Colono.MaxLength = 100;
             this.txtFindingDescending_Colono.Name = "txtFindingDescending_Colono";
             this.txtFindingDescending_Colono.Size = new System.Drawing.Size(600, 23);
             this.txtFindingDescending_Colono.TabIndex = 73;
@@ -7151,7 +7151,7 @@ namespace EndoscopicSystem.V2.Forms
             this.txtFindingSigmoid_Colono.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
             this.txtFindingSigmoid_Colono.Location = new System.Drawing.Point(377, 66);
             this.txtFindingSigmoid_Colono.Margin = new System.Windows.Forms.Padding(2);
-            this.txtFindingSigmoid_Colono.MaxLength = 70;
+            this.txtFindingSigmoid_Colono.MaxLength = 100;
             this.txtFindingSigmoid_Colono.Name = "txtFindingSigmoid_Colono";
             this.txtFindingSigmoid_Colono.Size = new System.Drawing.Size(600, 23);
             this.txtFindingSigmoid_Colono.TabIndex = 72;
@@ -7164,7 +7164,7 @@ namespace EndoscopicSystem.V2.Forms
             this.txtFindingRectum_Colono.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
             this.txtFindingRectum_Colono.Location = new System.Drawing.Point(377, 40);
             this.txtFindingRectum_Colono.Margin = new System.Windows.Forms.Padding(2);
-            this.txtFindingRectum_Colono.MaxLength = 70;
+            this.txtFindingRectum_Colono.MaxLength = 100;
             this.txtFindingRectum_Colono.Name = "txtFindingRectum_Colono";
             this.txtFindingRectum_Colono.Size = new System.Drawing.Size(600, 23);
             this.txtFindingRectum_Colono.TabIndex = 71;
@@ -7177,7 +7177,7 @@ namespace EndoscopicSystem.V2.Forms
             this.txtFindingAnalCanal_Colono.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
             this.txtFindingAnalCanal_Colono.Location = new System.Drawing.Point(377, 13);
             this.txtFindingAnalCanal_Colono.Margin = new System.Windows.Forms.Padding(2);
-            this.txtFindingAnalCanal_Colono.MaxLength = 70;
+            this.txtFindingAnalCanal_Colono.MaxLength = 100;
             this.txtFindingAnalCanal_Colono.Name = "txtFindingAnalCanal_Colono";
             this.txtFindingAnalCanal_Colono.Size = new System.Drawing.Size(600, 23);
             this.txtFindingAnalCanal_Colono.TabIndex = 70;
@@ -8424,7 +8424,7 @@ namespace EndoscopicSystem.V2.Forms
             this.txbFindingRapidUreaseTest_EGD.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
             this.txbFindingRapidUreaseTest_EGD.Location = new System.Drawing.Point(217, 515);
             this.txbFindingRapidUreaseTest_EGD.Margin = new System.Windows.Forms.Padding(2);
-            this.txbFindingRapidUreaseTest_EGD.MaxLength = 82;
+            this.txbFindingRapidUreaseTest_EGD.MaxLength = 120;
             this.txbFindingRapidUreaseTest_EGD.Name = "txbFindingRapidUreaseTest_EGD";
             this.txbFindingRapidUreaseTest_EGD.Size = new System.Drawing.Size(754, 23);
             this.txbFindingRapidUreaseTest_EGD.TabIndex = 183;
@@ -8522,7 +8522,7 @@ namespace EndoscopicSystem.V2.Forms
             this.txbFinding2ndPart_EGD.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
             this.txbFinding2ndPart_EGD.Location = new System.Drawing.Point(346, 245);
             this.txbFinding2ndPart_EGD.Margin = new System.Windows.Forms.Padding(2);
-            this.txbFinding2ndPart_EGD.MaxLength = 70;
+            this.txbFinding2ndPart_EGD.MaxLength = 100;
             this.txbFinding2ndPart_EGD.Name = "txbFinding2ndPart_EGD";
             this.txbFinding2ndPart_EGD.Size = new System.Drawing.Size(625, 23);
             this.txbFinding2ndPart_EGD.TabIndex = 173;
@@ -8535,7 +8535,7 @@ namespace EndoscopicSystem.V2.Forms
             this.txbFindingDuodenalBulb_EGD.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
             this.txbFindingDuodenalBulb_EGD.Location = new System.Drawing.Point(346, 219);
             this.txbFindingDuodenalBulb_EGD.Margin = new System.Windows.Forms.Padding(2);
-            this.txbFindingDuodenalBulb_EGD.MaxLength = 70;
+            this.txbFindingDuodenalBulb_EGD.MaxLength = 100;
             this.txbFindingDuodenalBulb_EGD.Name = "txbFindingDuodenalBulb_EGD";
             this.txbFindingDuodenalBulb_EGD.Size = new System.Drawing.Size(625, 23);
             this.txbFindingDuodenalBulb_EGD.TabIndex = 172;
@@ -8548,7 +8548,7 @@ namespace EndoscopicSystem.V2.Forms
             this.txbFindingPylorus_EGD.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
             this.txbFindingPylorus_EGD.Location = new System.Drawing.Point(346, 193);
             this.txbFindingPylorus_EGD.Margin = new System.Windows.Forms.Padding(2);
-            this.txbFindingPylorus_EGD.MaxLength = 70;
+            this.txbFindingPylorus_EGD.MaxLength = 100;
             this.txbFindingPylorus_EGD.Name = "txbFindingPylorus_EGD";
             this.txbFindingPylorus_EGD.Size = new System.Drawing.Size(625, 23);
             this.txbFindingPylorus_EGD.TabIndex = 171;
@@ -8561,7 +8561,7 @@ namespace EndoscopicSystem.V2.Forms
             this.txbFindingAntrum_EGD.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
             this.txbFindingAntrum_EGD.Location = new System.Drawing.Point(346, 167);
             this.txbFindingAntrum_EGD.Margin = new System.Windows.Forms.Padding(2);
-            this.txbFindingAntrum_EGD.MaxLength = 70;
+            this.txbFindingAntrum_EGD.MaxLength = 100;
             this.txbFindingAntrum_EGD.Name = "txbFindingAntrum_EGD";
             this.txbFindingAntrum_EGD.Size = new System.Drawing.Size(625, 23);
             this.txbFindingAntrum_EGD.TabIndex = 170;
@@ -8574,7 +8574,7 @@ namespace EndoscopicSystem.V2.Forms
             this.txbFindingBody_EGD.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
             this.txbFindingBody_EGD.Location = new System.Drawing.Point(346, 141);
             this.txbFindingBody_EGD.Margin = new System.Windows.Forms.Padding(2);
-            this.txbFindingBody_EGD.MaxLength = 70;
+            this.txbFindingBody_EGD.MaxLength = 100;
             this.txbFindingBody_EGD.Name = "txbFindingBody_EGD";
             this.txbFindingBody_EGD.Size = new System.Drawing.Size(625, 23);
             this.txbFindingBody_EGD.TabIndex = 169;
@@ -8587,7 +8587,7 @@ namespace EndoscopicSystem.V2.Forms
             this.txbFindingFundus_EGD.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
             this.txbFindingFundus_EGD.Location = new System.Drawing.Point(346, 115);
             this.txbFindingFundus_EGD.Margin = new System.Windows.Forms.Padding(2);
-            this.txbFindingFundus_EGD.MaxLength = 70;
+            this.txbFindingFundus_EGD.MaxLength = 100;
             this.txbFindingFundus_EGD.Name = "txbFindingFundus_EGD";
             this.txbFindingFundus_EGD.Size = new System.Drawing.Size(625, 23);
             this.txbFindingFundus_EGD.TabIndex = 168;
@@ -8600,7 +8600,7 @@ namespace EndoscopicSystem.V2.Forms
             this.txbFindingCardia_EGD.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
             this.txbFindingCardia_EGD.Location = new System.Drawing.Point(346, 89);
             this.txbFindingCardia_EGD.Margin = new System.Windows.Forms.Padding(2);
-            this.txbFindingCardia_EGD.MaxLength = 70;
+            this.txbFindingCardia_EGD.MaxLength = 100;
             this.txbFindingCardia_EGD.Name = "txbFindingCardia_EGD";
             this.txbFindingCardia_EGD.Size = new System.Drawing.Size(625, 23);
             this.txbFindingCardia_EGD.TabIndex = 167;
@@ -8613,7 +8613,7 @@ namespace EndoscopicSystem.V2.Forms
             this.txbFindingEGJunction_EGD.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
             this.txbFindingEGJunction_EGD.Location = new System.Drawing.Point(346, 63);
             this.txbFindingEGJunction_EGD.Margin = new System.Windows.Forms.Padding(2);
-            this.txbFindingEGJunction_EGD.MaxLength = 70;
+            this.txbFindingEGJunction_EGD.MaxLength = 100;
             this.txbFindingEGJunction_EGD.Name = "txbFindingEGJunction_EGD";
             this.txbFindingEGJunction_EGD.Size = new System.Drawing.Size(625, 23);
             this.txbFindingEGJunction_EGD.TabIndex = 166;
@@ -8626,7 +8626,7 @@ namespace EndoscopicSystem.V2.Forms
             this.txbFindingEsophagus_EGD.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
             this.txbFindingEsophagus_EGD.Location = new System.Drawing.Point(346, 37);
             this.txbFindingEsophagus_EGD.Margin = new System.Windows.Forms.Padding(2);
-            this.txbFindingEsophagus_EGD.MaxLength = 70;
+            this.txbFindingEsophagus_EGD.MaxLength = 100;
             this.txbFindingEsophagus_EGD.Name = "txbFindingEsophagus_EGD";
             this.txbFindingEsophagus_EGD.Size = new System.Drawing.Size(625, 23);
             this.txbFindingEsophagus_EGD.TabIndex = 165;
@@ -8639,7 +8639,7 @@ namespace EndoscopicSystem.V2.Forms
             this.txbFindingOropharynx_EGD.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
             this.txbFindingOropharynx_EGD.Location = new System.Drawing.Point(346, 11);
             this.txbFindingOropharynx_EGD.Margin = new System.Windows.Forms.Padding(2);
-            this.txbFindingOropharynx_EGD.MaxLength = 70;
+            this.txbFindingOropharynx_EGD.MaxLength = 100;
             this.txbFindingOropharynx_EGD.Name = "txbFindingOropharynx_EGD";
             this.txbFindingOropharynx_EGD.Size = new System.Drawing.Size(625, 23);
             this.txbFindingOropharynx_EGD.TabIndex = 164;
@@ -8652,7 +8652,7 @@ namespace EndoscopicSystem.V2.Forms
             this.txbFindingRecommendation_EGD.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
             this.txbFindingRecommendation_EGD.Location = new System.Drawing.Point(217, 542);
             this.txbFindingRecommendation_EGD.Margin = new System.Windows.Forms.Padding(2);
-            this.txbFindingRecommendation_EGD.MaxLength = 82;
+            this.txbFindingRecommendation_EGD.MaxLength = 120;
             this.txbFindingRecommendation_EGD.Name = "txbFindingRecommendation_EGD";
             this.txbFindingRecommendation_EGD.Size = new System.Drawing.Size(754, 23);
             this.txbFindingRecommendation_EGD.TabIndex = 144;
@@ -8666,7 +8666,7 @@ namespace EndoscopicSystem.V2.Forms
             this.txbFindingHistopathology_EGD.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
             this.txbFindingHistopathology_EGD.Location = new System.Drawing.Point(217, 488);
             this.txbFindingHistopathology_EGD.Margin = new System.Windows.Forms.Padding(2);
-            this.txbFindingHistopathology_EGD.MaxLength = 82;
+            this.txbFindingHistopathology_EGD.MaxLength = 120;
             this.txbFindingHistopathology_EGD.Name = "txbFindingHistopathology_EGD";
             this.txbFindingHistopathology_EGD.Size = new System.Drawing.Size(754, 23);
             this.txbFindingHistopathology_EGD.TabIndex = 142;
@@ -8680,7 +8680,7 @@ namespace EndoscopicSystem.V2.Forms
             this.txbFindingDx3Text_EGD.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
             this.txbFindingDx3Text_EGD.Location = new System.Drawing.Point(356, 434);
             this.txbFindingDx3Text_EGD.Margin = new System.Windows.Forms.Padding(2);
-            this.txbFindingDx3Text_EGD.MaxLength = 80;
+            this.txbFindingDx3Text_EGD.MaxLength = 116;
             this.txbFindingDx3Text_EGD.Name = "txbFindingDx3Text_EGD";
             this.txbFindingDx3Text_EGD.Size = new System.Drawing.Size(615, 23);
             this.txbFindingDx3Text_EGD.TabIndex = 133;
@@ -8708,7 +8708,7 @@ namespace EndoscopicSystem.V2.Forms
             this.txbFindingDx2Text_EGD.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
             this.txbFindingDx2Text_EGD.Location = new System.Drawing.Point(356, 407);
             this.txbFindingDx2Text_EGD.Margin = new System.Windows.Forms.Padding(2);
-            this.txbFindingDx2Text_EGD.MaxLength = 80;
+            this.txbFindingDx2Text_EGD.MaxLength = 116;
             this.txbFindingDx2Text_EGD.Name = "txbFindingDx2Text_EGD";
             this.txbFindingDx2Text_EGD.Size = new System.Drawing.Size(615, 23);
             this.txbFindingDx2Text_EGD.TabIndex = 130;
@@ -8736,7 +8736,7 @@ namespace EndoscopicSystem.V2.Forms
             this.txbFindingDx1Text_EGD.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
             this.txbFindingDx1Text_EGD.Location = new System.Drawing.Point(356, 380);
             this.txbFindingDx1Text_EGD.Margin = new System.Windows.Forms.Padding(2);
-            this.txbFindingDx1Text_EGD.MaxLength = 80;
+            this.txbFindingDx1Text_EGD.MaxLength = 116;
             this.txbFindingDx1Text_EGD.Name = "txbFindingDx1Text_EGD";
             this.txbFindingDx1Text_EGD.Size = new System.Drawing.Size(615, 23);
             this.txbFindingDx1Text_EGD.TabIndex = 127;
@@ -8764,7 +8764,7 @@ namespace EndoscopicSystem.V2.Forms
             this.txbFindingProcedure_EGD.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
             this.txbFindingProcedure_EGD.Location = new System.Drawing.Point(217, 353);
             this.txbFindingProcedure_EGD.Margin = new System.Windows.Forms.Padding(2);
-            this.txbFindingProcedure_EGD.MaxLength = 85;
+            this.txbFindingProcedure_EGD.MaxLength = 130;
             this.txbFindingProcedure_EGD.Name = "txbFindingProcedure_EGD";
             this.txbFindingProcedure_EGD.Size = new System.Drawing.Size(754, 23);
             this.txbFindingProcedure_EGD.TabIndex = 124;
@@ -8778,7 +8778,7 @@ namespace EndoscopicSystem.V2.Forms
             this.txbFindingSupplementalProcedureText2_EGD.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
             this.txbFindingSupplementalProcedureText2_EGD.Location = new System.Drawing.Point(356, 326);
             this.txbFindingSupplementalProcedureText2_EGD.Margin = new System.Windows.Forms.Padding(2);
-            this.txbFindingSupplementalProcedureText2_EGD.MaxLength = 78;
+            this.txbFindingSupplementalProcedureText2_EGD.MaxLength = 110;
             this.txbFindingSupplementalProcedureText2_EGD.Name = "txbFindingSupplementalProcedureText2_EGD";
             this.txbFindingSupplementalProcedureText2_EGD.Size = new System.Drawing.Size(615, 23);
             this.txbFindingSupplementalProcedureText2_EGD.TabIndex = 121;
@@ -8806,7 +8806,7 @@ namespace EndoscopicSystem.V2.Forms
             this.txbFindingSupplementalProcedureText_EGD.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
             this.txbFindingSupplementalProcedureText_EGD.Location = new System.Drawing.Point(356, 299);
             this.txbFindingSupplementalProcedureText_EGD.Margin = new System.Windows.Forms.Padding(2);
-            this.txbFindingSupplementalProcedureText_EGD.MaxLength = 78;
+            this.txbFindingSupplementalProcedureText_EGD.MaxLength = 110;
             this.txbFindingSupplementalProcedureText_EGD.Name = "txbFindingSupplementalProcedureText_EGD";
             this.txbFindingSupplementalProcedureText_EGD.Size = new System.Drawing.Size(615, 23);
             this.txbFindingSupplementalProcedureText_EGD.TabIndex = 118;
@@ -8834,7 +8834,7 @@ namespace EndoscopicSystem.V2.Forms
             this.txbFindingPrinncipalProcedureText_EGD.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
             this.txbFindingPrinncipalProcedureText_EGD.Location = new System.Drawing.Point(356, 272);
             this.txbFindingPrinncipalProcedureText_EGD.Margin = new System.Windows.Forms.Padding(2);
-            this.txbFindingPrinncipalProcedureText_EGD.MaxLength = 80;
+            this.txbFindingPrinncipalProcedureText_EGD.MaxLength = 110;
             this.txbFindingPrinncipalProcedureText_EGD.Name = "txbFindingPrinncipalProcedureText_EGD";
             this.txbFindingPrinncipalProcedureText_EGD.Size = new System.Drawing.Size(615, 23);
             this.txbFindingPrinncipalProcedureText_EGD.TabIndex = 115;
@@ -8862,7 +8862,7 @@ namespace EndoscopicSystem.V2.Forms
             this.txbFindingComplication_EGD.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
             this.txbFindingComplication_EGD.Location = new System.Drawing.Point(217, 461);
             this.txbFindingComplication_EGD.Margin = new System.Windows.Forms.Padding(2);
-            this.txbFindingComplication_EGD.MaxLength = 82;
+            this.txbFindingComplication_EGD.MaxLength = 120;
             this.txbFindingComplication_EGD.Name = "txbFindingComplication_EGD";
             this.txbFindingComplication_EGD.Size = new System.Drawing.Size(754, 23);
             this.txbFindingComplication_EGD.TabIndex = 18;
@@ -8876,7 +8876,7 @@ namespace EndoscopicSystem.V2.Forms
             this.txbFindingComment_EGD.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
             this.txbFindingComment_EGD.Location = new System.Drawing.Point(217, 569);
             this.txbFindingComment_EGD.Margin = new System.Windows.Forms.Padding(2);
-            this.txbFindingComment_EGD.MaxLength = 82;
+            this.txbFindingComment_EGD.MaxLength = 120;
             this.txbFindingComment_EGD.Name = "txbFindingComment_EGD";
             this.txbFindingComment_EGD.Size = new System.Drawing.Size(754, 23);
             this.txbFindingComment_EGD.TabIndex = 19;
@@ -8884,7 +8884,7 @@ namespace EndoscopicSystem.V2.Forms
             // label175
             // 
             this.label175.AutoSize = true;
-            this.label175.Location = new System.Drawing.Point(8, 517);
+            this.label175.Location = new System.Drawing.Point(8, 516);
             this.label175.Name = "label175";
             this.label175.Size = new System.Drawing.Size(159, 20);
             this.label175.TabIndex = 182;
@@ -9155,7 +9155,7 @@ namespace EndoscopicSystem.V2.Forms
             this.label109.AutoSize = true;
             this.label109.BackColor = System.Drawing.Color.Transparent;
             this.label109.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
-            this.label109.Location = new System.Drawing.Point(8, 541);
+            this.label109.Location = new System.Drawing.Point(8, 543);
             this.label109.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label109.Name = "label109";
             this.label109.Size = new System.Drawing.Size(149, 20);

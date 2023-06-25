@@ -597,7 +597,7 @@ namespace EndoscopicSystem.V2.Forms
             }
 
             _fileWriter.Flush();
-            _fileWriter.Open(nameCapture, width, height, 30, VideoCodec.MPEG4, 2879000);
+            _fileWriter.Open(nameCapture, width, height, 60, VideoCodec.MPEG4, 2879000);
 
             try
             {
