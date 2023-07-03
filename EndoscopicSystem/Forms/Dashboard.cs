@@ -159,6 +159,18 @@ namespace EndoscopicSystem
         {
             try
             {
+                // Check Instrument
+                var instruments = db.Instruments.ToList();
+                if (instruments is null || instruments.Count == 0)
+                {
+                    this.Hide();
+                    V2.Forms.FormSetting formSetting = new V2.Forms.FormSetting(UserID, "menuInstrumentSetting");
+                    formSetting.ShowDialog();
+                    formSetting = null;
+                    this.Show();
+                    return;
+                }
+
                 if (!string.IsNullOrWhiteSpace(txtHNNo.Text) && !string.IsNullOrWhiteSpace(txtProcedureId.Text))
                 {
                     hnNo = txtHNNo.Text;

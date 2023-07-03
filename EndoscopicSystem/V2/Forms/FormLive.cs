@@ -1,31 +1,23 @@
-﻿using AForge.Controls;
+﻿using Accord.Video.FFMPEG;
 using AForge.Video;
 using AForge.Video.DirectShow;
 using EndoscopicSystem.Constants;
 using EndoscopicSystem.Entities;
-using EndoscopicSystem.Forms;
 using EndoscopicSystem.Repository;
 using System;
+using System.Collections.Generic;
+using System.Configuration;
+using System.Diagnostics;
 using System.Drawing;
+using System.Drawing.Drawing2D;
 using System.Drawing.Imaging;
 using System.IO;
 using System.Linq;
-using System.Windows.Forms;
 using System.Media;
-using System.Threading.Tasks;
-using Accord.IO;
-using System.Collections.Generic;
-using CrystalDecisions.Shared.Json;
-using EndoscopicSystem.Report;
-using CrystalDecisions.Shared;
-using Accord.Video.FFMPEG;
-using System.Diagnostics;
-using CrystalDecisions.CrystalReports.Engine;
-using System.Configuration;
-using System.Drawing.Drawing2D;
-using System.Timers;
 using System.Runtime.InteropServices;
-using EndoscopicSystem.Helpers;
+using System.Threading.Tasks;
+using System.Timers;
+using System.Windows.Forms;
 
 namespace EndoscopicSystem.V2.Forms
 {
@@ -41,10 +33,10 @@ namespace EndoscopicSystem.V2.Forms
         private string _pathFolderImage = ConfigurationManager.AppSettings["pathSaveImageCapture"];
         private string _pathFolderSounds = Application.StartupPath.Replace("\\bin\\Debug", "") + @"\Sounds\";
         private VideoFileWriter _fileWriter = new VideoFileWriter();
-        private DateTime? recordStartDate, recordEndDate;
+        private DateTime? _recordStartDate, _recordEndDate;
         private bool _isRecord = false, _isPause = false, _isStopRecord = false, _isEgdAndColonoDone = false;
         private static bool _needSnapshot = false;
-        private int _patientId, _endoscopicId, _procedureId = 0, _appointmentId = 0, _item = 0, _aspectRatioID = 1, h, m, s, rowPb=0, colPb=3;
+        private int _patientId, _endoscopicId, _procedureId = 0, _appointmentId = 0, _item = 0, _aspectRatioID = 1, h, m, s, rowPb = 0, colPb = 3;
         private string PositionCropID = "L", _hnNo = "", _pathFolderImageToSave, _vdoPath;
         protected readonly GetDropdownList list = new GetDropdownList();
         public Dictionary<int, string> ImgPath = new Dictionary<int, string>();
@@ -141,10 +133,13 @@ namespace EndoscopicSystem.V2.Forms
         {
             string path = _pathFolderImage + _hnNo + @"\" + DateTime.Now.ToString("yyyyMMdd") + @"\" + cbbProcedureList.Text + @"\" + _appointmentId + @"\";
 
-            var getEndo = _db.EndoscopicAllImages.FirstOrDefault(f => f.EndoscopicID == _endoscopicId);
-            if (getEndo != null)
+            var query = _db.v_GetImageCapturePath.FirstOrDefault(f => f.AppointmentID == _appointmentId);
+
+            string imgPathOrigin = query?.ImagePath;
+
+            if (!string.IsNullOrEmpty(imgPathOrigin))
             {
-                var arrStr = getEndo.ImagePath.Split(new string[] { "Image_" }, StringSplitOptions.None);
+                var arrStr = imgPathOrigin.Split(new string[] { "Image_" }, StringSplitOptions.None);
                 if (arrStr == null)
                     return path;
                 path = arrStr[0];
@@ -178,7 +173,12 @@ namespace EndoscopicSystem.V2.Forms
 
                     Appointment app = new Appointment();
                     var apps = _db.Appointments.Where(x => x.PatientID == _patientId && txbHN.Text.Equals(x.HN) && x.ProcedureID == _procedureId).ToList();
-                    if (apps != null)
+
+                    if (apps != null && apps.Count == 0)
+                    {
+                        this.Close();
+                    }
+                    else
                     {
                         if (_appointmentId > 0)
                         {
@@ -252,6 +252,8 @@ namespace EndoscopicSystem.V2.Forms
                 Disconnect();
 
                 FormProceed.Self.txbStep.Text = "0" + ",,";
+                FormProceed.Self.txbStartRec.Text = _recordStartDate.HasValue ? _recordStartDate.Value.ToString("yyyy-MM-dd hh:mm:ss") : null;
+                FormProceed.Self.txbEndRec.Text = _recordEndDate.HasValue ? _recordEndDate.Value.ToString("yyyy-MM-dd hh:mm:ss") : null;
 
                 Task.Delay(5000);
 
@@ -306,7 +308,7 @@ namespace EndoscopicSystem.V2.Forms
             btnCapture.Enabled = true;
             btnCapture.BackColor = Color.FromArgb(0, 192, 0);
             btnRecord.Enabled = true;
-            recordStartDate = DateTime.Now;
+            _recordStartDate = DateTime.Now;
         }
 
         private void connectButton_Click(object sender, EventArgs e)
@@ -371,7 +373,7 @@ namespace EndoscopicSystem.V2.Forms
                 };
                 _soundDisconnect.Play();
 
-                recordEndDate = DateTime.Now;
+                _recordEndDate = DateTime.Now;
 
                 videoSourcePlayer.SignalToStop();
                 videoSourcePlayer.WaitForStop();
@@ -595,7 +597,7 @@ namespace EndoscopicSystem.V2.Forms
             }
 
             _fileWriter.Flush();
-            _fileWriter.Open(nameCapture, width, height, 30, VideoCodec.MPEG4, 2879000);
+            _fileWriter.Open(nameCapture, width, height, 60, VideoCodec.MPEG4, 2879000);
 
             try
             {
@@ -655,9 +657,12 @@ namespace EndoscopicSystem.V2.Forms
 
         private void btnStop_Click(object sender, EventArgs e)
         {
-            SoundPlayer _soundStopRecord = new SoundPlayer();
-            _soundStopRecord.SoundLocation = _pathFolderSounds + @"\SoundCapture\Stop.wav";
-            _soundStopRecord.Play();
+            if (videoSourcePlayer.VideoSource != null)
+            {
+                SoundPlayer _soundStopRecord = new SoundPlayer();
+                _soundStopRecord.SoundLocation = _pathFolderSounds + @"\SoundCapture\Stop.wav";
+                _soundStopRecord.Play();
+            }
 
             _isStopRecord = true;
             _isRecord = false;

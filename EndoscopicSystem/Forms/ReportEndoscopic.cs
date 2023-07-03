@@ -1,31 +1,46 @@
 ﻿using CrystalDecisions.CrystalReports.Engine;
 using CrystalDecisions.Shared;
 using EndoscopicSystem.Entities;
+using EndoscopicSystem.Repository;
+//using PQScan.PDFToImage;
 using System;
 using System.Configuration;
+using System.Drawing;
 using System.IO;
+using System.Linq;
 using System.Windows.Forms;
+using PdfiumViewer;
 
 namespace EndoscopicSystem.Forms
 {
     public partial class ReportEndoscopic : Form
     {
-        private string hnNo = "";
-        private int procedureId = 0;
+        private string hnNo = "", _fileNameSaved, _procedureName;
+        private int procedureId = 0, _appointmentId = 0;
         private int endoscopicId;
         protected EndoscopicEntities db = new EndoscopicEntities();
+        private readonly GetDropdownList list = new GetDropdownList();
         private string _reportPath = Application.StartupPath.Replace("\\bin\\Debug", "") + @"\Report\";
         private string _pathFolderPDF = ConfigurationManager.AppSettings["pathSavePdf"];
-        public ReportEndoscopic(string hn, int proc, int endosId)
+        private string _dicomPath = Application.StartupPath.Replace("\\bin\\Debug", "") + @"\Dicom\";
+        private string _pathFolderImage = ConfigurationManager.AppSettings["pathSaveImageCapture"];
+        public ReportEndoscopic(string hn, int proc, int endosId, int appointmentId)
         {
             InitializeComponent();
             hnNo = hn;
             procedureId = proc;
             endoscopicId = endosId;
+            _appointmentId = appointmentId;
         }
 
         private void ReportEndoscopic_Load(object sender, EventArgs e)
         {
+            var procedureList = list.GetProcedureList();
+            if (procedureList != null)
+            {
+                _procedureName = procedureList.Where(w => w.ProcedureID == procedureId).FirstOrDefault().ProcedureName;
+            }
+
             crystalReportViewer1.Refresh();
 
             ReportDocument rprt = new ReportDocument();
@@ -63,6 +78,9 @@ namespace EndoscopicSystem.Forms
             else if (procedureId == 6) // EGD + Colonoscopy Report
             {
                 rprt.Load(_reportPath + "GastroscoryReport.rpt");
+
+                ReportDocument subReport = new ReportDocument();
+                subReport.Load(_reportPath + "ColonoscopyReport.rpt");
             }
             else if (procedureId == 7) // EUS Report
             {
@@ -98,9 +116,81 @@ namespace EndoscopicSystem.Forms
             }
             string fileNamePDF = DateTime.Now.ToString("yyyyMMddHHmmssfff");
             string namaPDF = "pdf";
-            string nameSave = namaPDF + "_" + fileNamePDF + ".pdf";
-            string path = _pathFolderPDFToSave + nameSave;
+            _fileNameSaved = namaPDF + "_" + fileNamePDF + ".pdf";
+            string path = _pathFolderPDFToSave + _fileNameSaved;
             rprt.ExportToDisk(CrystalDecisions.Shared.ExportFormatType.PortableDocFormat, path);
+
+            ExportToJpegFile(path);
         }
+
+        private void ExportToJpegFile(string pdfPath)
+        {
+            try
+            {
+                string fileName = DateTime.Now.ToString("yyyyMMddhhmmsss");
+                using (PdfDocument document = PdfDocument.Load(pdfPath))
+                {
+                    var page = document.PageSizes[0];
+                    int pageCount = document.PageCount;
+
+                    for (int i = 0; i < pageCount; i++)
+                    {
+                        using (var image = document.Render(i, (int)page.Width, (int)page.Height, 300, 300, false))
+                        {
+                            string pathFolderImgToSave = _pathFolderImage + hnNo + @"\" + DateTime.Now.ToString("yyyyMMdd") + @"\" + _procedureName + @"\" + _appointmentId + @"\";
+                            if (!Directory.Exists(pathFolderImgToSave))
+                            {
+                                Directory.CreateDirectory(pathFolderImgToSave);
+                            }
+
+                            string outputFilePath = Path.Combine(pathFolderImgToSave, $"pdf_{fileName}{i+1}.jpg");
+                            image.Save(outputFilePath, System.Drawing.Imaging.ImageFormat.Jpeg);
+                        }
+                    }
+                }
+            }
+            catch (Exception)
+            {
+                return;
+            }
+        }
+
+        //private void ExportToJpegFile(string pathPdf)
+        //{
+        //    try
+        //    {
+        //        // Create an instance of PQScan.PDFToImage.PDFDocument object.
+        //        PDFDocument pdfDoc = new PDFDocument();
+
+        //        // Load PDF document from local file.
+        //        pdfDoc.LoadPDF(pathPdf);
+
+        //        // Get the total page count.
+        //        int count = pdfDoc.PageCount;
+
+        //        string pathFolderImgToSave = _pathFolderImage + hnNo + @"\" + DateTime.Now.ToString("yyyyMMdd") + @"\" + _procedureName + @"\" + _appointmentId + @"\";
+        //        if (!Directory.Exists(pathFolderImgToSave))
+        //        {
+        //            Directory.CreateDirectory(pathFolderImgToSave);
+        //        }
+
+        //        for (int i = 0; i < count; i++)
+        //        {
+        //            // Convert PDF page to image.
+        //            Bitmap jpgImage = pdfDoc.ToImage(i);
+
+        //            string file = $"{pathFolderImgToSave}{_fileNameSaved}_{i}.jpg";
+
+        //            // Save image with jpg file type.
+        //            jpgImage.Save(file, System.Drawing.Imaging.ImageFormat.Jpeg);
+        //        }
+        //    }
+        //    catch (Exception ex)
+        //    {
+        //        throw new Exception(ex.Message);
+        //    }
+        //}
+
+        
     }
 }

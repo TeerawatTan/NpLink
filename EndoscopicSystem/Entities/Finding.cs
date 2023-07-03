@@ -172,5 +172,9 @@ namespace EndoscopicSystem.Entities
         public string BiliarySystem { get; set; }
         public Nullable<int> OtherID { get; set; }
         public string OtherDetail { get; set; }
+        public Nullable<int> NoseID { get; set; }
+        public string Nose { get; set; }
+        public Nullable<int> PyriformID { get; set; }
+        public string Pyriform { get; set; }
     }
 }

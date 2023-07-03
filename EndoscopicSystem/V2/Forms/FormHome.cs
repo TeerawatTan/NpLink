@@ -1,4 +1,5 @@
-﻿using EndoscopicSystem.Entities;
+﻿using EndoscopicSystem.Constants;
+using EndoscopicSystem.Entities;
 using System;
 using System.Configuration;
 using System.Data;
@@ -16,7 +17,7 @@ namespace EndoscopicSystem.V2.Forms
         private int _id = 0;
         private string _pathFolderVideo = ConfigurationManager.AppSettings["pathSaveVideo"];
         private string _pathFolderImageCapture = ConfigurationManager.AppSettings["pathSaveImageCapture"];
-        //private string _pathFolderDicom = ConfigurationManager.AppSettings["pathSaveDicom"];
+        private string _pathFolderDicom = ConfigurationManager.AppSettings["pathSaveDicom"];
         private string _pathFolderPdf = ConfigurationManager.AppSettings["pathSavePdf"];
         public FormHome(int id)
         {
@@ -47,10 +48,10 @@ namespace EndoscopicSystem.V2.Forms
             {
                 Directory.CreateDirectory(_pathFolderImageCapture);
             }
-            //if (!Directory.Exists(_pathFolderDicom))
-            //{
-            //    Directory.CreateDirectory(_pathFolderDicom);
-            //}
+            if (!Directory.Exists(_pathFolderDicom))
+            {
+                Directory.CreateDirectory(_pathFolderDicom);
+            }
             if (!Directory.Exists(_pathFolderPdf))
             {
                 Directory.CreateDirectory(_pathFolderPdf);
@@ -125,7 +126,7 @@ namespace EndoscopicSystem.V2.Forms
         private void pictureBox_SeaarchPatient_Click(object sender, EventArgs e)
         {
             this.Hide();
-            SearchPatientForm searchPatientForm = new SearchPatientForm(_id);
+            SearchPatientForm searchPatientForm = new SearchPatientForm(_id, Constant.PageName.SEARCH_PATIENT_PAGE);
             searchPatientForm.ShowDialog();
             searchPatientForm = null;
             this.Show();
@@ -140,6 +141,26 @@ namespace EndoscopicSystem.V2.Forms
             formSetting = null;
             this.Show();
             ActiveMenuLabel(lb_Setting);
+        }
+
+        private void pictureBox_Statistic_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            FormDashboardStatistic formDashboardStatistic = new FormDashboardStatistic(_id);
+            formDashboardStatistic.ShowDialog();
+            formDashboardStatistic = null;
+            this.Show();
+            ActiveMenuLabel(lb_Statistic);
+        }
+
+        private void pictureBox_Pacs_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            SearchPatientForm formSendPACS = new SearchPatientForm(_id, Constant.PageName.SEND_PACS_PAGE);
+            formSendPACS.ShowDialog();
+            formSendPACS = null;
+            this.Show();
+            ActiveMenuLabel(lb_Pacs);
         }
     }
 }

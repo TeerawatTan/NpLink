@@ -14,15 +14,15 @@ namespace EndoscopicSystem.Entities
     
     public partial class v_HistoryEndoscopic
     {
-        public int HistorieID { get; set; }
         public Nullable<int> PatientID { get; set; }
         public Nullable<int> EndoscopicID { get; set; }
-        public Nullable<System.DateTime> CreateDate { get; set; }
         public string Symptom { get; set; }
         public Nullable<int> DoctorID { get; set; }
         public string Doctor { get; set; }
         public Nullable<int> ProcedureID { get; set; }
         public string ProcedureName { get; set; }
         public string Diagnosis { get; set; }
+        public int AppointmentID { get; set; }
+        public Nullable<System.DateTime> OperationDate { get; set; }
     }
 }
