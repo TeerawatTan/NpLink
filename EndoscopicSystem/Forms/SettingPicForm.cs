@@ -68,11 +68,12 @@ namespace EndoscopicSystem.Forms
             try
             {
                 db.SaveChanges();
-                MessageBox.Show("Saved");
+
+                MessageBox.Show("Saved successfully.", "Save form", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
             catch (Exception ex)
             {
-                MessageBox.Show(Constant.STATUS_ERROR);
+                MessageBox.Show(ex.Message);
             }
         }
 
@@ -185,22 +186,18 @@ namespace EndoscopicSystem.Forms
                 try
                 {
                     db.SaveChanges();
-                    MessageBox.Show("Reset to full screen success.");
+                    MessageBox.Show("Reset to full screen success.", "Reset settings", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 }
                 catch (Exception ex)
                 {
-                    MessageBox.Show(Constant.STATUS_ERROR);
+                    MessageBox.Show(ex.Message);
                 }
             }
             else
             {
-                MessageBox.Show("Error, Not found data.");
+                MessageBox.Show("Error, Not found data.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return;
             }
-        }
-
-        private void SettingPicForm_FormClosed(object sender, FormClosedEventArgs e)
-        {
         }
 
         private void pictureBox1_MouseEnter(object sender, EventArgs e)
@@ -230,15 +227,4 @@ namespace EndoscopicSystem.Forms
             Cursor = Cursors.Default;
         }
     }
-
-    //internal class AspectRatio
-    //{
-    //    public int AspectRatioID { get; internal set; }
-    //    public string AspectRatioName { get; internal set; }
-    //}
-    //internal class PositionCrop
-    //{
-    //    public string PositionCropID { get; internal set; }
-    //    public string PositionCropName { get; internal set; }
-    //}
 }

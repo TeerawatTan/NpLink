@@ -273,7 +273,6 @@
             this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "SettingHospitalForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.SettingHospitalForm_FormClosed);
             this.Load += new System.EventHandler(this.SettingHospitalForm_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);

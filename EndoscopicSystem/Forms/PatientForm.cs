@@ -17,8 +17,7 @@ namespace EndoscopicSystem
     {
         readonly EndoscopicEntities _db = new EndoscopicEntities();
         protected readonly GetDropdownList list = new GetDropdownList();
-        private int patientId = 0;
-        private int procedureId = 0;
+        private int patientId = 0, procedureId = 0;
         private readonly int UserID;
         string path = Application.StartupPath.Replace("\\bin\\Debug", "");
         private string hnNo = "";
@@ -152,17 +151,18 @@ namespace EndoscopicSystem
                                 .ToList();
                     if (history != null && history.Count > 0)
                     {
-                        history = history.OrderByDescending(o => o.CreateDate).ToList();
+                        history = history.OrderByDescending(o => o.OperationDate).ToList();
                         foreach (var item in history)
                         {
                             var model = new HistoryModel();
                             model.EndoScopicID = item.EndoscopicID;
                             model.ProcedureID = item.ProcedureID;
-                            model.OperatingDate = item.CreateDate;
+                            model.OperatingDate = item.OperationDate;
                             model.Symptom = item.Symptom;
                             model.Procedure = item.ProcedureName;
                             model.Doctor = item.Doctor;
                             model.Diagnosis = item.Diagnosis;
+                            model.AppointmentID = item.AppointmentID;
                             list.Add(model);
                         }
                     }
@@ -176,6 +176,7 @@ namespace EndoscopicSystem
                 gridPatient.DataSource = list;
                 gridPatient.Columns["EndoScopicID"].Visible = false;
                 gridPatient.Columns["ProcedureID"].Visible = false;
+                gridPatient.Columns["AppointmentID"].Visible = false;
             }
             catch (Exception ex)
             {
@@ -649,8 +650,9 @@ namespace EndoscopicSystem
                 string hnNo = txtHN.Text;
                 int procedureId = (int)gridPatient.Rows[e.RowIndex].Cells["ProcedureID"].Value;
                 int endoscopicId = (int)gridPatient.Rows[e.RowIndex].Cells["EndoScopicID"].Value;
+                int appointmentId = (int)gridPatient.Rows[e.RowIndex].Cells["AppointmentID"].Value;
 
-                ReportEndoscopic reportForm = new ReportEndoscopic(hnNo, procedureId, endoscopicId);
+                ReportEndoscopic reportForm = new ReportEndoscopic(hnNo, procedureId, endoscopicId, appointmentId);
                 reportForm.Show();
             }
         }
@@ -772,5 +774,6 @@ namespace EndoscopicSystem
         public string Procedure { get; set; }
         public string Doctor { get; set; }
         public string Diagnosis { get; set; }
+        public int AppointmentID { get; set; }
     }
 }

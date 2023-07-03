@@ -1,30 +1,23 @@
-﻿using AForge.Controls;
+﻿using Accord.Video.FFMPEG;
 using AForge.Video;
 using AForge.Video.DirectShow;
 using EndoscopicSystem.Constants;
 using EndoscopicSystem.Entities;
-using EndoscopicSystem.Forms;
 using EndoscopicSystem.Repository;
 using System;
+using System.Collections.Generic;
+using System.Configuration;
+using System.Diagnostics;
 using System.Drawing;
+using System.Drawing.Drawing2D;
 using System.Drawing.Imaging;
 using System.IO;
 using System.Linq;
-using System.Windows.Forms;
 using System.Media;
-using System.Threading.Tasks;
-using Accord.IO;
-using System.Collections.Generic;
-using CrystalDecisions.Shared.Json;
-using EndoscopicSystem.Report;
-using CrystalDecisions.Shared;
-using Accord.Video.FFMPEG;
-using System.Diagnostics;
-using CrystalDecisions.CrystalReports.Engine;
-using System.Configuration;
-using System.Drawing.Drawing2D;
-using System.Timers;
 using System.Runtime.InteropServices;
+using System.Threading.Tasks;
+using System.Timers;
+using System.Windows.Forms;
 
 namespace EndoscopicSystem.V2.Forms
 {
@@ -40,19 +33,17 @@ namespace EndoscopicSystem.V2.Forms
         private string _pathFolderImage = ConfigurationManager.AppSettings["pathSaveImageCapture"];
         private string _pathFolderSounds = Application.StartupPath.Replace("\\bin\\Debug", "") + @"\Sounds\";
         private VideoFileWriter _fileWriter = new VideoFileWriter();
-        private DateTime? _firstFrameTime, recordStartDate, recordEndDate;
+        private DateTime? _recordStartDate, _recordEndDate;
         private bool _isRecord = false, _isPause = false, _isStopRecord = false, _isEgdAndColonoDone = false;
         private static bool _needSnapshot = false;
-        private int _patientId, _endoscopicId, _procedureId = 0, _appointmentId = 0, _item = 0, _aspectRatioID = 1, h, m, s;
-        private string PositionCropID = "L", _hnNo = "", _fileName = ".jpg", _pathFolderImageToSave, _vdoPath;
+        private int _patientId, _endoscopicId, _procedureId = 0, _appointmentId = 0, _item = 0, _aspectRatioID = 1, h, m, s, rowPb = 0, colPb = 3;
+        private string PositionCropID = "L", _hnNo = "", _pathFolderImageToSave, _vdoPath;
         protected readonly GetDropdownList list = new GetDropdownList();
         public Dictionary<int, string> ImgPath = new Dictionary<int, string>();
         public Form formPopup = new Form(), formPopupVdo = new Form();
         private System.Timers.Timer t;
-
         private const int WH_KEYBOARD_LL = 13;
         private const int WM_KEYDOWN = 0x0100;
-
         private static LowLevelKeyboardProc _proc = HookCallback;
         private static IntPtr _hookID = IntPtr.Zero;
 
@@ -124,18 +115,6 @@ namespace EndoscopicSystem.V2.Forms
                 catch (Exception)
                 {
                 }
-
-                //if (index >= 0 && !string.IsNullOrWhiteSpace(_hnNo))
-                //{
-                //    try
-                //    {
-                //        OnLoadVdoCaptureDevice(_hnNo);
-                //    }
-                //    catch (Exception ex)
-                //    {
-                //        throw ex;
-                //    }
-                //}
             }
 
             txbHN.Text = _hnNo;
@@ -154,10 +133,13 @@ namespace EndoscopicSystem.V2.Forms
         {
             string path = _pathFolderImage + _hnNo + @"\" + DateTime.Now.ToString("yyyyMMdd") + @"\" + cbbProcedureList.Text + @"\" + _appointmentId + @"\";
 
-            var getEndo = _db.EndoscopicAllImages.FirstOrDefault(f => f.EndoscopicID == _endoscopicId);
-            if (getEndo != null)
+            var query = _db.v_GetImageCapturePath.FirstOrDefault(f => f.AppointmentID == _appointmentId);
+
+            string imgPathOrigin = query?.ImagePath;
+
+            if (!string.IsNullOrEmpty(imgPathOrigin))
             {
-                var arrStr = getEndo.ImagePath.Split(new string[] { "Image_" }, StringSplitOptions.None);
+                var arrStr = imgPathOrigin.Split(new string[] { "Image_" }, StringSplitOptions.None);
                 if (arrStr == null)
                     return path;
                 path = arrStr[0];
@@ -191,7 +173,12 @@ namespace EndoscopicSystem.V2.Forms
 
                     Appointment app = new Appointment();
                     var apps = _db.Appointments.Where(x => x.PatientID == _patientId && txbHN.Text.Equals(x.HN) && x.ProcedureID == _procedureId).ToList();
-                    if (apps != null)
+
+                    if (apps != null && apps.Count == 0)
+                    {
+                        this.Close();
+                    }
+                    else
                     {
                         if (_appointmentId > 0)
                         {
@@ -219,37 +206,13 @@ namespace EndoscopicSystem.V2.Forms
                             Directory.CreateDirectory(_pathFolderImageToSave);
                         }
 
-                        listView1.Items.Clear();
                         if (!string.IsNullOrWhiteSpace(_pathFolderImageToSave))
                         {
-                            var imageList = new List<Image>();
                             DirectoryInfo dinfo = new DirectoryInfo(_pathFolderImageToSave);
                             FileInfo[] files = (FileInfo[])dinfo.GetFiles("*.jpg").Where(w => w.Name.StartsWith("Image")).ToArray();
-                            foreach (var item in files.OrderByDescending(o => o.CreationTime))
-                            {
-                                Image imgFile = Image.FromFile(item.FullName);
-                                imageList.Add(imgFile);
-                            }
+                            var pathOriginImgList = files.OrderByDescending(o => o.CreationTime).Select(s => s.FullName).ToList();
 
-                            _item = files.Count();
-
-                            ImageList images = new ImageList
-                            {
-                                ImageSize = new Size(180, 110)
-                            };
-
-                            foreach (var img in imageList)
-                            {
-                                images.Images.Add(img);
-                            }
-
-                            listView1.LargeImageList = images;
-
-                            for (int i = 0; i < imageList.Count; i++)
-                            {
-                                ListViewItem item = new ListViewItem($"Image_{imageList.Count - i}", i);
-                                listView1.Items.Add(item);
-                            }
+                            GeneratePictureBoxWwithImages(pathOriginImgList);
                         }
                     }
                     else
@@ -285,18 +248,14 @@ namespace EndoscopicSystem.V2.Forms
             if (_procedureId > 0 && _appointmentId > 0)
             {
                 // Stop VdoSourcePlayer
+                btnStop_Click(sender, e);
                 Disconnect();
-                if (videoSourcePlayer == null)
-                    return;
-                if (videoSourcePlayer.IsRunning)
-                {
-                    this.videoSourcePlayer.Stop();
-                    _fileWriter.Close();
-                }
 
                 FormProceed.Self.txbStep.Text = "0" + ",,";
+                FormProceed.Self.txbStartRec.Text = _recordStartDate.HasValue ? _recordStartDate.Value.ToString("yyyy-MM-dd hh:mm:ss") : null;
+                FormProceed.Self.txbEndRec.Text = _recordEndDate.HasValue ? _recordEndDate.Value.ToString("yyyy-MM-dd hh:mm:ss") : null;
 
-                Task.Delay(1000);
+                Task.Delay(5000);
 
                 if (_procedureId == 1 && _isEgdAndColonoDone)
                 {
@@ -349,7 +308,7 @@ namespace EndoscopicSystem.V2.Forms
             btnCapture.Enabled = true;
             btnCapture.BackColor = Color.FromArgb(0, 192, 0);
             btnRecord.Enabled = true;
-            recordStartDate = DateTime.Now;
+            _recordStartDate = DateTime.Now;
         }
 
         private void connectButton_Click(object sender, EventArgs e)
@@ -414,7 +373,7 @@ namespace EndoscopicSystem.V2.Forms
                 };
                 _soundDisconnect.Play();
 
-                recordEndDate = DateTime.Now;
+                _recordEndDate = DateTime.Now;
 
                 videoSourcePlayer.SignalToStop();
                 videoSourcePlayer.WaitForStop();
@@ -483,7 +442,7 @@ namespace EndoscopicSystem.V2.Forms
                 switch (_aspectRatioID)
                 {
                     case 0://Custom
-                        var ratio = _db.Users.Where(x => x.Id == UserID).Select(x => new { x.CrpX, x.CrpY, x.CrpWidth, x.CrpHeight }).FirstOrDefault();
+                        var ratio = _db.Users.Where(w => w.Id == UserID).Select(s => new { s.CrpX, s.CrpY, s.CrpWidth, s.CrpHeight }).FirstOrDefault();
                         aspectRatio_X = ratio.CrpX ?? 0;
                         aspectRatio_Y = ratio.CrpY ?? 0;
                         width = ratio.CrpWidth ?? width;
@@ -507,48 +466,20 @@ namespace EndoscopicSystem.V2.Forms
 
                 pictureBoxSnapshot.Image.Save(path, System.Drawing.Imaging.ImageFormat.Jpeg);
 
-                int i = ImgPath.Count;
-                ImgPath.Add(i, path);
+                int idx = ImgPath.Count;
+                ImgPath.Add(idx, path);
                 btnCapture.Enabled = true;
 
-                listView1.Items.Clear();
-                if (!string.IsNullOrWhiteSpace(_pathFolderImageToSave))
-                {
-                    var imageList = new List<Image>();
-                    DirectoryInfo dinfo = new DirectoryInfo(_pathFolderImageToSave);
-                    FileInfo[] files = (FileInfo[])dinfo.GetFiles("*.jpg").Where(w => w.Name.StartsWith("Image")).ToArray();
-                    foreach (var item in files.OrderByDescending(o => o.CreationTime))
-                    {
-                        var imgFile = (Image)Image.FromFile(item.FullName);
-                        imageList.Add(imgFile);
-                    }
-                    _item = files.Count();
+                DirectoryInfo dinfo = new DirectoryInfo(_pathFolderImageToSave);
+                FileInfo[] files = (FileInfo[])dinfo.GetFiles("*.jpg").Where(w => w.Name.StartsWith("Image")).ToArray();
+                var pathOriginImgList = files.OrderByDescending(o => o.CreationTime).Select(s => s.FullName).ToList();
 
-                    ImageList images = new ImageList
-                    {
-                        ImageSize = new Size(180, 110)
-                    };
-
-                    foreach (var img in imageList)
-                    {
-                        images.Images.Add(img);
-                    }
-
-                    listView1.LargeImageList = images;
-
-                    for (int j = 0; j < imageList.Count; j++)
-                    {
-                        //listView1.Items.Add(new ListViewItem($"Image_{_imageList.Count - j}", j));
-                        ListViewItem item = new ListViewItem($"Image_{imageList.Count - j}", j);
-                        item.Tag = files[j].FullName; // Store the file path in the Tag property
-                        listView1.Items.Add(item);
-                    }
-                }
+                GeneratePictureBoxWwithImages(pathOriginImgList);
 
             }
             catch (Exception ex)
             {
-                throw;
+                throw ex;
             }
         }
 
@@ -653,8 +584,8 @@ namespace EndoscopicSystem.V2.Forms
             _soundRecord.SoundLocation = _pathFolderSounds + @"\SoundCapture\Record.wav";
             _soundRecord.Play();
 
-            int h = _videoCaptureDevice.VideoResolution.FrameSize.Height;
-            int w = _videoCaptureDevice.VideoResolution.FrameSize.Width;
+            int height = _videoCaptureDevice.VideoResolution.FrameSize.Height;
+            int width = _videoCaptureDevice.VideoResolution.FrameSize.Width;
 
             string nameImage = "Video"; //HN
             string _pathFolderVideoToSave = _pathFolderVideo + @"\" + _hnNo + @"\" + DateTime.Now.ToString("yyyyMMdd") + @"\";
@@ -666,15 +597,15 @@ namespace EndoscopicSystem.V2.Forms
             }
 
             _fileWriter.Flush();
-            _fileWriter.Open(nameCapture, w, h, 25, VideoCodec.MPEG4, 2879000);
+            _fileWriter.Open(nameCapture, width, height, 60, VideoCodec.MPEG4, 2879000);
 
             try
             {
                 _fileWriter.WriteVideoFrame(video);
             }
-            catch (Exception)
+            catch (Exception ex)
             {
-                //throw;
+                throw new Exception(ex.Message);
             }
 
             _isStopRecord = false;
@@ -692,6 +623,9 @@ namespace EndoscopicSystem.V2.Forms
             t.Enabled = true;
             t.AutoReset = true;
             t.Interval = 1000;
+            h = 0;
+            m = 0;
+            s = 0;
             t.Elapsed += OnTimeEvent;
         }
 
@@ -723,9 +657,12 @@ namespace EndoscopicSystem.V2.Forms
 
         private void btnStop_Click(object sender, EventArgs e)
         {
-            SoundPlayer _soundStopRecord = new SoundPlayer();
-            _soundStopRecord.SoundLocation = _pathFolderSounds + @"\SoundCapture\Stop.wav";
-            _soundStopRecord.Play();
+            if (videoSourcePlayer.VideoSource != null)
+            {
+                SoundPlayer _soundStopRecord = new SoundPlayer();
+                _soundStopRecord.SoundLocation = _pathFolderSounds + @"\SoundCapture\Stop.wav";
+                _soundStopRecord.Play();
+            }
 
             _isStopRecord = true;
             _isRecord = false;
@@ -750,21 +687,21 @@ namespace EndoscopicSystem.V2.Forms
             pictureBoxRecording.Visible = false;
 
             t.Stop();
-            h = 0;
-            m = 0;
-            s = 0;
+            //h = 0;
+            //m = 0;
+            //s = 0;
             lbTime.Text = String.Format("{0}:{1}:{2}", h.ToString().PadLeft(2, '0'), m.ToString().PadLeft(2, '0'), s.ToString().PadLeft(2, '0'));
         }
 
         public Bitmap CloneBitmap(Bitmap bitmap)
         {
-            Image bi;
+            //Image bi;
             MemoryStream ms = new MemoryStream();
             bitmap.Save(ms, System.Drawing.Imaging.ImageFormat.Jpeg);
             ms.Seek(0, SeekOrigin.Begin);
-            bi = Image.FromStream(ms);
+            //bi = Image.FromStream(ms);
             ms.Close();
-            return (Bitmap)bi;
+            return bitmap;
         }
 
         private void FormLive_FormClosing(object sender, FormClosingEventArgs e)
@@ -793,19 +730,25 @@ namespace EndoscopicSystem.V2.Forms
         {
             if (_isRecord)
             {
-                Bitmap videoRecord = null;
-                videoRecord = CloneBitmap((Bitmap)eventArgs.Frame.Clone());
-
                 try
                 {
+                    Bitmap videoRecord = CloneBitmap((Bitmap)eventArgs.Frame.Clone());
+
                     if (!_isPause)
                     {
-                        _fileWriter.WriteVideoFrame(videoRecord);
+                        if (videoRecord != null)
+                        {
+                            _fileWriter.WriteVideoFrame(videoRecord);
+                        }
+                    }
+                    else
+                    {
+                        _fileWriter.Close();
                     }
                 }
                 catch (Exception)
                 {
-
+                    //throw new Exception(ex.Message);
                 }
             }
             else
@@ -826,6 +769,55 @@ namespace EndoscopicSystem.V2.Forms
             else
             {
 
+            }
+        }
+
+        private void GeneratePictureBoxWwithImages(List<string> img)
+        {
+            Panel panel = this.panel1;
+            panel.Controls.Clear();
+
+            // Calculate the maximum width and height for each PictureBox, and the spacing between them
+            int numCols = 3;
+            int maxWidth = (panel.ClientSize.Width - (numCols - 1) * 10) / numCols;
+            int spacing = 10;
+            for (int i = 0; i < img.Count; i++)
+            {
+                _item = img.Count;
+                // Create a new PictureBox
+                System.Windows.Forms.PictureBox pictureBox = new System.Windows.Forms.PictureBox();
+                pictureBox.Name = "pictureBox" + i;
+                pictureBox.Size = new Size(200, 140);
+                pictureBox.SizeMode = PictureBoxSizeMode.StretchImage;
+                pictureBox.ImageLocation = img[i];
+
+                string[] pathArray = img[i].Split('\\');
+                string fileName = pathArray[pathArray.Length - 1];
+
+                // Create a new Label
+                Label label = new Label();
+                label.Name = "label" + i;
+                label.Text = fileName;
+                label.AutoSize = true;
+
+                // Set the size of the PictureBox based on the aspect ratio of the image
+                int pictureBoxWidth = maxWidth;
+                int pictureBoxHeight = (int)((double)pictureBoxWidth / 200 * 140);
+
+                // Calculate the location of the PictureBox based on its position in the grid
+                int maxHeight = pictureBox.Bottom + 30;
+                int row = i / numCols;
+                int col = i % numCols;
+                int x = col * (maxWidth + spacing);
+                int y = row * (maxHeight + spacing);
+                pictureBox.Location = new Point(x, y);
+
+                // Add the Label to the Panel, positioned below the PictureBox
+                label.Location = new Point(pictureBox.Left, pictureBox.Bottom + 10);
+
+                // Add the PictureBox to the Panel
+                panel.Controls.Add(pictureBox);
+                panel.Controls.Add(label);
             }
         }
 
@@ -878,5 +870,6 @@ namespace EndoscopicSystem.V2.Forms
 
         [DllImport("kernel32.dll", SetLastError = true)]
         private static extern IntPtr GetModuleHandle(string lpModuleName);
+
     }
 }
