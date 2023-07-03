@@ -608,7 +608,6 @@
             this.dtBirthDate.TabIndex = 109;
             this.dtBirthDate.Value = new System.DateTime(2023, 2, 10, 0, 0, 0, 0);
             this.dtBirthDate.Visible = false;
-            this.dtBirthDate.ValueChanged += new System.EventHandler(this.dtBirthDate_ValueChanged);
             // 
             // cbbFinancial
             // 
