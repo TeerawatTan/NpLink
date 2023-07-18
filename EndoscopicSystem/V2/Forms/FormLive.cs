@@ -255,8 +255,6 @@ namespace EndoscopicSystem.V2.Forms
                 FormProceed.Self.txbStartRec.Text = _recordStartDate.HasValue ? _recordStartDate.Value.ToString("yyyy-MM-dd hh:mm:ss") : null;
                 FormProceed.Self.txbEndRec.Text = _recordEndDate.HasValue ? _recordEndDate.Value.ToString("yyyy-MM-dd hh:mm:ss") : null;
 
-                Task.Delay(5000);
-
                 if (_procedureId == 1 && _isEgdAndColonoDone)
                 {
                     FormProceed.Self.txbStep.Text = "4" + "," + _pathFolderImageToSave + "," + _vdoPath;

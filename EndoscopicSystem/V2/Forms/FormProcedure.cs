@@ -1708,12 +1708,20 @@ namespace EndoscopicSystem.V2.Forms
                                     _db.Findings.Add(finding);
                                     _db.SaveChanges();
 
-                                    var endos = _db.Endoscopics.ToList();
-                                    if (endos.Count > 0)
+                                    var endo = _db.Endoscopics.OrderByDescending(o => o.EndoscopicID).FirstOrDefault();
+                                    if (endo != null)
                                     {
-                                        Endoscopic endo = endos.OrderByDescending(x => x.EndoscopicID).FirstOrDefault();
                                         _endoscopicId = endo.EndoscopicID;
                                     }
+                                }
+
+                                if (_procedureId == 6)
+                                {
+
+                                    //List<MultiEndoscopic> multiEndoscopicList = new List<MultiEndoscopic>()
+                                    //{
+                                    //    new MultiEndoscopic { EndoscopicID = _endoscopicId }
+                                    //};
                                 }
                             }
                         }
@@ -2958,6 +2966,67 @@ namespace EndoscopicSystem.V2.Forms
                     _dropdownListService.DropdownLingular(cbbFindingLingular_Broncho);
                     _dropdownListService.DropdownLLL(cbbFindingLLL_Broncho);
                 }
+            }
+            else if (procedureId == 6)
+            {
+                tabControl1.TabPages.Add(tabGeneralEGD);
+                tabControl1.TabPages.Add(tabFindingEGD);
+                tabControl1.TabPages.Add(tabGeneralColonoscopy);
+                tabControl1.TabPages.Add(tabFindingColonoscopy);
+
+                // EGD General Tab
+                _dropdownListService.DropdownOPD(cbbGeneralOPD_EGD);
+                _dropdownListService.DropdownWard(cbbGeneralWard_EGD);
+                _dropdownListService.DropdownDoctor(cbbGeneralDoctor_EGD);
+                _dropdownListService.DropdownAnesthesia(cbbGeneralAnesthesia_EGD);
+                _dropdownListService.DropdownAnesthesist(cbbGeneralAnesthesist_EGD);
+                _dropdownListService.DropdownNurse(cbbGeneralNurse1_EGD);
+                _dropdownListService.DropdownNurse(cbbGeneralNurse2_EGD);
+                _dropdownListService.DropdownNurse(cbbGeneralNurse3_EGD);
+                _dropdownListService.DropdownMedication(cbbGeneralMedication_EGD);
+                _dropdownListService.DropdownIndication(cbbGeneralIndication_EGD);
+                _dropdownListService.DropdownFinancial(cbbGeneralFinancial_EGD);
+                _dropdownListService.DropdownInstrument(cbbInstrument_EGD);
+
+                // EGD Finding Tab
+                _dropdownListService.DropdownOropharynx(cbbFindingOropharynx_EGD);
+                _dropdownListService.DropdownEsophagus(cbbFindingEsophagus_EGD);
+                _dropdownListService.DropdownEGJunction(cbbFindingEGJunction_EGD);
+                _dropdownListService.DropdownCardia(cbbFindingCardia_EGD);
+                _dropdownListService.DropdownFundus(cbbFindingFundus_EGD);
+                _dropdownListService.DropdownBody(cbbFindingBody_EGD);
+                _dropdownListService.DropdownAntrum(cbbFindingAntrum_EGD);
+                _dropdownListService.DropdownPylorus(cbbFindingPylorus_EGD);
+                _dropdownListService.DropdownDuodenalBulb(cbbFindingDuodenalBulb_EGD);
+                _dropdownListService.DropdownSecondPart(cbbFinding2ndPart_EGD);
+
+                // Colono General Tab
+                _dropdownListService.DropdownOPD(cbbGeneralOPD_Colono);
+                _dropdownListService.DropdownWard(cbbGeneralWard_Colono);
+                _dropdownListService.DropdownDoctor(cbbGeneralDoctor_Colono);
+                _dropdownListService.DropdownAnesthesia(cbbGeneralAnesthesia_Colono);
+                _dropdownListService.DropdownAnesthesist(cbbGeneralAnesthesist_Colono);
+                _dropdownListService.DropdownNurse(cbbGeneralNurse1_Colono);
+                _dropdownListService.DropdownNurse(cbbGeneralNurse2_Colono);
+                _dropdownListService.DropdownNurse(cbbGeneralNurse3_Colono);
+                _dropdownListService.DropdownMedication(cbbGeneralMedication_Colono);
+                _dropdownListService.DropdownIndication(cbbGeneralIndication_Colono);
+                _dropdownListService.DropdownFinancial(cbbGeneralFinancial_Colono);
+                _dropdownListService.DropdownInstrument(cbbInstrument_Colono);
+
+                // Colono Finding Tab
+                _dropdownListService.DropdownAnalCanal(cbbFindingAnalCanal_Colono);
+                _dropdownListService.DropdownRectum(cbbFindingRectum_Colono);
+                _dropdownListService.DropdownSigmoidColon(cbbFindingSigmoid_Colono);
+                _dropdownListService.DropdownDescendingColon(cbbFindingDescending_Colono);
+                _dropdownListService.DropdownSplenicFlexure(cbbFindingFlexure_Colono);
+                _dropdownListService.DropdownTransverseColon(cbbFindingTransverse_Colono);
+                _dropdownListService.DropdownHepaticFlexure(cbbFindingHepatic_Colono);
+                _dropdownListService.DropdownAscendingColon(cbbFindingAscending_Colono);
+                _dropdownListService.DropdownIleocecalValve(cbbFindingIleocecal_Colono);
+                _dropdownListService.DropdownCecum(cbbFindingCecum_Colono);
+                _dropdownListService.DropdownTerminalIleum(cbbFindingTerminal_Colono);
+
             }
             else if (procedureId == 8) // Laparoscopy
             {
