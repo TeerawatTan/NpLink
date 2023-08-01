@@ -3577,10 +3577,10 @@ namespace EndoscopicSystem.V2.Forms
             this.txbGeneralBriefHistory_Lap.Location = new System.Drawing.Point(176, 489);
             this.txbGeneralBriefHistory_Lap.Margin = new System.Windows.Forms.Padding(2);
             this.txbGeneralBriefHistory_Lap.MaxLength = 200;
-            this.txbGeneralBriefHistory_Lap.Multiline = true;
             this.txbGeneralBriefHistory_Lap.Name = "txbGeneralBriefHistory_Lap";
             this.txbGeneralBriefHistory_Lap.Size = new System.Drawing.Size(739, 23);
             this.txbGeneralBriefHistory_Lap.TabIndex = 194;
+            this.txbGeneralBriefHistory_Lap.Leave += new System.EventHandler(this.txbGeneralBriefHistory_Lap_Leave);
             // 
             // txbGeneralIndication_Lap
             // 
@@ -3588,12 +3588,13 @@ namespace EndoscopicSystem.V2.Forms
             | System.Windows.Forms.AnchorStyles.Right)));
             this.txbGeneralIndication_Lap.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.txbGeneralIndication_Lap.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
-            this.txbGeneralIndication_Lap.Location = new System.Drawing.Point(499, 462);
+            this.txbGeneralIndication_Lap.Location = new System.Drawing.Point(176, 462);
             this.txbGeneralIndication_Lap.Margin = new System.Windows.Forms.Padding(2);
             this.txbGeneralIndication_Lap.MaxLength = 36;
             this.txbGeneralIndication_Lap.Name = "txbGeneralIndication_Lap";
-            this.txbGeneralIndication_Lap.Size = new System.Drawing.Size(417, 23);
+            this.txbGeneralIndication_Lap.Size = new System.Drawing.Size(740, 23);
             this.txbGeneralIndication_Lap.TabIndex = 193;
+            this.txbGeneralIndication_Lap.Leave += new System.EventHandler(this.txbGeneralIndication_Lap_Leave);
             // 
             // txbGeneralMedication_Lap
             // 
@@ -3601,12 +3602,13 @@ namespace EndoscopicSystem.V2.Forms
             | System.Windows.Forms.AnchorStyles.Right)));
             this.txbGeneralMedication_Lap.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.txbGeneralMedication_Lap.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
-            this.txbGeneralMedication_Lap.Location = new System.Drawing.Point(499, 435);
+            this.txbGeneralMedication_Lap.Location = new System.Drawing.Point(176, 435);
             this.txbGeneralMedication_Lap.Margin = new System.Windows.Forms.Padding(2);
             this.txbGeneralMedication_Lap.MaxLength = 36;
             this.txbGeneralMedication_Lap.Name = "txbGeneralMedication_Lap";
-            this.txbGeneralMedication_Lap.Size = new System.Drawing.Size(417, 23);
+            this.txbGeneralMedication_Lap.Size = new System.Drawing.Size(740, 23);
             this.txbGeneralMedication_Lap.TabIndex = 190;
+            this.txbGeneralMedication_Lap.Leave += new System.EventHandler(this.txbGeneralMedication_Lap_Leave);
             // 
             // txbGeneralSN_Lap
             // 
@@ -3709,11 +3711,12 @@ namespace EndoscopicSystem.V2.Forms
             this.cbbGeneralIndication_Lap.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cbbGeneralIndication_Lap.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
             this.cbbGeneralIndication_Lap.FormattingEnabled = true;
-            this.cbbGeneralIndication_Lap.Location = new System.Drawing.Point(177, 462);
+            this.cbbGeneralIndication_Lap.Location = new System.Drawing.Point(626, 461);
             this.cbbGeneralIndication_Lap.Margin = new System.Windows.Forms.Padding(2);
             this.cbbGeneralIndication_Lap.Name = "cbbGeneralIndication_Lap";
             this.cbbGeneralIndication_Lap.Size = new System.Drawing.Size(318, 23);
             this.cbbGeneralIndication_Lap.TabIndex = 192;
+            this.cbbGeneralIndication_Lap.Visible = false;
             // 
             // label38
             // 
@@ -3733,11 +3736,12 @@ namespace EndoscopicSystem.V2.Forms
             this.cbbGeneralMedication_Lap.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cbbGeneralMedication_Lap.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
             this.cbbGeneralMedication_Lap.FormattingEnabled = true;
-            this.cbbGeneralMedication_Lap.Location = new System.Drawing.Point(177, 435);
+            this.cbbGeneralMedication_Lap.Location = new System.Drawing.Point(626, 434);
             this.cbbGeneralMedication_Lap.Margin = new System.Windows.Forms.Padding(2);
             this.cbbGeneralMedication_Lap.Name = "cbbGeneralMedication_Lap";
             this.cbbGeneralMedication_Lap.Size = new System.Drawing.Size(318, 23);
             this.cbbGeneralMedication_Lap.TabIndex = 189;
+            this.cbbGeneralMedication_Lap.Visible = false;
             // 
             // label39
             // 
@@ -7665,7 +7669,7 @@ namespace EndoscopicSystem.V2.Forms
             | System.Windows.Forms.AnchorStyles.Right)));
             this.txbGeneralBowelPreparationResult_colono.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.txbGeneralBowelPreparationResult_colono.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
-            this.txbGeneralBowelPreparationResult_colono.Location = new System.Drawing.Point(273, 630);
+            this.txbGeneralBowelPreparationResult_colono.Location = new System.Drawing.Point(273, 593);
             this.txbGeneralBowelPreparationResult_colono.Margin = new System.Windows.Forms.Padding(2);
             this.txbGeneralBowelPreparationResult_colono.MaxLength = 75;
             this.txbGeneralBowelPreparationResult_colono.Name = "txbGeneralBowelPreparationResult_colono";
@@ -7678,7 +7682,7 @@ namespace EndoscopicSystem.V2.Forms
             | System.Windows.Forms.AnchorStyles.Right)));
             this.txbGeneralBowelPreparationRegimen_Colono.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.txbGeneralBowelPreparationRegimen_Colono.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
-            this.txbGeneralBowelPreparationRegimen_Colono.Location = new System.Drawing.Point(273, 603);
+            this.txbGeneralBowelPreparationRegimen_Colono.Location = new System.Drawing.Point(273, 566);
             this.txbGeneralBowelPreparationRegimen_Colono.Margin = new System.Windows.Forms.Padding(2);
             this.txbGeneralBowelPreparationRegimen_Colono.MaxLength = 75;
             this.txbGeneralBowelPreparationRegimen_Colono.Name = "txbGeneralBowelPreparationRegimen_Colono";
@@ -7694,10 +7698,10 @@ namespace EndoscopicSystem.V2.Forms
             this.txbBriefHistory_Colono.Location = new System.Drawing.Point(165, 539);
             this.txbBriefHistory_Colono.Margin = new System.Windows.Forms.Padding(2);
             this.txbBriefHistory_Colono.MaxLength = 168;
-            this.txbBriefHistory_Colono.Multiline = true;
             this.txbBriefHistory_Colono.Name = "txbBriefHistory_Colono";
-            this.txbBriefHistory_Colono.Size = new System.Drawing.Size(781, 60);
+            this.txbBriefHistory_Colono.Size = new System.Drawing.Size(781, 23);
             this.txbBriefHistory_Colono.TabIndex = 168;
+            this.txbBriefHistory_Colono.Leave += new System.EventHandler(this.txbBriefHistory_Colono_Leave);
             // 
             // txbGeneralDx2IText_Colono
             // 
@@ -7731,12 +7735,13 @@ namespace EndoscopicSystem.V2.Forms
             | System.Windows.Forms.AnchorStyles.Right)));
             this.txbGeneralIndication_Colono.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.txbGeneralIndication_Colono.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
-            this.txbGeneralIndication_Colono.Location = new System.Drawing.Point(487, 458);
+            this.txbGeneralIndication_Colono.Location = new System.Drawing.Point(165, 458);
             this.txbGeneralIndication_Colono.Margin = new System.Windows.Forms.Padding(2);
             this.txbGeneralIndication_Colono.MaxLength = 36;
             this.txbGeneralIndication_Colono.Name = "txbGeneralIndication_Colono";
-            this.txbGeneralIndication_Colono.Size = new System.Drawing.Size(400, 23);
+            this.txbGeneralIndication_Colono.Size = new System.Drawing.Size(722, 23);
             this.txbGeneralIndication_Colono.TabIndex = 161;
+            this.txbGeneralIndication_Colono.Leave += new System.EventHandler(this.txbGeneralIndication_Colono_Leave);
             // 
             // txbGeneralSN_Colono
             // 
@@ -7813,12 +7818,13 @@ namespace EndoscopicSystem.V2.Forms
             | System.Windows.Forms.AnchorStyles.Right)));
             this.txbGeneralMedication_Colono.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.txbGeneralMedication_Colono.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
-            this.txbGeneralMedication_Colono.Location = new System.Drawing.Point(487, 431);
+            this.txbGeneralMedication_Colono.Location = new System.Drawing.Point(165, 431);
             this.txbGeneralMedication_Colono.Margin = new System.Windows.Forms.Padding(2);
             this.txbGeneralMedication_Colono.MaxLength = 36;
             this.txbGeneralMedication_Colono.Name = "txbGeneralMedication_Colono";
-            this.txbGeneralMedication_Colono.Size = new System.Drawing.Size(400, 23);
+            this.txbGeneralMedication_Colono.Size = new System.Drawing.Size(722, 23);
             this.txbGeneralMedication_Colono.TabIndex = 138;
+            this.txbGeneralMedication_Colono.Leave += new System.EventHandler(this.txbGeneralMedication_Colono_Leave);
             // 
             // txbGeneralDx2ID_Colono
             // 
@@ -7906,7 +7912,7 @@ namespace EndoscopicSystem.V2.Forms
             // 
             this.label126.AutoSize = true;
             this.label126.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
-            this.label126.Location = new System.Drawing.Point(38, 630);
+            this.label126.Location = new System.Drawing.Point(38, 593);
             this.label126.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label126.Name = "label126";
             this.label126.Size = new System.Drawing.Size(212, 20);
@@ -7917,7 +7923,7 @@ namespace EndoscopicSystem.V2.Forms
             // 
             this.label125.AutoSize = true;
             this.label125.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
-            this.label125.Location = new System.Drawing.Point(38, 603);
+            this.label125.Location = new System.Drawing.Point(38, 566);
             this.label125.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label125.Name = "label125";
             this.label125.Size = new System.Drawing.Size(231, 20);
@@ -7989,7 +7995,7 @@ namespace EndoscopicSystem.V2.Forms
             // 
             this.label34.AutoSize = true;
             this.label34.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
-            this.label34.Location = new System.Drawing.Point(38, 542);
+            this.label34.Location = new System.Drawing.Point(38, 541);
             this.label34.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label34.Name = "label34";
             this.label34.Size = new System.Drawing.Size(108, 20);
@@ -8025,11 +8031,12 @@ namespace EndoscopicSystem.V2.Forms
             this.cbbGeneralIndication_Colono.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cbbGeneralIndication_Colono.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
             this.cbbGeneralIndication_Colono.FormattingEnabled = true;
-            this.cbbGeneralIndication_Colono.Location = new System.Drawing.Point(165, 458);
+            this.cbbGeneralIndication_Colono.Location = new System.Drawing.Point(608, 457);
             this.cbbGeneralIndication_Colono.Margin = new System.Windows.Forms.Padding(2);
             this.cbbGeneralIndication_Colono.Name = "cbbGeneralIndication_Colono";
             this.cbbGeneralIndication_Colono.Size = new System.Drawing.Size(318, 23);
             this.cbbGeneralIndication_Colono.TabIndex = 160;
+            this.cbbGeneralIndication_Colono.Visible = false;
             // 
             // label55
             // 
@@ -8268,11 +8275,12 @@ namespace EndoscopicSystem.V2.Forms
             this.cbbGeneralMedication_Colono.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cbbGeneralMedication_Colono.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
             this.cbbGeneralMedication_Colono.FormattingEnabled = true;
-            this.cbbGeneralMedication_Colono.Location = new System.Drawing.Point(165, 431);
+            this.cbbGeneralMedication_Colono.Location = new System.Drawing.Point(608, 430);
             this.cbbGeneralMedication_Colono.Margin = new System.Windows.Forms.Padding(2);
             this.cbbGeneralMedication_Colono.Name = "cbbGeneralMedication_Colono";
             this.cbbGeneralMedication_Colono.Size = new System.Drawing.Size(318, 23);
             this.cbbGeneralMedication_Colono.TabIndex = 131;
+            this.cbbGeneralMedication_Colono.Visible = false;
             // 
             // label119
             // 
@@ -9396,10 +9404,10 @@ namespace EndoscopicSystem.V2.Forms
             this.txbBriefHistory_EGD.Location = new System.Drawing.Point(161, 535);
             this.txbBriefHistory_EGD.Margin = new System.Windows.Forms.Padding(2);
             this.txbBriefHistory_EGD.MaxLength = 168;
-            this.txbBriefHistory_EGD.Multiline = true;
             this.txbBriefHistory_EGD.Name = "txbBriefHistory_EGD";
-            this.txbBriefHistory_EGD.Size = new System.Drawing.Size(789, 60);
+            this.txbBriefHistory_EGD.Size = new System.Drawing.Size(818, 23);
             this.txbBriefHistory_EGD.TabIndex = 116;
+            this.txbBriefHistory_EGD.Leave += new System.EventHandler(this.txbBriefHistory_EGD_Leave);
             // 
             // txbGeneralDx2Text_EGD
             // 
@@ -9463,12 +9471,13 @@ namespace EndoscopicSystem.V2.Forms
             | System.Windows.Forms.AnchorStyles.Right)));
             this.txbGeneralIndication_EGD.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.txbGeneralIndication_EGD.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
-            this.txbGeneralIndication_EGD.Location = new System.Drawing.Point(483, 454);
+            this.txbGeneralIndication_EGD.Location = new System.Drawing.Point(162, 454);
             this.txbGeneralIndication_EGD.Margin = new System.Windows.Forms.Padding(2);
             this.txbGeneralIndication_EGD.MaxLength = 22;
             this.txbGeneralIndication_EGD.Name = "txbGeneralIndication_EGD";
-            this.txbGeneralIndication_EGD.Size = new System.Drawing.Size(401, 23);
+            this.txbGeneralIndication_EGD.Size = new System.Drawing.Size(722, 23);
             this.txbGeneralIndication_EGD.TabIndex = 109;
+            this.txbGeneralIndication_EGD.Leave += new System.EventHandler(this.txbGeneralIndication_EGD_Leave);
             // 
             // txtGeneralSn_EGD
             // 
@@ -9546,12 +9555,13 @@ namespace EndoscopicSystem.V2.Forms
             | System.Windows.Forms.AnchorStyles.Right)));
             this.txbGeneralMedication_EGD.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.txbGeneralMedication_EGD.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
-            this.txbGeneralMedication_EGD.Location = new System.Drawing.Point(483, 427);
+            this.txbGeneralMedication_EGD.Location = new System.Drawing.Point(162, 427);
             this.txbGeneralMedication_EGD.Margin = new System.Windows.Forms.Padding(2);
             this.txbGeneralMedication_EGD.MaxLength = 27;
             this.txbGeneralMedication_EGD.Name = "txbGeneralMedication_EGD";
-            this.txbGeneralMedication_EGD.Size = new System.Drawing.Size(401, 23);
+            this.txbGeneralMedication_EGD.Size = new System.Drawing.Size(722, 23);
             this.txbGeneralMedication_EGD.TabIndex = 56;
+            this.txbGeneralMedication_EGD.Leave += new System.EventHandler(this.txbGeneralMedication_EGD_Leave);
             // 
             // cbbInstrument_EGD
             // 
@@ -9642,7 +9652,7 @@ namespace EndoscopicSystem.V2.Forms
             // 
             this.label101.AutoSize = true;
             this.label101.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
-            this.label101.Location = new System.Drawing.Point(34, 538);
+            this.label101.Location = new System.Drawing.Point(34, 537);
             this.label101.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label101.Name = "label101";
             this.label101.Size = new System.Drawing.Size(108, 20);
@@ -9678,11 +9688,12 @@ namespace EndoscopicSystem.V2.Forms
             this.cbbGeneralIndication_EGD.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cbbGeneralIndication_EGD.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
             this.cbbGeneralIndication_EGD.FormattingEnabled = true;
-            this.cbbGeneralIndication_EGD.Location = new System.Drawing.Point(161, 454);
+            this.cbbGeneralIndication_EGD.Location = new System.Drawing.Point(600, 455);
             this.cbbGeneralIndication_EGD.Margin = new System.Windows.Forms.Padding(2);
             this.cbbGeneralIndication_EGD.Name = "cbbGeneralIndication_EGD";
             this.cbbGeneralIndication_EGD.Size = new System.Drawing.Size(318, 23);
             this.cbbGeneralIndication_EGD.TabIndex = 108;
+            this.cbbGeneralIndication_EGD.Visible = false;
             // 
             // label67
             // 
@@ -9921,11 +9932,12 @@ namespace EndoscopicSystem.V2.Forms
             this.cbbGeneralMedication_EGD.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cbbGeneralMedication_EGD.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
             this.cbbGeneralMedication_EGD.FormattingEnabled = true;
-            this.cbbGeneralMedication_EGD.Location = new System.Drawing.Point(161, 427);
+            this.cbbGeneralMedication_EGD.Location = new System.Drawing.Point(601, 428);
             this.cbbGeneralMedication_EGD.Margin = new System.Windows.Forms.Padding(2);
             this.cbbGeneralMedication_EGD.Name = "cbbGeneralMedication_EGD";
             this.cbbGeneralMedication_EGD.Size = new System.Drawing.Size(318, 23);
             this.cbbGeneralMedication_EGD.TabIndex = 47;
+            this.cbbGeneralMedication_EGD.Visible = false;
             // 
             // label13
             // 

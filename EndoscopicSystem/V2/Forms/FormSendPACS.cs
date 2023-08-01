@@ -195,6 +195,7 @@ namespace EndoscopicSystem.V2.Forms
             {
                 MessageBox.Show("File not found !!", "Warning", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 this.Close();
+                return;
             }
 
             string imgPathOrigin = query.ImagePath;

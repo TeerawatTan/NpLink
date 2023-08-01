@@ -164,6 +164,9 @@
     <Compile Include="Entities\Body.cs">
       <DependentUpon>DBEndoscopic.tt</DependentUpon>
     </Compile>
+    <Compile Include="Entities\BriefHistory.cs">
+      <DependentUpon>DBEndoscopic.tt</DependentUpon>
+    </Compile>
     <Compile Include="Entities\BrochoscopyReport_Result.cs">
       <DependentUpon>DBEndoscopic.tt</DependentUpon>
     </Compile>

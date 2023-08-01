@@ -598,6 +598,8 @@ namespace EndoscopicSystem.V2.Forms
                 {
                     ac.Add(item.Name);
                 }
+                textBox.AutoCompleteSource = AutoCompleteSource.CustomSource;
+                textBox.AutoCompleteMode = AutoCompleteMode.SuggestAppend;
                 textBox.AutoCompleteCustomSource = ac;
             }
         }

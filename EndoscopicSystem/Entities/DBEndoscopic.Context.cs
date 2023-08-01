@@ -130,6 +130,7 @@ namespace EndoscopicSystem.Entities
         public virtual DbSet<Finding> Findings { get; set; }
         public virtual DbSet<v_GetImageCapturePath> v_GetImageCapturePath { get; set; }
         public virtual DbSet<v_PatientList> v_PatientList { get; set; }
+        public virtual DbSet<BriefHistory> BriefHistories { get; set; }
     
         public virtual ObjectResult<BrochoscopyReport_Result> BrochoscopyReport(string hn, Nullable<int> procedure, Nullable<int> endoscopicId)
         {

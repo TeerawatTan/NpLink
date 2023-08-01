@@ -1,25 +1,16 @@
-﻿using Accord.IO;
-using CrystalDecisions.CrystalReports.Engine;
-using CrystalDecisions.Shared;
-using EndoscopicSystem.Constants;
+﻿using EndoscopicSystem.Constants;
 using EndoscopicSystem.Entities;
-using EndoscopicSystem.Forms;
 using EndoscopicSystem.Repository;
 using EndoscopicSystem.V2.Forms.src;
 using System;
 using System.Collections.Generic;
-using System.ComponentModel;
 using System.Configuration;
 using System.Data;
-using System.Data.Entity;
-using System.Diagnostics;
 using System.Drawing;
 using System.Drawing.Drawing2D;
 using System.Drawing.Imaging;
 using System.IO;
 using System.Linq;
-using System.Text;
-using System.Threading;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
@@ -118,6 +109,17 @@ namespace EndoscopicSystem.V2.Forms
             LoadHistopathologies();
             LoadRapidUreaseTests();
             LoadRecommendations();
+
+            // Loadding autoCompleted
+            LoadAutoCompleted_txbGeneralMedication_EGD();
+            LoadAutoCompleted_txbGeneralIndication_EGD();
+            LoadAutoCompleted_txbBriefHistory_EGD();
+            LoadAutoCompleted_txbGeneralMedication_Colono();
+            LoadAutoCompleted_txbGeneralIndication_Colono();
+            LoadAutoCompleted_txbBriefHistory_Colono();
+            LoadAutoCompleted_txbGeneralMedication_Lap();
+            LoadAutoCompleted_txbGeneralIndication_Lap();
+            LoadAutoCompleted_txbBriefHistory_Lap();
 
             SearchHN(_hnNo, _procedureId);
         }
@@ -270,7 +272,21 @@ namespace EndoscopicSystem.V2.Forms
                 {
                     ac.Add(item.Name);
                 }
+                textBox.AutoCompleteSource = AutoCompleteSource.CustomSource;
+                textBox.AutoCompleteMode = AutoCompleteMode.SuggestAppend;
                 textBox.AutoCompleteCustomSource = ac;
+            }
+        }
+        private void LoadTextBoxAutoCompleteFromDb(TextBox textBox, string[] datas)
+        {
+            if (datas.Length > 0)
+            {
+                AutoCompleteStringCollection data = new AutoCompleteStringCollection();
+                data.AddRange(datas);
+
+                textBox.AutoCompleteSource = AutoCompleteSource.CustomSource;
+                textBox.AutoCompleteMode = AutoCompleteMode.SuggestAppend;
+                textBox.AutoCompleteCustomSource = data;
             }
         }
         private void LoadProcedureDetails()
@@ -603,6 +619,88 @@ namespace EndoscopicSystem.V2.Forms
             lastFocused = (TextBox)sender;
             _markField = Constant.RECOMMENDATION;
         }
+        private void LoadAutoCompleted_txbGeneralMedication_EGD()
+        {
+            string[] names = _db.Medications.Select(s => s.MedicationName).ToArray();
+            if (names.Length > 0)
+            {
+                LoadTextBoxAutoCompleteFromDb(txbGeneralMedication_EGD, names);
+            }
+        }
+        private void LoadAutoCompleted_txbGeneralIndication_EGD()
+        {
+            string[] names = _db.IndicationDropdowns.Select(s => s.IndicationName).ToArray();
+            if (names.Length > 0)
+            {
+                LoadTextBoxAutoCompleteFromDb(txbGeneralIndication_EGD, names);
+            }
+        }
+        private void LoadAutoCompleted_txbBriefHistory_EGD()
+        {
+            string[] names = _db.BriefHistories.Select(s => s.BriefHistoryText).ToArray();
+            if (names.Length > 0)
+            {
+                LoadTextBoxAutoCompleteFromDb(txbBriefHistory_EGD, names);
+            }
+        }
+        private void txbGeneralMedication_EGD_Leave(object sender, EventArgs e)
+        {
+            if (txbGeneralMedication_EGD.TextLength > 0)
+            {
+                var medications = _db.Medications.AsEnumerable();
+                var findName = medications.Where(s => s.MedicationName.Trim().Equals(txbGeneralMedication_EGD.Text.Trim())).FirstOrDefault();
+                if (findName == null)
+                {
+                    _db.Medications.Add(new Medication { MedicationName = txbGeneralMedication_EGD.Text, CreateDate = DateTime.Now });
+                    _db.SaveChanges();
+
+                    // Reload
+                    LoadAutoCompleted_txbGeneralMedication_EGD();
+                }
+
+                _dropdownListService.DropdownMedication(cbbGeneralMedication_EGD);
+                int findId = medications.Where(w => w.MedicationName == txbGeneralMedication_EGD.Text).FirstOrDefault().MedicationID;
+                if (findId > 0)
+                    cbbGeneralMedication_EGD.SelectedValue = findId;
+            }
+        }
+        private void txbGeneralIndication_EGD_Leave(object sender, EventArgs e)
+        {
+            if (txbGeneralIndication_EGD.TextLength > 0)
+            {
+                var indications = _db.IndicationDropdowns.AsEnumerable();
+                var findName = indications.Where(s => s.IndicationName.Trim().Equals(txbGeneralIndication_EGD.Text.Trim())).FirstOrDefault();
+                if (findName == null)
+                {
+                    _db.IndicationDropdowns.Add(new IndicationDropdown { IndicationName = txbGeneralIndication_EGD.Text, CreateDate = DateTime.Now });
+                    _db.SaveChanges();
+
+                    // Reload
+                    LoadAutoCompleted_txbGeneralIndication_EGD();
+                }
+
+                _dropdownListService.DropdownIndication(cbbGeneralIndication_EGD);
+                int findId = indications.Where(w => w.IndicationName == txbGeneralIndication_EGD.Text).FirstOrDefault().IndicationID;
+                if (findId > 0)
+                    cbbGeneralIndication_EGD.SelectedValue = findId;
+            }
+        }
+        private void txbBriefHistory_EGD_Leave(object sender, EventArgs e)
+        {
+            if (txbBriefHistory_EGD.TextLength > 0)
+            {
+                var briefHistories = _db.BriefHistories.AsEnumerable();
+                var findName = briefHistories.Where(s => s.BriefHistoryText.Trim().Equals(txbBriefHistory_EGD.Text.Trim())).FirstOrDefault();
+                if (findName == null)
+                {
+                    _db.BriefHistories.Add(new BriefHistory { BriefHistoryText = txbBriefHistory_EGD.Text });
+                    _db.SaveChanges();
+
+                    // Reload
+                    LoadAutoCompleted_txbBriefHistory_EGD();
+                }
+            }
+        }
         #endregion
 
         #region Event Handler Colono
@@ -906,7 +1004,88 @@ namespace EndoscopicSystem.V2.Forms
             lastFocused = (TextBox)sender;
             _markField = Constant.RECOMMENDATION;
         }
+        private void LoadAutoCompleted_txbGeneralMedication_Colono()
+        {
+            string[] names = _db.Medications.Select(s => s.MedicationName).ToArray();
+            if (names.Length > 0)
+            {
+                LoadTextBoxAutoCompleteFromDb(txbGeneralMedication_Colono, names);
+            }
+        }
+        private void LoadAutoCompleted_txbGeneralIndication_Colono()
+        {
+            string[] names = _db.IndicationDropdowns.Select(s => s.IndicationName).ToArray();
+            if (names.Length > 0)
+            {
+                LoadTextBoxAutoCompleteFromDb(txbGeneralIndication_Colono, names);
+            }
+        }
+        private void LoadAutoCompleted_txbBriefHistory_Colono()
+        {
+            string[] names = _db.BriefHistories.Select(s => s.BriefHistoryText).ToArray();
+            if (names.Length > 0)
+            {
+                LoadTextBoxAutoCompleteFromDb(txbBriefHistory_Colono, names);
+            }
+        }
+        private void txbGeneralMedication_Colono_Leave(object sender, EventArgs e)
+        {
+            if (txbGeneralMedication_Colono.TextLength > 0)
+            {
+                var medications = _db.Medications.AsEnumerable();
+                var findName = medications.Where(s => s.MedicationName.Trim().Equals(txbGeneralMedication_Colono.Text.Trim())).FirstOrDefault();
+                if (findName == null)
+                {
+                    _db.Medications.Add(new Medication { MedicationName = txbGeneralMedication_Colono.Text, CreateDate = DateTime.Now });
+                    _db.SaveChanges();
 
+                    // Reload
+                    LoadAutoCompleted_txbGeneralMedication_Colono();
+                }
+
+                _dropdownListService.DropdownMedication(cbbGeneralMedication_Colono);
+                int findId = medications.Where(w => w.MedicationName == txbGeneralMedication_Colono.Text).FirstOrDefault().MedicationID;
+                if (findId > 0)
+                    cbbGeneralMedication_Colono.SelectedValue = findId;
+            }
+        }
+        private void txbGeneralIndication_Colono_Leave(object sender, EventArgs e)
+        {
+            if (txbGeneralIndication_Colono.TextLength > 0)
+            {
+                var indications = _db.IndicationDropdowns.AsEnumerable();
+                var findName = indications.Where(s => s.IndicationName.Trim().Equals(txbGeneralIndication_Colono.Text.Trim())).FirstOrDefault();
+                if (findName == null)
+                {
+                    _db.IndicationDropdowns.Add(new IndicationDropdown { IndicationName = txbGeneralIndication_Colono.Text, CreateDate = DateTime.Now });
+                    _db.SaveChanges();
+
+                    // Reload
+                    LoadAutoCompleted_txbGeneralIndication_Colono();
+                }
+
+                _dropdownListService.DropdownIndication(cbbGeneralIndication_Colono);
+                int findId = indications.Where(w => w.IndicationName == txbGeneralIndication_Colono.Text).FirstOrDefault().IndicationID;
+                if (findId > 0)
+                    cbbGeneralIndication_Colono.SelectedValue = findId;
+            }
+        }
+        private void txbBriefHistory_Colono_Leave(object sender, EventArgs e)
+        {
+            if (txbBriefHistory_Colono.TextLength > 0)
+            {
+                var briefHistories = _db.BriefHistories.AsEnumerable();
+                var findName = briefHistories.Where(s => s.BriefHistoryText.Trim().Equals(txbBriefHistory_Colono.Text.Trim())).FirstOrDefault();
+                if (findName == null)
+                {
+                    _db.BriefHistories.Add(new BriefHistory { BriefHistoryText = txbBriefHistory_Colono.Text });
+                    _db.SaveChanges();
+
+                    // Reload
+                    LoadAutoCompleted_txbBriefHistory_Colono();
+                }
+            }
+        }
         #endregion
 
         #region Event Handler ERCP
@@ -1493,6 +1672,91 @@ namespace EndoscopicSystem.V2.Forms
         }
         #endregion
 
+        #region Handle Lap
+        private void LoadAutoCompleted_txbGeneralMedication_Lap()
+        {
+            string[] names = _db.Medications.Select(s => s.MedicationName).ToArray();
+            if (names.Length > 0)
+            {
+                LoadTextBoxAutoCompleteFromDb(txbGeneralMedication_Lap, names);
+            }
+        }
+        private void LoadAutoCompleted_txbGeneralIndication_Lap()
+        {
+            string[] names = _db.IndicationDropdowns.Select(s => s.IndicationName).ToArray();
+            if (names.Length > 0)
+            {
+                LoadTextBoxAutoCompleteFromDb(txbGeneralIndication_Lap, names);
+            }
+        }
+        private void LoadAutoCompleted_txbBriefHistory_Lap()
+        {
+            string[] names = _db.BriefHistories.Select(s => s.BriefHistoryText).ToArray();
+            if (names.Length > 0)
+            {
+                LoadTextBoxAutoCompleteFromDb(txbGeneralBriefHistory_Lap, names);
+            }
+        }
+        private void txbGeneralMedication_Lap_Leave(object sender, EventArgs e)
+        {
+            if (txbGeneralMedication_Lap.TextLength > 0)
+            {
+                var medications = _db.Medications.AsEnumerable();
+                var findName = medications.Where(s => s.MedicationName.Trim().Equals(txbGeneralMedication_Lap.Text.Trim())).FirstOrDefault();
+                if (findName == null)
+                {
+                    _db.Medications.Add(new Medication { MedicationName = txbGeneralMedication_Lap.Text, CreateDate = DateTime.Now });
+                    _db.SaveChanges();
+
+                    // Reload
+                    LoadAutoCompleted_txbGeneralMedication_Lap();
+                }
+
+                _dropdownListService.DropdownMedication(cbbGeneralMedication_Lap);
+                int findId = medications.Where(w => w.MedicationName == txbGeneralMedication_Lap.Text).FirstOrDefault().MedicationID;
+                if (findId > 0)
+                    cbbGeneralMedication_Lap.SelectedValue = findId;
+            }
+        }
+        private void txbGeneralIndication_Lap_Leave(object sender, EventArgs e)
+        {
+            if (txbGeneralIndication_Lap.TextLength > 0)
+            {
+                var indications = _db.IndicationDropdowns.AsEnumerable();
+                var findName = indications.Where(s => s.IndicationName.Trim().Equals(txbGeneralIndication_Lap.Text.Trim())).FirstOrDefault();
+                if (findName == null)
+                {
+                    _db.IndicationDropdowns.Add(new IndicationDropdown { IndicationName = txbGeneralIndication_Lap.Text, CreateDate = DateTime.Now });
+                    _db.SaveChanges();
+
+                    // Reload
+                    LoadAutoCompleted_txbGeneralIndication_Lap();
+                }
+
+                _dropdownListService.DropdownIndication(cbbGeneralIndication_Lap);
+                int findId = indications.Where(w => w.IndicationName == txbGeneralIndication_Lap.Text).FirstOrDefault().IndicationID;
+                if (findId > 0)
+                    cbbGeneralIndication_Lap.SelectedValue = findId;
+            }
+        }
+        private void txbGeneralBriefHistory_Lap_Leave(object sender, EventArgs e)
+        {
+            if (txbGeneralBriefHistory_Lap.TextLength > 0)
+            {
+                var briefHistories = _db.BriefHistories.AsEnumerable();
+                var findName = briefHistories.Where(s => s.BriefHistoryText.Trim().Equals(txbGeneralBriefHistory_Lap.Text.Trim())).FirstOrDefault();
+                if (findName == null)
+                {
+                    _db.BriefHistories.Add(new BriefHistory { BriefHistoryText = txbGeneralBriefHistory_Lap.Text });
+                    _db.SaveChanges();
+
+                    // Reload
+                    LoadAutoCompleted_txbBriefHistory_Lap();
+                }
+            }
+        }
+        #endregion
+
         private Object[] GetIcd9()
         {
             Object[] ItemObject = new Object[0];
@@ -1791,12 +2055,7 @@ namespace EndoscopicSystem.V2.Forms
                 textBox.Text = comment;
             }
         }
-        private void PushEndoscopicData(
-           int? procId,
-           Patient patient = null,
-           Appointment appointment = null,
-           Endoscopic endoscopic = null,
-           Finding finding = null)
+        private void PushEndoscopicData(int? procId, Patient patient = null, Appointment appointment = null, Endoscopic endoscopic = null, Finding finding = null)
         {
             patient = patient ?? new Patient();
             appointment = appointment ?? new Appointment();
@@ -1954,7 +2213,7 @@ namespace EndoscopicSystem.V2.Forms
                     txbFindingRecommendation_ERCP.Text = finding.Recommendation;
                     txbFindingComment_ERCP.Text = finding.Comment;
                 }
-                else if(procId == 5)
+                else if (procId == 5)
                 {
                     cbbFindingNose_ENT.SelectedValue = finding.NoseID ?? 1;
                     txbFindingNose_Ent.Text = finding.Nose;
@@ -3685,6 +3944,9 @@ namespace EndoscopicSystem.V2.Forms
         {
             SavePictureBoxOnClick(22, pictureBoxSaved22, btnEditPic22, btnDeletePictureBoxSaved22);
         }
+
+        
+
         private void btnPictureBoxSaved23_Click(object sender, EventArgs e)
         {
             SavePictureBoxOnClick(23, pictureBoxSaved23, btnEditPic23, btnDeletePictureBoxSaved23);
@@ -3738,72 +4000,6 @@ namespace EndoscopicSystem.V2.Forms
             }
         }
         #endregion
-
-        //private void SetDisablePictureBox(int start, int end)
-        //{
-        //    for (int i = start; i <= end; i++)
-        //    {
-        //        GroupBox groupBox = (GroupBox)this.Controls.Find("gb" + i.ToString(), true)[0];
-        //        groupBox.Visible = false;
-        //    }
-        //}
-        //private void SaveImageForLaparoscopy(int endoscopicID, int procedureID)
-        //{
-        //    System.Windows.Forms.PictureBox[] boxes =
-        //    {
-        //            pictureBoxSaved1,
-        //            pictureBoxSaved2,
-        //            pictureBoxSaved3,
-        //            pictureBoxSaved4,
-        //            pictureBoxSaved5,
-        //            pictureBoxSaved6,
-        //            pictureBoxSaved7,
-        //            pictureBoxSaved8
-        //        };
-        //    System.Windows.Forms.TextBox[] texts =
-        //    {
-        //            txtPictureBoxSaved1,
-        //            txtPictureBoxSaved2,
-        //            txtPictureBoxSaved3,
-        //            txtPictureBoxSaved4,
-        //            txtPictureBoxSaved5,
-        //            txtPictureBoxSaved6,
-        //            txtPictureBoxSaved7,
-        //            txtPictureBoxSaved8
-        //        };
-        //    int i = 0;
-        //    int seq = 1;
-        //    foreach (var item in texts)
-        //    {
-        //        string Imgpath = boxes[i].ImageLocation != null ? boxes[i].ImageLocation.ToString() : "";
-        //        var endoImgs = _db.EndoscopicImages.Where(x => x.EndoscopicID == endoscopicID && x.ProcedureID == procedureID && x.Seq == seq).FirstOrDefault();
-        //        if (endoImgs != null)
-        //        {
-        //            endoImgs.ImagePath = string.IsNullOrWhiteSpace(Imgpath) ? null : Imgpath;
-        //            endoImgs.ImageComment = item.Text;
-        //            endoImgs.Seq = i + 1;
-        //            endoImgs.UpdateBy = _id;
-        //            endoImgs.UpdateDate = DateTime.Now;
-        //        }
-        //        else
-        //        {
-        //            EndoscopicImage endoscopicImage = new EndoscopicImage();
-        //            endoscopicImage.EndoscopicID = endoscopicID;
-        //            endoscopicImage.ProcedureID = procedureID;
-        //            endoscopicImage.ImagePath = string.IsNullOrWhiteSpace(Imgpath) ? null : Imgpath;
-        //            endoscopicImage.ImageComment = string.IsNullOrWhiteSpace(item.Text) ? null : item.Text;
-        //            endoscopicImage.Seq = i + 1;
-        //            endoscopicImage.CreateBy = _id;
-        //            endoscopicImage.CreateDate = DateTime.Now;
-        //            endoscopicImage.UpdateBy = _id;
-        //            endoscopicImage.UpdateDate = DateTime.Now;
-        //            _db.EndoscopicImages.Add(endoscopicImage);
-        //        }
-        //        i++;
-        //        seq++;
-        //    }
-        //}
-
 
     }
 }
