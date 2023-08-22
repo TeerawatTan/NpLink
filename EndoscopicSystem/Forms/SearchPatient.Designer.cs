@@ -205,6 +205,7 @@
             this.gridPatient.TabIndex = 0;
             this.gridPatient.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.gridPatient_CellClick);
             this.gridPatient.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.gridPatient_CellDoubleClick);
+            this.gridPatient.CellPainting += new System.Windows.Forms.DataGridViewCellPaintingEventHandler(this.gridPatient_CellPainting);
             // 
             // panel1
             // 
