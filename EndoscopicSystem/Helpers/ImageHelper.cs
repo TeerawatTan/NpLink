@@ -3,12 +3,13 @@ using System.Collections.Generic;
 using System.Drawing;
 using System.Drawing.Imaging;
 using System.Linq;
+using System.Runtime.InteropServices;
 using System.Text;
 using System.Threading.Tasks;
 
 namespace EndoscopicSystem.Helpers
 {
-    public class ImageHelper
+    public static class ImageHelper
     {
         public static async Task<Bitmap> CorrectedImage(string originalPathImg)
         {
@@ -38,6 +39,45 @@ namespace EndoscopicSystem.Helpers
             }
 
             return correctedImage;
+        }
+
+        public static string GetUntilOrEmpty(string text, string stopAt)
+        {
+            if (!String.IsNullOrWhiteSpace(text))
+            {
+                int charLocation = text.IndexOf(stopAt, StringComparison.Ordinal);
+
+                if (charLocation > 0)
+                {
+                    return text.Substring(0, charLocation);
+                }
+            }
+
+            return String.Empty;
+        }
+
+        public static byte[] ToByteArray(this Bitmap bitmap)
+        {
+            // Lock the bitmap's bits
+            Rectangle rect = new Rectangle(0, 0, bitmap.Width, bitmap.Height);
+            BitmapData bmpData = bitmap.LockBits(rect, ImageLockMode.ReadOnly, bitmap.PixelFormat);
+
+            // Get the address of the first line
+            IntPtr ptr = bmpData.Scan0;
+
+            // Calculate the total number of bytes
+            int bytes = Math.Abs(bmpData.Stride) * bitmap.Height;
+
+            // Create a byte array to hold the bitmap data
+            byte[] rgbValues = new byte[bytes];
+
+            // Copy the bitmap data to the byte array
+            Marshal.Copy(ptr, rgbValues, 0, bytes);
+
+            // Unlock the bitmap's bits
+            bitmap.UnlockBits(bmpData);
+
+            return rgbValues;
         }
     }
 }

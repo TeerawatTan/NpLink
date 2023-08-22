@@ -1,6 +1,7 @@
 ﻿using EndoscopicSystem.Forms;
 using System;
 using System.Drawing;
+using System.Linq;
 using System.Windows.Forms;
 
 namespace EndoscopicSystem.V2.Forms
@@ -11,10 +12,15 @@ namespace EndoscopicSystem.V2.Forms
         private Form _activeForm = null;
         private Button _currentBtn = null;
 
-        public FormSetting(int id)
+        public FormSetting(int id, string actionMenu = null)
         {
             InitializeComponent();
             _id = id;
+            
+            if (actionMenu == "menuInstrumentSetting")
+            {
+                PerformButtonClick(actionMenu);
+            }
         }
 
         private void FormSetting_Load(object sender, EventArgs e)
@@ -126,6 +132,21 @@ namespace EndoscopicSystem.V2.Forms
         {
             OpenChildForm(new EndoscopyRoomForm(_id));
             ActiveMenuButton(sender);
+        }
+
+        private void PerformButtonClick(string buttonName)
+        {
+            Button button = this.panel1.Controls.OfType<Button>().FirstOrDefault(f => f.Name == buttonName);
+            
+            if (button != null)
+            {
+                if (button.Name == "menuInstrumentSetting")
+                    menuInstrumentSetting_Click(button, EventArgs.Empty);
+            }
+            else
+            {
+                return;
+            }
         }
     }
 }

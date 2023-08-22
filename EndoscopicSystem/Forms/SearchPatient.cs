@@ -1,4 +1,5 @@
-﻿using EndoscopicSystem.Entities;
+﻿using EndoscopicSystem.Constants;
+using EndoscopicSystem.Entities;
 using EndoscopicSystem.Repository;
 using System;
 using System.Collections.Generic;
@@ -17,18 +18,39 @@ namespace EndoscopicSystem
         readonly EndoscopicEntities db = new EndoscopicEntities();
         protected readonly GetDropdownList list = new GetDropdownList();
         private readonly int UserID;
-        public string hnNo = "";
+        public string hnNo = "", _pageName = "";
         public int patientId = 0, procedureId = 0, endoscopicId = 0, appointmentId = 0;
-        public SearchPatientForm(int userID)
+        public SearchPatientForm(int userID, string page)
         {
             InitializeComponent();
             UserID = userID;
+            _pageName = page;
         }
 
         private void SearchPatientForm_Load(object sender, EventArgs e)
         {
             var data = db.v_PatientList.ToList();
-            LoadData(data);
+            
+            List<PatienModel> list = data.Select((s, i) => new PatienModel
+            {
+                No = i + 1,
+                AppointmentDate = s.AppointmentDate,
+                AppointmentID = s.AppointmentID,
+                DoctorID = s.DoctorID,
+                DoctorName = s.DoctorName,
+                EndoscopicID = s.EndoscopicID,
+                Fullname = s.Fullname,
+                HN = s.HN,
+                PatientID = s.PatientID,
+                ProcedureID = s.ProcedureID,
+                ProcedureName = s.ProcedureName,
+                RoomID = s.RoomID,
+                RoomName = s.RoomName,
+                Symptom = s.Symptom
+            }).ToList();
+
+            LoadData(list);
+
             string sDate = DateTime.Now.ToShortDateString() + " 00:00:00";
             string eDate = DateTime.Now.ToShortDateString() + " 23:59:59";
             DateTime startDate = Convert.ToDateTime(sDate);
@@ -81,13 +103,33 @@ namespace EndoscopicSystem
                         return x.DoctorID == (int)cbbDoctor.SelectedValue;
                     }).ToList();
                 }
-                LoadData(data);
+
+                List<PatienModel> list = data.Select((s, i) => new PatienModel
+                {
+                    No = i + 1,
+                    AppointmentDate = s.AppointmentDate,
+                    AppointmentID = s.AppointmentID,
+                    DoctorID = s.DoctorID,
+                    DoctorName = s.DoctorName,
+                    EndoscopicID = s.EndoscopicID,
+                    Fullname = s.Fullname,
+                    HN = s.HN,
+                    PatientID = s.PatientID,
+                    ProcedureID = s.ProcedureID,
+                    ProcedureName = s.ProcedureName,
+                    RoomID = s.RoomID,
+                    RoomName = s.RoomName,
+                    Symptom = s.Symptom
+                }).ToList();
+
+                LoadData(list);
             }
         }
 
-        private void LoadData(List<v_PatientList> data)
+        private void LoadData(List<PatienModel> data)
         {
             gridPatient.DataSource = data;
+
             gridPatient.Columns["PatientID"].Visible = false;
             gridPatient.Columns["DoctorID"].Visible = false;
             gridPatient.Columns["ProcedureID"].Visible = false;
@@ -96,11 +138,23 @@ namespace EndoscopicSystem
             gridPatient.Columns["AppointmentID"].Visible = false;
 
             DataGridViewButtonColumn btn = new DataGridViewButtonColumn();
-            gridPatient.Columns.Add(btn);
             btn.HeaderText = "";
-            btn.Text = "Endoscopic Room";
-            btn.Name = "btnGotoEndoscopicRoom";
+
+            if (_pageName == Constant.PageName.SEARCH_PATIENT_PAGE)
+            {
+                btn.Text = "Endoscopic Room";
+                btn.Name = "btnGotoEndoscopicRoom";
+            }
+            else
+            {
+                btn.Text = "Send To PACS";
+                btn.Name = "btnGotoSendToPACS";
+            }
+
             btn.UseColumnTextForButtonValue = true;
+            btn.DefaultCellStyle.BackColor = Color.Green;
+            
+            gridPatient.Columns.Add(btn);
         }
 
         private void gridPatient_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
@@ -112,8 +166,21 @@ namespace EndoscopicSystem
                     hnNo = gridPatient.CurrentRow.Cells["HN"].Value.ToString();
                     procedureId = (int)gridPatient.CurrentRow.Cells["ProcedureID"].Value;
 
-                    PatientForm patient = new PatientForm(UserID, hnNo, procedureId);
-                    patient.Show();
+                    if (_pageName == Constant.PageName.SEARCH_PATIENT_PAGE)
+                    {
+                        PatientForm patient = new PatientForm(UserID, hnNo, procedureId);
+                        patient.ShowDialog();
+                    }
+                    else if (_pageName == Constant.PageName.SEND_PACS_PAGE)
+                    {
+                        V2.Forms.FormSendPACS formSendPACS = new V2.Forms.FormSendPACS(UserID, appointmentId, hnNo);
+                        formSendPACS.ShowDialog();
+                        formSendPACS = null;
+                    }
+                    else
+                    {
+
+                    }
                 }
             }
             catch (Exception ex)
@@ -122,13 +189,9 @@ namespace EndoscopicSystem
             }
         }
 
-        private void SearchPatientForm_FormClosed(object sender, FormClosedEventArgs e)
-        {
-        }
-
         private void gridPatient_CellClick(object sender, DataGridViewCellEventArgs e)
         {
-            if (gridPatient.CurrentRow.Index >= 0 && e.ColumnIndex == 13)
+            if (gridPatient.CurrentRow.Index >= 0 && e.ColumnIndex == 14)
             {
                 try
                 {
@@ -145,23 +208,23 @@ namespace EndoscopicSystem
                     if (endoscopicId <= 0)
                         return;
 
-                    //this.Hide();
-
-                    //V2.Forms.FormLive formLive = new V2.Forms.FormLive(UserID, hnNo, procedureId, endoscopicId, appointmentId);
-                    //formLive.ShowDialog();
-
-                    //formLive = null;
-
-                    //this.Show();
-
                     this.Close();
 
                     try
                     {
-                        // Form Panel
-                        V2.Forms.FormProceed formProceed = new V2.Forms.FormProceed(UserID, hnNo, procedureId, endoscopicId, appointmentId);
-                        formProceed.ShowDialog();
-                        formProceed = null;
+                        if (_pageName == Constant.PageName.SEARCH_PATIENT_PAGE)
+                        {
+                            // Form Panel
+                            V2.Forms.FormProceed formProceed = new V2.Forms.FormProceed(UserID, hnNo, patientId, procedureId, endoscopicId, appointmentId);
+                            formProceed.ShowDialog();
+                            formProceed = null;
+                        }
+                        else if (_pageName == Constant.PageName.SEND_PACS_PAGE)
+                        {
+                            V2.Forms.FormSendPACS formSendPACS = new V2.Forms.FormSendPACS(UserID, appointmentId, hnNo);
+                            formSendPACS.ShowDialog();
+                            formSendPACS = null;
+                        }
                     }
                     catch (Exception ex)
                     {
@@ -174,5 +237,23 @@ namespace EndoscopicSystem
                 }
             }
         }
+    }
+
+    public class PatienModel
+    {
+        public int No { get; set; }
+        public int PatientID { get; set; }
+        public Nullable<System.DateTime> AppointmentDate { get; set; }
+        public string HN { get; set; }
+        public string Symptom { get; set; }
+        public string Fullname { get; set; }
+        public Nullable<int> DoctorID { get; set; }
+        public string DoctorName { get; set; }
+        public Nullable<int> ProcedureID { get; set; }
+        public string ProcedureName { get; set; }
+        public Nullable<int> RoomID { get; set; }
+        public string RoomName { get; set; }
+        public Nullable<int> EndoscopicID { get; set; }
+        public int AppointmentID { get; set; }
     }
 }

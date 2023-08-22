@@ -307,7 +307,7 @@ namespace EndoscopicSystem.V2.Forms
         private System.Windows.Forms.Button menuCameraSetting;
         private System.Windows.Forms.Button menuPACSSetting;
         private System.Windows.Forms.Button menuFinancialSetting;
-        private System.Windows.Forms.Button menuInstrumentSetting;
         private System.Windows.Forms.Button menuEndoscopicRoom;
+        private System.Windows.Forms.Button menuInstrumentSetting;
     }
 }

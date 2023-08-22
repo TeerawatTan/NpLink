@@ -28,9 +28,9 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
             this.cbbSex = new System.Windows.Forms.ComboBox();
             this.txtCID = new System.Windows.Forms.TextBox();
             this.txtFullName = new System.Windows.Forms.TextBox();
@@ -232,7 +232,7 @@
             this.cbbDoctorName.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cbbDoctorName.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
             this.cbbDoctorName.FormattingEnabled = true;
-            this.cbbDoctorName.Location = new System.Drawing.Point(789, 110);
+            this.cbbDoctorName.Location = new System.Drawing.Point(785, 97);
             this.cbbDoctorName.Margin = new System.Windows.Forms.Padding(2);
             this.cbbDoctorName.Name = "cbbDoctorName";
             this.cbbDoctorName.Size = new System.Drawing.Size(446, 28);
@@ -243,18 +243,19 @@
             this.cbbNurseName3.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cbbNurseName3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
             this.cbbNurseName3.FormattingEnabled = true;
-            this.cbbNurseName3.Location = new System.Drawing.Point(192, 200);
+            this.cbbNurseName3.Location = new System.Drawing.Point(231, 184);
             this.cbbNurseName3.Margin = new System.Windows.Forms.Padding(2);
             this.cbbNurseName3.Name = "cbbNurseName3";
             this.cbbNurseName3.Size = new System.Drawing.Size(440, 28);
             this.cbbNurseName3.TabIndex = 18;
+            this.cbbNurseName3.Visible = false;
             // 
             // cbbNurseName2
             // 
             this.cbbNurseName2.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cbbNurseName2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
             this.cbbNurseName2.FormattingEnabled = true;
-            this.cbbNurseName2.Location = new System.Drawing.Point(192, 171);
+            this.cbbNurseName2.Location = new System.Drawing.Point(188, 184);
             this.cbbNurseName2.Margin = new System.Windows.Forms.Padding(2);
             this.cbbNurseName2.Name = "cbbNurseName2";
             this.cbbNurseName2.Size = new System.Drawing.Size(440, 28);
@@ -265,7 +266,7 @@
             this.cbbNurseName1.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cbbNurseName1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
             this.cbbNurseName1.FormattingEnabled = true;
-            this.cbbNurseName1.Location = new System.Drawing.Point(192, 142);
+            this.cbbNurseName1.Location = new System.Drawing.Point(188, 155);
             this.cbbNurseName1.Margin = new System.Windows.Forms.Padding(2);
             this.cbbNurseName1.Name = "cbbNurseName1";
             this.cbbNurseName1.Size = new System.Drawing.Size(440, 28);
@@ -276,7 +277,7 @@
             this.txtStaffName.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.txtStaffName.CausesValidation = false;
             this.txtStaffName.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
-            this.txtStaffName.Location = new System.Drawing.Point(789, 142);
+            this.txtStaffName.Location = new System.Drawing.Point(785, 129);
             this.txtStaffName.Margin = new System.Windows.Forms.Padding(2);
             this.txtStaffName.MaxLength = 255;
             this.txtStaffName.Name = "txtStaffName";
@@ -289,7 +290,7 @@
             this.dtOperatingDate.CustomFormat = "dd MMMM yyyy";
             this.dtOperatingDate.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
             this.dtOperatingDate.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.dtOperatingDate.Location = new System.Drawing.Point(192, 47);
+            this.dtOperatingDate.Location = new System.Drawing.Point(188, 60);
             this.dtOperatingDate.Margin = new System.Windows.Forms.Padding(2);
             this.dtOperatingDate.MinDate = new System.DateTime(2022, 9, 18, 0, 0, 0, 0);
             this.dtOperatingDate.Name = "dtOperatingDate";
@@ -303,7 +304,7 @@
             this.dtOperatingTime.CustomFormat = "HH:mm";
             this.dtOperatingTime.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
             this.dtOperatingTime.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.dtOperatingTime.Location = new System.Drawing.Point(527, 47);
+            this.dtOperatingTime.Location = new System.Drawing.Point(523, 60);
             this.dtOperatingTime.Margin = new System.Windows.Forms.Padding(2);
             this.dtOperatingTime.MinDate = new System.DateTime(2022, 9, 18, 16, 56, 37, 0);
             this.dtOperatingTime.Name = "dtOperatingTime";
@@ -318,7 +319,7 @@
             this.dtAppointmentTime.CustomFormat = "HH:mm";
             this.dtAppointmentTime.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
             this.dtAppointmentTime.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.dtAppointmentTime.Location = new System.Drawing.Point(527, 13);
+            this.dtAppointmentTime.Location = new System.Drawing.Point(523, 26);
             this.dtAppointmentTime.Margin = new System.Windows.Forms.Padding(2);
             this.dtAppointmentTime.MinDate = new System.DateTime(2022, 9, 18, 16, 56, 37, 0);
             this.dtAppointmentTime.Name = "dtAppointmentTime";
@@ -333,7 +334,7 @@
             this.dtAppointmentDate.CustomFormat = "dd MMMM yyyy";
             this.dtAppointmentDate.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
             this.dtAppointmentDate.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.dtAppointmentDate.Location = new System.Drawing.Point(192, 13);
+            this.dtAppointmentDate.Location = new System.Drawing.Point(188, 26);
             this.dtAppointmentDate.Margin = new System.Windows.Forms.Padding(2);
             this.dtAppointmentDate.MinDate = new System.DateTime(2022, 9, 18, 0, 0, 0, 0);
             this.dtAppointmentDate.Name = "dtAppointmentDate";
@@ -345,7 +346,7 @@
             // 
             this.label11.AutoSize = true;
             this.label11.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
-            this.label11.Location = new System.Drawing.Point(712, 113);
+            this.label11.Location = new System.Drawing.Point(708, 100);
             this.label11.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label11.Name = "label11";
             this.label11.Size = new System.Drawing.Size(73, 20);
@@ -356,7 +357,7 @@
             // 
             this.label17.AutoSize = true;
             this.label17.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
-            this.label17.Location = new System.Drawing.Point(726, 145);
+            this.label17.Location = new System.Drawing.Point(722, 132);
             this.label17.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label17.Name = "label17";
             this.label17.Size = new System.Drawing.Size(59, 20);
@@ -367,7 +368,7 @@
             // 
             this.label8.AutoSize = true;
             this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
-            this.label8.Location = new System.Drawing.Point(24, 113);
+            this.label8.Location = new System.Drawing.Point(20, 126);
             this.label8.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(164, 20);
@@ -378,7 +379,7 @@
             // 
             this.label15.AutoSize = true;
             this.label15.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
-            this.label15.Location = new System.Drawing.Point(122, 145);
+            this.label15.Location = new System.Drawing.Point(118, 158);
             this.label15.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label15.Name = "label15";
             this.label15.Size = new System.Drawing.Size(66, 20);
@@ -390,7 +391,7 @@
             this.txtSymptom.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.txtSymptom.CausesValidation = false;
             this.txtSymptom.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
-            this.txtSymptom.Location = new System.Drawing.Point(192, 81);
+            this.txtSymptom.Location = new System.Drawing.Point(188, 94);
             this.txtSymptom.Margin = new System.Windows.Forms.Padding(2);
             this.txtSymptom.MaxLength = 250;
             this.txtSymptom.Name = "txtSymptom";
@@ -401,7 +402,7 @@
             // 
             this.label12.AutoSize = true;
             this.label12.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
-            this.label12.Location = new System.Drawing.Point(95, 83);
+            this.label12.Location = new System.Drawing.Point(91, 96);
             this.label12.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label12.Name = "label12";
             this.label12.Size = new System.Drawing.Size(93, 20);
@@ -412,7 +413,7 @@
             // 
             this.label13.AutoSize = true;
             this.label13.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
-            this.label13.Location = new System.Drawing.Point(47, 52);
+            this.label13.Location = new System.Drawing.Point(43, 65);
             this.label13.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label13.Name = "label13";
             this.label13.Size = new System.Drawing.Size(141, 20);
@@ -423,7 +424,7 @@
             // 
             this.label14.AutoSize = true;
             this.label14.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
-            this.label14.Location = new System.Drawing.Point(24, 18);
+            this.label14.Location = new System.Drawing.Point(20, 31);
             this.label14.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label14.Name = "label14";
             this.label14.Size = new System.Drawing.Size(164, 20);
@@ -492,35 +493,35 @@
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.gridPatient.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
-            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
-            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.gridPatient.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle4.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle4.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
+            dataGridViewCellStyle4.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.gridPatient.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle4;
             this.gridPatient.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
-            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.gridPatient.DefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle5.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle5.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
+            dataGridViewCellStyle5.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle5.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle5.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.gridPatient.DefaultCellStyle = dataGridViewCellStyle5;
             this.gridPatient.Location = new System.Drawing.Point(9, 620);
             this.gridPatient.Margin = new System.Windows.Forms.Padding(2);
             this.gridPatient.Name = "gridPatient";
             this.gridPatient.ReadOnly = true;
-            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle3.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle3.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
-            dataGridViewCellStyle3.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.gridPatient.RowHeadersDefaultCellStyle = dataGridViewCellStyle3;
+            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle6.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle6.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
+            dataGridViewCellStyle6.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle6.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle6.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.gridPatient.RowHeadersDefaultCellStyle = dataGridViewCellStyle6;
             this.gridPatient.RowHeadersWidth = 51;
             this.gridPatient.RowTemplate.Height = 24;
             this.gridPatient.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
@@ -719,7 +720,7 @@
             this.label22.BackColor = System.Drawing.Color.Transparent;
             this.label22.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
             this.label22.ForeColor = System.Drawing.Color.Red;
-            this.label22.Location = new System.Drawing.Point(770, 84);
+            this.label22.Location = new System.Drawing.Point(766, 71);
             this.label22.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label22.Name = "label22";
             this.label22.Size = new System.Drawing.Size(15, 20);
@@ -731,7 +732,7 @@
             this.cbbIndication.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cbbIndication.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
             this.cbbIndication.FormattingEnabled = true;
-            this.cbbIndication.Location = new System.Drawing.Point(192, 263);
+            this.cbbIndication.Location = new System.Drawing.Point(188, 250);
             this.cbbIndication.Margin = new System.Windows.Forms.Padding(2);
             this.cbbIndication.Name = "cbbIndication";
             this.cbbIndication.Size = new System.Drawing.Size(440, 28);
@@ -741,7 +742,7 @@
             // 
             this.label20.AutoSize = true;
             this.label20.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
-            this.label20.Location = new System.Drawing.Point(83, 266);
+            this.label20.Location = new System.Drawing.Point(79, 253);
             this.label20.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label20.Name = "label20";
             this.label20.Size = new System.Drawing.Size(98, 20);
@@ -753,7 +754,7 @@
             this.txbRefer.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.txbRefer.CausesValidation = false;
             this.txbRefer.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
-            this.txbRefer.Location = new System.Drawing.Point(867, 265);
+            this.txbRefer.Location = new System.Drawing.Point(863, 252);
             this.txbRefer.Margin = new System.Windows.Forms.Padding(2);
             this.txbRefer.MaxLength = 255;
             this.txbRefer.Name = "txbRefer";
@@ -765,7 +766,7 @@
             // 
             this.chkRefer.AutoSize = true;
             this.chkRefer.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
-            this.chkRefer.Location = new System.Drawing.Point(790, 265);
+            this.chkRefer.Location = new System.Drawing.Point(786, 252);
             this.chkRefer.Margin = new System.Windows.Forms.Padding(2);
             this.chkRefer.Name = "chkRefer";
             this.chkRefer.Size = new System.Drawing.Size(73, 24);
@@ -778,7 +779,7 @@
             this.cbbWard.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cbbWard.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
             this.cbbWard.FormattingEnabled = true;
-            this.cbbWard.Location = new System.Drawing.Point(867, 234);
+            this.cbbWard.Location = new System.Drawing.Point(863, 221);
             this.cbbWard.Margin = new System.Windows.Forms.Padding(2);
             this.cbbWard.Name = "cbbWard";
             this.cbbWard.Size = new System.Drawing.Size(368, 28);
@@ -789,7 +790,7 @@
             // 
             this.chkWard.AutoSize = true;
             this.chkWard.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
-            this.chkWard.Location = new System.Drawing.Point(790, 236);
+            this.chkWard.Location = new System.Drawing.Point(786, 223);
             this.chkWard.Margin = new System.Windows.Forms.Padding(2);
             this.chkWard.Name = "chkWard";
             this.chkWard.Size = new System.Drawing.Size(70, 24);
@@ -802,7 +803,7 @@
             this.cbbOPD.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cbbOPD.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
             this.cbbOPD.FormattingEnabled = true;
-            this.cbbOPD.Location = new System.Drawing.Point(867, 204);
+            this.cbbOPD.Location = new System.Drawing.Point(863, 191);
             this.cbbOPD.Margin = new System.Windows.Forms.Padding(2);
             this.cbbOPD.Name = "cbbOPD";
             this.cbbOPD.Size = new System.Drawing.Size(368, 28);
@@ -814,7 +815,7 @@
             this.cbbAnesthesist.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cbbAnesthesist.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
             this.cbbAnesthesist.FormattingEnabled = true;
-            this.cbbAnesthesist.Location = new System.Drawing.Point(192, 231);
+            this.cbbAnesthesist.Location = new System.Drawing.Point(188, 218);
             this.cbbAnesthesist.Margin = new System.Windows.Forms.Padding(2);
             this.cbbAnesthesist.Name = "cbbAnesthesist";
             this.cbbAnesthesist.Size = new System.Drawing.Size(440, 28);
@@ -824,7 +825,7 @@
             // 
             this.label9.AutoSize = true;
             this.label9.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
-            this.label9.Location = new System.Drawing.Point(68, 234);
+            this.label9.Location = new System.Drawing.Point(64, 221);
             this.label9.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(114, 20);
@@ -835,7 +836,7 @@
             // 
             this.chkOPD.AutoSize = true;
             this.chkOPD.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
-            this.chkOPD.Location = new System.Drawing.Point(789, 206);
+            this.chkOPD.Location = new System.Drawing.Point(785, 193);
             this.chkOPD.Margin = new System.Windows.Forms.Padding(2);
             this.chkOPD.Name = "chkOPD";
             this.chkOPD.Size = new System.Drawing.Size(65, 24);
@@ -849,7 +850,7 @@
             this.cbbProcedureList.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cbbProcedureList.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
             this.cbbProcedureList.FormattingEnabled = true;
-            this.cbbProcedureList.Location = new System.Drawing.Point(789, 80);
+            this.cbbProcedureList.Location = new System.Drawing.Point(785, 67);
             this.cbbProcedureList.Margin = new System.Windows.Forms.Padding(2);
             this.cbbProcedureList.Name = "cbbProcedureList";
             this.cbbProcedureList.Size = new System.Drawing.Size(446, 28);
@@ -861,7 +862,7 @@
             this.label18.AutoSize = true;
             this.label18.BackColor = System.Drawing.Color.Transparent;
             this.label18.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
-            this.label18.Location = new System.Drawing.Point(650, 84);
+            this.label18.Location = new System.Drawing.Point(646, 71);
             this.label18.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label18.Name = "label18";
             this.label18.Size = new System.Drawing.Size(135, 20);
@@ -872,7 +873,7 @@
             // 
             this.label10.AutoSize = true;
             this.label10.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
-            this.label10.Location = new System.Drawing.Point(726, 179);
+            this.label10.Location = new System.Drawing.Point(722, 166);
             this.label10.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(60, 20);
@@ -883,7 +884,7 @@
             // 
             this.chkFollowUpCase.AutoSize = true;
             this.chkFollowUpCase.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
-            this.chkFollowUpCase.Location = new System.Drawing.Point(924, 178);
+            this.chkFollowUpCase.Location = new System.Drawing.Point(920, 165);
             this.chkFollowUpCase.Margin = new System.Windows.Forms.Padding(2);
             this.chkFollowUpCase.Name = "chkFollowUpCase";
             this.chkFollowUpCase.Size = new System.Drawing.Size(150, 24);
@@ -895,7 +896,7 @@
             // 
             this.chkNewCase.AutoSize = true;
             this.chkNewCase.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
-            this.chkNewCase.Location = new System.Drawing.Point(790, 178);
+            this.chkNewCase.Location = new System.Drawing.Point(786, 165);
             this.chkNewCase.Margin = new System.Windows.Forms.Padding(2);
             this.chkNewCase.Name = "chkNewCase";
             this.chkNewCase.Size = new System.Drawing.Size(108, 24);
@@ -908,7 +909,7 @@
             this.cbbStation.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cbbStation.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
             this.cbbStation.FormattingEnabled = true;
-            this.cbbStation.Location = new System.Drawing.Point(192, 110);
+            this.cbbStation.Location = new System.Drawing.Point(188, 123);
             this.cbbStation.Margin = new System.Windows.Forms.Padding(2);
             this.cbbStation.Name = "cbbStation";
             this.cbbStation.Size = new System.Drawing.Size(440, 28);
@@ -919,7 +920,7 @@
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
             this.label6.ForeColor = System.Drawing.Color.Red;
-            this.label6.Location = new System.Drawing.Point(492, 83);
+            this.label6.Location = new System.Drawing.Point(488, 96);
             this.label6.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(15, 20);
@@ -931,7 +932,7 @@
             this.txbPreDiag2ID.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.txbPreDiag2ID.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
-            this.txbPreDiag2ID.Location = new System.Drawing.Point(192, 322);
+            this.txbPreDiag2ID.Location = new System.Drawing.Point(188, 309);
             this.txbPreDiag2ID.Margin = new System.Windows.Forms.Padding(2);
             this.txbPreDiag2ID.MaxLength = 200;
             this.txbPreDiag2ID.Name = "txbPreDiag2ID";
@@ -944,7 +945,7 @@
             this.txbPreDiag1ID.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.txbPreDiag1ID.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
-            this.txbPreDiag1ID.Location = new System.Drawing.Point(192, 295);
+            this.txbPreDiag1ID.Location = new System.Drawing.Point(188, 282);
             this.txbPreDiag1ID.Margin = new System.Windows.Forms.Padding(2);
             this.txbPreDiag1ID.MaxLength = 200;
             this.txbPreDiag1ID.Name = "txbPreDiag1ID";
@@ -959,7 +960,7 @@
             this.txbPreDiag2Text.BackColor = System.Drawing.Color.WhiteSmoke;
             this.txbPreDiag2Text.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.txbPreDiag2Text.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
-            this.txbPreDiag2Text.Location = new System.Drawing.Point(362, 322);
+            this.txbPreDiag2Text.Location = new System.Drawing.Point(358, 309);
             this.txbPreDiag2Text.Margin = new System.Windows.Forms.Padding(2);
             this.txbPreDiag2Text.MaxLength = 200;
             this.txbPreDiag2Text.Name = "txbPreDiag2Text";
@@ -970,7 +971,7 @@
             // 
             this.label100.AutoSize = true;
             this.label100.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
-            this.label100.Location = new System.Drawing.Point(19, 325);
+            this.label100.Location = new System.Drawing.Point(15, 312);
             this.label100.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label100.Name = "label100";
             this.label100.Size = new System.Drawing.Size(169, 20);
@@ -986,7 +987,7 @@
             this.txbPreDiag2Code.BackColor = System.Drawing.SystemColors.Window;
             this.txbPreDiag2Code.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.txbPreDiag2Code.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
-            this.txbPreDiag2Code.Location = new System.Drawing.Point(192, 322);
+            this.txbPreDiag2Code.Location = new System.Drawing.Point(188, 309);
             this.txbPreDiag2Code.Margin = new System.Windows.Forms.Padding(2);
             this.txbPreDiag2Code.MaxLength = 200;
             this.txbPreDiag2Code.Name = "txbPreDiag2Code";
@@ -1001,7 +1002,7 @@
             this.txbPreDiag1Text.BackColor = System.Drawing.Color.WhiteSmoke;
             this.txbPreDiag1Text.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.txbPreDiag1Text.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
-            this.txbPreDiag1Text.Location = new System.Drawing.Point(362, 295);
+            this.txbPreDiag1Text.Location = new System.Drawing.Point(358, 282);
             this.txbPreDiag1Text.Margin = new System.Windows.Forms.Padding(2);
             this.txbPreDiag1Text.MaxLength = 200;
             this.txbPreDiag1Text.Name = "txbPreDiag1Text";
@@ -1012,7 +1013,7 @@
             // 
             this.label99.AutoSize = true;
             this.label99.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
-            this.label99.Location = new System.Drawing.Point(19, 298);
+            this.label99.Location = new System.Drawing.Point(15, 285);
             this.label99.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label99.Name = "label99";
             this.label99.Size = new System.Drawing.Size(169, 20);
@@ -1028,7 +1029,7 @@
             this.txbPreDiag1Code.BackColor = System.Drawing.SystemColors.Window;
             this.txbPreDiag1Code.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.txbPreDiag1Code.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
-            this.txbPreDiag1Code.Location = new System.Drawing.Point(192, 295);
+            this.txbPreDiag1Code.Location = new System.Drawing.Point(188, 282);
             this.txbPreDiag1Code.Margin = new System.Windows.Forms.Padding(2);
             this.txbPreDiag1Code.MaxLength = 200;
             this.txbPreDiag1Code.Name = "txbPreDiag1Code";

@@ -30,8 +30,9 @@ namespace EndoscopicSystem.V2.Forms
         private readonly GetDropdownList _repo = new GetDropdownList();
         public Dictionary<int, string> _imgPath = new Dictionary<int, string>();
         private bool _isSave = false, _isEgdAndColonoDone = true;
+        private DateTime? _startRec, _endRec;
 
-        public FormPreviewReport(int id, string hn, int procId, int appId, int endoId, int patientId, string pathImg, string pathVdo, bool egdAndColonoDone)
+        public FormPreviewReport(int id, string hn, int procId, int appId, int endoId, int patientId, string pathImg, string pathVdo, bool egdAndColonoDone, DateTime? startRec, DateTime? endRec)
         {
             formPopup = this;
 
@@ -58,6 +59,8 @@ namespace EndoscopicSystem.V2.Forms
             this._pathFolderImageSave = pathImg;
             this._vdoPath = pathVdo;
             this._isEgdAndColonoDone = egdAndColonoDone;
+            this._startRec = startRec;
+            this._endRec = endRec;
         }
         private void SetAllowDragDropInPictureBox()
         {
@@ -529,6 +532,7 @@ namespace EndoscopicSystem.V2.Forms
                 pictureBox.DoDragDrop(pictureBox.ImageLocation, DragDropEffects.Copy);
             }
         }
+        
         #region Refresh PictureBox
         private void GeneratePictureBoxWwithImages(List<string> img)
         {
@@ -1290,6 +1294,8 @@ namespace EndoscopicSystem.V2.Forms
                         PatientID = _patientId,
                         IsSaved = false,
                         ProcedureID = procedureId,
+                        StartRecordDate = _startRec,
+                        EndRecordDate = _endRec,
                         CreateBy = _id,
                         CreateDate = DateTime.Now
                     };
@@ -1308,6 +1314,8 @@ namespace EndoscopicSystem.V2.Forms
                 {
                     endo = _db.Endoscopics.Where(x => x.EndoscopicID == _endoscopicId).FirstOrDefault();
                     endo.IsSaved = true;
+                    endo.StartRecordDate = _startRec;
+                    endo.EndRecordDate = _endRec;
                 }
 
                 UpdateAppointment(endo.EndoscopicID);

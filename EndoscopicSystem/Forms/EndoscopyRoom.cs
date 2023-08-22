@@ -59,14 +59,15 @@ namespace EndoscopicSystem
                     }
                     if (db.SaveChanges() > 0)
                     {
+                        MessageBox.Show("Saved successfully.", "Save form", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
                         this.Controls.ClearControls();
-                        MessageBox.Show("Save successfully.");
 
                         GetDate();
                     }
                     else
                     {
-                        MessageBox.Show("Not success!");
+                        MessageBox.Show("There was a problem saving the data.", "Error save form", MessageBoxButtons.OK, MessageBoxIcon.Error);
                     }
                 }
             }
