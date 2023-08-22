@@ -4616,9 +4616,10 @@ namespace EndoscopicSystem.V2.Forms
             this.txbFindingComment_Ent.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
             this.txbFindingComment_Ent.Location = new System.Drawing.Point(224, 467);
             this.txbFindingComment_Ent.Margin = new System.Windows.Forms.Padding(2);
-            this.txbFindingComment_Ent.MaxLength = 82;
+            this.txbFindingComment_Ent.MaxLength = 250;
+            this.txbFindingComment_Ent.Multiline = true;
             this.txbFindingComment_Ent.Name = "txbFindingComment_Ent";
-            this.txbFindingComment_Ent.Size = new System.Drawing.Size(757, 23);
+            this.txbFindingComment_Ent.Size = new System.Drawing.Size(757, 46);
             this.txbFindingComment_Ent.TabIndex = 187;
             // 
             // cbbFindingStomach_Ent
@@ -5268,9 +5269,10 @@ namespace EndoscopicSystem.V2.Forms
             this.txbFindingComment_Broncho.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
             this.txbFindingComment_Broncho.Location = new System.Drawing.Point(221, 608);
             this.txbFindingComment_Broncho.Margin = new System.Windows.Forms.Padding(2);
-            this.txbFindingComment_Broncho.MaxLength = 82;
+            this.txbFindingComment_Broncho.MaxLength = 250;
+            this.txbFindingComment_Broncho.Multiline = true;
             this.txbFindingComment_Broncho.Name = "txbFindingComment_Broncho";
-            this.txbFindingComment_Broncho.Size = new System.Drawing.Size(748, 23);
+            this.txbFindingComment_Broncho.Size = new System.Drawing.Size(748, 34);
             this.txbFindingComment_Broncho.TabIndex = 186;
             // 
             // txbFindingLLL_Broncho
@@ -6257,9 +6259,10 @@ namespace EndoscopicSystem.V2.Forms
             this.txbFindingComment_ERCP.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
             this.txbFindingComment_ERCP.Location = new System.Drawing.Point(221, 554);
             this.txbFindingComment_ERCP.Margin = new System.Windows.Forms.Padding(2);
-            this.txbFindingComment_ERCP.MaxLength = 82;
+            this.txbFindingComment_ERCP.MaxLength = 250;
+            this.txbFindingComment_ERCP.Multiline = true;
             this.txbFindingComment_ERCP.Name = "txbFindingComment_ERCP";
-            this.txbFindingComment_ERCP.Size = new System.Drawing.Size(760, 23);
+            this.txbFindingComment_ERCP.Size = new System.Drawing.Size(760, 39);
             this.txbFindingComment_ERCP.TabIndex = 186;
             // 
             // txbFindingPancreatogram_ERCP
@@ -7034,9 +7037,10 @@ namespace EndoscopicSystem.V2.Forms
             this.txbFindingComment_Colono.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
             this.txbFindingComment_Colono.Location = new System.Drawing.Point(226, 570);
             this.txbFindingComment_Colono.Margin = new System.Windows.Forms.Padding(2);
-            this.txbFindingComment_Colono.MaxLength = 82;
+            this.txbFindingComment_Colono.MaxLength = 250;
+            this.txbFindingComment_Colono.Multiline = true;
             this.txbFindingComment_Colono.Name = "txbFindingComment_Colono";
-            this.txbFindingComment_Colono.Size = new System.Drawing.Size(751, 23);
+            this.txbFindingComment_Colono.Size = new System.Drawing.Size(751, 41);
             this.txbFindingComment_Colono.TabIndex = 148;
             // 
             // txtFindingTerminal_Colono
@@ -8876,9 +8880,10 @@ namespace EndoscopicSystem.V2.Forms
             this.txbFindingComment_EGD.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
             this.txbFindingComment_EGD.Location = new System.Drawing.Point(217, 569);
             this.txbFindingComment_EGD.Margin = new System.Windows.Forms.Padding(2);
-            this.txbFindingComment_EGD.MaxLength = 82;
+            this.txbFindingComment_EGD.MaxLength = 250;
+            this.txbFindingComment_EGD.Multiline = true;
             this.txbFindingComment_EGD.Name = "txbFindingComment_EGD";
-            this.txbFindingComment_EGD.Size = new System.Drawing.Size(754, 23);
+            this.txbFindingComment_EGD.Size = new System.Drawing.Size(754, 40);
             this.txbFindingComment_EGD.TabIndex = 19;
             // 
             // label175
