@@ -42,6 +42,23 @@ namespace EndoscopicSystem.Forms
                 _procedureName = procedureList.Where(w => w.ProcedureID == procedureId).FirstOrDefault().ProcedureName;
             }
 
+            // Check count image path
+            // 1-8 = 1:1
+            // 9-20 = 1:2
+            // 21-32 = 1:3
+
+            int lastPage = 1;
+
+            int count = _db.EndoscopicImages.Where(w => w.EndoscopicID == endoscopicId && w.ProcedureID == procedureId && !string.IsNullOrEmpty(w.ImagePath)).Select(s => s.ImagePath).AsEnumerable().Count();
+            if (count > 8 && count <= 20)
+            {
+                lastPage = 2;
+            }
+            else if (count > 20 && count <= 32)
+            {
+                lastPage = 3;
+            }
+
             crystalReportViewer1.Refresh();
 
             ReportDocument rprt = new ReportDocument();
@@ -107,6 +124,9 @@ namespace EndoscopicSystem.Forms
             rprt.SetParameterValue("@procedure", procedureId == 6 ? 1 : procedureId);
             rprt.SetParameterValue("@endoscopicId", endoscopicId);
 
+
+            rprt.PrintToPrinter(1, false, lastPage - 1, lastPage);
+
             crystalReportViewer1.ReportSource = rprt;
             crystalReportViewer1.Refresh();
 
@@ -124,24 +144,6 @@ namespace EndoscopicSystem.Forms
             dest.DiskFileName = path;
 
             PdfFormatOptions formatOpt = new PdfFormatOptions();
-
-            // Check count image path
-            // 1-8 = 1:1
-            // 9-20 = 1:2
-            // 21-32 = 1:3
-
-            int lastPage = 1;
-
-            int count = _db.EndoscopicImages.Where(w => w.EndoscopicID == endoscopicId && w.ProcedureID == procedureId && !string.IsNullOrEmpty(w.ImagePath)).Select(s => s.ImagePath).AsEnumerable().Count();
-            if (count > 8 && count <= 20)
-            {
-                lastPage = 2;
-            }
-            else if (count > 20 && count <= 32)
-            {
-                lastPage = 3;
-            }
-
             formatOpt.FirstPageNumber = 1;
             formatOpt.LastPageNumber = lastPage;
             //formatOpt.UsePageRange = false;

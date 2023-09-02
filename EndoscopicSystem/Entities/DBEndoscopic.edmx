@@ -750,6 +750,14 @@ warning 6002: The table/view 'EndoscopicDb.dbo.ProcedureList' does not have a pr
           <Property Name="CreateDate" Type="datetime" />
           <Property Name="UpdateDate" Type="datetime" />
         </EntityType>
+        <EntityType Name="Comment">
+          <Key>
+            <PropertyRef Name="CommentID" />
+          </Key>
+          <Property Name="CommentID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="CommentText" Type="nvarchar" MaxLength="250" />
+          <Property Name="ProcedureId" Type="int" />
+        </EntityType>
         <EntityType Name="Complication">
           <Key>
             <PropertyRef Name="ID" />
@@ -1419,6 +1427,7 @@ warning 6002: The table/view 'EndoscopicDb.dbo.v_PatientList' does not have a pr
           <EntitySet Name="Carina" EntityType="Self.Carina" Schema="master" store:Type="Tables" />
           <EntitySet Name="Cecum" EntityType="Self.Cecum" Schema="master" store:Type="Tables" />
           <EntitySet Name="Cholangiogram" EntityType="Self.Cholangiogram" Schema="master" store:Type="Tables" />
+          <EntitySet Name="Comment" EntityType="Self.Comment" Schema="master" store:Type="Tables" />
           <EntitySet Name="Complication" EntityType="Self.Complication" Schema="master" store:Type="Tables" />
           <EntitySet Name="DescendingColon" EntityType="Self.DescendingColon" Schema="master" store:Type="Tables" />
           <EntitySet Name="DuodenalBulb" EntityType="Self.DuodenalBulb" Schema="master" store:Type="Tables" />
@@ -1689,6 +1698,7 @@ warning 6002: The table/view 'EndoscopicDb.dbo.v_PatientList' does not have a pr
           <EntitySet Name="v_GetImageCapturePath" EntityType="EndoscopicModel.v_GetImageCapturePath" />
           <EntitySet Name="v_PatientList" EntityType="EndoscopicModel.v_PatientList" />
           <EntitySet Name="BriefHistories" EntityType="EndoscopicModel.BriefHistory" />
+          <EntitySet Name="Comments" EntityType="EndoscopicModel.Comment" />
           </EntityContainer>
         <EntityType Name="Doctor">
           <Key>
@@ -3171,6 +3181,14 @@ warning 6002: The table/view 'EndoscopicDb.dbo.v_PatientList' does not have a pr
           </Key>
           <Property Name="BriefHistoryID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
           <Property Name="BriefHistoryText" Type="String" MaxLength="250" FixedLength="false" Unicode="true" />
+        </EntityType>
+        <EntityType Name="Comment">
+          <Key>
+            <PropertyRef Name="CommentID" />
+          </Key>
+          <Property Name="CommentID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="CommentText" Type="String" MaxLength="250" FixedLength="false" Unicode="true" />
+          <Property Name="ProcedureId" Type="Int32" />
         </EntityType>
         </Schema>
     </edmx:ConceptualModels>
@@ -4783,6 +4801,15 @@ warning 6002: The table/view 'EndoscopicDb.dbo.v_PatientList' does not have a pr
               <MappingFragment StoreEntitySet="BriefHistory">
                 <ScalarProperty Name="BriefHistoryText" ColumnName="BriefHistoryText" />
                 <ScalarProperty Name="BriefHistoryID" ColumnName="BriefHistoryID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Comments">
+            <EntityTypeMapping TypeName="EndoscopicModel.Comment">
+              <MappingFragment StoreEntitySet="Comment">
+                <ScalarProperty Name="ProcedureId" ColumnName="ProcedureId" />
+                <ScalarProperty Name="CommentText" ColumnName="CommentText" />
+                <ScalarProperty Name="CommentID" ColumnName="CommentID" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>

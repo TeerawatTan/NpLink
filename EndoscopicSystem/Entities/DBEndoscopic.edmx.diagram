@@ -109,6 +109,7 @@
         <EntityTypeShape EntityType="EndoscopicModel.v_GetImageCapturePath" Width="1.5" PointX="11.375" PointY="0.75" />
         <EntityTypeShape EntityType="EndoscopicModel.v_PatientList" Width="1.5" PointX="28.375" PointY="21.75" />
         <EntityTypeShape EntityType="EndoscopicModel.BriefHistory" Width="1.5" PointX="30.375" PointY="18.75" />
+        <EntityTypeShape EntityType="EndoscopicModel.Comment" Width="1.5" PointX="30.375" PointY="21.75" />
       </Diagram>
     </edmx:Diagrams>
   </edmx:Designer>

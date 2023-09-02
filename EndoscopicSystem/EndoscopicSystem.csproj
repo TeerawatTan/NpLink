@@ -191,6 +191,9 @@
     <Compile Include="Entities\ColonoscopyReport_Result.cs">
       <DependentUpon>DBEndoscopic.tt</DependentUpon>
     </Compile>
+    <Compile Include="Entities\Comment.cs">
+      <DependentUpon>DBEndoscopic.tt</DependentUpon>
+    </Compile>
     <Compile Include="Entities\Complication.cs">
       <DependentUpon>DBEndoscopic.tt</DependentUpon>
     </Compile>
