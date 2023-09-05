@@ -18,7 +18,7 @@ namespace EndoscopicSystem.Forms
         private string hnNo = "", _fileNameSaved, _procedureName;
         private int procedureId = 0, _appointmentId = 0;
         private int endoscopicId;
-        protected EndoscopicEntities db = new EndoscopicEntities();
+        protected EndoscopicEntities _db = new EndoscopicEntities();
         private readonly GetDropdownList list = new GetDropdownList();
         private string _reportPath = Application.StartupPath.Replace("\\bin\\Debug", "") + @"\Report\";
         private string _pathFolderPDF = ConfigurationManager.AppSettings["pathSavePdf"];
@@ -39,6 +39,23 @@ namespace EndoscopicSystem.Forms
             if (procedureList != null)
             {
                 _procedureName = procedureList.Where(w => w.ProcedureID == procedureId).FirstOrDefault().ProcedureName;
+            }
+
+            // Check count image path
+            // 1-8 = 1:1
+            // 9-20 = 1:2
+            // 21-32 = 1:3
+
+            int lastPage = 1;
+
+            int count = _db.EndoscopicImages.Where(w => w.EndoscopicID == endoscopicId && w.ProcedureID == procedureId && !string.IsNullOrEmpty(w.ImagePath)).Select(s => s.ImagePath).AsEnumerable().Count();
+            if (count > 8 && count <= 20)
+            {
+                lastPage = 2;
+            }
+            else if (count > 20 && count <= 32)
+            {
+                lastPage = 3;
             }
 
             crystalReportViewer1.Refresh();
@@ -118,7 +135,26 @@ namespace EndoscopicSystem.Forms
             string namaPDF = "pdf";
             _fileNameSaved = namaPDF + "_" + fileNamePDF + ".pdf";
             string path = _pathFolderPDFToSave + _fileNameSaved;
-            rprt.ExportToDisk(CrystalDecisions.Shared.ExportFormatType.PortableDocFormat, path);
+
+            DiskFileDestinationOptions dest = new DiskFileDestinationOptions();
+            dest.DiskFileName = path;
+
+            PdfFormatOptions formatOpt = new PdfFormatOptions();
+            formatOpt.FirstPageNumber = 1;
+            formatOpt.LastPageNumber = lastPage;
+            //formatOpt.UsePageRange = false;
+            formatOpt.UsePageRange = true;
+            formatOpt.CreateBookmarksFromGroupTree = false;
+
+            ExportOptions ex = new ExportOptions();
+            ex.ExportDestinationType = ExportDestinationType.DiskFile;
+            ex.ExportDestinationOptions = dest;
+            ex.ExportFormatType = ExportFormatType.PortableDocFormat;
+            ex.ExportFormatOptions = formatOpt;
+
+            rprt.Export(ex);
+
+            //rprt.ExportToDisk(CrystalDecisions.Shared.ExportFormatType.PortableDocFormat, path);
 
             ExportToJpegFile(path);
         }
