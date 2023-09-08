@@ -1849,8 +1849,37 @@ namespace EndoscopicSystem.V2.Forms
                     }
                 }
                 txbGeneralIndication_EGD.Text = endoscopic.IndicationOther;
-                txbGeneralDx1ID_EGD.Text = patient.PreDiagnosisFirstID.ToString();
-                txbGeneralDx2ID_EGD.Text = patient.PreDiagnosisSecondID.ToString();
+                if (!patient.PreDiagnosisFirstID.HasValue)
+                 {
+                    if (!string.IsNullOrWhiteSpace(endoscopic.DxId1Detail))
+                    {
+                        string[] splitTxt = endoscopic.DxId1Detail.Split('-');
+                        if (splitTxt.Length > 1)
+                        {
+                            txbGeneralDx1Text_EGD.Text = splitTxt[1];
+                        }
+                    }
+                }
+                else
+                {
+                    txbGeneralDx1ID_EGD.Text = patient.PreDiagnosisFirstID.ToString();
+                }
+                if (!patient.PreDiagnosisSecondID.HasValue)
+                {
+                    if (!string.IsNullOrWhiteSpace(endoscopic.DxId2Detail))
+                    {
+                        string[] splitTxt = endoscopic.DxId2Detail.Split('-');
+                        if (splitTxt.Length > 1)
+                        {
+                            txbGeneralDx2Text_EGD.Text = splitTxt[1];
+                        }
+                    }
+                }
+                else
+                {
+                    txbGeneralDx2ID_EGD.Text = patient.PreDiagnosisSecondID.ToString();
+                }
+
                 txbBriefHistory_EGD.Text = endoscopic.BriefHistory;
 
                 if (procId == 1) //EGD
@@ -2046,8 +2075,36 @@ namespace EndoscopicSystem.V2.Forms
                         cbbGeneralIndication_Colono.SelectedValue = 0;
                     }
                 }
-                txbGeneralDx1ID_Colono.Text = patient.PreDiagnosisFirstID.ToString();
-                txbGeneralDx2ID_Colono.Text = patient.PreDiagnosisSecondID.ToString();
+                if (!patient.PreDiagnosisFirstID.HasValue)
+                {
+                    if (!string.IsNullOrWhiteSpace(endoscopic.DxId1Detail))
+                    {
+                        string[] splitTxt = endoscopic.DxId1Detail.Split('-');
+                        if (splitTxt.Length > 1)
+                        {
+                            txbGeneralDx1Text_Colono.Text = splitTxt[1];
+                        }
+                    }
+                }
+                else
+                {
+                    txbGeneralDx1ID_Colono.Text = patient.PreDiagnosisFirstID.ToString();
+                }
+                if (!patient.PreDiagnosisSecondID.HasValue)
+                {
+                    if (!string.IsNullOrWhiteSpace(endoscopic.DxId2Detail))
+                    {
+                        string[] splitTxt = endoscopic.DxId2Detail.Split('-');
+                        if (splitTxt.Length > 1)
+                        {
+                            txbGeneralDx2IText_Colono.Text = splitTxt[1];
+                        }
+                    }
+                }
+                else
+                {
+                    txbGeneralDx2ID_Colono.Text = patient.PreDiagnosisSecondID.ToString();
+                }
                 txbBriefHistory_Colono.Text = endoscopic.BriefHistory;
                 txbGeneralBowelPreparationRegimen_Colono.Text = endoscopic.BowelPreparationRegimen;
                 txbGeneralBowelPreparationResult_colono.Text = endoscopic.BowelPreparationResult;
