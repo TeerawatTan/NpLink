@@ -10,6 +10,8 @@ using System.IO;
 using System.Linq;
 using System.Windows.Forms;
 using PdfiumViewer;
+using System.Threading;
+using System.Diagnostics;
 
 namespace EndoscopicSystem.Forms
 {
@@ -18,7 +20,7 @@ namespace EndoscopicSystem.Forms
         private string hnNo = "", _fileNameSaved, _procedureName;
         private int procedureId = 0, _appointmentId = 0;
         private int endoscopicId;
-        protected EndoscopicEntities db = new EndoscopicEntities();
+        protected EndoscopicEntities _db = new EndoscopicEntities();
         private readonly GetDropdownList list = new GetDropdownList();
         private string _reportPath = Application.StartupPath.Replace("\\bin\\Debug", "") + @"\Report\";
         private string _pathFolderPDF = ConfigurationManager.AppSettings["pathSavePdf"];
@@ -41,7 +43,23 @@ namespace EndoscopicSystem.Forms
                 _procedureName = procedureList.Where(w => w.ProcedureID == procedureId).FirstOrDefault().ProcedureName;
             }
 
-            crystalReportViewer1.Refresh();
+            // Check count image path
+            // 1-8 = 1:1
+            // 9-20 = 1:2
+            // 21-32 = 1:3
+
+            int lastPage = 1;
+
+            int count = _db.EndoscopicImages.Where(w => w.EndoscopicID == endoscopicId && w.ProcedureID == procedureId && !string.IsNullOrEmpty(w.ImagePath)).Select(s => s.ImagePath).AsEnumerable().Count();
+            if (count > 8 && count <= 20)
+            {
+                lastPage = 2;
+            }
+            else if (count > 20 && count <= 32)
+            {
+                lastPage = 3;
+            }
+
 
             ReportDocument rprt = new ReportDocument();
 
@@ -106,8 +124,6 @@ namespace EndoscopicSystem.Forms
             rprt.SetParameterValue("@procedure", procedureId == 6 ? 1 : procedureId);
             rprt.SetParameterValue("@endoscopicId", endoscopicId);
 
-            crystalReportViewer1.ReportSource = rprt;
-            crystalReportViewer1.Refresh();
 
             string _pathFolderPDFToSave = _pathFolderPDF + hnNo + @"\" + DateTime.Now.ToString("yyyyMMdd") + @"\";
             if (!Directory.Exists(_pathFolderPDFToSave))
@@ -118,9 +134,32 @@ namespace EndoscopicSystem.Forms
             string namaPDF = "pdf";
             _fileNameSaved = namaPDF + "_" + fileNamePDF + ".pdf";
             string path = _pathFolderPDFToSave + _fileNameSaved;
-            rprt.ExportToDisk(CrystalDecisions.Shared.ExportFormatType.PortableDocFormat, path);
 
+            DiskFileDestinationOptions dest = new DiskFileDestinationOptions();
+            dest.DiskFileName = path;
+
+            PdfFormatOptions formatOpt = new PdfFormatOptions();
+            formatOpt.FirstPageNumber = 1;
+            formatOpt.LastPageNumber = lastPage;
+            //formatOpt.UsePageRange = false;
+            formatOpt.UsePageRange = true;
+            formatOpt.CreateBookmarksFromGroupTree = false;
+
+            ExportOptions ex = new ExportOptions();
+            ex.ExportDestinationType = ExportDestinationType.DiskFile;
+            ex.ExportDestinationOptions = dest;
+            ex.ExportFormatType = ExportFormatType.PortableDocFormat;
+            ex.ExportFormatOptions = formatOpt;
+
+            rprt.Export(ex);
+
+            // Export to Jpeg
             ExportToJpegFile(path);
+
+            // Open PDF to default browser
+            OpenPdfToDefaultBrowser(path);
+
+            this.Close();
         }
 
         private void ExportToJpegFile(string pdfPath)
@@ -152,6 +191,26 @@ namespace EndoscopicSystem.Forms
             catch (Exception)
             {
                 return;
+            }
+        }
+
+        private void OpenPdfToDefaultBrowser(string pdfFilePath)
+        {
+            if (System.IO.File.Exists(pdfFilePath))
+            {
+                try
+                {
+                    // Start the default web browser with the PDF file
+                    Process.Start(pdfFilePath);
+                }
+                catch (Exception ex)
+                {
+                    Console.WriteLine("Error: " + ex.Message);
+                }
+            }
+            else
+            {
+                Console.WriteLine("The specified PDF file does not exist.");
             }
         }
 
@@ -191,6 +250,5 @@ namespace EndoscopicSystem.Forms
         //    }
         //}
 
-        
     }
 }

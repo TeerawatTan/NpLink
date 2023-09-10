@@ -48,10 +48,10 @@ namespace EndoscopicSystem.V2.Forms
             {
                 Directory.CreateDirectory(_pathFolderImageCapture);
             }
-            if (!Directory.Exists(_pathFolderDicom))
-            {
-                Directory.CreateDirectory(_pathFolderDicom);
-            }
+            //if (!Directory.Exists(_pathFolderDicom))
+            //{
+            //    Directory.CreateDirectory(_pathFolderDicom);
+            //}
             if (!Directory.Exists(_pathFolderPdf))
             {
                 Directory.CreateDirectory(_pathFolderPdf);
