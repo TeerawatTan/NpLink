@@ -541,7 +541,7 @@ namespace EndoscopicSystem.V2.Forms
             this.txbGeneralBowelPreparationResult_colono = new System.Windows.Forms.TextBox();
             this.txbGeneralBowelPreparationRegimen_Colono = new System.Windows.Forms.TextBox();
             this.txbBriefHistory_Colono = new System.Windows.Forms.TextBox();
-            this.txbGeneralDx2IText_Colono = new System.Windows.Forms.TextBox();
+            this.txbGeneralDx2Text_Colono = new System.Windows.Forms.TextBox();
             this.txbGeneralDx1Text_Colono = new System.Windows.Forms.TextBox();
             this.txbGeneralIndication_Colono = new System.Windows.Forms.TextBox();
             this.txbGeneralSN_Colono = new System.Windows.Forms.TextBox();
@@ -7411,6 +7411,7 @@ namespace EndoscopicSystem.V2.Forms
             this.cbbFindingTerminal_Colono.Name = "cbbFindingTerminal_Colono";
             this.cbbFindingTerminal_Colono.Size = new System.Drawing.Size(200, 23);
             this.cbbFindingTerminal_Colono.TabIndex = 68;
+            this.cbbFindingTerminal_Colono.Visible = false;
             // 
             // cbbFindingCecum_Colono
             // 
@@ -7424,6 +7425,7 @@ namespace EndoscopicSystem.V2.Forms
             this.cbbFindingCecum_Colono.Name = "cbbFindingCecum_Colono";
             this.cbbFindingCecum_Colono.Size = new System.Drawing.Size(200, 23);
             this.cbbFindingCecum_Colono.TabIndex = 69;
+            this.cbbFindingCecum_Colono.Visible = false;
             // 
             // label49
             // 
@@ -7459,6 +7461,7 @@ namespace EndoscopicSystem.V2.Forms
             this.cbbFindingIleocecal_Colono.Name = "cbbFindingIleocecal_Colono";
             this.cbbFindingIleocecal_Colono.Size = new System.Drawing.Size(200, 23);
             this.cbbFindingIleocecal_Colono.TabIndex = 65;
+            this.cbbFindingIleocecal_Colono.Visible = false;
             // 
             // label51
             // 
@@ -7483,6 +7486,7 @@ namespace EndoscopicSystem.V2.Forms
             this.cbbFindingAscending_Colono.Name = "cbbFindingAscending_Colono";
             this.cbbFindingAscending_Colono.Size = new System.Drawing.Size(200, 23);
             this.cbbFindingAscending_Colono.TabIndex = 62;
+            this.cbbFindingAscending_Colono.Visible = false;
             // 
             // cbbFindingHepatic_Colono
             // 
@@ -7496,6 +7500,7 @@ namespace EndoscopicSystem.V2.Forms
             this.cbbFindingHepatic_Colono.Name = "cbbFindingHepatic_Colono";
             this.cbbFindingHepatic_Colono.Size = new System.Drawing.Size(200, 23);
             this.cbbFindingHepatic_Colono.TabIndex = 63;
+            this.cbbFindingHepatic_Colono.Visible = false;
             // 
             // label45
             // 
@@ -7531,6 +7536,7 @@ namespace EndoscopicSystem.V2.Forms
             this.cbbFindingTransverse_Colono.Name = "cbbFindingTransverse_Colono";
             this.cbbFindingTransverse_Colono.Size = new System.Drawing.Size(200, 23);
             this.cbbFindingTransverse_Colono.TabIndex = 58;
+            this.cbbFindingTransverse_Colono.Visible = false;
             // 
             // cbbFindingFlexure_Colono
             // 
@@ -7544,6 +7550,7 @@ namespace EndoscopicSystem.V2.Forms
             this.cbbFindingFlexure_Colono.Name = "cbbFindingFlexure_Colono";
             this.cbbFindingFlexure_Colono.Size = new System.Drawing.Size(200, 23);
             this.cbbFindingFlexure_Colono.TabIndex = 59;
+            this.cbbFindingFlexure_Colono.Visible = false;
             // 
             // label47
             // 
@@ -7579,6 +7586,7 @@ namespace EndoscopicSystem.V2.Forms
             this.cbbFindingDescending_Colono.Name = "cbbFindingDescending_Colono";
             this.cbbFindingDescending_Colono.Size = new System.Drawing.Size(200, 23);
             this.cbbFindingDescending_Colono.TabIndex = 54;
+            this.cbbFindingDescending_Colono.Visible = false;
             // 
             // cbbFindingSigmoid_Colono
             // 
@@ -7592,6 +7600,7 @@ namespace EndoscopicSystem.V2.Forms
             this.cbbFindingSigmoid_Colono.Name = "cbbFindingSigmoid_Colono";
             this.cbbFindingSigmoid_Colono.Size = new System.Drawing.Size(200, 23);
             this.cbbFindingSigmoid_Colono.TabIndex = 55;
+            this.cbbFindingSigmoid_Colono.Visible = false;
             // 
             // label43
             // 
@@ -7627,6 +7636,7 @@ namespace EndoscopicSystem.V2.Forms
             this.cbbFindingRectum_Colono.Name = "cbbFindingRectum_Colono";
             this.cbbFindingRectum_Colono.Size = new System.Drawing.Size(200, 23);
             this.cbbFindingRectum_Colono.TabIndex = 51;
+            this.cbbFindingRectum_Colono.Visible = false;
             // 
             // cbbFindingAnalCanal_Colono
             // 
@@ -7640,6 +7650,7 @@ namespace EndoscopicSystem.V2.Forms
             this.cbbFindingAnalCanal_Colono.Name = "cbbFindingAnalCanal_Colono";
             this.cbbFindingAnalCanal_Colono.Size = new System.Drawing.Size(200, 23);
             this.cbbFindingAnalCanal_Colono.TabIndex = 51;
+            this.cbbFindingAnalCanal_Colono.Visible = false;
             // 
             // label41
             // 
@@ -7670,7 +7681,7 @@ namespace EndoscopicSystem.V2.Forms
             this.tabGeneralColonoscopy.Controls.Add(this.txbGeneralBowelPreparationResult_colono);
             this.tabGeneralColonoscopy.Controls.Add(this.txbGeneralBowelPreparationRegimen_Colono);
             this.tabGeneralColonoscopy.Controls.Add(this.txbBriefHistory_Colono);
-            this.tabGeneralColonoscopy.Controls.Add(this.txbGeneralDx2IText_Colono);
+            this.tabGeneralColonoscopy.Controls.Add(this.txbGeneralDx2Text_Colono);
             this.tabGeneralColonoscopy.Controls.Add(this.txbGeneralDx1Text_Colono);
             this.tabGeneralColonoscopy.Controls.Add(this.txbGeneralIndication_Colono);
             this.tabGeneralColonoscopy.Controls.Add(this.txbGeneralSN_Colono);
@@ -7756,6 +7767,7 @@ namespace EndoscopicSystem.V2.Forms
             this.txbGeneralBowelPreparationResult_colono.Name = "txbGeneralBowelPreparationResult_colono";
             this.txbGeneralBowelPreparationResult_colono.Size = new System.Drawing.Size(673, 23);
             this.txbGeneralBowelPreparationResult_colono.TabIndex = 180;
+            this.txbGeneralBowelPreparationResult_colono.Leave += new System.EventHandler(this.txbGeneralBowelPreparationResult_colono_Leave);
             // 
             // txbGeneralBowelPreparationRegimen_Colono
             // 
@@ -7769,6 +7781,7 @@ namespace EndoscopicSystem.V2.Forms
             this.txbGeneralBowelPreparationRegimen_Colono.Name = "txbGeneralBowelPreparationRegimen_Colono";
             this.txbGeneralBowelPreparationRegimen_Colono.Size = new System.Drawing.Size(673, 23);
             this.txbGeneralBowelPreparationRegimen_Colono.TabIndex = 178;
+            this.txbGeneralBowelPreparationRegimen_Colono.Leave += new System.EventHandler(this.txbGeneralBowelPreparationRegimen_Colono_Leave);
             // 
             // txbBriefHistory_Colono
             // 
@@ -7784,18 +7797,19 @@ namespace EndoscopicSystem.V2.Forms
             this.txbBriefHistory_Colono.TabIndex = 168;
             this.txbBriefHistory_Colono.Leave += new System.EventHandler(this.txbBriefHistory_Colono_Leave);
             // 
-            // txbGeneralDx2IText_Colono
+            // txbGeneralDx2Text_Colono
             // 
-            this.txbGeneralDx2IText_Colono.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            this.txbGeneralDx2Text_Colono.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.txbGeneralDx2IText_Colono.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.txbGeneralDx2IText_Colono.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
-            this.txbGeneralDx2IText_Colono.Location = new System.Drawing.Point(381, 512);
-            this.txbGeneralDx2IText_Colono.Margin = new System.Windows.Forms.Padding(2);
-            this.txbGeneralDx2IText_Colono.MaxLength = 80;
-            this.txbGeneralDx2IText_Colono.Name = "txbGeneralDx2IText_Colono";
-            this.txbGeneralDx2IText_Colono.Size = new System.Drawing.Size(506, 23);
-            this.txbGeneralDx2IText_Colono.TabIndex = 167;
+            this.txbGeneralDx2Text_Colono.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.txbGeneralDx2Text_Colono.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
+            this.txbGeneralDx2Text_Colono.Location = new System.Drawing.Point(286, 512);
+            this.txbGeneralDx2Text_Colono.Margin = new System.Windows.Forms.Padding(2);
+            this.txbGeneralDx2Text_Colono.MaxLength = 80;
+            this.txbGeneralDx2Text_Colono.Name = "txbGeneralDx2Text_Colono";
+            this.txbGeneralDx2Text_Colono.Size = new System.Drawing.Size(601, 23);
+            this.txbGeneralDx2Text_Colono.TabIndex = 167;
+            this.txbGeneralDx2Text_Colono.Leave += new System.EventHandler(this.txbGeneralDx2Text_Colono_Leave);
             // 
             // txbGeneralDx1Text_Colono
             // 
@@ -7803,12 +7817,13 @@ namespace EndoscopicSystem.V2.Forms
             | System.Windows.Forms.AnchorStyles.Right)));
             this.txbGeneralDx1Text_Colono.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.txbGeneralDx1Text_Colono.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
-            this.txbGeneralDx1Text_Colono.Location = new System.Drawing.Point(381, 485);
+            this.txbGeneralDx1Text_Colono.Location = new System.Drawing.Point(286, 485);
             this.txbGeneralDx1Text_Colono.Margin = new System.Windows.Forms.Padding(2);
             this.txbGeneralDx1Text_Colono.MaxLength = 80;
             this.txbGeneralDx1Text_Colono.Name = "txbGeneralDx1Text_Colono";
-            this.txbGeneralDx1Text_Colono.Size = new System.Drawing.Size(506, 23);
+            this.txbGeneralDx1Text_Colono.Size = new System.Drawing.Size(601, 23);
             this.txbGeneralDx1Text_Colono.TabIndex = 164;
+            this.txbGeneralDx1Text_Colono.Leave += new System.EventHandler(this.txbGeneralDx1Text_Colono_Leave);
             // 
             // txbGeneralIndication_Colono
             // 
@@ -7943,9 +7958,9 @@ namespace EndoscopicSystem.V2.Forms
             this.txbGeneralDx2Code_Colono.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
             this.txbGeneralDx2Code_Colono.Location = new System.Drawing.Point(211, 512);
             this.txbGeneralDx2Code_Colono.Margin = new System.Windows.Forms.Padding(2);
-            this.txbGeneralDx2Code_Colono.MaxLength = 200;
+            this.txbGeneralDx2Code_Colono.MaxLength = 7;
             this.txbGeneralDx2Code_Colono.Name = "txbGeneralDx2Code_Colono";
-            this.txbGeneralDx2Code_Colono.Size = new System.Drawing.Size(166, 23);
+            this.txbGeneralDx2Code_Colono.Size = new System.Drawing.Size(71, 23);
             this.txbGeneralDx2Code_Colono.TabIndex = 165;
             this.txbGeneralDx2Code_Colono.Click += new System.EventHandler(this.txbGeneralDx2Code_Colono_Click);
             this.txbGeneralDx2Code_Colono.TextChanged += new System.EventHandler(this.txbGeneralDx2Code_Colono_TextChanged);
@@ -7958,9 +7973,9 @@ namespace EndoscopicSystem.V2.Forms
             this.txbGeneralDx1Code_Colono.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
             this.txbGeneralDx1Code_Colono.Location = new System.Drawing.Point(211, 485);
             this.txbGeneralDx1Code_Colono.Margin = new System.Windows.Forms.Padding(2);
-            this.txbGeneralDx1Code_Colono.MaxLength = 200;
+            this.txbGeneralDx1Code_Colono.MaxLength = 7;
             this.txbGeneralDx1Code_Colono.Name = "txbGeneralDx1Code_Colono";
-            this.txbGeneralDx1Code_Colono.Size = new System.Drawing.Size(166, 23);
+            this.txbGeneralDx1Code_Colono.Size = new System.Drawing.Size(71, 23);
             this.txbGeneralDx1Code_Colono.TabIndex = 162;
             this.txbGeneralDx1Code_Colono.Click += new System.EventHandler(this.txbGeneralDx1Code_Colono_Click);
             this.txbGeneralDx1Code_Colono.TextChanged += new System.EventHandler(this.txbGeneralDx1Code_Colono_TextChanged);
@@ -9517,11 +9532,11 @@ namespace EndoscopicSystem.V2.Forms
             | System.Windows.Forms.AnchorStyles.Right)));
             this.txbGeneralDx2Text_EGD.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.txbGeneralDx2Text_EGD.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
-            this.txbGeneralDx2Text_EGD.Location = new System.Drawing.Point(377, 508);
+            this.txbGeneralDx2Text_EGD.Location = new System.Drawing.Point(282, 508);
             this.txbGeneralDx2Text_EGD.Margin = new System.Windows.Forms.Padding(2);
             this.txbGeneralDx2Text_EGD.MaxLength = 80;
             this.txbGeneralDx2Text_EGD.Name = "txbGeneralDx2Text_EGD";
-            this.txbGeneralDx2Text_EGD.Size = new System.Drawing.Size(507, 23);
+            this.txbGeneralDx2Text_EGD.Size = new System.Drawing.Size(602, 23);
             this.txbGeneralDx2Text_EGD.TabIndex = 115;
             // 
             // txbGeneralDx2Code_EGD
@@ -9532,9 +9547,9 @@ namespace EndoscopicSystem.V2.Forms
             this.txbGeneralDx2Code_EGD.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
             this.txbGeneralDx2Code_EGD.Location = new System.Drawing.Point(207, 508);
             this.txbGeneralDx2Code_EGD.Margin = new System.Windows.Forms.Padding(2);
-            this.txbGeneralDx2Code_EGD.MaxLength = 200;
+            this.txbGeneralDx2Code_EGD.MaxLength = 7;
             this.txbGeneralDx2Code_EGD.Name = "txbGeneralDx2Code_EGD";
-            this.txbGeneralDx2Code_EGD.Size = new System.Drawing.Size(166, 23);
+            this.txbGeneralDx2Code_EGD.Size = new System.Drawing.Size(71, 23);
             this.txbGeneralDx2Code_EGD.TabIndex = 113;
             this.txbGeneralDx2Code_EGD.Click += new System.EventHandler(this.txbGeneralDx2Code_EGD_Click);
             this.txbGeneralDx2Code_EGD.TextChanged += new System.EventHandler(this.txbGeneralDx2Code_EGD_TextChanged);
@@ -9545,11 +9560,11 @@ namespace EndoscopicSystem.V2.Forms
             | System.Windows.Forms.AnchorStyles.Right)));
             this.txbGeneralDx1Text_EGD.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.txbGeneralDx1Text_EGD.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
-            this.txbGeneralDx1Text_EGD.Location = new System.Drawing.Point(377, 481);
+            this.txbGeneralDx1Text_EGD.Location = new System.Drawing.Point(282, 481);
             this.txbGeneralDx1Text_EGD.Margin = new System.Windows.Forms.Padding(2);
             this.txbGeneralDx1Text_EGD.MaxLength = 80;
             this.txbGeneralDx1Text_EGD.Name = "txbGeneralDx1Text_EGD";
-            this.txbGeneralDx1Text_EGD.Size = new System.Drawing.Size(507, 23);
+            this.txbGeneralDx1Text_EGD.Size = new System.Drawing.Size(602, 23);
             this.txbGeneralDx1Text_EGD.TabIndex = 112;
             // 
             // txbGeneralDx1Code_EGD
@@ -9560,9 +9575,9 @@ namespace EndoscopicSystem.V2.Forms
             this.txbGeneralDx1Code_EGD.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
             this.txbGeneralDx1Code_EGD.Location = new System.Drawing.Point(207, 481);
             this.txbGeneralDx1Code_EGD.Margin = new System.Windows.Forms.Padding(2);
-            this.txbGeneralDx1Code_EGD.MaxLength = 200;
+            this.txbGeneralDx1Code_EGD.MaxLength = 7;
             this.txbGeneralDx1Code_EGD.Name = "txbGeneralDx1Code_EGD";
-            this.txbGeneralDx1Code_EGD.Size = new System.Drawing.Size(166, 23);
+            this.txbGeneralDx1Code_EGD.Size = new System.Drawing.Size(71, 23);
             this.txbGeneralDx1Code_EGD.TabIndex = 110;
             this.txbGeneralDx1Code_EGD.Click += new System.EventHandler(this.txbGeneralDx1Code_EGD_Click);
             this.txbGeneralDx1Code_EGD.TextChanged += new System.EventHandler(this.txbGeneralDx1Code_EGD_TextChanged);
@@ -10782,7 +10797,7 @@ namespace EndoscopicSystem.V2.Forms
         private System.Windows.Forms.TextBox txbGeneralBowelPreparationResult_colono;
         private System.Windows.Forms.TextBox txbGeneralBowelPreparationRegimen_Colono;
         private System.Windows.Forms.TextBox txbBriefHistory_Colono;
-        private System.Windows.Forms.TextBox txbGeneralDx2IText_Colono;
+        private System.Windows.Forms.TextBox txbGeneralDx2Text_Colono;
         private System.Windows.Forms.TextBox txbGeneralDx1Text_Colono;
         private System.Windows.Forms.TextBox txbGeneralIndication_Colono;
         private System.Windows.Forms.TextBox txbGeneralSN_Colono;

@@ -11,6 +11,7 @@ using System.Linq;
 using System.Windows.Forms;
 using PdfiumViewer;
 using System.Threading;
+using System.Diagnostics;
 
 namespace EndoscopicSystem.Forms
 {
@@ -59,7 +60,6 @@ namespace EndoscopicSystem.Forms
                 lastPage = 3;
             }
 
-            crystalReportViewer1.Refresh();
 
             ReportDocument rprt = new ReportDocument();
 
@@ -125,11 +125,6 @@ namespace EndoscopicSystem.Forms
             rprt.SetParameterValue("@endoscopicId", endoscopicId);
 
 
-            rprt.PrintToPrinter(1, false, lastPage - 1, lastPage);
-
-            crystalReportViewer1.ReportSource = rprt;
-            crystalReportViewer1.Refresh();
-
             string _pathFolderPDFToSave = _pathFolderPDF + hnNo + @"\" + DateTime.Now.ToString("yyyyMMdd") + @"\";
             if (!Directory.Exists(_pathFolderPDFToSave))
             {
@@ -158,9 +153,13 @@ namespace EndoscopicSystem.Forms
 
             rprt.Export(ex);
 
-            //rprt.ExportToDisk(CrystalDecisions.Shared.ExportFormatType.PortableDocFormat, path);
-
+            // Export to Jpeg
             ExportToJpegFile(path);
+
+            // Open PDF to default browser
+            OpenPdfToDefaultBrowser(path);
+
+            this.Close();
         }
 
         private void ExportToJpegFile(string pdfPath)
@@ -192,6 +191,26 @@ namespace EndoscopicSystem.Forms
             catch (Exception)
             {
                 return;
+            }
+        }
+
+        private void OpenPdfToDefaultBrowser(string pdfFilePath)
+        {
+            if (System.IO.File.Exists(pdfFilePath))
+            {
+                try
+                {
+                    // Start the default web browser with the PDF file
+                    Process.Start(pdfFilePath);
+                }
+                catch (Exception ex)
+                {
+                    Console.WriteLine("Error: " + ex.Message);
+                }
+            }
+            else
+            {
+                Console.WriteLine("The specified PDF file does not exist.");
             }
         }
 
@@ -231,6 +250,5 @@ namespace EndoscopicSystem.Forms
         //    }
         //}
 
-        
     }
 }

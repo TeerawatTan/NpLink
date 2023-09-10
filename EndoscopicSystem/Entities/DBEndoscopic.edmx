@@ -707,6 +707,20 @@ warning 6002: The table/view 'EndoscopicDb.dbo.ProcedureList' does not have a pr
           <Property Name="CreateDate" Type="datetime" />
           <Property Name="UpdateDate" Type="datetime" />
         </EntityType>
+        <EntityType Name="BowelPreparationRegimen">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Name" Type="nvarchar" MaxLength="1000" />
+        </EntityType>
+        <EntityType Name="BowelPreparationResult">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Name" Type="nvarchar" MaxLength="1000" />
+        </EntityType>
         <EntityType Name="BriefHistory">
           <Key>
             <PropertyRef Name="BriefHistoryID" />
@@ -885,6 +899,7 @@ warning 6002: The table/view 'EndoscopicDb.dbo.ProcedureList' does not have a pr
           <Property Name="Code" Type="nvarchar" MaxLength="10" />
           <Property Name="Name" Type="nvarchar" MaxLength="250" />
           <Property Name="ProcedureId" Type="int" />
+          <Property Name="IsDisplay" Type="bit" Nullable="false" />
         </EntityType>
         <EntityType Name="ICD9">
           <Key>
@@ -894,6 +909,7 @@ warning 6002: The table/view 'EndoscopicDb.dbo.ProcedureList' does not have a pr
           <Property Name="Code" Type="nvarchar" MaxLength="10" />
           <Property Name="Name" Type="nvarchar" MaxLength="250" />
           <Property Name="ProcedureId" Type="int" />
+          <Property Name="IsDisplay" Type="bit" Nullable="false" />
         </EntityType>
         <EntityType Name="IleocecalValve">
           <Key>
@@ -1422,6 +1438,8 @@ warning 6002: The table/view 'EndoscopicDb.dbo.v_PatientList' does not have a pr
           <EntitySet Name="BaseOfTongue" EntityType="Self.BaseOfTongue" Schema="master" store:Type="Tables" />
           <EntitySet Name="BiliarySystem" EntityType="Self.BiliarySystem" Schema="master" store:Type="Tables" />
           <EntitySet Name="Body" EntityType="Self.Body" Schema="master" store:Type="Tables" />
+          <EntitySet Name="BowelPreparationRegimen" EntityType="Self.BowelPreparationRegimen" Schema="master" store:Type="Tables" />
+          <EntitySet Name="BowelPreparationResult" EntityType="Self.BowelPreparationResult" Schema="master" store:Type="Tables" />
           <EntitySet Name="BriefHistory" EntityType="Self.BriefHistory" Schema="master" store:Type="Tables" />
           <EntitySet Name="Cardia" EntityType="Self.Cardia" Schema="master" store:Type="Tables" />
           <EntitySet Name="Carina" EntityType="Self.Carina" Schema="master" store:Type="Tables" />
@@ -1699,6 +1717,8 @@ warning 6002: The table/view 'EndoscopicDb.dbo.v_PatientList' does not have a pr
           <EntitySet Name="v_PatientList" EntityType="EndoscopicModel.v_PatientList" />
           <EntitySet Name="BriefHistories" EntityType="EndoscopicModel.BriefHistory" />
           <EntitySet Name="Comments" EntityType="EndoscopicModel.Comment" />
+          <EntitySet Name="BowelPreparationRegimen" EntityType="EndoscopicModel.BowelPreparationRegiman" />
+          <EntitySet Name="BowelPreparationResults" EntityType="EndoscopicModel.BowelPreparationResult" />
           </EntityContainer>
         <EntityType Name="Doctor">
           <Key>
@@ -2695,6 +2715,7 @@ warning 6002: The table/view 'EndoscopicDb.dbo.v_PatientList' does not have a pr
           <Property Name="Code" Type="String" MaxLength="10" FixedLength="false" Unicode="true" />
           <Property Name="Name" Type="String" MaxLength="250" FixedLength="false" Unicode="true" />
           <Property Name="ProcedureId" Type="Int32" />
+          <Property Name="IsDisplay" Type="Boolean" Nullable="false" />
         </EntityType>
         <EntityType Name="ICD9">
           <Key>
@@ -2704,6 +2725,7 @@ warning 6002: The table/view 'EndoscopicDb.dbo.v_PatientList' does not have a pr
           <Property Name="Code" Type="String" MaxLength="10" FixedLength="false" Unicode="true" />
           <Property Name="Name" Type="String" MaxLength="250" FixedLength="false" Unicode="true" />
           <Property Name="ProcedureId" Type="Int32" />
+          <Property Name="IsDisplay" Type="Boolean" Nullable="false" />
         </EntityType>
         <EntityType Name="ProcedureList">
           <Key>
@@ -3189,6 +3211,20 @@ warning 6002: The table/view 'EndoscopicDb.dbo.v_PatientList' does not have a pr
           <Property Name="CommentID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
           <Property Name="CommentText" Type="String" MaxLength="250" FixedLength="false" Unicode="true" />
           <Property Name="ProcedureId" Type="Int32" />
+        </EntityType>
+        <EntityType Name="BowelPreparationRegiman">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Name" Type="String" MaxLength="1000" FixedLength="false" Unicode="true" />
+        </EntityType>
+        <EntityType Name="BowelPreparationResult">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Name" Type="String" MaxLength="1000" FixedLength="false" Unicode="true" />
         </EntityType>
         </Schema>
     </edmx:ConceptualModels>
@@ -4288,6 +4324,7 @@ warning 6002: The table/view 'EndoscopicDb.dbo.v_PatientList' does not have a pr
           <EntitySetMapping Name="ICD10">
             <EntityTypeMapping TypeName="EndoscopicModel.ICD10">
               <MappingFragment StoreEntitySet="ICD10">
+                <ScalarProperty Name="IsDisplay" ColumnName="IsDisplay" />
                 <ScalarProperty Name="ProcedureId" ColumnName="ProcedureId" />
                 <ScalarProperty Name="Name" ColumnName="Name" />
                 <ScalarProperty Name="Code" ColumnName="Code" />
@@ -4298,6 +4335,7 @@ warning 6002: The table/view 'EndoscopicDb.dbo.v_PatientList' does not have a pr
           <EntitySetMapping Name="ICD9">
             <EntityTypeMapping TypeName="EndoscopicModel.ICD9">
               <MappingFragment StoreEntitySet="ICD9">
+                <ScalarProperty Name="IsDisplay" ColumnName="IsDisplay" />
                 <ScalarProperty Name="ProcedureId" ColumnName="ProcedureId" />
                 <ScalarProperty Name="Name" ColumnName="Name" />
                 <ScalarProperty Name="Code" ColumnName="Code" />
@@ -4810,6 +4848,22 @@ warning 6002: The table/view 'EndoscopicDb.dbo.v_PatientList' does not have a pr
                 <ScalarProperty Name="ProcedureId" ColumnName="ProcedureId" />
                 <ScalarProperty Name="CommentText" ColumnName="CommentText" />
                 <ScalarProperty Name="CommentID" ColumnName="CommentID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="BowelPreparationRegimen">
+            <EntityTypeMapping TypeName="EndoscopicModel.BowelPreparationRegiman">
+              <MappingFragment StoreEntitySet="BowelPreparationRegimen">
+                <ScalarProperty Name="Name" ColumnName="Name" />
+                <ScalarProperty Name="ID" ColumnName="ID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="BowelPreparationResults">
+            <EntityTypeMapping TypeName="EndoscopicModel.BowelPreparationResult">
+              <MappingFragment StoreEntitySet="BowelPreparationResult">
+                <ScalarProperty Name="Name" ColumnName="Name" />
+                <ScalarProperty Name="ID" ColumnName="ID" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>

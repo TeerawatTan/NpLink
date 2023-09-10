@@ -164,6 +164,12 @@
     <Compile Include="Entities\Body.cs">
       <DependentUpon>DBEndoscopic.tt</DependentUpon>
     </Compile>
+    <Compile Include="Entities\BowelPreparationRegiman.cs">
+      <DependentUpon>DBEndoscopic.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Entities\BowelPreparationResult.cs">
+      <DependentUpon>DBEndoscopic.tt</DependentUpon>
+    </Compile>
     <Compile Include="Entities\BriefHistory.cs">
       <DependentUpon>DBEndoscopic.tt</DependentUpon>
     </Compile>

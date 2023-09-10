@@ -230,11 +230,11 @@ namespace EndoscopicSystem.V2.Forms
         }
         private void LoadICD9()
         {
-            _iCD9s = _db.ICD9.ToList();
+            _iCD9s = _db.ICD9.Where(w => w.IsDisplay == true).ToList();
         }
         private void LoadICD10()
         {
-            _iCD10s = _db.ICD10.ToList();
+            _iCD10s = _db.ICD10.Where(w => w.IsDisplay == true).ToList();
         }
         private void LoadTextBoxAutoComplete(TextBox textBox)
         {
@@ -755,6 +755,7 @@ namespace EndoscopicSystem.V2.Forms
                     cbbGeneralIndication_EGD.SelectedValue = findId;
             }
         }
+        
         private void txbBriefHistory_EGD_Leave(object sender, EventArgs e)
         {
             if (txbBriefHistory_EGD.TextLength > 0)
@@ -1109,18 +1110,18 @@ namespace EndoscopicSystem.V2.Forms
                 if (preDiag2 != null)
                 {
                     txbGeneralDx2Code_Colono.Text = preDiag2.Code;
-                    txbGeneralDx2IText_Colono.Text = preDiag2.Name;
+                    txbGeneralDx2Text_Colono.Text = preDiag2.Name;
                 }
                 else
                 {
                     txbGeneralDx2Code_Colono.Clear();
-                    txbGeneralDx2IText_Colono.Clear();
+                    txbGeneralDx2Text_Colono.Clear();
                 }
             }
             else
             {
                 txbGeneralDx2Code_Colono.Clear();
-                txbGeneralDx2IText_Colono.Clear();
+                txbGeneralDx2Text_Colono.Clear();
             }
         }
         private void txbGeneralDx1Code_Colono_Click(object sender, EventArgs e)
@@ -1208,18 +1209,18 @@ namespace EndoscopicSystem.V2.Forms
 
                 if (icd10 != null)
                 {
-                    txbGeneralDx2IText_Colono.Text = icd10.Name;
+                    txbGeneralDx2Text_Colono.Text = icd10.Name;
                     txbGeneralDx2ID_Colono.Text = icd10.ID.ToString();
                 }
                 else
                 {
-                    txbGeneralDx2IText_Colono.Clear();
+                    txbGeneralDx2Text_Colono.Clear();
                     txbGeneralDx2ID_Colono.Clear();
                 }
             }
             else
             {
-                txbGeneralDx2IText_Colono.Clear();
+                txbGeneralDx2Text_Colono.Clear();
                 txbGeneralDx2ID_Colono.Clear();
             }
         }
@@ -1393,6 +1394,38 @@ namespace EndoscopicSystem.V2.Forms
             if (names.Length > 0)
             {
                 LoadTextBoxAutoCompleteFromDb(txbGeneralIndication_Colono, names);
+            }
+        }
+        private void LoadAutoCompleted_txbGeneralDx1Text_Colono()
+        {
+            string[] names = _db.ICD10.Where(w => w.ProcedureId == _procedureId).Select(s => s.Name).ToArray();
+            if (names.Length > 0)
+            {
+                LoadTextBoxAutoCompleteFromDb(txbGeneralDx1Text_Colono, names);
+            }
+        }
+        private void LoadAutoCompleted_txbGeneralDx2Text_Colono()
+        {
+            string[] names = _db.ICD10.Where(w => w.ProcedureId == _procedureId).Select(s => s.Name).ToArray();
+            if (names.Length > 0)
+            {
+                LoadTextBoxAutoCompleteFromDb(txbGeneralDx2Text_Colono, names);
+            }
+        }
+        private void LoadAutoCompleted_txbGeneralBowelPreparationRegimen_Colono()
+        {
+            string[] names = _db.BowelPreparationRegimen.Select(s => s.Name).ToArray();
+            if (names.Length > 0)
+            {
+                LoadTextBoxAutoCompleteFromDb(txbGeneralBowelPreparationRegimen_Colono, names);
+            }
+        }
+        private void LoadAutoCompleted_txbGeneralBowelPreparationResult_colono()
+        {
+            string[] names = _db.BowelPreparationResults.Select(s => s.Name).ToArray();
+            if (names.Length > 0)
+            {
+                LoadTextBoxAutoCompleteFromDb(txbGeneralBowelPreparationResult_colono, names);
             }
         }
         private void LoadAutoCompleted_txbBriefHistory_Colono()
@@ -1574,6 +1607,38 @@ namespace EndoscopicSystem.V2.Forms
                     cbbGeneralIndication_Colono.SelectedValue = findId;
             }
         }
+        private void txbGeneralDx1Text_Colono_Leave(object sender, EventArgs e)
+        {
+            if (txbGeneralDx1Text_Colono.TextLength > 0)
+            {
+                var datas = _db.ICD10.ToList();
+                var findName = datas.Where(s => s.Name.Trim().Equals(txbGeneralDx1Text_Colono.Text.Trim())).FirstOrDefault();
+                if (findName == null)
+                {
+                    _db.ICD10.Add(new ICD10 { Name = txbGeneralDx1Text_Colono.Text, ProcedureId = _procedureId, IsDisplay = false });
+                    _db.SaveChanges();
+
+                    // Reload
+                    LoadAutoCompleted_txbGeneralDx1Text_Colono();
+                }
+            }
+        }
+        private void txbGeneralDx2Text_Colono_Leave(object sender, EventArgs e)
+        {
+            if (txbGeneralDx2Text_Colono.TextLength > 0)
+            {
+                var datas = _db.ICD10.ToList();
+                var findName = datas.Where(s => s.Name.Trim().Equals(txbGeneralDx2Text_Colono.Text.Trim())).FirstOrDefault();
+                if (findName == null)
+                {
+                    _db.ICD10.Add(new ICD10 { Name = txbGeneralDx2Text_Colono.Text, ProcedureId = _procedureId, IsDisplay = false });
+                    _db.SaveChanges();
+
+                    // Reload
+                    LoadAutoCompleted_txbGeneralDx2Text_Colono();
+                }
+            }
+        }
         private void txbBriefHistory_Colono_Leave(object sender, EventArgs e)
         {
             if (txbBriefHistory_Colono.TextLength > 0)
@@ -1587,6 +1652,38 @@ namespace EndoscopicSystem.V2.Forms
 
                     // Reload
                     LoadAutoCompleted_txbBriefHistory_Colono();
+                }
+            }
+        }
+        private void txbGeneralBowelPreparationRegimen_Colono_Leave(object sender, EventArgs e)
+        {
+            if (txbGeneralBowelPreparationRegimen_Colono.TextLength > 0)
+            {
+                var datas = _db.BowelPreparationRegimen.ToList();
+                var findName = datas.Where(s => s.Name.Trim().Equals(txbGeneralBowelPreparationRegimen_Colono.Text.Trim())).FirstOrDefault();
+                if (findName == null)
+                {
+                    _db.BowelPreparationRegimen.Add(new BowelPreparationRegiman { Name = txbGeneralBowelPreparationRegimen_Colono.Text });
+                    _db.SaveChanges();
+
+                    // Reload
+                    LoadAutoCompleted_txbGeneralBowelPreparationRegimen_Colono();
+                }
+            }
+        }
+        private void txbGeneralBowelPreparationResult_colono_Leave(object sender, EventArgs e)
+        {
+            if (txbGeneralBowelPreparationResult_colono.TextLength > 0)
+            {
+                var datas = _db.BowelPreparationResults.ToList();
+                var findName = datas.Where(s => s.Name.Trim().Equals(txbGeneralBowelPreparationResult_colono.Text.Trim())).FirstOrDefault();
+                if (findName == null)
+                {
+                    _db.BowelPreparationResults.Add(new BowelPreparationResult { Name = txbGeneralBowelPreparationResult_colono.Text });
+                    _db.SaveChanges();
+
+                    // Reload
+                    LoadAutoCompleted_txbGeneralBowelPreparationResult_colono();
                 }
             }
         }
@@ -3863,8 +3960,36 @@ namespace EndoscopicSystem.V2.Forms
                     }
                 }
                 txbGeneralIndication_EGD.Text = cbbGeneralIndication_EGD.Text;
-                txbGeneralDx1ID_EGD.Text = patient.PreDiagnosisFirstID.ToString();
-                txbGeneralDx2ID_EGD.Text = patient.PreDiagnosisSecondID.ToString();
+                if (!patient.PreDiagnosisFirstID.HasValue)
+                {
+                    if (!string.IsNullOrWhiteSpace(endoscopic.DxId1Detail))
+                    {
+                        string[] splitTxt = endoscopic.DxId1Detail.Split('-');
+                        if (splitTxt.Length > 1)
+                        {
+                            txbGeneralDx1Text_EGD.Text = splitTxt[1];
+                        }
+                    }
+                }
+                else
+                {
+                    txbGeneralDx1ID_EGD.Text = patient.PreDiagnosisFirstID.ToString();
+                }
+                if (!patient.PreDiagnosisSecondID.HasValue)
+                {
+                    if (!string.IsNullOrWhiteSpace(endoscopic.DxId2Detail))
+                    {
+                        string[] splitTxt = endoscopic.DxId2Detail.Split('-');
+                        if (splitTxt.Length > 1)
+                        {
+                            txbGeneralDx2Text_EGD.Text = splitTxt[1];
+                        }
+                    }
+                }
+                else
+                {
+                    txbGeneralDx2ID_EGD.Text = patient.PreDiagnosisSecondID.ToString();
+                }
                 txbBriefHistory_EGD.Text = endoscopic.BriefHistory;
 
                 if (procId == 1) //EGD
@@ -4060,8 +4185,36 @@ namespace EndoscopicSystem.V2.Forms
                     }
                 }
                 txbGeneralIndication_Colono.Text = cbbGeneralIndication_Colono.Text;
-                txbGeneralDx1ID_Colono.Text = patient.PreDiagnosisFirstID.ToString();
-                txbGeneralDx2ID_Colono.Text = patient.PreDiagnosisSecondID.ToString();
+                if (!patient.PreDiagnosisFirstID.HasValue)
+                {
+                    if (!string.IsNullOrWhiteSpace(endoscopic.DxId1Detail))
+                    {
+                        string[] splitTxt = endoscopic.DxId1Detail.Split('-');
+                        if (splitTxt.Length > 1)
+                        {
+                            txbGeneralDx1Text_Colono.Text = splitTxt[1];
+                        }
+                    }
+                }
+                else
+                {
+                    txbGeneralDx1ID_Colono.Text = patient.PreDiagnosisFirstID.ToString();
+                }
+                if (!patient.PreDiagnosisSecondID.HasValue)
+                {
+                    if (!string.IsNullOrWhiteSpace(endoscopic.DxId2Detail))
+                    {
+                        string[] splitTxt = endoscopic.DxId2Detail.Split('-');
+                        if (splitTxt.Length > 1)
+                        {
+                            txbGeneralDx2Text_Colono.Text = splitTxt[1];
+                        }
+                    }
+                }
+                else
+                {
+                    txbGeneralDx2ID_Colono.Text = patient.PreDiagnosisSecondID.ToString();
+                }
                 txbBriefHistory_Colono.Text = endoscopic.BriefHistory;
                 txbGeneralBowelPreparationRegimen_Colono.Text = endoscopic.BowelPreparationRegimen;
                 txbGeneralBowelPreparationResult_colono.Text = endoscopic.BowelPreparationResult;
@@ -4792,7 +4945,7 @@ namespace EndoscopicSystem.V2.Forms
                         endo.DxId1 = !string.IsNullOrWhiteSpace(txbGeneralDx1ID_Colono.Text) ? Convert.ToInt32(txbGeneralDx1ID_Colono.Text) : 0;
                         endo.DxId1Detail = txbGeneralDx1Code_Colono.Text + "-" + txbGeneralDx1Text_Colono.Text;
                         endo.DxId2 = !string.IsNullOrWhiteSpace(txbGeneralDx2ID_Colono.Text) ? Convert.ToInt32(txbGeneralDx2ID_Colono.Text) : 0;
-                        endo.DxId2Detail = txbGeneralDx2Code_Colono.Text + "-" + txbGeneralDx2IText_Colono.Text;
+                        endo.DxId2Detail = txbGeneralDx2Code_Colono.Text + "-" + txbGeneralDx2Text_Colono.Text;
                         endo.BriefHistory = txbBriefHistory_Colono.Text;
                         endo.BowelPreparationRegimen = txbGeneralBowelPreparationRegimen_Colono.Text;
                         endo.BowelPreparationResult = txbGeneralBowelPreparationResult_colono.Text;
@@ -4982,7 +5135,11 @@ namespace EndoscopicSystem.V2.Forms
 
                 LoadAutoCompleted_txbGeneralMedication_Colono();
                 LoadAutoCompleted_txbGeneralIndication_Colono();
+                LoadAutoCompleted_txbGeneralDx1Text_Colono();
+                LoadAutoCompleted_txbGeneralDx2Text_Colono();
                 LoadAutoCompleted_txbBriefHistory_Colono();
+                LoadAutoCompleted_txbGeneralBowelPreparationRegimen_Colono();
+                LoadAutoCompleted_txbGeneralBowelPreparationResult_colono();
 
                 // Finding Tab
                 if (procedureId == 2)
@@ -5784,6 +5941,9 @@ namespace EndoscopicSystem.V2.Forms
         {
             SavePictureBoxOnClick(22, pictureBoxSaved22, btnEditPic22, btnDeletePictureBoxSaved22);
         }
+
+        
+
         private void btnPictureBoxSaved23_Click(object sender, EventArgs e)
         {
             SavePictureBoxOnClick(23, pictureBoxSaved23, btnEditPic23, btnDeletePictureBoxSaved23);
