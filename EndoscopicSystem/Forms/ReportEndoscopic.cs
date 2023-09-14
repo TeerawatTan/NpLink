@@ -10,6 +10,7 @@ using System.IO;
 using System.Linq;
 using System.Windows.Forms;
 using PdfiumViewer;
+using System.Diagnostics;
 
 namespace EndoscopicSystem.Forms
 {
@@ -58,7 +59,6 @@ namespace EndoscopicSystem.Forms
                 lastPage = 3;
             }
 
-            crystalReportViewer1.Refresh();
 
             ReportDocument rprt = new ReportDocument();
 
@@ -123,8 +123,6 @@ namespace EndoscopicSystem.Forms
             rprt.SetParameterValue("@procedure", procedureId == 6 ? 1 : procedureId);
             rprt.SetParameterValue("@endoscopicId", endoscopicId);
 
-            crystalReportViewer1.ReportSource = rprt;
-            crystalReportViewer1.Refresh();
 
             string _pathFolderPDFToSave = _pathFolderPDF + hnNo + @"\" + DateTime.Now.ToString("yyyyMMdd") + @"\";
             if (!Directory.Exists(_pathFolderPDFToSave))
@@ -154,9 +152,13 @@ namespace EndoscopicSystem.Forms
 
             rprt.Export(ex);
 
-            //rprt.ExportToDisk(CrystalDecisions.Shared.ExportFormatType.PortableDocFormat, path);
-
+            // Export to Jpeg
             ExportToJpegFile(path);
+
+            // Open PDF to default browser
+            OpenPdfToDefaultBrowser(path);
+
+            this.Close();
         }
 
         private void ExportToJpegFile(string pdfPath)
@@ -191,42 +193,24 @@ namespace EndoscopicSystem.Forms
             }
         }
 
-        //private void ExportToJpegFile(string pathPdf)
-        //{
-        //    try
-        //    {
-        //        // Create an instance of PQScan.PDFToImage.PDFDocument object.
-        //        PDFDocument pdfDoc = new PDFDocument();
-
-        //        // Load PDF document from local file.
-        //        pdfDoc.LoadPDF(pathPdf);
-
-        //        // Get the total page count.
-        //        int count = pdfDoc.PageCount;
-
-        //        string pathFolderImgToSave = _pathFolderImage + hnNo + @"\" + DateTime.Now.ToString("yyyyMMdd") + @"\" + _procedureName + @"\" + _appointmentId + @"\";
-        //        if (!Directory.Exists(pathFolderImgToSave))
-        //        {
-        //            Directory.CreateDirectory(pathFolderImgToSave);
-        //        }
-
-        //        for (int i = 0; i < count; i++)
-        //        {
-        //            // Convert PDF page to image.
-        //            Bitmap jpgImage = pdfDoc.ToImage(i);
-
-        //            string file = $"{pathFolderImgToSave}{_fileNameSaved}_{i}.jpg";
-
-        //            // Save image with jpg file type.
-        //            jpgImage.Save(file, System.Drawing.Imaging.ImageFormat.Jpeg);
-        //        }
-        //    }
-        //    catch (Exception ex)
-        //    {
-        //        throw new Exception(ex.Message);
-        //    }
-        //}
-
-        
+        private void OpenPdfToDefaultBrowser(string pdfFilePath)
+        {
+            if (System.IO.File.Exists(pdfFilePath))
+            {
+                try
+                {
+                    // Start the default web browser with the PDF file
+                    Process.Start(pdfFilePath);
+                }
+                catch (Exception ex)
+                {
+                    Console.WriteLine("Error: " + ex.Message);
+                }
+            }
+            else
+            {
+                Console.WriteLine("The specified PDF file does not exist.");
+            }
+        }
     }
 }

@@ -1914,8 +1914,8 @@ namespace EndoscopicSystem.V2.Forms
                     txbFindingSupplementalProcedureCode_EGD.Text = SupplementalProcedureSplit == null ? string.Empty : SupplementalProcedureSplit[0];
                     txbFindingSupplementalProcedureText_EGD.Text = SupplementalProcedureSplit == null ? string.Empty : SupplementalProcedureSplit[1];
                     string[] SupplementalProcedure2Split = string.IsNullOrWhiteSpace(finding.SupplementalProcedure2Detail) ? null : finding.SupplementalProcedure2Detail.Split('-');
-                    txbFindingSupplementalProcedureCode_EGD.Text = SupplementalProcedure2Split == null ? string.Empty : SupplementalProcedure2Split[0];
-                    txbFindingSupplementalProcedureText_EGD.Text = SupplementalProcedure2Split == null ? string.Empty : SupplementalProcedure2Split[1];
+                    txbFindingSupplementalProcedureCode2_EGD.Text = SupplementalProcedure2Split == null ? string.Empty : SupplementalProcedure2Split[0];
+                    txbFindingSupplementalProcedureText2_EGD.Text = SupplementalProcedure2Split == null ? string.Empty : SupplementalProcedure2Split[1];
                     txbFindingProcedure_EGD.Text = finding.Procedure;
                     txbFindingDx1ID_EGD.Text = Convert.ToString(finding.DxID1 ?? 0);
                     string[] dx1EGDSplit = string.IsNullOrWhiteSpace(finding.DxID1Detail) ? null : finding.DxID1Detail.Split('-');
@@ -1963,8 +1963,8 @@ namespace EndoscopicSystem.V2.Forms
                     txbFindingSupplementalProcedureCode_ERCP.Text = SupplementalProcedureSplit == null ? string.Empty : SupplementalProcedureSplit[0];
                     txbFindingSupplementalProcedureText_ERCP.Text = SupplementalProcedureSplit == null ? string.Empty : SupplementalProcedureSplit[1];
                     string[] SupplementalProcedure2Split = string.IsNullOrWhiteSpace(finding.SupplementalProcedure2Detail) ? null : finding.SupplementalProcedure2Detail.Split('-');
-                    txbFindingSupplementalProcedureCode_ERCP.Text = SupplementalProcedure2Split == null ? string.Empty : SupplementalProcedure2Split[0];
-                    txbFindingSupplementalProcedureText_ERCP.Text = SupplementalProcedure2Split == null ? string.Empty : SupplementalProcedure2Split[1];
+                    txbFindingSupplementalProcedure2Code_ERCP.Text = SupplementalProcedure2Split == null ? string.Empty : SupplementalProcedure2Split[0];
+                    txbFindingSupplementalProcedure2Text_ERCP.Text = SupplementalProcedure2Split == null ? string.Empty : SupplementalProcedure2Split[1];
                     txbFindingProcedure_ERCP.Text = finding.Procedure;
                     txbFindingDx1ID_ERCP.Text = Convert.ToString(finding.DxID1 ?? 0);
                     string[] dx1ERCPSplit = string.IsNullOrWhiteSpace(finding.DxID1Detail) ? null : finding.DxID1Detail.Split('-');
@@ -2008,8 +2008,8 @@ namespace EndoscopicSystem.V2.Forms
                     txbFindingSupplementalProcedureCode_Ent.Text = SupplementalProcedureSplit == null ? string.Empty : SupplementalProcedureSplit[0];
                     txbFindingSupplementalProcedureText_Ent.Text = SupplementalProcedureSplit == null ? string.Empty : SupplementalProcedureSplit[1];
                     string[] SupplementalProcedure2Split = string.IsNullOrWhiteSpace(finding.SupplementalProcedure2Detail) ? null : finding.SupplementalProcedure2Detail.Split('-');
-                    txbFindingSupplementalProcedureCode_Ent.Text = SupplementalProcedure2Split == null ? string.Empty : SupplementalProcedure2Split[0];
-                    txbFindingSupplementalProcedureText_Ent.Text = SupplementalProcedure2Split == null ? string.Empty : SupplementalProcedure2Split[1];
+                    txbFindingSupplementalProcedureCode2_Ent.Text = SupplementalProcedure2Split == null ? string.Empty : SupplementalProcedure2Split[0];
+                    txbFindingSupplementalProcedureText2_Ent.Text = SupplementalProcedure2Split == null ? string.Empty : SupplementalProcedure2Split[1];
                     txbFindingProcedure_Ent.Text = finding.Procedure;
                     txbFindingDx1ID_Ent.Text = Convert.ToString(finding.DxID1 ?? 0);
                     string[] dx1EGDSplit = string.IsNullOrWhiteSpace(finding.DxID1Detail) ? null : finding.DxID1Detail.Split('-');
@@ -2143,8 +2143,8 @@ namespace EndoscopicSystem.V2.Forms
                     txbFindingSupplementalProcedureCode_Colono.Text = SupplementalProcedureSplit == null ? string.Empty : SupplementalProcedureSplit[0];
                     txbFindingSupplementalProcedureText_Colono.Text = SupplementalProcedureSplit == null ? string.Empty : SupplementalProcedureSplit[1];
                     string[] SupplementalProcedure2Split = string.IsNullOrWhiteSpace(finding.SupplementalProcedure2Detail) ? null : finding.SupplementalProcedure2Detail.Split('-');
-                    txbFindingSupplementalProcedureCode_Colono.Text = SupplementalProcedure2Split == null ? string.Empty : SupplementalProcedure2Split[0];
-                    txbFindingSupplementalProcedureText_Colono.Text = SupplementalProcedure2Split == null ? string.Empty : SupplementalProcedure2Split[1];
+                    txbFindingSupplementalProcedure2Code_Colono.Text = SupplementalProcedure2Split == null ? string.Empty : SupplementalProcedure2Split[0];
+                    txbFindingSupplementalProcedure2Text_Colono.Text = SupplementalProcedure2Split == null ? string.Empty : SupplementalProcedure2Split[1];
                     txbFindingProcedure_Colono.Text = finding.Procedure;
                     txbFindingDx1ID_Colono.Text = Convert.ToString(finding.DxID1 ?? 0);
                     string[] dx1EGDSplit = string.IsNullOrWhiteSpace(finding.DxID1Detail) ? null : finding.DxID1Detail.Split('-');
@@ -2199,8 +2199,8 @@ namespace EndoscopicSystem.V2.Forms
                     txbFindingSupplementalProcedureCode_Broncho.Text = SupplementalProcedureSplit == null ? string.Empty : SupplementalProcedureSplit[0];
                     txbFindingSupplementalProcedureText_Broncho.Text = SupplementalProcedureSplit == null ? string.Empty : SupplementalProcedureSplit[1];
                     string[] SupplementalProcedure2Split = string.IsNullOrWhiteSpace(finding.SupplementalProcedure2Detail) ? null : finding.SupplementalProcedure2Detail.Split('-');
-                    txbFindingSupplementalProcedureCode_Broncho.Text = SupplementalProcedure2Split == null ? string.Empty : SupplementalProcedure2Split[0];
-                    txbFindingSupplementalProcedureText_Broncho.Text = SupplementalProcedure2Split == null ? string.Empty : SupplementalProcedure2Split[1];
+                    txbFindingSupplementalProcedure2Code_Broncho.Text = SupplementalProcedure2Split == null ? string.Empty : SupplementalProcedure2Split[0];
+                    txbFindingSupplementalProcedure2Text_Broncho.Text = SupplementalProcedure2Split == null ? string.Empty : SupplementalProcedure2Split[1];
                     txbFindingProcedure_Broncho.Text = finding.Procedure;
                     txbFindingDx1ID_Broncho.Text = Convert.ToString(finding.DxID1 ?? 0);
                     string[] dx1EGDSplit = string.IsNullOrWhiteSpace(finding.DxID1Detail) ? null : finding.DxID1Detail.Split('-');
