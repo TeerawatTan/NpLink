@@ -128,6 +128,7 @@ namespace EndoscopicSystem
 
         private void LoadData(List<PatienModel> data)
         {
+            gridPatient.Columns.Clear();
             gridPatient.DataSource = data;
 
             gridPatient.Columns["PatientID"].Visible = false;
