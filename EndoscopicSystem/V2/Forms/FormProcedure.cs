@@ -219,8 +219,11 @@ namespace EndoscopicSystem.V2.Forms
             if (!string.IsNullOrWhiteSpace(_hnNo) && _procedureId > 0 && _endoscopicId > 0)
             {
                 btnSave.Enabled = true;
-
-                FormProceed.Self.txbStep.Text = "3,,";
+                ReportEndoscopic reportEndoscopic = new ReportEndoscopic(_hnNo, _procedureId, _endoscopicId, _appointmentId);
+                reportEndoscopic.ShowDialog();
+                reportEndoscopic = null;
+                this.Close();
+                FormProceed.Self.txbStep.Text = "0,,";
             }
             else
             {

@@ -11,6 +11,7 @@ using System.Linq;
 using System.Windows.Forms;
 using PdfiumViewer;
 using System.Diagnostics;
+using System.Threading.Tasks;
 
 namespace EndoscopicSystem.Forms
 {
@@ -32,6 +33,11 @@ namespace EndoscopicSystem.Forms
             procedureId = proc;
             endoscopicId = endosId;
             _appointmentId = appointmentId;
+        }
+
+        private void ReportEndoscopic_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            this.Dispose();
         }
 
         private void ReportEndoscopic_Load(object sender, EventArgs e)
@@ -152,11 +158,16 @@ namespace EndoscopicSystem.Forms
 
             rprt.Export(ex);
 
-            // Export to Jpeg
-            ExportToJpegFile(path);
+            rprt.Dispose();
 
-            // Open PDF to default browser
-            OpenPdfToDefaultBrowser(path);
+            Task.Run(() =>
+            {
+                // Export to Jpeg
+                ExportToJpegFile(path);
+
+                // Open PDF to default browser
+                OpenPdfToDefaultBrowser(path);
+            });
 
             this.Close();
         }
