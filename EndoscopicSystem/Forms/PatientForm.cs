@@ -220,7 +220,7 @@ namespace EndoscopicSystem
                         patient.ProcedureID = (int?)cbbProcedureList.SelectedValue;
                         patient.StaffName = txtStaffName.Text;
                         patient.RoomID = (int?)cbbStation.SelectedValue;
-                        patient.BirthDate = dtBirthDate.Value;
+                        patient.BirthDate = dtBirthDate.Value.Date;
                         patient.AppointmentDate = new DateTime(
                             dtAppointmentDate.Value.Year,
                             dtAppointmentDate.Value.Month,
@@ -274,7 +274,7 @@ namespace EndoscopicSystem
                         patient.ProcedureID = (int?)cbbProcedureList.SelectedValue;
                         patient.StaffName = txtStaffName.Text;
                         patient.RoomID = (int?)cbbStation.SelectedValue;
-                        patient.BirthDate = dtBirthDate.Value;
+                        patient.BirthDate = dtBirthDate.Value.Date;
                         patient.AppointmentDate = new DateTime(
                             dtAppointmentDate.Value.Year,
                             dtAppointmentDate.Value.Month,
@@ -689,11 +689,6 @@ namespace EndoscopicSystem
             {
                 chkRefer.Checked = false;
             }
-        }
-
-        private void dtBirthDate_ValueChanged(object sender, EventArgs e)
-        {
-            txtAge.Text = (DateTime.Today.Year - dtBirthDate.Value.Year).ToString();
         }
 
         private void LoadTextBoxAutoComplete(TextBox textBox)
