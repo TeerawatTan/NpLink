@@ -30,18 +30,18 @@ namespace EndoscopicSystem.V2.Forms
         private void InitializeComponent()
         {
             this.panelChild = new System.Windows.Forms.Panel();
+            this.dtRecordEnd = new System.Windows.Forms.DateTimePicker();
+            this.dtRecordStart = new System.Windows.Forms.DateTimePicker();
             this.txbCheckHasEgdAndColono = new System.Windows.Forms.TextBox();
             this.txbStep = new System.Windows.Forms.TextBox();
-            this.txbStartRec = new System.Windows.Forms.TextBox();
-            this.txbEndRec = new System.Windows.Forms.TextBox();
             this.panelChild.SuspendLayout();
             this.SuspendLayout();
             // 
             // panelChild
             // 
             this.panelChild.BackColor = System.Drawing.Color.DarkGray;
-            this.panelChild.Controls.Add(this.txbEndRec);
-            this.panelChild.Controls.Add(this.txbStartRec);
+            this.panelChild.Controls.Add(this.dtRecordEnd);
+            this.panelChild.Controls.Add(this.dtRecordStart);
             this.panelChild.Controls.Add(this.txbCheckHasEgdAndColono);
             this.panelChild.Controls.Add(this.txbStep);
             this.panelChild.Dock = System.Windows.Forms.DockStyle.Fill;
@@ -49,6 +49,28 @@ namespace EndoscopicSystem.V2.Forms
             this.panelChild.Name = "panelChild";
             this.panelChild.Size = new System.Drawing.Size(1388, 791);
             this.panelChild.TabIndex = 11;
+            // 
+            // dtRecordEnd
+            // 
+            this.dtRecordEnd.CustomFormat = "dd MMMM yyyy HH:mm:ss";
+            this.dtRecordEnd.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
+            this.dtRecordEnd.Location = new System.Drawing.Point(12, 90);
+            this.dtRecordEnd.Name = "dtRecordEnd";
+            this.dtRecordEnd.Size = new System.Drawing.Size(275, 20);
+            this.dtRecordEnd.TabIndex = 5;
+            this.dtRecordEnd.Value = new System.DateTime(2023, 9, 21, 16, 29, 29, 0);
+            this.dtRecordEnd.Visible = false;
+            // 
+            // dtRecordStart
+            // 
+            this.dtRecordStart.CustomFormat = "dd MMMM yyyy HH:mm:ss";
+            this.dtRecordStart.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
+            this.dtRecordStart.Location = new System.Drawing.Point(12, 64);
+            this.dtRecordStart.Name = "dtRecordStart";
+            this.dtRecordStart.Size = new System.Drawing.Size(275, 20);
+            this.dtRecordStart.TabIndex = 4;
+            this.dtRecordStart.Value = new System.DateTime(2023, 9, 21, 16, 28, 57, 0);
+            this.dtRecordStart.Visible = false;
             // 
             // txbCheckHasEgdAndColono
             // 
@@ -66,22 +88,6 @@ namespace EndoscopicSystem.V2.Forms
             this.txbStep.TabIndex = 0;
             this.txbStep.Visible = false;
             this.txbStep.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
-            // 
-            // txbStartRec
-            // 
-            this.txbStartRec.Location = new System.Drawing.Point(12, 64);
-            this.txbStartRec.Name = "txbStartRec";
-            this.txbStartRec.Size = new System.Drawing.Size(335, 20);
-            this.txbStartRec.TabIndex = 2;
-            this.txbStartRec.Visible = false;
-            // 
-            // txbEndRec
-            // 
-            this.txbEndRec.Location = new System.Drawing.Point(12, 90);
-            this.txbEndRec.Name = "txbEndRec";
-            this.txbEndRec.Size = new System.Drawing.Size(335, 20);
-            this.txbEndRec.TabIndex = 3;
-            this.txbEndRec.Visible = false;
             // 
             // FormProceed
             // 
@@ -108,7 +114,7 @@ namespace EndoscopicSystem.V2.Forms
         private System.Windows.Forms.Panel panelChild;
         public System.Windows.Forms.TextBox txbStep;
         public System.Windows.Forms.TextBox txbCheckHasEgdAndColono;
-        public System.Windows.Forms.TextBox txbEndRec;
-        public System.Windows.Forms.TextBox txbStartRec;
+        public System.Windows.Forms.DateTimePicker dtRecordEnd;
+        public System.Windows.Forms.DateTimePicker dtRecordStart;
     }
 }

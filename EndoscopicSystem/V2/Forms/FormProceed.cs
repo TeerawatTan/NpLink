@@ -85,9 +85,8 @@ namespace EndoscopicSystem.V2.Forms
                     this._pathVideo = splitParam[2];
                     string hasEgdAndColonoStep = txbCheckHasEgdAndColono.Text.Trim();
 
-                    DateTime? dtNull = null;
-                    DateTime? dateStartRec = !string.IsNullOrEmpty(txbStartRec.Text) ? DateTime.Parse(txbStartRec.Text) : dtNull;
-                    DateTime? dateEndRec = !string.IsNullOrEmpty(txbEndRec.Text) ? DateTime.Parse(txbEndRec.Text) : dtNull;
+                    DateTime? dateStartRec = dtRecordStart.Value;
+                    DateTime? dateEndRec = dtRecordEnd.Value;
 
                     if (_stepId == 1)
                     {
