@@ -92,7 +92,7 @@ namespace EndoscopicSystem
                     patientId = response.PatientID;
                     txtAge.Text = response.Age.HasValue ? response.Age.ToString() : "";
                     txtCID.Text = response.CardID;
-                    cbbFinancial.SelectedValue = response.FinancialID;
+                    cbbFinancial.SelectedValue = response.FinancialID ?? 0;
                     cbbDoctorName.SelectedValue = response.DoctorID ?? 0;
                     txtFullName.Text = response.Fullname;
                     txtHN.Text = response.HN;
@@ -103,7 +103,7 @@ namespace EndoscopicSystem
                     if (response.AppointmentDate.HasValue)
                     {
                         string[] appointment = response.AppointmentDate.Value.ToString().Split(' ');
-                        dtAppointmentDate.Value = Convert.ToDateTime(appointment[0]);
+                        dtAppointmentDate.Value = response.AppointmentDate.Value.Date;
                         dtAppointmentTime.Value = Convert.ToDateTime(appointment[1]);
                     }
                     else
@@ -114,7 +114,7 @@ namespace EndoscopicSystem
                     if (response.OperationDate.HasValue)
                     {
                         string[] operation = response.OperationDate.Value.ToString().Split(' ');
-                        dtOperatingDate.Value = Convert.ToDateTime(operation[0]);
+                        dtOperatingDate.Value = response.OperationDate.Value.Date;
                         dtOperatingTime.Value = Convert.ToDateTime(operation[1]);
                     }
                     else
