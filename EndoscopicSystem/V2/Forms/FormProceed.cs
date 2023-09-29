@@ -85,9 +85,8 @@ namespace EndoscopicSystem.V2.Forms
                     this._pathVideo = splitParam[2];
                     string hasEgdAndColonoStep = txbCheckHasEgdAndColono.Text.Trim();
 
-                    DateTime? dtNull = null;
-                    DateTime? dateStartRec = !string.IsNullOrEmpty(txbStartRec.Text) ? DateTime.Parse(txbStartRec.Text) : dtNull;
-                    DateTime? dateEndRec = !string.IsNullOrEmpty(txbEndRec.Text) ? DateTime.Parse(txbEndRec.Text) : dtNull;
+                    DateTime? dateStartRec = dtRecordStart.Value;
+                    DateTime? dateEndRec = dtRecordEnd.Value;
 
                     if (_stepId == 1)
                     {
@@ -99,12 +98,16 @@ namespace EndoscopicSystem.V2.Forms
                     }
                     else if (_stepId == 3)
                     {
-                        OpenChildForm(new ReportEndoscopic(_hn, _procedureId, _endoscopicId, _appointmentId));
+                        ReportEndoscopic reportEndoscopic = new ReportEndoscopic(_hn, _procedureId, _endoscopicId, _appointmentId);
+                        reportEndoscopic.ShowDialog();
+                        _activeForm = reportEndoscopic;
                         if (_procedureId == 6)
                         {
                             FormReport2 formReport2 = new FormReport2(_hn, _procedureId, _endoscopicId);
                             formReport2.Show();
                         }
+                        _activeForm.Dispose();
+                        _activeForm.Close();
                     }
                     else if (_stepId == 4)
                     {
@@ -121,6 +124,7 @@ namespace EndoscopicSystem.V2.Forms
                             _activeForm.Close();
                             _activeForm = null;
                         }
+                        this.Close();
                     }
                 }
                 catch (Exception ex)

@@ -1284,30 +1284,30 @@ namespace EndoscopicSystem.V2.Forms
 
             _db.SaveChanges();
         }
-        private int SaveMultiEndoscopic(string endoscopicIds)
-        {
-            try
-            {
-                MultiEndoscopic multiEndoscopic = new MultiEndoscopic()
-                {
-                    EndoscopicID = endoscopicIds,
-                    IsSaved = false,
-                    CreateDate = DateTime.Now,
-                };
+        //private int SaveMultiEndoscopic(string endoscopicIds)
+        //{
+        //    try
+        //    {
+        //        MultiEndoscopic multiEndoscopic = new MultiEndoscopic()
+        //        {
+        //            EndoscopicID = endoscopicIds,
+        //            IsSaved = false,
+        //            CreateDate = DateTime.Now,
+        //        };
 
-                if (_db.SaveChanges() > 0)
-                {
-                    return _db.MultiEndoscopics.LastOrDefault().ID;
-                }
+        //        if (_db.SaveChanges() > 0)
+        //        {
+        //            return _db.MultiEndoscopics.LastOrDefault().ID;
+        //        }
 
-                return 0;
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show("Save multi endoscopic is error : " + ex.Message);
-                throw;
-            }
-        }
+        //        return 0;
+        //    }
+        //    catch (Exception ex)
+        //    {
+        //        MessageBox.Show("Save multi endoscopic is error : " + ex.Message);
+        //        throw;
+        //    }
+        //}
         private void UpdateEndoscopic(int procedureId)
         {
             int multiProcedure = 1;
@@ -1354,31 +1354,31 @@ namespace EndoscopicSystem.V2.Forms
                 }
                 else
                 {
-                    if (procedureId == 6)
-                    {
-                        var multiEndo = _db.MultiEndoscopics.Where(w => w.ID == _endoscopicId).FirstOrDefault().EndoscopicID;
-                        idArr = multiEndo.Split(',').ToList();
-                        for (int i = 0; i < idArr.Count; i++)
-                        {
-                            endo = _db.Endoscopics.Where(x => x.EndoscopicID == int.Parse(idArr[i])).FirstOrDefault();
-                            endo.IsSaved = true;
-                            endo.StartRecordDate = _startRec;
-                            endo.EndRecordDate = _endRec;
-                        }
-                    }
-                    else
-                    {
+                    //if (procedureId == 6)
+                    //{
+                        //var multiEndo = _db.MultiEndoscopics.Where(w => w.ID == _endoscopicId).FirstOrDefault().EndoscopicID;
+                        //idArr = multiEndo.Split(',').ToList();
+                        //for (int i = 0; i < idArr.Count; i++)
+                        //{
+                        //    endo = _db.Endoscopics.Where(x => x.EndoscopicID == int.Parse(idArr[i])).FirstOrDefault();
+                        //    endo.IsSaved = true;
+                        //    endo.StartRecordDate = _startRec;
+                        //    endo.EndRecordDate = _endRec;
+                        //}
+                    //}
+                    //else
+                    //{
                         endo = _db.Endoscopics.Where(x => x.EndoscopicID == _endoscopicId).FirstOrDefault();
                         endo.IsSaved = true;
                         endo.StartRecordDate = _startRec;
                         endo.EndRecordDate = _endRec;
-                    }
+                    //}
                 }
 
-                if (procedureId == 6)
-                {
-                    _endoscopicId = SaveMultiEndoscopic(_multiId);
-                }
+                //if (procedureId == 6)
+                //{
+                //    _endoscopicId = SaveMultiEndoscopic(_multiId);
+                //}
 
                 UpdateAppointment(_endoscopicId);
                 SaveImage(_endoscopicId, procedureId);

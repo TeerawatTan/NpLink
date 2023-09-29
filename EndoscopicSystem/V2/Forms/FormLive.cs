@@ -251,9 +251,9 @@ namespace EndoscopicSystem.V2.Forms
                 btnStop_Click(sender, e);
                 Disconnect();
 
-                FormProceed.Self.txbStep.Text = "0" + ",,";
-                FormProceed.Self.txbStartRec.Text = _recordStartDate.HasValue ? _recordStartDate.Value.ToString("yyyy-MM-dd hh:mm:ss") : null;
-                FormProceed.Self.txbEndRec.Text = _recordEndDate.HasValue ? _recordEndDate.Value.ToString("yyyy-MM-dd hh:mm:ss") : null;
+                //FormProceed.Self.txbStep.Text = "0" + ",,";
+                FormProceed.Self.dtRecordStart.Value = _recordStartDate.HasValue ? _recordStartDate.Value : DateTime.Now;
+                FormProceed.Self.dtRecordEnd.Value = _recordEndDate.HasValue ? _recordEndDate.Value : DateTime.Now;
 
                 if (_procedureId == 1 && _isEgdAndColonoDone)
                 {

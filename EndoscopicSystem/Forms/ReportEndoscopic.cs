@@ -12,6 +12,7 @@ using System.Windows.Forms;
 using PdfiumViewer;
 using System.Threading;
 using System.Diagnostics;
+using System.Threading.Tasks;
 
 namespace EndoscopicSystem.Forms
 {
@@ -153,11 +154,15 @@ namespace EndoscopicSystem.Forms
 
             rprt.Export(ex);
 
-            // Export to Jpeg
-            ExportToJpegFile(path);
+            rprt.Dispose();
 
-            // Open PDF to default browser
-            OpenPdfToDefaultBrowser(path);
+            Task.Run(() =>
+            {
+                // Export to Jpeg
+                ExportToJpegFile(path);
+                // Open PDF to default browser
+                OpenPdfToDefaultBrowser(path);
+            });
 
             this.Close();
         }
