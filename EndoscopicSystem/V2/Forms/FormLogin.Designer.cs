@@ -127,7 +127,7 @@ namespace EndoscopicSystem.V2.Forms
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(295, 17);
             this.label3.TabIndex = 100;
-            this.label3.Text = "Copyright © 2020 All Rights Reserved V.2.1.1";
+            this.label3.Text = "Copyright © 2020 All Rights Reserved V.2.2.1";
             // 
             // FormLogin
             // 
