@@ -1351,8 +1351,11 @@ warning 6002: The table/view 'EndoscopicDb.dbo.v_GetImageCapturePath' does not h
             <PropertyRef Name="AppointmentID" />
           </Key>
           <Property Name="EndoscopicImageID" Type="int" Nullable="false" />
+          <Property Name="ProcedureID" Type="int" />
           <Property Name="ImagePath" Type="nvarchar" MaxLength="500" />
           <Property Name="AppointmentID" Type="int" Nullable="false" />
+          <Property Name="HN" Type="nvarchar" MaxLength="50" />
+          <Property Name="UpdateDate" Type="datetime" />
         </EntityType>
         <!--Errors Found During Generation:
 warning 6002: The table/view 'EndoscopicDb.dbo.v_HistoryEndoscopic' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
@@ -1557,8 +1560,11 @@ warning 6002: The table/view 'EndoscopicDb.dbo.v_PatientList' does not have a pr
           <EntitySet Name="v_GetImageCapturePath" EntityType="Self.v_GetImageCapturePath" store:Type="Views" store:Schema="dbo">
             <DefiningQuery>SELECT 
     [v_GetImageCapturePath].[EndoscopicImageID] AS [EndoscopicImageID], 
+    [v_GetImageCapturePath].[ProcedureID] AS [ProcedureID], 
     [v_GetImageCapturePath].[ImagePath] AS [ImagePath], 
-    [v_GetImageCapturePath].[AppointmentID] AS [AppointmentID]
+    [v_GetImageCapturePath].[AppointmentID] AS [AppointmentID], 
+    [v_GetImageCapturePath].[HN] AS [HN], 
+    [v_GetImageCapturePath].[UpdateDate] AS [UpdateDate]
     FROM [dbo].[v_GetImageCapturePath] AS [v_GetImageCapturePath]</DefiningQuery>
           </EntitySet>
           <EntitySet Name="v_HistoryEndoscopic" EntityType="Self.v_HistoryEndoscopic" store:Type="Views" store:Schema="dbo">
@@ -3186,6 +3192,9 @@ warning 6002: The table/view 'EndoscopicDb.dbo.v_PatientList' does not have a pr
           <Property Name="EndoscopicImageID" Type="Int32" Nullable="false" />
           <Property Name="ImagePath" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
           <Property Name="AppointmentID" Type="Int32" Nullable="false" />
+          <Property Name="ProcedureID" Type="Int32" />
+          <Property Name="HN" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="UpdateDate" Type="DateTime" Precision="3" />
         </EntityType>
         <EntityType Name="v_PatientList">
           <Key>
@@ -4831,6 +4840,9 @@ warning 6002: The table/view 'EndoscopicDb.dbo.v_PatientList' does not have a pr
           <EntitySetMapping Name="v_GetImageCapturePath">
             <EntityTypeMapping TypeName="EndoscopicModel.v_GetImageCapturePath">
               <MappingFragment StoreEntitySet="v_GetImageCapturePath">
+                <ScalarProperty Name="UpdateDate" ColumnName="UpdateDate" />
+                <ScalarProperty Name="HN" ColumnName="HN" />
+                <ScalarProperty Name="ProcedureID" ColumnName="ProcedureID" />
                 <ScalarProperty Name="AppointmentID" ColumnName="AppointmentID" />
                 <ScalarProperty Name="ImagePath" ColumnName="ImagePath" />
                 <ScalarProperty Name="EndoscopicImageID" ColumnName="EndoscopicImageID" />
