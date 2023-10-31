@@ -790,6 +790,13 @@ warning 6002: The table/view 'EndoscopicDb.dbo.ProcedureList' does not have a pr
           <Property Name="CreateDate" Type="datetime" />
           <Property Name="UpdateDate" Type="datetime" />
         </EntityType>
+        <EntityType Name="Diagnosis">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Name" Type="nvarchar" MaxLength="1000" Nullable="false" />
+        </EntityType>
         <EntityType Name="DuodenalBulb">
           <Key>
             <PropertyRef Name="DuodenalBulbID" />
@@ -865,6 +872,13 @@ warning 6002: The table/view 'EndoscopicDb.dbo.ProcedureList' does not have a pr
           <Property Name="FundusName" Type="nvarchar" MaxLength="200" />
           <Property Name="CreateDate" Type="datetime" />
           <Property Name="UpdateDate" Type="datetime" />
+        </EntityType>
+        <EntityType Name="GernaralOperativeFinding">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Name" Type="nvarchar" MaxLength="1000" Nullable="false" />
         </EntityType>
         <EntityType Name="Glottic">
           <Key>
@@ -1448,6 +1462,7 @@ warning 6002: The table/view 'EndoscopicDb.dbo.v_PatientList' does not have a pr
           <EntitySet Name="Comment" EntityType="Self.Comment" Schema="master" store:Type="Tables" />
           <EntitySet Name="Complication" EntityType="Self.Complication" Schema="master" store:Type="Tables" />
           <EntitySet Name="DescendingColon" EntityType="Self.DescendingColon" Schema="master" store:Type="Tables" />
+          <EntitySet Name="Diagnosis" EntityType="Self.Diagnosis" Schema="master" store:Type="Tables" />
           <EntitySet Name="DuodenalBulb" EntityType="Self.DuodenalBulb" Schema="master" store:Type="Tables" />
           <EntitySet Name="Duodenum" EntityType="Self.Duodenum" Schema="master" store:Type="Tables" />
           <EntitySet Name="EGJunction" EntityType="Self.EGJunction" Schema="master" store:Type="Tables" />
@@ -1457,6 +1472,7 @@ warning 6002: The table/view 'EndoscopicDb.dbo.v_PatientList' does not have a pr
           <EntitySet Name="Financial" EntityType="Self.Financial" Schema="master" store:Type="Tables" />
           <EntitySet Name="FindingLabel" EntityType="Self.FindingLabel" Schema="master" store:Type="Tables" />
           <EntitySet Name="Fundus" EntityType="Self.Fundus" Schema="master" store:Type="Tables" />
+          <EntitySet Name="GernaralOperativeFinding" EntityType="Self.GernaralOperativeFinding" Schema="master" store:Type="Tables" />
           <EntitySet Name="Glottic" EntityType="Self.Glottic" Schema="master" store:Type="Tables" />
           <EntitySet Name="HepaticFlexure" EntityType="Self.HepaticFlexure" Schema="master" store:Type="Tables" />
           <EntitySet Name="Histopathology" EntityType="Self.Histopathology" Schema="master" store:Type="Tables" />
@@ -1587,7 +1603,6 @@ warning 6002: The table/view 'EndoscopicDb.dbo.v_PatientList' does not have a pr
           <EntitySet Name="EndoscopicVideos" EntityType="EndoscopicModel.EndoscopicVideo" />
           <EntitySet Name="Nurses" EntityType="EndoscopicModel.Nurse" />
           <EntitySet Name="Rooms" EntityType="EndoscopicModel.Room" />
-          <EntitySet Name="AmpullaOfVaters" EntityType="EndoscopicModel.AmpullaOfVater" />
           <EntitySet Name="AnalCanals" EntityType="EndoscopicModel.AnalCanal" />
           <EntitySet Name="Anesthesias" EntityType="EndoscopicModel.Anesthesia" />
           <EntitySet Name="Antrums" EntityType="EndoscopicModel.Antrum" />
@@ -1719,6 +1734,9 @@ warning 6002: The table/view 'EndoscopicDb.dbo.v_PatientList' does not have a pr
           <EntitySet Name="Comments" EntityType="EndoscopicModel.Comment" />
           <EntitySet Name="BowelPreparationRegimen" EntityType="EndoscopicModel.BowelPreparationRegiman" />
           <EntitySet Name="BowelPreparationResults" EntityType="EndoscopicModel.BowelPreparationResult" />
+          <EntitySet Name="Diagnosis" EntityType="EndoscopicModel.Diagnosi" />
+          <EntitySet Name="GernaralOperativeFindings" EntityType="EndoscopicModel.GernaralOperativeFinding" />
+          <EntitySet Name="AmpullaOfVaters" EntityType="EndoscopicModel.AmpullaOfVater" />
           </EntityContainer>
         <EntityType Name="Doctor">
           <Key>
@@ -1786,15 +1804,6 @@ warning 6002: The table/view 'EndoscopicDb.dbo.v_PatientList' does not have a pr
           <Property Name="CreateBy" Type="Int32" />
           <Property Name="UpdateDate" Precision="3" Type="DateTime" />
           <Property Name="UpdateBy" Type="Int32" />
-        </EntityType>
-        <EntityType Name="AmpullaOfVater">
-          <Key>
-            <PropertyRef Name="AmpullaOfVaterID" />
-          </Key>
-          <Property Name="AmpullaOfVaterID" Nullable="false" annotation:StoreGeneratedPattern="Identity" Type="Int32" />
-          <Property Name="AmpullaOfVaterName" MaxLength="200" FixedLength="false" Unicode="true" Type="String" />
-          <Property Name="CreateDate" Precision="3" Type="DateTime" />
-          <Property Name="UpdateDate" Precision="3" Type="DateTime" />
         </EntityType>
         <EntityType Name="AnalCanal">
           <Key>
@@ -3226,6 +3235,29 @@ warning 6002: The table/view 'EndoscopicDb.dbo.v_PatientList' does not have a pr
           <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
           <Property Name="Name" Type="String" MaxLength="1000" FixedLength="false" Unicode="true" />
         </EntityType>
+        <EntityType Name="Diagnosi">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Name" Type="String" Nullable="false" MaxLength="1000" FixedLength="false" Unicode="true" />
+        </EntityType>
+        <EntityType Name="GernaralOperativeFinding">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Name" Type="String" Nullable="false" MaxLength="1000" FixedLength="false" Unicode="true" />
+        </EntityType>
+        <EntityType Name="AmpullaOfVater">
+          <Key>
+            <PropertyRef Name="AmpullaOfVaterID" />
+          </Key>
+          <Property Name="AmpullaOfVaterID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="AmpullaOfVaterName" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+          <Property Name="CreateDate" Type="DateTime" Precision="3" />
+          <Property Name="UpdateDate" Type="DateTime" Precision="3" />
+        </EntityType>
         </Schema>
     </edmx:ConceptualModels>
     <!-- C-S mapping content -->
@@ -3301,16 +3333,6 @@ warning 6002: The table/view 'EndoscopicDb.dbo.v_PatientList' does not have a pr
                 <ScalarProperty Name="NameTH" ColumnName="NameTH" />
                 <ScalarProperty Name="NameEN" ColumnName="NameEN" />
                 <ScalarProperty Name="RoomID" ColumnName="RoomID" />
-              </MappingFragment>
-            </EntityTypeMapping>
-          </EntitySetMapping>
-          <EntitySetMapping Name="AmpullaOfVaters">
-            <EntityTypeMapping TypeName="EndoscopicModel.AmpullaOfVater">
-              <MappingFragment StoreEntitySet="AmpullaOfVater">
-                <ScalarProperty Name="UpdateDate" ColumnName="UpdateDate" />
-                <ScalarProperty Name="CreateDate" ColumnName="CreateDate" />
-                <ScalarProperty Name="AmpullaOfVaterName" ColumnName="AmpullaOfVaterName" />
-                <ScalarProperty Name="AmpullaOfVaterID" ColumnName="AmpullaOfVaterID" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
@@ -4864,6 +4886,32 @@ warning 6002: The table/view 'EndoscopicDb.dbo.v_PatientList' does not have a pr
               <MappingFragment StoreEntitySet="BowelPreparationResult">
                 <ScalarProperty Name="Name" ColumnName="Name" />
                 <ScalarProperty Name="ID" ColumnName="ID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Diagnosis">
+            <EntityTypeMapping TypeName="EndoscopicModel.Diagnosi">
+              <MappingFragment StoreEntitySet="Diagnosis">
+                <ScalarProperty Name="Name" ColumnName="Name" />
+                <ScalarProperty Name="Id" ColumnName="Id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="GernaralOperativeFindings">
+            <EntityTypeMapping TypeName="EndoscopicModel.GernaralOperativeFinding">
+              <MappingFragment StoreEntitySet="GernaralOperativeFinding">
+                <ScalarProperty Name="Name" ColumnName="Name" />
+                <ScalarProperty Name="Id" ColumnName="Id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="AmpullaOfVaters">
+            <EntityTypeMapping TypeName="EndoscopicModel.AmpullaOfVater">
+              <MappingFragment StoreEntitySet="AmpullaOfVater">
+                <ScalarProperty Name="UpdateDate" ColumnName="UpdateDate" />
+                <ScalarProperty Name="CreateDate" ColumnName="CreateDate" />
+                <ScalarProperty Name="AmpullaOfVaterName" ColumnName="AmpullaOfVaterName" />
+                <ScalarProperty Name="AmpullaOfVaterID" ColumnName="AmpullaOfVaterID" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>

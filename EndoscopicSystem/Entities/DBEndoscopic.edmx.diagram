@@ -10,7 +10,6 @@
         <EntityTypeShape EntityType="EndoscopicModel.EndoscopicVideo" PointX="6.75" PointY="15.75" Width="1.5" />
         <EntityTypeShape EntityType="EndoscopicModel.Nurse" PointX="16.75" PointY="5.75" Width="1.5" />
         <EntityTypeShape EntityType="EndoscopicModel.Room" PointX="16.75" PointY="9.75" Width="1.5" />
-        <EntityTypeShape EntityType="EndoscopicModel.AmpullaOfVater" PointX="18.75" PointY="0.75" Width="1.5" />
         <EntityTypeShape EntityType="EndoscopicModel.AnalCanal" PointX="18.75" PointY="3.75" Width="1.5" />
         <EntityTypeShape EntityType="EndoscopicModel.Anesthesia" PointX="14.75" PointY="7.75" Width="1.5" />
         <EntityTypeShape EntityType="EndoscopicModel.Antrum" PointX="18.75" PointY="6.75" Width="1.5" />
@@ -112,6 +111,9 @@
         <EntityTypeShape EntityType="EndoscopicModel.Comment" Width="1.5" PointX="30.375" PointY="21.75" />
         <EntityTypeShape EntityType="EndoscopicModel.BowelPreparationRegiman" Width="1.5" PointX="30.375" PointY="24.75" />
         <EntityTypeShape EntityType="EndoscopicModel.BowelPreparationResult" Width="1.5" PointX="30.375" PointY="27.75" />
+        <EntityTypeShape EntityType="EndoscopicModel.Diagnosi" Width="1.5" PointX="30.375" PointY="30.75" />
+        <EntityTypeShape EntityType="EndoscopicModel.GernaralOperativeFinding" Width="1.5" PointX="31.375" PointY="8.75" />
+        <EntityTypeShape EntityType="EndoscopicModel.AmpullaOfVater" Width="1.5" PointX="17.375" PointY="0.75" />
       </Diagram>
     </edmx:Diagrams>
   </edmx:Designer>

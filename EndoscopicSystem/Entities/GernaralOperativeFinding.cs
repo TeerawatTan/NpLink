@@ -12,12 +12,9 @@ namespace EndoscopicSystem.Entities
     using System;
     using System.Collections.Generic;
     
-    public partial class MultiEndoscopic
+    public partial class GernaralOperativeFinding
     {
-        public int ID { get; set; }
-        public string EndoscopicID { get; set; }
-        public bool IsSaved { get; set; }
-        public Nullable<System.DateTime> CreateDate { get; set; }
-        public Nullable<System.DateTime> UpdateDate { get; set; }
+        public int Id { get; set; }
+        public string Name { get; set; }
     }
 }

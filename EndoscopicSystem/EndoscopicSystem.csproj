@@ -221,6 +221,9 @@
     <Compile Include="Entities\DescendingColon.cs">
       <DependentUpon>DBEndoscopic.tt</DependentUpon>
     </Compile>
+    <Compile Include="Entities\Diagnosi.cs">
+      <DependentUpon>DBEndoscopic.tt</DependentUpon>
+    </Compile>
     <Compile Include="Entities\Doctor.cs">
       <DependentUpon>DBEndoscopic.tt</DependentUpon>
     </Compile>
@@ -275,6 +278,9 @@
     <Compile Include="Entities\GastroscopyReport_Result.cs">
       <DependentUpon>DBEndoscopic.tt</DependentUpon>
     </Compile>
+    <Compile Include="Entities\GernaralOperativeFinding.cs">
+      <DependentUpon>DBEndoscopic.tt</DependentUpon>
+    </Compile>
     <Compile Include="Entities\Glottic.cs">
       <DependentUpon>DBEndoscopic.tt</DependentUpon>
     </Compile>
@@ -327,9 +333,6 @@
       <DependentUpon>DBEndoscopic.tt</DependentUpon>
     </Compile>
     <Compile Include="Entities\Medication.cs">
-      <DependentUpon>DBEndoscopic.tt</DependentUpon>
-    </Compile>
-    <Compile Include="Entities\MultiEndoscopic.cs">
       <DependentUpon>DBEndoscopic.tt</DependentUpon>
     </Compile>
     <Compile Include="Entities\NasalCavity.cs">
