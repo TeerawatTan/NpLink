@@ -329,9 +329,6 @@
     <Compile Include="Entities\Medication.cs">
       <DependentUpon>DBEndoscopic.tt</DependentUpon>
     </Compile>
-    <Compile Include="Entities\MultiEndoscopic.cs">
-      <DependentUpon>DBEndoscopic.tt</DependentUpon>
-    </Compile>
     <Compile Include="Entities\NasalCavity.cs">
       <DependentUpon>DBEndoscopic.tt</DependentUpon>
     </Compile>

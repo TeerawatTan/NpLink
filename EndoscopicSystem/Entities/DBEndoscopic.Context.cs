@@ -128,12 +128,12 @@ namespace EndoscopicSystem.Entities
         public virtual DbSet<Endoscopic> Endoscopics { get; set; }
         public virtual DbSet<v_HistoryEndoscopic> v_HistoryEndoscopic { get; set; }
         public virtual DbSet<Finding> Findings { get; set; }
-        public virtual DbSet<v_GetImageCapturePath> v_GetImageCapturePath { get; set; }
         public virtual DbSet<v_PatientList> v_PatientList { get; set; }
         public virtual DbSet<BriefHistory> BriefHistories { get; set; }
         public virtual DbSet<Comment> Comments { get; set; }
         public virtual DbSet<BowelPreparationRegiman> BowelPreparationRegimen { get; set; }
         public virtual DbSet<BowelPreparationResult> BowelPreparationResults { get; set; }
+        public virtual DbSet<v_GetImageCapturePath> v_GetImageCapturePath { get; set; }
     
         public virtual ObjectResult<BrochoscopyReport_Result> BrochoscopyReport(string hn, Nullable<int> procedure, Nullable<int> endoscopicId)
         {

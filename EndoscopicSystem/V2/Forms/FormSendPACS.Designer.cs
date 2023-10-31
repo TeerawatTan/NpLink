@@ -52,6 +52,8 @@ namespace EndoscopicSystem.V2.Forms
             this.label10 = new System.Windows.Forms.Label();
             this.listBox1 = new System.Windows.Forms.ListBox();
             this.listBox2 = new System.Windows.Forms.ListBox();
+            this.cbbProcedureList = new System.Windows.Forms.ComboBox();
+            this.label9 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();
@@ -87,7 +89,7 @@ namespace EndoscopicSystem.V2.Forms
             // txbAccessNo
             // 
             this.txbAccessNo.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
-            this.txbAccessNo.Location = new System.Drawing.Point(161, 17);
+            this.txbAccessNo.Location = new System.Drawing.Point(161, 51);
             this.txbAccessNo.Name = "txbAccessNo";
             this.txbAccessNo.Size = new System.Drawing.Size(527, 29);
             this.txbAccessNo.TabIndex = 133;
@@ -96,7 +98,7 @@ namespace EndoscopicSystem.V2.Forms
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
-            this.label2.Location = new System.Drawing.Point(21, 22);
+            this.label2.Location = new System.Drawing.Point(21, 56);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(107, 24);
             this.label2.TabIndex = 134;
@@ -106,7 +108,7 @@ namespace EndoscopicSystem.V2.Forms
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
-            this.label3.Location = new System.Drawing.Point(21, 57);
+            this.label3.Location = new System.Drawing.Point(21, 91);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(88, 24);
             this.label3.TabIndex = 136;
@@ -115,7 +117,7 @@ namespace EndoscopicSystem.V2.Forms
             // txbPatitientId
             // 
             this.txbPatitientId.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
-            this.txbPatitientId.Location = new System.Drawing.Point(161, 52);
+            this.txbPatitientId.Location = new System.Drawing.Point(161, 86);
             this.txbPatitientId.Name = "txbPatitientId";
             this.txbPatitientId.Size = new System.Drawing.Size(527, 29);
             this.txbPatitientId.TabIndex = 135;
@@ -124,7 +126,7 @@ namespace EndoscopicSystem.V2.Forms
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
-            this.label4.Location = new System.Drawing.Point(21, 92);
+            this.label4.Location = new System.Drawing.Point(21, 126);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(122, 24);
             this.label4.TabIndex = 138;
@@ -133,7 +135,7 @@ namespace EndoscopicSystem.V2.Forms
             // txbPatitentName
             // 
             this.txbPatitentName.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
-            this.txbPatitentName.Location = new System.Drawing.Point(161, 87);
+            this.txbPatitentName.Location = new System.Drawing.Point(161, 121);
             this.txbPatitentName.Name = "txbPatitentName";
             this.txbPatitentName.Size = new System.Drawing.Size(527, 29);
             this.txbPatitentName.TabIndex = 137;
@@ -142,7 +144,7 @@ namespace EndoscopicSystem.V2.Forms
             // 
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
-            this.label5.Location = new System.Drawing.Point(21, 127);
+            this.label5.Location = new System.Drawing.Point(21, 161);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(110, 24);
             this.label5.TabIndex = 140;
@@ -151,7 +153,7 @@ namespace EndoscopicSystem.V2.Forms
             // txbPhysician
             // 
             this.txbPhysician.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
-            this.txbPhysician.Location = new System.Drawing.Point(161, 162);
+            this.txbPhysician.Location = new System.Drawing.Point(161, 196);
             this.txbPhysician.Name = "txbPhysician";
             this.txbPhysician.Size = new System.Drawing.Size(527, 29);
             this.txbPhysician.TabIndex = 139;
@@ -160,7 +162,7 @@ namespace EndoscopicSystem.V2.Forms
             // 
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
-            this.label6.Location = new System.Drawing.Point(21, 162);
+            this.label6.Location = new System.Drawing.Point(21, 196);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(90, 24);
             this.label6.TabIndex = 142;
@@ -170,7 +172,7 @@ namespace EndoscopicSystem.V2.Forms
             // 
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
-            this.label7.Location = new System.Drawing.Point(21, 197);
+            this.label7.Location = new System.Drawing.Point(21, 231);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(104, 24);
             this.label7.TabIndex = 144;
@@ -179,15 +181,17 @@ namespace EndoscopicSystem.V2.Forms
             // txbDescription
             // 
             this.txbDescription.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
-            this.txbDescription.Location = new System.Drawing.Point(161, 197);
+            this.txbDescription.Location = new System.Drawing.Point(161, 231);
             this.txbDescription.Multiline = true;
             this.txbDescription.Name = "txbDescription";
-            this.txbDescription.Size = new System.Drawing.Size(527, 72);
+            this.txbDescription.Size = new System.Drawing.Size(527, 49);
             this.txbDescription.TabIndex = 143;
             // 
             // groupBox1
             // 
+            this.groupBox1.Controls.Add(this.cbbProcedureList);
             this.groupBox1.Controls.Add(this.dtDateOfBirth);
+            this.groupBox1.Controls.Add(this.label9);
             this.groupBox1.Controls.Add(this.label2);
             this.groupBox1.Controls.Add(this.txbAccessNo);
             this.groupBox1.Controls.Add(this.label7);
@@ -200,9 +204,9 @@ namespace EndoscopicSystem.V2.Forms
             this.groupBox1.Controls.Add(this.label5);
             this.groupBox1.Controls.Add(this.txbPhysician);
             this.groupBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
-            this.groupBox1.Location = new System.Drawing.Point(15, 12);
+            this.groupBox1.Location = new System.Drawing.Point(15, 4);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(720, 275);
+            this.groupBox1.Size = new System.Drawing.Size(720, 283);
             this.groupBox1.TabIndex = 147;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Information";
@@ -212,7 +216,7 @@ namespace EndoscopicSystem.V2.Forms
             this.dtDateOfBirth.CustomFormat = "dd/MM/yyyy";
             this.dtDateOfBirth.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
             this.dtDateOfBirth.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.dtDateOfBirth.Location = new System.Drawing.Point(161, 127);
+            this.dtDateOfBirth.Location = new System.Drawing.Point(161, 161);
             this.dtDateOfBirth.Name = "dtDateOfBirth";
             this.dtDateOfBirth.Size = new System.Drawing.Size(302, 29);
             this.dtDateOfBirth.TabIndex = 145;
@@ -290,6 +294,28 @@ namespace EndoscopicSystem.V2.Forms
             this.listBox2.TabIndex = 154;
             this.listBox2.Visible = false;
             // 
+            // cbbProcedureList
+            // 
+            this.cbbProcedureList.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cbbProcedureList.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
+            this.cbbProcedureList.FormattingEnabled = true;
+            this.cbbProcedureList.Location = new System.Drawing.Point(161, 14);
+            this.cbbProcedureList.Margin = new System.Windows.Forms.Padding(2);
+            this.cbbProcedureList.Name = "cbbProcedureList";
+            this.cbbProcedureList.Size = new System.Drawing.Size(302, 32);
+            this.cbbProcedureList.TabIndex = 146;
+            this.cbbProcedureList.SelectedIndexChanged += new System.EventHandler(this.cbbProcedureList_SelectedIndexChanged);
+            // 
+            // label9
+            // 
+            this.label9.AutoSize = true;
+            this.label9.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
+            this.label9.Location = new System.Drawing.Point(21, 22);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(131, 24);
+            this.label9.TabIndex = 134;
+            this.label9.Text = "Procedure List";
+            // 
             // FormSendPACS
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -341,5 +367,7 @@ namespace EndoscopicSystem.V2.Forms
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.ListBox listBox1;
         private System.Windows.Forms.ListBox listBox2;
+        private System.Windows.Forms.ComboBox cbbProcedureList;
+        private System.Windows.Forms.Label label9;
     }
 }
