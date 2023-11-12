@@ -323,6 +323,7 @@ namespace EndoscopicSystem.V2.Forms
 
                         _isSave = true;
                         btnNext.Visible = true;
+                        btnNext.Focus();
                     }
                     else
                     {

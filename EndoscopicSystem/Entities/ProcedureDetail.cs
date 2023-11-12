@@ -19,5 +19,6 @@ namespace EndoscopicSystem.Entities
         public Nullable<bool> IsTopic { get; set; }
         public bool IsActive { get; set; }
         public Nullable<int> ProcedureId { get; set; }
+        public bool IsDisplay { get; set; }
     }
 }

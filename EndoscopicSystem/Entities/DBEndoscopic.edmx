@@ -780,6 +780,7 @@ warning 6002: The table/view 'EndoscopicDb.dbo.ProcedureList' does not have a pr
           <Property Name="Name" Type="nvarchar" MaxLength="250" />
           <Property Name="IsActive" Type="bit" Nullable="false" />
           <Property Name="ProcedureId" Type="int" />
+          <Property Name="IsDisplay" Type="bit" Nullable="false" />
         </EntityType>
         <EntityType Name="DescendingColon">
           <Key>
@@ -904,6 +905,7 @@ warning 6002: The table/view 'EndoscopicDb.dbo.ProcedureList' does not have a pr
           <Property Name="Name" Type="nvarchar" MaxLength="250" />
           <Property Name="IsActive" Type="bit" Nullable="false" />
           <Property Name="ProcedureId" Type="int" />
+          <Property Name="IsDisplay" Type="bit" Nullable="false" />
         </EntityType>
         <EntityType Name="ICD10">
           <Key>
@@ -1094,6 +1096,7 @@ warning 6002: The table/view 'EndoscopicDb.dbo.ProcedureList' does not have a pr
           <Property Name="IsTopic" Type="bit" />
           <Property Name="IsActive" Type="bit" Nullable="false" />
           <Property Name="ProcedureId" Type="int" />
+          <Property Name="IsDisplay" Type="bit" Nullable="false" />
         </EntityType>
         <EntityType Name="Pylorus">
           <Key>
@@ -1118,6 +1121,7 @@ warning 6002: The table/view 'EndoscopicDb.dbo.ProcedureList' does not have a pr
           <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
           <Property Name="Name" Type="nvarchar" MaxLength="250" />
           <Property Name="IsActive" Type="bit" Nullable="false" />
+          <Property Name="IsDisplay" Type="bit" Nullable="false" />
         </EntityType>
         <EntityType Name="Recommendation">
           <Key>
@@ -1127,6 +1131,7 @@ warning 6002: The table/view 'EndoscopicDb.dbo.ProcedureList' does not have a pr
           <Property Name="Name" Type="nvarchar" MaxLength="250" />
           <Property Name="IsActive" Type="bit" Nullable="false" />
           <Property Name="ProcedureId" Type="int" />
+          <Property Name="IsDisplay" Type="bit" Nullable="false" />
         </EntityType>
         <EntityType Name="Rectum">
           <Key>
@@ -2859,6 +2864,7 @@ warning 6002: The table/view 'EndoscopicDb.dbo.v_PatientList' does not have a pr
           <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
           <Property Name="Name" Type="String" MaxLength="250" FixedLength="false" Unicode="true" />
           <Property Name="IsActive" Type="Boolean" Nullable="false" />
+          <Property Name="IsDisplay" Type="Boolean" Nullable="false" />
         </EntityType>
         <EntityType Name="Complication">
           <Key>
@@ -2868,6 +2874,7 @@ warning 6002: The table/view 'EndoscopicDb.dbo.v_PatientList' does not have a pr
           <Property Name="Name" Type="String" MaxLength="250" FixedLength="false" Unicode="true" />
           <Property Name="IsActive" Type="Boolean" Nullable="false" />
           <Property Name="ProcedureId" Type="Int32" />
+          <Property Name="IsDisplay" Type="Boolean" Nullable="false" />
         </EntityType>
         <EntityType Name="Histopathology">
           <Key>
@@ -2877,6 +2884,7 @@ warning 6002: The table/view 'EndoscopicDb.dbo.v_PatientList' does not have a pr
           <Property Name="Name" Type="String" MaxLength="250" FixedLength="false" Unicode="true" />
           <Property Name="IsActive" Type="Boolean" Nullable="false" />
           <Property Name="ProcedureId" Type="Int32" />
+          <Property Name="IsDisplay" Type="Boolean" Nullable="false" />
         </EntityType>
         <EntityType Name="ProcedureDetail">
           <Key>
@@ -2887,6 +2895,7 @@ warning 6002: The table/view 'EndoscopicDb.dbo.v_PatientList' does not have a pr
           <Property Name="IsTopic" Type="Boolean" />
           <Property Name="IsActive" Type="Boolean" Nullable="false" />
           <Property Name="ProcedureId" Type="Int32" />
+          <Property Name="IsDisplay" Type="Boolean" Nullable="false" />
         </EntityType>
         <EntityType Name="Recommendation">
           <Key>
@@ -2896,6 +2905,7 @@ warning 6002: The table/view 'EndoscopicDb.dbo.v_PatientList' does not have a pr
           <Property Name="Name" Type="String" MaxLength="250" FixedLength="false" Unicode="true" />
           <Property Name="IsActive" Type="Boolean" Nullable="false" />
           <Property Name="ProcedureId" Type="Int32" />
+          <Property Name="IsDisplay" Type="Boolean" Nullable="false" />
         </EntityType>
         <EntityType Name="Hospital">
           <Key>
@@ -4494,6 +4504,7 @@ warning 6002: The table/view 'EndoscopicDb.dbo.v_PatientList' does not have a pr
           <EntitySetMapping Name="RapidUreaseTests">
             <EntityTypeMapping TypeName="EndoscopicModel.RapidUreaseTest">
               <MappingFragment StoreEntitySet="RapidUreaseTest">
+                <ScalarProperty Name="IsDisplay" ColumnName="IsDisplay" />
                 <ScalarProperty Name="IsActive" ColumnName="IsActive" />
                 <ScalarProperty Name="Name" ColumnName="Name" />
                 <ScalarProperty Name="ID" ColumnName="ID" />
@@ -4503,6 +4514,7 @@ warning 6002: The table/view 'EndoscopicDb.dbo.v_PatientList' does not have a pr
           <EntitySetMapping Name="Complications">
             <EntityTypeMapping TypeName="EndoscopicModel.Complication">
               <MappingFragment StoreEntitySet="Complication">
+                <ScalarProperty Name="IsDisplay" ColumnName="IsDisplay" />
                 <ScalarProperty Name="ProcedureId" ColumnName="ProcedureId" />
                 <ScalarProperty Name="IsActive" ColumnName="IsActive" />
                 <ScalarProperty Name="Name" ColumnName="Name" />
@@ -4513,6 +4525,7 @@ warning 6002: The table/view 'EndoscopicDb.dbo.v_PatientList' does not have a pr
           <EntitySetMapping Name="Histopathologies">
             <EntityTypeMapping TypeName="EndoscopicModel.Histopathology">
               <MappingFragment StoreEntitySet="Histopathology">
+                <ScalarProperty Name="IsDisplay" ColumnName="IsDisplay" />
                 <ScalarProperty Name="ProcedureId" ColumnName="ProcedureId" />
                 <ScalarProperty Name="IsActive" ColumnName="IsActive" />
                 <ScalarProperty Name="Name" ColumnName="Name" />
@@ -4523,6 +4536,7 @@ warning 6002: The table/view 'EndoscopicDb.dbo.v_PatientList' does not have a pr
           <EntitySetMapping Name="ProcedureDetails">
             <EntityTypeMapping TypeName="EndoscopicModel.ProcedureDetail">
               <MappingFragment StoreEntitySet="ProcedureDetail">
+                <ScalarProperty Name="IsDisplay" ColumnName="IsDisplay" />
                 <ScalarProperty Name="ProcedureId" ColumnName="ProcedureId" />
                 <ScalarProperty Name="IsActive" ColumnName="IsActive" />
                 <ScalarProperty Name="IsTopic" ColumnName="IsTopic" />
@@ -4534,6 +4548,7 @@ warning 6002: The table/view 'EndoscopicDb.dbo.v_PatientList' does not have a pr
           <EntitySetMapping Name="Recommendations">
             <EntityTypeMapping TypeName="EndoscopicModel.Recommendation">
               <MappingFragment StoreEntitySet="Recommendation">
+                <ScalarProperty Name="IsDisplay" ColumnName="IsDisplay" />
                 <ScalarProperty Name="ProcedureId" ColumnName="ProcedureId" />
                 <ScalarProperty Name="IsActive" ColumnName="IsActive" />
                 <ScalarProperty Name="Name" ColumnName="Name" />
