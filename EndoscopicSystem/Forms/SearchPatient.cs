@@ -30,7 +30,7 @@ namespace EndoscopicSystem
         private void SearchPatientForm_Load(object sender, EventArgs e)
         {
             var data = db.v_PatientList.ToList();
-            
+
             List<PatienModel> list = data.Select((s, i) => new PatienModel
             {
                 No = i + 1,
@@ -75,7 +75,7 @@ namespace EndoscopicSystem
             cbbDoctor.DataSource = list.GetEndoscopistList();
             cbbDoctor.SelectedIndex = 0;
         }
-        
+
         private void btnSearch_Click(object sender, EventArgs e)
         {
             var data = db.v_PatientList.ToList();
@@ -128,6 +128,7 @@ namespace EndoscopicSystem
 
         private void LoadData(List<PatienModel> data)
         {
+            gridPatient.Columns.Clear();
             gridPatient.DataSource = data;
 
             gridPatient.Columns["PatientID"].Visible = false;
@@ -153,7 +154,7 @@ namespace EndoscopicSystem
 
             btn.UseColumnTextForButtonValue = true;
             btn.DefaultCellStyle.BackColor = Color.Green;
-            
+
             gridPatient.Columns.Add(btn);
         }
 
