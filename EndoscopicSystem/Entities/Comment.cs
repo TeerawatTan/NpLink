@@ -12,12 +12,10 @@ namespace EndoscopicSystem.Entities
     using System;
     using System.Collections.Generic;
     
-    public partial class ICD10
+    public partial class Comment
     {
-        public int ID { get; set; }
-        public string Code { get; set; }
-        public string Name { get; set; }
+        public int CommentID { get; set; }
+        public string CommentText { get; set; }
         public Nullable<int> ProcedureId { get; set; }
-        public bool IsDisplay { get; set; }
     }
 }

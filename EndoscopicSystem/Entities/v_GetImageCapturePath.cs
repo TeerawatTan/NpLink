@@ -15,7 +15,10 @@ namespace EndoscopicSystem.Entities
     public partial class v_GetImageCapturePath
     {
         public int EndoscopicImageID { get; set; }
+        public Nullable<int> ProcedureID { get; set; }
         public string ImagePath { get; set; }
         public int AppointmentID { get; set; }
+        public string HN { get; set; }
+        public Nullable<System.DateTime> UpdateDate { get; set; }
     }
 }

@@ -20,7 +20,7 @@ namespace EndoscopicSystem.V2.Forms
     public partial class FormPreviewReport : Form
     {
         private readonly string _pathFolderImage = ConfigurationManager.AppSettings["pathSaveImageCapture"];
-        private string _pathFolderImageSave, _hnNo, _pathImg, _fileName = ".jpg", _vdoPath;
+        private string _pathFolderImageSave, _hnNo, _pathImg, _fileName = ".jpg", _vdoPath, _multiId;
         private readonly string _initialDirectoryUpload = "C://Desktop";
         private readonly string _titleUpload = "Select image to be upload.";
         private readonly string _filterUpload = "Image Only(*.jpg; *.jpeg; *.gif; *.bmp; *.png)|*.jpg; *.jpeg; *.gif; *.bmp; *.png";
@@ -532,7 +532,7 @@ namespace EndoscopicSystem.V2.Forms
                 pictureBox.DoDragDrop(pictureBox.ImageLocation, DragDropEffects.Copy);
             }
         }
-        
+
         #region Refresh PictureBox
         private void GeneratePictureBoxWwithImages(List<string> img)
         {
@@ -598,6 +598,8 @@ namespace EndoscopicSystem.V2.Forms
                 {
                     ac.Add(item.Name);
                 }
+                textBox.AutoCompleteSource = AutoCompleteSource.CustomSource;
+                textBox.AutoCompleteMode = AutoCompleteMode.SuggestAppend;
                 textBox.AutoCompleteCustomSource = ac;
             }
         }
@@ -1282,53 +1284,105 @@ namespace EndoscopicSystem.V2.Forms
 
             _db.SaveChanges();
         }
+        //private int SaveMultiEndoscopic(string endoscopicIds)
+        //{
+        //    try
+        //    {
+        //        MultiEndoscopic multiEndoscopic = new MultiEndoscopic()
+        //        {
+        //            EndoscopicID = endoscopicIds,
+        //            IsSaved = false,
+        //            CreateDate = DateTime.Now,
+        //        };
+
+        //        if (_db.SaveChanges() > 0)
+        //        {
+        //            return _db.MultiEndoscopics.LastOrDefault().ID;
+        //        }
+
+        //        return 0;
+        //    }
+        //    catch (Exception ex)
+        //    {
+        //        MessageBox.Show("Save multi endoscopic is error : " + ex.Message);
+        //        throw;
+        //    }
+        //}
         private void UpdateEndoscopic(int procedureId)
         {
+            int multiProcedure = 1;
             try
             {
+                List<string> idArr = new List<string>();
+
                 Endoscopic endo = new Endoscopic();
                 if (_endoscopicId == 0)
                 {
-                    Endoscopic endoscopic = new Endoscopic()
+                    if (procedureId == 6)
                     {
-                        PatientID = _patientId,
-                        IsSaved = false,
-                        ProcedureID = procedureId,
-                        StartRecordDate = _startRec,
-                        EndRecordDate = _endRec,
-                        CreateBy = _id,
-                        CreateDate = DateTime.Now
-                    };
-                    _db.Endoscopics.Add(endoscopic);
+                        multiProcedure += 1;
+                    }
 
-                    Finding finding = new Finding() { PatientID = _patientId, CreateBy = _id, CreateDate = DateTime.Now };
-                    _db.Findings.Add(finding);
-                    if (_db.SaveChanges() > 0)
+                    for (int i = 0; i < multiProcedure; i++)
                     {
-                        var endos = _db.Endoscopics.ToList();
-                        endo = endos.LastOrDefault();
-                        _endoscopicId = endo.EndoscopicID;
+                        Endoscopic endoscopic = new Endoscopic()
+                        {
+                            PatientID = _patientId,
+                            IsSaved = false,
+                            ProcedureID = procedureId,
+                            StartRecordDate = _startRec,
+                            EndRecordDate = _endRec,
+                            CreateBy = _id,
+                            CreateDate = DateTime.Now
+                        };
+                        _db.Endoscopics.Add(endoscopic);
+
+                        Finding finding = new Finding() { PatientID = _patientId, CreateBy = _id, CreateDate = DateTime.Now };
+                        _db.Findings.Add(finding);
+                        if (_db.SaveChanges() > 0)
+                        {
+                            endo = _db.Endoscopics.LastOrDefault();
+                            _endoscopicId = endo.EndoscopicID;
+
+                            if (procedureId == 6)
+                            {
+                                idArr.Add(endo.EndoscopicID.ToString());
+                                _multiId = string.Join(",", idArr);
+                            }
+                        }
                     }
                 }
                 else
                 {
-                    endo = _db.Endoscopics.Where(x => x.EndoscopicID == _endoscopicId).FirstOrDefault();
-                    endo.IsSaved = true;
-                    endo.StartRecordDate = _startRec;
-                    endo.EndRecordDate = _endRec;
+                    //if (procedureId == 6)
+                    //{
+                        //var multiEndo = _db.MultiEndoscopics.Where(w => w.ID == _endoscopicId).FirstOrDefault().EndoscopicID;
+                        //idArr = multiEndo.Split(',').ToList();
+                        //for (int i = 0; i < idArr.Count; i++)
+                        //{
+                        //    endo = _db.Endoscopics.Where(x => x.EndoscopicID == int.Parse(idArr[i])).FirstOrDefault();
+                        //    endo.IsSaved = true;
+                        //    endo.StartRecordDate = _startRec;
+                        //    endo.EndRecordDate = _endRec;
+                        //}
+                    //}
+                    //else
+                    //{
+                        endo = _db.Endoscopics.Where(x => x.EndoscopicID == _endoscopicId).FirstOrDefault();
+                        endo.IsSaved = true;
+                        endo.StartRecordDate = _startRec;
+                        endo.EndRecordDate = _endRec;
+                    //}
                 }
 
-                UpdateAppointment(endo.EndoscopicID);
-                //if (procedureId == 8)
+                //if (procedureId == 6)
                 //{
-                //    SaveImageForLaparoscopy(endo.EndoscopicID, procedureId);
+                //    _endoscopicId = SaveMultiEndoscopic(_multiId);
                 //}
-                //else
-                //{
-                SaveImage(endo.EndoscopicID, procedureId);
-                //}
-                //SaveAllImage(endo.EndoscopicID, procedureId);
-                SaveVideo(endo.EndoscopicID, procedureId);
+
+                UpdateAppointment(_endoscopicId);
+                SaveImage(_endoscopicId, procedureId);
+                SaveVideo(_endoscopicId, procedureId);
             }
             catch (Exception ex)
             {

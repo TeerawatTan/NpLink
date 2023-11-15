@@ -23,7 +23,7 @@ namespace EndoscopicSystem.V2.Forms
         private readonly EndoscopicEntities _db = new EndoscopicEntities();
         private Patient _patient = new Patient();
         private readonly GetDropdownList _dropdownRepo = new GetDropdownList();
-        private int _id, _appointmentId, _item, _count;
+        private int _id, _appointmentId, _item, _count, _procedureId;
         private string _hnNo, _procedureName;
         private string _dicomPath = ConfigurationManager.AppSettings["pathSaveDicom"];
         private string _hostPACS = ConfigurationManager.AppSettings["hostPACS"];
@@ -31,6 +31,8 @@ namespace EndoscopicSystem.V2.Forms
         private string _source = ConfigurationManager.AppSettings["sourcePACS"];
         private string _destination = ConfigurationManager.AppSettings["destinationPACS"];
         private string _pathFolderImage = ConfigurationManager.AppSettings["pathSaveImageCapture"];
+        private readonly GetDropdownList list = new GetDropdownList();
+        private List<int> _listProcedureId = new List<int>();
 
         public FormSendPACS(int userId, int appointmentId, string hn)
         {
@@ -169,6 +171,15 @@ namespace EndoscopicSystem.V2.Forms
                 MessageBox.Show("Send to PACS completed.", "successful", MessageBoxButtons.OK);
         }
 
+        private void cbbProcedureList_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if ((int)cbbProcedureList.SelectedValue > 0 && (int)cbbProcedureList.SelectedValue != _procedureId)
+            {
+                GetAllImageAndGeneratePictureViewer((int)cbbProcedureList.SelectedValue);
+                _procedureId = (int)cbbProcedureList.SelectedValue;
+            }
+        }
+
         private void FormSendPACS_Load(object sender, EventArgs e)
         {
             if (string.IsNullOrEmpty(_hostPACS) || string.IsNullOrEmpty(_source) || string.IsNullOrEmpty(_destination))
@@ -185,20 +196,50 @@ namespace EndoscopicSystem.V2.Forms
                 return;
             }
 
+            if (!_patient.ProcedureID.HasValue)
+            {
+                return;
+            }
+
+            this._procedureId = _patient.ProcedureID.Value;
+
             txbPatitientId.Text = _patient.HN;
             txbPatitentName.Text = _patient.Fullname;
             _procedureName = _dropdownRepo.GetProcedureList().Where(w => w.ProcedureID == _patient.ProcedureID).FirstOrDefault().ProcedureName;
 
-            var query = _db.v_GetImageCapturePath.FirstOrDefault(f => f.AppointmentID == _appointmentId);
+            GetAllImageAndGeneratePictureViewer(this._procedureId);
 
-            if (query is null)
+            var getDropdownProcedureList = list.GetProcedureList();
+
+            cbbProcedureList.ValueMember = "ProcedureID";
+            cbbProcedureList.DisplayMember = "ProcedureName";
+            cbbProcedureList.DataSource = getDropdownProcedureList.Where(w => _listProcedureId.Contains(w.ProcedureID)).ToList();
+            cbbProcedureList.SelectedValue = _procedureId;
+        }
+
+        private void GetAllImageAndGeneratePictureViewer(int procedureId)
+        {
+            var queryies = _db.v_GetImageCapturePath.Where(w => w.HN == _hnNo).ToList();
+
+            if (queryies == null || queryies.Count <= 0)
             {
                 MessageBox.Show("File not found !!", "Warning", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 this.Close();
                 return;
             }
 
-            string imgPathOrigin = query.ImagePath;
+            if (procedureId <= 0)
+            {
+                this.Close();
+                return;
+            }
+            else
+            {
+                _listProcedureId = queryies.Select(s => s.ProcedureID ?? 0).Distinct().ToList();
+                queryies = queryies.Where(w => w.ProcedureID == procedureId).OrderByDescending(o => o.UpdateDate).ToList();
+            }
+
+            string imgPathOrigin = queryies.FirstOrDefault().ImagePath;
 
             string splitImgPath = ImageHelper.GetUntilOrEmpty(imgPathOrigin, "Image_");
 

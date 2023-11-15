@@ -263,7 +263,7 @@ namespace EndoscopicSystem
                             return;
                         }
 
-                        patient.HN = txtHN.Text;
+                        patient.HN = txtHN.Text.Trim();
                         patient.Fullname = txtFullName.Text;
                         patient.CardID = txtCID.Text;
                         patient.Sex = gender;
