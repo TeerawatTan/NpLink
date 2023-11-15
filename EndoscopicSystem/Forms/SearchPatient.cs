@@ -76,6 +76,44 @@ namespace EndoscopicSystem
             cbbDoctor.SelectedIndex = 0;
         }
 
+        private void gridPatient_CellPainting(object sender, DataGridViewCellPaintingEventArgs e)
+        {
+            // Check if the current cell is a button cell (based on column index and row index)
+            if (e.ColumnIndex == 15 && e.RowIndex >= 0)
+            {
+                e.PaintBackground(e.CellBounds, true);
+
+                // Customize the button appearance
+                using (SolidBrush brush = new SolidBrush(Color.Green))
+                {
+                    e.Graphics.FillRectangle(brush, e.CellBounds);
+                }
+
+                string txtBtn = "";
+                if (_pageName == Constant.PageName.SEARCH_PATIENT_PAGE)
+                {
+                    txtBtn = "Endoscopic Room";
+                }
+                else
+                {
+                    txtBtn = "Send To PACS";
+                }
+
+                // Draw the button text
+                e.Graphics.DrawString(txtBtn, e.CellStyle.Font, Brushes.White, e.CellBounds, new StringFormat
+                {
+                    Alignment = StringAlignment.Center,
+                    LineAlignment = StringAlignment.Center
+                });
+
+                // Draw the border of the button
+                ControlPaint.DrawBorder(e.Graphics, e.CellBounds, Color.White, ButtonBorderStyle.Solid);
+
+
+                e.Handled = true;
+            }
+        }
+
         private void btnSearch_Click(object sender, EventArgs e)
         {
             var data = db.v_PatientList.ToList();
@@ -129,6 +167,7 @@ namespace EndoscopicSystem
         private void LoadData(List<PatienModel> data)
         {
             gridPatient.Columns.Clear();
+
             gridPatient.DataSource = data;
 
             gridPatient.Columns["PatientID"].Visible = false;
@@ -137,6 +176,7 @@ namespace EndoscopicSystem
             gridPatient.Columns["RoomID"].Visible = false;
             gridPatient.Columns["EndoscopicID"].Visible = false;
             gridPatient.Columns["AppointmentID"].Visible = false;
+            gridPatient.Columns["AppointmentDate"].Visible = false;
 
             DataGridViewButtonColumn btn = new DataGridViewButtonColumn();
             btn.HeaderText = "";
@@ -153,7 +193,8 @@ namespace EndoscopicSystem
             }
 
             btn.UseColumnTextForButtonValue = true;
-            btn.DefaultCellStyle.BackColor = Color.Green;
+            btn.FlatStyle = FlatStyle.Standard;
+            btn.CellTemplate.Style.BackColor = Color.Red;
 
             gridPatient.Columns.Add(btn);
         }
@@ -192,7 +233,7 @@ namespace EndoscopicSystem
 
         private void gridPatient_CellClick(object sender, DataGridViewCellEventArgs e)
         {
-            if (gridPatient.CurrentRow.Index >= 0 && e.ColumnIndex == 14)
+            if (gridPatient.CurrentRow.Index >= 0 && e.ColumnIndex == 15)
             {
                 try
                 {
@@ -245,6 +286,7 @@ namespace EndoscopicSystem
         public int No { get; set; }
         public int PatientID { get; set; }
         public Nullable<System.DateTime> AppointmentDate { get; set; }
+        public string AppointmentDateString => this.AppointmentDate.HasValue == true ? this.AppointmentDate.Value.ToString("dd/MM/yyyy hh:mm") : "";
         public string HN { get; set; }
         public string Symptom { get; set; }
         public string Fullname { get; set; }
