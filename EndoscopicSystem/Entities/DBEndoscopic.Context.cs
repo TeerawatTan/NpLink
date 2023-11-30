@@ -32,7 +32,6 @@ namespace EndoscopicSystem.Entities
         public virtual DbSet<EndoscopicVideo> EndoscopicVideos { get; set; }
         public virtual DbSet<Nurse> Nurses { get; set; }
         public virtual DbSet<Room> Rooms { get; set; }
-        public virtual DbSet<AmpullaOfVater> AmpullaOfVaters { get; set; }
         public virtual DbSet<AnalCanal> AnalCanals { get; set; }
         public virtual DbSet<Anesthesia> Anesthesias { get; set; }
         public virtual DbSet<Antrum> Antrums { get; set; }
@@ -79,7 +78,6 @@ namespace EndoscopicSystem.Entities
         public virtual DbSet<RUL> RULs { get; set; }
         public virtual DbSet<Trachea> Tracheas { get; set; }
         public virtual DbSet<VocalCord> VocalCords { get; set; }
-        public virtual DbSet<v_HistoryEndoscopic> v_HistoryEndoscopic { get; set; }
         public virtual DbSet<Endoscopic_Log> Endoscopic_Log { get; set; }
         public virtual DbSet<v_AppointmentDetails> v_AppointmentDetails { get; set; }
         public virtual DbSet<User> Users { get; set; }
@@ -109,7 +107,6 @@ namespace EndoscopicSystem.Entities
         public virtual DbSet<AnesthesistMethod> AnesthesistMethods { get; set; }
         public virtual DbSet<FindingLabel> FindingLabels { get; set; }
         public virtual DbSet<Financial> Financials { get; set; }
-        public virtual DbSet<v_PatientList> v_PatientList { get; set; }
         public virtual DbSet<ICD10> ICD10 { get; set; }
         public virtual DbSet<ICD9> ICD9 { get; set; }
         public virtual DbSet<ProcedureList> ProcedureLists { get; set; }
@@ -122,13 +119,23 @@ namespace EndoscopicSystem.Entities
         public virtual DbSet<ProcedureDetail> ProcedureDetails { get; set; }
         public virtual DbSet<Recommendation> Recommendations { get; set; }
         public virtual DbSet<Hospital> Hospitals { get; set; }
-        public virtual DbSet<Finding> Findings { get; set; }
         public virtual DbSet<BiliarySystem> BiliarySystems { get; set; }
         public virtual DbSet<Other> Other { get; set; }
         public virtual DbSet<Pancrea> Pancreas { get; set; }
         public virtual DbSet<PapillaMajor> PapillaMajors { get; set; }
         public virtual DbSet<PapillaMinor> PapillaMinors { get; set; }
         public virtual DbSet<Endoscopic> Endoscopics { get; set; }
+        public virtual DbSet<v_HistoryEndoscopic> v_HistoryEndoscopic { get; set; }
+        public virtual DbSet<Finding> Findings { get; set; }
+        public virtual DbSet<v_GetImageCapturePath> v_GetImageCapturePath { get; set; }
+        public virtual DbSet<v_PatientList> v_PatientList { get; set; }
+        public virtual DbSet<BriefHistory> BriefHistories { get; set; }
+        public virtual DbSet<Comment> Comments { get; set; }
+        public virtual DbSet<BowelPreparationRegiman> BowelPreparationRegimen { get; set; }
+        public virtual DbSet<BowelPreparationResult> BowelPreparationResults { get; set; }
+        public virtual DbSet<Diagnosi> Diagnosis { get; set; }
+        public virtual DbSet<GernaralOperativeFinding> GernaralOperativeFindings { get; set; }
+        public virtual DbSet<AmpullaOfVater> AmpullaOfVaters { get; set; }
     
         public virtual ObjectResult<BrochoscopyReport_Result> BrochoscopyReport(string hn, Nullable<int> procedure, Nullable<int> endoscopicId)
         {

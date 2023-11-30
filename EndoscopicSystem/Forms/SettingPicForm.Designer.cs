@@ -325,7 +325,6 @@
             this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "SettingPicForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.SettingPicForm_FormClosed);
             this.Load += new System.EventHandler(this.SettingPicForm_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();

@@ -18,5 +18,6 @@ namespace EndoscopicSystem.Entities
         public string Code { get; set; }
         public string Name { get; set; }
         public Nullable<int> ProcedureId { get; set; }
+        public bool IsDisplay { get; set; }
     }
 }

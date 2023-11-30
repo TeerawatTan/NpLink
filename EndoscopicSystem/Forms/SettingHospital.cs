@@ -113,12 +113,13 @@ namespace EndoscopicSystem
                         db.SaveChanges();
                     }
 
-                    MessageBox.Show("Image uploaded successfully.");
+                    MessageBox.Show("Image uploaded successfully.", "Upload file", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 }
             }
             catch (Exception ex)
             {
-                MessageBox.Show(ex.Message, "File Already exits");
+                MessageBox.Show(ex.Message, "File Already exits", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
             }
         }
 
@@ -159,7 +160,7 @@ namespace EndoscopicSystem
                 db.SaveChanges();
             }
 
-            MessageBox.Show("Save successfully.", "Save form", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            MessageBox.Show("Saved successfully.", "Save form", MessageBoxButtons.OK, MessageBoxIcon.Information);
         }
 
         private void SettingHospitalForm_Load(object sender, EventArgs e)
@@ -183,14 +184,9 @@ namespace EndoscopicSystem
                 }
                 catch (Exception ex)
                 {
-
-
+                    throw ex;
                 }
             }
-        }
-
-        private void SettingHospitalForm_FormClosed(object sender, FormClosedEventArgs e)
-        {
         }
     }
 }

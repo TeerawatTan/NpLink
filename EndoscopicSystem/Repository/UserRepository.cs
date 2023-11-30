@@ -40,11 +40,11 @@ namespace EndoscopicSystem.Repository
                     }
                     break;
                 }
-                catch (Exception)
+                catch (Exception ex)
                 {
                     if (++retryCount >= MaxRetries)
                     {
-                        throw;
+                        throw new Exception(ex.Message);
                     }
                     Console.WriteLine("Retrying after {0} seconds...", RetryInterval.TotalSeconds);
                     System.Threading.Thread.Sleep(RetryInterval);

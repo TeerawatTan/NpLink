@@ -85,9 +85,12 @@ namespace EndoscopicSystem.V2.Forms
                     this._pathVideo = splitParam[2];
                     string hasEgdAndColonoStep = txbCheckHasEgdAndColono.Text.Trim();
 
+                    DateTime? dateStartRec = dtRecordStart.Value;
+                    DateTime? dateEndRec = dtRecordEnd.Value;
+
                     if (_stepId == 1)
                     {
-                        OpenChildForm(new FormPreviewReport(_id, _hn, _procedureId, _appointmentId, _endoscopicId, _patientId, _pathImage, _pathVideo, true));
+                        OpenChildForm(new FormPreviewReport(_id, _hn, _procedureId, _appointmentId, _endoscopicId, _patientId, _pathImage, _pathVideo, true, dateStartRec, dateEndRec));
                     }
                     else if (_stepId == 2)
                     {
@@ -95,19 +98,23 @@ namespace EndoscopicSystem.V2.Forms
                     }
                     else if (_stepId == 3)
                     {
-                        OpenChildForm(new ReportEndoscopic(_hn, _procedureId, _endoscopicId));
+                        ReportEndoscopic reportEndoscopic = new ReportEndoscopic(_hn, _procedureId, _endoscopicId, _appointmentId);
+                        reportEndoscopic.ShowDialog();
+                        _activeForm = reportEndoscopic;
                         if (_procedureId == 6)
                         {
                             FormReport2 formReport2 = new FormReport2(_hn, _procedureId, _endoscopicId);
                             formReport2.Show();
                         }
+                        _activeForm.Dispose();
+                        _activeForm.Close();
                     }
                     else if (_stepId == 4)
                     {
                         if (hasEgdAndColonoStep.Equals("1"))
                             OpenChildForm(new FormLive(_id, _hn, _procedureId, _endoscopicId, _appointmentId, true));
                         else if (hasEgdAndColonoStep.Equals("2"))
-                            OpenChildForm(new FormPreviewReport(_id, _hn, _procedureId, _appointmentId, _endoscopicId, _patientId, _pathImage, _pathVideo, false));
+                            OpenChildForm(new FormPreviewReport(_id, _hn, _procedureId, _appointmentId, _endoscopicId, _patientId, _pathImage, _pathVideo, false, dateStartRec, dateEndRec));
                     }
                     else
                     {
@@ -117,6 +124,7 @@ namespace EndoscopicSystem.V2.Forms
                             _activeForm.Close();
                             _activeForm = null;
                         }
+                        this.Close();
                     }
                 }
                 catch (Exception ex)

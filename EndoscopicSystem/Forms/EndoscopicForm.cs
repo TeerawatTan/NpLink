@@ -2229,7 +2229,7 @@ namespace EndoscopicSystem
         }
         private void BtnReport_Click(object sender, EventArgs e)
         {
-            ReportEndoscopic reportForm = new ReportEndoscopic(hnNo, procedureId.Value, endoscopicId);
+            ReportEndoscopic reportForm = new ReportEndoscopic(hnNo, procedureId.Value, endoscopicId, appointmentId);
             reportForm.Show();
         }
         private void PictureBox_DragEnter(object sender, DragEventArgs e)

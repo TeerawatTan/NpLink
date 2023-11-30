@@ -243,9 +243,9 @@ namespace EndoscopicSystem.V2.Forms
             this.btnSave = new System.Windows.Forms.Button();
             this.btnReset = new System.Windows.Forms.Button();
             this.btnNext = new System.Windows.Forms.Button();
-            this.listView1 = new System.Windows.Forms.ListView();
             this.openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
             this.pictureBoxSnapshot = new System.Windows.Forms.PictureBox();
+            this.panel1 = new System.Windows.Forms.Panel();
             this.groupBox1.SuspendLayout();
             this.panel3.SuspendLayout();
             this.gb32.SuspendLayout();
@@ -3097,18 +3097,6 @@ namespace EndoscopicSystem.V2.Forms
             this.btnNext.Visible = false;
             this.btnNext.Click += new System.EventHandler(this.btnNext_Click);
             // 
-            // listView1
-            // 
-            this.listView1.AllowDrop = true;
-            this.listView1.HideSelection = false;
-            this.listView1.Location = new System.Drawing.Point(1098, 118);
-            this.listView1.Name = "listView1";
-            this.listView1.Size = new System.Drawing.Size(343, 763);
-            this.listView1.TabIndex = 115;
-            this.listView1.UseCompatibleStateImageBehavior = false;
-            this.listView1.ItemDrag += new System.Windows.Forms.ItemDragEventHandler(this.listView1_ItemDrag);
-            this.listView1.Click += new System.EventHandler(this.listView1_Click);
-            // 
             // openFileDialog1
             // 
             this.openFileDialog1.FileName = "openFileDialog1";
@@ -3125,19 +3113,27 @@ namespace EndoscopicSystem.V2.Forms
             this.pictureBoxSnapshot.TabStop = false;
             this.pictureBoxSnapshot.Visible = false;
             // 
+            // panel1
+            // 
+            this.panel1.AutoScroll = true;
+            this.panel1.Location = new System.Drawing.Point(1157, 121);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(285, 763);
+            this.panel1.TabIndex = 130;
+            // 
             // FormPreviewReport
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1904, 1011);
+            this.Controls.Add(this.panel1);
             this.Controls.Add(this.btnNext);
             this.Controls.Add(this.btnSave);
             this.Controls.Add(this.btnReset);
             this.Controls.Add(this.panel3);
             this.Controls.Add(this.groupBox1);
-            this.Controls.Add(this.listView1);
-            this.Controls.Add(this.pictureBoxSnapshot);
             this.Controls.Add(this.pictureBox1);
+            this.Controls.Add(this.pictureBoxSnapshot);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.MaximizeBox = false;
             this.MinimizeBox = false;
@@ -3360,7 +3356,6 @@ namespace EndoscopicSystem.V2.Forms
         private System.Windows.Forms.Button btnDeletePictureBoxSaved18;
         private System.Windows.Forms.TextBox txtPictureBoxSaved18;
         private System.Windows.Forms.PictureBox pictureBoxSaved18;
-        private System.Windows.Forms.ListView listView1;
         private System.Windows.Forms.OpenFileDialog openFileDialog1;
         private System.Windows.Forms.ComboBox cbbProcedureList;
         private System.Windows.Forms.Label label6;
@@ -3469,5 +3464,6 @@ namespace EndoscopicSystem.V2.Forms
         private System.Windows.Forms.Button btnDeletePictureBoxSaved19;
         private System.Windows.Forms.TextBox txtPictureBoxSaved19;
         private System.Windows.Forms.PictureBox pictureBoxSaved19;
+        private System.Windows.Forms.Panel panel1;
     }
 }

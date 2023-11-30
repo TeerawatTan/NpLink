@@ -30,14 +30,18 @@ namespace EndoscopicSystem.V2.Forms
         private void InitializeComponent()
         {
             this.panelChild = new System.Windows.Forms.Panel();
-            this.txbStep = new System.Windows.Forms.TextBox();
             this.txbCheckHasEgdAndColono = new System.Windows.Forms.TextBox();
+            this.txbStep = new System.Windows.Forms.TextBox();
+            this.dtRecordStart = new System.Windows.Forms.DateTimePicker();
+            this.dtRecordEnd = new System.Windows.Forms.DateTimePicker();
             this.panelChild.SuspendLayout();
             this.SuspendLayout();
             // 
             // panelChild
             // 
             this.panelChild.BackColor = System.Drawing.Color.DarkGray;
+            this.panelChild.Controls.Add(this.dtRecordEnd);
+            this.panelChild.Controls.Add(this.dtRecordStart);
             this.panelChild.Controls.Add(this.txbCheckHasEgdAndColono);
             this.panelChild.Controls.Add(this.txbStep);
             this.panelChild.Dock = System.Windows.Forms.DockStyle.Fill;
@@ -45,6 +49,14 @@ namespace EndoscopicSystem.V2.Forms
             this.panelChild.Name = "panelChild";
             this.panelChild.Size = new System.Drawing.Size(1388, 791);
             this.panelChild.TabIndex = 11;
+            // 
+            // txbCheckHasEgdAndColono
+            // 
+            this.txbCheckHasEgdAndColono.Location = new System.Drawing.Point(12, 38);
+            this.txbCheckHasEgdAndColono.Name = "txbCheckHasEgdAndColono";
+            this.txbCheckHasEgdAndColono.Size = new System.Drawing.Size(34, 20);
+            this.txbCheckHasEgdAndColono.TabIndex = 1;
+            this.txbCheckHasEgdAndColono.Visible = false;
             // 
             // txbStep
             // 
@@ -55,13 +67,27 @@ namespace EndoscopicSystem.V2.Forms
             this.txbStep.Visible = false;
             this.txbStep.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
             // 
-            // txbCheckHasEgdAndColono
+            // dtRecordStart
             // 
-            this.txbCheckHasEgdAndColono.Location = new System.Drawing.Point(12, 38);
-            this.txbCheckHasEgdAndColono.Name = "txbCheckHasEgdAndColono";
-            this.txbCheckHasEgdAndColono.Size = new System.Drawing.Size(34, 20);
-            this.txbCheckHasEgdAndColono.TabIndex = 1;
-            this.txbCheckHasEgdAndColono.Visible = false;
+            this.dtRecordStart.CustomFormat = "dd MMMM yyyy HH:mm:ss";
+            this.dtRecordStart.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
+            this.dtRecordStart.Location = new System.Drawing.Point(13, 65);
+            this.dtRecordStart.Name = "dtRecordStart";
+            this.dtRecordStart.Size = new System.Drawing.Size(200, 20);
+            this.dtRecordStart.TabIndex = 2;
+            this.dtRecordStart.Value = new System.DateTime(2023, 9, 29, 16, 22, 42, 0);
+            this.dtRecordStart.Visible = false;
+            // 
+            // dtRecordEnd
+            // 
+            this.dtRecordEnd.CustomFormat = "dd MMMM yyyy HH:mm:ss";
+            this.dtRecordEnd.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
+            this.dtRecordEnd.Location = new System.Drawing.Point(12, 91);
+            this.dtRecordEnd.Name = "dtRecordEnd";
+            this.dtRecordEnd.Size = new System.Drawing.Size(200, 20);
+            this.dtRecordEnd.TabIndex = 3;
+            this.dtRecordEnd.Value = new System.DateTime(2023, 9, 29, 16, 22, 42, 0);
+            this.dtRecordEnd.Visible = false;
             // 
             // FormProceed
             // 
@@ -88,5 +114,7 @@ namespace EndoscopicSystem.V2.Forms
         private System.Windows.Forms.Panel panelChild;
         public System.Windows.Forms.TextBox txbStep;
         public System.Windows.Forms.TextBox txbCheckHasEgdAndColono;
+        public System.Windows.Forms.DateTimePicker dtRecordEnd;
+        public System.Windows.Forms.DateTimePicker dtRecordStart;
     }
 }
