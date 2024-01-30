@@ -553,6 +553,24 @@ warning 6002: The table/view 'EndoscopicDb.dbo.ProcedureList' does not have a pr
           <Property Name="UpdateDate" Type="datetime" />
           <Property Name="UpdateBy" Type="int" />
         </EntityType>
+        <EntityType Name="SettingDevice">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Name" Type="nvarchar" MaxLength="200" Nullable="false" />
+          <Property Name="IsActive" Type="bit" Nullable="false" />
+          <Property Name="AspectRatio" Type="nvarchar" MaxLength="20" />
+          <Property Name="RatioX" Type="int" />
+          <Property Name="RatioY" Type="int" />
+          <Property Name="PositionCrop" Type="nvarchar" MaxLength="1" />
+          <Property Name="CrpX" Type="int" />
+          <Property Name="CrpY" Type="int" />
+          <Property Name="CrpWidth" Type="int" />
+          <Property Name="CrpHeight" Type="int" />
+          <Property Name="Instrument1ID" Type="int" />
+          <Property Name="Instrument2ID" Type="int" />
+        </EntityType>
         <EntityType Name="Specimen">
           <Key>
             <PropertyRef Name="SpecimenID" />
@@ -1449,6 +1467,7 @@ warning 6002: The table/view 'EndoscopicDb.dbo.v_PatientList' does not have a pr
           <EntitySet Name="OpdList" EntityType="Self.OpdList" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="Patient" EntityType="Self.Patient" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="Room" EntityType="Self.Room" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="SettingDevice" EntityType="Self.SettingDevice" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="Specimen" EntityType="Self.Specimen" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="User" EntityType="Self.User" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="WardList" EntityType="Self.WardList" Schema="dbo" store:Type="Tables" />
@@ -1748,6 +1767,7 @@ warning 6002: The table/view 'EndoscopicDb.dbo.v_PatientList' does not have a pr
           <EntitySet Name="Diagnosis" EntityType="EndoscopicModel.Diagnosi" />
           <EntitySet Name="GernaralOperativeFindings" EntityType="EndoscopicModel.GernaralOperativeFinding" />
           <EntitySet Name="AmpullaOfVaters" EntityType="EndoscopicModel.AmpullaOfVater" />
+          <EntitySet Name="SettingDevices" EntityType="EndoscopicModel.SettingDevice" />
           </EntityContainer>
         <EntityType Name="Doctor">
           <Key>
@@ -3276,6 +3296,24 @@ warning 6002: The table/view 'EndoscopicDb.dbo.v_PatientList' does not have a pr
           <Property Name="AmpullaOfVaterName" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
           <Property Name="CreateDate" Type="DateTime" Precision="3" />
           <Property Name="UpdateDate" Type="DateTime" Precision="3" />
+        </EntityType>
+        <EntityType Name="SettingDevice">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Name" Type="String" Nullable="false" MaxLength="200" FixedLength="false" Unicode="true" />
+          <Property Name="IsActive" Type="Boolean" Nullable="false" />
+          <Property Name="AspectRatio" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+          <Property Name="RatioX" Type="Int32" />
+          <Property Name="RatioY" Type="Int32" />
+          <Property Name="PositionCrop" Type="String" MaxLength="1" FixedLength="false" Unicode="true" />
+          <Property Name="CrpX" Type="Int32" />
+          <Property Name="CrpY" Type="Int32" />
+          <Property Name="CrpWidth" Type="Int32" />
+          <Property Name="CrpHeight" Type="Int32" />
+          <Property Name="Instrument1ID" Type="Int32" />
+          <Property Name="Instrument2ID" Type="Int32" />
         </EntityType>
         </Schema>
     </edmx:ConceptualModels>
@@ -4939,6 +4977,25 @@ warning 6002: The table/view 'EndoscopicDb.dbo.v_PatientList' does not have a pr
                 <ScalarProperty Name="CreateDate" ColumnName="CreateDate" />
                 <ScalarProperty Name="AmpullaOfVaterName" ColumnName="AmpullaOfVaterName" />
                 <ScalarProperty Name="AmpullaOfVaterID" ColumnName="AmpullaOfVaterID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="SettingDevices">
+            <EntityTypeMapping TypeName="EndoscopicModel.SettingDevice">
+              <MappingFragment StoreEntitySet="SettingDevice">
+                <ScalarProperty Name="Instrument2ID" ColumnName="Instrument2ID" />
+                <ScalarProperty Name="Instrument1ID" ColumnName="Instrument1ID" />
+                <ScalarProperty Name="CrpHeight" ColumnName="CrpHeight" />
+                <ScalarProperty Name="CrpWidth" ColumnName="CrpWidth" />
+                <ScalarProperty Name="CrpY" ColumnName="CrpY" />
+                <ScalarProperty Name="CrpX" ColumnName="CrpX" />
+                <ScalarProperty Name="PositionCrop" ColumnName="PositionCrop" />
+                <ScalarProperty Name="RatioY" ColumnName="RatioY" />
+                <ScalarProperty Name="RatioX" ColumnName="RatioX" />
+                <ScalarProperty Name="AspectRatio" ColumnName="AspectRatio" />
+                <ScalarProperty Name="IsActive" ColumnName="IsActive" />
+                <ScalarProperty Name="Name" ColumnName="Name" />
+                <ScalarProperty Name="ID" ColumnName="ID" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>

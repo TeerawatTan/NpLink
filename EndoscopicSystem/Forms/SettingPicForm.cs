@@ -1,5 +1,6 @@
 ﻿using EndoscopicSystem.Constants;
 using EndoscopicSystem.Entities;
+using EndoscopicSystem.V2.Forms.src;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -15,8 +16,7 @@ namespace EndoscopicSystem.Forms
     public partial class SettingPicForm : Form
     {
         readonly EndoscopicEntities db = new EndoscopicEntities();
-        private readonly int UserID;
-        public int AspectRatioID;
+        private int UserID;
         public string PositionCropID;
 
         private string _initialDirectoryUpload = "C://Desktop";
@@ -25,9 +25,10 @@ namespace EndoscopicSystem.Forms
 
         int crpX, crpY, rectW, rectH;
         public Pen crpPen = new Pen(Color.White);
-        int RatioX;
-        int RatioY;
+        //int RatioX;
+        //int RatioY;
         private Image File = null;
+        private readonly DropdownListService _dropdownListService = new DropdownListService();
 
         public SettingPicForm(int userID)
         {
@@ -37,57 +38,61 @@ namespace EndoscopicSystem.Forms
 
         private void SettingPicForm_Load(object sender, EventArgs e)
         {
-            var v = db.Users.Where(x => x.Id == UserID).Select(x => new { x.AspectRatioID, x.RatioX, x.RatioY, x.PositionCrop }).FirstOrDefault();
-            AspectRatioID = (int)(v.AspectRatioID.HasValue ? v.AspectRatioID : 1);
-            txtAspectRatio.Text = AspectRatioID.ToString();
-            txtPosition.Text = v.PositionCrop;
-            txtX.Text = v.RatioX.ToString();
-            txtY.Text = v.RatioY.ToString();
+            _dropdownListService.DropdownInstrumentIdAndCode(cbbInstrument1, 1);
         }
 
         private void btnSave_Click(object sender, EventArgs e)
         {
-            RatioX = txtX.Text == "" ? 0 : Convert.ToInt32(txtX.Text);
-            RatioY = txtY.Text == "" ? 0 : Convert.ToInt32(txtY.Text);
-            var user = db.Users.FirstOrDefault(x => x.Id == UserID);
-            if (user == null)
+            if (string.IsNullOrWhiteSpace(txbProfileSetting.Text.Trim()))
             {
-                MessageBox.Show("User not found.");
+                MessageBox.Show("Profile Setting is required.", "Validate", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return;
             }
-            user.AspectRatioID = txtAspectRatio.Text == "" ? 0 : Convert.ToInt32(txtAspectRatio.Text);
-            user.PositionCrop = txtPosition.Text;
-            user.CrpX = (int?)(crpX * 1.5);
-            user.CrpY = (int?)(crpY * 1.5);
-            user.CrpWidth = (int?)(rectW * 1.5);
-            user.CrpHeight = (int?)(rectH * 1.5);
-            txtCrpX.Text = (crpX * 1.5).ToString();
-            txtCrpY.Text = (crpY * 1.5).ToString();
-            txbW.Text = (rectW * 1.5).ToString();
-            txbH.Text = (rectH * 1.5).ToString();
+            if ((int?)cbbInstrument1.SelectedValue == null || (int?)cbbInstrument1.SelectedValue == 0)
+            {
+                MessageBox.Show("Instrument is required.", "Validate", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
+
             try
             {
+                int cropX = Convert.ToInt32(crpX * 1.5);
+                int cropY = Convert.ToInt32(crpY * 1.5);
+                int rectWidth = Convert.ToInt32(rectW * 1.5);
+                int rectHeight = Convert.ToInt32(rectH * 1.5);
+
+                SettingDevice setting = new SettingDevice();
+                setting.Name = txbProfileSetting.Text;
+                setting.AspectRatio = "Custom";
+                setting.CrpX = cropX;
+                setting.CrpY = cropY;
+                setting.CrpWidth = rectWidth;
+                setting.CrpHeight = rectHeight;
+                setting.PositionCrop = "L";
+                setting.Instrument1ID = (int?)cbbInstrument1.SelectedValue;
+                setting.IsActive = true;
+
+                db.SettingDevices.Add(setting);
                 db.SaveChanges();
 
                 MessageBox.Show("Saved successfully.", "Save form", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
             catch (Exception ex)
             {
-                MessageBox.Show(ex.Message);
+                MessageBox.Show(ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
             }
         }
 
         private void btnSimulate_Click(object sender, EventArgs e)
         {
+            if (rectW == 0 && rectH == 0)
+            {
+                return;
+            }
+
             try
             {
-                txtX.Text = rectW.ToString();
-                txtY.Text = rectH.ToString();
-                txbW.Text = rectW.ToString();
-                txbH.Text = rectH.ToString();
-                txtAspectRatio.Text = "0";
-                txtPosition.Text = "L";
-
                 Cursor = Cursors.Default;
 
                 Bitmap bmp2 = new Bitmap(pictureBox1.Width, pictureBox1.Height);
@@ -174,30 +179,23 @@ namespace EndoscopicSystem.Forms
 
         private void btnReset_Click(object sender, EventArgs e)
         {
-            txtAspectRatio.Text = "1";
-            txtPosition.Text = "L";
+            txtAspectRatio.Text = "Full Screen";
+            txbProfileSetting.Clear();
+            cbbInstrument1.SelectedIndex = 0;
+        }
 
-            var userData = db.Users.Where(x => x.Id == UserID);
-            if (userData != null)
-            {
-                User user = userData.FirstOrDefault();
-                user.AspectRatioID = 1;
-                user.PositionCrop = "L";
-                try
-                {
-                    db.SaveChanges();
-                    MessageBox.Show("Reset to full screen success.", "Reset settings", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                }
-                catch (Exception ex)
-                {
-                    MessageBox.Show(ex.Message);
-                }
-            }
-            else
-            {
-                MessageBox.Show("Error, Not found data.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+        private void cbbInstrument1_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            int? instruDdlId = (int?)cbbInstrument1.SelectedValue;
+
+            if (instruDdlId == null || instruDdlId < 0)
                 return;
-            }
+
+            var instrument = db.Instruments.Where(w => w.ID == instruDdlId).FirstOrDefault();
+            if (instrument != null)
+                SerialNumber1.Text = instrument.SerialNumber;
+            else
+                SerialNumber1.Clear();
         }
 
         private void pictureBox1_MouseEnter(object sender, EventArgs e)

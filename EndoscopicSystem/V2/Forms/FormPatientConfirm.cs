@@ -47,11 +47,11 @@ namespace EndoscopicSystem.V2.Forms
                 _isEgdAndColono = true;
 
                 _dropdownListService.DropdownInstrumentIdAndCode(cbbInstrument2, 1);
-                label10.Visible = true;
                 cbbInstrument2.Visible = true;
-                label9.Visible = true;
                 SerialNumber2.Visible = true;
             }
+
+            _dropdownListService.DropdownProfileSettingCamera(cbbProfileSettingCanera);
         }
 
         private void cbbInstrument1_SelectedIndexChanged(object sender, EventArgs e)
@@ -80,6 +80,30 @@ namespace EndoscopicSystem.V2.Forms
                 SerialNumber2.Text = instrument.SerialNumber;
             else
                 SerialNumber2.Clear();
+        }
+
+        private void cbbProfileSettingCanera_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            int? settingId = (int?)cbbProfileSettingCanera.SelectedValue;
+            if (settingId == null || settingId < 0)
+                return;
+
+            var settingCamera = _db.SettingDevices.Where(w => w.ID == settingId).FirstOrDefault();
+            if (settingCamera != null)
+            {
+                if ((settingCamera.CrpWidth == null || settingCamera.CrpWidth == 0) && (settingCamera.CrpHeight == null || settingCamera.CrpHeight == 0))
+                {
+                    txbProfileSettingCanera.Text = settingCamera.AspectRatio;
+                }
+                else
+                {
+                    txbProfileSettingCanera.Text = string.Format("{0}*{1} px", settingCamera.CrpWidth, settingCamera.CrpHeight);
+                }
+            }
+            else
+            {
+                txbProfileSettingCanera.Clear();
+            }
         }
 
         private void InitialData(string fullName, string hnNum, string doctorList, string nurseList)
@@ -114,11 +138,6 @@ namespace EndoscopicSystem.V2.Forms
                             getEndo.NewCase = false;
                         }
                         _endoscopicId = getEndo.EndoscopicID;
-
-                        //Finding getFinding = _db.Findings.Where(x => x.FindingID == getEndo.FindingID).FirstOrDefault();
-                        //Indication getIndication = _db.Indications.Where(x => x.IndicationID == getEndo.IndicationID).FirstOrDefault();
-                        //Speciman getSpecimen = _db.Specimen.Where(x => x.SpecimenID == getEndo.SpecimenID).FirstOrDefault();
-                        //Intervention getIntervention = _db.Interventions.Where(x => x.InterventionID == getEndo.InterventionID).FirstOrDefault();
                     }
                     else
                     {
@@ -154,13 +173,13 @@ namespace EndoscopicSystem.V2.Forms
                 }
                 else
                 {
-                    MessageBox.Show("ไม่พบข้อมูลผู้ป่วย");
+                    MessageBox.Show("ไม่พบข้อมูลผู้ป่วย", "Data Not Found", MessageBoxButtons.OK, MessageBoxIcon.Information);
                     hasData = false;
                 }
             }
             catch (Exception ex)
             {
-                MessageBox.Show(ex.Message);
+                MessageBox.Show(ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 hasData = false;
             }
 

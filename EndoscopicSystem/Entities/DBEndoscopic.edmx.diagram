@@ -114,6 +114,7 @@
         <EntityTypeShape EntityType="EndoscopicModel.Diagnosi" Width="1.5" PointX="30.375" PointY="30.75" />
         <EntityTypeShape EntityType="EndoscopicModel.GernaralOperativeFinding" Width="1.5" PointX="31.375" PointY="8.75" />
         <EntityTypeShape EntityType="EndoscopicModel.AmpullaOfVater" Width="1.5" PointX="17.375" PointY="0.75" />
+        <EntityTypeShape EntityType="EndoscopicModel.SettingDevice" Width="1.5" PointX="15.375" PointY="31.75" />
       </Diagram>
     </edmx:Diagrams>
   </edmx:Designer>

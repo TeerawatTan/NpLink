@@ -183,5 +183,6 @@ namespace EndoscopicSystem.Repository
         public IQueryable<Pancrea> GetPancreas() => db.Pancreas;
         public IQueryable<BiliarySystem> GetBiliarySystems() => db.BiliarySystems;
         public IQueryable<Other> GetOthers() => db.Other;
+        public IQueryable<SettingDevice> GetSettingDevices() => db.SettingDevices;
     }
 }

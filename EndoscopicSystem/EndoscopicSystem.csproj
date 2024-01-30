@@ -428,6 +428,9 @@
     <Compile Include="Entities\Septum.cs">
       <DependentUpon>DBEndoscopic.tt</DependentUpon>
     </Compile>
+    <Compile Include="Entities\SettingDevice.cs">
+      <DependentUpon>DBEndoscopic.tt</DependentUpon>
+    </Compile>
     <Compile Include="Entities\SigmoidColon.cs">
       <DependentUpon>DBEndoscopic.tt</DependentUpon>
     </Compile>

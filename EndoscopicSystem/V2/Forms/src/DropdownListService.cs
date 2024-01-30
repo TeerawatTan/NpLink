@@ -541,5 +541,12 @@ namespace EndoscopicSystem.V2.Forms.src
             comboBox.DataSource = _db.GetOthers().ToList();
             comboBox.SelectedIndex = 0;
         }
+        public void DropdownProfileSettingCamera(ComboBox comboBox)
+        {
+            comboBox.ValueMember = "ID";
+            comboBox.DisplayMember = "Name";
+            comboBox.DataSource = _db.GetSettingDevices().ToList();
+            comboBox.SelectedIndex = 0;
+        }
     }
 }

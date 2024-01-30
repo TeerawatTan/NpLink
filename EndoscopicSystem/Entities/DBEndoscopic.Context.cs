@@ -136,6 +136,7 @@ namespace EndoscopicSystem.Entities
         public virtual DbSet<Diagnosi> Diagnosis { get; set; }
         public virtual DbSet<GernaralOperativeFinding> GernaralOperativeFindings { get; set; }
         public virtual DbSet<AmpullaOfVater> AmpullaOfVaters { get; set; }
+        public virtual DbSet<SettingDevice> SettingDevices { get; set; }
     
         public virtual ObjectResult<BrochoscopyReport_Result> BrochoscopyReport(string hn, Nullable<int> procedure, Nullable<int> endoscopicId)
         {

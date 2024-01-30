@@ -35,11 +35,6 @@ namespace EndoscopicSystem.V2.Forms
 
         public void OpenChildForm(Form childForm)
         {
-            //if (childForm == null)
-            //{
-            //    return;
-            //}
-
             if (_activeForm != null)
                 _activeForm.Close();
             _activeForm = childForm;

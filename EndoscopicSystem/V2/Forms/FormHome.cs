@@ -116,9 +116,9 @@ namespace EndoscopicSystem.V2.Forms
             //FormLive formLive = new FormLive(_id);
             //formLive.ShowDialog();
             //formLive = null;
-            FormProceed formProceed = new FormProceed(_id);
-            formProceed.ShowDialog();
-            formProceed = null;
+            FormPatientConfirm formPatientConfirm = new FormPatientConfirm(_id);
+            formPatientConfirm.ShowDialog();
+            formPatientConfirm = null;
             this.Show();
             ActiveMenuLabel(lb_EndoscopyRoom);
         }

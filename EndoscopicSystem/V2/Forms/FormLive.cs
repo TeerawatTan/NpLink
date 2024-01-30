@@ -36,8 +36,8 @@ namespace EndoscopicSystem.V2.Forms
         private DateTime? _recordStartDate, _recordEndDate;
         private bool _isRecord = false, _isPause = false, _isStopRecord = false, _isEgdAndColonoDone = false;
         private static bool _needSnapshot = false;
-        private int _patientId, _endoscopicId, _procedureId = 0, _appointmentId = 0, _item = 0, _aspectRatioID = 1, h, m, s, rowPb = 0, colPb = 3;
-        private string PositionCropID = "L", _hnNo = "", _pathFolderImageToSave, _vdoPath;
+        private int _patientId, _procedureId = 0, _appointmentId = 0, _item = 0, h, m, s, _settingId, _crpX, _crpY, _crpWidth, _crpHeight;
+        private string  _hnNo = "", _pathFolderImageToSave, _vdoPath, _aspectRatio;
         protected readonly GetDropdownList list = new GetDropdownList();
         public Dictionary<int, string> ImgPath = new Dictionary<int, string>();
         public Form formPopup = new Form(), formPopupVdo = new Form();
@@ -47,7 +47,7 @@ namespace EndoscopicSystem.V2.Forms
         private static LowLevelKeyboardProc _proc = HookCallback;
         private static IntPtr _hookID = IntPtr.Zero;
 
-        public FormLive(int userID, string hn = "", int procId = 0, int endoId = 0, int apId = 0, bool isEgdAndColonoDone = false)
+        public FormLive(int userID, string hn = "", int procId = 0, int endoId = 0, int apId = 0, bool isEgdAndColonoDone = false, int settingId = 0)
         {
             InitializeComponent();
             UserID = userID;
@@ -69,19 +69,35 @@ namespace EndoscopicSystem.V2.Forms
             {
                 this._procedureId = procId;
             }
-            _endoscopicId = endoId;
             _appointmentId = apId;
 
             _hookID = SetHook(_proc);
+            _settingId = settingId;
         }
+
+        private delegate void CaptureSnapshotManifast(Bitmap image);
 
         private void FormLive_Load(object sender, EventArgs e)
         {
             t = new System.Timers.Timer();
 
-            var v = _db.Users.Where(x => x.Id == UserID).Select(x => new { x.AspectRatioID, x.PositionCrop }).FirstOrDefault();
-            _aspectRatioID = (int)(v.AspectRatioID.HasValue ? v.AspectRatioID : 1);
-            PositionCropID = (string)(v.PositionCrop != "" ? v.PositionCrop : "L");
+            if (_settingId == 0)
+            {
+                this.Close();
+                return;
+            }
+
+            var settingCamera = _db.SettingDevices.Where(x => x.ID == _settingId).FirstOrDefault();
+            if (settingCamera == null)
+            {
+                this.Close();
+                return;
+            }
+            _aspectRatio = settingCamera.AspectRatio;
+            _crpX = settingCamera.CrpX ?? 0;
+            _crpY = settingCamera.CrpY ?? 0;
+            _crpWidth = settingCamera.CrpWidth ?? 0;
+            _crpHeight = settingCamera.CrpHeight ?? 0;
 
             EnableConnectionControls(true);
 
@@ -283,40 +299,35 @@ namespace EndoscopicSystem.V2.Forms
             disconnectButton.Enabled = !enable;
         }
 
-        private void OnLoadVdoCaptureDevice(string hnNo)
-        {
-            if (string.IsNullOrWhiteSpace(hnNo)) return;
-
-            _videoCaptureDevice = new VideoCaptureDevice(_filterInfoCollection[devicesCombo.SelectedIndex].MonikerString);
-            _videoCaptureDevice.VideoResolution = _videoCaptureDevice.VideoCapabilities[0];
-            _videoCaptureDevice.ProvideSnapshots = true;
-            _videoCaptureDevice.NewFrame += new NewFrameEventHandler(videoSource_NewFrame);
-            EnableConnectionControls(false);
-
-            videoSourcePlayer.VideoSource = _videoCaptureDevice;
-            videoSourcePlayer.Start();
-
-            SoundPlayer _soundConnect = new SoundPlayer
-            {
-                SoundLocation = _pathFolderSounds + @"\SoundCapture\Connect.wav"
-            };
-            _soundConnect.Play();
-            //_soundConnect.Stop();
-
-            btnCapture.Enabled = true;
-            btnCapture.BackColor = Color.FromArgb(0, 192, 0);
-            btnRecord.Enabled = true;
-            _recordStartDate = DateTime.Now;
-        }
-
         private void connectButton_Click(object sender, EventArgs e)
         {
             try
             {
-                OnLoadVdoCaptureDevice(_hnNo);
+                if (string.IsNullOrWhiteSpace(_hnNo)) return;
+
+                _videoCaptureDevice = new VideoCaptureDevice(_filterInfoCollection[devicesCombo.SelectedIndex].MonikerString);
+                _videoCaptureDevice.VideoResolution = _videoCaptureDevice.VideoCapabilities[0];
+                _videoCaptureDevice.ProvideSnapshots = true;
+                _videoCaptureDevice.NewFrame += new NewFrameEventHandler(videoSource_NewFrame);
+                EnableConnectionControls(false);
+
+                videoSourcePlayer.VideoSource = _videoCaptureDevice;
+                videoSourcePlayer.Start();
+
+                SoundPlayer _soundConnect = new SoundPlayer
+                {
+                    SoundLocation = _pathFolderSounds + @"\SoundCapture\Connect.wav"
+                };
+                _soundConnect.Play();
+
+                btnCapture.Enabled = true;
+                btnCapture.BackColor = Color.FromArgb(0, 192, 0);
+                btnRecord.Enabled = true;
+                _recordStartDate = DateTime.Now;
             }
-            catch (Exception)
+            catch (Exception ex)
             {
+                MessageBox.Show(ex.Message);
                 return;
             }
         }
@@ -392,8 +403,6 @@ namespace EndoscopicSystem.V2.Forms
             }
         }
 
-        public delegate void CaptureSnapshotManifast(Bitmap image);
-
         public async void CaptureSnapshot(Bitmap image)
         {
             try
@@ -423,40 +432,33 @@ namespace EndoscopicSystem.V2.Forms
                     soundCapture.Play();
                 }
 
-                //soundCapture.Play();
-                //soundCapture.Stop();
-
                 _needSnapshot = false;
 
                 string namaImage = "Image";
                 string nameCapture = String.Format("{0}_{1}.jpg", namaImage, _item);
 
-                int aspectRatio_X = 0;
-                int aspectRatio_Y = 0;
                 int width = image.Width;
                 int height = image.Height;
                 bool isFullScreen = false;
 
-                switch (_aspectRatioID)
+                if (_aspectRatio == "Full Screen")
                 {
-                    case 0://Custom
-                        var ratio = _db.Users.Where(w => w.Id == UserID).Select(s => new { s.CrpX, s.CrpY, s.CrpWidth, s.CrpHeight }).FirstOrDefault();
-                        aspectRatio_X = ratio.CrpX ?? 0;
-                        aspectRatio_Y = ratio.CrpY ?? 0;
-                        width = ratio.CrpWidth ?? width;
-                        height = ratio.CrpHeight ?? height;
-                        break;
-                    default://FullScreen
-                        isFullScreen = true;
-                        break;
+                    isFullScreen = true;
                 }
+                else
+                {
+                    width = _crpWidth;
+                    height = _crpHeight;
+                }
+
                 _pathFolderImageToSave = _pathFolderImage + _hnNo + @"\" + DateTime.Now.ToString("yyyyMMdd") + @"\" + cbbProcedureList.Text + @"\" + _appointmentId + @"\";
+                
                 if (!Directory.Exists(_pathFolderImageToSave))
                 {
                     Directory.CreateDirectory(_pathFolderImageToSave);
                 }
 
-                pictureBoxSnapshot.Image = await resizeImg(image, aspectRatio_X, aspectRatio_Y, width, height, isFullScreen);
+                pictureBoxSnapshot.Image = await resizeImg(image, _crpX, _crpY, width, height, isFullScreen);
                 pictureBoxSnapshot.SizeMode = PictureBoxSizeMode.StretchImage;
                 pictureBoxSnapshot.Update();
 

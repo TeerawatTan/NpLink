@@ -47,9 +47,10 @@ namespace EndoscopicSystem.V2.Forms
             this.lbName = new System.Windows.Forms.Label();
             this.cbbInstrument1 = new System.Windows.Forms.ComboBox();
             this.cbbInstrument2 = new System.Windows.Forms.ComboBox();
-            this.label10 = new System.Windows.Forms.Label();
             this.SerialNumber2 = new System.Windows.Forms.TextBox();
-            this.label9 = new System.Windows.Forms.Label();
+            this.cbbProfileSettingCanera = new System.Windows.Forms.ComboBox();
+            this.label11 = new System.Windows.Forms.Label();
+            this.txbProfileSettingCanera = new System.Windows.Forms.TextBox();
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -107,7 +108,7 @@ namespace EndoscopicSystem.V2.Forms
             // 
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
-            this.label6.Location = new System.Drawing.Point(33, 490);
+            this.label6.Location = new System.Drawing.Point(31, 412);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(122, 25);
             this.label6.TabIndex = 5;
@@ -142,7 +143,7 @@ namespace EndoscopicSystem.V2.Forms
             // SerialNumber1
             // 
             this.SerialNumber1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
-            this.SerialNumber1.Location = new System.Drawing.Point(335, 565);
+            this.SerialNumber1.Location = new System.Drawing.Point(335, 475);
             this.SerialNumber1.Name = "SerialNumber1";
             this.SerialNumber1.ReadOnly = true;
             this.SerialNumber1.Size = new System.Drawing.Size(286, 26);
@@ -152,7 +153,7 @@ namespace EndoscopicSystem.V2.Forms
             // 
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
-            this.label7.Location = new System.Drawing.Point(34, 529);
+            this.label7.Location = new System.Drawing.Point(34, 439);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(31, 24);
             this.label7.TabIndex = 10;
@@ -162,7 +163,7 @@ namespace EndoscopicSystem.V2.Forms
             // 
             this.label8.AutoSize = true;
             this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
-            this.label8.Location = new System.Drawing.Point(331, 529);
+            this.label8.Location = new System.Drawing.Point(331, 439);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(38, 24);
             this.label8.TabIndex = 11;
@@ -178,9 +179,9 @@ namespace EndoscopicSystem.V2.Forms
             this.groupBox1.Controls.Add(this.label4);
             this.groupBox1.Controls.Add(this.label3);
             this.groupBox1.Controls.Add(this.label2);
-            this.groupBox1.Location = new System.Drawing.Point(38, 79);
+            this.groupBox1.Location = new System.Drawing.Point(38, 51);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(563, 384);
+            this.groupBox1.Size = new System.Drawing.Size(563, 358);
             this.groupBox1.TabIndex = 12;
             this.groupBox1.TabStop = false;
             // 
@@ -229,7 +230,7 @@ namespace EndoscopicSystem.V2.Forms
             this.cbbInstrument1.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cbbInstrument1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
             this.cbbInstrument1.FormattingEnabled = true;
-            this.cbbInstrument1.Location = new System.Drawing.Point(38, 563);
+            this.cbbInstrument1.Location = new System.Drawing.Point(38, 473);
             this.cbbInstrument1.Margin = new System.Windows.Forms.Padding(2);
             this.cbbInstrument1.Name = "cbbInstrument1";
             this.cbbInstrument1.Size = new System.Drawing.Size(266, 28);
@@ -241,7 +242,7 @@ namespace EndoscopicSystem.V2.Forms
             this.cbbInstrument2.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cbbInstrument2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
             this.cbbInstrument2.FormattingEnabled = true;
-            this.cbbInstrument2.Location = new System.Drawing.Point(38, 628);
+            this.cbbInstrument2.Location = new System.Drawing.Point(38, 505);
             this.cbbInstrument2.Margin = new System.Windows.Forms.Padding(2);
             this.cbbInstrument2.Name = "cbbInstrument2";
             this.cbbInstrument2.Size = new System.Drawing.Size(266, 28);
@@ -249,46 +250,56 @@ namespace EndoscopicSystem.V2.Forms
             this.cbbInstrument2.Visible = false;
             this.cbbInstrument2.SelectedIndexChanged += new System.EventHandler(this.cbbInstrument2_SelectedIndexChanged);
             // 
-            // label10
-            // 
-            this.label10.AutoSize = true;
-            this.label10.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
-            this.label10.Location = new System.Drawing.Point(34, 594);
-            this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(31, 24);
-            this.label10.TabIndex = 100;
-            this.label10.Text = "รุ่น";
-            this.label10.Visible = false;
-            // 
             // SerialNumber2
             // 
             this.SerialNumber2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
-            this.SerialNumber2.Location = new System.Drawing.Point(335, 630);
+            this.SerialNumber2.Location = new System.Drawing.Point(335, 507);
             this.SerialNumber2.Name = "SerialNumber2";
             this.SerialNumber2.ReadOnly = true;
             this.SerialNumber2.Size = new System.Drawing.Size(286, 26);
             this.SerialNumber2.TabIndex = 99;
             this.SerialNumber2.Visible = false;
             // 
-            // label9
+            // cbbProfileSettingCanera
             // 
-            this.label9.AutoSize = true;
-            this.label9.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
-            this.label9.Location = new System.Drawing.Point(331, 603);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(38, 24);
-            this.label9.TabIndex = 103;
-            this.label9.Text = "S/n";
-            this.label9.Visible = false;
+            this.cbbProfileSettingCanera.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cbbProfileSettingCanera.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
+            this.cbbProfileSettingCanera.FormattingEnabled = true;
+            this.cbbProfileSettingCanera.Location = new System.Drawing.Point(36, 584);
+            this.cbbProfileSettingCanera.Margin = new System.Windows.Forms.Padding(2);
+            this.cbbProfileSettingCanera.Name = "cbbProfileSettingCanera";
+            this.cbbProfileSettingCanera.Size = new System.Drawing.Size(266, 28);
+            this.cbbProfileSettingCanera.TabIndex = 105;
+            this.cbbProfileSettingCanera.SelectedIndexChanged += new System.EventHandler(this.cbbProfileSettingCanera_SelectedIndexChanged);
+            // 
+            // label11
+            // 
+            this.label11.AutoSize = true;
+            this.label11.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
+            this.label11.Location = new System.Drawing.Point(34, 558);
+            this.label11.Name = "label11";
+            this.label11.Size = new System.Drawing.Size(139, 24);
+            this.label11.TabIndex = 104;
+            this.label11.Text = "Profile Setting";
+            // 
+            // txbProfileSettingCanera
+            // 
+            this.txbProfileSettingCanera.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
+            this.txbProfileSettingCanera.Location = new System.Drawing.Point(335, 586);
+            this.txbProfileSettingCanera.Name = "txbProfileSettingCanera";
+            this.txbProfileSettingCanera.ReadOnly = true;
+            this.txbProfileSettingCanera.Size = new System.Drawing.Size(286, 26);
+            this.txbProfileSettingCanera.TabIndex = 106;
             // 
             // FormPatientConfirm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(679, 744);
-            this.Controls.Add(this.label9);
+            this.Controls.Add(this.txbProfileSettingCanera);
+            this.Controls.Add(this.cbbProfileSettingCanera);
+            this.Controls.Add(this.label11);
             this.Controls.Add(this.cbbInstrument2);
-            this.Controls.Add(this.label10);
             this.Controls.Add(this.SerialNumber2);
             this.Controls.Add(this.cbbInstrument1);
             this.Controls.Add(this.groupBox1);
@@ -332,8 +343,9 @@ namespace EndoscopicSystem.V2.Forms
         private System.Windows.Forms.Label lbName;
         private System.Windows.Forms.ComboBox cbbInstrument1;
         private System.Windows.Forms.ComboBox cbbInstrument2;
-        private System.Windows.Forms.Label label10;
         private System.Windows.Forms.TextBox SerialNumber2;
-        private System.Windows.Forms.Label label9;
+        private System.Windows.Forms.ComboBox cbbProfileSettingCanera;
+        private System.Windows.Forms.Label label11;
+        private System.Windows.Forms.TextBox txbProfileSettingCanera;
     }
 }
