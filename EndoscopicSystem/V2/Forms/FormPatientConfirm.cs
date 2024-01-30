@@ -14,7 +14,7 @@ namespace EndoscopicSystem.V2.Forms
 {
     public partial class FormPatientConfirm : Form
     {
-        private int _id, _patientId, _procedureId, _endoscopicId, _appointmentId;
+        private int _id, _patientId, _procedureId, _endoscopicId, _appointmentId, _settingId;
         private string _hnNo, defaultData = "......";
         private readonly EndoscopicEntities _db = new EndoscopicEntities();
         private readonly DropdownListService _dropdownListService = new DropdownListService();
@@ -52,6 +52,7 @@ namespace EndoscopicSystem.V2.Forms
             }
 
             _dropdownListService.DropdownProfileSettingCamera(cbbProfileSettingCanera);
+            _settingId = cbbProfileSettingCanera.SelectedValue == null ? 0 : Convert.ToInt32(cbbProfileSettingCanera.SelectedValue);
         }
 
         private void cbbInstrument1_SelectedIndexChanged(object sender, EventArgs e)
@@ -99,6 +100,7 @@ namespace EndoscopicSystem.V2.Forms
                 {
                     txbProfileSettingCanera.Text = string.Format("{0}*{1} px", settingCamera.CrpWidth, settingCamera.CrpHeight);
                 }
+                _settingId = settingCamera.ID;
             }
             else
             {
@@ -226,7 +228,7 @@ namespace EndoscopicSystem.V2.Forms
             try
             {
                 // Form Panel
-                FormProceed formProceed = new FormProceed(_id, _hnNo, _patientId, _procedureId, _endoscopicId, _appointmentId, null, _isEgdAndColono);
+                FormProceed formProceed = new FormProceed(_id, _hnNo, _patientId, _procedureId, _endoscopicId, _appointmentId, null, _isEgdAndColono, _settingId);
                 formProceed.ShowDialog();
                 formProceed = null;
             }

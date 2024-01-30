@@ -14,11 +14,11 @@ namespace EndoscopicSystem.V2.Forms
     public partial class FormProceed : Form
     {
         public static FormProceed Self;
-        private int _id = 0, _patientId = 0, _endoscopicId = 0, _procedureId = 0, _appointmentId = 0, _stepId = 0;
+        private int _id = 0, _patientId = 0, _endoscopicId = 0, _procedureId = 0, _appointmentId = 0, _stepId = 0, _settingId;
         private string _hn, _pathImage, _pathVideo;
         private Form _activeForm = null, _useFormShow = null;
         private bool _isEgdAndColono = false;
-        public FormProceed(int id, string hn = null, int patientId = 0, int procedureId = 0, int endoscopicId = 0, int appointmentId = 0, Form formActive = null, bool isEgdAndColono = false)
+        public FormProceed(int id, string hn = null, int patientId = 0, int procedureId = 0, int endoscopicId = 0, int appointmentId = 0, Form formActive = null, bool isEgdAndColono = false, int settingId = 0)
         {
             InitializeComponent();
 
@@ -30,6 +30,7 @@ namespace EndoscopicSystem.V2.Forms
             this._appointmentId = appointmentId;
             this._useFormShow = formActive;
             this._isEgdAndColono = isEgdAndColono;
+            this._settingId = settingId;
             Self = this;
         }
 
@@ -63,7 +64,7 @@ namespace EndoscopicSystem.V2.Forms
                 txbCheckHasEgdAndColono.Text = "0";
             }
 
-            _useFormShow = new FormLive(_id, _hn, _procedureId, _endoscopicId, _appointmentId, false);
+            _useFormShow = new FormLive(_id, _hn, _procedureId, _endoscopicId, _appointmentId, false, _settingId);
 
             OpenChildForm(_useFormShow);
         }
@@ -107,7 +108,7 @@ namespace EndoscopicSystem.V2.Forms
                     else if (_stepId == 4)
                     {
                         if (hasEgdAndColonoStep.Equals("1"))
-                            OpenChildForm(new FormLive(_id, _hn, _procedureId, _endoscopicId, _appointmentId, true));
+                            OpenChildForm(new FormLive(_id, _hn, _procedureId, _endoscopicId, _appointmentId, true, _settingId));
                         else if (hasEgdAndColonoStep.Equals("2"))
                             OpenChildForm(new FormPreviewReport(_id, _hn, _procedureId, _appointmentId, _endoscopicId, _patientId, _pathImage, _pathVideo, false, dateStartRec, dateEndRec));
                     }

@@ -123,14 +123,6 @@
   <ItemGroup>
     <Compile Include="Constants\Constant.cs" />
     <Compile Include="Constants\Helper.cs" />
-    <Compile Include="EndoscopicDbDataSet.cs">
-      <DependentUpon>EndoscopicDbDataSet.xsd</DependentUpon>
-    </Compile>
-    <Compile Include="EndoscopicDbDataSet.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>EndoscopicDbDataSet.xsd</DependentUpon>
-    </Compile>
     <Compile Include="Entities\AmpullaOfVater.cs">
       <DependentUpon>DBEndoscopic.tt</DependentUpon>
     </Compile>
@@ -996,20 +988,10 @@
       <LastGenOutput>DBEndoscopic.Designer.cs</LastGenOutput>
     </EntityDeploy>
     <None Include="App.config" />
-    <None Include="EndoscopicDbDataSet.xsc">
-      <DependentUpon>EndoscopicDbDataSet.xsd</DependentUpon>
-    </None>
-    <None Include="EndoscopicDbDataSet.xsd">
-      <Generator>MSDataSetGenerator</Generator>
-      <LastGenOutput>EndoscopicDbDataSet.Designer.cs</LastGenOutput>
-      <SubType>Designer</SubType>
-    </None>
-    <None Include="EndoscopicDbDataSet.xss">
-      <DependentUpon>EndoscopicDbDataSet.xsd</DependentUpon>
-    </None>
     <None Include="Entities\DBEndoscopic.edmx.diagram">
       <DependentUpon>DBEndoscopic.edmx</DependentUpon>
     </None>
+    <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -1034,11 +1016,6 @@
     <Service Include="{C0C07587-41A7-46C8-8FBD-3F9C8EBE2DDC}" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="avcodec-57.dll" />
-    <Content Include="avdevice-57.dll" />
-    <Content Include="avfilter-6.dll" />
-    <Content Include="avformat-57.dll" />
-    <Content Include="avutil-55.dll" />
     <Content Include="Entities\DBEndoscopic.Context.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
       <DependentUpon>DBEndoscopic.edmx</DependentUpon>
@@ -1078,15 +1055,12 @@
     <Content Include="Images\Upload.png" />
     <None Include="Resources\editBtn.png" />
     <Content Include="nplink-03.ico" />
-    <Content Include="postproc-54.dll" />
     <Content Include="Sounds\capture.wav" />
     <Content Include="Sounds\capture1.wav" />
     <Content Include="Sounds\connect.wav" />
     <Content Include="Sounds\disconnect.wav" />
     <Content Include="Sounds\record.wav" />
     <Content Include="Sounds\stop.WAV" />
-    <Content Include="swresample-2.dll" />
-    <Content Include="swscale-4.dll" />
   </ItemGroup>
   <ItemGroup>
     <BootstrapperPackage Include=".NETFramework,Version=v4.7.2">
