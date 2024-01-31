@@ -10375,7 +10375,7 @@ namespace EndoscopicSystem.V2.Forms
             this.txbFindingSupplemental2Text_Cysto.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
             this.txbFindingSupplemental2Text_Cysto.Location = new System.Drawing.Point(225, 343);
             this.txbFindingSupplemental2Text_Cysto.Margin = new System.Windows.Forms.Padding(2);
-            this.txbFindingSupplemental2Text_Cysto.MaxLength = 170;
+            this.txbFindingSupplemental2Text_Cysto.MaxLength = 150;
             this.txbFindingSupplemental2Text_Cysto.Name = "txbFindingSupplemental2Text_Cysto";
             this.txbFindingSupplemental2Text_Cysto.Size = new System.Drawing.Size(757, 23);
             this.txbFindingSupplemental2Text_Cysto.TabIndex = 255;
@@ -10390,7 +10390,7 @@ namespace EndoscopicSystem.V2.Forms
             this.txbFindingSupplemental1Text_Cysto.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
             this.txbFindingSupplemental1Text_Cysto.Location = new System.Drawing.Point(225, 316);
             this.txbFindingSupplemental1Text_Cysto.Margin = new System.Windows.Forms.Padding(2);
-            this.txbFindingSupplemental1Text_Cysto.MaxLength = 170;
+            this.txbFindingSupplemental1Text_Cysto.MaxLength = 150;
             this.txbFindingSupplemental1Text_Cysto.Name = "txbFindingSupplemental1Text_Cysto";
             this.txbFindingSupplemental1Text_Cysto.Size = new System.Drawing.Size(757, 23);
             this.txbFindingSupplemental1Text_Cysto.TabIndex = 252;
@@ -10405,7 +10405,7 @@ namespace EndoscopicSystem.V2.Forms
             this.txbFindingPrincipalText_Cysto.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
             this.txbFindingPrincipalText_Cysto.Location = new System.Drawing.Point(225, 289);
             this.txbFindingPrincipalText_Cysto.Margin = new System.Windows.Forms.Padding(2);
-            this.txbFindingPrincipalText_Cysto.MaxLength = 170;
+            this.txbFindingPrincipalText_Cysto.MaxLength = 150;
             this.txbFindingPrincipalText_Cysto.Name = "txbFindingPrincipalText_Cysto";
             this.txbFindingPrincipalText_Cysto.Size = new System.Drawing.Size(757, 23);
             this.txbFindingPrincipalText_Cysto.TabIndex = 249;
@@ -10420,7 +10420,7 @@ namespace EndoscopicSystem.V2.Forms
             this.txbFindingPostDx3Text_Cysto.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
             this.txbFindingPostDx3Text_Cysto.Location = new System.Drawing.Point(225, 451);
             this.txbFindingPostDx3Text_Cysto.Margin = new System.Windows.Forms.Padding(2);
-            this.txbFindingPostDx3Text_Cysto.MaxLength = 170;
+            this.txbFindingPostDx3Text_Cysto.MaxLength = 150;
             this.txbFindingPostDx3Text_Cysto.Name = "txbFindingPostDx3Text_Cysto";
             this.txbFindingPostDx3Text_Cysto.Size = new System.Drawing.Size(757, 23);
             this.txbFindingPostDx3Text_Cysto.TabIndex = 263;
@@ -10435,7 +10435,7 @@ namespace EndoscopicSystem.V2.Forms
             this.txbFindingPostDx2Text_Cysto.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
             this.txbFindingPostDx2Text_Cysto.Location = new System.Drawing.Point(225, 424);
             this.txbFindingPostDx2Text_Cysto.Margin = new System.Windows.Forms.Padding(2);
-            this.txbFindingPostDx2Text_Cysto.MaxLength = 170;
+            this.txbFindingPostDx2Text_Cysto.MaxLength = 150;
             this.txbFindingPostDx2Text_Cysto.Name = "txbFindingPostDx2Text_Cysto";
             this.txbFindingPostDx2Text_Cysto.Size = new System.Drawing.Size(757, 23);
             this.txbFindingPostDx2Text_Cysto.TabIndex = 261;
@@ -10450,7 +10450,7 @@ namespace EndoscopicSystem.V2.Forms
             this.txbFindingPostDx1Text_Cysto.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
             this.txbFindingPostDx1Text_Cysto.Location = new System.Drawing.Point(225, 397);
             this.txbFindingPostDx1Text_Cysto.Margin = new System.Windows.Forms.Padding(2);
-            this.txbFindingPostDx1Text_Cysto.MaxLength = 170;
+            this.txbFindingPostDx1Text_Cysto.MaxLength = 150;
             this.txbFindingPostDx1Text_Cysto.Name = "txbFindingPostDx1Text_Cysto";
             this.txbFindingPostDx1Text_Cysto.Size = new System.Drawing.Size(757, 23);
             this.txbFindingPostDx1Text_Cysto.TabIndex = 259;
@@ -10549,7 +10549,7 @@ namespace EndoscopicSystem.V2.Forms
             this.txbFindingRecommendation_Cysto.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
             this.txbFindingRecommendation_Cysto.Location = new System.Drawing.Point(225, 532);
             this.txbFindingRecommendation_Cysto.Margin = new System.Windows.Forms.Padding(2);
-            this.txbFindingRecommendation_Cysto.MaxLength = 170;
+            this.txbFindingRecommendation_Cysto.MaxLength = 150;
             this.txbFindingRecommendation_Cysto.Name = "txbFindingRecommendation_Cysto";
             this.txbFindingRecommendation_Cysto.Size = new System.Drawing.Size(757, 23);
             this.txbFindingRecommendation_Cysto.TabIndex = 270;
@@ -10564,7 +10564,7 @@ namespace EndoscopicSystem.V2.Forms
             this.txbFindingHistopathology_Cysto.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
             this.txbFindingHistopathology_Cysto.Location = new System.Drawing.Point(225, 505);
             this.txbFindingHistopathology_Cysto.Margin = new System.Windows.Forms.Padding(2);
-            this.txbFindingHistopathology_Cysto.MaxLength = 170;
+            this.txbFindingHistopathology_Cysto.MaxLength = 150;
             this.txbFindingHistopathology_Cysto.Name = "txbFindingHistopathology_Cysto";
             this.txbFindingHistopathology_Cysto.Size = new System.Drawing.Size(757, 23);
             this.txbFindingHistopathology_Cysto.TabIndex = 268;
@@ -10621,7 +10621,7 @@ namespace EndoscopicSystem.V2.Forms
             this.txbFindingProcedure_Cysto.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
             this.txbFindingProcedure_Cysto.Location = new System.Drawing.Point(225, 370);
             this.txbFindingProcedure_Cysto.Margin = new System.Windows.Forms.Padding(2);
-            this.txbFindingProcedure_Cysto.MaxLength = 170;
+            this.txbFindingProcedure_Cysto.MaxLength = 150;
             this.txbFindingProcedure_Cysto.Name = "txbFindingProcedure_Cysto";
             this.txbFindingProcedure_Cysto.Size = new System.Drawing.Size(757, 23);
             this.txbFindingProcedure_Cysto.TabIndex = 257;
@@ -10678,7 +10678,7 @@ namespace EndoscopicSystem.V2.Forms
             this.txbFindingComplication_Cysto.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
             this.txbFindingComplication_Cysto.Location = new System.Drawing.Point(225, 478);
             this.txbFindingComplication_Cysto.Margin = new System.Windows.Forms.Padding(2);
-            this.txbFindingComplication_Cysto.MaxLength = 170;
+            this.txbFindingComplication_Cysto.MaxLength = 150;
             this.txbFindingComplication_Cysto.Name = "txbFindingComplication_Cysto";
             this.txbFindingComplication_Cysto.Size = new System.Drawing.Size(757, 23);
             this.txbFindingComplication_Cysto.TabIndex = 245;
@@ -10840,7 +10840,7 @@ namespace EndoscopicSystem.V2.Forms
             this.txbFindingOther_Cysto.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
             this.txbFindingOther_Cysto.Location = new System.Drawing.Point(225, 262);
             this.txbFindingOther_Cysto.Margin = new System.Windows.Forms.Padding(2);
-            this.txbFindingOther_Cysto.MaxLength = 170;
+            this.txbFindingOther_Cysto.MaxLength = 150;
             this.txbFindingOther_Cysto.Name = "txbFindingOther_Cysto";
             this.txbFindingOther_Cysto.Size = new System.Drawing.Size(757, 23);
             this.txbFindingOther_Cysto.TabIndex = 209;
@@ -10865,7 +10865,7 @@ namespace EndoscopicSystem.V2.Forms
             this.txbFindingKidneyLeft_Cysto.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
             this.txbFindingKidneyLeft_Cysto.Location = new System.Drawing.Point(225, 235);
             this.txbFindingKidneyLeft_Cysto.Margin = new System.Windows.Forms.Padding(2);
-            this.txbFindingKidneyLeft_Cysto.MaxLength = 170;
+            this.txbFindingKidneyLeft_Cysto.MaxLength = 150;
             this.txbFindingKidneyLeft_Cysto.Name = "txbFindingKidneyLeft_Cysto";
             this.txbFindingKidneyLeft_Cysto.Size = new System.Drawing.Size(757, 23);
             this.txbFindingKidneyLeft_Cysto.TabIndex = 207;
@@ -10890,7 +10890,7 @@ namespace EndoscopicSystem.V2.Forms
             this.txbFindingKidneyRight_Cysto.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
             this.txbFindingKidneyRight_Cysto.Location = new System.Drawing.Point(225, 208);
             this.txbFindingKidneyRight_Cysto.Margin = new System.Windows.Forms.Padding(2);
-            this.txbFindingKidneyRight_Cysto.MaxLength = 170;
+            this.txbFindingKidneyRight_Cysto.MaxLength = 150;
             this.txbFindingKidneyRight_Cysto.Name = "txbFindingKidneyRight_Cysto";
             this.txbFindingKidneyRight_Cysto.Size = new System.Drawing.Size(757, 23);
             this.txbFindingKidneyRight_Cysto.TabIndex = 205;
@@ -10915,7 +10915,7 @@ namespace EndoscopicSystem.V2.Forms
             this.txbFindingUreterLeft_Cysto.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
             this.txbFindingUreterLeft_Cysto.Location = new System.Drawing.Point(225, 181);
             this.txbFindingUreterLeft_Cysto.Margin = new System.Windows.Forms.Padding(2);
-            this.txbFindingUreterLeft_Cysto.MaxLength = 170;
+            this.txbFindingUreterLeft_Cysto.MaxLength = 150;
             this.txbFindingUreterLeft_Cysto.Name = "txbFindingUreterLeft_Cysto";
             this.txbFindingUreterLeft_Cysto.Size = new System.Drawing.Size(757, 23);
             this.txbFindingUreterLeft_Cysto.TabIndex = 203;
@@ -10940,7 +10940,7 @@ namespace EndoscopicSystem.V2.Forms
             this.txbFindingUreterRight_Cysto.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
             this.txbFindingUreterRight_Cysto.Location = new System.Drawing.Point(225, 154);
             this.txbFindingUreterRight_Cysto.Margin = new System.Windows.Forms.Padding(2);
-            this.txbFindingUreterRight_Cysto.MaxLength = 170;
+            this.txbFindingUreterRight_Cysto.MaxLength = 150;
             this.txbFindingUreterRight_Cysto.Name = "txbFindingUreterRight_Cysto";
             this.txbFindingUreterRight_Cysto.Size = new System.Drawing.Size(757, 23);
             this.txbFindingUreterRight_Cysto.TabIndex = 201;
@@ -10965,7 +10965,7 @@ namespace EndoscopicSystem.V2.Forms
             this.txbFindingBladder_Cysto.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
             this.txbFindingBladder_Cysto.Location = new System.Drawing.Point(225, 127);
             this.txbFindingBladder_Cysto.Margin = new System.Windows.Forms.Padding(2);
-            this.txbFindingBladder_Cysto.MaxLength = 170;
+            this.txbFindingBladder_Cysto.MaxLength = 150;
             this.txbFindingBladder_Cysto.Name = "txbFindingBladder_Cysto";
             this.txbFindingBladder_Cysto.Size = new System.Drawing.Size(757, 23);
             this.txbFindingBladder_Cysto.TabIndex = 199;
@@ -10990,7 +10990,7 @@ namespace EndoscopicSystem.V2.Forms
             this.txbFindingTrigoneAndOrifices_Cysto.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
             this.txbFindingTrigoneAndOrifices_Cysto.Location = new System.Drawing.Point(225, 100);
             this.txbFindingTrigoneAndOrifices_Cysto.Margin = new System.Windows.Forms.Padding(2);
-            this.txbFindingTrigoneAndOrifices_Cysto.MaxLength = 170;
+            this.txbFindingTrigoneAndOrifices_Cysto.MaxLength = 150;
             this.txbFindingTrigoneAndOrifices_Cysto.Name = "txbFindingTrigoneAndOrifices_Cysto";
             this.txbFindingTrigoneAndOrifices_Cysto.Size = new System.Drawing.Size(757, 23);
             this.txbFindingTrigoneAndOrifices_Cysto.TabIndex = 197;
@@ -11015,7 +11015,7 @@ namespace EndoscopicSystem.V2.Forms
             this.txbFindingBladderNeck_Cysto.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
             this.txbFindingBladderNeck_Cysto.Location = new System.Drawing.Point(225, 73);
             this.txbFindingBladderNeck_Cysto.Margin = new System.Windows.Forms.Padding(2);
-            this.txbFindingBladderNeck_Cysto.MaxLength = 170;
+            this.txbFindingBladderNeck_Cysto.MaxLength = 150;
             this.txbFindingBladderNeck_Cysto.Name = "txbFindingBladderNeck_Cysto";
             this.txbFindingBladderNeck_Cysto.Size = new System.Drawing.Size(757, 23);
             this.txbFindingBladderNeck_Cysto.TabIndex = 193;
@@ -11040,7 +11040,7 @@ namespace EndoscopicSystem.V2.Forms
             this.txbFindingProstate_Cysto.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
             this.txbFindingProstate_Cysto.Location = new System.Drawing.Point(225, 46);
             this.txbFindingProstate_Cysto.Margin = new System.Windows.Forms.Padding(2);
-            this.txbFindingProstate_Cysto.MaxLength = 170;
+            this.txbFindingProstate_Cysto.MaxLength = 150;
             this.txbFindingProstate_Cysto.Name = "txbFindingProstate_Cysto";
             this.txbFindingProstate_Cysto.Size = new System.Drawing.Size(757, 23);
             this.txbFindingProstate_Cysto.TabIndex = 191;
@@ -11065,7 +11065,7 @@ namespace EndoscopicSystem.V2.Forms
             this.txbFindingUrethra_Cysto.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
             this.txbFindingUrethra_Cysto.Location = new System.Drawing.Point(225, 19);
             this.txbFindingUrethra_Cysto.Margin = new System.Windows.Forms.Padding(2);
-            this.txbFindingUrethra_Cysto.MaxLength = 170;
+            this.txbFindingUrethra_Cysto.MaxLength = 150;
             this.txbFindingUrethra_Cysto.Name = "txbFindingUrethra_Cysto";
             this.txbFindingUrethra_Cysto.Size = new System.Drawing.Size(757, 23);
             this.txbFindingUrethra_Cysto.TabIndex = 189;

@@ -574,6 +574,12 @@
       <DesignTime>True</DesignTime>
       <AutoGen>True</AutoGen>
     </Compile>
+    <Compile Include="Report\CystoscopeReport.cs">
+      <DependentUpon>CystoscopeReport.rpt</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <SubType>Component</SubType>
+      <DesignTime>True</DesignTime>
+    </Compile>
     <Compile Include="Report\LaparoscopicReport.cs">
       <DependentUpon>LaparoscopicReport.rpt</DependentUpon>
       <AutoGen>True</AutoGen>
@@ -766,6 +772,7 @@
     <Content Include="Images\38.png" />
     <Content Include="Images\39.png" />
     <Content Include="Images\40.png" />
+    <Content Include="Images\Cystoscope.png" />
     <Content Include="Images\GIF\loading-100.gif" />
     <Content Include="Images\reload-icon-4.png" />
     <Content Include="Images\V2\iStock-1089688016.jpg" />
@@ -931,6 +938,10 @@
     <Content Include="Report\LaparoscopicReport.rpt">
       <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
       <LastGenOutput>LaparoscopicReport.cs</LastGenOutput>
+    </Content>
+    <Content Include="Report\CystoscopeReport.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>CystoscopeReport.cs</LastGenOutput>
     </Content>
     <EmbeddedResource Include="V2\Forms\FormDashboardStatistic.resx">
       <DependentUpon>FormDashboardStatistic.cs</DependentUpon>

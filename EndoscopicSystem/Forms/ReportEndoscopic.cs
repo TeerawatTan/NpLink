@@ -109,6 +109,10 @@ namespace EndoscopicSystem.Forms
             {
                 rprt.Load(_reportPath + "LaparoscopicReport.rpt");
             }
+            else if (procedureId == 9) // Cystoscope Report
+            {
+                rprt.Load(_reportPath + "CystoscopeReport.rpt");
+            }
             else
             {
                 throw new Exception("Error : Not found report.");

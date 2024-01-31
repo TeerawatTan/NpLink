@@ -88,7 +88,7 @@ namespace EndoscopicSystem.V2.Forms
             if (settingId == null || settingId < 0)
                 return;
 
-            var settingCamera = _db.SettingDevices.Where(w => w.ID == settingId).FirstOrDefault();
+            var settingCamera = _db.SettingDevices.Where(w => w.ID == settingId && w.IsActive == true).FirstOrDefault();
             if (settingCamera != null)
             {
                 if ((settingCamera.CrpWidth == null || settingCamera.CrpWidth == 0) && (settingCamera.CrpHeight == null || settingCamera.CrpHeight == 0))
@@ -166,25 +166,25 @@ namespace EndoscopicSystem.V2.Forms
                             _endoscopicId = endo.EndoscopicID;
                         }
 
-                        //if (_procedureId == 9)
-                        //{
-                        //    FindingCystoscope findingCystoscope = new FindingCystoscope()
-                        //    {
-                        //        EndoscopicID = _endoscopicId
-                        //    };
-                        //    _ = InsertFindingCystoscope(findingCystoscope);
-                        //}
-                        //else
-                        //{
-                        //    Finding finding = new Finding()
-                        //    {
-                        //        PatientID = getPatient.PatientID,
-                        //        CreateBy = _id,
-                        //        CreateDate = stampNow,
-                        //        EndoscopicID = _endoscopicId
-                        //    };
-                        //    _ = InsertFinding(finding);
-                        //}
+                        if (_procedureId == 9)
+                        {
+                            FindingCystoscope findingCystoscope = new FindingCystoscope()
+                            {
+                                EndoscopicID = _endoscopicId
+                            };
+                            _ = InsertFindingCystoscope(findingCystoscope);
+                        }
+                        else
+                        {
+                            Finding finding = new Finding()
+                            {
+                                PatientID = getPatient.PatientID,
+                                CreateBy = _id,
+                                CreateDate = stampNow,
+                                EndoscopicID = _endoscopicId
+                            };
+                            _ = InsertFinding(finding);
+                        }
                     }
 
                     doctorName = _db.Doctors.FirstOrDefault(f => f.DoctorID == getPatient.DoctorID)?.NameTH;
@@ -220,17 +220,17 @@ namespace EndoscopicSystem.V2.Forms
             return _db.SaveChanges();
         }
 
-        //private int InsertFinding(Finding finding)
-        //{
-        //    _db.Findings.Add(finding);
-        //    return _db.SaveChanges();
-        //}
+        private int InsertFinding(Finding finding)
+        {
+            _db.Findings.Add(finding);
+            return _db.SaveChanges();
+        }
 
-        //private int InsertFindingCystoscope(FindingCystoscope finding)
-        //{
-        //    _db.FindingCystoscopes.Add(finding);
-        //    return _db.SaveChanges();
-        //}
+        private int InsertFindingCystoscope(FindingCystoscope finding)
+        {
+            _db.FindingCystoscopes.Add(finding);
+            return _db.SaveChanges();
+        }
 
         private bool UpdateAllData(int appointmentId)
         {

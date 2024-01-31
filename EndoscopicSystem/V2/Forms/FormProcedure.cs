@@ -195,7 +195,13 @@ namespace EndoscopicSystem.V2.Forms
                         txbFindingSupplementalProcedureText2_Ent,
                         txbFindingDx1Text_Ent,
                         txbFindingDx2Text_Ent,
-                        txbFindingDx3Text_Ent
+                        txbFindingDx3Text_Ent,
+                        txbFindingPrincipalText_Cysto,
+                        txbFindingSupplemental1Text_Cysto,
+                        txbFindingSupplemental2Text_Cysto,
+                        txbFindingPostDx1Text_Cysto,
+                        txbFindingPostDx2Text_Cysto,
+                        txbFindingPostDx3Text_Cysto,
                     });
 
                     if (textBoxList.Contains(lastFocused))
@@ -5965,7 +5971,15 @@ namespace EndoscopicSystem.V2.Forms
             if (findingCysto != null)
             {
                 findingCysto.Urethra = txbFindingUrethra_Cysto.Text;
-
+                findingCysto.Prostate = txbFindingProstate_Cysto.Text;
+                findingCysto.BladderNeck = txbFindingBladderNeck_Cysto.Text;
+                findingCysto.TrigoneandOrifices = txbFindingTrigoneAndOrifices_Cysto.Text;
+                findingCysto.Bladder = txbFindingBladder_Cysto.Text;
+                findingCysto.UreterRight = txbFindingUreterRight_Cysto.Text;
+                findingCysto.UreterLeft = txbFindingUreterLeft_Cysto.Text;
+                findingCysto.KidneyRight = txbFindingKidneyRight_Cysto.Text;
+                findingCysto.KidneyLeft = txbFindingKidneyLeft_Cysto.Text;
+                findingCysto.Other = txbFindingOther_Cysto.Text;
                 findingCysto.PrincipalProcedureID = !string.IsNullOrWhiteSpace(txbFindingPrincipalId_Cysto.Text) ? Convert.ToInt32(txbFindingPrincipalId_Cysto.Text) : 0;
                 findingCysto.PrincipalProcedureDetail = findingCysto.PrincipalProcedureID > 0 ? txbFindingPrincipalCode_Cysto.Text + "-" + txbFindingPrincipalText_Cysto.Text : txbFindingPrincipalText_Cysto.Text;
                 findingCysto.SupplementalProcedure1ID = !string.IsNullOrWhiteSpace(txbFindingSupplemental1Id_Cysto.Text) ? Convert.ToInt32(txbFindingSupplemental1Id_Cysto.Text) : 0;
