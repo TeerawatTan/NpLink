@@ -716,6 +716,61 @@ namespace EndoscopicSystem.V2.Forms
             this.label20 = new System.Windows.Forms.Label();
             this.label22 = new System.Windows.Forms.Label();
             this.tabControl1 = new System.Windows.Forms.TabControl();
+            this.tabFindingCystoscope = new System.Windows.Forms.TabPage();
+            this.txbFindingSupplemental2Text_Cysto = new System.Windows.Forms.TextBox();
+            this.txbFindingSupplemental1Text_Cysto = new System.Windows.Forms.TextBox();
+            this.txbFindingPrincipalText_Cysto = new System.Windows.Forms.TextBox();
+            this.txbFindingPostDx3Text_Cysto = new System.Windows.Forms.TextBox();
+            this.txbFindingPostDx2Text_Cysto = new System.Windows.Forms.TextBox();
+            this.txbFindingPostDx1Text_Cysto = new System.Windows.Forms.TextBox();
+            this.txbFindingPostDx3Id_Cysto = new System.Windows.Forms.TextBox();
+            this.txbFindingPostDx2Id_Cysto = new System.Windows.Forms.TextBox();
+            this.txbFindingPostDx1Id_Cysto = new System.Windows.Forms.TextBox();
+            this.txbFindingSupplemental2Id_Cysto = new System.Windows.Forms.TextBox();
+            this.txbFindingSupplemental1Id_Cysto = new System.Windows.Forms.TextBox();
+            this.txbFindingPrincipalId_Cysto = new System.Windows.Forms.TextBox();
+            this.txbFindingRecommendation_Cysto = new System.Windows.Forms.TextBox();
+            this.txbFindingHistopathology_Cysto = new System.Windows.Forms.TextBox();
+            this.txbFindingPostDx3Code_Cysto = new System.Windows.Forms.TextBox();
+            this.txbFindingPostDx2Code_Cysto = new System.Windows.Forms.TextBox();
+            this.txbFindingPostDx1Code_Cysto = new System.Windows.Forms.TextBox();
+            this.txbFindingProcedure_Cysto = new System.Windows.Forms.TextBox();
+            this.txbFindingSupplemental2Code_Cysto = new System.Windows.Forms.TextBox();
+            this.txbFindingSupplemental1Code_Cysto = new System.Windows.Forms.TextBox();
+            this.txbFindingPrincipalCode_Cysto = new System.Windows.Forms.TextBox();
+            this.txbFindingComplication_Cysto = new System.Windows.Forms.TextBox();
+            this.txbFindingComment_Cysto = new System.Windows.Forms.TextBox();
+            this.label90 = new System.Windows.Forms.Label();
+            this.label91 = new System.Windows.Forms.Label();
+            this.label92 = new System.Windows.Forms.Label();
+            this.label93 = new System.Windows.Forms.Label();
+            this.label94 = new System.Windows.Forms.Label();
+            this.label98 = new System.Windows.Forms.Label();
+            this.label186 = new System.Windows.Forms.Label();
+            this.label187 = new System.Windows.Forms.Label();
+            this.label188 = new System.Windows.Forms.Label();
+            this.label189 = new System.Windows.Forms.Label();
+            this.label190 = new System.Windows.Forms.Label();
+            this.txbFindingOther_Cysto = new System.Windows.Forms.TextBox();
+            this.label95 = new System.Windows.Forms.Label();
+            this.txbFindingKidneyLeft_Cysto = new System.Windows.Forms.TextBox();
+            this.label96 = new System.Windows.Forms.Label();
+            this.txbFindingKidneyRight_Cysto = new System.Windows.Forms.TextBox();
+            this.label97 = new System.Windows.Forms.Label();
+            this.txbFindingUreterLeft_Cysto = new System.Windows.Forms.TextBox();
+            this.label86 = new System.Windows.Forms.Label();
+            this.txbFindingUreterRight_Cysto = new System.Windows.Forms.TextBox();
+            this.label87 = new System.Windows.Forms.Label();
+            this.txbFindingBladder_Cysto = new System.Windows.Forms.TextBox();
+            this.label88 = new System.Windows.Forms.Label();
+            this.txbFindingTrigoneAndOrifices_Cysto = new System.Windows.Forms.TextBox();
+            this.label89 = new System.Windows.Forms.Label();
+            this.txbFindingBladderNeck_Cysto = new System.Windows.Forms.TextBox();
+            this.label85 = new System.Windows.Forms.Label();
+            this.txbFindingProstate_Cysto = new System.Windows.Forms.TextBox();
+            this.label18 = new System.Windows.Forms.Label();
+            this.txbFindingUrethra_Cysto = new System.Windows.Forms.TextBox();
+            this.label17 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxSnapshot)).BeginInit();
             this.panel3.SuspendLayout();
             this.gb32.SuspendLayout();
@@ -792,6 +847,7 @@ namespace EndoscopicSystem.V2.Forms
             this.tabFindingEGD.SuspendLayout();
             this.tabGeneralEGD.SuspendLayout();
             this.tabControl1.SuspendLayout();
+            this.tabFindingCystoscope.SuspendLayout();
             this.SuspendLayout();
             // 
             // pictureBoxSnapshot
@@ -10238,6 +10294,7 @@ namespace EndoscopicSystem.V2.Forms
             this.tabControl1.Controls.Add(this.tabFindingENT);
             this.tabControl1.Controls.Add(this.tabGeneralLab);
             this.tabControl1.Controls.Add(this.tabFindingLab);
+            this.tabControl1.Controls.Add(this.tabFindingCystoscope);
             this.tabControl1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
             this.tabControl1.ItemSize = new System.Drawing.Size(60, 30);
             this.tabControl1.Location = new System.Drawing.Point(445, 66);
@@ -10246,6 +10303,784 @@ namespace EndoscopicSystem.V2.Forms
             this.tabControl1.SelectedIndex = 0;
             this.tabControl1.Size = new System.Drawing.Size(1001, 885);
             this.tabControl1.TabIndex = 91;
+            // 
+            // tabFindingCystoscope
+            // 
+            this.tabFindingCystoscope.BackColor = System.Drawing.Color.LightGray;
+            this.tabFindingCystoscope.Controls.Add(this.txbFindingSupplemental2Text_Cysto);
+            this.tabFindingCystoscope.Controls.Add(this.txbFindingSupplemental1Text_Cysto);
+            this.tabFindingCystoscope.Controls.Add(this.txbFindingPrincipalText_Cysto);
+            this.tabFindingCystoscope.Controls.Add(this.txbFindingPostDx3Text_Cysto);
+            this.tabFindingCystoscope.Controls.Add(this.txbFindingPostDx2Text_Cysto);
+            this.tabFindingCystoscope.Controls.Add(this.txbFindingPostDx1Text_Cysto);
+            this.tabFindingCystoscope.Controls.Add(this.txbFindingPostDx3Id_Cysto);
+            this.tabFindingCystoscope.Controls.Add(this.txbFindingPostDx2Id_Cysto);
+            this.tabFindingCystoscope.Controls.Add(this.txbFindingPostDx1Id_Cysto);
+            this.tabFindingCystoscope.Controls.Add(this.txbFindingSupplemental2Id_Cysto);
+            this.tabFindingCystoscope.Controls.Add(this.txbFindingSupplemental1Id_Cysto);
+            this.tabFindingCystoscope.Controls.Add(this.txbFindingPrincipalId_Cysto);
+            this.tabFindingCystoscope.Controls.Add(this.txbFindingRecommendation_Cysto);
+            this.tabFindingCystoscope.Controls.Add(this.txbFindingHistopathology_Cysto);
+            this.tabFindingCystoscope.Controls.Add(this.txbFindingPostDx3Code_Cysto);
+            this.tabFindingCystoscope.Controls.Add(this.txbFindingPostDx2Code_Cysto);
+            this.tabFindingCystoscope.Controls.Add(this.txbFindingPostDx1Code_Cysto);
+            this.tabFindingCystoscope.Controls.Add(this.txbFindingProcedure_Cysto);
+            this.tabFindingCystoscope.Controls.Add(this.txbFindingSupplemental2Code_Cysto);
+            this.tabFindingCystoscope.Controls.Add(this.txbFindingSupplemental1Code_Cysto);
+            this.tabFindingCystoscope.Controls.Add(this.txbFindingPrincipalCode_Cysto);
+            this.tabFindingCystoscope.Controls.Add(this.txbFindingComplication_Cysto);
+            this.tabFindingCystoscope.Controls.Add(this.txbFindingComment_Cysto);
+            this.tabFindingCystoscope.Controls.Add(this.label90);
+            this.tabFindingCystoscope.Controls.Add(this.label91);
+            this.tabFindingCystoscope.Controls.Add(this.label92);
+            this.tabFindingCystoscope.Controls.Add(this.label93);
+            this.tabFindingCystoscope.Controls.Add(this.label94);
+            this.tabFindingCystoscope.Controls.Add(this.label98);
+            this.tabFindingCystoscope.Controls.Add(this.label186);
+            this.tabFindingCystoscope.Controls.Add(this.label187);
+            this.tabFindingCystoscope.Controls.Add(this.label188);
+            this.tabFindingCystoscope.Controls.Add(this.label189);
+            this.tabFindingCystoscope.Controls.Add(this.label190);
+            this.tabFindingCystoscope.Controls.Add(this.txbFindingOther_Cysto);
+            this.tabFindingCystoscope.Controls.Add(this.label95);
+            this.tabFindingCystoscope.Controls.Add(this.txbFindingKidneyLeft_Cysto);
+            this.tabFindingCystoscope.Controls.Add(this.label96);
+            this.tabFindingCystoscope.Controls.Add(this.txbFindingKidneyRight_Cysto);
+            this.tabFindingCystoscope.Controls.Add(this.label97);
+            this.tabFindingCystoscope.Controls.Add(this.txbFindingUreterLeft_Cysto);
+            this.tabFindingCystoscope.Controls.Add(this.label86);
+            this.tabFindingCystoscope.Controls.Add(this.txbFindingUreterRight_Cysto);
+            this.tabFindingCystoscope.Controls.Add(this.label87);
+            this.tabFindingCystoscope.Controls.Add(this.txbFindingBladder_Cysto);
+            this.tabFindingCystoscope.Controls.Add(this.label88);
+            this.tabFindingCystoscope.Controls.Add(this.txbFindingTrigoneAndOrifices_Cysto);
+            this.tabFindingCystoscope.Controls.Add(this.label89);
+            this.tabFindingCystoscope.Controls.Add(this.txbFindingBladderNeck_Cysto);
+            this.tabFindingCystoscope.Controls.Add(this.label85);
+            this.tabFindingCystoscope.Controls.Add(this.txbFindingProstate_Cysto);
+            this.tabFindingCystoscope.Controls.Add(this.label18);
+            this.tabFindingCystoscope.Controls.Add(this.txbFindingUrethra_Cysto);
+            this.tabFindingCystoscope.Controls.Add(this.label17);
+            this.tabFindingCystoscope.Location = new System.Drawing.Point(4, 34);
+            this.tabFindingCystoscope.Name = "tabFindingCystoscope";
+            this.tabFindingCystoscope.Size = new System.Drawing.Size(993, 847);
+            this.tabFindingCystoscope.TabIndex = 21;
+            this.tabFindingCystoscope.Text = "Finding";
+            // 
+            // txbFindingSupplemental2Text_Cysto
+            // 
+            this.txbFindingSupplemental2Text_Cysto.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.txbFindingSupplemental2Text_Cysto.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.txbFindingSupplemental2Text_Cysto.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
+            this.txbFindingSupplemental2Text_Cysto.Location = new System.Drawing.Point(225, 343);
+            this.txbFindingSupplemental2Text_Cysto.Margin = new System.Windows.Forms.Padding(2);
+            this.txbFindingSupplemental2Text_Cysto.MaxLength = 170;
+            this.txbFindingSupplemental2Text_Cysto.Name = "txbFindingSupplemental2Text_Cysto";
+            this.txbFindingSupplemental2Text_Cysto.Size = new System.Drawing.Size(757, 23);
+            this.txbFindingSupplemental2Text_Cysto.TabIndex = 255;
+            this.txbFindingSupplemental2Text_Cysto.Click += new System.EventHandler(this.txbFindingSpplemental2Text_Cysto_Click);
+            this.txbFindingSupplemental2Text_Cysto.Leave += new System.EventHandler(this.txbFindingSpplemental2Text_Cysto_Leave);
+            // 
+            // txbFindingSupplemental1Text_Cysto
+            // 
+            this.txbFindingSupplemental1Text_Cysto.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.txbFindingSupplemental1Text_Cysto.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.txbFindingSupplemental1Text_Cysto.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
+            this.txbFindingSupplemental1Text_Cysto.Location = new System.Drawing.Point(225, 316);
+            this.txbFindingSupplemental1Text_Cysto.Margin = new System.Windows.Forms.Padding(2);
+            this.txbFindingSupplemental1Text_Cysto.MaxLength = 170;
+            this.txbFindingSupplemental1Text_Cysto.Name = "txbFindingSupplemental1Text_Cysto";
+            this.txbFindingSupplemental1Text_Cysto.Size = new System.Drawing.Size(757, 23);
+            this.txbFindingSupplemental1Text_Cysto.TabIndex = 252;
+            this.txbFindingSupplemental1Text_Cysto.Click += new System.EventHandler(this.txbFindingSpplemental1Text_Cysto_Click);
+            this.txbFindingSupplemental1Text_Cysto.Leave += new System.EventHandler(this.txbFindingSpplemental1Text_Cysto_Leave);
+            // 
+            // txbFindingPrincipalText_Cysto
+            // 
+            this.txbFindingPrincipalText_Cysto.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.txbFindingPrincipalText_Cysto.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.txbFindingPrincipalText_Cysto.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
+            this.txbFindingPrincipalText_Cysto.Location = new System.Drawing.Point(225, 289);
+            this.txbFindingPrincipalText_Cysto.Margin = new System.Windows.Forms.Padding(2);
+            this.txbFindingPrincipalText_Cysto.MaxLength = 170;
+            this.txbFindingPrincipalText_Cysto.Name = "txbFindingPrincipalText_Cysto";
+            this.txbFindingPrincipalText_Cysto.Size = new System.Drawing.Size(757, 23);
+            this.txbFindingPrincipalText_Cysto.TabIndex = 249;
+            this.txbFindingPrincipalText_Cysto.Click += new System.EventHandler(this.txbFindingPrincipalText_Cysto_Click);
+            this.txbFindingPrincipalText_Cysto.Leave += new System.EventHandler(this.txbFindingPrincipalText_Cysto_Leave);
+            // 
+            // txbFindingPostDx3Text_Cysto
+            // 
+            this.txbFindingPostDx3Text_Cysto.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.txbFindingPostDx3Text_Cysto.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.txbFindingPostDx3Text_Cysto.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
+            this.txbFindingPostDx3Text_Cysto.Location = new System.Drawing.Point(225, 451);
+            this.txbFindingPostDx3Text_Cysto.Margin = new System.Windows.Forms.Padding(2);
+            this.txbFindingPostDx3Text_Cysto.MaxLength = 170;
+            this.txbFindingPostDx3Text_Cysto.Name = "txbFindingPostDx3Text_Cysto";
+            this.txbFindingPostDx3Text_Cysto.Size = new System.Drawing.Size(757, 23);
+            this.txbFindingPostDx3Text_Cysto.TabIndex = 263;
+            this.txbFindingPostDx3Text_Cysto.Click += new System.EventHandler(this.txbFindingPostDx3Text_Cysto_Click);
+            this.txbFindingPostDx3Text_Cysto.Leave += new System.EventHandler(this.txbFindingPostDx3Text_Cysto_Leave);
+            // 
+            // txbFindingPostDx2Text_Cysto
+            // 
+            this.txbFindingPostDx2Text_Cysto.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.txbFindingPostDx2Text_Cysto.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.txbFindingPostDx2Text_Cysto.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
+            this.txbFindingPostDx2Text_Cysto.Location = new System.Drawing.Point(225, 424);
+            this.txbFindingPostDx2Text_Cysto.Margin = new System.Windows.Forms.Padding(2);
+            this.txbFindingPostDx2Text_Cysto.MaxLength = 170;
+            this.txbFindingPostDx2Text_Cysto.Name = "txbFindingPostDx2Text_Cysto";
+            this.txbFindingPostDx2Text_Cysto.Size = new System.Drawing.Size(757, 23);
+            this.txbFindingPostDx2Text_Cysto.TabIndex = 261;
+            this.txbFindingPostDx2Text_Cysto.Click += new System.EventHandler(this.txbFindingPostDx2Text_Cysto_Click);
+            this.txbFindingPostDx2Text_Cysto.Leave += new System.EventHandler(this.txbFindingPostDx2Text_Cysto_Leave);
+            // 
+            // txbFindingPostDx1Text_Cysto
+            // 
+            this.txbFindingPostDx1Text_Cysto.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.txbFindingPostDx1Text_Cysto.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.txbFindingPostDx1Text_Cysto.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
+            this.txbFindingPostDx1Text_Cysto.Location = new System.Drawing.Point(225, 397);
+            this.txbFindingPostDx1Text_Cysto.Margin = new System.Windows.Forms.Padding(2);
+            this.txbFindingPostDx1Text_Cysto.MaxLength = 170;
+            this.txbFindingPostDx1Text_Cysto.Name = "txbFindingPostDx1Text_Cysto";
+            this.txbFindingPostDx1Text_Cysto.Size = new System.Drawing.Size(757, 23);
+            this.txbFindingPostDx1Text_Cysto.TabIndex = 259;
+            this.txbFindingPostDx1Text_Cysto.Click += new System.EventHandler(this.txbFindingPostDx1Text_Cysto_Click);
+            this.txbFindingPostDx1Text_Cysto.Leave += new System.EventHandler(this.txbFindingPostDx1Text_Cysto_Leave);
+            // 
+            // txbFindingPostDx3Id_Cysto
+            // 
+            this.txbFindingPostDx3Id_Cysto.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.txbFindingPostDx3Id_Cysto.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.txbFindingPostDx3Id_Cysto.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
+            this.txbFindingPostDx3Id_Cysto.Location = new System.Drawing.Point(237, 449);
+            this.txbFindingPostDx3Id_Cysto.Margin = new System.Windows.Forms.Padding(2);
+            this.txbFindingPostDx3Id_Cysto.MaxLength = 200;
+            this.txbFindingPostDx3Id_Cysto.Name = "txbFindingPostDx3Id_Cysto";
+            this.txbFindingPostDx3Id_Cysto.Size = new System.Drawing.Size(30, 23);
+            this.txbFindingPostDx3Id_Cysto.TabIndex = 276;
+            this.txbFindingPostDx3Id_Cysto.Visible = false;
+            // 
+            // txbFindingPostDx2Id_Cysto
+            // 
+            this.txbFindingPostDx2Id_Cysto.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.txbFindingPostDx2Id_Cysto.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.txbFindingPostDx2Id_Cysto.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
+            this.txbFindingPostDx2Id_Cysto.Location = new System.Drawing.Point(237, 422);
+            this.txbFindingPostDx2Id_Cysto.Margin = new System.Windows.Forms.Padding(2);
+            this.txbFindingPostDx2Id_Cysto.MaxLength = 200;
+            this.txbFindingPostDx2Id_Cysto.Name = "txbFindingPostDx2Id_Cysto";
+            this.txbFindingPostDx2Id_Cysto.Size = new System.Drawing.Size(30, 23);
+            this.txbFindingPostDx2Id_Cysto.TabIndex = 275;
+            this.txbFindingPostDx2Id_Cysto.Visible = false;
+            // 
+            // txbFindingPostDx1Id_Cysto
+            // 
+            this.txbFindingPostDx1Id_Cysto.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.txbFindingPostDx1Id_Cysto.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.txbFindingPostDx1Id_Cysto.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
+            this.txbFindingPostDx1Id_Cysto.Location = new System.Drawing.Point(237, 395);
+            this.txbFindingPostDx1Id_Cysto.Margin = new System.Windows.Forms.Padding(2);
+            this.txbFindingPostDx1Id_Cysto.MaxLength = 200;
+            this.txbFindingPostDx1Id_Cysto.Name = "txbFindingPostDx1Id_Cysto";
+            this.txbFindingPostDx1Id_Cysto.Size = new System.Drawing.Size(30, 23);
+            this.txbFindingPostDx1Id_Cysto.TabIndex = 274;
+            this.txbFindingPostDx1Id_Cysto.Visible = false;
+            // 
+            // txbFindingSupplemental2Id_Cysto
+            // 
+            this.txbFindingSupplemental2Id_Cysto.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.txbFindingSupplemental2Id_Cysto.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.txbFindingSupplemental2Id_Cysto.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
+            this.txbFindingSupplemental2Id_Cysto.Location = new System.Drawing.Point(225, 341);
+            this.txbFindingSupplemental2Id_Cysto.Margin = new System.Windows.Forms.Padding(2);
+            this.txbFindingSupplemental2Id_Cysto.MaxLength = 200;
+            this.txbFindingSupplemental2Id_Cysto.Name = "txbFindingSupplemental2Id_Cysto";
+            this.txbFindingSupplemental2Id_Cysto.Size = new System.Drawing.Size(30, 23);
+            this.txbFindingSupplemental2Id_Cysto.TabIndex = 273;
+            this.txbFindingSupplemental2Id_Cysto.Visible = false;
+            // 
+            // txbFindingSupplemental1Id_Cysto
+            // 
+            this.txbFindingSupplemental1Id_Cysto.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.txbFindingSupplemental1Id_Cysto.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.txbFindingSupplemental1Id_Cysto.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
+            this.txbFindingSupplemental1Id_Cysto.Location = new System.Drawing.Point(225, 314);
+            this.txbFindingSupplemental1Id_Cysto.Margin = new System.Windows.Forms.Padding(2);
+            this.txbFindingSupplemental1Id_Cysto.MaxLength = 200;
+            this.txbFindingSupplemental1Id_Cysto.Name = "txbFindingSupplemental1Id_Cysto";
+            this.txbFindingSupplemental1Id_Cysto.Size = new System.Drawing.Size(30, 23);
+            this.txbFindingSupplemental1Id_Cysto.TabIndex = 272;
+            this.txbFindingSupplemental1Id_Cysto.Visible = false;
+            // 
+            // txbFindingPrincipalId_Cysto
+            // 
+            this.txbFindingPrincipalId_Cysto.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.txbFindingPrincipalId_Cysto.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.txbFindingPrincipalId_Cysto.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
+            this.txbFindingPrincipalId_Cysto.Location = new System.Drawing.Point(225, 287);
+            this.txbFindingPrincipalId_Cysto.Margin = new System.Windows.Forms.Padding(2);
+            this.txbFindingPrincipalId_Cysto.MaxLength = 200;
+            this.txbFindingPrincipalId_Cysto.Name = "txbFindingPrincipalId_Cysto";
+            this.txbFindingPrincipalId_Cysto.Size = new System.Drawing.Size(30, 23);
+            this.txbFindingPrincipalId_Cysto.TabIndex = 271;
+            this.txbFindingPrincipalId_Cysto.Visible = false;
+            // 
+            // txbFindingRecommendation_Cysto
+            // 
+            this.txbFindingRecommendation_Cysto.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.txbFindingRecommendation_Cysto.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.txbFindingRecommendation_Cysto.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
+            this.txbFindingRecommendation_Cysto.Location = new System.Drawing.Point(225, 532);
+            this.txbFindingRecommendation_Cysto.Margin = new System.Windows.Forms.Padding(2);
+            this.txbFindingRecommendation_Cysto.MaxLength = 170;
+            this.txbFindingRecommendation_Cysto.Name = "txbFindingRecommendation_Cysto";
+            this.txbFindingRecommendation_Cysto.Size = new System.Drawing.Size(757, 23);
+            this.txbFindingRecommendation_Cysto.TabIndex = 270;
+            this.txbFindingRecommendation_Cysto.Click += new System.EventHandler(this.txbFindingRecommendation_Cysto_Click);
+            this.txbFindingRecommendation_Cysto.Leave += new System.EventHandler(this.txbFindingRecommendation_Cysto_Leave);
+            // 
+            // txbFindingHistopathology_Cysto
+            // 
+            this.txbFindingHistopathology_Cysto.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.txbFindingHistopathology_Cysto.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.txbFindingHistopathology_Cysto.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
+            this.txbFindingHistopathology_Cysto.Location = new System.Drawing.Point(225, 505);
+            this.txbFindingHistopathology_Cysto.Margin = new System.Windows.Forms.Padding(2);
+            this.txbFindingHistopathology_Cysto.MaxLength = 170;
+            this.txbFindingHistopathology_Cysto.Name = "txbFindingHistopathology_Cysto";
+            this.txbFindingHistopathology_Cysto.Size = new System.Drawing.Size(757, 23);
+            this.txbFindingHistopathology_Cysto.TabIndex = 268;
+            this.txbFindingHistopathology_Cysto.Click += new System.EventHandler(this.txbFindingHistopathology_Cysto_Click);
+            this.txbFindingHistopathology_Cysto.Leave += new System.EventHandler(this.txbFindingHistopathology_Cysto_Leave);
+            // 
+            // txbFindingPostDx3Code_Cysto
+            // 
+            this.txbFindingPostDx3Code_Cysto.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.txbFindingPostDx3Code_Cysto.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.txbFindingPostDx3Code_Cysto.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
+            this.txbFindingPostDx3Code_Cysto.Location = new System.Drawing.Point(237, 449);
+            this.txbFindingPostDx3Code_Cysto.Margin = new System.Windows.Forms.Padding(2);
+            this.txbFindingPostDx3Code_Cysto.MaxLength = 200;
+            this.txbFindingPostDx3Code_Cysto.Name = "txbFindingPostDx3Code_Cysto";
+            this.txbFindingPostDx3Code_Cysto.Size = new System.Drawing.Size(168, 23);
+            this.txbFindingPostDx3Code_Cysto.TabIndex = 262;
+            this.txbFindingPostDx3Code_Cysto.Visible = false;
+            // 
+            // txbFindingPostDx2Code_Cysto
+            // 
+            this.txbFindingPostDx2Code_Cysto.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.txbFindingPostDx2Code_Cysto.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.txbFindingPostDx2Code_Cysto.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
+            this.txbFindingPostDx2Code_Cysto.Location = new System.Drawing.Point(237, 422);
+            this.txbFindingPostDx2Code_Cysto.Margin = new System.Windows.Forms.Padding(2);
+            this.txbFindingPostDx2Code_Cysto.MaxLength = 200;
+            this.txbFindingPostDx2Code_Cysto.Name = "txbFindingPostDx2Code_Cysto";
+            this.txbFindingPostDx2Code_Cysto.Size = new System.Drawing.Size(168, 23);
+            this.txbFindingPostDx2Code_Cysto.TabIndex = 260;
+            this.txbFindingPostDx2Code_Cysto.Visible = false;
+            // 
+            // txbFindingPostDx1Code_Cysto
+            // 
+            this.txbFindingPostDx1Code_Cysto.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.txbFindingPostDx1Code_Cysto.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.txbFindingPostDx1Code_Cysto.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
+            this.txbFindingPostDx1Code_Cysto.Location = new System.Drawing.Point(237, 395);
+            this.txbFindingPostDx1Code_Cysto.Margin = new System.Windows.Forms.Padding(2);
+            this.txbFindingPostDx1Code_Cysto.MaxLength = 200;
+            this.txbFindingPostDx1Code_Cysto.Name = "txbFindingPostDx1Code_Cysto";
+            this.txbFindingPostDx1Code_Cysto.Size = new System.Drawing.Size(168, 23);
+            this.txbFindingPostDx1Code_Cysto.TabIndex = 258;
+            this.txbFindingPostDx1Code_Cysto.Visible = false;
+            // 
+            // txbFindingProcedure_Cysto
+            // 
+            this.txbFindingProcedure_Cysto.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.txbFindingProcedure_Cysto.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.txbFindingProcedure_Cysto.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
+            this.txbFindingProcedure_Cysto.Location = new System.Drawing.Point(225, 370);
+            this.txbFindingProcedure_Cysto.Margin = new System.Windows.Forms.Padding(2);
+            this.txbFindingProcedure_Cysto.MaxLength = 170;
+            this.txbFindingProcedure_Cysto.Name = "txbFindingProcedure_Cysto";
+            this.txbFindingProcedure_Cysto.Size = new System.Drawing.Size(757, 23);
+            this.txbFindingProcedure_Cysto.TabIndex = 257;
+            this.txbFindingProcedure_Cysto.Click += new System.EventHandler(this.txbFindingProcedure_Cysto_Click);
+            this.txbFindingProcedure_Cysto.Leave += new System.EventHandler(this.txbFindingProcedure_Cysto_Leave);
+            // 
+            // txbFindingSupplemental2Code_Cysto
+            // 
+            this.txbFindingSupplemental2Code_Cysto.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.txbFindingSupplemental2Code_Cysto.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.txbFindingSupplemental2Code_Cysto.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
+            this.txbFindingSupplemental2Code_Cysto.Location = new System.Drawing.Point(237, 341);
+            this.txbFindingSupplemental2Code_Cysto.Margin = new System.Windows.Forms.Padding(2);
+            this.txbFindingSupplemental2Code_Cysto.MaxLength = 200;
+            this.txbFindingSupplemental2Code_Cysto.Name = "txbFindingSupplemental2Code_Cysto";
+            this.txbFindingSupplemental2Code_Cysto.Size = new System.Drawing.Size(168, 23);
+            this.txbFindingSupplemental2Code_Cysto.TabIndex = 253;
+            this.txbFindingSupplemental2Code_Cysto.Visible = false;
+            // 
+            // txbFindingSupplemental1Code_Cysto
+            // 
+            this.txbFindingSupplemental1Code_Cysto.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.txbFindingSupplemental1Code_Cysto.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.txbFindingSupplemental1Code_Cysto.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
+            this.txbFindingSupplemental1Code_Cysto.Location = new System.Drawing.Point(237, 314);
+            this.txbFindingSupplemental1Code_Cysto.Margin = new System.Windows.Forms.Padding(2);
+            this.txbFindingSupplemental1Code_Cysto.MaxLength = 200;
+            this.txbFindingSupplemental1Code_Cysto.Name = "txbFindingSupplemental1Code_Cysto";
+            this.txbFindingSupplemental1Code_Cysto.Size = new System.Drawing.Size(168, 23);
+            this.txbFindingSupplemental1Code_Cysto.TabIndex = 250;
+            this.txbFindingSupplemental1Code_Cysto.Visible = false;
+            // 
+            // txbFindingPrincipalCode_Cysto
+            // 
+            this.txbFindingPrincipalCode_Cysto.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.txbFindingPrincipalCode_Cysto.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.txbFindingPrincipalCode_Cysto.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
+            this.txbFindingPrincipalCode_Cysto.Location = new System.Drawing.Point(237, 287);
+            this.txbFindingPrincipalCode_Cysto.Margin = new System.Windows.Forms.Padding(2);
+            this.txbFindingPrincipalCode_Cysto.MaxLength = 200;
+            this.txbFindingPrincipalCode_Cysto.Name = "txbFindingPrincipalCode_Cysto";
+            this.txbFindingPrincipalCode_Cysto.Size = new System.Drawing.Size(168, 23);
+            this.txbFindingPrincipalCode_Cysto.TabIndex = 247;
+            this.txbFindingPrincipalCode_Cysto.Visible = false;
+            // 
+            // txbFindingComplication_Cysto
+            // 
+            this.txbFindingComplication_Cysto.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.txbFindingComplication_Cysto.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.txbFindingComplication_Cysto.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
+            this.txbFindingComplication_Cysto.Location = new System.Drawing.Point(225, 478);
+            this.txbFindingComplication_Cysto.Margin = new System.Windows.Forms.Padding(2);
+            this.txbFindingComplication_Cysto.MaxLength = 170;
+            this.txbFindingComplication_Cysto.Name = "txbFindingComplication_Cysto";
+            this.txbFindingComplication_Cysto.Size = new System.Drawing.Size(757, 23);
+            this.txbFindingComplication_Cysto.TabIndex = 245;
+            this.txbFindingComplication_Cysto.Click += new System.EventHandler(this.txbFindingComplication_Cysto_Click);
+            this.txbFindingComplication_Cysto.Leave += new System.EventHandler(this.txbFindingComplication_Cysto_Leave);
+            // 
+            // txbFindingComment_Cysto
+            // 
+            this.txbFindingComment_Cysto.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.txbFindingComment_Cysto.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.txbFindingComment_Cysto.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
+            this.txbFindingComment_Cysto.Location = new System.Drawing.Point(225, 559);
+            this.txbFindingComment_Cysto.Margin = new System.Windows.Forms.Padding(2);
+            this.txbFindingComment_Cysto.MaxLength = 200;
+            this.txbFindingComment_Cysto.Multiline = true;
+            this.txbFindingComment_Cysto.Name = "txbFindingComment_Cysto";
+            this.txbFindingComment_Cysto.Size = new System.Drawing.Size(757, 50);
+            this.txbFindingComment_Cysto.TabIndex = 246;
+            this.txbFindingComment_Cysto.Leave += new System.EventHandler(this.txbFindingComment_Cysto_Leave);
+            // 
+            // label90
+            // 
+            this.label90.AutoSize = true;
+            this.label90.BackColor = System.Drawing.Color.Transparent;
+            this.label90.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
+            this.label90.Location = new System.Drawing.Point(14, 534);
+            this.label90.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label90.Name = "label90";
+            this.label90.Size = new System.Drawing.Size(149, 20);
+            this.label90.TabIndex = 269;
+            this.label90.Text = "Recommendation";
+            // 
+            // label91
+            // 
+            this.label91.AutoSize = true;
+            this.label91.BackColor = System.Drawing.Color.Transparent;
+            this.label91.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
+            this.label91.Location = new System.Drawing.Point(14, 508);
+            this.label91.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label91.Name = "label91";
+            this.label91.Size = new System.Drawing.Size(129, 20);
+            this.label91.TabIndex = 267;
+            this.label91.Text = "Histopathology";
+            // 
+            // label92
+            // 
+            this.label92.AutoSize = true;
+            this.label92.BackColor = System.Drawing.Color.Transparent;
+            this.label92.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
+            this.label92.Location = new System.Drawing.Point(14, 454);
+            this.label92.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label92.Name = "label92";
+            this.label92.Size = new System.Drawing.Size(178, 20);
+            this.label92.TabIndex = 266;
+            this.label92.Text = "Post-Diagnosis (Dx3)";
+            // 
+            // label93
+            // 
+            this.label93.AutoSize = true;
+            this.label93.BackColor = System.Drawing.Color.Transparent;
+            this.label93.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
+            this.label93.Location = new System.Drawing.Point(14, 427);
+            this.label93.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label93.Name = "label93";
+            this.label93.Size = new System.Drawing.Size(178, 20);
+            this.label93.TabIndex = 265;
+            this.label93.Text = "Post-Diagnosis (Dx2)";
+            // 
+            // label94
+            // 
+            this.label94.AutoSize = true;
+            this.label94.BackColor = System.Drawing.Color.Transparent;
+            this.label94.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
+            this.label94.Location = new System.Drawing.Point(14, 400);
+            this.label94.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label94.Name = "label94";
+            this.label94.Size = new System.Drawing.Size(178, 20);
+            this.label94.TabIndex = 264;
+            this.label94.Text = "Post-Diagnosis (Dx1)";
+            // 
+            // label98
+            // 
+            this.label98.AutoSize = true;
+            this.label98.BackColor = System.Drawing.Color.Transparent;
+            this.label98.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
+            this.label98.Location = new System.Drawing.Point(15, 373);
+            this.label98.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label98.Name = "label98";
+            this.label98.Size = new System.Drawing.Size(91, 20);
+            this.label98.TabIndex = 256;
+            this.label98.Text = "Procedure";
+            // 
+            // label186
+            // 
+            this.label186.AutoSize = true;
+            this.label186.BackColor = System.Drawing.Color.Transparent;
+            this.label186.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
+            this.label186.Location = new System.Drawing.Point(15, 346);
+            this.label186.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label186.Name = "label186";
+            this.label186.Size = new System.Drawing.Size(206, 20);
+            this.label186.TabIndex = 254;
+            this.label186.Text = "Supplemental Procedure";
+            // 
+            // label187
+            // 
+            this.label187.AutoSize = true;
+            this.label187.BackColor = System.Drawing.Color.Transparent;
+            this.label187.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
+            this.label187.Location = new System.Drawing.Point(15, 319);
+            this.label187.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label187.Name = "label187";
+            this.label187.Size = new System.Drawing.Size(206, 20);
+            this.label187.TabIndex = 251;
+            this.label187.Text = "Supplemental Procedure";
+            // 
+            // label188
+            // 
+            this.label188.AutoSize = true;
+            this.label188.BackColor = System.Drawing.Color.Transparent;
+            this.label188.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
+            this.label188.Location = new System.Drawing.Point(15, 292);
+            this.label188.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label188.Name = "label188";
+            this.label188.Size = new System.Drawing.Size(164, 20);
+            this.label188.TabIndex = 248;
+            this.label188.Text = "Principal Procedure";
+            // 
+            // label189
+            // 
+            this.label189.AutoSize = true;
+            this.label189.BackColor = System.Drawing.Color.Transparent;
+            this.label189.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
+            this.label189.Location = new System.Drawing.Point(14, 562);
+            this.label189.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label189.Name = "label189";
+            this.label189.Size = new System.Drawing.Size(85, 20);
+            this.label189.TabIndex = 244;
+            this.label189.Text = "Comment";
+            // 
+            // label190
+            // 
+            this.label190.AutoSize = true;
+            this.label190.BackColor = System.Drawing.Color.Transparent;
+            this.label190.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
+            this.label190.Location = new System.Drawing.Point(14, 481);
+            this.label190.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label190.Name = "label190";
+            this.label190.Size = new System.Drawing.Size(112, 20);
+            this.label190.TabIndex = 243;
+            this.label190.Text = "Complication";
+            // 
+            // txbFindingOther_Cysto
+            // 
+            this.txbFindingOther_Cysto.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.txbFindingOther_Cysto.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.txbFindingOther_Cysto.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
+            this.txbFindingOther_Cysto.Location = new System.Drawing.Point(225, 262);
+            this.txbFindingOther_Cysto.Margin = new System.Windows.Forms.Padding(2);
+            this.txbFindingOther_Cysto.MaxLength = 170;
+            this.txbFindingOther_Cysto.Name = "txbFindingOther_Cysto";
+            this.txbFindingOther_Cysto.Size = new System.Drawing.Size(757, 23);
+            this.txbFindingOther_Cysto.TabIndex = 209;
+            // 
+            // label95
+            // 
+            this.label95.AutoSize = true;
+            this.label95.BackColor = System.Drawing.Color.Transparent;
+            this.label95.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
+            this.label95.Location = new System.Drawing.Point(14, 265);
+            this.label95.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label95.Name = "label95";
+            this.label95.Size = new System.Drawing.Size(54, 20);
+            this.label95.TabIndex = 208;
+            this.label95.Text = "Other";
+            // 
+            // txbFindingKidneyLeft_Cysto
+            // 
+            this.txbFindingKidneyLeft_Cysto.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.txbFindingKidneyLeft_Cysto.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.txbFindingKidneyLeft_Cysto.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
+            this.txbFindingKidneyLeft_Cysto.Location = new System.Drawing.Point(225, 235);
+            this.txbFindingKidneyLeft_Cysto.Margin = new System.Windows.Forms.Padding(2);
+            this.txbFindingKidneyLeft_Cysto.MaxLength = 170;
+            this.txbFindingKidneyLeft_Cysto.Name = "txbFindingKidneyLeft_Cysto";
+            this.txbFindingKidneyLeft_Cysto.Size = new System.Drawing.Size(757, 23);
+            this.txbFindingKidneyLeft_Cysto.TabIndex = 207;
+            // 
+            // label96
+            // 
+            this.label96.AutoSize = true;
+            this.label96.BackColor = System.Drawing.Color.Transparent;
+            this.label96.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
+            this.label96.Location = new System.Drawing.Point(14, 238);
+            this.label96.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label96.Name = "label96";
+            this.label96.Size = new System.Drawing.Size(104, 20);
+            this.label96.TabIndex = 206;
+            this.label96.Text = "Kidney, Left";
+            // 
+            // txbFindingKidneyRight_Cysto
+            // 
+            this.txbFindingKidneyRight_Cysto.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.txbFindingKidneyRight_Cysto.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.txbFindingKidneyRight_Cysto.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
+            this.txbFindingKidneyRight_Cysto.Location = new System.Drawing.Point(225, 208);
+            this.txbFindingKidneyRight_Cysto.Margin = new System.Windows.Forms.Padding(2);
+            this.txbFindingKidneyRight_Cysto.MaxLength = 170;
+            this.txbFindingKidneyRight_Cysto.Name = "txbFindingKidneyRight_Cysto";
+            this.txbFindingKidneyRight_Cysto.Size = new System.Drawing.Size(757, 23);
+            this.txbFindingKidneyRight_Cysto.TabIndex = 205;
+            // 
+            // label97
+            // 
+            this.label97.AutoSize = true;
+            this.label97.BackColor = System.Drawing.Color.Transparent;
+            this.label97.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
+            this.label97.Location = new System.Drawing.Point(14, 211);
+            this.label97.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label97.Name = "label97";
+            this.label97.Size = new System.Drawing.Size(115, 20);
+            this.label97.TabIndex = 204;
+            this.label97.Text = "Kidney, Right";
+            // 
+            // txbFindingUreterLeft_Cysto
+            // 
+            this.txbFindingUreterLeft_Cysto.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.txbFindingUreterLeft_Cysto.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.txbFindingUreterLeft_Cysto.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
+            this.txbFindingUreterLeft_Cysto.Location = new System.Drawing.Point(225, 181);
+            this.txbFindingUreterLeft_Cysto.Margin = new System.Windows.Forms.Padding(2);
+            this.txbFindingUreterLeft_Cysto.MaxLength = 170;
+            this.txbFindingUreterLeft_Cysto.Name = "txbFindingUreterLeft_Cysto";
+            this.txbFindingUreterLeft_Cysto.Size = new System.Drawing.Size(757, 23);
+            this.txbFindingUreterLeft_Cysto.TabIndex = 203;
+            // 
+            // label86
+            // 
+            this.label86.AutoSize = true;
+            this.label86.BackColor = System.Drawing.Color.Transparent;
+            this.label86.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
+            this.label86.Location = new System.Drawing.Point(14, 184);
+            this.label86.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label86.Name = "label86";
+            this.label86.Size = new System.Drawing.Size(102, 20);
+            this.label86.TabIndex = 202;
+            this.label86.Text = "Ureter, Left";
+            // 
+            // txbFindingUreterRight_Cysto
+            // 
+            this.txbFindingUreterRight_Cysto.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.txbFindingUreterRight_Cysto.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.txbFindingUreterRight_Cysto.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
+            this.txbFindingUreterRight_Cysto.Location = new System.Drawing.Point(225, 154);
+            this.txbFindingUreterRight_Cysto.Margin = new System.Windows.Forms.Padding(2);
+            this.txbFindingUreterRight_Cysto.MaxLength = 170;
+            this.txbFindingUreterRight_Cysto.Name = "txbFindingUreterRight_Cysto";
+            this.txbFindingUreterRight_Cysto.Size = new System.Drawing.Size(757, 23);
+            this.txbFindingUreterRight_Cysto.TabIndex = 201;
+            // 
+            // label87
+            // 
+            this.label87.AutoSize = true;
+            this.label87.BackColor = System.Drawing.Color.Transparent;
+            this.label87.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
+            this.label87.Location = new System.Drawing.Point(14, 157);
+            this.label87.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label87.Name = "label87";
+            this.label87.Size = new System.Drawing.Size(107, 20);
+            this.label87.TabIndex = 200;
+            this.label87.Text = "Ureter, Righ";
+            // 
+            // txbFindingBladder_Cysto
+            // 
+            this.txbFindingBladder_Cysto.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.txbFindingBladder_Cysto.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.txbFindingBladder_Cysto.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
+            this.txbFindingBladder_Cysto.Location = new System.Drawing.Point(225, 127);
+            this.txbFindingBladder_Cysto.Margin = new System.Windows.Forms.Padding(2);
+            this.txbFindingBladder_Cysto.MaxLength = 170;
+            this.txbFindingBladder_Cysto.Name = "txbFindingBladder_Cysto";
+            this.txbFindingBladder_Cysto.Size = new System.Drawing.Size(757, 23);
+            this.txbFindingBladder_Cysto.TabIndex = 199;
+            // 
+            // label88
+            // 
+            this.label88.AutoSize = true;
+            this.label88.BackColor = System.Drawing.Color.Transparent;
+            this.label88.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
+            this.label88.Location = new System.Drawing.Point(14, 130);
+            this.label88.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label88.Name = "label88";
+            this.label88.Size = new System.Drawing.Size(71, 20);
+            this.label88.TabIndex = 198;
+            this.label88.Text = "Bladder";
+            // 
+            // txbFindingTrigoneAndOrifices_Cysto
+            // 
+            this.txbFindingTrigoneAndOrifices_Cysto.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.txbFindingTrigoneAndOrifices_Cysto.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.txbFindingTrigoneAndOrifices_Cysto.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
+            this.txbFindingTrigoneAndOrifices_Cysto.Location = new System.Drawing.Point(225, 100);
+            this.txbFindingTrigoneAndOrifices_Cysto.Margin = new System.Windows.Forms.Padding(2);
+            this.txbFindingTrigoneAndOrifices_Cysto.MaxLength = 170;
+            this.txbFindingTrigoneAndOrifices_Cysto.Name = "txbFindingTrigoneAndOrifices_Cysto";
+            this.txbFindingTrigoneAndOrifices_Cysto.Size = new System.Drawing.Size(757, 23);
+            this.txbFindingTrigoneAndOrifices_Cysto.TabIndex = 197;
+            // 
+            // label89
+            // 
+            this.label89.AutoSize = true;
+            this.label89.BackColor = System.Drawing.Color.Transparent;
+            this.label89.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
+            this.label89.Location = new System.Drawing.Point(14, 103);
+            this.label89.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label89.Name = "label89";
+            this.label89.Size = new System.Drawing.Size(170, 20);
+            this.label89.TabIndex = 196;
+            this.label89.Text = "Trigone and Orifices";
+            // 
+            // txbFindingBladderNeck_Cysto
+            // 
+            this.txbFindingBladderNeck_Cysto.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.txbFindingBladderNeck_Cysto.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.txbFindingBladderNeck_Cysto.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
+            this.txbFindingBladderNeck_Cysto.Location = new System.Drawing.Point(225, 73);
+            this.txbFindingBladderNeck_Cysto.Margin = new System.Windows.Forms.Padding(2);
+            this.txbFindingBladderNeck_Cysto.MaxLength = 170;
+            this.txbFindingBladderNeck_Cysto.Name = "txbFindingBladderNeck_Cysto";
+            this.txbFindingBladderNeck_Cysto.Size = new System.Drawing.Size(757, 23);
+            this.txbFindingBladderNeck_Cysto.TabIndex = 193;
+            // 
+            // label85
+            // 
+            this.label85.AutoSize = true;
+            this.label85.BackColor = System.Drawing.Color.Transparent;
+            this.label85.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
+            this.label85.Location = new System.Drawing.Point(14, 76);
+            this.label85.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label85.Name = "label85";
+            this.label85.Size = new System.Drawing.Size(114, 20);
+            this.label85.TabIndex = 192;
+            this.label85.Text = "Bladder neck";
+            // 
+            // txbFindingProstate_Cysto
+            // 
+            this.txbFindingProstate_Cysto.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.txbFindingProstate_Cysto.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.txbFindingProstate_Cysto.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
+            this.txbFindingProstate_Cysto.Location = new System.Drawing.Point(225, 46);
+            this.txbFindingProstate_Cysto.Margin = new System.Windows.Forms.Padding(2);
+            this.txbFindingProstate_Cysto.MaxLength = 170;
+            this.txbFindingProstate_Cysto.Name = "txbFindingProstate_Cysto";
+            this.txbFindingProstate_Cysto.Size = new System.Drawing.Size(757, 23);
+            this.txbFindingProstate_Cysto.TabIndex = 191;
+            // 
+            // label18
+            // 
+            this.label18.AutoSize = true;
+            this.label18.BackColor = System.Drawing.Color.Transparent;
+            this.label18.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
+            this.label18.Location = new System.Drawing.Point(14, 49);
+            this.label18.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label18.Name = "label18";
+            this.label18.Size = new System.Drawing.Size(77, 20);
+            this.label18.TabIndex = 190;
+            this.label18.Text = "Prostate";
+            // 
+            // txbFindingUrethra_Cysto
+            // 
+            this.txbFindingUrethra_Cysto.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.txbFindingUrethra_Cysto.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.txbFindingUrethra_Cysto.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
+            this.txbFindingUrethra_Cysto.Location = new System.Drawing.Point(225, 19);
+            this.txbFindingUrethra_Cysto.Margin = new System.Windows.Forms.Padding(2);
+            this.txbFindingUrethra_Cysto.MaxLength = 170;
+            this.txbFindingUrethra_Cysto.Name = "txbFindingUrethra_Cysto";
+            this.txbFindingUrethra_Cysto.Size = new System.Drawing.Size(757, 23);
+            this.txbFindingUrethra_Cysto.TabIndex = 189;
+            // 
+            // label17
+            // 
+            this.label17.AutoSize = true;
+            this.label17.BackColor = System.Drawing.Color.Transparent;
+            this.label17.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
+            this.label17.Location = new System.Drawing.Point(14, 22);
+            this.label17.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label17.Name = "label17";
+            this.label17.Size = new System.Drawing.Size(70, 20);
+            this.label17.TabIndex = 188;
+            this.label17.Text = "Urethra";
             // 
             // FormProcedure
             // 
@@ -10385,6 +11220,8 @@ namespace EndoscopicSystem.V2.Forms
             this.tabGeneralEGD.ResumeLayout(false);
             this.tabGeneralEGD.PerformLayout();
             this.tabControl1.ResumeLayout(false);
+            this.tabFindingCystoscope.ResumeLayout(false);
+            this.tabFindingCystoscope.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -11077,5 +11914,60 @@ namespace EndoscopicSystem.V2.Forms
         private System.Windows.Forms.TextBox txbFindingSupplementalProcedureCode2_EGD;
         private System.Windows.Forms.TextBox txbFindingSupplementalProcedureCode_EGD;
         private System.Windows.Forms.TextBox txbFindingPrinncipalProcedureCode_EGD;
+        private System.Windows.Forms.TabPage tabFindingCystoscope;
+        private System.Windows.Forms.TextBox txbFindingOther_Cysto;
+        private System.Windows.Forms.Label label95;
+        private System.Windows.Forms.TextBox txbFindingKidneyLeft_Cysto;
+        private System.Windows.Forms.Label label96;
+        private System.Windows.Forms.TextBox txbFindingKidneyRight_Cysto;
+        private System.Windows.Forms.Label label97;
+        private System.Windows.Forms.TextBox txbFindingUreterLeft_Cysto;
+        private System.Windows.Forms.Label label86;
+        private System.Windows.Forms.TextBox txbFindingUreterRight_Cysto;
+        private System.Windows.Forms.Label label87;
+        private System.Windows.Forms.TextBox txbFindingBladder_Cysto;
+        private System.Windows.Forms.Label label88;
+        private System.Windows.Forms.TextBox txbFindingTrigoneAndOrifices_Cysto;
+        private System.Windows.Forms.Label label89;
+        private System.Windows.Forms.TextBox txbFindingBladderNeck_Cysto;
+        private System.Windows.Forms.Label label85;
+        private System.Windows.Forms.TextBox txbFindingProstate_Cysto;
+        private System.Windows.Forms.Label label18;
+        private System.Windows.Forms.TextBox txbFindingUrethra_Cysto;
+        private System.Windows.Forms.Label label17;
+        private System.Windows.Forms.TextBox txbFindingSupplemental2Text_Cysto;
+        private System.Windows.Forms.TextBox txbFindingSupplemental1Text_Cysto;
+        private System.Windows.Forms.TextBox txbFindingPrincipalText_Cysto;
+        private System.Windows.Forms.TextBox txbFindingPostDx3Text_Cysto;
+        private System.Windows.Forms.TextBox txbFindingPostDx2Text_Cysto;
+        private System.Windows.Forms.TextBox txbFindingPostDx1Text_Cysto;
+        private System.Windows.Forms.TextBox txbFindingPostDx3Id_Cysto;
+        private System.Windows.Forms.TextBox txbFindingPostDx2Id_Cysto;
+        private System.Windows.Forms.TextBox txbFindingPostDx1Id_Cysto;
+        private System.Windows.Forms.TextBox txbFindingSupplemental2Id_Cysto;
+        private System.Windows.Forms.TextBox txbFindingSupplemental1Id_Cysto;
+        private System.Windows.Forms.TextBox txbFindingPrincipalId_Cysto;
+        private System.Windows.Forms.TextBox txbFindingRecommendation_Cysto;
+        private System.Windows.Forms.TextBox txbFindingHistopathology_Cysto;
+        private System.Windows.Forms.TextBox txbFindingPostDx3Code_Cysto;
+        private System.Windows.Forms.TextBox txbFindingPostDx2Code_Cysto;
+        private System.Windows.Forms.TextBox txbFindingPostDx1Code_Cysto;
+        private System.Windows.Forms.TextBox txbFindingProcedure_Cysto;
+        private System.Windows.Forms.TextBox txbFindingSupplemental2Code_Cysto;
+        private System.Windows.Forms.TextBox txbFindingSupplemental1Code_Cysto;
+        private System.Windows.Forms.TextBox txbFindingPrincipalCode_Cysto;
+        private System.Windows.Forms.TextBox txbFindingComplication_Cysto;
+        private System.Windows.Forms.TextBox txbFindingComment_Cysto;
+        private System.Windows.Forms.Label label90;
+        private System.Windows.Forms.Label label91;
+        private System.Windows.Forms.Label label92;
+        private System.Windows.Forms.Label label93;
+        private System.Windows.Forms.Label label94;
+        private System.Windows.Forms.Label label98;
+        private System.Windows.Forms.Label label186;
+        private System.Windows.Forms.Label label187;
+        private System.Windows.Forms.Label label188;
+        private System.Windows.Forms.Label label189;
+        private System.Windows.Forms.Label label190;
     }
 }

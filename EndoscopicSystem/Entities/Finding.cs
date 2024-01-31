@@ -176,5 +176,6 @@ namespace EndoscopicSystem.Entities
         public string Nose { get; set; }
         public Nullable<int> PyriformID { get; set; }
         public string Pyriform { get; set; }
+        public Nullable<int> EndoscopicID { get; set; }
     }
 }

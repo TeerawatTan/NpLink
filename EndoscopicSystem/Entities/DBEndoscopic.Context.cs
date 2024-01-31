@@ -124,9 +124,7 @@ namespace EndoscopicSystem.Entities
         public virtual DbSet<Pancrea> Pancreas { get; set; }
         public virtual DbSet<PapillaMajor> PapillaMajors { get; set; }
         public virtual DbSet<PapillaMinor> PapillaMinors { get; set; }
-        public virtual DbSet<Endoscopic> Endoscopics { get; set; }
         public virtual DbSet<v_HistoryEndoscopic> v_HistoryEndoscopic { get; set; }
-        public virtual DbSet<Finding> Findings { get; set; }
         public virtual DbSet<v_GetImageCapturePath> v_GetImageCapturePath { get; set; }
         public virtual DbSet<v_PatientList> v_PatientList { get; set; }
         public virtual DbSet<BriefHistory> BriefHistories { get; set; }
@@ -137,6 +135,9 @@ namespace EndoscopicSystem.Entities
         public virtual DbSet<GernaralOperativeFinding> GernaralOperativeFindings { get; set; }
         public virtual DbSet<AmpullaOfVater> AmpullaOfVaters { get; set; }
         public virtual DbSet<SettingDevice> SettingDevices { get; set; }
+        public virtual DbSet<Finding> Findings { get; set; }
+        public virtual DbSet<Endoscopic> Endoscopics { get; set; }
+        public virtual DbSet<FindingCystoscope> FindingCystoscopes { get; set; }
     
         public virtual ObjectResult<BrochoscopyReport_Result> BrochoscopyReport(string hn, Nullable<int> procedure, Nullable<int> endoscopicId)
         {

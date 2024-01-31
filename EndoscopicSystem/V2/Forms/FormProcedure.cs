@@ -54,6 +54,7 @@ namespace EndoscopicSystem.V2.Forms
             this._pathFolderImageSave = pathImg;
             this._vdoPath = pathVdo;
         }
+
         private void FormProcedure_Load(object sender, EventArgs e)
         {
             btnReport.Visible = false;
@@ -107,6 +108,9 @@ namespace EndoscopicSystem.V2.Forms
 
             SearchHN(_hnNo, _procedureId);
         }
+
+        #region Event
+
         private void cbbProcedureList_SelectedIndexChanged(object sender, EventArgs e)
         {
             if (cbbProcedureList.SelectedIndex <= 0 || (int?)cbbProcedureList.SelectedValue == null)
@@ -269,6 +273,8 @@ namespace EndoscopicSystem.V2.Forms
                 FormProceed.Self.txbStep.Text = "1" + "," + _pathFolderImageSave + "," + _vdoPath;
             }
         }
+
+        #endregion
 
         #region Search Data
         private void LoadFinding()
@@ -4397,7 +4403,7 @@ namespace EndoscopicSystem.V2.Forms
         }
         #endregion
 
-        #region Handle Lap
+        #region Event Handle Lap
         private void LoadAutoCompleted_txbGeneralMedication_Lap()
         {
             string[] names = _db.Medications.Select(s => s.MedicationName).ToArray();
@@ -4551,6 +4557,287 @@ namespace EndoscopicSystem.V2.Forms
 
                     // Reload
                     LoadAutoCompleted_txbFindingOperative_Lap();
+                }
+            }
+        }
+        #endregion
+
+        #region Event Handle Cysto
+        //-----
+        private void LoadAutoCompleted_txbFindingProcedure_Cysto()
+        {
+            string[] names = LoadProcedureDetails();
+            if (names.Length > 0)
+            {
+                LoadTextBoxAutoCompleteFromDb(txbFindingProcedure_Cysto, names);
+            }
+        }
+        private void LoadAutoCompleted_txbFindingComplication_Cysto()
+        {
+            string[] names = LoadComplications();
+            if (names.Length > 0)
+            {
+                LoadTextBoxAutoCompleteFromDb(txbFindingComplication_Cysto, names);
+            }
+        }
+        private void LoadAutoCompleted_txbFindingHistopathology_Cysto()
+        {
+            string[] names = LoadHistopathologies();
+            if (names.Length > 0)
+            {
+                LoadTextBoxAutoCompleteFromDb(txbFindingHistopathology_Cysto, names);
+            }
+        }
+        private void LoadAutoCompleted_txbFindingRecommendation_Cysto()
+        {
+            string[] names = LoadRecommendations();
+            if (names.Length > 0)
+            {
+                LoadTextBoxAutoCompleteFromDb(txbFindingRecommendation_Cysto, names);
+            }
+        }
+        private void LoadAutoCompleted_txbFindingComment_Cysto()
+        {
+            string[] names = LoadComments();
+            if (names.Length > 0)
+            {
+                LoadTextBoxAutoCompleteFromDb(txbFindingComment_Cysto, names);
+            }
+        }
+        //-----
+        private void txbFindingPrincipalText_Cysto_Click(object sender, EventArgs e)
+        {
+            SetDataInListBox(Constant.Icd9);
+            lastFocused = (TextBox)sender;
+            _markField = Constant.PRINCIPAL_PROCEDURE;
+        }
+        private void txbFindingPrincipalText_Cysto_Leave(object sender, EventArgs e)
+        {
+            if (txbFindingPrincipalText_Cysto.TextLength > 0)
+            {
+                string[] names = _db.ICD9.Select(s => s.Name).ToArray();
+                var findName = names.FirstOrDefault(w => w.Trim().Equals(txbFindingPrincipalText_Cysto.Text.Trim()));
+                if (findName == null)
+                {
+                    _db.ICD9.Add(new ICD9 { Name = txbFindingPrincipalText_Cysto.Text, IsDisplay = false });
+                    _db.SaveChanges();
+
+                    // Reload
+                    LoadAutoCompleted_ICD9Text(txbFindingPrincipalText_Cysto);
+                }
+            }
+        }
+        private void txbFindingSpplemental1Text_Cysto_Click(object sender, EventArgs e)
+        {
+            SetDataInListBox(Constant.Icd9);
+            lastFocused = (TextBox)sender;
+            _markField = Constant.SUPPLEMENTAL_PROCEDURE_1;
+        }
+        private void txbFindingSpplemental1Text_Cysto_Leave(object sender, EventArgs e)
+        {
+            if (txbFindingSupplemental1Text_Cysto.TextLength > 0)
+            {
+                string[] names = _db.ICD9.Select(s => s.Name).ToArray();
+                var findName = names.FirstOrDefault(w => w.Trim().Equals(txbFindingSupplemental1Text_Cysto.Text.Trim()));
+                if (findName == null)
+                {
+                    _db.ICD9.Add(new ICD9 { Name = txbFindingSupplemental1Text_Cysto.Text, IsDisplay = false });
+                    _db.SaveChanges();
+
+                    // Reload
+                    LoadAutoCompleted_ICD9Text(txbFindingSupplemental1Text_Cysto);
+                }
+            }
+        }
+        private void txbFindingSpplemental2Text_Cysto_Click(object sender, EventArgs e)
+        {
+            SetDataInListBox(Constant.Icd9);
+            lastFocused = (TextBox)sender;
+            _markField = Constant.SUPPLEMENTAL_PROCEDURE_2;
+        }
+        private void txbFindingSpplemental2Text_Cysto_Leave(object sender, EventArgs e)
+        {
+            if (txbFindingSupplemental2Text_Cysto.TextLength > 0)
+            {
+                string[] names = _db.ICD9.Select(s => s.Name).ToArray();
+                var findName = names.FirstOrDefault(w => w.Trim().Equals(txbFindingSupplemental2Text_Cysto.Text.Trim()));
+                if (findName == null)
+                {
+                    _db.ICD9.Add(new ICD9 { Name = txbFindingSupplemental2Text_Cysto.Text, IsDisplay = false });
+                    _db.SaveChanges();
+
+                    // Reload
+                    LoadAutoCompleted_ICD9Text(txbFindingSupplemental2Text_Cysto);
+                }
+            }
+        }
+        private void txbFindingProcedure_Cysto_Click(object sender, EventArgs e)
+        {
+            SetDataInListBox(Constant.ProcedureDetail);
+            lastFocused = (TextBox)sender;
+            _markField = Constant.PROCEDURE_DETAIL;
+        }
+        private void txbFindingProcedure_Cysto_Leave(object sender, EventArgs e)
+        {
+            if (txbFindingProcedure_Cysto.TextLength > 0)
+            {
+                string[] names = LoadProcedureDetails();
+                var findName = names.FirstOrDefault(w => w.Trim().Equals(txbFindingProcedure_Cysto.Text.Trim()));
+                if (findName == null)
+                {
+                    _db.ProcedureDetails.Add(new ProcedureDetail { Name = txbFindingProcedure_Cysto.Text, IsActive = true, ProcedureId = _procedureId, IsDisplay = false });
+                    _db.SaveChanges();
+
+                    // Reload
+                    LoadAutoCompleted_txbFindingProcedure_Cysto();
+                }
+            }
+        }
+        private void txbFindingPostDx1Text_Cysto_Click(object sender, EventArgs e)
+        {
+            SetDataInListBox(Constant.Icd10);
+            lastFocused = (TextBox)sender;
+            _markField = Constant.POSTDX1;
+        }
+        private void txbFindingPostDx1Text_Cysto_Leave(object sender, EventArgs e)
+        {
+            if (txbFindingPostDx1Text_Cysto.TextLength > 0)
+            {
+                string[] names = _db.ICD10.Select(s => s.Name).ToArray();
+                var findName = names.FirstOrDefault(w => w.Trim().Equals(txbFindingPostDx1Text_Cysto.Text.Trim()));
+                if (findName == null)
+                {
+                    _db.ICD10.Add(new ICD10 { Name = txbFindingPostDx1Text_Cysto.Text, IsDisplay = false });
+                    _db.SaveChanges();
+
+                    // Reload
+                    LoadAutoCompleted_ICD10Text(txbFindingPostDx1Text_Cysto);
+                }
+            }
+        }
+        private void txbFindingPostDx2Text_Cysto_Click(object sender, EventArgs e)
+        {
+            SetDataInListBox(Constant.Icd10);
+            lastFocused = (TextBox)sender;
+            _markField = Constant.POSTDX2;
+        }
+        private void txbFindingPostDx2Text_Cysto_Leave(object sender, EventArgs e)
+        {
+            if (txbFindingPostDx2Text_Cysto.TextLength > 0)
+            {
+                string[] names = _db.ICD10.Select(s => s.Name).ToArray();
+                var findName = names.FirstOrDefault(w => w.Trim().Equals(txbFindingPostDx2Text_Cysto.Text.Trim()));
+                if (findName == null)
+                {
+                    _db.ICD10.Add(new ICD10 { Name = txbFindingPostDx2Text_Cysto.Text, IsDisplay = false });
+                    _db.SaveChanges();
+
+                    // Reload
+                    LoadAutoCompleted_ICD10Text(txbFindingPostDx2Text_Cysto);
+                }
+            }
+        }
+        private void txbFindingPostDx3Text_Cysto_Click(object sender, EventArgs e)
+        {
+            SetDataInListBox(Constant.Icd10);
+            lastFocused = (TextBox)sender;
+            _markField = Constant.POSTDX3;
+        }
+        private void txbFindingPostDx3Text_Cysto_Leave(object sender, EventArgs e)
+        {
+            if (txbFindingPostDx3Text_Cysto.TextLength > 0)
+            {
+                string[] names = _db.ICD10.Select(s => s.Name).ToArray();
+                var findName = names.FirstOrDefault(w => w.Trim().Equals(txbFindingPostDx3Text_Cysto.Text.Trim()));
+                if (findName == null)
+                {
+                    _db.ICD10.Add(new ICD10 { Name = txbFindingPostDx3Text_Cysto.Text, IsDisplay = false });
+                    _db.SaveChanges();
+
+                    // Reload
+                    LoadAutoCompleted_ICD10Text(txbFindingPostDx3Text_Cysto);
+                }
+            }
+        }
+        private void txbFindingComplication_Cysto_Click(object sender, EventArgs e)
+        {
+            SetDataInListBox(Constant.Complication);
+            lastFocused = (TextBox)sender;
+            _markField = Constant.COMPLICATION;
+        }
+        private void txbFindingComplication_Cysto_Leave(object sender, EventArgs e)
+        {
+            if (txbFindingComplication_Cysto.TextLength > 0)
+            {
+                string[] names = LoadComplications();
+                var findName = names.FirstOrDefault(w => w.Trim().Equals(txbFindingComplication_Cysto.Text.Trim()));
+                if (findName == null)
+                {
+                    _db.Complications.Add(new Complication { Name = txbFindingComplication_Cysto.Text, IsActive = true, ProcedureId = _procedureId, IsDisplay = false });
+                    _db.SaveChanges();
+
+                    // Reload
+                    LoadAutoCompleted_txbFindingComplication_Cysto();
+                }
+            }
+        }
+        private void txbFindingHistopathology_Cysto_Click(object sender, EventArgs e)
+        {
+            SetDataInListBox(Constant.Histopathology);
+            lastFocused = (TextBox)sender;
+            _markField = Constant.HISTOPATHOLOGY;
+        }
+        private void txbFindingHistopathology_Cysto_Leave(object sender, EventArgs e)
+        {
+            if (txbFindingHistopathology_Cysto.TextLength > 0)
+            {
+                string[] names = LoadHistopathologies();
+                var findName = names.FirstOrDefault(w => w.Trim().Equals(txbFindingHistopathology_Cysto.Text.Trim()));
+                if (findName == null)
+                {
+                    _db.Histopathologies.Add(new Histopathology { Name = txbFindingHistopathology_Cysto.Text, IsActive = true, ProcedureId = _procedureId, IsDisplay = false });
+                    _db.SaveChanges();
+
+                    // Reload
+                    LoadAutoCompleted_txbFindingHistopathology_Cysto();
+                }
+            }
+        }
+        private void txbFindingRecommendation_Cysto_Click(object sender, EventArgs e)
+        {
+            SetDataInListBox(Constant.Recommendation);
+            lastFocused = (TextBox)sender;
+            _markField = Constant.RECOMMENDATION;
+        }
+        private void txbFindingRecommendation_Cysto_Leave(object sender, EventArgs e)
+        {
+            if (txbFindingRecommendation_Cysto.TextLength > 0)
+            {
+                string[] names = LoadRecommendations();
+                var findName = names.FirstOrDefault(w => w.Trim().Equals(txbFindingRecommendation_Cysto.Text.Trim()));
+                if (findName == null)
+                {
+                    _db.Recommendations.Add(new Recommendation { Name = txbFindingRecommendation_Cysto.Text, IsActive = true, ProcedureId = _procedureId, IsDisplay = false });
+                    _db.SaveChanges();
+
+                    // Reload
+                    LoadAutoCompleted_txbFindingRecommendation_Cysto();
+                }
+            }
+        }
+        private void txbFindingComment_Cysto_Leave(object sender, EventArgs e)
+        {
+            if (txbFindingComment_Cysto.TextLength > 0)
+            {
+                string[] names = LoadComments();
+                var findName = names.FirstOrDefault(w => w.Trim().Equals(txbFindingComment_Cysto.Text.Trim()));
+                if (findName == null)
+                {
+                    _db.Comments.Add(new Comment { CommentText = txbFindingComment_Cysto.Text, ProcedureId = _procedureId });
+                    _db.SaveChanges();
+
+                    // Reload
+                    LoadAutoCompleted_txbFindingComment_Cysto();
                 }
             }
         }
@@ -4728,60 +5015,69 @@ namespace EndoscopicSystem.V2.Forms
 
                         if (app.EndoscopicCheck.HasValue && app.EndoscopicCheck.Value || _endoscopicId > 0)
                         {
-                            var getEndos = _db.Endoscopics.Where(e => e.ProcedureID == _procedureId && e.PatientID == _patientId && e.IsSaved).ToList();
-                            if (getEndos.Count > 0)
+                            var getEndo = _db.Endoscopics.Where(e => e.ProcedureID == _procedureId && e.PatientID == _patientId && e.IsSaved && e.EndoscopicID == _endoscopicId).OrderByDescending(o => o.CreateDate).FirstOrDefault();
+                            if (getEndo != null)
                             {
-                                if (_endoscopicId > 0)
+                                getEndo.FollowUpCase = app.IsFollowCase ?? false;
+                                getEndo.NewCase = app.IsNewCase ?? false;
+                                _endoscopicId = getEndo.EndoscopicID;
+                                //Finding getFinding = _db.Findings.Where(x => x.FindingID == getEndo.FindingID).FirstOrDefault();
+                                if (_procedureId == 9)
                                 {
-                                    getEndos = getEndos.Where(x => x.EndoscopicID == _endoscopicId).ToList();
-                                }
-
-                                getEndos = (from e in getEndos
-                                            join p in _db.Patients on e.PatientID equals p.PatientID
-                                            select e).ToList();
-
-                                if (getEndos.Count > 0)
-                                {
-                                    Endoscopic getEndo = getEndos.OrderByDescending(o => o.CreateDate).FirstOrDefault();
-                                    getEndo.FollowUpCase = app.IsFollowCase ?? false;
-                                    getEndo.NewCase = app.IsNewCase ?? false;
-                                    _endoscopicId = getEndo.EndoscopicID;
-                                    Finding getFinding = _db.Findings.Where(x => x.FindingID == getEndo.FindingID).FirstOrDefault();
-                                    PushEndoscopicData(_procedureId, getPatient, app, getEndo, getFinding);
+                                    FindingCystoscope getFindingCysto = _db.FindingCystoscopes.Where(x => x.FindingID == getEndo.FindingCystoScopeID).FirstOrDefault();
+                                    PushEndoscopicData(_procedureId, getPatient, app, getEndo, null, getFindingCysto);
                                 }
                                 else
                                 {
-                                    PushEndoscopicData(_procedureId, getPatient, app);
-                                    Endoscopic endoscopic = new Endoscopic()
-                                    {
-                                        PatientID = _patientId,
-                                        IsSaved = false,
-                                        ProcedureID = _procedureId,
-                                        NewCase = app.IsNewCase ?? false,
-                                        FollowUpCase = app.IsFollowCase ?? false,
-                                        CreateBy = _id,
-                                        CreateDate = System.DateTime.Now
-                                    };
-                                    _db.Endoscopics.Add(endoscopic);
+                                    Finding getFinding = _db.Findings.Where(x => x.FindingID == getEndo.FindingID).FirstOrDefault();
+                                    PushEndoscopicData(_procedureId, getPatient, app, getEndo, getFinding);
+                                }
+                            }
+                            else
+                            {
+                                PushEndoscopicData(_procedureId, getPatient, app);
+                                Endoscopic endoscopic = new Endoscopic()
+                                {
+                                    PatientID = _patientId,
+                                    IsSaved = false,
+                                    ProcedureID = _procedureId,
+                                    NewCase = app.IsNewCase ?? false,
+                                    FollowUpCase = app.IsFollowCase ?? false,
+                                    CreateBy = _id,
+                                    CreateDate = System.DateTime.Now
+                                };
 
-                                    Finding finding = new Finding() { PatientID = _patientId, CreateBy = _id, CreateDate = System.DateTime.Now };
-                                    _db.Findings.Add(finding);
-                                    _db.SaveChanges();
-
-                                    var endo = _db.Endoscopics.OrderByDescending(o => o.EndoscopicID).FirstOrDefault();
-                                    if (endo != null)
-                                    {
-                                        _endoscopicId = endo.EndoscopicID;
-                                    }
+                                int resultInsertEndo = InsertEndoscopic(endoscopic);
+                                if (resultInsertEndo < 0)
+                                {
+                                    MessageBox.Show("Error, Insert Endoscopic isn't completed.", "Error!", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                                    return;
                                 }
 
-                                if (_procedureId == 6)
+                                var endo = _db.Endoscopics.OrderByDescending(x => x.EndoscopicID).FirstOrDefault();
+                                if (endo != null)
                                 {
+                                    _endoscopicId = endo.EndoscopicID;
+                                }
 
-                                    //List<MultiEndoscopic> multiEndoscopicList = new List<MultiEndoscopic>()
-                                    //{
-                                    //    new MultiEndoscopic { EndoscopicID = _endoscopicId }
-                                    //};
+                                if (_procedureId == 9)
+                                {
+                                    FindingCystoscope findingCystoscope = new FindingCystoscope()
+                                    {
+                                        EndoscopicID = _endoscopicId
+                                    };
+                                    _ = InsertFindingCystoscope(findingCystoscope);
+                                }
+                                else
+                                {
+                                    Finding finding = new Finding()
+                                    {
+                                        PatientID = getPatient.PatientID,
+                                        CreateBy = _id,
+                                        CreateDate = System.DateTime.Now,
+                                        EndoscopicID = _endoscopicId
+                                    };
+                                    _ = InsertFinding(finding);
                                 }
                             }
                         }
@@ -4794,19 +5090,19 @@ namespace EndoscopicSystem.V2.Forms
                 }
                 else
                 {
-                    MessageBox.Show("ไม่พบข้อมูลผู้ป่วย");
+                    MessageBox.Show("ไม่พบข้อมูลผู้ป่วย", "Data Not Found", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                     Reset_Controller();
                     btnSave.Visible = false;
                 }
             }
             catch (Exception ex)
             {
-                MessageBox.Show(ex.Message);
+                MessageBox.Show(ex.Message, "Error!", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 Reset_Controller();
                 btnSave.Visible = false;
             }
         }
-
+        
         #endregion
 
         #region Push Data
@@ -4859,15 +5155,18 @@ namespace EndoscopicSystem.V2.Forms
                 textBox.Text = comment;
             }
         }
-        private void PushEndoscopicData(int? procId, Patient patient = null, Appointment appointment = null, Endoscopic endoscopic = null, Finding finding = null)
+        private void PushEndoscopicData(int? procId, Patient patient = null, Appointment appointment = null, Endoscopic endoscopic = null, Finding finding = null, FindingCystoscope findingCysto = null)
         {
             patient = patient ?? new Patient();
             appointment = appointment ?? new Appointment();
             endoscopic = endoscopic ?? new Endoscopic();
             finding = finding ?? new Finding();
+            findingCysto = findingCysto ?? new FindingCystoscope();
 
-            if (procId == 1 || procId == 3 || procId == 5) // EGD, ERCP, ENT
+            if (procId == 1 || procId == 3 || procId == 5 || procId == 9) // EGD, ERCP, ENT, Cysto
             {
+                #region General Tab
+
                 // General
                 txbHn_EGD.Text = patient.HN;
                 txbFullName_EGD.Text = patient.Fullname;
@@ -4944,6 +5243,10 @@ namespace EndoscopicSystem.V2.Forms
                 }
                 txbBriefHistory_EGD.Text = endoscopic.BriefHistory;
 
+                #endregion
+
+                #region Finding Tab
+
                 if (procId == 1) //EGD
                 {
                     // Finding
@@ -4975,9 +5278,10 @@ namespace EndoscopicSystem.V2.Forms
                     string[] SupplementalProcedureSplit = string.IsNullOrWhiteSpace(finding.SupplementalProcedure1Detail) ? null : finding.SupplementalProcedure1Detail.Split('-');
                     txbFindingSupplementalProcedureCode_EGD.Text = SupplementalProcedureSplit == null ? string.Empty : SupplementalProcedureSplit[0];
                     txbFindingSupplementalProcedureText_EGD.Text = SupplementalProcedureSplit == null ? string.Empty : SupplementalProcedureSplit[1];
+                    txbFindingSupplementalProcedureID2_EGD.Text = Convert.ToString(finding.SupplementalProcedure2ID ?? 0);
                     string[] SupplementalProcedure2Split = string.IsNullOrWhiteSpace(finding.SupplementalProcedure2Detail) ? null : finding.SupplementalProcedure2Detail.Split('-');
-                    txbFindingSupplementalProcedureCode_EGD.Text = SupplementalProcedure2Split == null ? string.Empty : SupplementalProcedure2Split[0];
-                    txbFindingSupplementalProcedureText_EGD.Text = SupplementalProcedure2Split == null ? string.Empty : SupplementalProcedure2Split[1];
+                    txbFindingSupplementalProcedureCode2_EGD.Text = SupplementalProcedure2Split == null ? string.Empty : SupplementalProcedure2Split[0];
+                    txbFindingSupplementalProcedureText2_EGD.Text = SupplementalProcedure2Split == null ? string.Empty : SupplementalProcedure2Split[1];
                     txbFindingProcedure_EGD.Text = finding.Procedure;
                     txbFindingDx1ID_EGD.Text = Convert.ToString(finding.DxID1 ?? 0);
                     string[] dx1EGDSplit = string.IsNullOrWhiteSpace(finding.DxID1Detail) ? null : finding.DxID1Detail.Split('-');
@@ -5024,9 +5328,10 @@ namespace EndoscopicSystem.V2.Forms
                     string[] SupplementalProcedureSplit = string.IsNullOrWhiteSpace(finding.SupplementalProcedure1Detail) ? null : finding.SupplementalProcedure1Detail.Split('-');
                     txbFindingSupplementalProcedureCode_ERCP.Text = SupplementalProcedureSplit == null ? string.Empty : SupplementalProcedureSplit[0];
                     txbFindingSupplementalProcedureText_ERCP.Text = SupplementalProcedureSplit == null ? string.Empty : SupplementalProcedureSplit[1];
+                    txbFindingSupplementalProcedure2ID_ERCP.Text = Convert.ToString(finding.SupplementalProcedure2ID ?? 0);
                     string[] SupplementalProcedure2Split = string.IsNullOrWhiteSpace(finding.SupplementalProcedure2Detail) ? null : finding.SupplementalProcedure2Detail.Split('-');
-                    txbFindingSupplementalProcedureCode_ERCP.Text = SupplementalProcedure2Split == null ? string.Empty : SupplementalProcedure2Split[0];
-                    txbFindingSupplementalProcedureText_ERCP.Text = SupplementalProcedure2Split == null ? string.Empty : SupplementalProcedure2Split[1];
+                    txbFindingSupplementalProcedure2Code_ERCP.Text = SupplementalProcedure2Split == null ? string.Empty : SupplementalProcedure2Split[0];
+                    txbFindingSupplementalProcedure2Text_ERCP.Text = SupplementalProcedure2Split == null ? string.Empty : SupplementalProcedure2Split[1];
                     txbFindingProcedure_ERCP.Text = finding.Procedure;
                     txbFindingDx1ID_ERCP.Text = Convert.ToString(finding.DxID1 ?? 0);
                     string[] dx1ERCPSplit = string.IsNullOrWhiteSpace(finding.DxID1Detail) ? null : finding.DxID1Detail.Split('-');
@@ -5069,9 +5374,10 @@ namespace EndoscopicSystem.V2.Forms
                     string[] SupplementalProcedureSplit = string.IsNullOrWhiteSpace(finding.SupplementalProcedure1Detail) ? null : finding.SupplementalProcedure1Detail.Split('-');
                     txbFindingSupplementalProcedureCode_Ent.Text = SupplementalProcedureSplit == null ? string.Empty : SupplementalProcedureSplit[0];
                     txbFindingSupplementalProcedureText_Ent.Text = SupplementalProcedureSplit == null ? string.Empty : SupplementalProcedureSplit[1];
+                    txbFindingSupplementalProcedureID2_Ent.Text = Convert.ToString(finding.SupplementalProcedure2ID ?? 0);
                     string[] SupplementalProcedure2Split = string.IsNullOrWhiteSpace(finding.SupplementalProcedure2Detail) ? null : finding.SupplementalProcedure2Detail.Split('-');
-                    txbFindingSupplementalProcedureCode_Ent.Text = SupplementalProcedure2Split == null ? string.Empty : SupplementalProcedure2Split[0];
-                    txbFindingSupplementalProcedureText_Ent.Text = SupplementalProcedure2Split == null ? string.Empty : SupplementalProcedure2Split[1];
+                    txbFindingSupplementalProcedureCode2_Ent.Text = SupplementalProcedure2Split == null ? string.Empty : SupplementalProcedure2Split[0];
+                    txbFindingSupplementalProcedureText2_Ent.Text = SupplementalProcedure2Split == null ? string.Empty : SupplementalProcedure2Split[1];
                     txbFindingProcedure_Ent.Text = finding.Procedure;
                     txbFindingDx1ID_Ent.Text = Convert.ToString(finding.DxID1 ?? 0);
                     string[] dx1EGDSplit = string.IsNullOrWhiteSpace(finding.DxID1Detail) ? null : finding.DxID1Detail.Split('-');
@@ -5090,9 +5396,54 @@ namespace EndoscopicSystem.V2.Forms
                     txbFindingRecommendation_Ent.Text = finding.Recommendation;
                     txbFindingComment_Ent.Text = finding.Comment;
                 }
+                else
+                {
+                    txbFindingUrethra_Cysto.Text = findingCysto.Urethra;
+                    txbFindingProstate_Cysto.Text = findingCysto.Prostate;
+                    txbFindingBladderNeck_Cysto.Text = findingCysto.BladderNeck;
+                    txbFindingTrigoneAndOrifices_Cysto.Text = findingCysto.TrigoneandOrifices;
+                    txbFindingBladder_Cysto.Text = findingCysto.Bladder;
+                    txbFindingUreterRight_Cysto.Text = findingCysto.UreterRight;
+                    txbFindingUreterLeft_Cysto.Text = findingCysto.UreterLeft;
+                    txbFindingKidneyRight_Cysto.Text = findingCysto.KidneyRight;
+                    txbFindingKidneyLeft_Cysto.Text = findingCysto.KidneyLeft;
+                    txbFindingOther_Cysto.Text = findingCysto.Other;
+                    txbFindingPrincipalId_Cysto.Text = Convert.ToString(findingCysto.PrincipalProcedureID ?? 0);
+                    string[] principalProcedureSplit = string.IsNullOrWhiteSpace(findingCysto.PrincipalProcedureDetail) ? null : findingCysto.PrincipalProcedureDetail.Split('-');
+                    txbFindingPrincipalCode_Cysto.Text = principalProcedureSplit == null ? string.Empty : principalProcedureSplit[0];
+                    txbFindingPrincipalText_Cysto.Text = principalProcedureSplit == null ? string.Empty : principalProcedureSplit[1];
+                    txbFindingSupplemental1Id_Cysto.Text = Convert.ToString(findingCysto.SupplementalProcedure1ID ?? 0);
+                    string[] SupplementalProcedureSplit = string.IsNullOrWhiteSpace(findingCysto.SupplementalProcedure1Detail) ? null : findingCysto.SupplementalProcedure1Detail.Split('-');
+                    txbFindingSupplemental1Code_Cysto.Text = SupplementalProcedureSplit == null ? string.Empty : SupplementalProcedureSplit[0];
+                    txbFindingSupplemental1Text_Cysto.Text = SupplementalProcedureSplit == null ? string.Empty : SupplementalProcedureSplit[1];
+                    txbFindingSupplemental2Id_Cysto.Text = Convert.ToString(findingCysto.SupplementalProcedure2ID ?? 0);
+                    string[] SupplementalProcedure2Split = string.IsNullOrWhiteSpace(findingCysto.SupplementalProcedure2Detail) ? null : findingCysto.SupplementalProcedure2Detail.Split('-');
+                    txbFindingSupplemental2Code_Cysto.Text = SupplementalProcedure2Split == null ? string.Empty : SupplementalProcedure2Split[0];
+                    txbFindingSupplemental2Text_Cysto.Text = SupplementalProcedure2Split == null ? string.Empty : SupplementalProcedure2Split[1];
+                    txbFindingProcedure_Cysto.Text = findingCysto.Procedure;
+                    txbFindingPostDx1Id_Cysto.Text = Convert.ToString(findingCysto.DxID1 ?? 0);
+                    string[] dx1EGDSplit = string.IsNullOrWhiteSpace(findingCysto.DxID1Detail) ? null : findingCysto.DxID1Detail.Split('-');
+                    txbFindingPostDx1Code_Cysto.Text = dx1EGDSplit == null ? string.Empty : dx1EGDSplit[0];
+                    txbFindingPostDx1Text_Cysto.Text = dx1EGDSplit == null ? string.Empty : dx1EGDSplit[1];
+                    txbFindingPostDx2Id_Cysto.Text = Convert.ToString(findingCysto.DxID2 ?? 0);
+                    string[] dx2EGDSplit = string.IsNullOrWhiteSpace(findingCysto.DxID2Detail) ? null : findingCysto.DxID2Detail.Split('-');
+                    txbFindingPostDx2Code_Cysto.Text = dx2EGDSplit == null ? string.Empty : dx2EGDSplit[0];
+                    txbFindingPostDx2Text_Cysto.Text = dx2EGDSplit == null ? string.Empty : dx2EGDSplit[1];
+                    txbFindingPostDx3Id_Cysto.Text = Convert.ToString(findingCysto.DxID3 ?? 0);
+                    string[] dx3EGDSplit = string.IsNullOrWhiteSpace(findingCysto.DxID3Detail) ? null : findingCysto.DxID3Detail.Split('-');
+                    txbFindingPostDx3Code_Cysto.Text = dx3EGDSplit == null ? string.Empty : dx3EGDSplit[0];
+                    txbFindingPostDx3Text_Cysto.Text = dx3EGDSplit == null ? string.Empty : dx3EGDSplit[1];
+                    txbFindingComplication_Cysto.Text = findingCysto.Complication;
+                    txbFindingHistopathology_Cysto.Text = findingCysto.Histopathology;
+                    txbFindingRecommendation_Cysto.Text = findingCysto.Recommendation;
+                    txbFindingComment_Cysto.Text = findingCysto.Comment;
+                }
+                #endregion
             }
             else if (procId == 2 || procId == 4) // Colono
             {
+                #region General Tab
+
                 // General
                 txbHN_Colono.Text = patient.HN;
                 txbFullName_Colono.Text = patient.Fullname;
@@ -5170,6 +5521,10 @@ namespace EndoscopicSystem.V2.Forms
                 txbBriefHistory_Colono.Text = endoscopic.BriefHistory;
                 txbGeneralBowelPreparationRegimen_Colono.Text = endoscopic.BowelPreparationRegimen;
                 txbGeneralBowelPreparationResult_colono.Text = endoscopic.BowelPreparationResult;
+
+                #endregion
+
+                #region Finding Tab
 
                 // Finding
                 if (procId == 2)
@@ -5281,9 +5636,13 @@ namespace EndoscopicSystem.V2.Forms
                     txbFindingRecommendation_Broncho.Text = finding.Recommendation;
                     txbFindingComment_Broncho.Text = finding.Comment;
                 }
+
+                #endregion
             }
             else if (procId == 8)
             {
+                #region General Tab
+
                 // General
                 txbHn_Lap.Text = patient.HN;
                 txbFullName_Lap.Text = patient.Fullname;
@@ -5329,10 +5688,16 @@ namespace EndoscopicSystem.V2.Forms
                 }
                 txbGeneralBriefHistory_Lap.Text = cbbGeneralIndication_Lap.Text;
 
+                #endregion
+
+                #region Finding Tab
+
                 // Finding
                 txbFindingDiagnosis_Lap.Text = endoscopic.Diagnosis;
                 txbFindingOperative_Lap.Text = endoscopic.GeneralOperativeFinding;
                 txbFindingComment_Lap.Text = endoscopic.Comment;
+
+                #endregion
             }
             PushEndoscopicImage();
         }
@@ -5392,12 +5757,10 @@ namespace EndoscopicSystem.V2.Forms
             }
             return patient;
         }
-        private void UpdateFinding(int procedureId)
+        private void UpdateFinding(int procedureId, Finding finding)
         {
-            var findingData = _db.Findings.Where(x => x.PatientID == _patientId).OrderByDescending(o => o.FindingID);
-            if (findingData != null)
+            if (finding != null)
             {
-                Finding finding = findingData.FirstOrDefault();
                 if (procedureId == 1)
                 {
                     finding.OropharynxID = (int?)cbbFindingOropharynx_EGD.SelectedValue;
@@ -5546,7 +5909,7 @@ namespace EndoscopicSystem.V2.Forms
                     finding.SupplementalProcedure1ID = !string.IsNullOrWhiteSpace(txbFindingSupplementalProcedureID_Broncho.Text) ? Convert.ToInt32(txbFindingSupplementalProcedureID_Broncho.Text) : 0;
                     finding.SupplementalProcedure1Detail = finding.SupplementalProcedure1ID > 0 ? txbFindingSupplementalProcedureCode_Broncho.Text + "-" + txbFindingSupplementalProcedureText_Broncho.Text : txbFindingSupplementalProcedureText_Broncho.Text;
                     finding.SupplementalProcedure2ID = !string.IsNullOrWhiteSpace(txbFindingSupplementalProcedure2ID_Broncho.Text) ? Convert.ToInt32(txbFindingSupplementalProcedure2ID_Broncho.Text) : 0;
-                    finding.SupplementalProcedure2Detail = finding.SupplementalProcedure2ID > 0 ?txbFindingSupplementalProcedure2Code_Broncho.Text + "-" + txbFindingSupplementalProcedure2Text_Broncho.Text : txbFindingSupplementalProcedure2Text_Broncho.Text;
+                    finding.SupplementalProcedure2Detail = finding.SupplementalProcedure2ID > 0 ? txbFindingSupplementalProcedure2Code_Broncho.Text + "-" + txbFindingSupplementalProcedure2Text_Broncho.Text : txbFindingSupplementalProcedure2Text_Broncho.Text;
                     finding.Procedure = txbFindingProcedure_Broncho.Text;
                     finding.DxID1 = !string.IsNullOrWhiteSpace(txbFindingDx1ID_Broncho.Text) ? Convert.ToInt32(txbFindingDx1ID_Broncho.Text) : 0;
                     finding.DxID1Detail = finding.DxID1 > 0 ? txbFindingDx1Code_Broncho.Text + "-" + txbFindingDx1Text_Broncho.Text : txbFindingDx1Text_Broncho.Text;
@@ -5595,8 +5958,31 @@ namespace EndoscopicSystem.V2.Forms
                 }
                 finding.UpdateDate = System.DateTime.Now;
                 finding.UpdateBy = _id;
+            }
+        }
+        private void UpdateFindingCysto(FindingCystoscope findingCysto)
+        {
+            if (findingCysto != null)
+            {
+                findingCysto.Urethra = txbFindingUrethra_Cysto.Text;
 
-                _db.SaveChanges();
+                findingCysto.PrincipalProcedureID = !string.IsNullOrWhiteSpace(txbFindingPrincipalId_Cysto.Text) ? Convert.ToInt32(txbFindingPrincipalId_Cysto.Text) : 0;
+                findingCysto.PrincipalProcedureDetail = findingCysto.PrincipalProcedureID > 0 ? txbFindingPrincipalCode_Cysto.Text + "-" + txbFindingPrincipalText_Cysto.Text : txbFindingPrincipalText_Cysto.Text;
+                findingCysto.SupplementalProcedure1ID = !string.IsNullOrWhiteSpace(txbFindingSupplemental1Id_Cysto.Text) ? Convert.ToInt32(txbFindingSupplemental1Id_Cysto.Text) : 0;
+                findingCysto.SupplementalProcedure1Detail = findingCysto.SupplementalProcedure1ID > 0 ? txbFindingSupplemental1Code_Cysto.Text + "-" + txbFindingSupplemental1Text_Cysto.Text : txbFindingSupplemental1Text_Cysto.Text;
+                findingCysto.SupplementalProcedure2ID = !string.IsNullOrWhiteSpace(txbFindingSupplemental2Id_Cysto.Text) ? Convert.ToInt32(txbFindingSupplemental2Id_Cysto.Text) : 0;
+                findingCysto.SupplementalProcedure2Detail = findingCysto.SupplementalProcedure2ID > 0 ? txbFindingSupplemental2Code_Cysto.Text + "-" + txbFindingSupplemental2Text_Cysto.Text : txbFindingSupplemental2Text_Cysto.Text;
+                findingCysto.Procedure = txbFindingProcedure_Cysto.Text;
+                findingCysto.DxID1 = !string.IsNullOrWhiteSpace(txbFindingPostDx1Id_Cysto.Text) ? Convert.ToInt32(txbFindingPostDx1Id_Cysto.Text) : 0;
+                findingCysto.DxID1Detail = findingCysto.DxID1 > 0 ? txbFindingPostDx1Code_Cysto.Text + "-" + txbFindingPostDx1Text_Cysto.Text : txbFindingPostDx1Text_Cysto.Text;
+                findingCysto.DxID2 = !string.IsNullOrWhiteSpace(txbFindingPostDx2Id_Cysto.Text) ? Convert.ToInt32(txbFindingPostDx2Id_Cysto.Text) : 0;
+                findingCysto.DxID2Detail = findingCysto.DxID2 > 0 ? txbFindingPostDx2Code_Cysto.Text + "-" + txbFindingPostDx2Text_Cysto.Text : txbFindingPostDx2Text_Cysto.Text;
+                findingCysto.DxID3 = !string.IsNullOrWhiteSpace(txbFindingPostDx3Id_Cysto.Text) ? Convert.ToInt32(txbFindingPostDx3Id_Cysto.Text) : 0;
+                findingCysto.DxID3Detail = findingCysto.DxID3 > 0 ? txbFindingPostDx3Code_Cysto.Text + "-" + txbFindingPostDx3Text_Cysto.Text : txbFindingPostDx3Text_Cysto.Text;
+                findingCysto.Complication = txbFindingComplication_Cysto.Text;
+                findingCysto.Histopathology = txbFindingHistopathology_Cysto.Text;
+                findingCysto.Recommendation = txbFindingRecommendation_Cysto.Text;
+                findingCysto.Comment = txbFindingComment_Cysto.Text;
             }
         }
         private void UpdateAppointment(int? endoId)
@@ -5815,15 +6201,29 @@ namespace EndoscopicSystem.V2.Forms
                 if (endoscopicId == 0)
                 {
                     Endoscopic endoscopic = new Endoscopic() { PatientID = patientId, IsSaved = false, ProcedureID = procedureId, CreateBy = _id, CreateDate = System.DateTime.Now };
-                    _db.Endoscopics.Add(endoscopic);
-
-                    Finding finding = new Finding() { PatientID = patientId, CreateBy = _id, CreateDate = System.DateTime.Now };
-                    _db.Findings.Add(finding);
-                    _db.SaveChanges();
-
-                    var endos = _db.Endoscopics.ToList();
-                    endo = endos.LastOrDefault();
+                    int resultInsertEndo = InsertEndoscopic(endoscopic);
+                    if (resultInsertEndo < 0)
+                    {
+                        MessageBox.Show("Error, Insert Endoscopic isn't completed.", "Error!", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        return false;
+                    }
+                    
+                    endo = _db.Endoscopics.Where(w => w.PatientID == patientId && w.ProcedureID == procedureId && w.IsSaved == false).OrderByDescending(o => o.CreateDate).FirstOrDefault();
                     endoscopicId = endo.EndoscopicID;
+
+                    if (procedureId == 9)
+                    {
+                        FindingCystoscope findingCystoscope = new FindingCystoscope()
+                        {
+                            EndoscopicID = endoscopicId
+                        };
+                        _ = InsertFindingCystoscope(findingCystoscope);
+                    }
+                    else
+                    {
+                        Finding finding = new Finding() { PatientID = patientId, CreateBy = _id, CreateDate = System.DateTime.Now, EndoscopicID = endoscopicId };
+                        _ = InsertFinding(finding);
+                    }
                 }
                 else
                 {
@@ -5832,11 +6232,21 @@ namespace EndoscopicSystem.V2.Forms
 
                 try
                 {
-                    var findingData = _db.Findings.Where(x => x.PatientID == patientId).OrderByDescending(o => o.FindingID).FirstOrDefault();
-                    endo.FindingID = findingData.FindingID;
+                    if (procedureId == 9)
+                    {
+                        var findingCysto = _db.FindingCystoscopes.Where(w => w.EndoscopicID == endoscopicId).OrderByDescending(o => o.FindingID).FirstOrDefault();
+                        UpdateFindingCysto(findingCysto);
+                        endo.FindingCystoScopeID = findingCysto.FindingID;
+                    }
+                    else
+                    {
+                        var findingData = _db.Findings.Where(x => x.PatientID == patientId).OrderByDescending(o => o.FindingID).FirstOrDefault();
+                        UpdateFinding(procedureId, findingData);
+                        endo.FindingID = findingData.FindingID;
+                    }
                     endo.IsSaved = true;
                     endo.ProcedureID = procedureId;
-                    if (procedureId == 1 || procedureId == 3 || procedureId == 5)
+                    if (procedureId == 1 || procedureId == 3 || procedureId == 5 || procedureId == 9)
                     {
                         endo.EndoscopistID = (int?)cbbGeneralDoctor_EGD.SelectedValue;
                         endo.NurseFirstID = (int?)cbbGeneralNurse1_EGD.SelectedValue;
@@ -5938,7 +6348,6 @@ namespace EndoscopicSystem.V2.Forms
                     endo.UpdateBy = _id;
 
                     var patient = UpdatePatientInfo(patientId, procedureId);
-                    UpdateFinding(procedureId);
                     UpdateAppointment(endo.EndoscopicID);
                     SaveImage(endo.EndoscopicID, procedureId);
                     SaveLogEndoscopic(endo, patientId, procedureId);
@@ -5947,15 +6356,31 @@ namespace EndoscopicSystem.V2.Forms
                 }
                 catch (Exception ex)
                 {
-                    MessageBox.Show(ex.Message);
+                    MessageBox.Show(ex.Message, "Error!", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
 
                 return true;
             }
-            catch (Exception)
+            catch (Exception ex)
             {
+                MessageBox.Show(ex.Message, "Error!", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return false;
             }
+        }
+        private int InsertEndoscopic(Endoscopic endoscopic)
+        {
+            _db.Endoscopics.Add(endoscopic);
+            return _db.SaveChanges();
+        }
+        private int InsertFinding(Finding finding)
+        {
+            _db.Findings.Add(finding);
+            return _db.SaveChanges();
+        }
+        private int InsertFindingCystoscope(FindingCystoscope finding)
+        {
+            _db.FindingCystoscopes.Add(finding);
+            return _db.SaveChanges();
         }
 
         #endregion
@@ -5966,8 +6391,10 @@ namespace EndoscopicSystem.V2.Forms
         {
             RemoveTabPage();
 
-            if (procedureId == 1 || procedureId == 3 || procedureId == 5)   // EGD, ERCP, ENT
+            if (procedureId == 1 || procedureId == 3 || procedureId == 5 || procedureId == 9)   // EGD, ERCP, ENT, Cysto
             {
+                #region General Tab
+
                 tabControl1.TabPages.Add(tabGeneralEGD);
                 // General Tab
                 _dropdownListService.DropdownOPD(cbbGeneralOPD_EGD);
@@ -5988,6 +6415,10 @@ namespace EndoscopicSystem.V2.Forms
                 LoadAutoCompleted_txbBriefHistory_EGD();
                 LoadAutoCompleted_ICD10Text(txbGeneralDx1Text_EGD);
                 LoadAutoCompleted_ICD10Text(txbGeneralDx2Text_EGD);
+
+                #endregion
+
+                #region Finding Tab
 
                 // Finding Tab
                 if (procedureId == 1)
@@ -6027,6 +6458,35 @@ namespace EndoscopicSystem.V2.Forms
                     LoadAutoCompleted_ICD10Text(txbFindingDx2Text_EGD);
                     LoadAutoCompleted_ICD10Text(txbFindingDx3Text_EGD);
                 }
+                else if (procedureId == 3)
+                {
+                    tabControl1.TabPages.Add(tabFindingERCP);
+
+                    _dropdownListService.DropdownDuodenum(cbbFindingDuodenum_ERCP);
+                    _dropdownListService.DropdownPapillaMajor(cbbFindingPapillaMajor_ERCP);
+                    _dropdownListService.DropdownPapillaMinor(cbbFindingPapillaMinor_ERCP);
+                    _dropdownListService.DropdownPancrea(cbbFindingPancreas_ERCP);
+                    _dropdownListService.DropdownBiliarySystem(cbbFindingBiliarySystem_ERCP);
+                    _dropdownListService.DropdownOther(cbbFindingOther_ERCP);
+
+                    LoadAutoCompleted_txbFindingDuodenum_ERCP();
+                    LoadAutoCompleted_txbFindingPapillaMajor_ERCP();
+                    LoadAutoCompleted_txbFindingPapillaMinor_ERCP();
+                    LoadAutoCompleted_txbFindingPancreas_ERCP();
+                    LoadAutoCompleted_txbFindingBiliarySystem_ERCP();
+                    LoadAutoCompleted_txbFindingOther_ERCP();
+                    LoadAutoCompleted_txbFindingProcedure_ERCP();
+                    LoadAutoCompleted_txbFindingComplication_ERCP();
+                    LoadAutoCompleted_txbFindingHistopathology_ERCP();
+                    LoadAutoCompleted_txbFindingRecommendation_ERCP();
+                    LoadAutoCompleted_txbFindingComment_ERCP();
+                    LoadAutoCompleted_ICD9Text(txbFindingPrinncipalProcedureText_ERCP);
+                    LoadAutoCompleted_ICD9Text(txbFindingSupplementalProcedureText_ERCP);
+                    LoadAutoCompleted_ICD9Text(txbFindingSupplementalProcedure2Text_ERCP);
+                    LoadAutoCompleted_ICD10Text(txbFindingDx1Text_ERCP);
+                    LoadAutoCompleted_ICD10Text(txbFindingDx2Text_ERCP);
+                    LoadAutoCompleted_ICD10Text(txbFindingDx3Text_ERCP);
+                }
                 else if (procedureId == 5)
                 {
                     tabControl1.TabPages.Add(tabFindingENT);
@@ -6060,36 +6520,15 @@ namespace EndoscopicSystem.V2.Forms
                 }
                 else
                 {
-                    tabControl1.TabPages.Add(tabFindingERCP);
-
-                    _dropdownListService.DropdownDuodenum(cbbFindingDuodenum_ERCP);
-                    _dropdownListService.DropdownPapillaMajor(cbbFindingPapillaMajor_ERCP);
-                    _dropdownListService.DropdownPapillaMinor(cbbFindingPapillaMinor_ERCP);
-                    _dropdownListService.DropdownPancrea(cbbFindingPancreas_ERCP);
-                    _dropdownListService.DropdownBiliarySystem(cbbFindingBiliarySystem_ERCP);
-                    _dropdownListService.DropdownOther(cbbFindingOther_ERCP);
-
-                    LoadAutoCompleted_txbFindingDuodenum_ERCP();
-                    LoadAutoCompleted_txbFindingPapillaMajor_ERCP();
-                    LoadAutoCompleted_txbFindingPapillaMinor_ERCP();
-                    LoadAutoCompleted_txbFindingPancreas_ERCP();
-                    LoadAutoCompleted_txbFindingBiliarySystem_ERCP();
-                    LoadAutoCompleted_txbFindingOther_ERCP();
-                    LoadAutoCompleted_txbFindingProcedure_ERCP();
-                    LoadAutoCompleted_txbFindingComplication_ERCP();
-                    LoadAutoCompleted_txbFindingHistopathology_ERCP();
-                    LoadAutoCompleted_txbFindingRecommendation_ERCP();
-                    LoadAutoCompleted_txbFindingComment_ERCP();
-                    LoadAutoCompleted_ICD9Text(txbFindingPrinncipalProcedureText_ERCP);
-                    LoadAutoCompleted_ICD9Text(txbFindingSupplementalProcedureText_ERCP);
-                    LoadAutoCompleted_ICD9Text(txbFindingSupplementalProcedure2Text_ERCP);
-                    LoadAutoCompleted_ICD10Text(txbFindingDx1Text_ERCP);
-                    LoadAutoCompleted_ICD10Text(txbFindingDx2Text_ERCP);
-                    LoadAutoCompleted_ICD10Text(txbFindingDx3Text_ERCP);
+                    tabControl1.TabPages.Add(tabFindingCystoscope);
                 }
+
+                #endregion
             }
             else if (procedureId == 2 || procedureId == 4)  // Colonoscopy, Bronchoscopy
             {
+                #region General Tab
+
                 tabControl1.TabPages.Add(tabGeneralColonoscopy);
                 // General Tab
                 _dropdownListService.DropdownOPD(cbbGeneralOPD_Colono);
@@ -6112,6 +6551,10 @@ namespace EndoscopicSystem.V2.Forms
                 LoadAutoCompleted_txbBriefHistory_Colono();
                 LoadAutoCompleted_txbGeneralBowelPreparationRegimen_Colono();
                 LoadAutoCompleted_txbGeneralBowelPreparationResult_colono();
+
+                #endregion
+
+                #region Finding Tab
 
                 // Finding Tab
                 if (procedureId == 2)
@@ -6194,6 +6637,8 @@ namespace EndoscopicSystem.V2.Forms
                     LoadAutoCompleted_ICD10Text(txbFindingDx2Text_Broncho);
                     LoadAutoCompleted_ICD10Text(txbFindingDx3Text_Broncho);
                 }
+
+                #endregion
             }
             else if (procedureId == 6)
             {
@@ -6201,6 +6646,8 @@ namespace EndoscopicSystem.V2.Forms
                 tabControl1.TabPages.Add(tabFindingEGD);
                 tabControl1.TabPages.Add(tabGeneralColonoscopy);
                 tabControl1.TabPages.Add(tabFindingColonoscopy);
+
+                #region EGD General Tab
 
                 // EGD General Tab
                 _dropdownListService.DropdownOPD(cbbGeneralOPD_EGD);
@@ -6216,6 +6663,10 @@ namespace EndoscopicSystem.V2.Forms
                 _dropdownListService.DropdownFinancial(cbbGeneralFinancial_EGD);
                 _dropdownListService.DropdownInstrument(cbbInstrument_EGD);
 
+                #endregion
+
+                #region EGD Finding Tab
+
                 // EGD Finding Tab
                 _dropdownListService.DropdownOropharynx(cbbFindingOropharynx_EGD);
                 _dropdownListService.DropdownEsophagus(cbbFindingEsophagus_EGD);
@@ -6227,6 +6678,10 @@ namespace EndoscopicSystem.V2.Forms
                 _dropdownListService.DropdownPylorus(cbbFindingPylorus_EGD);
                 _dropdownListService.DropdownDuodenalBulb(cbbFindingDuodenalBulb_EGD);
                 _dropdownListService.DropdownSecondPart(cbbFinding2ndPart_EGD);
+
+                #endregion
+                
+                #region Colono General Tab
 
                 // Colono General Tab
                 _dropdownListService.DropdownOPD(cbbGeneralOPD_Colono);
@@ -6242,6 +6697,10 @@ namespace EndoscopicSystem.V2.Forms
                 _dropdownListService.DropdownFinancial(cbbGeneralFinancial_Colono);
                 _dropdownListService.DropdownInstrument(cbbInstrument_Colono);
 
+                #endregion
+                
+                #region Colono Finding Tab
+
                 // Colono Finding Tab
                 _dropdownListService.DropdownAnalCanal(cbbFindingAnalCanal_Colono);
                 _dropdownListService.DropdownRectum(cbbFindingRectum_Colono);
@@ -6255,11 +6714,14 @@ namespace EndoscopicSystem.V2.Forms
                 _dropdownListService.DropdownCecum(cbbFindingCecum_Colono);
                 _dropdownListService.DropdownTerminalIleum(cbbFindingTerminal_Colono);
 
+                #endregion
             }
             else if (procedureId == 8) // Laparoscopy
             {
                 tabControl1.TabPages.Add(tabGeneralLab);
                 tabControl1.TabPages.Add(tabFindingLab);
+
+                #region General Tab
 
                 // General Tab
                 _dropdownListService.DropdownOPD(cbbGeneralOPD_Lap);
@@ -6282,6 +6744,7 @@ namespace EndoscopicSystem.V2.Forms
                 LoadAutoCompleted_txbFindingOperative_Lap();
                 LoadAutoCompleted_txbFindingComment_Lap();
 
+                #endregion
             }
             else
             {

@@ -261,6 +261,9 @@
     <Compile Include="Entities\Finding.cs">
       <DependentUpon>DBEndoscopic.tt</DependentUpon>
     </Compile>
+    <Compile Include="Entities\FindingCystoscope.cs">
+      <DependentUpon>DBEndoscopic.tt</DependentUpon>
+    </Compile>
     <Compile Include="Entities\FindingLabel.cs">
       <DependentUpon>DBEndoscopic.tt</DependentUpon>
     </Compile>
