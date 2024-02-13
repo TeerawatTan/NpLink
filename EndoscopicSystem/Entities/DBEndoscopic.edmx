@@ -223,18 +223,18 @@
           </Key>
           <Property Name="FindingID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
           <Property Name="PatientID" Type="int" />
-          <Property Name="VocalCord" Type="nvarchar" MaxLength="100" />
-          <Property Name="Trachea" Type="nvarchar" MaxLength="100" />
-          <Property Name="Carina" Type="nvarchar" MaxLength="100" />
-          <Property Name="RightMain" Type="nvarchar" MaxLength="100" />
-          <Property Name="RightIntermideate" Type="nvarchar" MaxLength="100" />
-          <Property Name="RUL" Type="nvarchar" MaxLength="100" />
-          <Property Name="RML" Type="nvarchar" MaxLength="100" />
-          <Property Name="RLL" Type="nvarchar" MaxLength="100" />
-          <Property Name="LeftMain" Type="nvarchar" MaxLength="100" />
-          <Property Name="LUL" Type="nvarchar" MaxLength="100" />
-          <Property Name="Lingular" Type="nvarchar" MaxLength="100" />
-          <Property Name="LLL" Type="nvarchar" MaxLength="100" />
+          <Property Name="VocalCord" Type="nvarchar" MaxLength="500" />
+          <Property Name="Trachea" Type="nvarchar" MaxLength="500" />
+          <Property Name="Carina" Type="nvarchar" MaxLength="500" />
+          <Property Name="RightMain" Type="nvarchar" MaxLength="500" />
+          <Property Name="RightIntermideate" Type="nvarchar" MaxLength="500" />
+          <Property Name="RUL" Type="nvarchar" MaxLength="500" />
+          <Property Name="RML" Type="nvarchar" MaxLength="500" />
+          <Property Name="RLL" Type="nvarchar" MaxLength="500" />
+          <Property Name="LeftMain" Type="nvarchar" MaxLength="500" />
+          <Property Name="LUL" Type="nvarchar" MaxLength="500" />
+          <Property Name="Lingular" Type="nvarchar" MaxLength="500" />
+          <Property Name="LLL" Type="nvarchar" MaxLength="500" />
           <Property Name="AnalCanalID" Type="int" />
           <Property Name="RectumID" Type="int" />
           <Property Name="SigmoidColonID" Type="int" />
@@ -277,78 +277,78 @@
           <Property Name="LULID" Type="int" />
           <Property Name="LingularID" Type="int" />
           <Property Name="LLLID" Type="int" />
-          <Property Name="AnalCanal" Type="nvarchar" MaxLength="200" />
-          <Property Name="Rectum" Type="nvarchar" MaxLength="200" />
-          <Property Name="SigmoidColon" Type="nvarchar" MaxLength="200" />
-          <Property Name="DescendingColon" Type="nvarchar" MaxLength="200" />
-          <Property Name="SplenicFlexure" Type="nvarchar" MaxLength="200" />
-          <Property Name="TransverseColon" Type="nvarchar" MaxLength="200" />
-          <Property Name="HepaticFlexure" Type="nvarchar" MaxLength="200" />
-          <Property Name="AscendingColon" Type="nvarchar" MaxLength="200" />
-          <Property Name="IleocecalVolve" Type="nvarchar" MaxLength="200" />
-          <Property Name="Cecum" Type="nvarchar" MaxLength="200" />
-          <Property Name="TerminalIleum" Type="nvarchar" MaxLength="200" />
-          <Property Name="Esophagus" Type="nvarchar" MaxLength="200" />
-          <Property Name="Stomach" Type="nvarchar" MaxLength="200" />
-          <Property Name="Duodenum" Type="nvarchar" MaxLength="200" />
-          <Property Name="AmpullaOfVater" Type="nvarchar" MaxLength="200" />
-          <Property Name="Cholangiogram" Type="nvarchar" MaxLength="200" />
-          <Property Name="Pancreatogram" Type="nvarchar" MaxLength="200" />
-          <Property Name="Oropharynx" Type="nvarchar" MaxLength="200" />
-          <Property Name="EGJunction" Type="nvarchar" MaxLength="200" />
-          <Property Name="Cardia" Type="nvarchar" MaxLength="200" />
-          <Property Name="Fundus" Type="nvarchar" MaxLength="200" />
-          <Property Name="Body" Type="nvarchar" MaxLength="200" />
-          <Property Name="Antrum" Type="nvarchar" MaxLength="200" />
-          <Property Name="Pylorus" Type="nvarchar" MaxLength="200" />
-          <Property Name="DuodenalBulb" Type="nvarchar" MaxLength="200" />
-          <Property Name="SecondPart" Type="nvarchar" MaxLength="200" />
+          <Property Name="AnalCanal" Type="nvarchar" MaxLength="500" />
+          <Property Name="Rectum" Type="nvarchar" MaxLength="500" />
+          <Property Name="SigmoidColon" Type="nvarchar" MaxLength="500" />
+          <Property Name="DescendingColon" Type="nvarchar" MaxLength="500" />
+          <Property Name="SplenicFlexure" Type="nvarchar" MaxLength="500" />
+          <Property Name="TransverseColon" Type="nvarchar" MaxLength="500" />
+          <Property Name="HepaticFlexure" Type="nvarchar" MaxLength="500" />
+          <Property Name="AscendingColon" Type="nvarchar" MaxLength="500" />
+          <Property Name="IleocecalVolve" Type="nvarchar" MaxLength="500" />
+          <Property Name="Cecum" Type="nvarchar" MaxLength="500" />
+          <Property Name="TerminalIleum" Type="nvarchar" MaxLength="500" />
+          <Property Name="Esophagus" Type="nvarchar" MaxLength="500" />
+          <Property Name="Stomach" Type="nvarchar" MaxLength="500" />
+          <Property Name="Duodenum" Type="nvarchar" MaxLength="500" />
+          <Property Name="AmpullaOfVater" Type="nvarchar" MaxLength="500" />
+          <Property Name="Cholangiogram" Type="nvarchar" MaxLength="500" />
+          <Property Name="Pancreatogram" Type="nvarchar" MaxLength="500" />
+          <Property Name="Oropharynx" Type="nvarchar" MaxLength="500" />
+          <Property Name="EGJunction" Type="nvarchar" MaxLength="500" />
+          <Property Name="Cardia" Type="nvarchar" MaxLength="500" />
+          <Property Name="Fundus" Type="nvarchar" MaxLength="500" />
+          <Property Name="Body" Type="nvarchar" MaxLength="500" />
+          <Property Name="Antrum" Type="nvarchar" MaxLength="500" />
+          <Property Name="Pylorus" Type="nvarchar" MaxLength="500" />
+          <Property Name="DuodenalBulb" Type="nvarchar" MaxLength="500" />
+          <Property Name="SecondPart" Type="nvarchar" MaxLength="500" />
           <Property Name="NasalCavityLeftID" Type="int" />
-          <Property Name="NasalCavityLeft" Type="nvarchar" MaxLength="200" />
+          <Property Name="NasalCavityLeft" Type="nvarchar" MaxLength="500" />
           <Property Name="NasalCavityRightID" Type="int" />
-          <Property Name="NasalCavityRight" Type="nvarchar" MaxLength="200" />
+          <Property Name="NasalCavityRight" Type="nvarchar" MaxLength="500" />
           <Property Name="SeptumID" Type="int" />
-          <Property Name="Septum" Type="nvarchar" MaxLength="200" />
+          <Property Name="Septum" Type="nvarchar" MaxLength="500" />
           <Property Name="NasopharynxID" Type="int" />
-          <Property Name="Nasopharynx" Type="nvarchar" MaxLength="200" />
+          <Property Name="Nasopharynx" Type="nvarchar" MaxLength="500" />
           <Property Name="RoofID" Type="int" />
-          <Property Name="Roof" Type="nvarchar" MaxLength="200" />
+          <Property Name="Roof" Type="nvarchar" MaxLength="500" />
           <Property Name="PosteriorWallID" Type="int" />
-          <Property Name="PosteriorWall" Type="nvarchar" MaxLength="200" />
+          <Property Name="PosteriorWall" Type="nvarchar" MaxLength="500" />
           <Property Name="RosenmullerFossaID" Type="int" />
-          <Property Name="RosenmullerFossa" Type="nvarchar" MaxLength="200" />
+          <Property Name="RosenmullerFossa" Type="nvarchar" MaxLength="500" />
           <Property Name="EustachianTubeOrificeLeftID" Type="int" />
-          <Property Name="EustachianTubeOrificeLeft" Type="nvarchar" MaxLength="200" />
+          <Property Name="EustachianTubeOrificeLeft" Type="nvarchar" MaxLength="500" />
           <Property Name="EustachianTubeOrificeRightID" Type="int" />
-          <Property Name="EustachianTubeOrificeRight" Type="nvarchar" MaxLength="200" />
+          <Property Name="EustachianTubeOrificeRight" Type="nvarchar" MaxLength="500" />
           <Property Name="SoftPalateID" Type="int" />
-          <Property Name="SoftPalate" Type="nvarchar" MaxLength="200" />
+          <Property Name="SoftPalate" Type="nvarchar" MaxLength="500" />
           <Property Name="UvulaID" Type="int" />
-          <Property Name="Uvula" Type="nvarchar" MaxLength="200" />
+          <Property Name="Uvula" Type="nvarchar" MaxLength="500" />
           <Property Name="TonsilID" Type="int" />
-          <Property Name="Tonsil" Type="nvarchar" MaxLength="200" />
+          <Property Name="Tonsil" Type="nvarchar" MaxLength="500" />
           <Property Name="BaseOfTongueID" Type="int" />
-          <Property Name="BaseOfTongue" Type="nvarchar" MaxLength="200" />
+          <Property Name="BaseOfTongue" Type="nvarchar" MaxLength="500" />
           <Property Name="ValleculaID" Type="int" />
-          <Property Name="Vallecula" Type="nvarchar" MaxLength="200" />
+          <Property Name="Vallecula" Type="nvarchar" MaxLength="500" />
           <Property Name="PyriformSinusLeftID" Type="int" />
-          <Property Name="PyriformSinusLeft" Type="nvarchar" MaxLength="200" />
+          <Property Name="PyriformSinusLeft" Type="nvarchar" MaxLength="500" />
           <Property Name="PyriformSinusRightID" Type="int" />
-          <Property Name="PyriformSinusRight" Type="nvarchar" MaxLength="200" />
+          <Property Name="PyriformSinusRight" Type="nvarchar" MaxLength="500" />
           <Property Name="PostcricoidID" Type="int" />
-          <Property Name="Postcricoid" Type="nvarchar" MaxLength="200" />
+          <Property Name="Postcricoid" Type="nvarchar" MaxLength="500" />
           <Property Name="PosteriorPharyngealWallID" Type="int" />
-          <Property Name="PosteriorPharyngealWall" Type="nvarchar" MaxLength="200" />
+          <Property Name="PosteriorPharyngealWall" Type="nvarchar" MaxLength="500" />
           <Property Name="SupraglotticID" Type="int" />
-          <Property Name="Supraglottic" Type="nvarchar" MaxLength="200" />
+          <Property Name="Supraglottic" Type="nvarchar" MaxLength="500" />
           <Property Name="GlotticID" Type="int" />
-          <Property Name="Glottic" Type="nvarchar" MaxLength="200" />
+          <Property Name="Glottic" Type="nvarchar" MaxLength="500" />
           <Property Name="SubglotticID" Type="int" />
-          <Property Name="Subglottic" Type="nvarchar" MaxLength="200" />
+          <Property Name="Subglottic" Type="nvarchar" MaxLength="500" />
           <Property Name="UESID" Type="int" />
-          <Property Name="UES" Type="nvarchar" MaxLength="200" />
+          <Property Name="UES" Type="nvarchar" MaxLength="500" />
           <Property Name="LESID" Type="int" />
-          <Property Name="LES" Type="nvarchar" MaxLength="200" />
+          <Property Name="LES" Type="nvarchar" MaxLength="500" />
           <Property Name="PrincipalProcedureID" Type="int" />
           <Property Name="PrincipalProcedureDetail" Type="nvarchar" MaxLength="1000" />
           <Property Name="SupplementalProcedure1ID" Type="int" />
@@ -368,7 +368,7 @@
           <Property Name="Histopathology" Type="nvarchar" MaxLength="1000" />
           <Property Name="Recommendation" Type="nvarchar" MaxLength="1000" />
           <Property Name="Comment" Type="nvarchar" MaxLength="1000" />
-          <Property Name="RapidUreaseTest" Type="nvarchar" MaxLength="250" />
+          <Property Name="RapidUreaseTest" Type="nvarchar" MaxLength="500" />
           <Property Name="PapillaMajorID" Type="int" />
           <Property Name="PapillaMajor" Type="nvarchar" MaxLength="1000" />
           <Property Name="PapillaMinorID" Type="int" />
@@ -380,9 +380,9 @@
           <Property Name="OtherID" Type="int" />
           <Property Name="OtherDetail" Type="nvarchar" MaxLength="1000" />
           <Property Name="NoseID" Type="int" />
-          <Property Name="Nose" Type="nvarchar" MaxLength="200" />
+          <Property Name="Nose" Type="nvarchar" MaxLength="500" />
           <Property Name="PyriformID" Type="int" />
-          <Property Name="Pyriform" Type="nvarchar" MaxLength="200" />
+          <Property Name="Pyriform" Type="nvarchar" MaxLength="500" />
         </EntityType>
         <EntityType Name="History">
           <Key>
@@ -646,7 +646,7 @@ warning 6002: The table/view 'EndoscopicDb.dbo.ProcedureList' does not have a pr
             <PropertyRef Name="AmpullaOfVaterID" />
           </Key>
           <Property Name="AmpullaOfVaterID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
-          <Property Name="AmpullaOfVaterName" Type="nvarchar" MaxLength="200" />
+          <Property Name="AmpullaOfVaterName" Type="nvarchar" MaxLength="500" />
           <Property Name="CreateDate" Type="datetime" />
           <Property Name="UpdateDate" Type="datetime" />
         </EntityType>
@@ -655,7 +655,7 @@ warning 6002: The table/view 'EndoscopicDb.dbo.ProcedureList' does not have a pr
             <PropertyRef Name="AnalCanalID" />
           </Key>
           <Property Name="AnalCanalID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
-          <Property Name="AnalCanalName" Type="nvarchar" MaxLength="200" />
+          <Property Name="AnalCanalName" Type="nvarchar" MaxLength="500" />
           <Property Name="CreateDate" Type="datetime" />
           <Property Name="UpdateDate" Type="datetime" />
         </EntityType>
@@ -664,7 +664,7 @@ warning 6002: The table/view 'EndoscopicDb.dbo.ProcedureList' does not have a pr
             <PropertyRef Name="AnesthesiaID" />
           </Key>
           <Property Name="AnesthesiaID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
-          <Property Name="AnesthesiaName" Type="nvarchar" MaxLength="200" />
+          <Property Name="AnesthesiaName" Type="nvarchar" MaxLength="500" />
           <Property Name="CreateDate" Type="datetime" />
           <Property Name="UpdateDate" Type="datetime" />
         </EntityType>
@@ -673,7 +673,7 @@ warning 6002: The table/view 'EndoscopicDb.dbo.ProcedureList' does not have a pr
             <PropertyRef Name="AntrumID" />
           </Key>
           <Property Name="AntrumID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
-          <Property Name="AntrumName" Type="nvarchar" MaxLength="200" />
+          <Property Name="AntrumName" Type="nvarchar" MaxLength="500" />
           <Property Name="CreateDate" Type="datetime" />
           <Property Name="UpdateDate" Type="datetime" />
         </EntityType>
@@ -682,7 +682,7 @@ warning 6002: The table/view 'EndoscopicDb.dbo.ProcedureList' does not have a pr
             <PropertyRef Name="AscendingColonID" />
           </Key>
           <Property Name="AscendingColonID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
-          <Property Name="AscendingColonName" Type="nvarchar" MaxLength="200" />
+          <Property Name="AscendingColonName" Type="nvarchar" MaxLength="500" />
           <Property Name="CreateDate" Type="datetime" />
           <Property Name="UpdateDate" Type="datetime" />
         </EntityType>
@@ -691,21 +691,21 @@ warning 6002: The table/view 'EndoscopicDb.dbo.ProcedureList' does not have a pr
             <PropertyRef Name="BaseOfTongueID" />
           </Key>
           <Property Name="BaseOfTongueID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
-          <Property Name="BaseOfTongueName" Type="varchar" MaxLength="255" />
+          <Property Name="BaseOfTongueName" Type="varchar" MaxLength="500" />
         </EntityType>
         <EntityType Name="BiliarySystem">
           <Key>
             <PropertyRef Name="ID" />
           </Key>
           <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
-          <Property Name="Name" Type="nvarchar" MaxLength="250" />
+          <Property Name="Name" Type="nvarchar" MaxLength="500" />
         </EntityType>
         <EntityType Name="Body">
           <Key>
             <PropertyRef Name="BodyID" />
           </Key>
           <Property Name="BodyID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
-          <Property Name="BodyName" Type="nvarchar" MaxLength="200" />
+          <Property Name="BodyName" Type="nvarchar" MaxLength="500" />
           <Property Name="CreateDate" Type="datetime" />
           <Property Name="UpdateDate" Type="datetime" />
         </EntityType>
@@ -735,7 +735,7 @@ warning 6002: The table/view 'EndoscopicDb.dbo.ProcedureList' does not have a pr
             <PropertyRef Name="CardiaID" />
           </Key>
           <Property Name="CardiaID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
-          <Property Name="CardiaName" Type="nvarchar" MaxLength="200" />
+          <Property Name="CardiaName" Type="nvarchar" MaxLength="500" />
           <Property Name="CreateDate" Type="datetime" />
           <Property Name="UpdateDate" Type="datetime" />
         </EntityType>
@@ -744,7 +744,7 @@ warning 6002: The table/view 'EndoscopicDb.dbo.ProcedureList' does not have a pr
             <PropertyRef Name="CarinaID" />
           </Key>
           <Property Name="CarinaID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
-          <Property Name="CarinaName" Type="nvarchar" MaxLength="200" />
+          <Property Name="CarinaName" Type="nvarchar" MaxLength="500" />
           <Property Name="CreateDate" Type="datetime" />
           <Property Name="UpdateDate" Type="datetime" />
         </EntityType>
@@ -753,7 +753,7 @@ warning 6002: The table/view 'EndoscopicDb.dbo.ProcedureList' does not have a pr
             <PropertyRef Name="CecumID" />
           </Key>
           <Property Name="CecumID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
-          <Property Name="CecumName" Type="nvarchar" MaxLength="200" />
+          <Property Name="CecumName" Type="nvarchar" MaxLength="500" />
           <Property Name="CreateDate" Type="datetime" />
           <Property Name="UpdateDate" Type="datetime" />
         </EntityType>
@@ -762,7 +762,7 @@ warning 6002: The table/view 'EndoscopicDb.dbo.ProcedureList' does not have a pr
             <PropertyRef Name="CholangiogramID" />
           </Key>
           <Property Name="CholangiogramID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
-          <Property Name="CholangiogramName" Type="nvarchar" MaxLength="200" />
+          <Property Name="CholangiogramName" Type="nvarchar" MaxLength="500" />
           <Property Name="CreateDate" Type="datetime" />
           <Property Name="UpdateDate" Type="datetime" />
         </EntityType>
@@ -789,7 +789,7 @@ warning 6002: The table/view 'EndoscopicDb.dbo.ProcedureList' does not have a pr
             <PropertyRef Name="DescendingColonID" />
           </Key>
           <Property Name="DescendingColonID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
-          <Property Name="DescendingColonName" Type="nvarchar" MaxLength="200" />
+          <Property Name="DescendingColonName" Type="nvarchar" MaxLength="500" />
           <Property Name="CreateDate" Type="datetime" />
           <Property Name="UpdateDate" Type="datetime" />
         </EntityType>
@@ -805,7 +805,7 @@ warning 6002: The table/view 'EndoscopicDb.dbo.ProcedureList' does not have a pr
             <PropertyRef Name="DuodenalBulbID" />
           </Key>
           <Property Name="DuodenalBulbID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
-          <Property Name="DuodenalBulbName" Type="nvarchar" MaxLength="200" />
+          <Property Name="DuodenalBulbName" Type="nvarchar" MaxLength="500" />
           <Property Name="CreateDate" Type="datetime" />
           <Property Name="UpdateDate" Type="datetime" />
         </EntityType>
@@ -814,7 +814,7 @@ warning 6002: The table/view 'EndoscopicDb.dbo.ProcedureList' does not have a pr
             <PropertyRef Name="DuodenumID" />
           </Key>
           <Property Name="DuodenumID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
-          <Property Name="DuodenumName" Type="nvarchar" MaxLength="200" />
+          <Property Name="DuodenumName" Type="nvarchar" MaxLength="500" />
           <Property Name="CreateDate" Type="datetime" />
           <Property Name="UpdateDate" Type="datetime" />
         </EntityType>
@@ -823,7 +823,7 @@ warning 6002: The table/view 'EndoscopicDb.dbo.ProcedureList' does not have a pr
             <PropertyRef Name="EGJunctionID" />
           </Key>
           <Property Name="EGJunctionID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
-          <Property Name="EGJunctionName" Type="nvarchar" MaxLength="200" />
+          <Property Name="EGJunctionName" Type="nvarchar" MaxLength="500" />
           <Property Name="CreateDate" Type="datetime" />
           <Property Name="UpdateDate" Type="datetime" />
         </EntityType>
@@ -832,7 +832,7 @@ warning 6002: The table/view 'EndoscopicDb.dbo.ProcedureList' does not have a pr
             <PropertyRef Name="ERCPEsophagusID" />
           </Key>
           <Property Name="ERCPEsophagusID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
-          <Property Name="ERCPEsophagusName" Type="nvarchar" MaxLength="200" />
+          <Property Name="ERCPEsophagusName" Type="nvarchar" MaxLength="500" />
           <Property Name="CreateDate" Type="datetime" />
           <Property Name="UpdateDate" Type="datetime" />
         </EntityType>
@@ -841,7 +841,7 @@ warning 6002: The table/view 'EndoscopicDb.dbo.ProcedureList' does not have a pr
             <PropertyRef Name="EsophagusID" />
           </Key>
           <Property Name="EsophagusID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
-          <Property Name="EsophagusName" Type="nvarchar" MaxLength="200" />
+          <Property Name="EsophagusName" Type="nvarchar" MaxLength="500" />
           <Property Name="CreateDate" Type="datetime" />
           <Property Name="UpdateDate" Type="datetime" />
         </EntityType>
@@ -850,14 +850,14 @@ warning 6002: The table/view 'EndoscopicDb.dbo.ProcedureList' does not have a pr
             <PropertyRef Name="EustachianTubeOrificeID" />
           </Key>
           <Property Name="EustachianTubeOrificeID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
-          <Property Name="EustachianTubeOrificeName" Type="varchar" MaxLength="255" />
+          <Property Name="EustachianTubeOrificeName" Type="varchar" MaxLength="500" />
         </EntityType>
         <EntityType Name="Financial">
           <Key>
             <PropertyRef Name="ID" />
           </Key>
           <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
-          <Property Name="Name" Type="nvarchar" MaxLength="200" />
+          <Property Name="Name" Type="nvarchar" MaxLength="500" />
         </EntityType>
         <EntityType Name="FindingLabel">
           <Key>
@@ -872,7 +872,7 @@ warning 6002: The table/view 'EndoscopicDb.dbo.ProcedureList' does not have a pr
             <PropertyRef Name="FundusID" />
           </Key>
           <Property Name="FundusID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
-          <Property Name="FundusName" Type="nvarchar" MaxLength="200" />
+          <Property Name="FundusName" Type="nvarchar" MaxLength="500" />
           <Property Name="CreateDate" Type="datetime" />
           <Property Name="UpdateDate" Type="datetime" />
         </EntityType>
@@ -888,14 +888,14 @@ warning 6002: The table/view 'EndoscopicDb.dbo.ProcedureList' does not have a pr
             <PropertyRef Name="GlotticID" />
           </Key>
           <Property Name="GlotticID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
-          <Property Name="GlotticName" Type="varchar" MaxLength="255" />
+          <Property Name="GlotticName" Type="varchar" MaxLength="500" />
         </EntityType>
         <EntityType Name="HepaticFlexure">
           <Key>
             <PropertyRef Name="HepaticFlexureID" />
           </Key>
           <Property Name="HepaticFlexureID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
-          <Property Name="HepaticFlexureName" Type="nvarchar" MaxLength="200" />
+          <Property Name="HepaticFlexureName" Type="nvarchar" MaxLength="500" />
           <Property Name="CreateDate" Type="datetime" />
           <Property Name="UpdateDate" Type="datetime" />
         </EntityType>
@@ -904,7 +904,7 @@ warning 6002: The table/view 'EndoscopicDb.dbo.ProcedureList' does not have a pr
             <PropertyRef Name="ID" />
           </Key>
           <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
-          <Property Name="Name" Type="nvarchar" MaxLength="250" />
+          <Property Name="Name" Type="nvarchar" MaxLength="500" />
           <Property Name="IsActive" Type="bit" Nullable="false" />
           <Property Name="ProcedureId" Type="int" />
           <Property Name="IsDisplay" Type="bit" Nullable="false" />
@@ -934,7 +934,7 @@ warning 6002: The table/view 'EndoscopicDb.dbo.ProcedureList' does not have a pr
             <PropertyRef Name="IleocecalValveID" />
           </Key>
           <Property Name="IleocecalValveID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
-          <Property Name="IleocecalValveName" Type="nvarchar" MaxLength="200" />
+          <Property Name="IleocecalValveName" Type="nvarchar" MaxLength="500" />
           <Property Name="CreateDate" Type="datetime" />
           <Property Name="UpdateDate" Type="datetime" />
         </EntityType>
@@ -943,7 +943,7 @@ warning 6002: The table/view 'EndoscopicDb.dbo.ProcedureList' does not have a pr
             <PropertyRef Name="IndicationID" />
           </Key>
           <Property Name="IndicationID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
-          <Property Name="IndicationName" Type="nvarchar" MaxLength="200" />
+          <Property Name="IndicationName" Type="nvarchar" MaxLength="500" />
           <Property Name="CreateDate" Type="datetime" />
           <Property Name="UpdateDate" Type="datetime" />
         </EntityType>
@@ -961,7 +961,7 @@ warning 6002: The table/view 'EndoscopicDb.dbo.ProcedureList' does not have a pr
             <PropertyRef Name="LeftMainID" />
           </Key>
           <Property Name="LeftMainID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
-          <Property Name="LeftMainName" Type="nvarchar" MaxLength="200" />
+          <Property Name="LeftMainName" Type="nvarchar" MaxLength="500" />
           <Property Name="CreateDate" Type="datetime" />
           <Property Name="UpdateDate" Type="datetime" />
         </EntityType>
@@ -970,14 +970,14 @@ warning 6002: The table/view 'EndoscopicDb.dbo.ProcedureList' does not have a pr
             <PropertyRef Name="LESID" />
           </Key>
           <Property Name="LESID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
-          <Property Name="LESName" Type="varchar" MaxLength="255" />
+          <Property Name="LESName" Type="varchar" MaxLength="500" />
         </EntityType>
         <EntityType Name="Lingular">
           <Key>
             <PropertyRef Name="LingularID" />
           </Key>
           <Property Name="LingularID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
-          <Property Name="LingularName" Type="nvarchar" MaxLength="200" />
+          <Property Name="LingularName" Type="nvarchar" MaxLength="500" />
           <Property Name="CreateDate" Type="datetime" />
           <Property Name="UpdateDate" Type="datetime" />
         </EntityType>
@@ -986,7 +986,7 @@ warning 6002: The table/view 'EndoscopicDb.dbo.ProcedureList' does not have a pr
             <PropertyRef Name="LLLID" />
           </Key>
           <Property Name="LLLID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
-          <Property Name="LLLName" Type="nvarchar" MaxLength="200" />
+          <Property Name="LLLName" Type="nvarchar" MaxLength="500" />
           <Property Name="CreateDate" Type="datetime" />
           <Property Name="UpdateDate" Type="datetime" />
         </EntityType>
@@ -995,7 +995,7 @@ warning 6002: The table/view 'EndoscopicDb.dbo.ProcedureList' does not have a pr
             <PropertyRef Name="LULID" />
           </Key>
           <Property Name="LULID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
-          <Property Name="LULName" Type="nvarchar" MaxLength="200" />
+          <Property Name="LULName" Type="nvarchar" MaxLength="500" />
           <Property Name="CreateDate" Type="datetime" />
           <Property Name="UpdateDate" Type="datetime" />
         </EntityType>
@@ -1004,7 +1004,7 @@ warning 6002: The table/view 'EndoscopicDb.dbo.ProcedureList' does not have a pr
             <PropertyRef Name="MedicationID" />
           </Key>
           <Property Name="MedicationID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
-          <Property Name="MedicationName" Type="nvarchar" MaxLength="200" />
+          <Property Name="MedicationName" Type="nvarchar" MaxLength="500" />
           <Property Name="CreateDate" Type="datetime" />
           <Property Name="UpdateDate" Type="datetime" />
         </EntityType>
@@ -1013,21 +1013,21 @@ warning 6002: The table/view 'EndoscopicDb.dbo.ProcedureList' does not have a pr
             <PropertyRef Name="NasalCavityID" />
           </Key>
           <Property Name="NasalCavityID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
-          <Property Name="NasalCavityName" Type="varchar" MaxLength="255" />
+          <Property Name="NasalCavityName" Type="varchar" MaxLength="500" />
         </EntityType>
         <EntityType Name="Nasopharynx">
           <Key>
             <PropertyRef Name="NasopharynxID" />
           </Key>
           <Property Name="NasopharynxID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
-          <Property Name="NasopharynxName" Type="varchar" MaxLength="255" />
+          <Property Name="NasopharynxName" Type="varchar" MaxLength="500" />
         </EntityType>
         <EntityType Name="Oropharynx">
           <Key>
             <PropertyRef Name="OropharynxID" />
           </Key>
           <Property Name="OropharynxID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
-          <Property Name="OropharynxName" Type="nvarchar" MaxLength="200" />
+          <Property Name="OropharynxName" Type="nvarchar" MaxLength="500" />
           <Property Name="CreateDate" Type="datetime" />
           <Property Name="UpdateDate" Type="datetime" />
         </EntityType>
@@ -1043,14 +1043,14 @@ warning 6002: The table/view 'EndoscopicDb.dbo.ProcedureList' does not have a pr
             <PropertyRef Name="ID" />
           </Key>
           <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
-          <Property Name="Name" Type="nvarchar" MaxLength="250" />
+          <Property Name="Name" Type="nvarchar" MaxLength="500" />
         </EntityType>
         <EntityType Name="Pancreatogram">
           <Key>
             <PropertyRef Name="PancreatogramID" />
           </Key>
           <Property Name="PancreatogramID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
-          <Property Name="PancreatogramName" Type="nvarchar" MaxLength="200" />
+          <Property Name="PancreatogramName" Type="nvarchar" MaxLength="500" />
           <Property Name="CreateDate" Type="datetime" />
           <Property Name="UpdateDate" Type="datetime" />
         </EntityType>
@@ -1059,35 +1059,35 @@ warning 6002: The table/view 'EndoscopicDb.dbo.ProcedureList' does not have a pr
             <PropertyRef Name="ID" />
           </Key>
           <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
-          <Property Name="Name" Type="nvarchar" MaxLength="250" />
+          <Property Name="Name" Type="nvarchar" MaxLength="500" />
         </EntityType>
         <EntityType Name="PapillaMinor">
           <Key>
             <PropertyRef Name="ID" />
           </Key>
           <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
-          <Property Name="Name" Type="nvarchar" MaxLength="250" />
+          <Property Name="Name" Type="nvarchar" MaxLength="500" />
         </EntityType>
         <EntityType Name="Postcricoid">
           <Key>
             <PropertyRef Name="PostcricoidID" />
           </Key>
           <Property Name="PostcricoidID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
-          <Property Name="PostcricoidName" Type="varchar" MaxLength="255" />
+          <Property Name="PostcricoidName" Type="varchar" MaxLength="500" />
         </EntityType>
         <EntityType Name="PosteriorPharyngealWall">
           <Key>
             <PropertyRef Name="PosteriorPharyngealWallID" />
           </Key>
           <Property Name="PosteriorPharyngealWallID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
-          <Property Name="PosteriorPharyngealWallName" Type="varchar" MaxLength="255" />
+          <Property Name="PosteriorPharyngealWallName" Type="varchar" MaxLength="500" />
         </EntityType>
         <EntityType Name="PosteriorWall">
           <Key>
             <PropertyRef Name="PosteriorWallID" />
           </Key>
           <Property Name="PosteriorWallID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
-          <Property Name="PosteriorWallName" Type="varchar" MaxLength="255" />
+          <Property Name="PosteriorWallName" Type="varchar" MaxLength="500" />
         </EntityType>
         <EntityType Name="ProcedureDetail">
           <Key>
@@ -1105,7 +1105,7 @@ warning 6002: The table/view 'EndoscopicDb.dbo.ProcedureList' does not have a pr
             <PropertyRef Name="PylorusID" />
           </Key>
           <Property Name="PylorusID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
-          <Property Name="PylorusName" Type="nvarchar" MaxLength="200" />
+          <Property Name="PylorusName" Type="nvarchar" MaxLength="500" />
           <Property Name="CreateDate" Type="datetime" />
           <Property Name="UpdateDate" Type="datetime" />
         </EntityType>
@@ -1114,7 +1114,7 @@ warning 6002: The table/view 'EndoscopicDb.dbo.ProcedureList' does not have a pr
             <PropertyRef Name="PyriformSinusID" />
           </Key>
           <Property Name="PyriformSinusID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
-          <Property Name="PyriformSinusName" Type="varchar" MaxLength="255" />
+          <Property Name="PyriformSinusName" Type="varchar" MaxLength="500" />
         </EntityType>
         <EntityType Name="RapidUreaseTest">
           <Key>
@@ -1140,7 +1140,7 @@ warning 6002: The table/view 'EndoscopicDb.dbo.ProcedureList' does not have a pr
             <PropertyRef Name="RectumID" />
           </Key>
           <Property Name="RectumID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
-          <Property Name="RectumName" Type="nvarchar" MaxLength="200" />
+          <Property Name="RectumName" Type="nvarchar" MaxLength="500" />
           <Property Name="CreateDate" Type="datetime" />
           <Property Name="UpdateDate" Type="datetime" />
         </EntityType>
@@ -1149,7 +1149,7 @@ warning 6002: The table/view 'EndoscopicDb.dbo.ProcedureList' does not have a pr
             <PropertyRef Name="RightIntermideateID" />
           </Key>
           <Property Name="RightIntermideateID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
-          <Property Name="RightIntermideateName" Type="nvarchar" MaxLength="200" />
+          <Property Name="RightIntermideateName" Type="nvarchar" MaxLength="500" />
           <Property Name="CreateDate" Type="datetime" />
           <Property Name="UpdateDate" Type="datetime" />
         </EntityType>
@@ -1158,7 +1158,7 @@ warning 6002: The table/view 'EndoscopicDb.dbo.ProcedureList' does not have a pr
             <PropertyRef Name="RightMainID" />
           </Key>
           <Property Name="RightMainID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
-          <Property Name="RightMainName" Type="nvarchar" MaxLength="200" />
+          <Property Name="RightMainName" Type="nvarchar" MaxLength="500" />
           <Property Name="CreateDate" Type="datetime" />
           <Property Name="UpdateDate" Type="datetime" />
         </EntityType>
@@ -1167,7 +1167,7 @@ warning 6002: The table/view 'EndoscopicDb.dbo.ProcedureList' does not have a pr
             <PropertyRef Name="RLLID" />
           </Key>
           <Property Name="RLLID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
-          <Property Name="RLLName" Type="nvarchar" MaxLength="200" />
+          <Property Name="RLLName" Type="nvarchar" MaxLength="500" />
           <Property Name="CreateDate" Type="datetime" />
           <Property Name="UpdateDate" Type="datetime" />
         </EntityType>
@@ -1176,7 +1176,7 @@ warning 6002: The table/view 'EndoscopicDb.dbo.ProcedureList' does not have a pr
             <PropertyRef Name="RMLID" />
           </Key>
           <Property Name="RMLID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
-          <Property Name="RMLName" Type="nvarchar" MaxLength="200" />
+          <Property Name="RMLName" Type="nvarchar" MaxLength="500" />
           <Property Name="CreateDate" Type="datetime" />
           <Property Name="UpdateDate" Type="datetime" />
         </EntityType>
@@ -1185,21 +1185,21 @@ warning 6002: The table/view 'EndoscopicDb.dbo.ProcedureList' does not have a pr
             <PropertyRef Name="RoofID" />
           </Key>
           <Property Name="RoofID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
-          <Property Name="RoofName" Type="varchar" MaxLength="255" />
+          <Property Name="RoofName" Type="varchar" MaxLength="500" />
         </EntityType>
         <EntityType Name="RosenmullerFossa">
           <Key>
             <PropertyRef Name="RosenmullerFossaID" />
           </Key>
           <Property Name="RosenmullerFossaID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
-          <Property Name="RosenmullerFossaName" Type="varchar" MaxLength="255" />
+          <Property Name="RosenmullerFossaName" Type="varchar" MaxLength="500" />
         </EntityType>
         <EntityType Name="RUL">
           <Key>
             <PropertyRef Name="RULID" />
           </Key>
           <Property Name="RULID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
-          <Property Name="RULName" Type="nvarchar" MaxLength="200" />
+          <Property Name="RULName" Type="nvarchar" MaxLength="500" />
           <Property Name="CreateDate" Type="datetime" />
           <Property Name="UpdateDate" Type="datetime" />
         </EntityType>
@@ -1208,7 +1208,7 @@ warning 6002: The table/view 'EndoscopicDb.dbo.ProcedureList' does not have a pr
             <PropertyRef Name="SecondPartID" />
           </Key>
           <Property Name="SecondPartID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
-          <Property Name="SecondPartName" Type="nvarchar" MaxLength="200" />
+          <Property Name="SecondPartName" Type="nvarchar" MaxLength="500" />
           <Property Name="CreateDate" Type="datetime" />
           <Property Name="UpdateDate" Type="datetime" />
         </EntityType>
@@ -1217,14 +1217,14 @@ warning 6002: The table/view 'EndoscopicDb.dbo.ProcedureList' does not have a pr
             <PropertyRef Name="SeptumID" />
           </Key>
           <Property Name="SeptumID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
-          <Property Name="SeptumName" Type="varchar" MaxLength="255" />
+          <Property Name="SeptumName" Type="varchar" MaxLength="500" />
         </EntityType>
         <EntityType Name="SigmoidColon">
           <Key>
             <PropertyRef Name="SigmoidColonID" />
           </Key>
           <Property Name="SigmoidColonID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
-          <Property Name="SigmoidColonName" Type="nvarchar" MaxLength="200" />
+          <Property Name="SigmoidColonName" Type="nvarchar" MaxLength="500" />
           <Property Name="CreateDate" Type="datetime" />
           <Property Name="UpdateDate" Type="datetime" />
         </EntityType>
@@ -1233,14 +1233,14 @@ warning 6002: The table/view 'EndoscopicDb.dbo.ProcedureList' does not have a pr
             <PropertyRef Name="SoftPalateID" />
           </Key>
           <Property Name="SoftPalateID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
-          <Property Name="SoftPalateName" Type="varchar" MaxLength="255" />
+          <Property Name="SoftPalateName" Type="varchar" MaxLength="500" />
         </EntityType>
         <EntityType Name="SplenicFlexure">
           <Key>
             <PropertyRef Name="SplenicFlexureID" />
           </Key>
           <Property Name="SplenicFlexureID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
-          <Property Name="SplenicFlexureName" Type="nvarchar" MaxLength="200" />
+          <Property Name="SplenicFlexureName" Type="nvarchar" MaxLength="500" />
           <Property Name="CreateDate" Type="datetime" />
           <Property Name="UpdateDate" Type="datetime" />
         </EntityType>
@@ -1258,21 +1258,21 @@ warning 6002: The table/view 'EndoscopicDb.dbo.ProcedureList' does not have a pr
             <PropertyRef Name="SubglotticID" />
           </Key>
           <Property Name="SubglotticID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
-          <Property Name="SubglotticName" Type="varchar" MaxLength="255" />
+          <Property Name="SubglotticName" Type="varchar" MaxLength="500" />
         </EntityType>
         <EntityType Name="Supraglottic">
           <Key>
             <PropertyRef Name="SupraglotticID" />
           </Key>
           <Property Name="SupraglotticID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
-          <Property Name="SupraglotticName" Type="varchar" MaxLength="255" />
+          <Property Name="SupraglotticName" Type="varchar" MaxLength="500" />
         </EntityType>
         <EntityType Name="TerminalIleum">
           <Key>
             <PropertyRef Name="TerminalIleumID" />
           </Key>
           <Property Name="TerminalIleumID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
-          <Property Name="TerminalIleumName" Type="nvarchar" MaxLength="200" />
+          <Property Name="TerminalIleumName" Type="nvarchar" MaxLength="500" />
           <Property Name="CreateDate" Type="datetime" />
           <Property Name="UpdateDate" Type="datetime" />
         </EntityType>
@@ -1281,14 +1281,14 @@ warning 6002: The table/view 'EndoscopicDb.dbo.ProcedureList' does not have a pr
             <PropertyRef Name="TonsilID" />
           </Key>
           <Property Name="TonsilID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
-          <Property Name="TonsilName" Type="varchar" MaxLength="255" />
+          <Property Name="TonsilName" Type="varchar" MaxLength="500" />
         </EntityType>
         <EntityType Name="Trachea">
           <Key>
             <PropertyRef Name="TracheaID" />
           </Key>
           <Property Name="TracheaID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
-          <Property Name="TracheaName" Type="nvarchar" MaxLength="200" />
+          <Property Name="TracheaName" Type="nvarchar" MaxLength="500" />
           <Property Name="CreateDate" Type="datetime" />
           <Property Name="UpdateDate" Type="datetime" />
         </EntityType>
@@ -1297,7 +1297,7 @@ warning 6002: The table/view 'EndoscopicDb.dbo.ProcedureList' does not have a pr
             <PropertyRef Name="TransverseColonID" />
           </Key>
           <Property Name="TransverseColonID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
-          <Property Name="TransverseColonName" Type="nvarchar" MaxLength="200" />
+          <Property Name="TransverseColonName" Type="nvarchar" MaxLength="500" />
           <Property Name="CreateDate" Type="datetime" />
           <Property Name="UpdateDate" Type="datetime" />
         </EntityType>
@@ -1306,21 +1306,21 @@ warning 6002: The table/view 'EndoscopicDb.dbo.ProcedureList' does not have a pr
             <PropertyRef Name="UESID" />
           </Key>
           <Property Name="UESID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
-          <Property Name="UESName" Type="varchar" MaxLength="255" />
+          <Property Name="UESName" Type="varchar" MaxLength="500" />
         </EntityType>
         <EntityType Name="Uvula">
           <Key>
             <PropertyRef Name="UvulaID" />
           </Key>
           <Property Name="UvulaID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
-          <Property Name="UvulaName" Type="varchar" MaxLength="255" />
+          <Property Name="UvulaName" Type="varchar" MaxLength="500" />
         </EntityType>
         <EntityType Name="Vallecula">
           <Key>
             <PropertyRef Name="ValleculaID" />
           </Key>
           <Property Name="ValleculaID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
-          <Property Name="ValleculaName" Type="varchar" MaxLength="255" />
+          <Property Name="ValleculaName" Type="varchar" MaxLength="500" />
         </EntityType>
         <EntityType Name="VocalCord">
           <Key>
@@ -1823,7 +1823,7 @@ warning 6002: The table/view 'EndoscopicDb.dbo.v_PatientList' does not have a pr
             <PropertyRef Name="AnalCanalID" />
           </Key>
           <Property Name="AnalCanalID" Nullable="false" annotation:StoreGeneratedPattern="Identity" Type="Int32" />
-          <Property Name="AnalCanalName" MaxLength="200" FixedLength="false" Unicode="true" Type="String" />
+          <Property Name="AnalCanalName" MaxLength="500" FixedLength="false" Unicode="true" Type="String" />
           <Property Name="CreateDate" Precision="3" Type="DateTime" />
           <Property Name="UpdateDate" Precision="3" Type="DateTime" />
         </EntityType>
@@ -1832,7 +1832,7 @@ warning 6002: The table/view 'EndoscopicDb.dbo.v_PatientList' does not have a pr
             <PropertyRef Name="AnesthesiaID" />
           </Key>
           <Property Name="AnesthesiaID" Nullable="false" annotation:StoreGeneratedPattern="Identity" Type="Int32" />
-          <Property Name="AnesthesiaName" MaxLength="200" FixedLength="false" Unicode="true" Type="String" />
+          <Property Name="AnesthesiaName" MaxLength="500" FixedLength="false" Unicode="true" Type="String" />
           <Property Name="CreateDate" Precision="3" Type="DateTime" />
           <Property Name="UpdateDate" Precision="3" Type="DateTime" />
         </EntityType>
@@ -1841,7 +1841,7 @@ warning 6002: The table/view 'EndoscopicDb.dbo.v_PatientList' does not have a pr
             <PropertyRef Name="AntrumID" />
           </Key>
           <Property Name="AntrumID" Nullable="false" annotation:StoreGeneratedPattern="Identity" Type="Int32" />
-          <Property Name="AntrumName" MaxLength="200" FixedLength="false" Unicode="true" Type="String" />
+          <Property Name="AntrumName" MaxLength="500" FixedLength="false" Unicode="true" Type="String" />
           <Property Name="CreateDate" Precision="3" Type="DateTime" />
           <Property Name="UpdateDate" Precision="3" Type="DateTime" />
         </EntityType>
@@ -1850,7 +1850,7 @@ warning 6002: The table/view 'EndoscopicDb.dbo.v_PatientList' does not have a pr
             <PropertyRef Name="AscendingColonID" />
           </Key>
           <Property Name="AscendingColonID" Nullable="false" annotation:StoreGeneratedPattern="Identity" Type="Int32" />
-          <Property Name="AscendingColonName" MaxLength="200" FixedLength="false" Unicode="true" Type="String" />
+          <Property Name="AscendingColonName" MaxLength="500" FixedLength="false" Unicode="true" Type="String" />
           <Property Name="CreateDate" Precision="3" Type="DateTime" />
           <Property Name="UpdateDate" Precision="3" Type="DateTime" />
         </EntityType>
@@ -1859,7 +1859,7 @@ warning 6002: The table/view 'EndoscopicDb.dbo.v_PatientList' does not have a pr
             <PropertyRef Name="BodyID" />
           </Key>
           <Property Name="BodyID" Nullable="false" annotation:StoreGeneratedPattern="Identity" Type="Int32" />
-          <Property Name="BodyName" MaxLength="200" FixedLength="false" Unicode="true" Type="String" />
+          <Property Name="BodyName" MaxLength="500" FixedLength="false" Unicode="true" Type="String" />
           <Property Name="CreateDate" Precision="3" Type="DateTime" />
           <Property Name="UpdateDate" Precision="3" Type="DateTime" />
         </EntityType>
@@ -1868,7 +1868,7 @@ warning 6002: The table/view 'EndoscopicDb.dbo.v_PatientList' does not have a pr
             <PropertyRef Name="CardiaID" />
           </Key>
           <Property Name="CardiaID" Nullable="false" annotation:StoreGeneratedPattern="Identity" Type="Int32" />
-          <Property Name="CardiaName" MaxLength="200" FixedLength="false" Unicode="true" Type="String" />
+          <Property Name="CardiaName" MaxLength="500" FixedLength="false" Unicode="true" Type="String" />
           <Property Name="CreateDate" Precision="3" Type="DateTime" />
           <Property Name="UpdateDate" Precision="3" Type="DateTime" />
         </EntityType>
@@ -1877,7 +1877,7 @@ warning 6002: The table/view 'EndoscopicDb.dbo.v_PatientList' does not have a pr
             <PropertyRef Name="CecumID" />
           </Key>
           <Property Name="CecumID" Nullable="false" annotation:StoreGeneratedPattern="Identity" Type="Int32" />
-          <Property Name="CecumName" MaxLength="200" FixedLength="false" Unicode="true" Type="String" />
+          <Property Name="CecumName" MaxLength="500" FixedLength="false" Unicode="true" Type="String" />
           <Property Name="CreateDate" Precision="3" Type="DateTime" />
           <Property Name="UpdateDate" Precision="3" Type="DateTime" />
         </EntityType>
@@ -1886,7 +1886,7 @@ warning 6002: The table/view 'EndoscopicDb.dbo.v_PatientList' does not have a pr
             <PropertyRef Name="CholangiogramID" />
           </Key>
           <Property Name="CholangiogramID" Nullable="false" annotation:StoreGeneratedPattern="Identity" Type="Int32" />
-          <Property Name="CholangiogramName" MaxLength="200" FixedLength="false" Unicode="true" Type="String" />
+          <Property Name="CholangiogramName" MaxLength="500" FixedLength="false" Unicode="true" Type="String" />
           <Property Name="CreateDate" Precision="3" Type="DateTime" />
           <Property Name="UpdateDate" Precision="3" Type="DateTime" />
         </EntityType>
@@ -1895,7 +1895,7 @@ warning 6002: The table/view 'EndoscopicDb.dbo.v_PatientList' does not have a pr
             <PropertyRef Name="DescendingColonID" />
           </Key>
           <Property Name="DescendingColonID" Nullable="false" annotation:StoreGeneratedPattern="Identity" Type="Int32" />
-          <Property Name="DescendingColonName" MaxLength="200" FixedLength="false" Unicode="true" Type="String" />
+          <Property Name="DescendingColonName" MaxLength="500" FixedLength="false" Unicode="true" Type="String" />
           <Property Name="CreateDate" Precision="3" Type="DateTime" />
           <Property Name="UpdateDate" Precision="3" Type="DateTime" />
         </EntityType>
@@ -1904,7 +1904,7 @@ warning 6002: The table/view 'EndoscopicDb.dbo.v_PatientList' does not have a pr
             <PropertyRef Name="DuodenalBulbID" />
           </Key>
           <Property Name="DuodenalBulbID" Nullable="false" annotation:StoreGeneratedPattern="Identity" Type="Int32" />
-          <Property Name="DuodenalBulbName" MaxLength="200" FixedLength="false" Unicode="true" Type="String" />
+          <Property Name="DuodenalBulbName" MaxLength="500" FixedLength="false" Unicode="true" Type="String" />
           <Property Name="CreateDate" Precision="3" Type="DateTime" />
           <Property Name="UpdateDate" Precision="3" Type="DateTime" />
         </EntityType>
@@ -1913,7 +1913,7 @@ warning 6002: The table/view 'EndoscopicDb.dbo.v_PatientList' does not have a pr
             <PropertyRef Name="DuodenumID" />
           </Key>
           <Property Name="DuodenumID" Nullable="false" annotation:StoreGeneratedPattern="Identity" Type="Int32" />
-          <Property Name="DuodenumName" MaxLength="200" FixedLength="false" Unicode="true" Type="String" />
+          <Property Name="DuodenumName" MaxLength="500" FixedLength="false" Unicode="true" Type="String" />
           <Property Name="CreateDate" Precision="3" Type="DateTime" />
           <Property Name="UpdateDate" Precision="3" Type="DateTime" />
         </EntityType>
@@ -1922,7 +1922,7 @@ warning 6002: The table/view 'EndoscopicDb.dbo.v_PatientList' does not have a pr
             <PropertyRef Name="EGJunctionID" />
           </Key>
           <Property Name="EGJunctionID" Nullable="false" annotation:StoreGeneratedPattern="Identity" Type="Int32" />
-          <Property Name="EGJunctionName" MaxLength="200" FixedLength="false" Unicode="true" Type="String" />
+          <Property Name="EGJunctionName" MaxLength="500" FixedLength="false" Unicode="true" Type="String" />
           <Property Name="CreateDate" Precision="3" Type="DateTime" />
           <Property Name="UpdateDate" Precision="3" Type="DateTime" />
         </EntityType>
@@ -1931,7 +1931,7 @@ warning 6002: The table/view 'EndoscopicDb.dbo.v_PatientList' does not have a pr
             <PropertyRef Name="ERCPEsophagusID" />
           </Key>
           <Property Name="ERCPEsophagusID" Nullable="false" annotation:StoreGeneratedPattern="Identity" Type="Int32" />
-          <Property Name="ERCPEsophagusName" MaxLength="200" FixedLength="false" Unicode="true" Type="String" />
+          <Property Name="ERCPEsophagusName" MaxLength="500" FixedLength="false" Unicode="true" Type="String" />
           <Property Name="CreateDate" Precision="3" Type="DateTime" />
           <Property Name="UpdateDate" Precision="3" Type="DateTime" />
         </EntityType>
@@ -1940,7 +1940,7 @@ warning 6002: The table/view 'EndoscopicDb.dbo.v_PatientList' does not have a pr
             <PropertyRef Name="EsophagusID" />
           </Key>
           <Property Name="EsophagusID" Nullable="false" annotation:StoreGeneratedPattern="Identity" Type="Int32" />
-          <Property Name="EsophagusName" MaxLength="200" FixedLength="false" Unicode="true" Type="String" />
+          <Property Name="EsophagusName" MaxLength="500" FixedLength="false" Unicode="true" Type="String" />
           <Property Name="CreateDate" Precision="3" Type="DateTime" />
           <Property Name="UpdateDate" Precision="3" Type="DateTime" />
         </EntityType>
@@ -1949,7 +1949,7 @@ warning 6002: The table/view 'EndoscopicDb.dbo.v_PatientList' does not have a pr
             <PropertyRef Name="FundusID" />
           </Key>
           <Property Name="FundusID" Nullable="false" annotation:StoreGeneratedPattern="Identity" Type="Int32" />
-          <Property Name="FundusName" MaxLength="200" FixedLength="false" Unicode="true" Type="String" />
+          <Property Name="FundusName" MaxLength="500" FixedLength="false" Unicode="true" Type="String" />
           <Property Name="CreateDate" Precision="3" Type="DateTime" />
           <Property Name="UpdateDate" Precision="3" Type="DateTime" />
         </EntityType>
@@ -1958,7 +1958,7 @@ warning 6002: The table/view 'EndoscopicDb.dbo.v_PatientList' does not have a pr
             <PropertyRef Name="HepaticFlexureID" />
           </Key>
           <Property Name="HepaticFlexureID" Nullable="false" annotation:StoreGeneratedPattern="Identity" Type="Int32" />
-          <Property Name="HepaticFlexureName" MaxLength="200" FixedLength="false" Unicode="true" Type="String" />
+          <Property Name="HepaticFlexureName" MaxLength="500" FixedLength="false" Unicode="true" Type="String" />
           <Property Name="CreateDate" Precision="3" Type="DateTime" />
           <Property Name="UpdateDate" Precision="3" Type="DateTime" />
         </EntityType>
@@ -1967,7 +1967,7 @@ warning 6002: The table/view 'EndoscopicDb.dbo.v_PatientList' does not have a pr
             <PropertyRef Name="IleocecalValveID" />
           </Key>
           <Property Name="IleocecalValveID" Nullable="false" annotation:StoreGeneratedPattern="Identity" Type="Int32" />
-          <Property Name="IleocecalValveName" MaxLength="200" FixedLength="false" Unicode="true" Type="String" />
+          <Property Name="IleocecalValveName" MaxLength="500" FixedLength="false" Unicode="true" Type="String" />
           <Property Name="CreateDate" Precision="3" Type="DateTime" />
           <Property Name="UpdateDate" Precision="3" Type="DateTime" />
         </EntityType>
@@ -1976,7 +1976,7 @@ warning 6002: The table/view 'EndoscopicDb.dbo.v_PatientList' does not have a pr
             <PropertyRef Name="IndicationID" />
           </Key>
           <Property Name="IndicationID" Nullable="false" annotation:StoreGeneratedPattern="Identity" Type="Int32" />
-          <Property Name="IndicationName" MaxLength="200" FixedLength="false" Unicode="true" Type="String" />
+          <Property Name="IndicationName" MaxLength="500" FixedLength="false" Unicode="true" Type="String" />
           <Property Name="CreateDate" Precision="3" Type="DateTime" />
           <Property Name="UpdateDate" Precision="3" Type="DateTime" />
         </EntityType>
@@ -1985,7 +1985,7 @@ warning 6002: The table/view 'EndoscopicDb.dbo.v_PatientList' does not have a pr
             <PropertyRef Name="MedicationID" />
           </Key>
           <Property Name="MedicationID" Nullable="false" annotation:StoreGeneratedPattern="Identity" Type="Int32" />
-          <Property Name="MedicationName" MaxLength="200" FixedLength="false" Unicode="true" Type="String" />
+          <Property Name="MedicationName" MaxLength="500" FixedLength="false" Unicode="true" Type="String" />
           <Property Name="CreateDate" Precision="3" Type="DateTime" />
           <Property Name="UpdateDate" Precision="3" Type="DateTime" />
         </EntityType>
@@ -1994,7 +1994,7 @@ warning 6002: The table/view 'EndoscopicDb.dbo.v_PatientList' does not have a pr
             <PropertyRef Name="OropharynxID" />
           </Key>
           <Property Name="OropharynxID" Nullable="false" annotation:StoreGeneratedPattern="Identity" Type="Int32" />
-          <Property Name="OropharynxName" MaxLength="200" FixedLength="false" Unicode="true" Type="String" />
+          <Property Name="OropharynxName" MaxLength="500" FixedLength="false" Unicode="true" Type="String" />
           <Property Name="CreateDate" Precision="3" Type="DateTime" />
           <Property Name="UpdateDate" Precision="3" Type="DateTime" />
         </EntityType>
@@ -2003,7 +2003,7 @@ warning 6002: The table/view 'EndoscopicDb.dbo.v_PatientList' does not have a pr
             <PropertyRef Name="PancreatogramID" />
           </Key>
           <Property Name="PancreatogramID" Nullable="false" annotation:StoreGeneratedPattern="Identity" Type="Int32" />
-          <Property Name="PancreatogramName" MaxLength="200" FixedLength="false" Unicode="true" Type="String" />
+          <Property Name="PancreatogramName" MaxLength="500" FixedLength="false" Unicode="true" Type="String" />
           <Property Name="CreateDate" Precision="3" Type="DateTime" />
           <Property Name="UpdateDate" Precision="3" Type="DateTime" />
         </EntityType>
@@ -2012,7 +2012,7 @@ warning 6002: The table/view 'EndoscopicDb.dbo.v_PatientList' does not have a pr
             <PropertyRef Name="PylorusID" />
           </Key>
           <Property Name="PylorusID" Nullable="false" annotation:StoreGeneratedPattern="Identity" Type="Int32" />
-          <Property Name="PylorusName" MaxLength="200" FixedLength="false" Unicode="true" Type="String" />
+          <Property Name="PylorusName" MaxLength="500" FixedLength="false" Unicode="true" Type="String" />
           <Property Name="CreateDate" Precision="3" Type="DateTime" />
           <Property Name="UpdateDate" Precision="3" Type="DateTime" />
         </EntityType>
@@ -2021,7 +2021,7 @@ warning 6002: The table/view 'EndoscopicDb.dbo.v_PatientList' does not have a pr
             <PropertyRef Name="RectumID" />
           </Key>
           <Property Name="RectumID" Nullable="false" annotation:StoreGeneratedPattern="Identity" Type="Int32" />
-          <Property Name="RectumName" MaxLength="200" FixedLength="false" Unicode="true" Type="String" />
+          <Property Name="RectumName" MaxLength="500" FixedLength="false" Unicode="true" Type="String" />
           <Property Name="CreateDate" Precision="3" Type="DateTime" />
           <Property Name="UpdateDate" Precision="3" Type="DateTime" />
         </EntityType>
@@ -2030,7 +2030,7 @@ warning 6002: The table/view 'EndoscopicDb.dbo.v_PatientList' does not have a pr
             <PropertyRef Name="SecondPartID" />
           </Key>
           <Property Name="SecondPartID" Nullable="false" annotation:StoreGeneratedPattern="Identity" Type="Int32" />
-          <Property Name="SecondPartName" MaxLength="200" FixedLength="false" Unicode="true" Type="String" />
+          <Property Name="SecondPartName" MaxLength="500" FixedLength="false" Unicode="true" Type="String" />
           <Property Name="CreateDate" Precision="3" Type="DateTime" />
           <Property Name="UpdateDate" Precision="3" Type="DateTime" />
         </EntityType>
@@ -2039,7 +2039,7 @@ warning 6002: The table/view 'EndoscopicDb.dbo.v_PatientList' does not have a pr
             <PropertyRef Name="SigmoidColonID" />
           </Key>
           <Property Name="SigmoidColonID" Nullable="false" annotation:StoreGeneratedPattern="Identity" Type="Int32" />
-          <Property Name="SigmoidColonName" MaxLength="200" FixedLength="false" Unicode="true" Type="String" />
+          <Property Name="SigmoidColonName" MaxLength="500" FixedLength="false" Unicode="true" Type="String" />
           <Property Name="CreateDate" Precision="3" Type="DateTime" />
           <Property Name="UpdateDate" Precision="3" Type="DateTime" />
         </EntityType>
@@ -2048,7 +2048,7 @@ warning 6002: The table/view 'EndoscopicDb.dbo.v_PatientList' does not have a pr
             <PropertyRef Name="SplenicFlexureID" />
           </Key>
           <Property Name="SplenicFlexureID" Nullable="false" annotation:StoreGeneratedPattern="Identity" Type="Int32" />
-          <Property Name="SplenicFlexureName" MaxLength="200" FixedLength="false" Unicode="true" Type="String" />
+          <Property Name="SplenicFlexureName" MaxLength="500" FixedLength="false" Unicode="true" Type="String" />
           <Property Name="CreateDate" Precision="3" Type="DateTime" />
           <Property Name="UpdateDate" Precision="3" Type="DateTime" />
         </EntityType>
@@ -2066,7 +2066,7 @@ warning 6002: The table/view 'EndoscopicDb.dbo.v_PatientList' does not have a pr
             <PropertyRef Name="TerminalIleumID" />
           </Key>
           <Property Name="TerminalIleumID" Nullable="false" annotation:StoreGeneratedPattern="Identity" Type="Int32" />
-          <Property Name="TerminalIleumName" MaxLength="200" FixedLength="false" Unicode="true" Type="String" />
+          <Property Name="TerminalIleumName" MaxLength="500" FixedLength="false" Unicode="true" Type="String" />
           <Property Name="CreateDate" Precision="3" Type="DateTime" />
           <Property Name="UpdateDate" Precision="3" Type="DateTime" />
         </EntityType>
@@ -2075,7 +2075,7 @@ warning 6002: The table/view 'EndoscopicDb.dbo.v_PatientList' does not have a pr
             <PropertyRef Name="TransverseColonID" />
           </Key>
           <Property Name="TransverseColonID" Nullable="false" annotation:StoreGeneratedPattern="Identity" Type="Int32" />
-          <Property Name="TransverseColonName" MaxLength="200" FixedLength="false" Unicode="true" Type="String" />
+          <Property Name="TransverseColonName" MaxLength="500" FixedLength="false" Unicode="true" Type="String" />
           <Property Name="CreateDate" Precision="3" Type="DateTime" />
           <Property Name="UpdateDate" Precision="3" Type="DateTime" />
         </EntityType>
@@ -2338,7 +2338,7 @@ warning 6002: The table/view 'EndoscopicDb.dbo.v_PatientList' does not have a pr
             <PropertyRef Name="CarinaID" />
           </Key>
           <Property Name="CarinaID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-          <Property Name="CarinaName" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+          <Property Name="CarinaName" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
           <Property Name="CreateDate" Type="DateTime" Precision="3" />
           <Property Name="UpdateDate" Type="DateTime" Precision="3" />
         </EntityType>
@@ -2347,7 +2347,7 @@ warning 6002: The table/view 'EndoscopicDb.dbo.v_PatientList' does not have a pr
             <PropertyRef Name="LeftMainID" />
           </Key>
           <Property Name="LeftMainID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-          <Property Name="LeftMainName" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+          <Property Name="LeftMainName" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
           <Property Name="CreateDate" Type="DateTime" Precision="3" />
           <Property Name="UpdateDate" Type="DateTime" Precision="3" />
         </EntityType>
@@ -2356,7 +2356,7 @@ warning 6002: The table/view 'EndoscopicDb.dbo.v_PatientList' does not have a pr
             <PropertyRef Name="LingularID" />
           </Key>
           <Property Name="LingularID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-          <Property Name="LingularName" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+          <Property Name="LingularName" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
           <Property Name="CreateDate" Type="DateTime" Precision="3" />
           <Property Name="UpdateDate" Type="DateTime" Precision="3" />
         </EntityType>
@@ -2365,7 +2365,7 @@ warning 6002: The table/view 'EndoscopicDb.dbo.v_PatientList' does not have a pr
             <PropertyRef Name="LLLID" />
           </Key>
           <Property Name="LLLID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-          <Property Name="LLLName" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+          <Property Name="LLLName" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
           <Property Name="CreateDate" Type="DateTime" Precision="3" />
           <Property Name="UpdateDate" Type="DateTime" Precision="3" />
         </EntityType>
@@ -2374,7 +2374,7 @@ warning 6002: The table/view 'EndoscopicDb.dbo.v_PatientList' does not have a pr
             <PropertyRef Name="LULID" />
           </Key>
           <Property Name="LULID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-          <Property Name="LULName" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+          <Property Name="LULName" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
           <Property Name="CreateDate" Type="DateTime" Precision="3" />
           <Property Name="UpdateDate" Type="DateTime" Precision="3" />
         </EntityType>
@@ -2383,7 +2383,7 @@ warning 6002: The table/view 'EndoscopicDb.dbo.v_PatientList' does not have a pr
             <PropertyRef Name="RightIntermideateID" />
           </Key>
           <Property Name="RightIntermideateID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-          <Property Name="RightIntermideateName" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+          <Property Name="RightIntermideateName" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
           <Property Name="CreateDate" Type="DateTime" Precision="3" />
           <Property Name="UpdateDate" Type="DateTime" Precision="3" />
         </EntityType>
@@ -2392,7 +2392,7 @@ warning 6002: The table/view 'EndoscopicDb.dbo.v_PatientList' does not have a pr
             <PropertyRef Name="RightMainID" />
           </Key>
           <Property Name="RightMainID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-          <Property Name="RightMainName" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+          <Property Name="RightMainName" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
           <Property Name="CreateDate" Type="DateTime" Precision="3" />
           <Property Name="UpdateDate" Type="DateTime" Precision="3" />
         </EntityType>
@@ -2401,7 +2401,7 @@ warning 6002: The table/view 'EndoscopicDb.dbo.v_PatientList' does not have a pr
             <PropertyRef Name="RLLID" />
           </Key>
           <Property Name="RLLID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-          <Property Name="RLLName" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+          <Property Name="RLLName" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
           <Property Name="CreateDate" Type="DateTime" Precision="3" />
           <Property Name="UpdateDate" Type="DateTime" Precision="3" />
         </EntityType>
@@ -2410,7 +2410,7 @@ warning 6002: The table/view 'EndoscopicDb.dbo.v_PatientList' does not have a pr
             <PropertyRef Name="RMLID" />
           </Key>
           <Property Name="RMLID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-          <Property Name="RMLName" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+          <Property Name="RMLName" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
           <Property Name="CreateDate" Type="DateTime" Precision="3" />
           <Property Name="UpdateDate" Type="DateTime" Precision="3" />
         </EntityType>
@@ -2419,7 +2419,7 @@ warning 6002: The table/view 'EndoscopicDb.dbo.v_PatientList' does not have a pr
             <PropertyRef Name="RULID" />
           </Key>
           <Property Name="RULID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-          <Property Name="RULName" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+          <Property Name="RULName" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
           <Property Name="CreateDate" Type="DateTime" Precision="3" />
           <Property Name="UpdateDate" Type="DateTime" Precision="3" />
         </EntityType>
@@ -2428,7 +2428,7 @@ warning 6002: The table/view 'EndoscopicDb.dbo.v_PatientList' does not have a pr
             <PropertyRef Name="TracheaID" />
           </Key>
           <Property Name="TracheaID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-          <Property Name="TracheaName" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+          <Property Name="TracheaName" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
           <Property Name="CreateDate" Type="DateTime" Precision="3" />
           <Property Name="UpdateDate" Type="DateTime" Precision="3" />
         </EntityType>
@@ -2538,140 +2538,140 @@ warning 6002: The table/view 'EndoscopicDb.dbo.v_PatientList' does not have a pr
             <PropertyRef Name="BaseOfTongueID" />
           </Key>
           <Property Name="BaseOfTongueID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-          <Property Name="BaseOfTongueName" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+          <Property Name="BaseOfTongueName" Type="String" MaxLength="500" FixedLength="false" Unicode="false" />
         </EntityType>
         <EntityType Name="EustachianTubeOrifice">
           <Key>
             <PropertyRef Name="EustachianTubeOrificeID" />
           </Key>
           <Property Name="EustachianTubeOrificeID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-          <Property Name="EustachianTubeOrificeName" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+          <Property Name="EustachianTubeOrificeName" Type="String" MaxLength="500" FixedLength="false" Unicode="false" />
         </EntityType>
         <EntityType Name="Glottic">
           <Key>
             <PropertyRef Name="GlotticID" />
           </Key>
           <Property Name="GlotticID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-          <Property Name="GlotticName" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+          <Property Name="GlotticName" Type="String" MaxLength="500" FixedLength="false" Unicode="false" />
         </EntityType>
         <EntityType Name="LE">
           <Key>
             <PropertyRef Name="LESID" />
           </Key>
           <Property Name="LESID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-          <Property Name="LESName" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+          <Property Name="LESName" Type="String" MaxLength="500" FixedLength="false" Unicode="false" />
         </EntityType>
         <EntityType Name="NasalCavity">
           <Key>
             <PropertyRef Name="NasalCavityID" />
           </Key>
           <Property Name="NasalCavityID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-          <Property Name="NasalCavityName" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+          <Property Name="NasalCavityName" Type="String" MaxLength="500" FixedLength="false" Unicode="false" />
         </EntityType>
         <EntityType Name="Nasopharynx">
           <Key>
             <PropertyRef Name="NasopharynxID" />
           </Key>
           <Property Name="NasopharynxID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-          <Property Name="NasopharynxName" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+          <Property Name="NasopharynxName" Type="String" MaxLength="500" FixedLength="false" Unicode="false" />
         </EntityType>
         <EntityType Name="Postcricoid">
           <Key>
             <PropertyRef Name="PostcricoidID" />
           </Key>
           <Property Name="PostcricoidID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-          <Property Name="PostcricoidName" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+          <Property Name="PostcricoidName" Type="String" MaxLength="500" FixedLength="false" Unicode="false" />
         </EntityType>
         <EntityType Name="PosteriorPharyngealWall">
           <Key>
             <PropertyRef Name="PosteriorPharyngealWallID" />
           </Key>
           <Property Name="PosteriorPharyngealWallID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-          <Property Name="PosteriorPharyngealWallName" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+          <Property Name="PosteriorPharyngealWallName" Type="String" MaxLength="500" FixedLength="false" Unicode="false" />
         </EntityType>
         <EntityType Name="PosteriorWall">
           <Key>
             <PropertyRef Name="PosteriorWallID" />
           </Key>
           <Property Name="PosteriorWallID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-          <Property Name="PosteriorWallName" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+          <Property Name="PosteriorWallName" Type="String" MaxLength="500" FixedLength="false" Unicode="false" />
         </EntityType>
         <EntityType Name="PyriformSinu">
           <Key>
             <PropertyRef Name="PyriformSinusID" />
           </Key>
           <Property Name="PyriformSinusID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-          <Property Name="PyriformSinusName" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+          <Property Name="PyriformSinusName" Type="String" MaxLength="500" FixedLength="false" Unicode="false" />
         </EntityType>
         <EntityType Name="Roof">
           <Key>
             <PropertyRef Name="RoofID" />
           </Key>
           <Property Name="RoofID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-          <Property Name="RoofName" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+          <Property Name="RoofName" Type="String" MaxLength="500" FixedLength="false" Unicode="false" />
         </EntityType>
         <EntityType Name="RosenmullerFossa">
           <Key>
             <PropertyRef Name="RosenmullerFossaID" />
           </Key>
           <Property Name="RosenmullerFossaID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-          <Property Name="RosenmullerFossaName" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+          <Property Name="RosenmullerFossaName" Type="String" MaxLength="500" FixedLength="false" Unicode="false" />
         </EntityType>
         <EntityType Name="Septum">
           <Key>
             <PropertyRef Name="SeptumID" />
           </Key>
           <Property Name="SeptumID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-          <Property Name="SeptumName" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+          <Property Name="SeptumName" Type="String" MaxLength="500" FixedLength="false" Unicode="false" />
         </EntityType>
         <EntityType Name="SoftPalate">
           <Key>
             <PropertyRef Name="SoftPalateID" />
           </Key>
           <Property Name="SoftPalateID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-          <Property Name="SoftPalateName" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+          <Property Name="SoftPalateName" Type="String" MaxLength="500" FixedLength="false" Unicode="false" />
         </EntityType>
         <EntityType Name="Subglottic">
           <Key>
             <PropertyRef Name="SubglotticID" />
           </Key>
           <Property Name="SubglotticID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-          <Property Name="SubglotticName" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+          <Property Name="SubglotticName" Type="String" MaxLength="500" FixedLength="false" Unicode="false" />
         </EntityType>
         <EntityType Name="Supraglottic">
           <Key>
             <PropertyRef Name="SupraglotticID" />
           </Key>
           <Property Name="SupraglotticID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-          <Property Name="SupraglotticName" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+          <Property Name="SupraglotticName" Type="String" MaxLength="500" FixedLength="false" Unicode="false" />
         </EntityType>
         <EntityType Name="Tonsil">
           <Key>
             <PropertyRef Name="TonsilID" />
           </Key>
           <Property Name="TonsilID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-          <Property Name="TonsilName" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+          <Property Name="TonsilName" Type="String" MaxLength="500" FixedLength="false" Unicode="false" />
         </EntityType>
         <EntityType Name="UE">
           <Key>
             <PropertyRef Name="UESID" />
           </Key>
           <Property Name="UESID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-          <Property Name="UESName" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+          <Property Name="UESName" Type="String" MaxLength="500" FixedLength="false" Unicode="false" />
         </EntityType>
         <EntityType Name="Uvula">
           <Key>
             <PropertyRef Name="UvulaID" />
           </Key>
           <Property Name="UvulaID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-          <Property Name="UvulaName" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+          <Property Name="UvulaName" Type="String" MaxLength="500" FixedLength="false" Unicode="false" />
         </EntityType>
         <EntityType Name="Vallecula">
           <Key>
             <PropertyRef Name="ValleculaID" />
           </Key>
           <Property Name="ValleculaID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-          <Property Name="ValleculaName" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+          <Property Name="ValleculaName" Type="String" MaxLength="500" FixedLength="false" Unicode="false" />
         </EntityType>
         <EntityType Name="OpdList">
           <Key>
@@ -2727,7 +2727,7 @@ warning 6002: The table/view 'EndoscopicDb.dbo.v_PatientList' does not have a pr
             <PropertyRef Name="ID" />
           </Key>
           <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-          <Property Name="Name" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+          <Property Name="Name" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
         </EntityType>
         <EntityType Name="ICD10">
           <Key>
@@ -2839,7 +2839,7 @@ warning 6002: The table/view 'EndoscopicDb.dbo.v_PatientList' does not have a pr
             <PropertyRef Name="ID" />
           </Key>
           <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-          <Property Name="Name" Type="String" MaxLength="250" FixedLength="false" Unicode="true" />
+          <Property Name="Name" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
           <Property Name="IsActive" Type="Boolean" Nullable="false" />
           <Property Name="ProcedureId" Type="Int32" />
           <Property Name="IsDisplay" Type="Boolean" Nullable="false" />
@@ -2888,7 +2888,7 @@ warning 6002: The table/view 'EndoscopicDb.dbo.v_PatientList' does not have a pr
             <PropertyRef Name="ID" />
           </Key>
           <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-          <Property Name="Name" Type="String" MaxLength="250" FixedLength="false" Unicode="true" />
+          <Property Name="Name" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
         </EntityType>
         <EntityType Name="Other">
           <Key>
@@ -2902,21 +2902,21 @@ warning 6002: The table/view 'EndoscopicDb.dbo.v_PatientList' does not have a pr
             <PropertyRef Name="ID" />
           </Key>
           <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-          <Property Name="Name" Type="String" MaxLength="250" FixedLength="false" Unicode="true" />
+          <Property Name="Name" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
         </EntityType>
         <EntityType Name="PapillaMajor">
           <Key>
             <PropertyRef Name="ID" />
           </Key>
           <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-          <Property Name="Name" Type="String" MaxLength="250" FixedLength="false" Unicode="true" />
+          <Property Name="Name" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
         </EntityType>
         <EntityType Name="PapillaMinor">
           <Key>
             <PropertyRef Name="ID" />
           </Key>
           <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-          <Property Name="Name" Type="String" MaxLength="250" FixedLength="false" Unicode="true" />
+          <Property Name="Name" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
         </EntityType>
         <EntityType Name="Endoscopic">
           <Key>
@@ -2991,18 +2991,18 @@ warning 6002: The table/view 'EndoscopicDb.dbo.v_PatientList' does not have a pr
           </Key>
           <Property Name="FindingID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
           <Property Name="PatientID" Type="Int32" />
-          <Property Name="VocalCord" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
-          <Property Name="Trachea" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
-          <Property Name="Carina" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
-          <Property Name="RightMain" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
-          <Property Name="RightIntermideate" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
-          <Property Name="RUL" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
-          <Property Name="RML" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
-          <Property Name="RLL" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
-          <Property Name="LeftMain" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
-          <Property Name="LUL" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
-          <Property Name="Lingular" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
-          <Property Name="LLL" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="VocalCord" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+          <Property Name="Trachea" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+          <Property Name="Carina" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+          <Property Name="RightMain" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+          <Property Name="RightIntermideate" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+          <Property Name="RUL" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+          <Property Name="RML" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+          <Property Name="RLL" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+          <Property Name="LeftMain" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+          <Property Name="LUL" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+          <Property Name="Lingular" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+          <Property Name="LLL" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
           <Property Name="AnalCanalID" Type="Int32" />
           <Property Name="RectumID" Type="Int32" />
           <Property Name="SigmoidColonID" Type="Int32" />
@@ -3045,78 +3045,78 @@ warning 6002: The table/view 'EndoscopicDb.dbo.v_PatientList' does not have a pr
           <Property Name="LULID" Type="Int32" />
           <Property Name="LingularID" Type="Int32" />
           <Property Name="LLLID" Type="Int32" />
-          <Property Name="AnalCanal" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
-          <Property Name="Rectum" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
-          <Property Name="SigmoidColon" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
-          <Property Name="DescendingColon" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
-          <Property Name="SplenicFlexure" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
-          <Property Name="TransverseColon" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
-          <Property Name="HepaticFlexure" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
-          <Property Name="AscendingColon" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
-          <Property Name="IleocecalVolve" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
-          <Property Name="Cecum" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
-          <Property Name="TerminalIleum" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
-          <Property Name="Esophagus" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
-          <Property Name="Stomach" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
-          <Property Name="Duodenum" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
-          <Property Name="AmpullaOfVater" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
-          <Property Name="Cholangiogram" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
-          <Property Name="Pancreatogram" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
-          <Property Name="Oropharynx" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
-          <Property Name="EGJunction" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
-          <Property Name="Cardia" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
-          <Property Name="Fundus" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
-          <Property Name="Body" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
-          <Property Name="Antrum" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
-          <Property Name="Pylorus" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
-          <Property Name="DuodenalBulb" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
-          <Property Name="SecondPart" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+          <Property Name="AnalCanal" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+          <Property Name="Rectum" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+          <Property Name="SigmoidColon" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+          <Property Name="DescendingColon" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+          <Property Name="SplenicFlexure" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+          <Property Name="TransverseColon" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+          <Property Name="HepaticFlexure" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+          <Property Name="AscendingColon" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+          <Property Name="IleocecalVolve" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+          <Property Name="Cecum" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+          <Property Name="TerminalIleum" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+          <Property Name="Esophagus" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+          <Property Name="Stomach" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+          <Property Name="Duodenum" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+          <Property Name="AmpullaOfVater" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+          <Property Name="Cholangiogram" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+          <Property Name="Pancreatogram" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+          <Property Name="Oropharynx" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+          <Property Name="EGJunction" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+          <Property Name="Cardia" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+          <Property Name="Fundus" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+          <Property Name="Body" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+          <Property Name="Antrum" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+          <Property Name="Pylorus" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+          <Property Name="DuodenalBulb" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+          <Property Name="SecondPart" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
           <Property Name="NasalCavityLeftID" Type="Int32" />
-          <Property Name="NasalCavityLeft" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+          <Property Name="NasalCavityLeft" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
           <Property Name="NasalCavityRightID" Type="Int32" />
-          <Property Name="NasalCavityRight" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+          <Property Name="NasalCavityRight" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
           <Property Name="SeptumID" Type="Int32" />
-          <Property Name="Septum" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+          <Property Name="Septum" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
           <Property Name="NasopharynxID" Type="Int32" />
-          <Property Name="Nasopharynx" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+          <Property Name="Nasopharynx" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
           <Property Name="RoofID" Type="Int32" />
-          <Property Name="Roof" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+          <Property Name="Roof" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
           <Property Name="PosteriorWallID" Type="Int32" />
-          <Property Name="PosteriorWall" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+          <Property Name="PosteriorWall" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
           <Property Name="RosenmullerFossaID" Type="Int32" />
-          <Property Name="RosenmullerFossa" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+          <Property Name="RosenmullerFossa" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
           <Property Name="EustachianTubeOrificeLeftID" Type="Int32" />
-          <Property Name="EustachianTubeOrificeLeft" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+          <Property Name="EustachianTubeOrificeLeft" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
           <Property Name="EustachianTubeOrificeRightID" Type="Int32" />
-          <Property Name="EustachianTubeOrificeRight" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+          <Property Name="EustachianTubeOrificeRight" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
           <Property Name="SoftPalateID" Type="Int32" />
-          <Property Name="SoftPalate" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+          <Property Name="SoftPalate" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
           <Property Name="UvulaID" Type="Int32" />
-          <Property Name="Uvula" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+          <Property Name="Uvula" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
           <Property Name="TonsilID" Type="Int32" />
-          <Property Name="Tonsil" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+          <Property Name="Tonsil" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
           <Property Name="BaseOfTongueID" Type="Int32" />
-          <Property Name="BaseOfTongue" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+          <Property Name="BaseOfTongue" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
           <Property Name="ValleculaID" Type="Int32" />
-          <Property Name="Vallecula" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+          <Property Name="Vallecula" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
           <Property Name="PyriformSinusLeftID" Type="Int32" />
-          <Property Name="PyriformSinusLeft" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+          <Property Name="PyriformSinusLeft" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
           <Property Name="PyriformSinusRightID" Type="Int32" />
-          <Property Name="PyriformSinusRight" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+          <Property Name="PyriformSinusRight" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
           <Property Name="PostcricoidID" Type="Int32" />
-          <Property Name="Postcricoid" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+          <Property Name="Postcricoid" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
           <Property Name="PosteriorPharyngealWallID" Type="Int32" />
-          <Property Name="PosteriorPharyngealWall" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+          <Property Name="PosteriorPharyngealWall" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
           <Property Name="SupraglotticID" Type="Int32" />
-          <Property Name="Supraglottic" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+          <Property Name="Supraglottic" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
           <Property Name="GlotticID" Type="Int32" />
-          <Property Name="Glottic" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+          <Property Name="Glottic" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
           <Property Name="SubglotticID" Type="Int32" />
-          <Property Name="Subglottic" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+          <Property Name="Subglottic" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
           <Property Name="UESID" Type="Int32" />
-          <Property Name="UES" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+          <Property Name="UES" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
           <Property Name="LESID" Type="Int32" />
-          <Property Name="LES" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+          <Property Name="LES" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
           <Property Name="PrincipalProcedureID" Type="Int32" />
           <Property Name="PrincipalProcedureDetail" Type="String" MaxLength="1000" FixedLength="false" Unicode="true" />
           <Property Name="SupplementalProcedure1ID" Type="Int32" />
@@ -3136,7 +3136,7 @@ warning 6002: The table/view 'EndoscopicDb.dbo.v_PatientList' does not have a pr
           <Property Name="Histopathology" Type="String" MaxLength="1000" FixedLength="false" Unicode="true" />
           <Property Name="Recommendation" Type="String" MaxLength="1000" FixedLength="false" Unicode="true" />
           <Property Name="Comment" Type="String" MaxLength="1000" FixedLength="false" Unicode="true" />
-          <Property Name="RapidUreaseTest" Type="String" MaxLength="250" FixedLength="false" Unicode="true" />
+          <Property Name="RapidUreaseTest" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
           <Property Name="PapillaMajorID" Type="Int32" />
           <Property Name="PapillaMajor" Type="String" MaxLength="1000" FixedLength="false" Unicode="true" />
           <Property Name="PapillaMinorID" Type="Int32" />
@@ -3148,9 +3148,9 @@ warning 6002: The table/view 'EndoscopicDb.dbo.v_PatientList' does not have a pr
           <Property Name="OtherID" Type="Int32" />
           <Property Name="OtherDetail" Type="String" MaxLength="1000" FixedLength="false" Unicode="true" />
           <Property Name="NoseID" Type="Int32" />
-          <Property Name="Nose" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+          <Property Name="Nose" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
           <Property Name="PyriformID" Type="Int32" />
-          <Property Name="Pyriform" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+          <Property Name="Pyriform" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
         </EntityType>
         <EntityType Name="v_GetImageCapturePath">
           <Key>
@@ -3231,7 +3231,7 @@ warning 6002: The table/view 'EndoscopicDb.dbo.v_PatientList' does not have a pr
             <PropertyRef Name="AmpullaOfVaterID" />
           </Key>
           <Property Name="AmpullaOfVaterID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-          <Property Name="AmpullaOfVaterName" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+          <Property Name="AmpullaOfVaterName" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
           <Property Name="CreateDate" Type="DateTime" Precision="3" />
           <Property Name="UpdateDate" Type="DateTime" Precision="3" />
         </EntityType>
