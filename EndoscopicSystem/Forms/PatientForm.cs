@@ -246,7 +246,9 @@ namespace EndoscopicSystem
                         patient.AnesthesistID = (int?)cbbAnesthesist.SelectedValue;
                         patient.IndicationID = (int?)cbbIndication.SelectedValue;
                         patient.PreDiagnosisFirstID = !string.IsNullOrWhiteSpace(txbPreDiag1ID.Text) ? Convert.ToInt32(txbPreDiag1ID.Text) : 0;
+                        patient.PreDiagnosisFirstText = txbPreDiag1Text.Text;
                         patient.PreDiagnosisSecondID = !string.IsNullOrWhiteSpace(txbPreDiag2ID.Text) ? Convert.ToInt32(txbPreDiag2ID.Text) : 0;
+                        patient.PreDiagnosisSecondText = txbPreDiag2Text.Text;
                         patient.UpdateBy = UserID;
                         patient.UpdateDate = DateTime.Now;
                     }
@@ -299,7 +301,9 @@ namespace EndoscopicSystem
                         patient.AnesthesistID = (int?)cbbAnesthesist.SelectedValue;
                         patient.IndicationID = (int?)cbbIndication.SelectedValue;
                         patient.PreDiagnosisFirstID = !string.IsNullOrWhiteSpace(txbPreDiag1ID.Text) ? Convert.ToInt32(txbPreDiag1ID.Text) : 0;
+                        patient.PreDiagnosisFirstText = txbPreDiag1Text.Text;
                         patient.PreDiagnosisSecondID = !string.IsNullOrWhiteSpace(txbPreDiag2ID.Text) ? Convert.ToInt32(txbPreDiag2ID.Text) : 0;
+                        patient.PreDiagnosisSecondText = txbPreDiag2Text.Text;
                         patient.IsActive = true;
                         patient.CreateBy = UserID;
                         patient.CreateDate = DateTime.Now;

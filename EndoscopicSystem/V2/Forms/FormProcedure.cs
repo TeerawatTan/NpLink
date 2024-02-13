@@ -4912,6 +4912,10 @@ namespace EndoscopicSystem.V2.Forms
                     }
                 }
                 txbGeneralIndication_EGD.Text = cbbGeneralIndication_EGD.Text;
+
+                /*
+                 * Fix 2024/02/13
+                 * 
                 if (!patient.PreDiagnosisFirstID.HasValue)
                 {
                     if (!string.IsNullOrWhiteSpace(endoscopic.DxId1Detail))
@@ -4942,6 +4946,12 @@ namespace EndoscopicSystem.V2.Forms
                 {
                     txbGeneralDx2ID_EGD.Text = patient.PreDiagnosisSecondID.ToString();
                 }
+                */
+
+                //Update รพ.แกลง only
+                txbGeneralDx1Text_EGD.Text = patient.PreDiagnosisFirstText;
+                txbGeneralDx2Text_EGD.Text = patient.PreDiagnosisSecondText;
+
                 txbBriefHistory_EGD.Text = endoscopic.BriefHistory;
 
                 if (procId == 1) //EGD
@@ -5137,6 +5147,8 @@ namespace EndoscopicSystem.V2.Forms
                     }
                 }
                 txbGeneralIndication_Colono.Text = cbbGeneralIndication_Colono.Text;
+
+                /*
                 if (!patient.PreDiagnosisFirstID.HasValue)
                 {
                     if (!string.IsNullOrWhiteSpace(endoscopic.DxId1Detail))
@@ -5167,6 +5179,12 @@ namespace EndoscopicSystem.V2.Forms
                 {
                     txbGeneralDx2ID_Colono.Text = patient.PreDiagnosisSecondID.ToString();
                 }
+                */
+
+                //Update รพ.แกลง only
+                txbGeneralDx1Text_Colono.Text = patient.PreDiagnosisFirstText;
+                txbGeneralDx2Text_Colono.Text = patient.PreDiagnosisSecondText;
+
                 txbBriefHistory_Colono.Text = endoscopic.BriefHistory;
                 txbGeneralBowelPreparationRegimen_Colono.Text = endoscopic.BowelPreparationRegimen;
                 txbGeneralBowelPreparationResult_colono.Text = endoscopic.BowelPreparationResult;
@@ -5358,7 +5376,9 @@ namespace EndoscopicSystem.V2.Forms
                     patient.InstrumentID = (int?)cbbInstrument_EGD.SelectedValue;
                     patient.AnesthesistID = (int?)cbbGeneralAnesthesist_EGD.SelectedValue;
                     patient.PreDiagnosisFirstID = !string.IsNullOrWhiteSpace(txbGeneralDx1ID_EGD.Text) ? Convert.ToInt32(txbGeneralDx1ID_EGD.Text) : 0;
+                    patient.PreDiagnosisFirstText = txbGeneralDx1Text_EGD.Text;
                     patient.PreDiagnosisSecondID = !string.IsNullOrWhiteSpace(txbGeneralDx2ID_EGD.Text) ? Convert.ToInt32(txbGeneralDx2ID_EGD.Text) : 0;
+                    patient.PreDiagnosisSecondText = txbGeneralDx2Text_EGD.Text;
                 }
                 else if (procedureId == 2 || procedureId == 4)
                 {
@@ -5374,7 +5394,9 @@ namespace EndoscopicSystem.V2.Forms
                     patient.InstrumentID = (int?)cbbInstrument_Colono.SelectedValue;
                     patient.AnesthesistID = (int?)cbbGeneralAnesthesist_Colono.SelectedValue;
                     patient.PreDiagnosisFirstID = !string.IsNullOrWhiteSpace(txbGeneralDx1ID_Colono.Text) ? Convert.ToInt32(txbGeneralDx1ID_Colono.Text) : 0;
+                    patient.PreDiagnosisFirstText = txbGeneralDx1Text_Colono.Text;
                     patient.PreDiagnosisSecondID = !string.IsNullOrWhiteSpace(txbGeneralDx2ID_Colono.Text) ? Convert.ToInt32(txbGeneralDx2ID_Colono.Text) : 0;
+                    patient.PreDiagnosisSecondText = txbGeneralDx2Text_Colono.Text;
                 }
                 else if (procedureId == 8)
                 {

@@ -112,7 +112,6 @@ namespace EndoscopicSystem.Entities
         public virtual DbSet<ProcedureList> ProcedureLists { get; set; }
         public virtual DbSet<Instrument> Instruments { get; set; }
         public virtual DbSet<Appointment> Appointments { get; set; }
-        public virtual DbSet<Patient> Patients { get; set; }
         public virtual DbSet<RapidUreaseTest> RapidUreaseTests { get; set; }
         public virtual DbSet<Complication> Complications { get; set; }
         public virtual DbSet<Histopathology> Histopathologies { get; set; }
@@ -136,6 +135,7 @@ namespace EndoscopicSystem.Entities
         public virtual DbSet<Diagnosi> Diagnosis { get; set; }
         public virtual DbSet<GernaralOperativeFinding> GernaralOperativeFindings { get; set; }
         public virtual DbSet<AmpullaOfVater> AmpullaOfVaters { get; set; }
+        public virtual DbSet<Patient> Patients { get; set; }
     
         public virtual ObjectResult<BrochoscopyReport_Result> BrochoscopyReport(string hn, Nullable<int> procedure, Nullable<int> endoscopicId)
         {
