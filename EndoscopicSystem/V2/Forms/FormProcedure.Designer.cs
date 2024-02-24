@@ -10953,9 +10953,9 @@ namespace EndoscopicSystem.V2.Forms
             this.label87.Location = new System.Drawing.Point(14, 157);
             this.label87.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label87.Name = "label87";
-            this.label87.Size = new System.Drawing.Size(107, 20);
+            this.label87.Size = new System.Drawing.Size(113, 20);
             this.label87.TabIndex = 200;
-            this.label87.Text = "Ureter, Righ";
+            this.label87.Text = "Ureter, Right";
             // 
             // txbFindingBladder_Cysto
             // 
