@@ -92,10 +92,6 @@
     <Reference Include="CrystalDecisions.Windows.Forms">
       <HintPath>..\..\..\program files (x86)\sap businessobjects\crystal reports for .net framework 4.0\common\sap businessobjects enterprise xi 4.0\win32_x86\dotnet\CrystalDecisions.Windows.Forms.dll</HintPath>
     </Reference>
-    <Reference Include="PQScan.PDFToImage, Version=6.3.0.41116, Culture=neutral, PublicKeyToken=7cc657bf9afce61f, processorArchitecture=x86">
-      <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\..\..\Keen_Work\งาน NpLink\V.2\pqScan.PDFToImage-41116\pqScan.PDFToImage\x64\.net4.5\PQScan.PDFToImage.dll</HintPath>
-    </Reference>
     <Reference Include="System">
       <HintPath>..\..\..\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.7.2\System.dll</HintPath>
     </Reference>
