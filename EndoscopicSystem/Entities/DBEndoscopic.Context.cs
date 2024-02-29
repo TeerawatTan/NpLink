@@ -138,6 +138,15 @@ namespace EndoscopicSystem.Entities
         public virtual DbSet<Finding> Findings { get; set; }
         public virtual DbSet<Endoscopic> Endoscopics { get; set; }
         public virtual DbSet<FindingCystoscope> FindingCystoscopes { get; set; }
+        public virtual DbSet<Bladder> Bladders { get; set; }
+        public virtual DbSet<BladderNeck> BladderNecks { get; set; }
+        public virtual DbSet<KidneyLeft> KidneyLefts { get; set; }
+        public virtual DbSet<KidneyRight> KidneyRights { get; set; }
+        public virtual DbSet<Prostate> Prostates { get; set; }
+        public virtual DbSet<TrigoneAndOrifice> TrigoneAndOrifices { get; set; }
+        public virtual DbSet<UreterLeft> UreterLefts { get; set; }
+        public virtual DbSet<UreterRight> UreterRights { get; set; }
+        public virtual DbSet<Urethra> Urethras { get; set; }
     
         public virtual ObjectResult<BrochoscopyReport_Result> BrochoscopyReport(string hn, Nullable<int> procedure, Nullable<int> endoscopicId)
         {

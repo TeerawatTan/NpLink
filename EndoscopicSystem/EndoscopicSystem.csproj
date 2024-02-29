@@ -149,6 +149,12 @@
     <Compile Include="Entities\BiliarySystem.cs">
       <DependentUpon>DBEndoscopic.tt</DependentUpon>
     </Compile>
+    <Compile Include="Entities\Bladder.cs">
+      <DependentUpon>DBEndoscopic.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Entities\BladderNeck.cs">
+      <DependentUpon>DBEndoscopic.tt</DependentUpon>
+    </Compile>
     <Compile Include="Entities\Body.cs">
       <DependentUpon>DBEndoscopic.tt</DependentUpon>
     </Compile>
@@ -308,6 +314,12 @@
     <Compile Include="Entities\Intervention.cs">
       <DependentUpon>DBEndoscopic.tt</DependentUpon>
     </Compile>
+    <Compile Include="Entities\KidneyLeft.cs">
+      <DependentUpon>DBEndoscopic.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Entities\KidneyRight.cs">
+      <DependentUpon>DBEndoscopic.tt</DependentUpon>
+    </Compile>
     <Compile Include="Entities\LE.cs">
       <DependentUpon>DBEndoscopic.tt</DependentUpon>
     </Compile>
@@ -372,6 +384,9 @@
       <DependentUpon>DBEndoscopic.tt</DependentUpon>
     </Compile>
     <Compile Include="Entities\ProcedureList.cs">
+      <DependentUpon>DBEndoscopic.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Entities\Prostate.cs">
       <DependentUpon>DBEndoscopic.tt</DependentUpon>
     </Compile>
     <Compile Include="Entities\Pyloru.cs">
@@ -455,7 +470,19 @@
     <Compile Include="Entities\TransverseColon.cs">
       <DependentUpon>DBEndoscopic.tt</DependentUpon>
     </Compile>
+    <Compile Include="Entities\TrigoneAndOrifice.cs">
+      <DependentUpon>DBEndoscopic.tt</DependentUpon>
+    </Compile>
     <Compile Include="Entities\UE.cs">
+      <DependentUpon>DBEndoscopic.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Entities\UreterLeft.cs">
+      <DependentUpon>DBEndoscopic.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Entities\UreterRight.cs">
+      <DependentUpon>DBEndoscopic.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Entities\Urethra.cs">
       <DependentUpon>DBEndoscopic.tt</DependentUpon>
     </Compile>
     <Compile Include="Entities\User.cs">

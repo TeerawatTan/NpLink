@@ -116,6 +116,15 @@
         <EntityTypeShape EntityType="EndoscopicModel.Finding" Width="1.5" PointX="19.375" PointY="28.75" />
         <EntityTypeShape EntityType="EndoscopicModel.Endoscopic" Width="1.5" PointX="0.75" PointY="23.75" />
         <EntityTypeShape EntityType="EndoscopicModel.FindingCystoscope" Width="1.5" PointX="24.375" PointY="31.75" />
+        <EntityTypeShape EntityType="EndoscopicModel.Bladder" Width="1.5" PointX="31.375" PointY="11.75" />
+        <EntityTypeShape EntityType="EndoscopicModel.BladderNeck" Width="1.5" PointX="32.375" PointY="3.75" />
+        <EntityTypeShape EntityType="EndoscopicModel.KidneyLeft" Width="1.5" PointX="3.375" PointY="32.75" />
+        <EntityTypeShape EntityType="EndoscopicModel.KidneyRight" Width="1.5" PointX="32.375" PointY="14.75" />
+        <EntityTypeShape EntityType="EndoscopicModel.Prostate" Width="1.5" PointX="32.375" PointY="17.75" />
+        <EntityTypeShape EntityType="EndoscopicModel.TrigoneAndOrifice" Width="1.5" PointX="32.375" PointY="20.75" />
+        <EntityTypeShape EntityType="EndoscopicModel.UreterLeft" Width="1.5" PointX="32.375" PointY="23.75" />
+        <EntityTypeShape EntityType="EndoscopicModel.UreterRight" Width="1.5" PointX="32.375" PointY="26.75" />
+        <EntityTypeShape EntityType="EndoscopicModel.Urethra" Width="1.5" PointX="32.375" PointY="29.75" />
       </Diagram>
     </edmx:Diagrams>
   </edmx:Designer>

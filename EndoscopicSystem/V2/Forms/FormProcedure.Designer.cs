@@ -10844,6 +10844,7 @@ namespace EndoscopicSystem.V2.Forms
             this.txbFindingOther_Cysto.Name = "txbFindingOther_Cysto";
             this.txbFindingOther_Cysto.Size = new System.Drawing.Size(757, 23);
             this.txbFindingOther_Cysto.TabIndex = 209;
+            this.txbFindingOther_Cysto.Leave += new System.EventHandler(this.txbFindingOther_Cysto_Leave);
             // 
             // label95
             // 
@@ -10869,6 +10870,7 @@ namespace EndoscopicSystem.V2.Forms
             this.txbFindingKidneyLeft_Cysto.Name = "txbFindingKidneyLeft_Cysto";
             this.txbFindingKidneyLeft_Cysto.Size = new System.Drawing.Size(757, 23);
             this.txbFindingKidneyLeft_Cysto.TabIndex = 207;
+            this.txbFindingKidneyLeft_Cysto.Leave += new System.EventHandler(this.txbFindingKidneyLeft_Cysto_Leave);
             // 
             // label96
             // 
@@ -10894,6 +10896,7 @@ namespace EndoscopicSystem.V2.Forms
             this.txbFindingKidneyRight_Cysto.Name = "txbFindingKidneyRight_Cysto";
             this.txbFindingKidneyRight_Cysto.Size = new System.Drawing.Size(757, 23);
             this.txbFindingKidneyRight_Cysto.TabIndex = 205;
+            this.txbFindingKidneyRight_Cysto.Leave += new System.EventHandler(this.txbFindingKidneyRight_Cysto_Leave);
             // 
             // label97
             // 
@@ -10919,6 +10922,7 @@ namespace EndoscopicSystem.V2.Forms
             this.txbFindingUreterLeft_Cysto.Name = "txbFindingUreterLeft_Cysto";
             this.txbFindingUreterLeft_Cysto.Size = new System.Drawing.Size(757, 23);
             this.txbFindingUreterLeft_Cysto.TabIndex = 203;
+            this.txbFindingUreterLeft_Cysto.Leave += new System.EventHandler(this.txbFindingUreterLeft_Cysto_Leave);
             // 
             // label86
             // 
@@ -10944,6 +10948,7 @@ namespace EndoscopicSystem.V2.Forms
             this.txbFindingUreterRight_Cysto.Name = "txbFindingUreterRight_Cysto";
             this.txbFindingUreterRight_Cysto.Size = new System.Drawing.Size(757, 23);
             this.txbFindingUreterRight_Cysto.TabIndex = 201;
+            this.txbFindingUreterRight_Cysto.Leave += new System.EventHandler(this.txbFindingUreterRight_Cysto_Leave);
             // 
             // label87
             // 
@@ -10969,6 +10974,7 @@ namespace EndoscopicSystem.V2.Forms
             this.txbFindingBladder_Cysto.Name = "txbFindingBladder_Cysto";
             this.txbFindingBladder_Cysto.Size = new System.Drawing.Size(757, 23);
             this.txbFindingBladder_Cysto.TabIndex = 199;
+            this.txbFindingBladder_Cysto.Leave += new System.EventHandler(this.txbFindingBladder_Cysto_Leave);
             // 
             // label88
             // 
@@ -10994,6 +11000,7 @@ namespace EndoscopicSystem.V2.Forms
             this.txbFindingTrigoneAndOrifices_Cysto.Name = "txbFindingTrigoneAndOrifices_Cysto";
             this.txbFindingTrigoneAndOrifices_Cysto.Size = new System.Drawing.Size(757, 23);
             this.txbFindingTrigoneAndOrifices_Cysto.TabIndex = 197;
+            this.txbFindingTrigoneAndOrifices_Cysto.Leave += new System.EventHandler(this.txbFindingTrigoneAndOrifices_Cysto_Leave);
             // 
             // label89
             // 
@@ -11019,6 +11026,7 @@ namespace EndoscopicSystem.V2.Forms
             this.txbFindingBladderNeck_Cysto.Name = "txbFindingBladderNeck_Cysto";
             this.txbFindingBladderNeck_Cysto.Size = new System.Drawing.Size(757, 23);
             this.txbFindingBladderNeck_Cysto.TabIndex = 193;
+            this.txbFindingBladderNeck_Cysto.Leave += new System.EventHandler(this.txbFindingBladderNeck_Cysto_Leave);
             // 
             // label85
             // 
@@ -11044,6 +11052,7 @@ namespace EndoscopicSystem.V2.Forms
             this.txbFindingProstate_Cysto.Name = "txbFindingProstate_Cysto";
             this.txbFindingProstate_Cysto.Size = new System.Drawing.Size(757, 23);
             this.txbFindingProstate_Cysto.TabIndex = 191;
+            this.txbFindingProstate_Cysto.Leave += new System.EventHandler(this.txbFindingProstate_Cysto_Leave);
             // 
             // label18
             // 
@@ -11069,6 +11078,7 @@ namespace EndoscopicSystem.V2.Forms
             this.txbFindingUrethra_Cysto.Name = "txbFindingUrethra_Cysto";
             this.txbFindingUrethra_Cysto.Size = new System.Drawing.Size(757, 23);
             this.txbFindingUrethra_Cysto.TabIndex = 189;
+            this.txbFindingUrethra_Cysto.Leave += new System.EventHandler(this.txbFindingUrethra_Cysto_Leave);
             // 
             // label17
             // 
