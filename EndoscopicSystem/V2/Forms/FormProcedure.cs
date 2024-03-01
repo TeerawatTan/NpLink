@@ -69,6 +69,8 @@ namespace EndoscopicSystem.V2.Forms
 
             listBox1.Items.Clear();
 
+            LoadFinding();
+
             LoadTextBoxAutoComplete(txtPictureBoxSaved1);
             LoadTextBoxAutoComplete(txtPictureBoxSaved2);
             LoadTextBoxAutoComplete(txtPictureBoxSaved3);
@@ -102,7 +104,6 @@ namespace EndoscopicSystem.V2.Forms
             LoadTextBoxAutoComplete(txtPictureBoxSaved31);
             LoadTextBoxAutoComplete(txtPictureBoxSaved32);
 
-            LoadFinding();
             LoadICD9();
             LoadICD10();
 
