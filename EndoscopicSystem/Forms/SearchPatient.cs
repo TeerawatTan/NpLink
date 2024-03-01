@@ -257,9 +257,9 @@ namespace EndoscopicSystem
                         if (_pageName == Constant.PageName.SEARCH_PATIENT_PAGE)
                         {
                             // Form Panel
-                            V2.Forms.FormProceed formProceed = new V2.Forms.FormProceed(UserID, hnNo, patientId, procedureId, endoscopicId, appointmentId);
-                            formProceed.ShowDialog();
-                            formProceed = null;
+                            V2.Forms.FormPatientConfirm formPatientConfirm = new V2.Forms.FormPatientConfirm(UserID, hnNo, procedureId, endoscopicId, appointmentId);
+                            formPatientConfirm.ShowDialog();
+                            formPatientConfirm = null;
                         }
                         else if (_pageName == Constant.PageName.SEND_PACS_PAGE)
                         {

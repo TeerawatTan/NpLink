@@ -195,13 +195,7 @@ namespace EndoscopicSystem.V2.Forms
                         txbFindingSupplementalProcedureText2_Ent,
                         txbFindingDx1Text_Ent,
                         txbFindingDx2Text_Ent,
-                        txbFindingDx3Text_Ent,
-                        txbFindingPrincipalText_Cysto,
-                        txbFindingSupplemental1Text_Cysto,
-                        txbFindingSupplemental2Text_Cysto,
-                        txbFindingPostDx1Text_Cysto,
-                        txbFindingPostDx2Text_Cysto,
-                        txbFindingPostDx3Text_Cysto,
+                        txbFindingDx3Text_Ent
                     });
 
                     if (textBoxList.Contains(lastFocused))
@@ -4611,21 +4605,15 @@ namespace EndoscopicSystem.V2.Forms
             }
         }
         //-----
-        private void txbFindingPrincipalText_Cysto_Click(object sender, EventArgs e)
-        {
-            SetDataInListBox(Constant.Icd9);
-            lastFocused = (TextBox)sender;
-            _markField = Constant.PRINCIPAL_PROCEDURE;
-        }
         private void txbFindingPrincipalText_Cysto_Leave(object sender, EventArgs e)
         {
             if (txbFindingPrincipalText_Cysto.TextLength > 0)
             {
-                string[] names = _db.ICD9.Select(s => s.Name).ToArray();
+                string[] names = _db.ICD9.Where(w => w.ProcedureId == _procedureId).Select(s => s.Name).ToArray();
                 var findName = names.FirstOrDefault(w => w.Trim().Equals(txbFindingPrincipalText_Cysto.Text.Trim()));
                 if (findName == null)
                 {
-                    _db.ICD9.Add(new ICD9 { Name = txbFindingPrincipalText_Cysto.Text, IsDisplay = false });
+                    _db.ICD9.Add(new ICD9 { Name = txbFindingPrincipalText_Cysto.Text, IsDisplay = false, ProcedureId = _procedureId });
                     _db.SaveChanges();
 
                     // Reload
@@ -4633,21 +4621,15 @@ namespace EndoscopicSystem.V2.Forms
                 }
             }
         }
-        private void txbFindingSpplemental1Text_Cysto_Click(object sender, EventArgs e)
-        {
-            SetDataInListBox(Constant.Icd9);
-            lastFocused = (TextBox)sender;
-            _markField = Constant.SUPPLEMENTAL_PROCEDURE_1;
-        }
         private void txbFindingSpplemental1Text_Cysto_Leave(object sender, EventArgs e)
         {
             if (txbFindingSupplemental1Text_Cysto.TextLength > 0)
             {
-                string[] names = _db.ICD9.Select(s => s.Name).ToArray();
+                string[] names = _db.ICD9.Where(w => w.ProcedureId == _procedureId).Select(s => s.Name).ToArray();
                 var findName = names.FirstOrDefault(w => w.Trim().Equals(txbFindingSupplemental1Text_Cysto.Text.Trim()));
                 if (findName == null)
                 {
-                    _db.ICD9.Add(new ICD9 { Name = txbFindingSupplemental1Text_Cysto.Text, IsDisplay = false });
+                    _db.ICD9.Add(new ICD9 { Name = txbFindingSupplemental1Text_Cysto.Text, IsDisplay = false, ProcedureId = _procedureId });
                     _db.SaveChanges();
 
                     // Reload
@@ -4655,33 +4637,21 @@ namespace EndoscopicSystem.V2.Forms
                 }
             }
         }
-        private void txbFindingSpplemental2Text_Cysto_Click(object sender, EventArgs e)
-        {
-            SetDataInListBox(Constant.Icd9);
-            lastFocused = (TextBox)sender;
-            _markField = Constant.SUPPLEMENTAL_PROCEDURE_2;
-        }
         private void txbFindingSpplemental2Text_Cysto_Leave(object sender, EventArgs e)
         {
             if (txbFindingSupplemental2Text_Cysto.TextLength > 0)
             {
-                string[] names = _db.ICD9.Select(s => s.Name).ToArray();
+                string[] names = _db.ICD9.Where(w => w.ProcedureId == _procedureId).Select(s => s.Name).ToArray();
                 var findName = names.FirstOrDefault(w => w.Trim().Equals(txbFindingSupplemental2Text_Cysto.Text.Trim()));
                 if (findName == null)
                 {
-                    _db.ICD9.Add(new ICD9 { Name = txbFindingSupplemental2Text_Cysto.Text, IsDisplay = false });
+                    _db.ICD9.Add(new ICD9 { Name = txbFindingSupplemental2Text_Cysto.Text, IsDisplay = false, ProcedureId = _procedureId });
                     _db.SaveChanges();
 
                     // Reload
                     LoadAutoCompleted_ICD9Text(txbFindingSupplemental2Text_Cysto);
                 }
             }
-        }
-        private void txbFindingProcedure_Cysto_Click(object sender, EventArgs e)
-        {
-            SetDataInListBox(Constant.ProcedureDetail);
-            lastFocused = (TextBox)sender;
-            _markField = Constant.PROCEDURE_DETAIL;
         }
         private void txbFindingProcedure_Cysto_Leave(object sender, EventArgs e)
         {
@@ -4699,21 +4669,15 @@ namespace EndoscopicSystem.V2.Forms
                 }
             }
         }
-        private void txbFindingPostDx1Text_Cysto_Click(object sender, EventArgs e)
-        {
-            SetDataInListBox(Constant.Icd10);
-            lastFocused = (TextBox)sender;
-            _markField = Constant.POSTDX1;
-        }
         private void txbFindingPostDx1Text_Cysto_Leave(object sender, EventArgs e)
         {
             if (txbFindingPostDx1Text_Cysto.TextLength > 0)
             {
-                string[] names = _db.ICD10.Select(s => s.Name).ToArray();
+                string[] names = _db.ICD10.Where(w => w.ProcedureId == _procedureId).Select(s => s.Name).ToArray();
                 var findName = names.FirstOrDefault(w => w.Trim().Equals(txbFindingPostDx1Text_Cysto.Text.Trim()));
                 if (findName == null)
                 {
-                    _db.ICD10.Add(new ICD10 { Name = txbFindingPostDx1Text_Cysto.Text, IsDisplay = false });
+                    _db.ICD10.Add(new ICD10 { Name = txbFindingPostDx1Text_Cysto.Text, ProcedureId = _procedureId, IsDisplay = false });
                     _db.SaveChanges();
 
                     // Reload
@@ -4721,21 +4685,15 @@ namespace EndoscopicSystem.V2.Forms
                 }
             }
         }
-        private void txbFindingPostDx2Text_Cysto_Click(object sender, EventArgs e)
-        {
-            SetDataInListBox(Constant.Icd10);
-            lastFocused = (TextBox)sender;
-            _markField = Constant.POSTDX2;
-        }
         private void txbFindingPostDx2Text_Cysto_Leave(object sender, EventArgs e)
         {
             if (txbFindingPostDx2Text_Cysto.TextLength > 0)
             {
-                string[] names = _db.ICD10.Select(s => s.Name).ToArray();
+                string[] names = _db.ICD10.Where(w => w.ProcedureId == _procedureId).Select(s => s.Name).ToArray();
                 var findName = names.FirstOrDefault(w => w.Trim().Equals(txbFindingPostDx2Text_Cysto.Text.Trim()));
                 if (findName == null)
                 {
-                    _db.ICD10.Add(new ICD10 { Name = txbFindingPostDx2Text_Cysto.Text, IsDisplay = false });
+                    _db.ICD10.Add(new ICD10 { Name = txbFindingPostDx2Text_Cysto.Text, ProcedureId = _procedureId, IsDisplay = false });
                     _db.SaveChanges();
 
                     // Reload
@@ -4743,33 +4701,21 @@ namespace EndoscopicSystem.V2.Forms
                 }
             }
         }
-        private void txbFindingPostDx3Text_Cysto_Click(object sender, EventArgs e)
-        {
-            SetDataInListBox(Constant.Icd10);
-            lastFocused = (TextBox)sender;
-            _markField = Constant.POSTDX3;
-        }
         private void txbFindingPostDx3Text_Cysto_Leave(object sender, EventArgs e)
         {
             if (txbFindingPostDx3Text_Cysto.TextLength > 0)
             {
-                string[] names = _db.ICD10.Select(s => s.Name).ToArray();
+                string[] names = _db.ICD10.Where(w => w.ProcedureId == _procedureId).Select(s => s.Name).ToArray();
                 var findName = names.FirstOrDefault(w => w.Trim().Equals(txbFindingPostDx3Text_Cysto.Text.Trim()));
                 if (findName == null)
                 {
-                    _db.ICD10.Add(new ICD10 { Name = txbFindingPostDx3Text_Cysto.Text, IsDisplay = false });
+                    _db.ICD10.Add(new ICD10 { Name = txbFindingPostDx3Text_Cysto.Text, ProcedureId = _procedureId, IsDisplay = false });
                     _db.SaveChanges();
 
                     // Reload
                     LoadAutoCompleted_ICD10Text(txbFindingPostDx3Text_Cysto);
                 }
             }
-        }
-        private void txbFindingComplication_Cysto_Click(object sender, EventArgs e)
-        {
-            SetDataInListBox(Constant.Complication);
-            lastFocused = (TextBox)sender;
-            _markField = Constant.COMPLICATION;
         }
         private void txbFindingComplication_Cysto_Leave(object sender, EventArgs e)
         {
@@ -4787,12 +4733,6 @@ namespace EndoscopicSystem.V2.Forms
                 }
             }
         }
-        private void txbFindingHistopathology_Cysto_Click(object sender, EventArgs e)
-        {
-            SetDataInListBox(Constant.Histopathology);
-            lastFocused = (TextBox)sender;
-            _markField = Constant.HISTOPATHOLOGY;
-        }
         private void txbFindingHistopathology_Cysto_Leave(object sender, EventArgs e)
         {
             if (txbFindingHistopathology_Cysto.TextLength > 0)
@@ -4808,12 +4748,6 @@ namespace EndoscopicSystem.V2.Forms
                     LoadAutoCompleted_txbFindingHistopathology_Cysto();
                 }
             }
-        }
-        private void txbFindingRecommendation_Cysto_Click(object sender, EventArgs e)
-        {
-            SetDataInListBox(Constant.Recommendation);
-            lastFocused = (TextBox)sender;
-            _markField = Constant.RECOMMENDATION;
         }
         private void txbFindingRecommendation_Cysto_Leave(object sender, EventArgs e)
         {
@@ -6715,6 +6649,17 @@ namespace EndoscopicSystem.V2.Forms
                     LoadAutoCompleted_txbFindingKidneyRight_Cysto();
                     LoadAutoCompleted_txbFindingKidneyLeft_Cysto();
                     LoadAutoCompleted_txbFindingOther_Cysto();
+                    LoadAutoCompleted_ICD9Text(txbFindingPrincipalText_Cysto);
+                    LoadAutoCompleted_ICD9Text(txbFindingSupplemental1Text_Cysto);
+                    LoadAutoCompleted_ICD9Text(txbFindingSupplemental2Text_Cysto);
+                    LoadAutoCompleted_txbFindingProcedure_Cysto();
+                    LoadAutoCompleted_ICD10Text(txbFindingPostDx1Text_Cysto);
+                    LoadAutoCompleted_ICD10Text(txbFindingPostDx2Text_Cysto);
+                    LoadAutoCompleted_ICD10Text(txbFindingPostDx3Text_Cysto);
+                    LoadAutoCompleted_txbFindingComplication_Cysto();
+                    LoadAutoCompleted_txbFindingHistopathology_Cysto();
+                    LoadAutoCompleted_txbFindingRecommendation_Cysto();
+                    LoadAutoCompleted_txbFindingComment_Cysto();
                 }
 
                 #endregion

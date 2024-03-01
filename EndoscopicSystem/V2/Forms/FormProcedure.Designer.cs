@@ -10379,7 +10379,6 @@ namespace EndoscopicSystem.V2.Forms
             this.txbFindingSupplemental2Text_Cysto.Name = "txbFindingSupplemental2Text_Cysto";
             this.txbFindingSupplemental2Text_Cysto.Size = new System.Drawing.Size(757, 23);
             this.txbFindingSupplemental2Text_Cysto.TabIndex = 255;
-            this.txbFindingSupplemental2Text_Cysto.Click += new System.EventHandler(this.txbFindingSpplemental2Text_Cysto_Click);
             this.txbFindingSupplemental2Text_Cysto.Leave += new System.EventHandler(this.txbFindingSpplemental2Text_Cysto_Leave);
             // 
             // txbFindingSupplemental1Text_Cysto
@@ -10394,7 +10393,6 @@ namespace EndoscopicSystem.V2.Forms
             this.txbFindingSupplemental1Text_Cysto.Name = "txbFindingSupplemental1Text_Cysto";
             this.txbFindingSupplemental1Text_Cysto.Size = new System.Drawing.Size(757, 23);
             this.txbFindingSupplemental1Text_Cysto.TabIndex = 252;
-            this.txbFindingSupplemental1Text_Cysto.Click += new System.EventHandler(this.txbFindingSpplemental1Text_Cysto_Click);
             this.txbFindingSupplemental1Text_Cysto.Leave += new System.EventHandler(this.txbFindingSpplemental1Text_Cysto_Leave);
             // 
             // txbFindingPrincipalText_Cysto
@@ -10409,7 +10407,6 @@ namespace EndoscopicSystem.V2.Forms
             this.txbFindingPrincipalText_Cysto.Name = "txbFindingPrincipalText_Cysto";
             this.txbFindingPrincipalText_Cysto.Size = new System.Drawing.Size(757, 23);
             this.txbFindingPrincipalText_Cysto.TabIndex = 249;
-            this.txbFindingPrincipalText_Cysto.Click += new System.EventHandler(this.txbFindingPrincipalText_Cysto_Click);
             this.txbFindingPrincipalText_Cysto.Leave += new System.EventHandler(this.txbFindingPrincipalText_Cysto_Leave);
             // 
             // txbFindingPostDx3Text_Cysto
@@ -10424,7 +10421,6 @@ namespace EndoscopicSystem.V2.Forms
             this.txbFindingPostDx3Text_Cysto.Name = "txbFindingPostDx3Text_Cysto";
             this.txbFindingPostDx3Text_Cysto.Size = new System.Drawing.Size(757, 23);
             this.txbFindingPostDx3Text_Cysto.TabIndex = 263;
-            this.txbFindingPostDx3Text_Cysto.Click += new System.EventHandler(this.txbFindingPostDx3Text_Cysto_Click);
             this.txbFindingPostDx3Text_Cysto.Leave += new System.EventHandler(this.txbFindingPostDx3Text_Cysto_Leave);
             // 
             // txbFindingPostDx2Text_Cysto
@@ -10439,7 +10435,6 @@ namespace EndoscopicSystem.V2.Forms
             this.txbFindingPostDx2Text_Cysto.Name = "txbFindingPostDx2Text_Cysto";
             this.txbFindingPostDx2Text_Cysto.Size = new System.Drawing.Size(757, 23);
             this.txbFindingPostDx2Text_Cysto.TabIndex = 261;
-            this.txbFindingPostDx2Text_Cysto.Click += new System.EventHandler(this.txbFindingPostDx2Text_Cysto_Click);
             this.txbFindingPostDx2Text_Cysto.Leave += new System.EventHandler(this.txbFindingPostDx2Text_Cysto_Leave);
             // 
             // txbFindingPostDx1Text_Cysto
@@ -10454,7 +10449,6 @@ namespace EndoscopicSystem.V2.Forms
             this.txbFindingPostDx1Text_Cysto.Name = "txbFindingPostDx1Text_Cysto";
             this.txbFindingPostDx1Text_Cysto.Size = new System.Drawing.Size(757, 23);
             this.txbFindingPostDx1Text_Cysto.TabIndex = 259;
-            this.txbFindingPostDx1Text_Cysto.Click += new System.EventHandler(this.txbFindingPostDx1Text_Cysto_Click);
             this.txbFindingPostDx1Text_Cysto.Leave += new System.EventHandler(this.txbFindingPostDx1Text_Cysto_Leave);
             // 
             // txbFindingPostDx3Id_Cysto
@@ -10553,7 +10547,6 @@ namespace EndoscopicSystem.V2.Forms
             this.txbFindingRecommendation_Cysto.Name = "txbFindingRecommendation_Cysto";
             this.txbFindingRecommendation_Cysto.Size = new System.Drawing.Size(757, 23);
             this.txbFindingRecommendation_Cysto.TabIndex = 270;
-            this.txbFindingRecommendation_Cysto.Click += new System.EventHandler(this.txbFindingRecommendation_Cysto_Click);
             this.txbFindingRecommendation_Cysto.Leave += new System.EventHandler(this.txbFindingRecommendation_Cysto_Leave);
             // 
             // txbFindingHistopathology_Cysto
@@ -10568,7 +10561,6 @@ namespace EndoscopicSystem.V2.Forms
             this.txbFindingHistopathology_Cysto.Name = "txbFindingHistopathology_Cysto";
             this.txbFindingHistopathology_Cysto.Size = new System.Drawing.Size(757, 23);
             this.txbFindingHistopathology_Cysto.TabIndex = 268;
-            this.txbFindingHistopathology_Cysto.Click += new System.EventHandler(this.txbFindingHistopathology_Cysto_Click);
             this.txbFindingHistopathology_Cysto.Leave += new System.EventHandler(this.txbFindingHistopathology_Cysto_Leave);
             // 
             // txbFindingPostDx3Code_Cysto
@@ -10625,7 +10617,6 @@ namespace EndoscopicSystem.V2.Forms
             this.txbFindingProcedure_Cysto.Name = "txbFindingProcedure_Cysto";
             this.txbFindingProcedure_Cysto.Size = new System.Drawing.Size(757, 23);
             this.txbFindingProcedure_Cysto.TabIndex = 257;
-            this.txbFindingProcedure_Cysto.Click += new System.EventHandler(this.txbFindingProcedure_Cysto_Click);
             this.txbFindingProcedure_Cysto.Leave += new System.EventHandler(this.txbFindingProcedure_Cysto_Leave);
             // 
             // txbFindingSupplemental2Code_Cysto
@@ -10682,7 +10673,6 @@ namespace EndoscopicSystem.V2.Forms
             this.txbFindingComplication_Cysto.Name = "txbFindingComplication_Cysto";
             this.txbFindingComplication_Cysto.Size = new System.Drawing.Size(757, 23);
             this.txbFindingComplication_Cysto.TabIndex = 245;
-            this.txbFindingComplication_Cysto.Click += new System.EventHandler(this.txbFindingComplication_Cysto_Click);
             this.txbFindingComplication_Cysto.Leave += new System.EventHandler(this.txbFindingComplication_Cysto_Leave);
             // 
             // txbFindingComment_Cysto
@@ -10694,9 +10684,8 @@ namespace EndoscopicSystem.V2.Forms
             this.txbFindingComment_Cysto.Location = new System.Drawing.Point(225, 559);
             this.txbFindingComment_Cysto.Margin = new System.Windows.Forms.Padding(2);
             this.txbFindingComment_Cysto.MaxLength = 200;
-            this.txbFindingComment_Cysto.Multiline = true;
             this.txbFindingComment_Cysto.Name = "txbFindingComment_Cysto";
-            this.txbFindingComment_Cysto.Size = new System.Drawing.Size(757, 50);
+            this.txbFindingComment_Cysto.Size = new System.Drawing.Size(757, 23);
             this.txbFindingComment_Cysto.TabIndex = 246;
             this.txbFindingComment_Cysto.Leave += new System.EventHandler(this.txbFindingComment_Cysto_Leave);
             // 
