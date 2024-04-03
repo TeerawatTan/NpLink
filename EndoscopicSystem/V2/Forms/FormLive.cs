@@ -15,6 +15,7 @@ using System.IO;
 using System.Linq;
 using System.Media;
 using System.Runtime.InteropServices;
+using System.Threading;
 using System.Threading.Tasks;
 using System.Timers;
 using System.Windows.Forms;
@@ -267,6 +268,8 @@ namespace EndoscopicSystem.V2.Forms
                 btnStop_Click(sender, e);
                 Disconnect();
 
+
+
                 //FormProceed.Self.txbStep.Text = "0" + ",,";
                 FormProceed.Self.dtRecordStart.Value = _recordStartDate.HasValue ? _recordStartDate.Value : DateTime.Now;
                 FormProceed.Self.dtRecordEnd.Value = _recordEndDate.HasValue ? _recordEndDate.Value : DateTime.Now;
@@ -393,6 +396,9 @@ namespace EndoscopicSystem.V2.Forms
                     _videoCaptureDevice.NewFrame -= new NewFrameEventHandler(videoSource_NewFrame);
                 }
             }
+
+            // Sleep 2s
+            Thread.Sleep(2000);
         }
 
         private void CaptureButton_Click(object sender, EventArgs e)
@@ -601,6 +607,8 @@ namespace EndoscopicSystem.V2.Forms
 
             try
             {
+                if (video == null)
+                    Thread.Sleep(2000);
                 _fileWriter.WriteVideoFrame(video);
             }
             catch (Exception ex)
@@ -673,6 +681,7 @@ namespace EndoscopicSystem.V2.Forms
                 { return; }
                 if (videoSourcePlayer.IsRunning)
                 {
+                    this.videoSourcePlayer.Stop();
                     _fileWriter.Close();
                 }
             }
@@ -695,12 +704,15 @@ namespace EndoscopicSystem.V2.Forms
 
         public Bitmap CloneBitmap(Bitmap bitmap)
         {
-            //Image bi;
-            MemoryStream ms = new MemoryStream();
-            bitmap.Save(ms, System.Drawing.Imaging.ImageFormat.Jpeg);
-            ms.Seek(0, SeekOrigin.Begin);
-            //bi = Image.FromStream(ms);
-            ms.Close();
+            if (bitmap != null)
+            {
+                //Image bi;
+                MemoryStream ms = new MemoryStream();
+                bitmap.Save(ms, System.Drawing.Imaging.ImageFormat.Jpeg);
+                ms.Seek(0, SeekOrigin.Begin);
+                //bi = Image.FromStream(ms);
+                ms.Close();
+            }
             return bitmap;
         }
 
