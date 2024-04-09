@@ -1,4 +1,4 @@
-﻿using EndoscopicSystem.Constants;
+using EndoscopicSystem.Constants;
 using EndoscopicSystem.Entities;
 using EndoscopicSystem.Repository;
 using System;
@@ -27,9 +27,41 @@ namespace EndoscopicSystem
             _pageName = page;
         }
 
+        private IEnumerable<PatienModel> QueryPatientList()
+        {
+            var query = (from p in db.Patients
+                                join a in db.Appointments on p.PatientID equals a.PatientID
+                                join d in db.Doctors on p.DoctorID equals d.DoctorID into lPD
+                                from d in lPD.DefaultIfEmpty()
+                                join pl in db.ProcedureLists on a.ProcedureID equals pl.ProcedureID into lAPL
+                                from pl in lAPL.DefaultIfEmpty()
+                                join r in db.Rooms on p.RoomID equals r.RoomID into lPR
+                                from r in lPR.DefaultIfEmpty()
+                                orderby a.AppointmentDate descending
+                                select new PatienModel
+                                {
+                                    AppointmentDate = a.AppointmentDate,
+                                    AppointmentID = a.AppointmentID,
+                                    DoctorID = p.DoctorID,
+                                    DoctorName = d.NameTH,
+                                    EndoscopicID = a.EndoscopicID,
+                                    Fullname = p.Fullname,
+                                    HN = p.HN,
+                                    PatientID = p.PatientID,
+                                    ProcedureID = a.ProcedureID,
+                                    ProcedureName = pl.ProcedureName,
+                                    RoomID = p.RoomID,
+                                    RoomName = r.NameTH,
+                                    Symptom = a.Symptom
+                                }).AsEnumerable();
+
+            return query;
+        }
+
         private void SearchPatientForm_Load(object sender, EventArgs e)
         {
-            var data = db.v_PatientList.ToList();
+            var query = QueryPatientList();
+            var data = query.ToList();
             
             List<PatienModel> list = data.Select((s, i) => new PatienModel
             {
@@ -47,7 +79,7 @@ namespace EndoscopicSystem
                 RoomID = s.RoomID,
                 RoomName = s.RoomName,
                 Symptom = s.Symptom
-            }).ToList();
+            }).Take(20).ToList();
 
             LoadData(list);
 
@@ -116,30 +148,25 @@ namespace EndoscopicSystem
 
         private void btnSearch_Click(object sender, EventArgs e)
         {
-            var data = db.v_PatientList.ToList();
-            if (data.Count > 0)
+            var data = QueryPatientList();
+            //var data = db.v_PatientList.ToList();
+            if (data != null)
             {
                 if (!string.IsNullOrWhiteSpace(txtHN.Text))
                 {
-                    data = data.Where(x => x.HN.Equals(txtHN.Text)).ToList();
+                    data = data.Where(x => x.HN.Equals(txtHN.Text));
                 }
                 if (dtStartDate.Value != null || dtEndDate.Value != null)
                 {
-                    data = data.Where(x => x.AppointmentDate.Value >= dtStartDate.Value && x.AppointmentDate.Value <= dtEndDate.Value).ToList();
+                    data = data.Where(x => x.AppointmentDate.Value >= dtStartDate.Value && x.AppointmentDate.Value <= dtEndDate.Value);
                 }
                 if (cbbStation.SelectedIndex > 0)
                 {
-                    data = data.Where(x =>
-                    {
-                        return x.RoomID == (int)cbbStation.SelectedValue;
-                    }).ToList();
+                    data = data.Where(x => x.RoomID == (int)cbbStation.SelectedValue);
                 }
                 if (cbbDoctor.SelectedIndex > 0)
                 {
-                    data = data.Where(x =>
-                    {
-                        return x.DoctorID == (int)cbbDoctor.SelectedValue;
-                    }).ToList();
+                    data = data.Where(x => x.DoctorID == (int)cbbDoctor.SelectedValue);
                 }
 
                 List<PatienModel> list = data.Select((s, i) => new PatienModel
@@ -158,7 +185,7 @@ namespace EndoscopicSystem
                     RoomID = s.RoomID,
                     RoomName = s.RoomName,
                     Symptom = s.Symptom
-                }).ToList();
+                }).Take(20).ToList();
 
                 LoadData(list);
             }
