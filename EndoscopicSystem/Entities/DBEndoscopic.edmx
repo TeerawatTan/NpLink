@@ -752,6 +752,20 @@ warning 6002: The table/view 'EndoscopicDb.dbo.ProcedureList' does not have a pr
           <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
           <Property Name="Name" Type="nvarchar" MaxLength="250" />
         </EntityType>
+        <EntityType Name="Bladder">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Name" Type="varchar" MaxLength="250" />
+        </EntityType>
+        <EntityType Name="BladderNeck">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Name" Type="varchar" MaxLength="250" />
+        </EntityType>
         <EntityType Name="Body">
           <Key>
             <PropertyRef Name="BodyID" />
@@ -1008,6 +1022,20 @@ warning 6002: The table/view 'EndoscopicDb.dbo.ProcedureList' does not have a pr
           <Property Name="SerialNumber" Type="nvarchar" MaxLength="250" />
           <Property Name="IsActive" Type="bit" Nullable="false" />
         </EntityType>
+        <EntityType Name="KidneyLeft">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Name" Type="varchar" MaxLength="250" />
+        </EntityType>
+        <EntityType Name="KidneyRight">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Name" Type="varchar" MaxLength="250" />
+        </EntityType>
         <EntityType Name="LeftMain">
           <Key>
             <PropertyRef Name="LeftMainID" />
@@ -1151,6 +1179,13 @@ warning 6002: The table/view 'EndoscopicDb.dbo.ProcedureList' does not have a pr
           <Property Name="IsActive" Type="bit" Nullable="false" />
           <Property Name="ProcedureId" Type="int" />
           <Property Name="IsDisplay" Type="bit" Nullable="false" />
+        </EntityType>
+        <EntityType Name="Prostate">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Name" Type="varchar" MaxLength="250" />
         </EntityType>
         <EntityType Name="Pylorus">
           <Key>
@@ -1353,12 +1388,40 @@ warning 6002: The table/view 'EndoscopicDb.dbo.ProcedureList' does not have a pr
           <Property Name="CreateDate" Type="datetime" />
           <Property Name="UpdateDate" Type="datetime" />
         </EntityType>
+        <EntityType Name="TrigoneAndOrifices">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Name" Type="varchar" MaxLength="250" />
+        </EntityType>
         <EntityType Name="UES">
           <Key>
             <PropertyRef Name="UESID" />
           </Key>
           <Property Name="UESID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
           <Property Name="UESName" Type="varchar" MaxLength="255" />
+        </EntityType>
+        <EntityType Name="UreterLeft">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Name" Type="varchar" MaxLength="250" />
+        </EntityType>
+        <EntityType Name="UreterRight">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Name" Type="varchar" MaxLength="250" />
+        </EntityType>
+        <EntityType Name="Urethra">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Name" Type="varchar" MaxLength="250" />
         </EntityType>
         <EntityType Name="Uvula">
           <Key>
@@ -1515,6 +1578,8 @@ warning 6002: The table/view 'EndoscopicDb.dbo.v_PatientList' does not have a pr
           <EntitySet Name="AscendingColon" EntityType="Self.AscendingColon" Schema="master" store:Type="Tables" />
           <EntitySet Name="BaseOfTongue" EntityType="Self.BaseOfTongue" Schema="master" store:Type="Tables" />
           <EntitySet Name="BiliarySystem" EntityType="Self.BiliarySystem" Schema="master" store:Type="Tables" />
+          <EntitySet Name="Bladder" EntityType="Self.Bladder" Schema="master" store:Type="Tables" />
+          <EntitySet Name="BladderNeck" EntityType="Self.BladderNeck" Schema="master" store:Type="Tables" />
           <EntitySet Name="Body" EntityType="Self.Body" Schema="master" store:Type="Tables" />
           <EntitySet Name="BowelPreparationRegimen" EntityType="Self.BowelPreparationRegimen" Schema="master" store:Type="Tables" />
           <EntitySet Name="BowelPreparationResult" EntityType="Self.BowelPreparationResult" Schema="master" store:Type="Tables" />
@@ -1545,6 +1610,8 @@ warning 6002: The table/view 'EndoscopicDb.dbo.v_PatientList' does not have a pr
           <EntitySet Name="IleocecalValve" EntityType="Self.IleocecalValve" Schema="master" store:Type="Tables" />
           <EntitySet Name="IndicationDropdown" EntityType="Self.IndicationDropdown" Schema="master" store:Type="Tables" />
           <EntitySet Name="Instrument" EntityType="Self.Instrument" Schema="master" store:Type="Tables" />
+          <EntitySet Name="KidneyLeft" EntityType="Self.KidneyLeft" Schema="master" store:Type="Tables" />
+          <EntitySet Name="KidneyRight" EntityType="Self.KidneyRight" Schema="master" store:Type="Tables" />
           <EntitySet Name="LeftMain" EntityType="Self.LeftMain" Schema="master" store:Type="Tables" />
           <EntitySet Name="LES" EntityType="Self.LES" Schema="master" store:Type="Tables" />
           <EntitySet Name="Lingular" EntityType="Self.Lingular" Schema="master" store:Type="Tables" />
@@ -1563,6 +1630,7 @@ warning 6002: The table/view 'EndoscopicDb.dbo.v_PatientList' does not have a pr
           <EntitySet Name="PosteriorPharyngealWall" EntityType="Self.PosteriorPharyngealWall" Schema="master" store:Type="Tables" />
           <EntitySet Name="PosteriorWall" EntityType="Self.PosteriorWall" Schema="master" store:Type="Tables" />
           <EntitySet Name="ProcedureDetail" EntityType="Self.ProcedureDetail" Schema="master" store:Type="Tables" />
+          <EntitySet Name="Prostate" EntityType="Self.Prostate" Schema="master" store:Type="Tables" />
           <EntitySet Name="Pylorus" EntityType="Self.Pylorus" Schema="master" store:Type="Tables" />
           <EntitySet Name="PyriformSinus" EntityType="Self.PyriformSinus" Schema="master" store:Type="Tables" />
           <EntitySet Name="RapidUreaseTest" EntityType="Self.RapidUreaseTest" Schema="master" store:Type="Tables" />
@@ -1587,7 +1655,11 @@ warning 6002: The table/view 'EndoscopicDb.dbo.v_PatientList' does not have a pr
           <EntitySet Name="Tonsil" EntityType="Self.Tonsil" Schema="master" store:Type="Tables" />
           <EntitySet Name="Trachea" EntityType="Self.Trachea" Schema="master" store:Type="Tables" />
           <EntitySet Name="TransverseColon" EntityType="Self.TransverseColon" Schema="master" store:Type="Tables" />
+          <EntitySet Name="TrigoneAndOrifices" EntityType="Self.TrigoneAndOrifices" Schema="master" store:Type="Tables" />
           <EntitySet Name="UES" EntityType="Self.UES" Schema="master" store:Type="Tables" />
+          <EntitySet Name="UreterLeft" EntityType="Self.UreterLeft" Schema="master" store:Type="Tables" />
+          <EntitySet Name="UreterRight" EntityType="Self.UreterRight" Schema="master" store:Type="Tables" />
+          <EntitySet Name="Urethra" EntityType="Self.Urethra" Schema="master" store:Type="Tables" />
           <EntitySet Name="Uvula" EntityType="Self.Uvula" Schema="master" store:Type="Tables" />
           <EntitySet Name="Vallecula" EntityType="Self.Vallecula" Schema="master" store:Type="Tables" />
           <EntitySet Name="VocalCord" EntityType="Self.VocalCord" Schema="master" store:Type="Tables" />
@@ -1806,6 +1878,15 @@ warning 6002: The table/view 'EndoscopicDb.dbo.v_PatientList' does not have a pr
           <EntitySet Name="Findings" EntityType="EndoscopicModel.Finding" />
           <EntitySet Name="Endoscopics" EntityType="EndoscopicModel.Endoscopic" />
           <EntitySet Name="FindingCystoscopes" EntityType="EndoscopicModel.FindingCystoscope" />
+          <EntitySet Name="Bladders" EntityType="EndoscopicModel.Bladder" />
+          <EntitySet Name="BladderNecks" EntityType="EndoscopicModel.BladderNeck" />
+          <EntitySet Name="KidneyLefts" EntityType="EndoscopicModel.KidneyLeft" />
+          <EntitySet Name="KidneyRights" EntityType="EndoscopicModel.KidneyRight" />
+          <EntitySet Name="Prostates" EntityType="EndoscopicModel.Prostate" />
+          <EntitySet Name="TrigoneAndOrifices" EntityType="EndoscopicModel.TrigoneAndOrifice" />
+          <EntitySet Name="UreterLefts" EntityType="EndoscopicModel.UreterLeft" />
+          <EntitySet Name="UreterRights" EntityType="EndoscopicModel.UreterRight" />
+          <EntitySet Name="Urethras" EntityType="EndoscopicModel.Urethra" />
           </EntityContainer>
         <EntityType Name="Doctor">
           <Key>
@@ -3388,6 +3469,69 @@ warning 6002: The table/view 'EndoscopicDb.dbo.v_PatientList' does not have a pr
           <Property Name="KidneyRight" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
           <Property Name="KidneyLeft" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
           <Property Name="Other" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+        </EntityType>
+        <EntityType Name="Bladder">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Name" Type="String" MaxLength="250" FixedLength="false" Unicode="false" />
+        </EntityType>
+        <EntityType Name="BladderNeck">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Name" Type="String" MaxLength="250" FixedLength="false" Unicode="false" />
+        </EntityType>
+        <EntityType Name="KidneyLeft">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Name" Type="String" MaxLength="250" FixedLength="false" Unicode="false" />
+        </EntityType>
+        <EntityType Name="KidneyRight">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Name" Type="String" MaxLength="250" FixedLength="false" Unicode="false" />
+        </EntityType>
+        <EntityType Name="Prostate">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Name" Type="String" MaxLength="250" FixedLength="false" Unicode="false" />
+        </EntityType>
+        <EntityType Name="TrigoneAndOrifice">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Name" Type="String" MaxLength="250" FixedLength="false" Unicode="false" />
+        </EntityType>
+        <EntityType Name="UreterLeft">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Name" Type="String" MaxLength="250" FixedLength="false" Unicode="false" />
+        </EntityType>
+        <EntityType Name="UreterRight">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Name" Type="String" MaxLength="250" FixedLength="false" Unicode="false" />
+        </EntityType>
+        <EntityType Name="Urethra">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Name" Type="String" MaxLength="250" FixedLength="false" Unicode="false" />
         </EntityType>
         </Schema>
     </edmx:ConceptualModels>
@@ -5107,6 +5251,78 @@ warning 6002: The table/view 'EndoscopicDb.dbo.v_PatientList' does not have a pr
                 <ScalarProperty Name="PrincipalProcedureID" ColumnName="PrincipalProcedureID" />
                 <ScalarProperty Name="EndoscopicID" ColumnName="EndoscopicID" />
                 <ScalarProperty Name="FindingID" ColumnName="FindingID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Bladders">
+            <EntityTypeMapping TypeName="EndoscopicModel.Bladder">
+              <MappingFragment StoreEntitySet="Bladder">
+                <ScalarProperty Name="Name" ColumnName="Name" />
+                <ScalarProperty Name="ID" ColumnName="ID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="BladderNecks">
+            <EntityTypeMapping TypeName="EndoscopicModel.BladderNeck">
+              <MappingFragment StoreEntitySet="BladderNeck">
+                <ScalarProperty Name="Name" ColumnName="Name" />
+                <ScalarProperty Name="ID" ColumnName="ID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="KidneyLefts">
+            <EntityTypeMapping TypeName="EndoscopicModel.KidneyLeft">
+              <MappingFragment StoreEntitySet="KidneyLeft">
+                <ScalarProperty Name="Name" ColumnName="Name" />
+                <ScalarProperty Name="ID" ColumnName="ID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="KidneyRights">
+            <EntityTypeMapping TypeName="EndoscopicModel.KidneyRight">
+              <MappingFragment StoreEntitySet="KidneyRight">
+                <ScalarProperty Name="Name" ColumnName="Name" />
+                <ScalarProperty Name="ID" ColumnName="ID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Prostates">
+            <EntityTypeMapping TypeName="EndoscopicModel.Prostate">
+              <MappingFragment StoreEntitySet="Prostate">
+                <ScalarProperty Name="Name" ColumnName="Name" />
+                <ScalarProperty Name="ID" ColumnName="ID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="TrigoneAndOrifices">
+            <EntityTypeMapping TypeName="EndoscopicModel.TrigoneAndOrifice">
+              <MappingFragment StoreEntitySet="TrigoneAndOrifices">
+                <ScalarProperty Name="Name" ColumnName="Name" />
+                <ScalarProperty Name="ID" ColumnName="ID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="UreterLefts">
+            <EntityTypeMapping TypeName="EndoscopicModel.UreterLeft">
+              <MappingFragment StoreEntitySet="UreterLeft">
+                <ScalarProperty Name="Name" ColumnName="Name" />
+                <ScalarProperty Name="ID" ColumnName="ID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="UreterRights">
+            <EntityTypeMapping TypeName="EndoscopicModel.UreterRight">
+              <MappingFragment StoreEntitySet="UreterRight">
+                <ScalarProperty Name="Name" ColumnName="Name" />
+                <ScalarProperty Name="ID" ColumnName="ID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Urethras">
+            <EntityTypeMapping TypeName="EndoscopicModel.Urethra">
+              <MappingFragment StoreEntitySet="Urethra">
+                <ScalarProperty Name="Name" ColumnName="Name" />
+                <ScalarProperty Name="ID" ColumnName="ID" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>

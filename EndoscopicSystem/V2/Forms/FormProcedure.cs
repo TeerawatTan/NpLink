@@ -69,6 +69,8 @@ namespace EndoscopicSystem.V2.Forms
 
             listBox1.Items.Clear();
 
+            LoadFinding();
+
             LoadTextBoxAutoComplete(txtPictureBoxSaved1);
             LoadTextBoxAutoComplete(txtPictureBoxSaved2);
             LoadTextBoxAutoComplete(txtPictureBoxSaved3);
@@ -102,7 +104,6 @@ namespace EndoscopicSystem.V2.Forms
             LoadTextBoxAutoComplete(txtPictureBoxSaved31);
             LoadTextBoxAutoComplete(txtPictureBoxSaved32);
 
-            LoadFinding();
             LoadICD9();
             LoadICD10();
 
@@ -195,13 +196,7 @@ namespace EndoscopicSystem.V2.Forms
                         txbFindingSupplementalProcedureText2_Ent,
                         txbFindingDx1Text_Ent,
                         txbFindingDx2Text_Ent,
-                        txbFindingDx3Text_Ent,
-                        txbFindingPrincipalText_Cysto,
-                        txbFindingSupplemental1Text_Cysto,
-                        txbFindingSupplemental2Text_Cysto,
-                        txbFindingPostDx1Text_Cysto,
-                        txbFindingPostDx2Text_Cysto,
-                        txbFindingPostDx3Text_Cysto,
+                        txbFindingDx3Text_Ent
                     });
 
                     if (textBoxList.Contains(lastFocused))
@@ -4611,21 +4606,15 @@ namespace EndoscopicSystem.V2.Forms
             }
         }
         //-----
-        private void txbFindingPrincipalText_Cysto_Click(object sender, EventArgs e)
-        {
-            SetDataInListBox(Constant.Icd9);
-            lastFocused = (TextBox)sender;
-            _markField = Constant.PRINCIPAL_PROCEDURE;
-        }
         private void txbFindingPrincipalText_Cysto_Leave(object sender, EventArgs e)
         {
             if (txbFindingPrincipalText_Cysto.TextLength > 0)
             {
-                string[] names = _db.ICD9.Select(s => s.Name).ToArray();
+                string[] names = _db.ICD9.Where(w => w.ProcedureId == _procedureId).Select(s => s.Name).ToArray();
                 var findName = names.FirstOrDefault(w => w.Trim().Equals(txbFindingPrincipalText_Cysto.Text.Trim()));
                 if (findName == null)
                 {
-                    _db.ICD9.Add(new ICD9 { Name = txbFindingPrincipalText_Cysto.Text, IsDisplay = false });
+                    _db.ICD9.Add(new ICD9 { Name = txbFindingPrincipalText_Cysto.Text, IsDisplay = false, ProcedureId = _procedureId });
                     _db.SaveChanges();
 
                     // Reload
@@ -4633,21 +4622,15 @@ namespace EndoscopicSystem.V2.Forms
                 }
             }
         }
-        private void txbFindingSpplemental1Text_Cysto_Click(object sender, EventArgs e)
-        {
-            SetDataInListBox(Constant.Icd9);
-            lastFocused = (TextBox)sender;
-            _markField = Constant.SUPPLEMENTAL_PROCEDURE_1;
-        }
         private void txbFindingSpplemental1Text_Cysto_Leave(object sender, EventArgs e)
         {
             if (txbFindingSupplemental1Text_Cysto.TextLength > 0)
             {
-                string[] names = _db.ICD9.Select(s => s.Name).ToArray();
+                string[] names = _db.ICD9.Where(w => w.ProcedureId == _procedureId).Select(s => s.Name).ToArray();
                 var findName = names.FirstOrDefault(w => w.Trim().Equals(txbFindingSupplemental1Text_Cysto.Text.Trim()));
                 if (findName == null)
                 {
-                    _db.ICD9.Add(new ICD9 { Name = txbFindingSupplemental1Text_Cysto.Text, IsDisplay = false });
+                    _db.ICD9.Add(new ICD9 { Name = txbFindingSupplemental1Text_Cysto.Text, IsDisplay = false, ProcedureId = _procedureId });
                     _db.SaveChanges();
 
                     // Reload
@@ -4655,33 +4638,21 @@ namespace EndoscopicSystem.V2.Forms
                 }
             }
         }
-        private void txbFindingSpplemental2Text_Cysto_Click(object sender, EventArgs e)
-        {
-            SetDataInListBox(Constant.Icd9);
-            lastFocused = (TextBox)sender;
-            _markField = Constant.SUPPLEMENTAL_PROCEDURE_2;
-        }
         private void txbFindingSpplemental2Text_Cysto_Leave(object sender, EventArgs e)
         {
             if (txbFindingSupplemental2Text_Cysto.TextLength > 0)
             {
-                string[] names = _db.ICD9.Select(s => s.Name).ToArray();
+                string[] names = _db.ICD9.Where(w => w.ProcedureId == _procedureId).Select(s => s.Name).ToArray();
                 var findName = names.FirstOrDefault(w => w.Trim().Equals(txbFindingSupplemental2Text_Cysto.Text.Trim()));
                 if (findName == null)
                 {
-                    _db.ICD9.Add(new ICD9 { Name = txbFindingSupplemental2Text_Cysto.Text, IsDisplay = false });
+                    _db.ICD9.Add(new ICD9 { Name = txbFindingSupplemental2Text_Cysto.Text, IsDisplay = false, ProcedureId = _procedureId });
                     _db.SaveChanges();
 
                     // Reload
                     LoadAutoCompleted_ICD9Text(txbFindingSupplemental2Text_Cysto);
                 }
             }
-        }
-        private void txbFindingProcedure_Cysto_Click(object sender, EventArgs e)
-        {
-            SetDataInListBox(Constant.ProcedureDetail);
-            lastFocused = (TextBox)sender;
-            _markField = Constant.PROCEDURE_DETAIL;
         }
         private void txbFindingProcedure_Cysto_Leave(object sender, EventArgs e)
         {
@@ -4699,21 +4670,15 @@ namespace EndoscopicSystem.V2.Forms
                 }
             }
         }
-        private void txbFindingPostDx1Text_Cysto_Click(object sender, EventArgs e)
-        {
-            SetDataInListBox(Constant.Icd10);
-            lastFocused = (TextBox)sender;
-            _markField = Constant.POSTDX1;
-        }
         private void txbFindingPostDx1Text_Cysto_Leave(object sender, EventArgs e)
         {
             if (txbFindingPostDx1Text_Cysto.TextLength > 0)
             {
-                string[] names = _db.ICD10.Select(s => s.Name).ToArray();
+                string[] names = _db.ICD10.Where(w => w.ProcedureId == _procedureId).Select(s => s.Name).ToArray();
                 var findName = names.FirstOrDefault(w => w.Trim().Equals(txbFindingPostDx1Text_Cysto.Text.Trim()));
                 if (findName == null)
                 {
-                    _db.ICD10.Add(new ICD10 { Name = txbFindingPostDx1Text_Cysto.Text, IsDisplay = false });
+                    _db.ICD10.Add(new ICD10 { Name = txbFindingPostDx1Text_Cysto.Text, ProcedureId = _procedureId, IsDisplay = false });
                     _db.SaveChanges();
 
                     // Reload
@@ -4721,21 +4686,15 @@ namespace EndoscopicSystem.V2.Forms
                 }
             }
         }
-        private void txbFindingPostDx2Text_Cysto_Click(object sender, EventArgs e)
-        {
-            SetDataInListBox(Constant.Icd10);
-            lastFocused = (TextBox)sender;
-            _markField = Constant.POSTDX2;
-        }
         private void txbFindingPostDx2Text_Cysto_Leave(object sender, EventArgs e)
         {
             if (txbFindingPostDx2Text_Cysto.TextLength > 0)
             {
-                string[] names = _db.ICD10.Select(s => s.Name).ToArray();
+                string[] names = _db.ICD10.Where(w => w.ProcedureId == _procedureId).Select(s => s.Name).ToArray();
                 var findName = names.FirstOrDefault(w => w.Trim().Equals(txbFindingPostDx2Text_Cysto.Text.Trim()));
                 if (findName == null)
                 {
-                    _db.ICD10.Add(new ICD10 { Name = txbFindingPostDx2Text_Cysto.Text, IsDisplay = false });
+                    _db.ICD10.Add(new ICD10 { Name = txbFindingPostDx2Text_Cysto.Text, ProcedureId = _procedureId, IsDisplay = false });
                     _db.SaveChanges();
 
                     // Reload
@@ -4743,33 +4702,21 @@ namespace EndoscopicSystem.V2.Forms
                 }
             }
         }
-        private void txbFindingPostDx3Text_Cysto_Click(object sender, EventArgs e)
-        {
-            SetDataInListBox(Constant.Icd10);
-            lastFocused = (TextBox)sender;
-            _markField = Constant.POSTDX3;
-        }
         private void txbFindingPostDx3Text_Cysto_Leave(object sender, EventArgs e)
         {
             if (txbFindingPostDx3Text_Cysto.TextLength > 0)
             {
-                string[] names = _db.ICD10.Select(s => s.Name).ToArray();
+                string[] names = _db.ICD10.Where(w => w.ProcedureId == _procedureId).Select(s => s.Name).ToArray();
                 var findName = names.FirstOrDefault(w => w.Trim().Equals(txbFindingPostDx3Text_Cysto.Text.Trim()));
                 if (findName == null)
                 {
-                    _db.ICD10.Add(new ICD10 { Name = txbFindingPostDx3Text_Cysto.Text, IsDisplay = false });
+                    _db.ICD10.Add(new ICD10 { Name = txbFindingPostDx3Text_Cysto.Text, ProcedureId = _procedureId, IsDisplay = false });
                     _db.SaveChanges();
 
                     // Reload
                     LoadAutoCompleted_ICD10Text(txbFindingPostDx3Text_Cysto);
                 }
             }
-        }
-        private void txbFindingComplication_Cysto_Click(object sender, EventArgs e)
-        {
-            SetDataInListBox(Constant.Complication);
-            lastFocused = (TextBox)sender;
-            _markField = Constant.COMPLICATION;
         }
         private void txbFindingComplication_Cysto_Leave(object sender, EventArgs e)
         {
@@ -4787,12 +4734,6 @@ namespace EndoscopicSystem.V2.Forms
                 }
             }
         }
-        private void txbFindingHistopathology_Cysto_Click(object sender, EventArgs e)
-        {
-            SetDataInListBox(Constant.Histopathology);
-            lastFocused = (TextBox)sender;
-            _markField = Constant.HISTOPATHOLOGY;
-        }
         private void txbFindingHistopathology_Cysto_Leave(object sender, EventArgs e)
         {
             if (txbFindingHistopathology_Cysto.TextLength > 0)
@@ -4808,12 +4749,6 @@ namespace EndoscopicSystem.V2.Forms
                     LoadAutoCompleted_txbFindingHistopathology_Cysto();
                 }
             }
-        }
-        private void txbFindingRecommendation_Cysto_Click(object sender, EventArgs e)
-        {
-            SetDataInListBox(Constant.Recommendation);
-            lastFocused = (TextBox)sender;
-            _markField = Constant.RECOMMENDATION;
         }
         private void txbFindingRecommendation_Cysto_Leave(object sender, EventArgs e)
         {
@@ -4847,6 +4782,247 @@ namespace EndoscopicSystem.V2.Forms
                 }
             }
         }
+        private void LoadAutoCompleted_txbFindingUrethra_Cysto()
+        {
+            string[] names = _db.Urethras.Select(s => s.Name).ToArray();
+            if (names.Length > 0)
+            {
+                LoadTextBoxAutoCompleteFromDb(txbFindingUrethra_Cysto, names);
+            }
+        }
+        private void txbFindingUrethra_Cysto_Leave(object sender, EventArgs e)
+        {
+            if (txbFindingUrethra_Cysto.TextLength > 0)
+            {
+                var datas = _db.Urethras.AsEnumerable();
+                var findName = datas.Where(s => s.Name.Trim().Equals(txbFindingUrethra_Cysto.Text.Trim())).FirstOrDefault();
+                if (findName == null)
+                {
+                    _db.Urethras.Add(new Urethra { Name = txbFindingUrethra_Cysto.Text });
+                    _db.SaveChanges();
+
+                    // Reload
+                    LoadAutoCompleted_txbFindingUrethra_Cysto();
+                }
+            }
+        }
+        private void LoadAutoCompleted_txbFindingProstate_Cysto()
+        {
+            string[] names = _db.Prostates.Select(s => s.Name).ToArray();
+            if (names.Length > 0)
+            {
+                LoadTextBoxAutoCompleteFromDb(txbFindingProstate_Cysto, names);
+            }
+        }
+        private void txbFindingProstate_Cysto_Leave(object sender, EventArgs e)
+        {
+            if (txbFindingProstate_Cysto.TextLength > 0)
+            {
+                var datas = _db.Prostates.AsEnumerable();
+                var findName = datas.Where(s => s.Name.Trim().Equals(txbFindingProstate_Cysto.Text.Trim())).FirstOrDefault();
+                if (findName == null)
+                {
+                    _db.Prostates.Add(new Prostate { Name = txbFindingProstate_Cysto.Text });
+                    _db.SaveChanges();
+
+                    // Reload
+                    LoadAutoCompleted_txbFindingProstate_Cysto();
+                }
+            }
+        }
+        private void LoadAutoCompleted_txbFindingBladderNeck_Cysto()
+        {
+            string[] names = _db.BladderNecks.Select(s => s.Name).ToArray();
+            if (names.Length > 0)
+            {
+                LoadTextBoxAutoCompleteFromDb(txbFindingBladderNeck_Cysto, names);
+            }
+        }
+        private void txbFindingBladderNeck_Cysto_Leave(object sender, EventArgs e)
+        {
+            if (txbFindingBladderNeck_Cysto.TextLength > 0)
+            {
+                var datas = _db.BladderNecks.AsEnumerable();
+                var findName = datas.Where(s => s.Name.Trim().Equals(txbFindingBladderNeck_Cysto.Text.Trim())).FirstOrDefault();
+                if (findName == null)
+                {
+                    _db.BladderNecks.Add(new BladderNeck { Name = txbFindingBladderNeck_Cysto.Text });
+                    _db.SaveChanges();
+
+                    // Reload
+                    LoadAutoCompleted_txbFindingBladderNeck_Cysto();
+                }
+            }
+        }
+        private void LoadAutoCompleted_txbFindingTrigoneAndOrifices_Cysto()
+        {
+            string[] names = _db.TrigoneAndOrifices.Select(s => s.Name).ToArray();
+            if (names.Length > 0)
+            {
+                LoadTextBoxAutoCompleteFromDb(txbFindingTrigoneAndOrifices_Cysto, names);
+            }
+        }
+        private void txbFindingTrigoneAndOrifices_Cysto_Leave(object sender, EventArgs e)
+        {
+            if (txbFindingTrigoneAndOrifices_Cysto.TextLength > 0)
+            {
+                var datas = _db.TrigoneAndOrifices.AsEnumerable();
+                var findName = datas.Where(s => s.Name.Trim().Equals(txbFindingTrigoneAndOrifices_Cysto.Text.Trim())).FirstOrDefault();
+                if (findName == null)
+                {
+                    _db.TrigoneAndOrifices.Add(new TrigoneAndOrifice { Name = txbFindingTrigoneAndOrifices_Cysto.Text });
+                    _db.SaveChanges();
+
+                    // Reload
+                    LoadAutoCompleted_txbFindingTrigoneAndOrifices_Cysto();
+                }
+            }
+        }
+        private void LoadAutoCompleted_txbFindingBladder_Cysto()
+        {
+            string[] names = _db.Bladders.Select(s => s.Name).ToArray();
+            if (names.Length > 0)
+            {
+                LoadTextBoxAutoCompleteFromDb(txbFindingBladder_Cysto, names);
+            }
+        }
+        private void txbFindingBladder_Cysto_Leave(object sender, EventArgs e)
+        {
+            if (txbFindingBladder_Cysto.TextLength > 0)
+            {
+                var datas = _db.Bladders.AsEnumerable();
+                var findName = datas.Where(s => s.Name.Trim().Equals(txbFindingBladder_Cysto.Text.Trim())).FirstOrDefault();
+                if (findName == null)
+                {
+                    _db.Bladders.Add(new Bladder { Name = txbFindingBladder_Cysto.Text });
+                    _db.SaveChanges();
+
+                    // Reload
+                    LoadAutoCompleted_txbFindingBladder_Cysto();
+                }
+            }
+        }
+        private void LoadAutoCompleted_txbFindingUreterRight_Cysto()
+        {
+            string[] names = _db.UreterRights.Select(s => s.Name).ToArray();
+            if (names.Length > 0)
+            {
+                LoadTextBoxAutoCompleteFromDb(txbFindingUreterRight_Cysto, names);
+            }
+        }
+        private void txbFindingUreterRight_Cysto_Leave(object sender, EventArgs e)
+        {
+            if (txbFindingUreterRight_Cysto.TextLength > 0)
+            {
+                var datas = _db.UreterRights.AsEnumerable();
+                var findName = datas.Where(s => s.Name.Trim().Equals(txbFindingUreterRight_Cysto.Text.Trim())).FirstOrDefault();
+                if (findName == null)
+                {
+                    _db.UreterRights.Add(new UreterRight { Name = txbFindingUreterRight_Cysto.Text });
+                    _db.SaveChanges();
+
+                    // Reload
+                    LoadAutoCompleted_txbFindingUreterRight_Cysto();
+                }
+            }
+        }
+        private void LoadAutoCompleted_txbFindingUreterLeft_Cysto()
+        {
+            string[] names = _db.UreterLefts.Select(s => s.Name).ToArray();
+            if (names.Length > 0)
+            {
+                LoadTextBoxAutoCompleteFromDb(txbFindingUreterLeft_Cysto, names);
+            }
+        }
+        private void txbFindingUreterLeft_Cysto_Leave(object sender, EventArgs e)
+        {
+            if (txbFindingUreterLeft_Cysto.TextLength > 0)
+            {
+                var datas = _db.UreterLefts.AsEnumerable();
+                var findName = datas.Where(s => s.Name.Trim().Equals(txbFindingUreterLeft_Cysto.Text.Trim())).FirstOrDefault();
+                if (findName == null)
+                {
+                    _db.UreterLefts.Add(new UreterLeft { Name = txbFindingUreterLeft_Cysto.Text });
+                    _db.SaveChanges();
+
+                    // Reload
+                    LoadAutoCompleted_txbFindingUreterLeft_Cysto();
+                }
+            }
+        }
+        private void LoadAutoCompleted_txbFindingKidneyRight_Cysto()
+        {
+            string[] names = _db.KidneyRights.Select(s => s.Name).ToArray();
+            if (names.Length > 0)
+            {
+                LoadTextBoxAutoCompleteFromDb(txbFindingKidneyRight_Cysto, names);
+            }
+        }
+        private void txbFindingKidneyRight_Cysto_Leave(object sender, EventArgs e)
+        {
+            if (txbFindingKidneyRight_Cysto.TextLength > 0)
+            {
+                var datas = _db.KidneyRights.AsEnumerable();
+                var findName = datas.Where(s => s.Name.Trim().Equals(txbFindingKidneyRight_Cysto.Text.Trim())).FirstOrDefault();
+                if (findName == null)
+                {
+                    _db.KidneyRights.Add(new KidneyRight { Name = txbFindingKidneyRight_Cysto.Text });
+                    _db.SaveChanges();
+
+                    // Reload
+                    LoadAutoCompleted_txbFindingKidneyRight_Cysto();
+                }
+            }
+        }
+        private void LoadAutoCompleted_txbFindingKidneyLeft_Cysto()
+        {
+            string[] names = _db.KidneyLefts.Select(s => s.Name).ToArray();
+            if (names.Length > 0)
+            {
+                LoadTextBoxAutoCompleteFromDb(txbFindingKidneyLeft_Cysto, names);
+            }
+        }
+        private void txbFindingKidneyLeft_Cysto_Leave(object sender, EventArgs e)
+        {
+            if (txbFindingKidneyLeft_Cysto.TextLength > 0)
+            {
+                var datas = _db.KidneyLefts.AsEnumerable();
+                var findName = datas.Where(s => s.Name.Trim().Equals(txbFindingKidneyLeft_Cysto.Text.Trim())).FirstOrDefault();
+                if (findName == null)
+                {
+                    _db.KidneyLefts.Add(new KidneyLeft { Name = txbFindingKidneyLeft_Cysto.Text });
+                    _db.SaveChanges();
+
+                    // Reload
+                    LoadAutoCompleted_txbFindingKidneyLeft_Cysto();
+                }
+            }
+        }
+        private void LoadAutoCompleted_txbFindingOther_Cysto()
+        {
+            string[] names = _db.Other.Select(s => s.Name).ToArray();
+            if (names.Length > 0)
+            {
+                LoadTextBoxAutoCompleteFromDb(txbFindingOther_Cysto, names);
+            }
+        }
+        private void txbFindingOther_Cysto_Leave(object sender, EventArgs e)
+        {
+            if (txbFindingOther_Cysto.TextLength > 0)
+            {
+                var datas = _db.Other.AsEnumerable();
+                var findName = datas.Where(s => s.Name.Trim().Equals(txbFindingOther_Cysto.Text.Trim())).FirstOrDefault();
+                if (findName == null)
+                {
+                    _db.Other.Add(new Other { Name = txbFindingOther_Cysto.Text });
+                    _db.SaveChanges();
+
+                    // Reload
+                    LoadAutoCompleted_txbFindingOther_Cysto();
+                }
+            }
+        }
+
         #endregion
 
         private Object[] GetIcd9()
@@ -6463,6 +6639,28 @@ namespace EndoscopicSystem.V2.Forms
                 else
                 {
                     tabControl1.TabPages.Add(tabFindingCystoscope);
+
+                    LoadAutoCompleted_txbFindingUrethra_Cysto();
+                    LoadAutoCompleted_txbFindingProstate_Cysto();
+                    LoadAutoCompleted_txbFindingBladderNeck_Cysto();
+                    LoadAutoCompleted_txbFindingTrigoneAndOrifices_Cysto();
+                    LoadAutoCompleted_txbFindingBladder_Cysto();
+                    LoadAutoCompleted_txbFindingUreterRight_Cysto();
+                    LoadAutoCompleted_txbFindingUreterLeft_Cysto();
+                    LoadAutoCompleted_txbFindingKidneyRight_Cysto();
+                    LoadAutoCompleted_txbFindingKidneyLeft_Cysto();
+                    LoadAutoCompleted_txbFindingOther_Cysto();
+                    LoadAutoCompleted_ICD9Text(txbFindingPrincipalText_Cysto);
+                    LoadAutoCompleted_ICD9Text(txbFindingSupplemental1Text_Cysto);
+                    LoadAutoCompleted_ICD9Text(txbFindingSupplemental2Text_Cysto);
+                    LoadAutoCompleted_txbFindingProcedure_Cysto();
+                    LoadAutoCompleted_ICD10Text(txbFindingPostDx1Text_Cysto);
+                    LoadAutoCompleted_ICD10Text(txbFindingPostDx2Text_Cysto);
+                    LoadAutoCompleted_ICD10Text(txbFindingPostDx3Text_Cysto);
+                    LoadAutoCompleted_txbFindingComplication_Cysto();
+                    LoadAutoCompleted_txbFindingHistopathology_Cysto();
+                    LoadAutoCompleted_txbFindingRecommendation_Cysto();
+                    LoadAutoCompleted_txbFindingComment_Cysto();
                 }
 
                 #endregion
