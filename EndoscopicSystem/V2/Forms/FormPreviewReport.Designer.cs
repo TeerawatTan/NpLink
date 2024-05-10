@@ -242,7 +242,6 @@ namespace EndoscopicSystem.V2.Forms
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.btnSave = new System.Windows.Forms.Button();
             this.btnReset = new System.Windows.Forms.Button();
-            this.btnNext = new System.Windows.Forms.Button();
             this.openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
             this.pictureBoxSnapshot = new System.Windows.Forms.PictureBox();
             this.panel1 = new System.Windows.Forms.Panel();
@@ -3082,21 +3081,6 @@ namespace EndoscopicSystem.V2.Forms
             this.btnReset.UseVisualStyleBackColor = true;
             this.btnReset.Visible = false;
             // 
-            // btnNext
-            // 
-            this.btnNext.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
-            this.btnNext.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
-            this.btnNext.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.btnNext.Location = new System.Drawing.Point(1477, 897);
-            this.btnNext.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.btnNext.Name = "btnNext";
-            this.btnNext.Size = new System.Drawing.Size(225, 96);
-            this.btnNext.TabIndex = 114;
-            this.btnNext.Text = "Next";
-            this.btnNext.UseVisualStyleBackColor = false;
-            this.btnNext.Visible = false;
-            this.btnNext.Click += new System.EventHandler(this.btnNext_Click);
-            // 
             // openFileDialog1
             // 
             this.openFileDialog1.FileName = "openFileDialog1";
@@ -3127,7 +3111,6 @@ namespace EndoscopicSystem.V2.Forms
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1904, 1011);
             this.Controls.Add(this.panel1);
-            this.Controls.Add(this.btnNext);
             this.Controls.Add(this.btnSave);
             this.Controls.Add(this.btnReset);
             this.Controls.Add(this.panel3);
@@ -3300,7 +3283,6 @@ namespace EndoscopicSystem.V2.Forms
         private System.Windows.Forms.PictureBox pictureBoxSaved9;
         private System.Windows.Forms.Button btnSave;
         private System.Windows.Forms.Button btnReset;
-        private System.Windows.Forms.Button btnNext;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.GroupBox gb10;
         private System.Windows.Forms.Button btnPictureBoxSaved10;

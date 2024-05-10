@@ -165,8 +165,6 @@ namespace EndoscopicSystem.V2.Forms
         }
         private void FormPreviewReport_Load(object sender, EventArgs e)
         {
-            btnNext.Visible = false;
-
             cbbProcedureList.ValueMember = "ProcedureID";
             cbbProcedureList.DisplayMember = "ProcedureName";
             cbbProcedureList.DataSource = _repo.GetProcedureList();
@@ -322,13 +320,12 @@ namespace EndoscopicSystem.V2.Forms
                         btnSave.Visible = false;
 
                         _isSave = true;
-                        btnNext.Visible = true;
-                        btnNext.Focus();
+
+                        FormProceed.Self.txbStep.Text = "2" + "," + _pathFolderImageSave + "," + _vdoPath;
                     }
                     else
                     {
                         _isSave = false;
-                        btnNext.Visible = false;
                     }
                 }
                 else
@@ -343,30 +340,7 @@ namespace EndoscopicSystem.V2.Forms
                 MessageBox.Show(ex.Message, "Saved data error.", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
-        private void btnNext_Click(object sender, EventArgs e)
-        {
-            if (!_isSave)
-            {
-                try
-                {
-                    if (_patientId > 0)
-                    {
-                        UpdateEndoscopic(_procedureId);
-                        _isSave = true;
-                    }
-                }
-                catch (Exception ex)
-                {
-                    _isSave = false;
-                    btnNext.Visible = false;
-                    btnSave.Visible = true;
-                    MessageBox.Show(ex.Message, "Saved data error.", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                    return;
-                }
-            }
-
-            FormProceed.Self.txbStep.Text = "2" + "," + _pathFolderImageSave + "," + _vdoPath;
-        }
+        
         private void PictureBox_DragEnter(object sender, DragEventArgs e)
         {
             if (e.Data.GetDataPresent(DataFormats.Text))

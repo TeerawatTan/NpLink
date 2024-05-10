@@ -35,7 +35,7 @@ namespace EndoscopicSystem.V2.Forms
         private string _pathFolderSounds = Application.StartupPath.Replace("\\bin\\Debug", "") + @"\Sounds\";
         private VideoFileWriter _fileWriter = new VideoFileWriter();
         private DateTime? _recordStartDate, _recordEndDate;
-        private bool _isRecord = false, _isPause = false, _isStopRecord = false, _isEgdAndColonoDone = false;
+        private bool _isRecord = false, _isPause = false, _isStopRecord = false, _isEgdAndColonoDone = false, _isLoadComplated = false;
         private static bool _needSnapshot = false;
         private int _patientId, _procedureId = 0, _appointmentId = 0, _item = 0, h, m, s, _settingId, _crpX, _crpY, _crpWidth, _crpHeight;
         private string  _hnNo = "", _pathFolderImageToSave, _vdoPath, _aspectRatio;
@@ -268,8 +268,6 @@ namespace EndoscopicSystem.V2.Forms
                 btnStop_Click(sender, e);
                 Disconnect();
 
-
-
                 //FormProceed.Self.txbStep.Text = "0" + ",,";
                 FormProceed.Self.dtRecordStart.Value = _recordStartDate.HasValue ? _recordStartDate.Value : DateTime.Now;
                 FormProceed.Self.dtRecordEnd.Value = _recordEndDate.HasValue ? _recordEndDate.Value : DateTime.Now;
@@ -398,7 +396,7 @@ namespace EndoscopicSystem.V2.Forms
             }
 
             // Sleep 2s
-            Thread.Sleep(2000);
+            Thread.Sleep(1000);
         }
 
         private void CaptureButton_Click(object sender, EventArgs e)
