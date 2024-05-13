@@ -774,7 +774,6 @@
       <DependentUpon>FormWardSetting.cs</DependentUpon>
     </Compile>
     <Compile Include="V2\Forms\src\DropdownListService.cs" />
-    <Content Include="Images\1.jpg" />
     <Content Include="Images\21.png" />
     <Content Include="Images\22.png" />
     <Content Include="Images\23.png" />
